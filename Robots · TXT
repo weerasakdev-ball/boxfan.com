@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# ห้าม crawl ไฟล์ข้อมูลดิบ
+Disallow: /data/fighters.db
+Disallow: /data/export_db.py
+
+# Sitemap
+Sitemap: https://boxingfandom.com/sitemap.xml

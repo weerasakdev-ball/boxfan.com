@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://res.cloudinary.com https://img.youtube.com https://i.ytimg.com; frame-src https://www.youtube.com">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#0d1014" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f0f2f5" media="(prefers-color-scheme: light)">
+<link rel="apple-touch-icon" href="/icons/icon-192.png">
+<title>เปรียบเทียบนักมวย ONE Championship | Boxfan</title>
+<meta name="description" content="เปรียบเทียบสถิตินักมวย ONE Championship แบบเคียงข้างกัน win rate คะแนน ฟอร์ม ประวัติการชก | Boxfan">
+<meta name="keywords" content="เปรียบเทียบนักมวย,ONE Championship,Fighter comparison,Muay Thai stats,Boxfan">
+<meta name="robots" content="index,follow">
+<meta name="author" content="Boxfan">
+<meta property="og:title" content="เปรียบเทียบนักมวย ONE Championship | Boxfan">
+<meta property="og:description" content="เปรียบเทียบสถิตินักมวย ONE Championship แบบเคียงข้างกัน win rate คะแนน ฟอร์ม">
+<meta property="og:image" content="https://boxingfandom.com/og-default.jpg">
+<meta property="og:url" content="https://boxingfandom.com/compare.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Boxfan">
+<meta property="og:locale" content="th_TH">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Compare ONE Championship Fighters | Boxfan">
+<meta name="twitter:description" content="Compare ONE Championship Muay Thai, Kickboxing & MMA fighters side by side with stats">
+<link rel="canonical" href="https://boxingfandom.com/compare.html">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","name":"เปรียบเทียบนักมวย ONE Championship | Boxfan","description":"เปรียบเทียบสถิตินักมวย ONE Championship แบบเคียงข้างกัน","url":"https://boxingfandom.com/compare.html","inLanguage":["th","en"]}
+</script>
+<!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXXX" crossorigin="anonymous"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Barlow:wght@500;600&family=Bai+Jamjuree:wght@600;700&family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Sarabun:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="boxfan-tokens.css">
+<style>
+/* ═══════════════════════════════════════════════════════
+   BOXFAN — COMPARE · FIGHT NIGHT BROADCAST
+   พื้นเข้ม · มุมแดง/น้ำเงิน · ทอง = แชมป์/คะแนน
+   ═══════════════════════════════════════════════════════ */
+
+/* ── Dark Mode (default) ── */
+
+
+/* ── Light Mode ── */
+
+
+/* ── Reset & base ── */
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;font-family:var(--sans);color:var(--tx);font-size:15px;line-height:1.55;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+  background:
+    radial-gradient(70% 50% at 16% -6%, var(--body-bg-a) 0%, transparent 60%),
+    radial-gradient(70% 50% at 88% -4%, var(--body-bg-b) 0%, transparent 60%),
+    linear-gradient(180deg, var(--bg-2) 0%, var(--bg) 380px, var(--bg) 100%);
+  background-attachment:fixed;
+}
+body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.5;
+  background-image:repeating-linear-gradient(115deg,rgba(255,255,255,.012) 0 2px,transparent 2px 7px)}
+[data-theme="light"] body::before{opacity:.2;background-image:repeating-linear-gradient(115deg,rgba(0,0,0,.016) 0 2px,transparent 2px 7px)}
+body>*{position:relative;z-index:1}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--red);color:#fff}
+
+/* ── Page layout ── */
+.page{max-width:860px;margin:0 auto;padding:28px 26px 60px}
+.page-title{
+  font-family:var(--serif);font-weight:800;
+  font-size:clamp(28px,4vw,42px);
+  line-height:.9;letter-spacing:.5px;
+  color:var(--tx);text-transform:uppercase;margin:0 0 8px;
+}
+.page-title .ic-title{color:var(--red)}
+.page-sub{font-size:14px;color:var(--tx-3);margin:0 0 22px;line-height:1.6}
+
+/* ── Section heading ── */
+.sec-title{
+  font-family:var(--serif);font-weight:800;font-size:16px;
+  letter-spacing:.4px;text-transform:uppercase;
+  color:var(--tx);margin-bottom:14px;
+  display:flex;align-items:center;gap:8px;
+  padding-bottom:9px;border-bottom:1px solid var(--line);
+  position:relative;
+}
+.sec-title::after{content:'';position:absolute;left:0;bottom:-1px;width:40px;height:2px;background:var(--red)}
+
+/* ── Theme toggle ── */
+.theme-toggle{
+  width:40px;height:40px;border-radius:50%;
+  border:1px solid var(--theme-toggle-border);
+  background:var(--theme-toggle-bg);
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;color:var(--theme-icon-color);
+  box-shadow:var(--sh-1);flex-shrink:0;
+}
+.theme-toggle:hover{transform:scale(1.08);box-shadow:var(--sh-2)}
+.theme-toggle svg{display:block;width:18px;height:18px;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;fill:none;transition:transform .3s}
+.theme-toggle:hover svg{transform:rotate(22deg)}
+.icon-sun{display:none}.icon-moon{display:block}
+[data-theme="light"] .icon-sun{display:block}
+[data-theme="light"] .icon-moon{display:none}
+
+/* smooth transition */
+*{transition-property:background-color,border-color,color;transition-duration:.2s;transition-timing-function:ease}
+.cbar-track .ba,.cbar-track .bb,.sbar-f,.theme-toggle svg{transition:none}
+.ba{transition:width .6s!important}.bb{transition:width .6s!important}
+.theme-toggle{transition:transform .2s,box-shadow .2s,background-color .2s!important}
+.theme-toggle svg{transition:transform .3s!important}
+
+/* ─────────────────────────────────────────
+   SELECTION SECTION
+───────────────────────────────────────── */
+.sel-section{
+  background:var(--surf);border:1px solid var(--line-2);
+  border-radius:13px;padding:22px;margin-bottom:22px;
+  box-shadow:var(--sh-2),var(--edge);
+}
+.sel-title{
+  font-family:var(--serif);font-size:18px;font-weight:800;
+  color:var(--tx);margin-bottom:16px;letter-spacing:.3px;text-transform:uppercase;
+}
+.sel-grid{display:grid;grid-template-columns:1fr 60px 1fr;gap:14px;align-items:start}
+.sel-lbl{
+  display:block;font-family:var(--serif);font-size:11px;font-weight:700;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--tx-3);margin-bottom:7px;
+}
+.vs-sm{
+  text-align:center;font-family:var(--serif);font-size:28px;
+  font-weight:800;color:var(--tx-4);padding-top:28px;
+}
+.cmp-btn{
+  display:block;width:100%;margin-top:14px;
+  background:var(--red);color:#fff;border:none;
+  font-family:var(--serif);font-size:15px;font-weight:800;
+  letter-spacing:.08em;text-transform:uppercase;
+  padding:14px;border-radius:8px;cursor:pointer;
+  box-shadow:var(--sh-1);transition:box-shadow .2s,transform .1s;
+}
+.cmp-btn:hover{box-shadow:var(--glow-red);transform:translateY(-1px)}
+
+/* ─────────────────────────────────────────
+   FIGHTER SEARCH
+───────────────────────────────────────── */
+.fighter-search-wrap{position:relative}
+.fighter-search-input{
+  width:100%;background:var(--surf-2);border:1.5px solid var(--line-2);
+  color:var(--tx);font-family:var(--sans);font-size:14px;
+  padding:10px 14px;border-radius:8px;outline:none;
+  transition:border-color .2s;font-weight:600;
+}
+#wrap-a .fighter-search-input:focus{border-color:var(--red);box-shadow:0 0 0 3px var(--red-soft)}
+#wrap-b .fighter-search-input:focus{border-color:var(--blue);box-shadow:0 0 0 3px var(--blue-soft)}
+.fighter-search-drop{
+  position:absolute;top:calc(100% + 4px);left:0;right:0;
+  background:var(--surf);border:1px solid var(--line-2);
+  border-radius:10px;box-shadow:var(--sh-4);
+  max-height:280px;overflow-y:auto;z-index:500;display:none;
+}
+.fighter-search-drop.open{display:block}
+.fsd-item{
+  display:flex;align-items:center;gap:10px;padding:10px 12px;
+  cursor:pointer;border-bottom:1px solid var(--line);transition:background .12s;
+}
+.fsd-item:last-child{border-bottom:none}
+.fsd-item:hover{background:var(--surf-2)}
+.fsd-av{
+  width:38px;height:38px;border-radius:8px;object-fit:cover;
+  background:var(--surf-2);border:1px solid var(--line-2);flex-shrink:0;
+  filter:grayscale(.2);
+}
+.fsd-name{font-size:13px;font-weight:700;color:var(--tx)}
+.fsd-meta{font-size:11px;color:var(--tx-3);margin-top:1px}
+.fsd-empty{padding:16px;text-align:center;color:var(--tx-3);font-size:13px}
+
+.fighter-selected{
+  display:flex;align-items:center;gap:10px;
+  background:var(--surf-2);border:1.5px solid var(--line-2);
+  border-radius:8px;padding:8px 12px;
+}
+#wrap-a .fighter-selected{border-color:var(--sel-a-border);background:var(--sel-a-bg)}
+#wrap-b .fighter-selected{border-color:var(--sel-b-border);background:var(--sel-b-bg)}
+.fighter-selected img{
+  width:40px;height:40px;border-radius:8px;object-fit:cover;
+  border:1.5px solid var(--line-2);flex-shrink:0;
+}
+.fighter-selected .sel-clear{
+  margin-left:auto;background:none;border:none;
+  color:var(--tx-4);font-size:20px;cursor:pointer;
+  padding:0 4px;line-height:1;transition:color .15s;
+}
+.fighter-selected .sel-clear:hover{color:var(--red)}
+
+/* ─────────────────────────────────────────
+   COMPARE HEADER (fighter cards)
+───────────────────────────────────────── */
+.heads{display:grid;grid-template-columns:1fr 60px 1fr;gap:14px;margin-bottom:16px;align-items:center}
+.head{
+  background:var(--surf);border:1px solid var(--line-2);
+  border-radius:13px;padding:20px;text-align:center;
+  box-shadow:var(--sh-2),var(--edge);
+}
+.head.ra{border-top:3px solid var(--red)}
+.head.rb{border-top:3px solid var(--blue)}
+.h-av{
+  width:80px;height:80px;border-radius:50%;object-fit:cover;
+  margin:0 auto 10px;background:var(--surf-2);
+  border:3px solid var(--line-2);filter:grayscale(.2);transition:filter .2s;
+}
+.head.ra .h-av{border-color:var(--red)}
+.head.rb .h-av{border-color:var(--blue)}
+.head:hover .h-av{filter:none}
+.h-name{font-family:var(--display);font-size:15px;font-weight:800;margin-bottom:3px;color:var(--tx)}
+.h-name a{color:var(--tx);transition:color .15s}
+.head.ra .h-name a:hover{color:var(--red)}
+.head.rb .h-name a:hover{color:var(--blue)}
+.h-en{font-size:11px;color:var(--tx-3);margin-bottom:6px}
+.h-tag{
+  display:inline-block;background:var(--surf-2);
+  border:1px solid var(--line-2);padding:2px 10px;border-radius:20px;
+  font-family:var(--serif);font-size:11px;color:var(--tx-3);margin:2px;font-weight:600;
+}
+.hrec{display:flex;justify-content:center;gap:14px;margin-top:12px;padding-top:12px;border-top:1px solid var(--line)}
+.hrec-item{text-align:center}
+.hrec-num{font-family:var(--serif);font-size:24px;font-weight:800;line-height:1}
+.hw{color:var(--green)}.hl{color:var(--loss)}.hn{color:var(--gold)}.ht{color:var(--red)}
+.hrec-lbl{font-size:9px;color:var(--tx-3);letter-spacing:.1em;text-transform:uppercase;font-weight:700}
+.vs-big{
+  text-align:center;font-family:var(--serif);
+  font-size:36px;font-weight:800;color:var(--tx-4);
+}
+
+/* ─────────────────────────────────────────
+   STAT SECTIONS
+───────────────────────────────────────── */
+.ssec{
+  background:var(--surf);border:1px solid var(--line-2);
+  border-radius:13px;padding:20px;margin-bottom:14px;
+  box-shadow:var(--sh-2),var(--edge);
+}
+
+/* win-rate bar */
+.cbar{
+  background:var(--surf-2);border:1px solid var(--line);
+  border-radius:10px;padding:14px;margin-bottom:10px;
+}
+.cbar-lbl{
+  font-family:var(--serif);font-size:11px;color:var(--tx-3);
+  text-transform:uppercase;letter-spacing:.1em;
+  margin-bottom:10px;text-align:center;font-weight:700;
+}
+.cbar-track{display:flex;height:14px;border-radius:7px;overflow:hidden;gap:2px}
+.ba{background:var(--red);border-radius:7px 0 0 7px;min-width:4px;transition:width .6s}
+.bb{background:var(--blue);border-radius:0 7px 7px 0;min-width:4px;transition:width .6s}
+.cbar-nums{display:flex;justify-content:space-between;margin-top:8px;font-family:var(--serif);font-size:13px;font-weight:800}
+.ca{color:var(--red)}.cb{color:var(--blue)}
+
+/* advantage pills */
+.adv-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}
+.adv-card{background:var(--surf-2);border:1px solid var(--line);border-radius:10px;padding:14px}
+.adv-card-lbl{font-family:var(--serif);font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--tx-3);text-align:center;margin-bottom:10px}
+.adv-row{display:grid;grid-template-columns:1fr auto 1fr;gap:6px;align-items:center}
+.adv-side{text-align:center}
+.adv-val{font-family:var(--serif);font-size:16px;font-weight:800;color:var(--tx);padding:4px 8px;border-radius:6px;display:inline-block}
+.adv-val.win-a{background:var(--adv-win-a-bg);color:var(--red)}
+.adv-val.win-b{background:var(--adv-win-b-bg);color:var(--blue)}
+.adv-who{font-size:10px;font-weight:700;margin-top:4px}
+.adv-who.a{color:var(--red)}.adv-who.b{color:var(--blue)}.adv-who.tie{color:var(--tx-3)}
+.adv-vs-txt{font-size:10px;color:var(--tx-4);font-weight:600}
+.adv-pill{
+  display:inline-block;font-family:var(--serif);
+  font-size:9px;font-weight:800;padding:3px 9px;
+  border-radius:20px;letter-spacing:.06em;text-transform:uppercase;
+}
+.adv-pill.a{background:var(--red-soft);color:var(--red);border:1px solid var(--red-line)}
+.adv-pill.b{background:var(--blue-soft);color:var(--blue);border:1px solid var(--blue-line)}
+.adv-pill.tie{background:var(--surf-3);color:var(--tx-3);border:1px solid var(--line-2)}
+
+/* stat rows */
+.srow{display:grid;grid-template-columns:1fr 140px 1fr;gap:8px;align-items:center;padding:11px 6px;border-bottom:1px solid var(--line)}
+.srow:last-child{border-bottom:none}
+.sval{font-family:var(--serif);font-size:20px;font-weight:800;line-height:1;color:var(--tx)}
+.sval.win-a{color:var(--red)}.sval.win-b{color:var(--blue)}.sval.neutral{color:var(--tx-3)}
+.slbl-wrap{text-align:center}
+.slbl{font-family:var(--serif);font-size:10px;color:var(--tx-3);text-transform:uppercase;letter-spacing:.1em;font-weight:700;display:block;margin-bottom:6px}
+.sbar-w{width:100%;height:4px;background:var(--line-2);border-radius:2px;margin-top:6px}
+.sbar-f{height:4px;border-radius:2px}
+
+.opp-row{display:flex;align-items:center;gap:8px}
+.opp-av{width:30px;height:30px;border-radius:50%;object-fit:cover;background:var(--surf-2);border:1px solid var(--line-2);flex-shrink:0}
+
+/* upcoming note */
+.unote{
+  background:var(--gold-soft);border:1px solid var(--gold-line);
+  border-radius:9px;padding:12px 16px;margin-bottom:14px;
+  display:flex;align-items:center;gap:10px;
+  font-family:var(--display);font-size:13px;font-weight:700;color:var(--gold);
+}
+.pulse{width:9px;height:9px;border-radius:50%;background:var(--gold);flex-shrink:0;animation:pulse 1.4s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.3;transform:scale(.7)}}
+
+/* ─────────────────────────────────────────
+   HISTORY 2-COL
+───────────────────────────────────────── */
+.hist-2col{
+  display:grid;grid-template-columns:1fr 1fr;gap:0;
+  border:1px solid var(--line-2);border-radius:11px;overflow:hidden;
+}
+.hist-side{min-width:0}
+.hist-side.ha{border-right:2px solid var(--line-2)}
+.hist-side-hdr{
+  display:flex;align-items:center;gap:8px;padding:10px 14px;
+  font-family:var(--serif);font-size:12px;font-weight:800;
+  border-bottom:1px solid var(--line-2);letter-spacing:.04em;text-transform:uppercase;
+}
+.hist-side.ha .hist-side-hdr{background:var(--hist-ha-bg);color:var(--red)}
+.hist-side.hb .hist-side-hdr{background:var(--hist-hb-bg);color:var(--blue)}
+.hist-row{
+  display:grid;grid-template-columns:38px 1fr 52px 48px;
+  align-items:center;padding:8px 10px;
+  border-bottom:1px solid var(--line);font-size:12px;gap:6px;cursor:default;
+  transition:background .12s;
+}
+.hist-row:last-child{border-bottom:none}
+.hist-row:hover{background:var(--hist-row-hover)}
+.hist-result-badge{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:32px;height:20px;border-radius:4px;
+  font-family:var(--serif);font-size:10px;font-weight:800;flex-shrink:0;
+}
+.bw{background:rgba(52,210,127,.18);color:var(--green)}
+.bl{background:rgba(232,65,46,.15);color:var(--red)}
+.bn{background:var(--surf-3);color:var(--tx-3)}
+.bu{background:var(--blue-soft);color:var(--blue)}
+.hist-opp{display:flex;align-items:center;gap:8px;min-width:0}
+.hist-opp-av{
+  width:44px;height:44px;border-radius:9px;object-fit:cover;
+  background:var(--surf-2);border:1.5px solid var(--line-2);flex-shrink:0;
+  filter:grayscale(.15);transition:filter .2s;
+  object-position:top center;
+}
+.hist-row:hover .hist-opp-av{filter:none}
+.hist-opp-av-wrap{position:relative;flex-shrink:0}
+.hist-load-btn{
+  display:flex;align-items:center;justify-content:center;gap:6px;
+  width:100%;padding:10px;border:none;
+  background:var(--surf-2);border-top:1px solid var(--line);
+  color:var(--tx-3);font-family:var(--serif);font-size:11px;font-weight:700;
+  letter-spacing:.08em;text-transform:uppercase;cursor:pointer;
+  transition:background .15s,color .15s;
+}
+.hist-load-btn:hover{background:var(--surf-3);color:var(--tx)}
+.hist-load-btn svg{display:block;width:13px;height:13px;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;fill:none}
+.hist-opp-name{font-size:12.5px;font-weight:700;color:var(--tx);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.hist-opp-name a{color:var(--tx);text-decoration:none;transition:color .15s}
+.hist-opp-name a:hover{color:var(--gold)}
+.hist-method{font-size:10px;color:var(--tx-3);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.hist-date{font-size:10px;color:var(--tx-4);white-space:nowrap;text-align:right}
+.hist-empty{padding:24px;text-align:center;color:var(--tx-3);font-size:13px;font-weight:600}
+@media(max-width:780px){
+  .hist-2col{grid-template-columns:1fr}
+  .hist-side.ha{border-right:none;border-bottom:2px solid var(--line-2)}
+}
+
+/* ─────────────────────────────────────────
+   PHYS TABLE
+───────────────────────────────────────── */
+.phys-table{width:100%;border-collapse:collapse}
+.phys-table tr{border-bottom:1px solid var(--line)}
+.phys-table tr:last-child{border-bottom:none}
+.phys-table td{padding:10px 8px;vertical-align:middle}
+.pt-a{text-align:right;width:38%}
+.pt-lbl{
+  text-align:center;width:24%;
+  font-family:var(--serif);font-size:10px;font-weight:800;
+  color:var(--tx-3);letter-spacing:.08em;text-transform:uppercase;white-space:nowrap;
+}
+.pt-b{text-align:left;width:38%}
+.pt-val{font-family:var(--serif);font-size:16px;font-weight:800;color:var(--tx);white-space:nowrap}
+.pt-val.win-a{color:var(--red)}
+.pt-val.win-b{color:var(--blue)}
+.pt-badge{
+  display:inline-block;font-family:var(--serif);font-size:9px;
+  font-weight:800;padding:2px 7px;border-radius:20px;margin-top:3px;white-space:nowrap;
+}
+.pt-badge.a{background:var(--red-soft);color:var(--red);border:1px solid var(--red-line)}
+.pt-badge.b{background:var(--blue-soft);color:var(--blue);border:1px solid var(--blue-line)}
+.pt-badge.tie{background:var(--surf-3);color:var(--tx-3);border:1px solid var(--line-2)}
+.pt-divider-a{border-right:1px solid var(--line-2)}
+.pt-divider-b{border-left:1px solid var(--line-2)}
+
+/* ─────────────────────────────────────────
+   SAVE BUTTON
+───────────────────────────────────────── */
+.save-btn{
+  display:block;width:100%;max-width:680px;margin:10px auto 0;
+  background:linear-gradient(135deg,var(--gold),var(--red));
+  color:#fff;border:none;
+  font-family:var(--serif);font-size:15px;font-weight:800;
+  letter-spacing:.08em;text-transform:uppercase;
+  padding:14px;border-radius:9px;cursor:pointer;
+  box-shadow:var(--sh-2);transition:opacity .2s,transform .1s;
+}
+.save-btn:hover{opacity:.9;transform:translateY(-1px)}
+
+.ad-wrap{text-align:center;margin:16px auto;overflow:hidden}
+
+/* ─────────────────────────────────────────
+   RESPONSIVE
+───────────────────────────────────────── */
+@media(max-width:680px){
+  .sel-grid,.heads{grid-template-columns:1fr}
+  .vs-sm,.vs-big{display:none}
+  .srow{grid-template-columns:1fr 100px 1fr}
+  #sum-card,.save-btn{max-width:100%}
+  .page{padding:20px 16px 48px}
+}
+
+/* ══════════════════════════════
+   SUM-CARD — ONE Championship Style
+══════════════════════════════ */
+#sum-card{
+  position:relative;
+  width:100%;
+  max-width:680px;
+  margin:20px auto 0;
+  aspect-ratio:1/1;
+  border-radius:16px;
+  overflow:hidden;
+  background:#08080f;
+  color:#fff;
+  display:flex;
+  flex-direction:column;
+  font-family:'Sarabun',sans-serif;
+}
+
+/* ── รูปนักมวย 65% ── */
+.sum-top{
+  flex:0 0 65%;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  position:relative;
+}
+.sum-fighter-img{position:relative;overflow:hidden}
+
+/* ฝั่ง A/B: พื้นหลังมืด เรียบๆ */
+.sum-fighter-img.sa{background:#0a0a14}
+.sum-fighter-img.sb{background:#0a0a14}
+
+/* gradient ขอบซ้าย/ขวา ให้รูป blend เข้า VS badge */
+.sum-fighter-img.sa::before{
+  content:'';position:absolute;inset:0;z-index:3;
+  background:linear-gradient(to right, transparent 70%, rgba(8,8,20,.85) 100%);
+  pointer-events:none;
+}
+.sum-fighter-img.sb::before{
+  content:'';position:absolute;inset:0;z-index:3;
+  background:linear-gradient(to left, transparent 70%, rgba(8,8,20,.85) 100%);
+  pointer-events:none;
+}
+
+.sum-fighter-img img{
+  position:relative;
+  z-index:2;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:top center;
+  display:block;
+  opacity:1;
+}
+
+/* เส้นแบ่งกลาง แดง/น้ำเงิน ไล่สี เป็นฉากหลังตัว VS */
+.sum-top::after{
+  content:'';position:absolute;left:50%;top:0;bottom:0;width:3px;
+  transform:translateX(-50%);z-index:15;opacity:.9;
+  background:linear-gradient(180deg,#5aabff 0%,#ffffff 50%,#ff5a5a 100%);
+  box-shadow:0 0 16px 2px rgba(255,255,255,.45);
+}
+
+/* VS badge กลาง */
+.sum-vs-overlay{
+  position:absolute;left:50%;top:40%;
+  transform:translate(-50%,-50%);
+  z-index:20;
+  font-size:56px;font-weight:900;
+  color:#fff;
+  letter-spacing:1px;
+  font-style:italic;
+  text-shadow:0 2px 18px rgba(0,0,0,.65), 0 0 28px rgba(255,255,255,.3);
+}
+@media(max-width:460px){
+  .sum-vs-overlay{font-size:40px}
+}
+
+/* ── Stats bar ล่าง ── */
+.sum-bottom{
+  flex:1;
+  background:linear-gradient(180deg, rgba(8,8,20,0) 0%, #0d0d20 15%, #0d0d20 100%);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding:10px 24px 12px;
+  gap:10px;
+}
+
+/* % row */
+.sum-pcts{
+  display:grid;
+  grid-template-columns:1fr 80px 1fr;
+  align-items:center;
+  gap:0;
+}
+.sum-pct-block{text-align:center}
+.sum-pct-name{
+  font-size:13px;font-weight:700;line-height:1.6;
+  color:rgba(255,255,255,.6);
+  margin-bottom:4px;
+  white-space:nowrap;
+  letter-spacing:0.02px; /* บังคับ html2canvas ให้ตัดคำแบบ grapheme ไม่ใช่แบบ word — กันสระ/วรรณยุกต์ไทยหลุดจากพยัญชนะตอนบันทึกรูป */
+}
+.sum-pct-name.long{font-size:10.5px}
+.sum-pct-num{
+  font-size:52px;
+  font-weight:900;
+  line-height:1;
+  font-style:italic;
+  letter-spacing:-2px;
+  padding-bottom:10px; /* กันตัวเลขเอียง (italic) ทับข้อความ WIN PROBABILITY ด้านล่าง */
+}
+.sum-pct-block.sa .sum-pct-num{color:#5aabff}
+.sum-pct-block.sb .sum-pct-num{color:#ff5a5a}
+.sum-pct-lbl{
+  font-size:8px;letter-spacing:3px;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.3);
+  font-weight:700;margin-top:0;
+}
+.sum-pct-vs{
+  text-align:center;
+  font-size:22px;font-weight:900;
+  color:rgba(255,255,255,.25);
+  letter-spacing:2px;
+  font-style:italic;
+}
+
+/* Form badges */
+.sum-divider2{height:1px;background:rgba(255,255,255,.06);margin:0}
+.sum-forms2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.sum-form-label{
+  font-size:11px;color:rgba(255,255,255,.6);
+  font-weight:700;margin-bottom:8px;line-height:1.5;
+  text-align:center;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+  letter-spacing:.05em;
+}
+.sum-form-row2{display:flex;gap:6px;flex-wrap:wrap;justify-content:center}
+
+/* Badge สี่เหลี่ยม สะอาด ไม่มีชื่อคู่ต่อสู้ใต้ตัวอักษร */
+.sum-fb{
+  display:flex;align-items:center;justify-content:center;
+  width:38px;height:38px;
+  border-radius:7px;
+  font-size:16px;font-weight:900;
+  line-height:1;
+}
+.sum-fb.w{background:rgba(34,197,94,.25);color:#4ade80;border:1px solid rgba(74,222,128,.2)}
+.sum-fb.l{background:rgba(239,68,68,.25);color:#ff6b6b;border:1px solid rgba(255,107,107,.2)}
+.sum-fb.nc{background:rgba(150,150,150,.2);color:#9ca3af;border:1px solid rgba(156,163,175,.2)}
+
+/* Footer */
+.sum-footer2{
+  text-align:center;
+  font-size:9px;
+  color:rgba(255,255,255,.12);
+  letter-spacing:3px;
+  text-transform:uppercase;
+  font-weight:700;
+}
+
+.save-btn{display:block;width:100%;max-width:680px;margin:10px auto 0;background:linear-gradient(135deg,#f59e0b,#ef4444);color:#fff;border:none;font-family:'Sarabun';font-size:15px;font-weight:800;padding:14px;border-radius:8px;cursor:pointer;transition:opacity .2s}
+.save-btn:hover{opacity:.88}
+.save-btn:disabled{opacity:.6;cursor:default}
+.ad-wrap{text-align:center;margin:16px auto;overflow:hidden}
+@media(max-width:680px){
+  .sel-grid,.heads{grid-template-columns:1fr}
+  .vs-sm,.vs-big{display:none}
+  .srow{grid-template-columns:1fr 100px 1fr}
+  #sum-card,.save-btn{max-width:100%}
+}
+
+/* ─────────────────────────────────────────
+   FIGHT WINDOW TOGGLE — ลูกเล่นเพิ่ม
+   เลือกช่วงสถิติ: 3 ไฟต์ / 5 ไฟต์ (ค่าเริ่มต้น) / ทั้งหมด
+───────────────────────────────────────── */
+.fwin-bar{
+  display:flex;align-items:center;justify-content:space-between;
+  flex-wrap:wrap;gap:10px;
+  background:var(--surf);border:1px solid var(--line-2);
+  border-radius:11px;padding:12px 16px;margin-bottom:14px;
+  box-shadow:var(--sh-2),var(--edge);
+}
+.fwin-lbl{
+  font-family:var(--serif);font-size:11px;font-weight:700;
+  letter-spacing:.08em;text-transform:uppercase;color:var(--tx-3);
+  display:flex;align-items:center;gap:6px;
+}
+.fwin-opts{display:flex;gap:4px;background:var(--surf-2);border:1px solid var(--line-2);border-radius:9px;padding:3px}
+.fwin-btn{
+  border:none;background:transparent;color:var(--tx-3);
+  font-family:var(--serif);font-size:12px;font-weight:700;
+  padding:7px 14px;border-radius:7px;cursor:pointer;white-space:nowrap;
+  transition:background .15s,color .15s;
+}
+.fwin-btn:hover{color:var(--tx)}
+.fwin-btn.active{background:var(--gold);color:#1a1306;box-shadow:var(--sh-1)}
+@media(max-width:460px){
+  .fwin-bar{flex-direction:column;align-items:stretch}
+  .fwin-opts{justify-content:space-between}
+  .fwin-btn{flex:1;text-align:center}
+}
+
+</style>
+</head>
+<body>
+<noscript><div style="background:#e8412e;color:#fff;padding:12px 18px;text-align:center;font-family:sans-serif;font-size:14px">Boxfan — เปรียบเทียบสถิตินักมวยแบบเคียงข้างกัน — เว็บไซต์นี้ใช้ JavaScript เพื่อแสดงข้อมูลสถิติแบบเรียลไทม์ กรุณาเปิดใช้งาน JavaScript · <a href="index.html" style="color:#fff;text-decoration:underline">หน้าหลัก</a></div></noscript>
+<div id="nw"></div>
+<div class="page">
+  <div style="margin-bottom:4px">
+    <span style="font-family:var(--serif);font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);display:inline-flex;align-items:center;gap:7px">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M7 21h10M5 7h14M5 7l-2 6a3 3 0 0 0 6 0L7 7M19 7l-2 6a3 3 0 0 0 6 0l-2-6"/></svg>
+      Fighter Stats
+    </span>
+  </div>
+  <h1 class="page-title">เปรียบเทียบ<span class="ic-title">นักมวย</span></h1>
+  <p class="page-sub">พิมพ์ค้นหาและเลือกนักมวย 2 คนเพื่อดูสถิติเทียบกัน</p>
+  <div class="ad-wrap" id="ad-top"></div>
+  <div class="sel-section">
+    <div class="sel-title">เลือกนักมวย</div>
+    <div class="sel-grid">
+      <div>
+        <label class="sel-lbl">นักมวย A (แดง)</label>
+        <div class="fighter-search-wrap" id="wrap-a">
+          <input type="text" class="fighter-search-input" id="input-a" placeholder="พิมพ์ชื่อไทย หรือ English…" autocomplete="off">
+          <div class="fighter-search-drop" id="drop-a"></div>
+          <div class="fighter-selected" id="selected-a" style="display:none">
+            <img id="sel-av-a" src="" alt="">
+            <div style="min-width:0">
+              <div id="sel-name-a" style="font-weight:700;font-size:14px;color:var(--dark)"></div>
+              <div id="sel-meta-a" style="font-size:11px;color:var(--muted)"></div>
+            </div>
+            <button class="sel-clear" onclick="clearSel('a')">×</button>
+          </div>
+        </div>
+      </div>
+      <div class="vs-sm">VS</div>
+      <div>
+        <label class="sel-lbl">นักมวย B (น้ำเงิน)</label>
+        <div class="fighter-search-wrap" id="wrap-b">
+          <input type="text" class="fighter-search-input" id="input-b" placeholder="พิมพ์ชื่อไทย หรือ English…" autocomplete="off">
+          <div class="fighter-search-drop" id="drop-b"></div>
+          <div class="fighter-selected" id="selected-b" style="display:none">
+            <img id="sel-av-b" src="" alt="">
+            <div style="min-width:0">
+              <div id="sel-name-b" style="font-weight:700;font-size:14px;color:var(--dark)"></div>
+              <div id="sel-meta-b" style="font-size:11px;color:var(--muted)"></div>
+            </div>
+            <button class="sel-clear" onclick="clearSel('b')">×</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="cmp-btn" onclick="run()">⚖️ เปรียบเทียบสถิติ</button>
+  </div>
+  <div id="area">
+    <div id="unote" class="unote" style="display:none"><div class="pulse"></div><span id="unote-txt"></span></div>
+    <div class="heads">
+      <div class="head ra" id="ha"></div>
+      <div class="vs-big">VS</div>
+      <div class="head rb" id="hb"></div>
+    </div>
+    <div class="fwin-bar">
+      <span class="fwin-lbl">⏱ ช่วงสถิติที่ใช้คำนวณ</span>
+      <div class="fwin-opts" id="fwin-opts">
+        <button class="fwin-btn" data-n="3" onclick="setFightWindow(3,this)">3 ไฟต์</button>
+        <button class="fwin-btn active" data-n="5" onclick="setFightWindow(5,this)">5 ไฟต์</button>
+        <button class="fwin-btn" data-n="all" onclick="setFightWindow('all',this)">ทั้งหมด</button>
+      </div>
+    </div>
+    <div class="ssec"><div class="sec-title">อัตราชนะ</div><div id="wr-sec"></div></div>
+    <div class="ssec"><div class="sec-title">ข้อมูลร่างกาย</div><div id="phys-sec"></div></div>
+    <div class="ssec"><div class="sec-title">สถิติการต่อสู้</div><div id="stat-sec"></div></div>
+    <div class="ssec">
+      <div class="sec-title" style="margin-bottom:12px">ประวัติการชก</div>
+      <div class="hist-2col" id="hist-2col"></div>
+    </div>
+    <div id="sum-card"></div>
+    <button class="save-btn" onclick="saveImg()">📷 บันทึกรูปภาพ (Save Image)</button>
+    <div class="ad-wrap" id="ad-bottom"></div>
+  </div>
+</div>
+<footer id="ft"></footer>
+<script src="data/fighters_data.js"></script>
+<script src="utils.js"></script>
+<script>
+var _a,_b,selA=null,selB=null;
+var FWIN=5; /* ช่วงสถิติที่ใช้คำนวณ: 3, 5 (ค่าเริ่มต้น) หรือ 'all' */
+
+function init(){
+    document.getElementById('nw').innerHTML=nav('compare');
+    injectThemeToggle();
+    initSearch();
+    initFighterSearch('a');
+    initFighterSearch('b');
+    renderFooter(FIGHTERS.length + ' นักมวย');
+
+    setMeta({
+        title   :'เปรียบเทียบนักมวย ONE Championship',
+        titleEn :'Compare ONE Championship Fighters',
+        desc    :'เปรียบเทียบสถิตินักมวย ONE Championship แบบเคียงข้างกัน win rate คะแนน ฟอร์ม ประวัติการชก | Boxfan',
+        descEn  :'Compare ONE Championship Muay Thai, Kickboxing & MMA fighters side by side with full stats.',
+        url     :SITE+'/compare.html',
+        keywords:'เปรียบเทียบนักมวย,ONE Championship,Fighter comparison,Muay Thai stats,Boxfan'
+    });
+
+    var p=new URLSearchParams(location.search);
+    if(p.get('a')){var fa=FIGHTERS.find(function(x){return x.id===parseInt(p.get('a'));});if(fa)selectFighter('a',fa);}
+    if(p.get('b')){var fb=FIGHTERS.find(function(x){return x.id===parseInt(p.get('b'));});if(fb)selectFighter('b',fb);}
+    if(selA&&selB)setTimeout(run,80);
+}
+
+function initFighterSearch(side){
+    var inp=document.getElementById('input-'+side);
+    var drop=document.getElementById('drop-'+side);
+    inp.addEventListener('input',function(){
+        var q=inp.value.trim().toLowerCase();
+        if(!q){drop.classList.remove('open');return;}
+        var hits=FIGHTERS.filter(function(f){
+            return (f.name_th||'').toLowerCase().indexOf(q)!==-1||(f.name_en||'').toLowerCase().indexOf(q)!==-1;
+        }).slice(0,10);
+        if(!hits.length){
+            drop.innerHTML='<div class="fsd-empty">ไม่พบ "'+esc(inp.value)+'"</div>';
+        } else {
+            drop.innerHTML=hits.map(function(f){
+                return'<div class="fsd-item" data-id="'+f.id+'" data-side="'+side+'">'+
+                    '<img class="fsd-av" src="'+cImg(f.image_filename,'sm')+'" loading="lazy" onerror="this.src=PH" alt="">'+
+                    '<div><div class="fsd-name">'+esc(f.name_th)+'</div>'+
+                    '<div class="fsd-meta">'+fl(f.country)+' · '+ds(f.division)+(f.name_en?' · '+esc(f.name_en):'')+'</div></div>'+
+                '</div>';
+            }).join('');
+            drop.querySelectorAll('.fsd-item').forEach(function(el){
+                el.addEventListener('click',function(){
+                    var fid=parseInt(el.dataset.id),sd=el.dataset.side;
+                    var f=FIGHTERS.find(function(x){return x.id===fid;});
+                    if(f)selectFighter(sd,f);
+                });
+            });
+        }
+        drop.classList.add('open');
+    });
+    inp.addEventListener('focus',function(){if(inp.value.trim()&&drop.innerHTML)drop.classList.add('open');});
+    document.addEventListener('click',function(e){if(!e.target.closest('#wrap-'+side))drop.classList.remove('open');});
+}
+
+function selectFighter(side,f){
+    if(!f)return;
+    if(side==='a')selA=f;else selB=f;
+    document.getElementById('input-'+side).style.display='none';
+    document.getElementById('drop-'+side).classList.remove('open');
+    var sel=document.getElementById('selected-'+side);
+    sel.style.display='flex';
+    var av=document.getElementById('sel-av-'+side);
+    av.src=cImg(f.image_filename,'sm');
+    av.onerror=function(){this.src=PH;};
+    document.getElementById('sel-name-'+side).textContent=f.name_th+(f.name_en?' ('+f.name_en+')':'');
+    document.getElementById('sel-meta-'+side).textContent=fl(f.country)+' '+f.country+' · '+ds(f.division)+' · '+f.total_wins+'W '+f.total_losses+'L';
+}
+
+function clearSel(side){
+    if(side==='a')selA=null;else selB=null;
+    var inp=document.getElementById('input-'+side);
+    inp.style.display='block';inp.value='';
+    document.getElementById('selected-'+side).style.display='none';
+    document.getElementById('drop-'+side).classList.remove('open');
+    inp.focus();
+}
+
+function run(){
+    if(!selA||!selB){alert('กรุณาเลือกนักมวยทั้ง 2 คน');return;}
+    if(selA.id===selB.id){alert('กรุณาเลือกนักมวยคนละคน');return;}
+    _a=selA;_b=selB;
+
+    // อัปเดต SEO/OG สำหรับ share คู่นี้
+    setMeta({
+        title  :_a.name_th+' vs '+_b.name_th+' | Boxfan',
+        titleEn:((_a.name_en||_a.name_th)+' vs '+(_b.name_en||_b.name_th)+' | Boxfan'),
+        desc   :'เปรียบเทียบสถิติ '+_a.name_th+' vs '+_b.name_th+' ONE Championship | Boxfan',
+        url    :SITE+'/compare.html?a='+_a.id+'&b='+_b.id,
+        image  :cImg(_a.image_filename,'lg')
+    });
+
+    buildHead(_a,'ha','ra',_a.id);
+    buildHead(_b,'hb','rb',_b.id);
+    buildWR(_a,_b);buildPhys(_a,_b);buildStats(_a,_b);buildHist(_a,_b);buildSummary(_a,_b);
+    checkUpcoming(_a,_b);
+    document.getElementById('area').classList.add('on');
+    setTimeout(function(){document.getElementById('area').scrollIntoView({behavior:'smooth',block:'start'});},100);
+}
+
+function buildHead(f,elId,cls,fid){
+    var el=document.getElementById(elId);
+    var html='<img class="h-av" src="'+cImg(f.image_filename,'md')+'" loading="lazy" onerror="this.src=PH" alt="'+esc(f.name_th)+'">';
+    html+='<div class="h-name"><a href="profile.html?id='+fid+'">'+esc(f.name_th)+'</a></div>';
+    if(f.name_en)html+='<div class="h-en">'+esc(f.name_en)+'</div>';
+    html+='<div style="margin:6px 0">';
+    if(f.country)html+='<span class="h-tag">'+fl(f.country)+' '+f.country+'</span>';
+    if(f.division)html+='<span class="h-tag">'+ds(f.division)+'</span>';
+    if(f.team)html+='<span class="h-tag">'+f.team+'</span>';
+    html+='</div>';
+    html+='<div class="hrec">';
+    html+='<div class="hrec-item"><div class="hrec-num hw">'+f.total_wins+'</div><div class="hrec-lbl">ชนะ</div></div>';
+    html+='<div class="hrec-item"><div class="hrec-num hl">'+f.total_losses+'</div><div class="hrec-lbl">แพ้</div></div>';
+    if(f.total_nc>0)html+='<div class="hrec-item"><div class="hrec-num hn">'+f.total_nc+'</div><div class="hrec-lbl">NC</div></div>';
+    html+='<div class="hrec-item"><div class="hrec-num ht">'+f.total_fights+'</div><div class="hrec-lbl">รวม</div></div>';
+    html+='</div>';
+    el.className='head '+cls;el.innerHTML=html;
+}
+
+/* คำนวณสถิติของนักมวยตามช่วงที่เลือก (3 / 5 / ทั้งหมด ไฟต์ล่าสุด) */
+function fightWindow(fid){
+    var h=hist(fid).filter(function(x){return x.result_type!=='upcoming';});
+    var n=(FWIN==='all')?h.length:Math.min(FWIN,h.length);
+    var list=h.slice(0,n);
+    var w=list.filter(function(x){return x.result_type==='win';}).length;
+    var l=list.filter(function(x){return x.result_type==='loss';}).length;
+    var nc=list.length-w-l;
+    var rate=list.length?(w/list.length*100):0;
+    return{list:list,n:list.length,w:w,l:l,nc:nc,rate:rate};
+}
+
+function fwinRangeTxt(){ return FWIN==='all' ? 'ทั้งหมด' : 'ล่าสุด '+FWIN+' ไฟต์'; }
+
+function setFightWindow(n,btn){
+    FWIN=n;
+    document.querySelectorAll('#fwin-opts .fwin-btn').forEach(function(b){b.classList.remove('active');});
+    btn.classList.add('active');
+    if(_a&&_b){
+        buildWR(_a,_b);
+        buildStats(_a,_b);
+        buildSummary(_a,_b);
+    }
+}
+
+function buildWR(a,b){
+    var fa=fightWindow(a.id),fb=fightWindow(b.id);
+    var wa=fa.rate,wb=fb.rate,pA,pB;
+    if(wa===0&&wb===0){pA=50;pB=50;}
+    else{var total=(wa+wb)||1;pA=Math.round((wa/total)*100);pB=100-pA;}
+    var winner=wa>wb?'<span class="adv-pill a">✓ A ได้เปรียบ</span>':wb>wa?'<span class="adv-pill b">✓ B ได้เปรียบ</span>':'<span class="adv-pill tie">เท่ากัน</span>';
+    document.getElementById('wr-sec').innerHTML='<div class="cbar"><div class="cbar-lbl">อัตราชนะ ('+fwinRangeTxt()+') &nbsp;'+winner+'</div><div class="cbar-track"><div class="ba" style="width:'+pA+'%"></div><div class="bb" style="width:'+pB+'%"></div></div><div class="cbar-nums"><span class="ca">A: '+wa.toFixed(1)+'%</span><span class="cb">B: '+wb.toFixed(1)+'%</span></div></div>';
+}
+
+function buildPhys(a,b){
+    function ptRow(lbl, va, vb, na, nb, higher){
+        if(higher===undefined) higher=true;
+        var aWins=(na>0&&nb>0)&&(higher?na>nb:na<nb);
+        var bWins=(na>0&&nb>0)&&(higher?nb>na:nb<na);
+        var tie=!aWins&&!bWins;
+        var badge = tie
+            ? '<span class="pt-badge tie">เท่ากัน</span>'
+            : aWins
+                ? '<span class="pt-badge a">✓ A ได้เปรียบ</span>'
+                : '<span class="pt-badge b">✓ B ได้เปรียบ</span>';
+        return '<tr>'+
+            '<td class="pt-a pt-divider-a">'+
+                '<div class="pt-val'+(aWins?' win-a':'')+'">'+(va||'--')+'</div>'+
+                (aWins?'<div style="font-size:10px;color:var(--red);margin-top:2px;font-weight:700">✓ ได้เปรียบ</div>':'<div style="font-size:10px;color:var(--muted);margin-top:2px">—</div>')+
+            '</td>'+
+            '<td class="pt-lbl">'+
+                '<div>'+lbl+'</div>'+
+                '<div style="margin-top:4px">'+badge+'</div>'+
+            '</td>'+
+            '<td class="pt-b pt-divider-b">'+
+                '<div class="pt-val'+(bWins?' win-b':'')+'">'+(vb||'--')+'</div>'+
+                (bWins?'<div style="font-size:10px;color:var(--blue);margin-top:2px;font-weight:700">✓ ได้เปรียบ</div>':'<div style="font-size:10px;color:var(--muted);margin-top:2px">—</div>')+
+            '</td>'+
+        '</tr>';
+    }
+
+    /* header row แสดงชื่อนักมวย 2 ฝั่ง */
+    var header = '<tr style="background:var(--bg)">'+
+        '<td class="pt-a pt-divider-a" style="padding:8px 10px">'+
+            '<span style="display:inline-flex;align-items:center;gap:6px">'+
+                '<span style="width:8px;height:8px;border-radius:50%;background:var(--red);display:inline-block"></span>'+
+                '<span style="font-size:12px;font-weight:800;color:var(--red)">A</span>'+
+                '<span style="font-size:12px;font-weight:700;color:var(--dark)">'+esc(a.name_th)+'</span>'+
+            '</span>'+
+        '</td>'+
+        '<td class="pt-lbl" style="padding:8px 10px;font-size:10px;color:var(--muted)">ข้อมูลร่างกาย</td>'+
+        '<td class="pt-b pt-divider-b" style="padding:8px 10px">'+
+            '<span style="display:inline-flex;align-items:center;gap:6px">'+
+                '<span style="width:8px;height:8px;border-radius:50%;background:var(--blue);display:inline-block"></span>'+
+                '<span style="font-size:12px;font-weight:800;color:var(--blue)">B</span>'+
+                '<span style="font-size:12px;font-weight:700;color:var(--dark)">'+esc(b.name_th)+'</span>'+
+            '</span>'+
+        '</td>'+
+    '</tr>';
+
+    document.getElementById('phys-sec').innerHTML=
+        '<table class="phys-table">'+
+            header+
+            ptRow('ส่วนสูง',
+                a.height_cm?a.height_cm+' cm':'--',
+                b.height_cm?b.height_cm+' cm':'--',
+                a.height_cm||0, b.height_cm||0, true)+
+            ptRow('น้ำหนัก',
+                a.weight_kg?a.weight_kg+' kg':'--',
+                b.weight_kg?b.weight_kg+' kg':'--',
+                a.weight_kg||0, b.weight_kg||0, false)+
+            ptRow('อายุ',
+                a.age?a.age+' ปี':'--',
+                b.age?b.age+' ปี':'--',
+                a.age||0, b.age||0, false)+
+            ptRow('สังกัด', a.team||'--', b.team||'--', 0, 0)+
+        '</table>';
+}
+
+function buildStats(a,b){
+    var sa=score(hist(a.id)),sb2=score(hist(b.id));
+    var fa=fightWindow(a.id),fb=fightWindow(b.id);
+    var wrLbl='อัตราชนะ % ('+fwinRangeTxt()+')';
+    function srow(lbl,va,vb,higher){
+        if(higher===undefined)higher=true;
+        var na=parseFloat(va)||0,nb=parseFloat(vb)||0,mx=Math.max(na,nb,1);
+        var aWins=(na!==nb)&&(higher?na>nb:na<nb);
+        var bWins=(na!==nb)&&(higher?nb>na:nb<na);
+        var tie=na===nb;
+        var pA=Math.min(100,(na/mx)*100),pB=Math.min(100,(nb/mx)*100);
+        return'<div class="srow">'+
+            '<div style="text-align:left"><div class="sval'+(aWins?' win-a':bWins?' neutral':'')+'">'+(va!==undefined?va:'--')+'</div><div class="sbar-w"><div class="sbar-f" style="width:'+pA+'%;background:var(--red)"></div></div></div>'+
+            '<div class="slbl-wrap"><span class="slbl">'+lbl+'</span><span class="adv-pill '+(tie?'tie':aWins?'a':'b')+'">'+(tie?'เท่ากัน':aWins?'✓ A ได้เปรียบ':'✓ B ได้เปรียบ')+'</span></div>'+
+            '<div style="text-align:right"><div class="sval'+(bWins?' win-b':aWins?' neutral':'')+'">'+(vb!==undefined?vb:'--')+'</div><div class="sbar-w"><div class="sbar-f" style="width:'+pB+'%;background:var(--blue);float:right"></div></div></div>'+
+        '</div>';
+    }
+    document.getElementById('stat-sec').innerHTML=
+        srow('แมตช์รวม',a.total_fights,b.total_fights)+
+        srow('ชนะ',a.total_wins,b.total_wins)+
+        srow('แพ้',a.total_losses,b.total_losses,false)+
+        srow(wrLbl,fa.rate.toFixed(1),fb.rate.toFixed(1))+
+        srow('คะแนน',sa,sb2);
+}
+
+function buildHist(a,b){ buildHist2col(a,b); }
+
+var HIST_INIT=3, HIST_STEP=5;
+var _histShown={a:HIST_INIT, b:HIST_INIT};
+var _histData={a:[], b:[]};
+
+function mkHistRow(x){
+    var oppF=FIGHTERS.find(function(ff){return ff.name_th===x.opponent||ff.name_en===x.opponent;});
+    var oppAvSrc=oppF?cImg(oppF.image_filename,'sm'):PH;
+    var oppLink=oppF?'profile.html?id='+oppF.id:'';
+    var rtCls=x.result_type==='win'?'bw':x.result_type==='loss'?'bl':x.result_type==='upcoming'?'bu':'bn';
+    var rtLbl=x.result_type==='win'?'ชนะ':x.result_type==='loss'?'แพ้':x.result_type==='upcoming'?'รอ':'NC';
+    var method=(x.decision||'')+(x.round?' ยก '+x.round:'');
+    return '<div class="hist-row">'+
+        '<span class="hist-result-badge '+rtCls+'">'+rtLbl+'</span>'+
+        '<div class="hist-opp">'+
+            '<img class="hist-opp-av" src="'+oppAvSrc+'" loading="lazy" onerror="this.src=PH" alt="">'+
+            '<div class="hist-opp-name">'+(oppLink?'<a href="'+oppLink+'">'+esc(x.opponent||'--')+'</a>':esc(x.opponent||'--'))+'</div>'+
+        '</div>'+
+        '<div class="hist-method">'+method+'</div>'+
+        '<div class="hist-date">'+fDate(x.date)+'</div>'+
+    '</div>';
+}
+
+function renderHistSide(side){
+    var fights=_histData[side];
+    var shown=_histShown[side];
+    var el=document.getElementById('hist-body-'+side);
+    if(!el) return;
+    var html=fights.slice(0,shown).map(mkHistRow).join('');
+    var left=fights.length-shown;
+    if(left>0){
+        html+='<button class="hist-load-btn" onclick="loadMoreHist(\''+side+'\')">'+
+            '<svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>'+
+            'แสดงเพิ่มอีก '+Math.min(left,HIST_STEP)+' ไฟต์ (เหลือ '+left+')'+
+        '</button>';
+    }
+    el.innerHTML=html;
+}
+
+function loadMoreHist(side){
+    _histShown[side]=Math.min(_histShown[side]+HIST_STEP, _histData[side].length);
+    renderHistSide(side);
+}
+
+function buildHist2col(a,b){
+    _histData.a=hist(a.id).filter(function(x){return x.result_type!=='upcoming';});
+    _histData.b=hist(b.id).filter(function(x){return x.result_type!=='upcoming';});
+    _histShown.a=HIST_INIT;
+    _histShown.b=HIST_INIT;
+
+    document.getElementById('hist-2col').innerHTML=
+        '<div class="hist-side ha">'+
+            '<div class="hist-side-hdr">'+
+                '<span style="width:9px;height:9px;border-radius:50%;background:var(--red);flex-shrink:0;display:inline-block"></span>'+
+                'A: '+esc(a.name_th)+' ('+_histData.a.length+' ไฟต์)'+
+            '</div>'+
+            '<div id="hist-body-a">'+(!_histData.a.length?'<div class="hist-empty">ยังไม่มีประวัติการชก</div>':'')+'</div>'+
+        '</div>'+
+        '<div class="hist-side hb">'+
+            '<div class="hist-side-hdr">'+
+                '<span style="width:9px;height:9px;border-radius:50%;background:var(--blue);flex-shrink:0;display:inline-block"></span>'+
+                'B: '+esc(b.name_th)+' ('+_histData.b.length+' ไฟต์)'+
+            '</div>'+
+            '<div id="hist-body-b">'+(!_histData.b.length?'<div class="hist-empty">ยังไม่มีประวัติการชก</div>':'')+'</div>'+
+        '</div>';
+
+    if(_histData.a.length) renderHistSide('a');
+    if(_histData.b.length) renderHistSide('b');
+}
+
+function buildSummary(a,b){
+    var fa=fightWindow(a.id),fb=fightWindow(b.id);
+    var wa=fa.rate,wb=fb.rate,pctA,pctB;
+    if(wa===0&&wb===0){pctA=50;pctB=50;}
+    else{var combined=(wa+wb)||1;pctA=Math.round((wa/combined)*100);pctB=100-pctA;}
+    /* กันไม่ให้ขึ้น 0%/100% ซึ่งดูเหมือนฟันธงเกินจริงสำหรับ "ความน่าจะเป็น" — ของจริง (อัตราชนะดิบ)
+       ยังแสดงตรงๆ อยู่แล้วในแถบ "อัตราชนะ" ด้านบนของหน้า ส่วนนี้คือค่าที่ใช้ทำนาย/โปรโมตเท่านั้น */
+    pctA=Math.max(5,Math.min(95,pctA));pctB=100-pctA;
+
+    /* รูป — ใช้ Cloudinary portrait: สูง 3:4 เพื่อเห็นตั้งแต่หัวถึงเอว */
+    function portraitImg(fn){
+        if(!fn) return PH;
+        var clean=fn.replace(/\.(jpg|jpeg|png|webp)$/i,'');
+        return 'https://res.cloudinary.com/'+CLOUD+'/image/upload/c_fill,g_face,w_760,h_1000,f_auto,q_auto:best/'+encodeURIComponent(clean);
+    }
+
+    function formBadges(list){
+        return list.slice().reverse().map(function(x){
+            var cls=x.result_type==='win'?'w':x.result_type==='loss'?'l':'nc';
+            var lbl=x.result_type==='win'?'W':x.result_type==='loss'?'L':'NC';
+            return'<div class="sum-fb '+cls+'">'+lbl+'</div>';
+        }).join('');
+    }
+
+    /* label แสดงช่วงสถิติจริงที่ใช้ — ถ้านักมวยมีไฟต์น้อยกว่าช่วงที่เลือก จะแสดงจำนวนจริง */
+    function rangeLbl(fw){
+        return FWIN==='all' ? ('ทั้งหมด ('+fw.n+' ไฟต์)') : (fw.n+' ไฟต์ล่าสุด');
+    }
+
+    document.getElementById('sum-card').innerHTML=
+        /* รูป 65% */
+        '<div class="sum-top">'+
+            '<div class="sum-fighter-img sa">'+
+                '<img src="'+portraitImg(a.image_filename)+'" onerror="this.src=PH" alt="'+esc(a.name_th)+'">'+
+            '</div>'+
+            '<div class="sum-fighter-img sb">'+
+                '<img src="'+portraitImg(b.image_filename)+'" onerror="this.src=PH" alt="'+esc(b.name_th)+'">'+
+            '</div>'+
+            '<div class="sum-vs-overlay">VS</div>'+
+        '</div>'+
+        /* stats bar ล่าง */
+        '<div class="sum-bottom">'+
+            /* % row */
+            '<div class="sum-pcts">'+
+                '<div class="sum-pct-block sa">'+
+                    '<div class="sum-pct-name'+(a.name_th&&a.name_th.length>20?' long':'')+'">'+esc(a.name_th)+'</div>'+
+                    '<div class="sum-pct-num">'+pctA+'%</div>'+
+                    '<div class="sum-pct-lbl">WIN PROBABILITY</div>'+
+                '</div>'+
+                '<div class="sum-pct-vs">VS</div>'+
+                '<div class="sum-pct-block sb">'+
+                    '<div class="sum-pct-name'+(b.name_th&&b.name_th.length>20?' long':'')+'">'+esc(b.name_th)+'</div>'+
+                    '<div class="sum-pct-num">'+pctB+'%</div>'+
+                    '<div class="sum-pct-lbl">WIN PROBABILITY</div>'+
+                '</div>'+
+            '</div>'+
+            '<div class="sum-divider2"></div>'+
+            /* form badges */
+            '<div class="sum-forms2">'+
+                '<div>'+
+                    '<div class="sum-form-label">'+rangeLbl(fa)+'</div>'+
+                    '<div class="sum-form-row2">'+formBadges(fa.list)+'</div>'+
+                '</div>'+
+                '<div>'+
+                    '<div class="sum-form-label">'+rangeLbl(fb)+'</div>'+
+                    '<div class="sum-form-row2">'+formBadges(fb.list)+'</div>'+
+                '</div>'+
+            '</div>'+
+            '<div class="sum-footer2">WWW.BOXINGFANDOM.COM | STATS PREDICTION V5.3</div>'+
+        '</div>';
+}
+
+function saveImg(){
+    var card=document.getElementById('sum-card');
+    var btn=document.querySelector('.save-btn');
+    var origLbl=btn?btn.textContent:'';
+    if(btn){btn.disabled=true;btn.textContent='⏳ กำลังสร้างรูปภาพ...';}
+
+    function finish(){ if(btn){btn.disabled=false;btn.textContent=origLbl;} }
+
+    function download(dataUrl){
+        var link=document.createElement('a');
+        link.download='boxfan-compare.png';
+        link.href=dataUrl;
+        link.click();
+        finish();
+    }
+
+    function run(){
+        var w=card.offsetWidth,h=card.offsetHeight;
+        html2canvas(card,{scale:2,useCORS:true,allowTaint:true,backgroundColor:'#0a0a12',width:w,height:h}).then(function(canvas){
+            download(canvas.toDataURL('image/png'));
+        }).catch(function(){
+            finish();alert('ขออภัย ไม่สามารถบันทึกรูปภาพได้ในขณะนี้');
+        });
+    }
+
+    if(document.fonts&&document.fonts.ready){document.fonts.ready.then(run);}else{run();}
+}
+
+function swTab(id,btn){
+    document.querySelectorAll('#hist-tabs .tbtn').forEach(function(b){b.classList.remove('active');});
+    document.querySelectorAll('#hist-panels .tpanel').forEach(function(p){p.classList.remove('active');});
+    btn.classList.add('active');
+    document.getElementById('tp-'+id).classList.add('active');
+}
+
+function checkUpcoming(a,b){
+    var ha=hist(a.id).filter(function(h){return h.result_type==='upcoming';});
+    var match=ha.find(function(h){return h.opponent===b.name_th||h.opponent===b.name_en;});
+    var note=document.getElementById('unote');
+    if(match){
+        note.style.display='flex';
+        var txt='⚡ '+a.name_th+' vs '+b.name_th+' มีแมตช์ที่กำลังจะมา!';
+        if(match.event)txt+=' — '+match.event;
+        if(match.date)txt+=' ('+fDate(match.date)+')';
+        document.getElementById('unote-txt').textContent=txt;
+    } else {
+        note.style.display='none';
+    }
+}
+/* ══ THEME TOGGLE ══ */
+function toggleTheme(){
+  var html=document.documentElement;
+  var isLight=html.getAttribute('data-theme')==='light';
+  html.setAttribute('data-theme',isLight?'dark':'light');
+  try{localStorage.setItem('boxfan-theme',isLight?'dark':'light');}catch(e){}
+}
+/* โหลด theme ที่บันทึกไว้ก่อน render */
+(function(){
+  try{var s=localStorage.getItem('boxfan-theme');if(s==='light')document.documentElement.setAttribute('data-theme','light');}catch(e){}
+})();
+/* inject toggle button เข้า nav-right หลัง utils.js สร้าง nav แล้ว */
+function injectThemeToggle(){
+  var navRight=document.querySelector('.nav-right,.nav .nav-right');
+  if(!navRight) return;
+  if(document.getElementById('theme-toggle')) return;
+  var btn=document.createElement('button');
+  btn.id='theme-toggle';
+  btn.className='theme-toggle';
+  btn.setAttribute('aria-label','เปลี่ยนโหมดสี');
+  btn.title='เปลี่ยนโหมดสี';
+  btn.onclick=toggleTheme;
+  btn.innerHTML=
+    '<svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>'+
+    '<svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+  /* แทรกก่อน element แรกสุดใน nav-right */
+  navRight.insertBefore(btn, navRight.firstChild);
+}
+
+init();
+</script>
+</body>
+</html>

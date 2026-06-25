@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>เครื่องมือสร้าง Sitemap อัตโนมัติ — Boxfan</title>
+    <!-- จุดเชื่อมโยงไปหาไฟล์ข้อมูลที่อัปเดตไว้จริงในเว็บ -->
+    <script src="data/fighters_data.js"></script>
+    <script src="blog/articles.js"></script>
+</head>
+<body style="padding: 30px; font-family: sans-serif; background-color: #f0f2f5;">
+
+    <h2 style="color: #e8412e;">1. คัดลอกโค้ดในกล่องด้านล่างนี้ทั้งหมด</h2>
+    <p>นำไปวางทับในไฟล์ <strong>sitemap.xml</strong> ของคุณ แล้วกด Save ได้เลยครับ</p>
+    <p id="status" style="font-size:14px;color:#555"></p>
+
+    <textarea id="result" style="width: 100%; height: 500px; padding: 15px; font-family: monospace; font-size: 14px; border: 2px solid #ccc; border-radius: 8px;"></textarea>
+
+    <button onclick="copyResult()" style="margin-top:14px;padding:12px 26px;background:#e8412e;color:#fff;border:none;border-radius:8px;font-size:15px;font-weight:700;cursor:pointer">
+        📋 คัดลอกทั้งหมด
+    </button>
+    <span id="copy-msg" style="margin-left:12px;color:#15803d;font-weight:700;display:none">คัดลอกแล้ว ✓</span>
+
+    <script>
+        // ── 1) หน้า static หลักของเว็บ ──
+        let xml = `<?xml version="1.0" encoding="UTF-8"?>\n`;
+        xml += `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
+        xml += `\n  <!-- หน้า static -->\n`;
+
+        const mainPages = [
+            { url: "https://boxingfandom.com/",                priority: "1.0" },
+            { url: "https://boxingfandom.com/rankings.html",    priority: "0.9" },
+            { url: "https://boxingfandom.com/fighters.html",    priority: "0.8" },
+            { url: "https://boxingfandom.com/schedule.html",    priority: "0.9" },
+            { url: "https://boxingfandom.com/results.html",     priority: "0.9" },
+            { url: "https://boxingfandom.com/compare.html",     priority: "0.7" },
+            { url: "https://boxingfandom.com/tierlist.html",    priority: "0.6" },
+            { url: "https://boxingfandom.com/about.html",       priority: "0.4" },
+            { url: "https://boxingfandom.com/contact.html",     priority: "0.3" },
+            { url: "https://boxingfandom.com/privacy.html",     priority: "0.2" },
+            { url: "https://boxingfandom.com/disclaimer.html",  priority: "0.2" }
+        ];
+
+        mainPages.forEach(page => {
+            xml += `  <url>\n`;
+            xml += `    <loc>${page.url}</loc>\n`;
+            xml += `    <changefreq>weekly</changefreq>\n`;
+            xml += `    <priority>${page.priority}</priority>\n`;
+            xml += `  </url>\n`;
+        });
+
+        // ── 2) หน้ารวมบทความ ──
+        xml += `\n  <!-- หน้ารวมบทความ -->\n`;
+        xml += `  <url>\n`;
+        xml += `    <loc>https://boxingfandom.com/blog/</loc>\n`;
+        xml += `    <changefreq>daily</changefreq>\n`;
+        xml += `    <priority>0.7</priority>\n`;
+        xml += `  </url>\n`;
+
+        // ── 3) วนลูปนักมวยทุกคนจาก data/fighters_data.js ──
+        let statusMsg = [];
+        xml += `\n  <!-- โปรไฟล์นักมวยทั้งหมด -->\n`;
+        if (typeof FIGHTERS !== 'undefined') {
+            FIGHTERS.forEach(fighter => {
+                xml += `  <url>\n`;
+                xml += `    <loc>https://boxingfandom.com/profile.html?id=${fighter.id}</loc>\n`;
+                xml += `    <changefreq>weekly</changefreq>\n`;
+                xml += `    <priority>0.8</priority>\n`;
+                xml += `  </url>\n`;
+            });
+            statusMsg.push(`✓ พบนักมวย ${FIGHTERS.length} คน`);
+        } else {
+            xml += `  <!-- เกิดข้อผิดพลาด: หาไฟล์ data/fighters_data.js ไม่เจอ โปรดวางไฟล์นี้ไว้ที่เดียวกับ data/ -->\n`;
+            statusMsg.push('✗ ไม่พบ data/fighters_data.js');
+        }
+
+        // ── 4) วนลูปบทความทุกชิ้นจาก blog/articles.js ──
+        xml += `\n  <!-- บทความทั้งหมด -->\n`;
+        if (typeof ARTICLES !== 'undefined') {
+            ARTICLES.forEach(article => {
+                xml += `  <url>\n`;
+                xml += `    <loc>https://boxingfandom.com/blog/${article.file}</loc>\n`;
+                xml += `    <lastmod>${article.date || ''}</lastmod>\n`;
+                xml += `    <changefreq>monthly</changefreq>\n`;
+                xml += `    <priority>0.6</priority>\n`;
+                xml += `  </url>\n`;
+            });
+            statusMsg.push(`✓ พบบทความ ${ARTICLES.length} บทความ`);
+        } else {
+            xml += `  <!-- เกิดข้อผิดพลาด: หาไฟล์ blog/articles.js ไม่เจอ -->\n`;
+            statusMsg.push('✗ ไม่พบ blog/articles.js');
+        }
+
+        xml += `\n</urlset>`;
+
+        document.getElementById('result').value = xml;
+        document.getElementById('status').textContent = statusMsg.join('   ·   ');
+
+        function copyResult(){
+            var ta = document.getElementById('result');
+            ta.select();
+            ta.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(ta.value).then(function(){
+                var msg = document.getElementById('copy-msg');
+                msg.style.display = 'inline';
+                setTimeout(function(){ msg.style.display = 'none'; }, 2000);
+            }).catch(function(){
+                document.execCommand('copy'); /* fallback เผื่อเบราว์เซอร์เก่า */
+            });
+        }
+    </script>
+</body>
+</html>

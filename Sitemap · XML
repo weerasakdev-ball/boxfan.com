@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- หน้าหลัก -->
+  <url>
+    <loc>https://boxingfandom.com/</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="th" href="https://boxingfandom.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://boxingfandom.com/"/>
+  </url>
+
+  <url>
+    <loc>https://boxingfandom.com/index.html</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://boxingfandom.com/rankings.html</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://boxingfandom.com/results.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://boxingfandom.com/schedule.html</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://boxingfandom.com/compare.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- หน้าโปรไฟล์นักมวย — เพิ่ม id ทีละคนตามข้อมูลจริงใน DB -->
+  <!-- ตัวอย่าง: สร้างอัตโนมัติด้วย export_db.py หรือเพิ่มมือ -->
+  <!--
+  <url>
+    <loc>https://boxingfandom.com/profile.html?id=1</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  -->
+
+</urlset>
