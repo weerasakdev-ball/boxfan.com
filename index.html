@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="th" data-theme="light">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -442,6 +442,7 @@ a{color:inherit;text-decoration:none}
   <div class="nav-tabs">
     <a class="nav-tab active" href="index.html">อันดับ</a>
     <a class="nav-tab" href="rankings.html">ตารางคะแนน</a>
+    <a class="nav-tab" href="Fighters.html">นักมวยทั้งหมด</a>
     <a class="nav-tab" href="schedule.html">โปรแกรมชก</a>
     <a class="nav-tab" href="results.html">ผลการแข่งขัน</a>
     <a class="nav-tab" href="compare.html">เปรียบเทียบ</a>
@@ -488,10 +489,10 @@ a{color:inherit;text-decoration:none}
     <div class="card-box" id="rank-card">
       <div class="rank-dtabs">
         <button class="rdt active" onclick="switchDiv(this,'all')">ทุกรุ่น</button>
-        <button class="rdt" onclick="switchDiv(this,'ฟลายเวต')">Fly</button>
-        <button class="rdt" onclick="switchDiv(this,'แบนตัมเวต')">Ban</button>
-        <button class="rdt" onclick="switchDiv(this,'เฟเธอร์เวต')">Feat</button>
-        <button class="rdt" onclick="switchDiv(this,'ไลต์เวต')">Light</button>
+        <button class="rdt" onclick="switchDiv(this,'fly')">Fly</button>
+        <button class="rdt" onclick="switchDiv(this,'bantam')">Ban</button>
+        <button class="rdt" onclick="switchDiv(this,'feather')">Feat</button>
+        <button class="rdt" onclick="switchDiv(this,'light')">Light</button>
       </div>
       <div class="rank-col-hdr">
         <div class="rch c">อันดับ</div>
@@ -637,21 +638,22 @@ function renderVideos(){
 /* ══ RANKING ══ */
 var _curDiv='all';
 var CUR_YEAR=new Date().getFullYear().toString();
-function getRanked(divKey,max,yearFilter){
+function getRanked(divFilter,max,yearFilter){
   if(typeof FIGHTERS==='undefined') return [];
   var useYear=yearFilter||'all';
   var list=FIGHTERS.map(function(f){
     var hAll=hist(f.id).filter(function(x){return x.result_type!=='upcoming';});
     var h=useYear==='current'?hAll.filter(function(x){return x.date&&x.date.startsWith(CUR_YEAR);}):hAll;
-    if(divKey&&divKey!=='all'&&(!f.division||f.division.indexOf(divKey)===-1)) return null;
+    if(divFilter&&divFilter!=='all'&&divKey(f.division)!==divFilter) return null;
     var w=h.filter(function(x){return x.result_type==='win';}).length;
     var l=h.filter(function(x){return x.result_type==='loss';}).length;
     if(w+l===0) return null;
     var ko=hAll.filter(function(x){return x.result_type==='win'&&x.decision&&/ko|tko/i.test(x.decision);}).length;
     var sc=score(h);var wr=Math.round(w/(w+l)*100);
-    return Object.assign({},f,{_w:w,_l:l,_total:w+l,_ko:ko,_s:sc,_wr:wr});
+    var sd=fightStreak(h);
+    return Object.assign({},f,{_w:w,_l:l,_total:w+l,_ko:ko,_s:sc,_wr:wr,_streak:sd.streak,_lastDate:sd.lastDate});
   }).filter(Boolean);
-  list.sort(function(a,b){return b._s-a._s||b._w-a._w;});
+  list.sort(function(a,b){return b._s-a._s||b._streak-a._streak||(b._lastDate||'').localeCompare(a._lastDate||'')||b._w-a._w;});
   return max?list.slice(0,max):list;
 }
 function switchDiv(btn,divKey){
@@ -896,7 +898,7 @@ function toggleTheme(){
 (function(){
   try{
     var saved=localStorage.getItem('boxfan-theme');
-    if(saved==='light') document.documentElement.setAttribute('data-theme','light');
+    if(saved==='dark') document.documentElement.setAttribute('data-theme','dark');
   }catch(e){}
 })();
 </script>

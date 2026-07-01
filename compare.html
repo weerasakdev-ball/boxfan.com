@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="th" data-theme="light">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -1152,7 +1152,7 @@ function toggleTheme(){
 }
 /* โหลด theme ที่บันทึกไว้ก่อน render */
 (function(){
-  try{var s=localStorage.getItem('boxfan-theme');if(s==='light')document.documentElement.setAttribute('data-theme','light');}catch(e){}
+  try{var s=localStorage.getItem('boxfan-theme');if(s==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}
 })();
 /* inject toggle button เข้า nav-right หลัง utils.js สร้าง nav แล้ว */
 function injectThemeToggle(){

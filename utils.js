@@ -9,18 +9,6 @@ var SITE  = 'https://boxingfandom.com';
 var CLOUD = 'dpvyl7nan'; /* ← Cloudinary cloud name */
 var PH    = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80'%3E%3Crect width='80' height='80' fill='%23f1f3f4'/%3E%3Ctext x='50%25' y='55%25' text-anchor='middle' dominant-baseline='middle' font-size='36'%3E%F0%9F%A5%8A%3C/text%3E%3C/svg%3E";
 
-/* ── Security: HTML escape (กัน XSS เมื่อ build HTML ด้วยการต่อสตริง) ──────── */
-/* ใช้หุ้มค่าข้อความอิสระทุกตัวก่อนยัดเข้า innerHTML เช่น esc(f.name_th) */
-function esc(s) {
-    if (s == null) return '';
-    return String(s)
-        .replace(/&/g, '&amp;')
-        .replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;')
-        .replace(/"/g, '&quot;')
-        .replace(/'/g, '&#39;');
-}
-
 /* ── Image helpers ───────────────────────────────────────────────────────── */
 var IMG_SIZES = { sm: 'w_80,h_80', md: 'w_160,h_160', lg: 'w_600,h_400', xl: 'w_800,h_600' };
 
@@ -73,15 +61,18 @@ var FL = {
 };
 function fl(c) { return FL[c] || '🏳'; }
 
+/* ── HTML escape (ป้องกัน XSS / โครงสร้างพัง เวลาแสดงชื่อ-ข้อมูลที่มาจาก data) ── */
+var ESC_MAP = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' };
+function esc(s) {
+    if (s === null || s === undefined) return '';
+    return String(s).replace(/[&<>"']/g, function(c) { return ESC_MAP[c]; });
+}
+
 /* ── Division shortname ─────────────────────────────────────────────────── */
 function ds(d) {
-    if (!d) return '';
-    if (d.indexOf('อะตอมเวต')  !== -1) return 'Atomweight';
-    if (d.indexOf('สตรอว์เวต') !== -1) return 'Strawweight';
-    if (d.indexOf('ฟลายเวต')   !== -1) return 'Flyweight';
-    if (d.indexOf('แบนตัมเวต') !== -1) return 'Bantamweight';
-    if (d.indexOf('เฟเธอร์เวต')!== -1) return 'Featherweight';
-    if (d.indexOf('ไลต์เวต')   !== -1) return 'Lightweight';
+    var k = divKey(d);
+    if (!k) return d || '';
+    for (var i = 0; i < DIV_MAP.length; i++) if (DIV_MAP[i].key === k) return DIV_MAP[i].en;
     return d;
 }
 
@@ -93,13 +84,53 @@ function score(h) {
             s += 3;
             if (x.round === 1 && x.decision && /ko|tko/i.test(x.decision)) s += 1;
         } else if (x.result_type === 'loss') {
-            s -= 1;
+            s -= 3;
         }
     });
     return s;
 }
 
 function hist(fid) { return HISTORY.filter(function(h) { return h.fighter_id === fid; }); }
+
+/* ── Streak & last fight date (สำหรับ tie-break อันดับ) ─────────────────── */
+function fightStreak(h) {
+    var past = (h || []).filter(function(x) { return x.result_type !== 'upcoming' && x.date; });
+    past.sort(function(a, b) { return b.date.localeCompare(a.date); }); // ล่าสุดก่อน
+    var streak = 0;
+    for (var i = 0; i < past.length; i++) {
+        if (past[i].result_type === 'win') streak++;
+        else break;
+    }
+    var lastDate = past.length ? past[0].date : '';
+    return { streak: streak, lastDate: lastDate };
+}
+
+/* ── Division normalization (รองรับสะกด เวต/เวท ปนกัน + คำนำหน้าต่าง ๆ) ──── */
+var DIV_MAP = [
+    { key: 'atom',    label: 'อะตอมเวต',   en: 'Atomweight' },
+    { key: 'straw',   label: 'สตรอว์เวต',  en: 'Strawweight' },
+    { key: 'fly',     label: 'ฟลายเวต',    en: 'Flyweight' },
+    { key: 'bantam',  label: 'แบนตัมเวต',  en: 'Bantamweight' },
+    { key: 'feather', label: 'เฟเธอร์เวต', en: 'Featherweight' },
+    { key: 'light',   label: 'ไลต์เวต',    en: 'Lightweight' },
+    { key: 'heavy',   label: 'เฮฟวีเวต',   en: 'Heavyweight' }
+];
+var DIV_KW = {
+    atom: 'อะตอม', straw: 'สตรอว์', fly: 'ฟลาย', bantam: 'แบนตัม',
+    feather: 'เฟเธอร์', light: 'ไล', heavy: 'เฮฟวี'
+    /* 'ไล' ครอบคลุมทั้ง ไลต์เวต/ไลท์เวท */
+};
+function divKey(d) {
+    if (!d) return null;
+    for (var i = 0; i < DIV_MAP.length; i++) {
+        if (d.indexOf(DIV_KW[DIV_MAP[i].key]) !== -1) return DIV_MAP[i].key;
+    }
+    return null;
+}
+function divLabel(key) {
+    for (var i = 0; i < DIV_MAP.length; i++) if (DIV_MAP[i].key === key) return DIV_MAP[i].label;
+    return key;
+}
 
 function rClass(rt)  { return rt === 'win' ? 'bw' : rt === 'loss' ? 'bl' : rt === 'upcoming' ? 'bu' : 'bn'; }
 function rLabel(rt)  { return rt === 'win' ? 'ชนะ' : rt === 'loss' ? 'แพ้' : rt === 'upcoming' ? 'รอแข่ง' : 'NC'; }
@@ -204,6 +235,7 @@ function nav(active, basePath) {
     var tabs = [
         { id: 'ranking',  label: 'อันดับ',        href: base + 'index.html',    icon: '🏆' },
         { id: 'rankings', label: 'ตารางคะแนน',    href: base + 'rankings.html', icon: '📊' },
+        { id: 'fighters', label: 'นักมวยทั้งหมด', href: base + 'Fighters.html', icon: '🥋' },
         { id: 'schedule', label: 'โปรแกรมชก',     href: base + 'schedule.html', icon: '📅' },
         { id: 'results',  label: 'ผลการแข่งขัน',  href: base + 'results.html',  icon: '🥊' },
         { id: 'compare',  label: 'เปรียบเทียบ',   href: base + 'compare.html',  icon: '⚖️' },
@@ -310,13 +342,13 @@ function initSearch() {
                 return '<a class="si" href="profile.html?id=' + f.id + '">' +
                     '<img src="' + cImg(f.image_filename, 'sm') + '" loading="lazy" onerror="this.src=PH" alt="">' +
                     '<div>' +
-                        '<div class="si-nm">' + esc(f.name_th) + '</div>' +
+                        '<div class="si-nm">' + f.name_th + '</div>' +
                         '<div class="si-mt">' + fl(f.country) + ' ' + ds(f.division) + ' &nbsp;·&nbsp; ' + f.total_wins + 'W ' + f.total_losses + 'L</div>' +
                     '</div>' +
                     '</a>';
             }).join('');
         } else {
-            drop.innerHTML = '<div class="s-empty">ไม่พบ "' + esc(inp.value) + '"</div>';
+            drop.innerHTML = '<div class="s-empty">ไม่พบ "' + inp.value + '"</div>';
         }
         drop.classList.add('open');
     });
@@ -325,93 +357,3 @@ function initSearch() {
         if (!e.target.closest('.nav-search-wrap')) drop.classList.remove('open');
     });
 }
-/* ══════════════════════════════════════════════════════════════
-   ACCESSIBILITY LAYER (กลาง — ทำงานทุกหน้าโดยไม่ต้องแก้ราย element)
-   • ทำให้ทุก element ที่มี onclick ใช้คีย์บอร์ดได้ (Enter / Space)
-   • ใส่ focus ring ที่มองเห็นชัด (focus-visible)
-   • เพิ่ม "ข้ามไปเนื้อหา" (skip link) สำหรับ screen reader / keyboard
-══════════════════════════════════════════════════════════════ */
-(function () {
-    /* 1) ฉีด CSS สำหรับ focus ring + skip link + sr-only */
-    function injectA11yCSS() {
-        if (document.getElementById('a11y-css')) return;
-        var css =
-            ':where(a,button,[role="button"],[role="tab"],input,select,textarea,[tabindex]):focus-visible{' +
-                'outline:2px solid var(--gold,#f4b740);outline-offset:2px;border-radius:4px}' +
-            '.skip-link{position:absolute;left:8px;top:-48px;z-index:9999;' +
-                'background:var(--red,#e8412e);color:#fff;padding:9px 16px;border-radius:8px;' +
-                'font-weight:700;font-size:14px;transition:top .15s;box-shadow:0 6px 20px -6px rgba(0,0,0,.5)}' +
-            '.skip-link:focus{top:8px}' +
-            '.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;' +
-                'overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}';
-        var st = document.createElement('style');
-        st.id = 'a11y-css';
-        st.textContent = css;
-        (document.head || document.documentElement).appendChild(st);
-    }
-    injectA11yCSS();
-
-    /* 2) ทำให้ element ที่มี onclick กดด้วยคีย์บอร์ดได้ */
-    var NATIVE = /^(A|BUTTON|INPUT|SELECT|TEXTAREA|SUMMARY)$/;
-    function upgrade(el) {
-        if (!el || el.nodeType !== 1) return;
-        if (!el.hasAttribute('onclick')) return;
-        if (NATIVE.test(el.tagName)) return;
-        if (el.getAttribute('data-a11y') === '1') return;
-        el.setAttribute('data-a11y', '1');
-        if (!el.hasAttribute('tabindex')) el.setAttribute('tabindex', '0');
-        if (!el.hasAttribute('role')) el.setAttribute('role', 'button');
-    }
-    function scan(root) {
-        if (!root || root.nodeType !== 1) return;
-        upgrade(root);
-        if (root.querySelectorAll) {
-            var list = root.querySelectorAll('[onclick]');
-            for (var i = 0; i < list.length; i++) upgrade(list[i]);
-        }
-    }
-    document.addEventListener('keydown', function (e) {
-        if (e.key !== 'Enter' && e.key !== ' ' && e.key !== 'Spacebar') return;
-        var t = e.target;
-        if (t && t.getAttribute && t.getAttribute('data-a11y') === '1') {
-            e.preventDefault();
-            t.click();
-        }
-    });
-
-    /* 3) Skip link → เนื้อหาหลัก */
-    function addSkipLink() {
-        if (document.getElementById('skip-link')) return;
-        var main = document.querySelector('main, #root, [role="main"], .page-w, .wrap, .container');
-        if (main && !main.id) main.id = 'main-content';
-        var targetId = main ? main.id : '';
-        if (main) main.setAttribute('tabindex', '-1');
-        var a = document.createElement('a');
-        a.id = 'skip-link';
-        a.className = 'skip-link';
-        a.href = '#' + (targetId || '');
-        a.textContent = 'ข้ามไปยังเนื้อหาหลัก';
-        if (document.body) document.body.insertBefore(a, document.body.firstChild);
-    }
-
-    /* 4) เริ่มทำงาน + เฝ้าดู DOM ที่ render เพิ่มทีหลัง (ปุ่ม/แถวที่สร้างด้วย JS) */
-    function boot() {
-        injectA11yCSS();
-        scan(document.body);
-        addSkipLink();
-        if (window.MutationObserver) {
-            var mo = new MutationObserver(function (muts) {
-                for (var i = 0; i < muts.length; i++) {
-                    var nodes = muts[i].addedNodes;
-                    for (var j = 0; j < nodes.length; j++) scan(nodes[j]);
-                }
-            });
-            mo.observe(document.body, { childList: true, subtree: true });
-        }
-    }
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', boot);
-    } else {
-        boot();
-    }
-})();
