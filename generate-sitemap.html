@@ -61,8 +61,11 @@
         xml += `\n  <!-- โปรไฟล์นักมวยทั้งหมด -->\n`;
         if (typeof FIGHTERS !== 'undefined') {
             FIGHTERS.forEach(fighter => {
+                let nameStr = fighter.name_en ? fighter.name_en : fighter.name_th;
+                let slug = encodeURIComponent(nameStr.trim().toLowerCase().replace(/\s+/g, '-'));
                 xml += `  <url>\n`;
-                xml += `    <loc>https://boxingfandom.com/profile.html?id=${fighter.id}</loc>\n`;
+                // ใช้ &amp; แทน & ใน XML เพื่อป้องกัน Error
+                xml += `    <loc>https://boxingfandom.com/profile.html?id=${fighter.id}&amp;name=${slug}</loc>\n`;
                 xml += `    <changefreq>weekly</changefreq>\n`;
                 xml += `    <priority>0.8</priority>\n`;
                 xml += `  </url>\n`;

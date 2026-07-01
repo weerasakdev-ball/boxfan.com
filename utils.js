@@ -357,3 +357,14 @@ function initSearch() {
         if (!e.target.closest('.nav-search-wrap')) drop.classList.remove('open');
     });
 }
+
+/* ── URL SEO Helper (สร้างใหม่) ─────────────────────────────────────────── */
+function getFighterUrl(f) {
+    if (!f) return '#';
+    // ดึงชื่อภาษาอังกฤษมาใช้ก่อน ถ้าไม่มีค่อยใช้ภาษาไทย
+    var nameStr = f.name_en ? f.name_en : f.name_th;
+    // ลบช่องว่างและทำเป็นตัวเล็ก เช่น "Rodtang Jitmuangnon" -> "rodtang-jitmuangnon"
+    var slug = encodeURIComponent(nameStr.trim().toLowerCase().replace(/\s+/g, '-'));
+    // คืนค่าเป็น URL ที่มีทั้ง ID และ Name
+    return 'profile.html?id=' + f.id + '&name=' + slug;
+}

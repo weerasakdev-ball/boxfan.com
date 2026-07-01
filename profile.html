@@ -358,7 +358,7 @@ function init(){
         titleEn:(f.name_en||f.name_th)+' Fighter Stats & Record',
         desc:f.name_th+' นักมวย ONE Championship '+(f.division||'')+' '+f.total_wins+'W '+f.total_losses+'L WR '+f.win_rate+'% | Boxfan',
         descEn:(f.name_en||f.name_th)+' ONE Championship fighter record '+f.total_wins+'W '+f.total_losses+'L '+f.win_rate+'% win rate',
-        url:SITE+'/profile.html?id='+id,
+        url:SITE+'/'+getFighterUrl(f),
         image:fighterImg,type:'profile',
         keywords:f.name_th+','+(f.name_en||'')+',ONE Championship,'+(f.division||'')+',มวยไทย,Muay Thai,Boxfan',
         jsonld:{'@context':'https://schema.org','@type':'Person','name':f.name_th,'alternateName':f.name_en||undefined,'description':f.biography||(f.name_th+' นักมวย ONE Championship'),'image':fighterImg,'url':SITE+'/profile.html?id='+id,'nationality':f.country||undefined,'sport':'Muay Thai / Kickboxing / MMA','memberOf':{'@type':'SportsOrganization','name':'ONE Championship'}}
@@ -442,7 +442,7 @@ function init(){
         up.forEach(function(x){
             var oppF=FIGHTERS.find(function(ff){return ff.name_th===x.opponent||ff.name_en===x.opponent;});
             var oppImg2=oppF?cImg(oppF.image_filename,'md'):PH_IMG;
-            var oppLink=oppF?'profile.html?id='+oppF.id:'';
+            var oppLink=oppF?getFighterUrl(oppF):'';
             html+='<tr style="background:linear-gradient(90deg,rgba(59,141,240,.04),transparent)">';
             html+='<td><span class="bu">รอผล</span></td>';
             html+='<td><div class="opp-row">';
@@ -467,7 +467,7 @@ function init(){
         past.forEach(function(x){
             var oppF=FIGHTERS.find(function(ff){return ff.name_th===x.opponent||ff.name_en===x.opponent;});
             var oppImg2=oppF?cImg(oppF.image_filename,'md'):PH_IMG;
-            var oppLink=oppF?'profile.html?id='+oppF.id:'';
+            var oppLink=oppF?getFighterUrl(oppF):'';
             html+='<tr>';
             html+='<td><span class="'+rClass(x.result_type)+'">'+rLabel(x.result_type)+'</span></td>';
             html+='<td><div class="opp-row">';
@@ -536,7 +536,7 @@ function setupSearch(){
             return (f.name_th||'').toLowerCase().indexOf(q)!==-1||(f.name_en||'').toLowerCase().indexOf(q)!==-1;
         }).slice(0,7);
         drop.innerHTML=hits.length?hits.map(function(f){
-            return '<a class="si" href="profile.html?id='+f.id+'">'+
+            return '<a class="si" href="'+getFighterUrl(f)+'">'+
                 '<img src="'+cImg(f.image_filename,'sm')+'" loading="lazy" onerror="this.src=PH_IMG" alt="">'+
                 '<div><div class="si-nm">'+esc(f.name_th)+'</div><div class="si-mt">'+fl(f.country)+' · '+ds(f.division)+'</div></div>'+
             '</a>';

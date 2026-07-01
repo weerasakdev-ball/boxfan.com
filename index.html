@@ -669,7 +669,7 @@ function renderRanking(){
   body.innerHTML=list.map(function(f,i){
     var rank=i+1;var pc=rank===1?'p1':rank===2?'p2':rank===3?'p3':'';
     var zc=zones[i]||'';var rd=rank<10?'0'+rank:rank;
-    return '<div class="rank-entry '+zc+'" onclick="location.href=\'profile.html?id='+f.id+'\'">'+
+    return '<div class="rank-entry '+zc+'" onclick="location.href=\''+getFighterUrl(f)+'\'">'+
       '<div class="re-pos '+pc+'">'+rd+'</div>'+
       '<div class="re-fighter">'+
         '<img class="re-av" src="'+cImg(f.image_filename,'sm')+'" loading="lazy" onerror="this.src=\''+PH_IMG+'\'" alt="'+esc(f.name_th)+'">'+
@@ -696,7 +696,7 @@ function renderStats(){
     return '<div class="stat-col">'+
       '<div class="stat-col-title"><span class="lhs">'+svgIcon(col.icon,15)+col.title+'</span><a href="rankings.html">เพิ่ม ›</a></div>'+
       col.list.map(function(f,i){
-        return '<div class="sri" onclick="location.href=\'profile.html?id='+f.id+'\'">'+
+        return '<div class="sri" onclick="location.href=\''+getFighterUrl(f)+'\'">'+
           '<span class="sri-rank">'+(i+1)+'</span>'+
           '<img class="sri-av" src="'+cImg(f.image_filename,'sm')+'" loading="lazy" onerror="this.src=\''+PH_IMG+'\'" alt="'+esc(f.name_th)+'">'+
           '<div class="sri-info"><div class="sri-name">'+esc(f.name_th)+'</div><div class="sri-sub">'+fl(f.country)+' '+ds(f.division)+'</div></div>'+
@@ -850,7 +850,7 @@ document.addEventListener('DOMContentLoaded',function(){
       return (f.name_th||'').toLowerCase().indexOf(q)!==-1||(f.name_en||'').toLowerCase().indexOf(q)!==-1;
     }).slice(0,7);
     drop.innerHTML=hits.length?hits.map(function(f){
-      return '<a class="si" href="profile.html?id='+f.id+'">'+
+      return '<a class="si" href="'+getFighterUrl(f)+'">'+
         '<img src="'+cImg(f.image_filename,'sm')+'" loading="lazy" onerror="this.src=\''+PH_IMG+'\'" alt="">'+
         '<div><div class="si-nm">'+esc(f.name_th)+'</div><div class="si-mt">'+fl(f.country)+' · '+ds(f.division)+'</div></div>'+
       '</a>';
