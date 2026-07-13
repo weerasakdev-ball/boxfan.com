@@ -1,0 +1,2332 @@
+<!DOCTYPE html>
+<html lang="th" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ศูนย์สถิตินักมวย — จัดเรียงตามส่วนสูง อายุ คะแนน | Boxfan</title>
+<meta name="description" content="สำรวจสถิตินักมวยแบบกราฟจุด จัดเรียงตามส่วนสูง อายุ คะแนน อัตราชนะ KO และอื่นๆ กรองตามรุ่น ชาติ ค่าย | Boxfan">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://boxingfandom.com/stats.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Barlow:wght@500;600&family=Bai+Jamjuree:wght@600;700&family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+
+/* ═══ BOXFAN — LIGHT / DARK MODE SYSTEM (นำมาจาก Rankings) ═══ */
+:root{
+  --bg:#0d1014;--bg-2:#11151b;--surf:#161c24;--surf-2:#1c2430;--surf-3:#232d3b;
+  --line:rgba(255,255,255,.07);--line-2:rgba(255,255,255,.13);--line-3:rgba(255,255,255,.20);
+  --tx:#f4f7fa;--tx-2:#b3bdc9;--tx-3:#7c8896;--tx-4:#586472;
+  --red:#e8412e;--red-600:#c2331f;--red-soft:rgba(232,65,46,.14);--red-line:rgba(232,65,46,.4);
+  --blue:#3b8df0;--blue-soft:rgba(59,141,240,.14);--blue-line:rgba(59,141,240,.4);
+  --gold:#f4b740;--gold-soft:rgba(244,183,64,.14);--gold-line:rgba(244,183,64,.42);
+  --green:#34d27f;--loss:#e8694e;
+  --sh-1:0 1px 2px rgba(0,0,0,.4);--sh-2:0 4px 14px -4px rgba(0,0,0,.5);--sh-3:0 10px 32px -10px rgba(0,0,0,.6);--sh-4:0 18px 48px -16px rgba(0,0,0,.7);
+  --glow-red:0 0 0 1px var(--red-line), 0 6px 24px -8px rgba(232,65,46,.5);
+  --edge:inset 0 1px 0 rgba(255,255,255,.05);
+  --serif:'Barlow Condensed','Bai Jamjuree',sans-serif;
+  --display:'Bai Jamjuree','IBM Plex Sans Thai',sans-serif;
+  --sans:'IBM Plex Sans Thai','Barlow',sans-serif;
+}
+[data-theme="light"]{
+  --bg:#f0f2f5;--bg-2:#e8ecf0;--surf:#ffffff;--surf-2:#f5f7fa;--surf-3:#edf0f4;
+  --line:rgba(0,0,0,.09);--line-2:rgba(0,0,0,.14);--line-3:rgba(0,0,0,.22);
+  --tx:#0f1923;--tx-2:#3d4f61;--tx-3:#637282;--tx-4:#8fa0b0;
+  --red:#d63820;--red-600:#b52e18;--red-soft:rgba(214,56,32,.10);--red-line:rgba(214,56,32,.35);
+  --blue:#1b6fd4;--blue-soft:rgba(27,111,212,.10);--blue-line:rgba(27,111,212,.35);
+  --gold:#c9830a;--gold-soft:rgba(201,131,10,.12);--gold-line:rgba(201,131,10,.38);
+  --green:#1a9f5c;--loss:#c9200a;
+  --sh-1:0 1px 3px rgba(0,0,0,.12);--sh-2:0 4px 14px -4px rgba(0,0,0,.14);
+  --sh-3:0 10px 32px -10px rgba(0,0,0,.18);--sh-4:0 18px 48px -16px rgba(0,0,0,.22);
+  --glow-red:0 0 0 1px var(--red-line), 0 6px 24px -8px rgba(214,56,32,.3);
+  --edge:inset 0 1px 0 rgba(255,255,255,.9);
+  --body-bg-a:rgba(214,56,32,.07);--body-bg-b:rgba(27,111,212,.06);
+  --nav-bg:rgba(255,255,255,.88);
+  --util-bg:#e2e6eb;--footer-bg:#e2e6eb;
+  --rank-col-bg:#edf0f4;
+  --filter-sticky-bg:rgba(240,242,245,.92);
+  --skel-a:#e8ecf0;--skel-b:#dde1e7;
+  --theme-toggle-bg:#ffffff;--theme-toggle-border:rgba(0,0,0,.18);
+  --theme-icon-color:#c9830a;
+}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--sans);color:var(--tx);font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;font-feature-settings:"tnum" 1;
+  background:radial-gradient(70% 50% at 16% -6%, var(--body-bg-a) 0%, transparent 60%),radial-gradient(70% 50% at 88% -4%, var(--body-bg-b) 0%, transparent 60%),linear-gradient(180deg, var(--bg-2) 0%, var(--bg) 380px, var(--bg) 100%);
+  background-attachment:fixed;}
+body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.5;background-image:repeating-linear-gradient(115deg, rgba(255,255,255,.012) 0 2px, transparent 2px 7px)}
+[data-theme="light"] body::before{opacity:.2;background-image:repeating-linear-gradient(115deg,rgba(0,0,0,.016) 0 2px,transparent 2px 7px)}
+body>*{position:relative;z-index:1}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--red);color:#fff}
+
+.ic{display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;vertical-align:middle}
+.ic svg{display:block;width:1em;height:1em;stroke:currentColor;stroke-width:1.85;stroke-linecap:round;stroke-linejoin:round;fill:none}
+
+/* ── NAV & HEADER ── */
+.util-bar{background:var(--util-bg);height:34px;display:flex;align-items:center;padding:0 26px;position:relative;z-index:210;border-bottom:1px solid var(--line)}
+.util-bar a{font-size:11px;color:var(--tx-3);font-weight:500;letter-spacing:.02em;margin-right:22px;transition:color .15s}
+.util-bar a:hover{color:var(--tx)}
+.util-bar-right{margin-left:auto;font-size:10px;color:var(--tx-4);font-weight:500;letter-spacing:.05em;white-space:nowrap;text-transform:uppercase}
+.nav{position:sticky;top:0;z-index:200;background:var(--nav-bg);backdrop-filter:saturate(150%) blur(16px);-webkit-backdrop-filter:saturate(150%) blur(16px);border-bottom:1px solid var(--line);height:66px;display:flex;align-items:center;padding:0 26px;box-shadow:var(--sh-2)}
+.nav-logo{display:flex;align-items:center;gap:12px;margin-right:34px;flex-shrink:0}
+.nav-logo img{height:42px;width:42px;object-fit:contain;border-radius:8px;background:#fff;box-shadow:var(--sh-1)}
+.nav-logo-text{display:flex;flex-direction:column;line-height:1}
+.logo-main{font-family:var(--serif);font-weight:800;font-size:27px;color:var(--tx);letter-spacing:.5px;line-height:.9;text-transform:uppercase}
+.logo-main span{color:var(--red)}
+.logo-sub{font-size:8.5px;color:var(--tx-3);font-weight:700;letter-spacing:.28em;text-transform:uppercase;margin-top:4px}
+[data-theme="light"] .logo-main{color:var(--tx)}
+.nav-tabs{display:flex;align-items:center;flex:1;height:100%;overflow-x:auto;scrollbar-width:none}
+.nav-tabs::-webkit-scrollbar{display:none}
+.nav-tab{display:inline-flex;align-items:center;height:100%;padding:0 17px;font-size:13.5px;font-weight:600;color:var(--tx-2);white-space:nowrap;border-bottom:2.5px solid transparent;transition:.15s;letter-spacing:.005em}
+.nav-tab:hover{color:var(--tx)}
+.nav-tab.active{color:var(--tx);border-bottom-color:var(--red);font-weight:700;background:transparent!important}
+[data-theme="light"] .nav-tab.active{color:var(--tx)!important}
+.nav-right{display:flex;align-items:center;gap:11px;margin-left:16px;flex-shrink:0}
+.nav-search-btn{width:40px;height:40px;border-radius:50%;border:1px solid var(--line-2);background:var(--surf);display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--tx-2);transition:.15s;position:relative;flex-shrink:0;font-size:17px}
+.nav-search-btn:hover{color:#fff;border-color:var(--red);background:var(--surf-2)}
+.nav-signin{display:inline-flex;align-items:center;padding:9px 20px;background:var(--red);border:1px solid var(--red);border-radius:6px;font-size:12px;font-weight:700;color:#fff;transition:.15s;letter-spacing:.05em;text-transform:uppercase;box-shadow:var(--sh-1)}
+.nav-signin:hover{background:#ff5440;box-shadow:var(--glow-red)}
+.search-panel{display:none;position:absolute;top:calc(100% + 12px);right:0;width:310px;background:var(--surf);border:1px solid var(--line-2);border-radius:11px;box-shadow:var(--sh-4);padding:12px;z-index:300}
+.search-panel.open{display:block}
+.search-panel input{width:100%;border:1px solid var(--line-2);border-radius:7px;padding:10px 12px;font-family:var(--sans);font-size:14px;outline:none;color:var(--tx);background:var(--bg-2)}
+.search-panel input:focus{border-color:var(--red);box-shadow:0 0 0 3px var(--red-soft)}
+[data-theme="light"] .search-panel input{background:var(--bg)}
+.sdrop-inner{margin-top:8px}
+.si{display:flex;align-items:center;gap:11px;padding:8px;border-radius:7px;cursor:pointer;transition:background .12s}
+.si:hover{background:var(--surf-2)}
+.si img{width:36px;height:36px;border-radius:7px;object-fit:cover;border:1px solid var(--line-2);flex-shrink:0}
+.si-nm{font-size:13px;font-weight:600;color:var(--tx)}
+.si-mt{font-size:11px;color:var(--tx-3);margin-top:1px}
+.s-empty{padding:12px;text-align:center;font-size:13px;color:var(--tx-4)}
+
+/* ── Theme Toggle ── */
+.theme-toggle{width:40px;height:40px;border-radius:50%;border:1px solid var(--theme-toggle-border);background:var(--theme-toggle-bg);display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--theme-icon-color);position:relative;flex-shrink:0;box-shadow:var(--sh-1);transition:all .2s cubic-bezier(.2,.8,.2,1)}
+.theme-toggle:hover{transform:scale(1.08);box-shadow:var(--sh-2)}
+.theme-toggle svg{display:block;width:18px;height:18px;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;fill:none;transition:transform .3s}
+.theme-toggle:hover svg{transform:rotate(20deg)}
+.icon-sun{display:none}
+.icon-moon{display:block}
+[data-theme="light"] .icon-sun{display:block}
+[data-theme="light"] .icon-moon{display:none}
+
+/* ── PAGE SHELL ── */
+.page-w{max-width:1240px;margin:0 auto;padding:0 26px 40px}
+.page-head{padding:34px 0 22px;border-bottom:1px solid var(--line);margin-bottom:24px;position:relative}
+.page-head::after{content:'';position:absolute;left:0;bottom:-1px;width:64px;height:2px;background:var(--red)}
+.page-kicker{font-family:var(--serif);font-size:13px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:9px;display:inline-flex;align-items:center;gap:9px}
+.page-title{font-family:var(--serif);font-weight:800;font-size:clamp(32px,4.5vw,50px);line-height:.9;letter-spacing:.5px;color:var(--tx);text-transform:uppercase;margin:0;display:flex;align-items:center;gap:14px}
+.page-sub{font-size:14px;color:var(--tx-2);margin:10px 0 0;max-width:700px;line-height:1.6}
+.back-btn{display:none;align-items:center;gap:5px;font-size:13.5px;font-weight:600;color:var(--tx-3);margin-bottom:20px;cursor:pointer;width:max-content;background:var(--surf);border:1px solid var(--line-2);padding:6px 14px;border-radius:20px;box-shadow:var(--sh-1);transition:all .15s}
+.back-btn:hover{color:var(--tx);border-color:var(--line-3)}
+
+/* ── INDEX VIEW (GRID) ── */
+.div-grid{display:grid;grid-template-columns:repeat(auto-fill, minmax(280px, 1fr));gap:20px;}
+.div-card{background:var(--surf);border:1px solid var(--line);border-radius:13px;padding:24px;display:block;transition:all 0.18s;box-shadow:var(--sh-2),var(--edge)}
+.div-card:hover{transform:translateY(-4px);border-color:var(--red);box-shadow:var(--sh-3)}
+.div-title{font-family:var(--serif);font-size:26px;font-weight:800;color:var(--tx);margin-bottom:8px;text-transform:uppercase;letter-spacing:.5px;transition:color .15s}
+.div-card:hover .div-title{color:var(--red)}
+.div-weight{display:inline-block;background:var(--bg-2);border:1px solid var(--line-2);color:var(--tx-2);font-size:11px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:14px;letter-spacing:.05em;text-transform:uppercase}
+.div-desc{font-size:13.5px;color:var(--tx-3);line-height:1.5;font-weight:500}
+
+/* ── DETAIL VIEW (TABLE) ดึงโค้ดมาจากหน้า Rankings.html แบบ 100% ── */
+.main-table-wrap{background:var(--surf);border:1px solid var(--line);border-radius:13px;overflow:hidden;box-shadow:var(--sh-2),var(--edge); display:none;}
+.mt-head{display:grid;grid-template-columns:54px 1fr 96px 96px 56px 56px 56px 64px 70px 84px;background:var(--rank-col-bg);border-bottom:1px solid var(--line)}
+.mt-row{display:grid;grid-template-columns:54px 1fr 96px 96px 56px 56px 56px 64px 70px 84px;align-items:center;border-bottom:1px solid var(--line);cursor:pointer;transition:background .14s,box-shadow .14s;position:relative}
+.mt-row:last-child{border-bottom:none}
+.mt-row:hover{background:var(--surf-2);box-shadow:inset 3px 0 0 var(--red)}
+.mt-row::before{content:'';position:absolute;left:0;top:0;bottom:0;width:0;transition:width .14s}
+.mt-row.top1::before{width:3px;background:var(--red)}
+.mt-row.top3::before{width:3px;background:var(--gold)}
+.mt-row.top10::before{width:3px;background:var(--blue)}
+.mth{padding:11px 11px;font-family:var(--serif);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--tx-3)}
+.mth.c{text-align:center}.mth.r{text-align:right}
+.mc{padding:11px 11px;font-size:13px;min-width:0}
+.mc.c{text-align:center}.mc.r{text-align:right}
+
+/* rank badge */
+.rank-badge{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;font-family:var(--serif);font-size:15px;font-weight:800;color:var(--tx-3);background:var(--surf-2);border:1px solid var(--line-2);font-variant-numeric:tabular-nums}
+.rank-badge.r1{background:var(--gold-soft);border-color:var(--gold-line);color:var(--gold)}
+.rank-badge.r2{background:rgba(180,190,200,.13);border-color:rgba(180,190,200,.4);color:#cfd6de}
+.rank-badge.r3{background:rgba(205,140,80,.14);border-color:rgba(205,140,80,.45);color:#e0a878}
+.rank-badge.r10{background:var(--blue-soft);border-color:var(--blue-line);color:#8fc0f5}
+
+.mt-fighter{display:flex;align-items:center;gap:11px;min-width:0}
+.mt-av{width:40px;height:40px;border-radius:9px;object-fit:cover;background:var(--surf-2);border:1px solid var(--line-2);flex-shrink:0;filter:grayscale(.25);transition:filter .2s}
+.mt-row:hover .mt-av{filter:none}
+.mt-name{font-size:13.5px;font-weight:700;color:var(--tx);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mt-row:hover .mt-name{color:var(--gold)}
+.mt-sub{font-size:10.5px;color:var(--tx-3);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:500}
+
+.div-pill{display:inline-block;max-width:100%;overflow:hidden;text-overflow:ellipsis;font-family:var(--serif);font-size:11px;font-weight:600;padding:3px 9px;border-radius:20px;background:var(--bg-2);border:1px solid var(--line-2);color:var(--tx-2);white-space:nowrap;letter-spacing:.02em}
+
+.wr-inline{display:flex;align-items:center;gap:7px}
+.wr-bar-sm{flex:1;height:5px;background:var(--surf-3);border-radius:3px;overflow:hidden;min-width:30px}
+.wr-fill-sm{height:100%;border-radius:3px;background:linear-gradient(90deg,var(--gold),var(--red))}
+.wr-num{font-family:var(--serif);font-size:13px;font-weight:700;color:var(--tx);white-space:nowrap;font-variant-numeric:tabular-nums}
+
+.form-dots{display:flex;gap:3px;justify-content:center}
+.fd{width:9px;height:9px;border-radius:50%;flex-shrink:0;border:1px solid rgba(0,0,0,.3)}
+.fd.w{background:var(--green)}.fd.l{background:var(--loss)}.fd.nc{background:var(--tx-4)}
+
+.txt-w{font-family:var(--serif);color:var(--green);font-weight:800;font-variant-numeric:tabular-nums;font-size:16px}
+.txt-l{font-family:var(--serif);color:var(--tx-4);font-weight:700;font-variant-numeric:tabular-nums;font-size:16px}
+.txt-total{color:var(--tx-3);font-weight:600;font-variant-numeric:tabular-nums;font-size:13px}
+.txt-ko{font-family:var(--serif);font-size:13px;font-weight:700;color:var(--tx-3);font-variant-numeric:tabular-nums}
+
+.score-big{font-family:var(--serif);font-weight:800;font-size:24px;color:var(--gold);text-align:right;line-height:1;font-variant-numeric:tabular-nums;letter-spacing:.5px}
+.score-big small{display:block;font-family:var(--sans);font-size:9px;color:var(--tx-4);font-weight:600;letter-spacing:.06em;margin-top:2px;text-transform:uppercase}
+.mt-row.top1 .score-big{color:var(--red)}
+
+.no-data{padding:64px 20px;text-align:center;color:var(--tx-3);font-size:14px;display:flex;flex-direction:column;align-items:center;gap:12px}
+.no-data .ic{font-size:36px;color:var(--line-3)}
+
+/* ── FOOTER ── */
+.site-footer{border-top:1px solid var(--line);background:var(--footer-bg);margin-top:30px}
+.footer-in{max-width:1240px;margin:0 auto;padding:30px 26px;text-align:center}
+.footer-brand{font-family:var(--serif);font-weight:800;font-size:24px;color:var(--tx);text-transform:uppercase;letter-spacing:.5px}
+.footer-brand span{color:var(--red)}
+.footer-tag{font-size:10px;color:var(--tx-4);font-weight:700;letter-spacing:.26em;text-transform:uppercase;margin-top:2px}
+.footer-links{margin:16px 0 10px;display:flex;flex-wrap:wrap;justify-content:center;gap:8px 18px}
+.footer-links a{font-size:13px;color:var(--tx-2);font-weight:500;transition:color .15s}
+.footer-links a:hover{color:var(--gold)}
+.footer-copy{font-size:11.5px;color:var(--tx-4);line-height:1.6}
+
+/* ── SHARED FILTER CONTROLS (sort select · count chip · reset) ── */
+.fp-item label{display:block;font-family:var(--serif);font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--tx-4);margin-bottom:6px}
+.fp-sel{width:100%;background:var(--bg-2);border:1px solid var(--line-2);color:var(--tx);font-family:var(--sans);font-size:13px;padding:9px 32px 9px 12px;border-radius:8px;outline:none;cursor:pointer;font-weight:500;transition:all .15s;appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%237c8896' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M6 9l6 6 6-6'/></svg>");background-repeat:no-repeat;background-position:right 10px center;background-size:14px;text-overflow:ellipsis}
+.fp-sel:focus{border-color:var(--red);box-shadow:0 0 0 3px var(--red-soft)}
+.fp-sel:hover{border-color:var(--line-3)}
+.fp-sel option{background:var(--surf);color:var(--tx)}
+.chip-count{background:var(--surf-3);border:1px solid var(--line-2);color:var(--tx);border-radius:20px;padding:5px 13px;font-size:11.5px;font-weight:700;letter-spacing:.02em}
+.chip-count b{font-family:var(--serif);font-weight:800;margin-right:3px;color:var(--gold)}
+.fp-reset{margin-left:auto;background:var(--surf-2);border:1px solid var(--line-2);color:var(--tx-2);font-family:var(--sans);font-size:12px;padding:8px 15px;border-radius:8px;cursor:pointer;font-weight:600;transition:all .15s;letter-spacing:.04em;text-transform:uppercase}
+.fp-reset:hover{border-color:var(--red);color:var(--red);background:var(--red-soft)}
+[data-theme="light"] .fp-sel{background-color:var(--bg-2)}
+
+/* ── DETAIL TOOLBAR + FILTER MODAL (POPUP) ── */
+.detail-toolbar{display:none;align-items:center;gap:12px;margin-bottom:16px;flex-wrap:wrap}
+.detail-toolbar.show{display:flex}
+.fp-open-btn{display:inline-flex;align-items:center;gap:8px;background:var(--surf);border:1px solid var(--line-2);color:var(--tx);font-family:var(--sans);font-size:13px;font-weight:600;padding:10px 16px;border-radius:9px;cursor:pointer;box-shadow:var(--sh-1);transition:all .15s}
+.fp-open-btn:hover{border-color:var(--red);color:var(--red)}
+.fp-open-btn .ic{font-size:15px;color:var(--gold)}
+.fp-badge{display:inline-flex;align-items:center;justify-content:center;min-width:18px;height:18px;border-radius:9px;background:var(--red);color:#fff;font-size:10.5px;font-weight:700;padding:0 5px;font-variant-numeric:tabular-nums}
+.fp-modal-overlay{display:none;position:fixed;inset:0;z-index:400;background:rgba(0,0,0,.55);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px);align-items:flex-start;justify-content:center;padding:44px 16px;overflow-y:auto}
+.fp-modal-overlay.open{display:flex}
+.fp-modal{background:var(--surf);border:1px solid var(--line-2);border-radius:15px;box-shadow:var(--sh-4);width:100%;max-width:440px;animation:fp-pop .18s ease}
+@keyframes fp-pop{from{opacity:0;transform:translateY(-10px) scale(.98)}to{opacity:1;transform:none}}
+.fp-modal-head{display:flex;align-items:center;justify-content:space-between;padding:16px 18px;border-bottom:1px solid var(--line)}
+.fp-modal-title{font-family:var(--serif);font-size:19px;font-weight:800;text-transform:uppercase;letter-spacing:.04em;color:var(--tx)}
+.fp-modal-x{width:32px;height:32px;border-radius:50%;border:1px solid var(--line-2);background:var(--surf-2);color:var(--tx-2);font-size:14px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .15s;flex-shrink:0}
+.fp-modal-x:hover{border-color:var(--red);color:var(--red)}
+.fp-modal-body{padding:18px;display:flex;flex-direction:column;gap:15px}
+.fp-modal-foot{display:flex;align-items:center;gap:10px;padding:14px 18px;border-top:1px solid var(--line)}
+.fp-apply{margin-left:auto;background:var(--red);border:1px solid var(--red);color:#fff;font-family:var(--sans);font-size:13px;font-weight:700;padding:9px 22px;border-radius:8px;cursor:pointer;letter-spacing:.04em;text-transform:uppercase;transition:all .15s}
+.fp-apply:hover{background:#ff5440;box-shadow:var(--glow-red)}
+
+/* ── COMBOBOX (typeable / พิมพ์ค้นหา) ── */
+.combo{position:relative;width:100%}
+.combo-input{width:100%;background:var(--bg-2);border:1px solid var(--line-2);color:var(--tx);font-family:var(--sans);font-size:13.5px;padding:10px 34px 10px 12px;border-radius:8px;outline:none;transition:all .15s;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%237c8896' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M6 9l6 6 6-6'/></svg>");background-repeat:no-repeat;background-position:right 10px center;background-size:14px}
+.combo-input:focus{border-color:var(--red);box-shadow:0 0 0 3px var(--red-soft)}
+.combo-input::placeholder{color:var(--tx-4)}
+.combo-list{display:none;position:absolute;top:calc(100% + 5px);left:0;right:0;max-height:230px;overflow-y:auto;background:var(--surf);border:1px solid var(--line-2);border-radius:9px;box-shadow:var(--sh-4);z-index:20;padding:5px}
+.combo-list.open{display:block}
+.combo-opt{padding:9px 11px;border-radius:6px;font-size:13.5px;color:var(--tx-2);cursor:pointer;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.combo-opt:hover,.combo-opt.hl{background:var(--surf-2);color:var(--tx)}
+.combo-opt.sel{color:var(--red);font-weight:700}
+.combo-empty{padding:10px 11px;font-size:12.5px;color:var(--tx-4);text-align:center}
+
+/* ── TOP-3 LED RUNNING BORDER รอบชื่อ ── */
+@property --led-a{syntax:'<angle>';inherits:false;initial-value:0deg}
+.led-wrap{position:relative;display:inline-block;max-width:100%;border-radius:8px;padding:3px 10px;isolation:isolate;vertical-align:middle}
+.led-txt{position:relative;z-index:2;display:block;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.led-wrap::before{content:'';position:absolute;inset:0;z-index:1;border-radius:inherit;padding:1.7px;background:conic-gradient(from var(--led-a),transparent 0deg 210deg,var(--led-c1) 300deg,var(--led-c2) 342deg,#fff 358deg,transparent 360deg);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);mask-composite:exclude;animation:led-run 2.1s linear infinite;pointer-events:none}
+.led-wrap::after{content:'';position:absolute;inset:-2px;z-index:0;border-radius:inherit;background:radial-gradient(60% 120% at 50% 50%,var(--led-glow),transparent 72%);opacity:.55;filter:blur(5px);pointer-events:none}
+@keyframes led-run{to{--led-a:360deg}}
+.led-1{--led-c1:#ffd45e;--led-c2:#ff4b30;--led-glow:rgba(255,120,60,.55)}
+.led-2{--led-c1:#eef3f9;--led-c2:#9fb0c2;--led-glow:rgba(190,205,220,.45)}
+.led-3{--led-c1:#f3c08e;--led-c2:#cd7a41;--led-glow:rgba(210,140,80,.5)}
+@supports not (background:conic-gradient(from 0deg,red,blue)){.led-wrap{border:1.5px solid var(--led-c2)}.led-wrap::before,.led-wrap::after{display:none}}
+@media (prefers-reduced-motion:reduce){.led-wrap::before{animation:none}}
+
+
+/* RESPONSIVE TABLE */
+@media(max-width:1100px){.mt-head,.mt-row{grid-template-columns:48px 1fr 88px 88px 50px 50px 50px 60px 72px}.hide-xl{display:none}}
+@media(max-width:860px){.mt-head,.mt-row{grid-template-columns:44px 1fr 78px 76px 48px 48px 64px}.hide-lg{display:none}.util-bar{display:none}}
+@media(max-width:640px){
+  .nav{padding:0 16px;height:60px}.logo-main{font-size:23px}
+  .page-w{padding:0 16px 30px}
+  .nav-tab{padding:0 12px;font-size:12px}.nav-signin{display:none}
+  .mt-head,.mt-row{grid-template-columns:34px minmax(0,1fr) 46px 60px}
+  .hide-md{display:none}.hide-sm{display:none}
+  .mth,.mc{padding:10px 6px}
+  .mt-fighter{gap:9px}
+  .mt-av{width:34px;height:34px}
+  .rank-badge{width:28px;height:28px;font-size:12px}
+  .mt-name{font-size:13px}.mt-sub{font-size:10px}
+  .score-big{font-size:19px}
+  .fp-reset{margin-left:0;flex:1}
+  .fp-apply{margin-left:0;flex:1}
+  .fp-open-btn{flex:1;justify-content:center}
+  .fp-modal-overlay{padding:22px 12px}
+  .fp-modal{max-width:none}
+  .led-txt{font-size:13px}
+}
+
+
+/* ═══ STATS HUB ═══ */
+.st-intro{font-size:14px;color:var(--tx-2);max-width:760px;margin:2px 0 22px;line-height:1.6}
+/* records strip */
+.records{display:grid;grid-template-columns:repeat(auto-fill,minmax(158px,1fr));gap:11px;margin-bottom:22px}
+.rec{background:var(--surf);border:1px solid var(--line);border-radius:12px;padding:13px 15px;cursor:pointer;transition:.15s;box-shadow:var(--sh-1),var(--edge);text-align:left}
+.rec:hover{border-color:var(--red);transform:translateY(-2px);box-shadow:var(--sh-2)}
+.rec-lbl{font-family:var(--serif);font-size:10.5px;color:var(--tx-3);font-weight:700;letter-spacing:.09em;text-transform:uppercase;display:flex;align-items:center;gap:6px}
+.rec-lbl .ic{color:var(--gold);font-size:13px}
+.rec-val{font-family:var(--serif);font-weight:800;font-size:23px;color:var(--gold);margin:7px 0 1px;line-height:1;font-variant-numeric:tabular-nums}
+.rec-val small{font-family:var(--sans);font-size:11px;color:var(--tx-4);font-weight:600;margin-left:3px}
+.rec-who{font-size:12px;color:var(--tx);font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+/* metric chips */
+.mgroup{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:11px}
+.mglabel{font-family:var(--serif);font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--tx-4);margin-right:2px}
+.mchip{display:inline-flex;align-items:center;gap:7px;padding:8px 14px;border-radius:22px;border:1px solid var(--line-2);background:var(--surf);color:var(--tx-2);font-weight:600;font-size:13px;cursor:pointer;transition:.15s;font-family:var(--sans)}
+.mchip:hover{border-color:var(--line-3);color:var(--tx)}
+.mchip.active{background:var(--red);border-color:var(--red);color:#fff;box-shadow:var(--glow-red)}
+.mchip .ic{font-size:15px}
+.mchip[disabled]{opacity:.4;cursor:not-allowed}
+.mchip[disabled]:hover{border-color:var(--line-2);color:var(--tx-2)}
+/* control bar */
+.st-bar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:16px 0 18px}
+.seg{display:inline-flex;border:1px solid var(--line-2);border-radius:9px;overflow:hidden;background:var(--surf);box-shadow:var(--sh-1)}
+.seg button{padding:9px 14px;font-size:12.5px;font-weight:600;color:var(--tx-3);background:none;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:6px;font-family:var(--sans);transition:.12s}
+.seg button+button{border-left:1px solid var(--line-2)}
+.seg button.on{background:var(--surf-3);color:var(--tx)}
+.seg button .ic{font-size:14px}
+.st-bar .fp-open{margin-left:auto}
+/* plot */
+.plot-wrap{background:var(--surf);border:1px solid var(--line);border-radius:14px;box-shadow:var(--sh-2),var(--edge);padding:16px 6px 6px;position:relative;overflow:hidden}
+.plot-head{display:flex;justify-content:space-between;align-items:baseline;gap:10px;padding:0 12px 4px}
+.plot-title{font-family:var(--serif);font-weight:800;font-size:19px;color:var(--tx);text-transform:uppercase;letter-spacing:.4px}
+.plot-sub{font-size:11.5px;color:var(--tx-3);font-weight:600;font-variant-numeric:tabular-nums;white-space:nowrap}
+.legend{display:flex;flex-wrap:wrap;gap:6px 13px;padding:8px 12px 4px}
+.lg{display:inline-flex;align-items:center;gap:6px;font-size:11.5px;color:var(--tx-2);font-weight:500}
+.lg i{width:11px;height:11px;border-radius:3px;flex-shrink:0}
+.plot{position:relative;width:100%;margin-top:6px}
+.axis-line{position:absolute;left:14px;right:14px;height:1px;background:var(--line-2)}
+.tick{position:absolute;transform:translateX(-50%);color:var(--tx-4);font-size:10.5px;font-weight:600;font-variant-numeric:tabular-nums;text-align:center;white-space:nowrap}
+.tick i{position:absolute;left:50%;top:-9px;width:1px;height:6px;background:var(--line-2);transform:translateX(-50%)}
+.dot{position:absolute;transform:translate(-50%,-50%);cursor:pointer;will-change:transform}
+.dot .av{width:100%;height:100%;border-radius:50%;object-fit:cover;background:var(--surf-2);border:2px solid var(--cat,var(--surf-3));box-shadow:var(--sh-1);filter:grayscale(.15);transition:filter .12s,border-color .12s;display:block}
+.dot:hover{z-index:60}
+.dot:hover .av{filter:none;border-color:var(--gold)}
+.dot.sel .av{filter:none;border-color:var(--red)}
+.dot .led-wrap{padding:2px;border-radius:50%;display:block;width:100%;height:100%}
+.dot .led-wrap .av{width:100%;height:100%;border-width:1.5px}
+.dot .led-wrap::before,.dot .led-wrap::after{border-radius:50%}
+.dot .rk{position:absolute;top:-6px;right:-6px;min-width:16px;height:16px;padding:0 3px;border-radius:9px;background:var(--tx);color:var(--surf);font-family:var(--serif);font-size:9.5px;font-weight:800;display:flex;align-items:center;justify-content:center;box-shadow:var(--sh-1);z-index:3}
+.dot.r1 .rk{background:var(--gold);color:#3a2a00}.dot.r2 .rk{background:#c9d3dd;color:#20262e}.dot.r3 .rk{background:#d8935a;color:#2a1400}
+/* tooltip */
+.tip{position:absolute;z-index:200;width:190px;background:var(--surf);border:1px solid var(--line-2);border-radius:12px;box-shadow:var(--sh-4);padding:11px 13px;opacity:0;pointer-events:none;transition:opacity .12s;transform:translateY(3px)}
+.tip.show{opacity:1;transform:none}
+.tip-top{display:flex;align-items:center;gap:9px;margin-bottom:7px}
+.tip-av{width:38px;height:38px;border-radius:9px;object-fit:cover;border:1px solid var(--line-2);flex-shrink:0}
+.tip-nm{font-size:13.5px;font-weight:700;color:var(--tx);line-height:1.15}
+.tip-sub{font-size:10.5px;color:var(--tx-3);margin-top:1px}
+.tip-val{font-family:var(--serif);font-weight:800;color:var(--gold);font-size:20px;line-height:1;font-variant-numeric:tabular-nums}
+.tip-val small{font-family:var(--sans);font-size:10px;color:var(--tx-4);font-weight:600;margin-left:3px}
+.tip-rank{font-size:11px;color:var(--tx-2);margin-top:5px;font-weight:600}
+.tip-go{display:inline-block;margin-top:8px;font-size:11px;font-weight:700;color:var(--red)}
+/* table view */
+.st-table{background:var(--surf);border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:var(--sh-2),var(--edge)}
+.st-tr{display:grid;grid-template-columns:52px 1fr 120px;align-items:center;border-bottom:1px solid var(--line);cursor:pointer;transition:background .12s}
+.st-tr:last-child{border-bottom:none}
+.st-tr:hover{background:var(--surf-2)}
+.st-th{display:grid;grid-template-columns:52px 1fr 120px;background:var(--rank-col-bg);border-bottom:1px solid var(--line);padding:0}
+.st-th div{padding:11px 12px;font-family:var(--serif);font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--tx-3)}
+.st-th .r{text-align:right}
+.st-tr>div{padding:9px 12px;min-width:0}
+.st-tr .c{text-align:center}
+.st-rk{font-family:var(--serif);font-weight:800;font-size:15px;color:var(--tx-3);text-align:center;font-variant-numeric:tabular-nums}
+.st-tr.r1 .st-rk{color:var(--gold)}.st-tr.r2 .st-rk{color:#aab4bf}.st-tr.r3 .st-rk{color:#d8935a}
+.st-fi{display:flex;align-items:center;gap:11px;min-width:0}
+.st-av{width:38px;height:38px;border-radius:9px;object-fit:cover;background:var(--surf-2);border:1px solid var(--line-2);flex-shrink:0;filter:grayscale(.2)}
+.st-tr:hover .st-av{filter:none}
+.st-nm{font-size:13.5px;font-weight:700;color:var(--tx);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.st-tr:hover .st-nm{color:var(--gold)}
+.st-sb{font-size:10.5px;color:var(--tx-3);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.st-mv{font-family:var(--serif);font-weight:800;font-size:20px;color:var(--gold);text-align:right;font-variant-numeric:tabular-nums}
+.st-mv small{font-family:var(--sans);font-size:9px;color:var(--tx-4);font-weight:600;display:block;text-transform:uppercase}
+.st-empty{padding:64px 20px;text-align:center;color:var(--tx-3);font-size:14px}
+.note{font-size:11.5px;color:var(--tx-4);text-align:center;padding:9px}
+.hidden{display:none}
+@media(max-width:640px){
+  .records{grid-template-columns:1fr 1fr;gap:8px}
+  .rec-val{font-size:20px}
+  .plot-title{font-size:16px}
+  .st-tr,.st-th{grid-template-columns:42px 1fr 92px}
+  .st-bar .fp-open{margin-left:0}
+  .mchip{font-size:12px;padding:7px 12px}
+}
+
+
+/* ═══ STATS HUB v2 — VIEW TABS ═══ */
+.view-tabs{display:flex;gap:8px;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin:0 0 18px;padding-bottom:2px}
+.view-tabs::-webkit-scrollbar{display:none}
+.vtab{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:24px;border:1px solid var(--line-2);background:var(--surf);color:var(--tx-2);font-family:var(--sans);font-size:13.5px;font-weight:600;cursor:pointer;transition:.15s;white-space:nowrap;box-shadow:var(--sh-1)}
+.vtab:hover{border-color:var(--line-3);color:var(--tx)}
+.vtab.active{background:var(--red);border-color:var(--red);color:#fff;box-shadow:var(--glow-red)}
+.vtab .ic{font-size:15px}
+.sec{display:none}
+.sec.show{display:block}
+
+/* ═══ KPI CARDS ═══ */
+.kpi-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(168px,1fr));gap:11px;margin-bottom:20px}
+.kpi{background:var(--surf);border:1px solid var(--line);border-radius:12px;padding:15px 16px;box-shadow:var(--sh-1),var(--edge);position:relative;overflow:hidden}
+.kpi::after{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--kpi-c,var(--red))}
+.kpi-lbl{font-family:var(--serif);font-size:10.5px;color:var(--tx-3);font-weight:700;letter-spacing:.09em;text-transform:uppercase;display:flex;align-items:center;gap:6px}
+.kpi-lbl .ic{color:var(--kpi-c,var(--gold));font-size:14px}
+.kpi-val{font-family:var(--serif);font-weight:800;font-size:28px;color:var(--tx);margin-top:8px;line-height:1;font-variant-numeric:tabular-nums}
+.kpi-val small{font-family:var(--sans);font-size:11px;color:var(--tx-4);font-weight:600;margin-left:4px}
+.kpi-sub{font-size:11px;color:var(--tx-3);margin-top:6px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* ═══ CHART CARDS ═══ */
+.chart-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px}
+.chart-card{background:var(--surf);border:1px solid var(--line);border-radius:13px;padding:18px;box-shadow:var(--sh-2),var(--edge);min-width:0}
+.chart-title{font-family:var(--serif);font-size:16px;font-weight:800;color:var(--tx);text-transform:uppercase;letter-spacing:.4px;display:flex;align-items:center;gap:8px;margin-bottom:4px}
+.chart-title .ic{color:var(--gold);font-size:16px}
+.chart-sub{font-size:11.5px;color:var(--tx-3);margin-bottom:14px;font-weight:500}
+/* horizontal bars */
+.hbar-row{display:grid;grid-template-columns:minmax(84px,130px) 1fr 44px;align-items:center;gap:10px;padding:5px 0;cursor:pointer;border-radius:7px;transition:background .12s}
+.hbar-row:hover{background:var(--surf-2)}
+.hbar-lbl{font-size:12.5px;font-weight:600;color:var(--tx-2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-align:right}
+.hbar-track{height:16px;background:var(--surf-3);border-radius:5px;overflow:hidden}
+.hbar-fill{height:100%;border-radius:5px;background:linear-gradient(90deg,var(--red),var(--gold));min-width:2px;transition:width .5s cubic-bezier(.2,.8,.2,1)}
+.hbar-num{font-family:var(--serif);font-size:13.5px;font-weight:800;color:var(--tx);font-variant-numeric:tabular-nums}
+/* vertical bars */
+.vbars{display:flex;align-items:flex-end;gap:8px;height:150px;padding-top:8px}
+.vbar{flex:1;display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0;cursor:default}
+.vbar-n{font-family:var(--serif);font-size:11.5px;font-weight:800;color:var(--gold);font-variant-numeric:tabular-nums}
+.vbar-fill{width:100%;max-width:44px;border-radius:6px 6px 2px 2px;background:linear-gradient(180deg,var(--blue),var(--red));min-height:3px;transition:height .5s cubic-bezier(.2,.8,.2,1)}
+.vbar-lbl{font-size:10.5px;color:var(--tx-3);font-weight:600;font-variant-numeric:tabular-nums}
+/* stacked method bar */
+.stackbar{display:flex;height:26px;border-radius:8px;overflow:hidden;border:1px solid var(--line-2);margin:6px 0 12px}
+.stackbar i{display:block;height:100%;min-width:2px;transition:width .5s}
+.stack-legend{display:flex;flex-wrap:wrap;gap:7px 16px}
+.stack-legend .lg b{font-family:var(--serif);font-weight:800;color:var(--tx);margin-left:2px;font-variant-numeric:tabular-nums}
+
+/* ═══ SWARM: highlight search ═══ */
+.hl-wrap{position:relative;min-width:170px;flex:0 1 220px}
+.hl-input{width:100%;background:var(--surf);border:1px solid var(--line-2);color:var(--tx);font-family:var(--sans);font-size:12.5px;padding:9px 12px 9px 30px;border-radius:9px;outline:none;box-shadow:var(--sh-1);transition:.15s}
+.hl-input:focus{border-color:var(--gold);box-shadow:0 0 0 3px var(--gold-soft)}
+.hl-input::placeholder{color:var(--tx-4)}
+.hl-wrap .ic{position:absolute;left:9px;top:50%;transform:translateY(-50%);color:var(--tx-4);font-size:13px;pointer-events:none}
+.hl-drop{display:none;position:absolute;top:calc(100% + 5px);left:0;right:0;background:var(--surf);border:1px solid var(--line-2);border-radius:9px;box-shadow:var(--sh-4);z-index:80;padding:5px;max-height:220px;overflow-y:auto}
+.hl-drop.open{display:block}
+@keyframes hl-pulse{0%,100%{box-shadow:0 0 0 3px var(--gold-soft),0 0 0 0 rgba(244,183,64,.55)}50%{box-shadow:0 0 0 3px var(--gold-soft),0 0 0 12px rgba(244,183,64,0)}}
+.dot.hl .av{border-color:var(--gold)!important;filter:none}
+.dot.hl{z-index:70;animation:hl-pulse 1.4s ease-out infinite;border-radius:50%}
+.axis-marker{position:absolute;transform:translateX(-50%);pointer-events:none;text-align:center;z-index:5}
+.axis-marker i{display:block;width:1px;margin:0 auto;background:var(--gold);opacity:.6}
+.axis-marker span{font-size:9.5px;font-weight:700;color:var(--gold);background:var(--gold-soft);border:1px solid var(--gold-line);border-radius:8px;padding:1px 7px;white-space:nowrap;font-variant-numeric:tabular-nums}
+
+/* ═══ SCATTER ═══ */
+.sc-controls{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:0 0 16px}
+.sc-controls .fp-item{min-width:170px;flex:0 1 210px}
+.sc-swap{width:38px;height:38px;border-radius:50%;border:1px solid var(--line-2);background:var(--surf);color:var(--tx-2);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:15px;transition:.15s;box-shadow:var(--sh-1);align-self:flex-end;margin-bottom:1px}
+.sc-swap:hover{color:var(--red);border-color:var(--red);transform:rotate(180deg)}
+.scatter{position:relative;width:100%;height:460px}
+.sc-grid-x,.sc-grid-y{position:absolute;background:var(--line);pointer-events:none}
+.sc-grid-x{width:1px}
+.sc-grid-y{height:1px}
+.sc-median{position:absolute;pointer-events:none;border:0 dashed var(--gold-line)}
+.sc-median.v{width:0;border-left-width:1.5px}
+.sc-median.h{height:0;border-top-width:1.5px}
+.sc-tick{position:absolute;color:var(--tx-4);font-size:10px;font-weight:600;font-variant-numeric:tabular-nums;pointer-events:none}
+.sc-axis-lbl{position:absolute;font-family:var(--serif);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--tx-3);pointer-events:none}
+.sc-axis-lbl.y{transform:rotate(-90deg);transform-origin:left top}
+@media(max-width:640px){.scatter{height:380px}}
+
+/* ═══ LEADERBOARD ═══ */
+.lb-controls{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+.lb-search{position:relative;flex:1;min-width:180px;max-width:320px}
+.lb-search input{width:100%;background:var(--surf);border:1px solid var(--line-2);color:var(--tx);font-family:var(--sans);font-size:13px;padding:10px 12px 10px 32px;border-radius:9px;outline:none;box-shadow:var(--sh-1);transition:.15s}
+.lb-search input:focus{border-color:var(--red);box-shadow:0 0 0 3px var(--red-soft)}
+.lb-search .ic{position:absolute;left:10px;top:50%;transform:translateY(-50%);color:var(--tx-4);font-size:14px;pointer-events:none}
+.lb-export{display:inline-flex;align-items:center;gap:7px;background:var(--surf);border:1px solid var(--line-2);color:var(--tx-2);font-family:var(--sans);font-size:12.5px;font-weight:600;padding:9px 15px;border-radius:9px;cursor:pointer;box-shadow:var(--sh-1);transition:.15s}
+.lb-export:hover{border-color:var(--gold);color:var(--gold)}
+.lb-wrap{background:var(--surf);border:1px solid var(--line);border-radius:13px;overflow:hidden;box-shadow:var(--sh-2),var(--edge)}
+.lb-scroll{overflow-x:auto}
+.lb-head,.lb-row{display:grid;grid-template-columns:48px minmax(190px,1.6fr) 108px 56px 62px 48px 48px 96px 52px 56px 72px 40px;align-items:center;min-width:900px}
+.lb-head{background:var(--rank-col-bg);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+.lb-th{padding:11px 9px;font-family:var(--serif);font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--tx-3);white-space:nowrap;user-select:none}
+.lb-th.sortable{cursor:pointer;transition:color .12s}
+.lb-th.sortable:hover{color:var(--tx)}
+.lb-th.on{color:var(--red)}
+.lb-th .arr{font-size:9px;margin-left:3px}
+.lb-th.c,.lb-td.c{text-align:center}.lb-th.r,.lb-td.r{text-align:right}
+.lb-row{border-bottom:1px solid var(--line);cursor:pointer;transition:background .12s}
+.lb-row:last-child{border-bottom:none}
+.lb-row:hover{background:var(--surf-2);box-shadow:inset 3px 0 0 var(--red)}
+.lb-td{padding:9px 9px;font-size:13px;min-width:0;font-variant-numeric:tabular-nums}
+.lb-add{width:26px;height:26px;border-radius:50%;border:1px solid var(--line-2);background:var(--surf-2);color:var(--tx-3);font-size:13px;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;transition:.12s;line-height:1}
+.lb-add:hover{border-color:var(--red);color:var(--red)}
+.lb-add.in{background:var(--red);border-color:var(--red);color:#fff}
+.lb-more{display:block;width:100%;padding:13px;font-family:var(--serif);font-size:12px;font-weight:700;color:var(--tx-3);background:var(--surf-2);border:none;border-top:1px solid var(--line);cursor:pointer;letter-spacing:.06em;text-transform:uppercase;transition:.15s}
+.lb-more:hover{color:var(--gold)}
+
+/* ═══ GROUPS ═══ */
+.grp-controls{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:16px}
+.grp-controls .fp-item{min-width:180px}
+.grp-list{display:flex;flex-direction:column;gap:10px}
+.grp{background:var(--surf);border:1px solid var(--line);border-radius:12px;padding:14px 16px;box-shadow:var(--sh-1),var(--edge);display:grid;grid-template-columns:34px minmax(120px,220px) 1fr auto;gap:14px;align-items:center;cursor:pointer;transition:.15s}
+.grp:hover{border-color:var(--red);transform:translateX(2px)}
+.grp-rk{font-family:var(--serif);font-weight:800;font-size:16px;color:var(--tx-3);text-align:center;font-variant-numeric:tabular-nums}
+.grp.g1 .grp-rk{color:var(--gold)}.grp.g2 .grp-rk{color:#aab4bf}.grp.g3 .grp-rk{color:#d8935a}
+.grp-name{font-size:14px;font-weight:700;color:var(--tx);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.grp-meta{font-size:11px;color:var(--tx-3);margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:500}
+.grp-bar{height:18px;background:var(--surf-3);border-radius:6px;overflow:hidden;min-width:60px}
+.grp-fill{height:100%;border-radius:6px;background:linear-gradient(90deg,var(--blue),var(--red));min-width:3px;transition:width .5s cubic-bezier(.2,.8,.2,1)}
+.grp-val{font-family:var(--serif);font-weight:800;font-size:20px;color:var(--gold);font-variant-numeric:tabular-nums;text-align:right;min-width:70px}
+.grp-val small{font-family:var(--sans);font-size:9.5px;color:var(--tx-4);font-weight:600;display:block;text-transform:uppercase;letter-spacing:.05em}
+
+/* ═══ COMPARE TRAY & MODAL ═══ */
+.cmp-tray{position:fixed;left:50%;bottom:18px;transform:translateX(-50%) translateY(90px);z-index:350;background:var(--surf);border:1px solid var(--line-2);border-radius:40px;box-shadow:var(--sh-4);padding:8px 10px 8px 14px;display:flex;align-items:center;gap:10px;transition:transform .25s cubic-bezier(.2,.8,.2,1);max-width:calc(100vw - 24px)}
+.cmp-tray.show{transform:translateX(-50%) translateY(0)}
+.cmp-tray-lbl{font-family:var(--serif);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--tx-3);white-space:nowrap}
+.cmp-avs{display:flex;gap:7px}
+.cmp-av{position:relative;width:38px;height:38px}
+.cmp-av img{width:100%;height:100%;border-radius:50%;object-fit:cover;border:2px solid var(--gold);display:block;background:var(--surf-2)}
+.cmp-av button{position:absolute;top:-5px;right:-5px;width:16px;height:16px;border-radius:50%;background:var(--red);color:#fff;border:none;font-size:9px;font-weight:800;cursor:pointer;display:flex;align-items:center;justify-content:center;line-height:1;padding:0}
+.cmp-go{background:var(--red);border:1px solid var(--red);color:#fff;font-family:var(--sans);font-size:12.5px;font-weight:700;padding:10px 18px;border-radius:24px;cursor:pointer;white-space:nowrap;transition:.15s;letter-spacing:.03em}
+.cmp-go:hover{background:#ff5440;box-shadow:var(--glow-red)}
+.cmp-go[disabled]{opacity:.45;cursor:not-allowed}
+.cmp-clear{background:none;border:none;color:var(--tx-4);font-size:11.5px;font-weight:600;cursor:pointer;padding:6px;white-space:nowrap}
+.cmp-clear:hover{color:var(--red)}
+.tip-add{display:inline-flex;align-items:center;gap:5px;margin-top:8px;margin-left:12px;font-size:11px;font-weight:700;color:var(--tx-3);background:var(--surf-2);border:1px solid var(--line-2);border-radius:14px;padding:3px 11px;cursor:pointer;transition:.12s}
+.tip-add:hover{color:var(--red);border-color:var(--red)}
+.tip-add.in{background:var(--red);border-color:var(--red);color:#fff}
+.cmp-modal-grid{display:grid;gap:0}
+.cmp-hd{display:grid;gap:8px;padding:16px 18px 12px;border-bottom:1px solid var(--line)}
+.cmp-hd-cell{text-align:center;min-width:0}
+.cmp-hd-cell img{width:58px;height:58px;border-radius:14px;object-fit:cover;border:1px solid var(--line-2);background:var(--surf-2)}
+.cmp-hd-nm{font-size:13px;font-weight:700;color:var(--tx);margin-top:6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cmp-hd-sb{font-size:10.5px;color:var(--tx-3);margin-top:1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cmp-row{display:grid;gap:8px;padding:8px 18px;border-bottom:1px solid var(--line);align-items:center}
+.cmp-row:nth-child(odd){background:var(--surf-2)}
+.cmp-row:last-child{border-bottom:none}
+.cmp-metric{font-family:var(--serif);font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--tx-3);white-space:nowrap}
+.cmp-cell{text-align:center;font-family:var(--serif);font-weight:700;font-size:15px;color:var(--tx-2);font-variant-numeric:tabular-nums}
+.cmp-cell.best{color:var(--gold);font-weight:800;position:relative}
+.cmp-cell.best::after{content:'●';font-size:7px;color:var(--gold);position:relative;top:-6px;margin-left:4px}
+.cmp-modal{max-width:560px!important}
+.cmp-foot-link{font-size:12px;font-weight:700;color:var(--red)}
+
+/* ═══ SMART SEARCH (Google-like) ═══ */
+.ms-wrap{position:relative;margin:0 0 22px;max-width:820px}
+.ms-box{position:relative;display:flex;align-items:center;background:var(--surf);border:1px solid var(--line-2);border-radius:28px;box-shadow:var(--sh-2),var(--edge);padding:5px 6px 5px 20px;transition:all .18s}
+.ms-box:hover{border-color:var(--line-3);box-shadow:var(--sh-3)}
+.ms-box:focus-within{border-color:var(--red);box-shadow:0 0 0 4px var(--red-soft),var(--sh-3)}
+.ms-icon{width:22px;height:22px;color:var(--tx-3);flex-shrink:0;margin-right:14px;font-size:22px;display:inline-flex;align-items:center;justify-content:center}
+.ms-icon svg{width:20px;height:20px;stroke:currentColor;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.ms-input{flex:1;background:transparent;border:none;outline:none;color:var(--tx);font-family:var(--sans);font-size:15px;padding:14px 6px;min-width:0}
+.ms-input::placeholder{color:var(--tx-4)}
+.ms-clear{background:var(--surf-2);border:1px solid var(--line-2);color:var(--tx-3);border-radius:50%;width:32px;height:32px;font-size:11px;cursor:pointer;flex-shrink:0;transition:.15s;display:inline-flex;align-items:center;justify-content:center}
+.ms-clear:hover{color:var(--red);border-color:var(--red)}
+.ms-drop{display:none;position:absolute;top:calc(100% + 8px);left:0;right:0;background:var(--surf);border:1px solid var(--line-2);border-radius:14px;box-shadow:var(--sh-4);padding:10px;z-index:150;max-height:520px;overflow-y:auto}
+.ms-drop.open{display:block}
+.ms-sec{padding:8px 4px 5px}
+.ms-sec-lbl{font-family:var(--serif);font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--tx-4);margin-bottom:8px;display:flex;align-items:center;gap:6px}
+.ms-sec-lbl::before{content:'';flex:1;height:1px;background:var(--line);order:2;margin-left:8px}
+.ms-interp{background:var(--surf-2);border:1px solid var(--line-2);border-radius:10px;padding:12px 14px;cursor:pointer;transition:.15s;margin-bottom:6px}
+.ms-interp:hover,.ms-interp.hl{border-color:var(--red);background:var(--red-soft)}
+.ms-interp-hd{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.ms-interp-icon{width:32px;height:32px;background:var(--red-soft);border:1px solid var(--red-line);color:var(--red);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
+.ms-interp-icon svg{width:16px;height:16px;stroke:currentColor;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.ms-interp-txt{flex:1;min-width:0}
+.ms-interp-title{font-family:var(--serif);font-size:15px;font-weight:800;color:var(--tx);letter-spacing:.02em;text-transform:uppercase}
+.ms-interp-sub{font-size:11.5px;color:var(--tx-3);margin-top:2px}
+.ms-interp-sub b{color:var(--gold);font-family:var(--serif);font-weight:700}
+.ms-interp-cta{font-size:11px;color:var(--red);font-weight:700;background:var(--red-soft);border:1px solid var(--red-line);border-radius:14px;padding:4px 10px;white-space:nowrap;flex-shrink:0}
+.ms-preview{display:flex;flex-direction:column;gap:5px;padding-top:6px;border-top:1px dashed var(--line)}
+.ms-prev-row{display:flex;align-items:center;gap:8px;font-size:12.5px;padding:3px 0}
+.ms-prev-rk{font-family:var(--serif);font-weight:800;color:var(--tx-3);width:20px;text-align:center;flex-shrink:0;font-variant-numeric:tabular-nums}
+.ms-prev-row:nth-child(1) .ms-prev-rk{color:var(--gold)}
+.ms-prev-row:nth-child(2) .ms-prev-rk{color:#c8ced4}
+.ms-prev-row:nth-child(3) .ms-prev-rk{color:#d8935a}
+.ms-prev-av{width:26px;height:26px;border-radius:50%;object-fit:cover;background:var(--surf-3);border:1px solid var(--line-2);flex-shrink:0}
+.ms-prev-nm{font-weight:600;color:var(--tx);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:1;min-width:0}
+.ms-prev-val{font-family:var(--serif);font-size:14px;font-weight:800;color:var(--gold);font-variant-numeric:tabular-nums;flex-shrink:0;letter-spacing:.02em}
+.ms-prev-val small{font-family:var(--sans);font-size:9.5px;color:var(--tx-4);font-weight:600;margin-left:3px;text-transform:uppercase}
+.ms-fighter{display:flex;align-items:center;gap:11px;padding:8px 10px;border-radius:8px;cursor:pointer;transition:.12s;text-decoration:none;color:inherit}
+.ms-fighter:hover,.ms-fighter.hl{background:var(--surf-2)}
+.ms-fighter img{width:36px;height:36px;border-radius:50%;object-fit:cover;background:var(--surf-3);border:1px solid var(--line-2);flex-shrink:0}
+.ms-fighter-nm{font-size:13.5px;font-weight:600;color:var(--tx);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ms-fighter-mt{font-size:11px;color:var(--tx-3);margin-top:2px}
+.ms-empty{padding:18px;text-align:center;color:var(--tx-4);font-size:13px}
+.ms-empty b{color:var(--tx-2);display:block;margin-bottom:5px;font-size:14px}
+.ms-hints{margin-top:12px;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.ms-hint-lbl{font-size:11.5px;color:var(--tx-4);font-weight:600;margin-right:4px}
+.ms-chip{background:var(--surf);border:1px solid var(--line-2);color:var(--tx-2);font-family:var(--sans);font-size:12px;font-weight:500;padding:6px 12px;border-radius:16px;cursor:pointer;transition:.15s;box-shadow:var(--sh-1)}
+.ms-chip:hover{border-color:var(--red);color:var(--red);background:var(--red-soft)}
+.ms-filter-hint{display:inline-flex;align-items:center;gap:4px;background:var(--gold-soft);border:1px solid var(--gold-line);color:var(--gold);font-family:var(--serif);font-size:10.5px;font-weight:700;padding:2px 8px;border-radius:12px;margin-left:6px;letter-spacing:.04em;text-transform:uppercase}
+
+/* ═══ MAP VIEW (WORLD) ═══ */
+.map-controls{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+.map-wrap{position:relative;width:100%;background:var(--bg-2);border-radius:11px;border:1px solid var(--line);overflow:hidden;user-select:none;box-shadow:var(--sh-2),var(--edge)}
+.map-wrap svg.mp-svg{display:block;width:100%;height:auto;cursor:grab}
+.map-wrap svg.mp-svg:active{cursor:grabbing}
+.mp-ocean{fill:var(--bg-2)}
+[data-theme="light"] .mp-ocean{fill:#dde4ec}
+.mp-country{fill:var(--surf-3);stroke:var(--bg);stroke-width:.5;stroke-linejoin:round;transition:fill .18s}
+[data-theme="light"] .mp-country{fill:#c8cfd7;stroke:#fff}
+.mp-country.has-data{cursor:pointer}
+.mp-country.h1{fill:#2a1f1e}
+.mp-country.h2{fill:#5c2419}
+.mp-country.h3{fill:#9b3220}
+.mp-country.h4{fill:#d64828}
+.mp-country.h5{fill:var(--gold)}
+[data-theme="light"] .mp-country.h1{fill:#f4dcd6}
+[data-theme="light"] .mp-country.h2{fill:#e8a894}
+[data-theme="light"] .mp-country.h3{fill:#d97555}
+[data-theme="light"] .mp-country.h4{fill:#c94520}
+[data-theme="light"] .mp-country.h5{fill:#c9830a}
+.mp-country.hover{stroke:var(--gold);stroke-width:1.5}
+.mp-country.sel{stroke:var(--red);stroke-width:2.2;filter:drop-shadow(0 0 6px var(--red-soft))}
+.mp-bubble{fill:var(--red);fill-opacity:.72;stroke:#fff;stroke-width:1.2;cursor:pointer;transition:all .18s}
+.mp-bubble:hover{fill-opacity:1;stroke-width:2}
+.mp-bubble-count{font-family:var(--serif);font-size:10.5px;font-weight:800;fill:#fff;text-anchor:middle;dominant-baseline:middle;pointer-events:none;paint-order:stroke;stroke:rgba(0,0,0,.4);stroke-width:2}
+.mp-fdot{cursor:pointer}
+.mp-fdot circle{fill:var(--gold);stroke:var(--bg);stroke-width:1;transition:.15s}
+.mp-fdot.top circle{fill:var(--red)}
+.mp-fdot:hover circle{stroke:#fff;stroke-width:1.6}
+.mp-zoom{position:absolute;top:12px;right:12px;display:flex;flex-direction:column;gap:4px;background:var(--surf);border:1px solid var(--line-2);border-radius:8px;padding:3px;box-shadow:var(--sh-2);z-index:10}
+.mp-zoom button{width:30px;height:30px;background:transparent;border:none;color:var(--tx-2);cursor:pointer;font-size:16px;font-weight:700;border-radius:5px;display:flex;align-items:center;justify-content:center;line-height:1;font-family:var(--sans);transition:.15s}
+.mp-zoom button:hover{background:var(--surf-2);color:var(--tx)}
+.mp-tip{position:absolute;background:var(--surf-2);border:1px solid var(--line-2);border-radius:9px;padding:11px 13px;font-size:12.5px;box-shadow:var(--sh-4);pointer-events:none;opacity:0;transition:opacity .12s;z-index:20;min-width:210px;max-width:270px}
+.mp-tip.show{opacity:1}
+.mp-tip-hd{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+.mp-tip-flag{font-size:22px;line-height:1}
+.mp-tip-nm{font-weight:700;color:var(--tx);font-size:13.5px}
+.mp-tip-row{color:var(--tx-3);font-size:11.5px;line-height:1.55;display:flex;justify-content:space-between;gap:12px}
+.mp-tip-row b{color:var(--gold);font-family:var(--serif);font-weight:800;font-size:13px}
+.mp-tip-top{border-top:1px solid var(--line);margin-top:7px;padding-top:6px;font-size:11px;color:var(--tx-4)}
+.mp-tip-top b{color:var(--tx-2);font-weight:600}
+.mp-legend{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px;padding-top:12px;border-top:1px solid var(--line);font-size:11.5px;color:var(--tx-3);align-items:center}
+.mp-heat-scale{display:inline-flex;height:11px;border-radius:2px;overflow:hidden;margin:0 4px;border:1px solid var(--line)}
+.mp-heat-scale i{width:22px;display:block}
+.mp-loading{display:flex;align-items:center;justify-content:center;height:400px;color:var(--tx-3);font-size:13px;gap:10px}
+.mp-loading::before{content:'';width:22px;height:22px;border:2px solid var(--line-2);border-top-color:var(--red);border-radius:50%;animation:mp-spin 1s linear infinite}
+@keyframes mp-spin{to{transform:rotate(360deg)}}
+.mp-err{padding:40px 20px;text-align:center;color:var(--tx-3);font-size:13px}
+.mp-err b{color:var(--red)}
+
+@media(max-width:900px){.chart-grid{grid-template-columns:1fr}}
+@media(max-width:640px){
+  .mp-controls .seg button{padding:7px 10px;font-size:11.5px}
+  .mp-tip{min-width:170px;max-width:210px}
+  .kpi-grid{grid-template-columns:1fr 1fr;gap:8px}
+  .kpi-val{font-size:23px}
+  .vtab{padding:8px 14px;font-size:12.5px}
+  .grp{grid-template-columns:26px minmax(0,1fr) auto;gap:10px}
+  .grp-bar{display:none}
+  .grp-val{font-size:17px;min-width:56px}
+  .sc-controls .fp-item{flex:1 1 40%;min-width:0}
+  .cmp-tray{bottom:10px;padding:7px 8px 7px 12px;gap:7px}
+  .cmp-tray-lbl{display:none}
+  .cmp-av{width:32px;height:32px}
+  .cmp-go{padding:9px 13px;font-size:11.5px}
+  .lb-search{max-width:none}
+  .hl-wrap{flex:1 1 100%}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></symbol>
+<symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></symbol>
+<symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></symbol>
+<symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 14l3-4 3 2 4-6"/></symbol>
+<symbol id="i-ruler" viewBox="0 0 24 24"><path d="M3 8h18v8H3z"/><path d="M7 8v3M11 8v4M15 8v3M19 8v4"/></symbol>
+<symbol id="i-weight" viewBox="0 0 24 24"><path d="M6 7h12l2 13H4L6 7z"/><path d="M9 7a3 3 0 0 1 6 0"/></symbol>
+<symbol id="i-cake" viewBox="0 0 24 24"><path d="M4 21h16M5 21v-8h14v8M4 13a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2M12 7V4M9 5l3-2 3 2"/></symbol>
+<symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 18l-5.8 3 1.1-6.5L2.6 9.8l6.5-.9z"/></symbol>
+<symbol id="i-trophy" viewBox="0 0 24 24"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0zM7 6H4v2a3 3 0 0 0 3 3M17 6h3v2a3 3 0 0 1-3 3"/></symbol>
+<symbol id="i-glove" viewBox="0 0 24 24"><path d="M7 11V6a2 2 0 0 1 4 0v4M11 10V5a2 2 0 0 1 4 0v6M6 11h9a3 3 0 0 1 3 3v3a4 4 0 0 1-4 4H9a4 4 0 0 1-4-4v-4a2 2 0 0 1 1-2z"/></symbol>
+<symbol id="i-percent" viewBox="0 0 24 24"><path d="M19 5 5 19"/><circle cx="7.5" cy="7.5" r="2.5"/><circle cx="16.5" cy="16.5" r="2.5"/></symbol>
+<symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></symbol>
+<symbol id="i-fire" viewBox="0 0 24 24"><path d="M12 3s5 4 5 9a5 5 0 0 1-10 0c0-2 1-3 1-3s0 2 2 2c0-3 2-5 2-8z"/></symbol>
+<symbol id="i-grid" viewBox="0 0 24 24"><circle cx="6" cy="7" r="2.4"/><circle cx="13" cy="12" r="2.4"/><circle cx="19" cy="6" r="2.4"/><circle cx="9" cy="17" r="2.4"/><circle cx="17" cy="16" r="2.4"/></symbol>
+<symbol id="i-list" viewBox="0 0 24 24"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></symbol>
+<symbol id="i-palette" viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0 0 18c1 0 1.5-.8 1.5-1.5 0-1.5-1-1.8-1-3 0-.8.7-1.5 1.5-1.5H16a5 5 0 0 0 5-5c0-3.9-4-7-9-7z"/><circle cx="7.5" cy="10.5" r="1"/><circle cx="12" cy="7.5" r="1"/><circle cx="16.5" cy="10.5" r="1"/></symbol>
+<symbol id="i-filter" viewBox="0 0 24 24"><path d="M22 3H2l8 9.46V19l4 2v-8.54L22 3z"/></symbol>
+<symbol id="i-sort" viewBox="0 0 24 24"><path d="M7 4v16M7 20l-3-3M7 4l3 3M17 20V4M17 4l3 3M17 20l-3-3"/></symbol>
+<symbol id="i-medal" viewBox="0 0 24 24"><circle cx="12" cy="15" r="5"/><path d="M8.5 10.5 6 3M15.5 10.5 18 3M12 13v4M10.5 15h3"/></symbol>
+<symbol id="i-home" viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5M5 9.5V21h14V9.5"/><path d="M9 21v-7h6v7"/></symbol>
+<symbol id="i-scatter" viewBox="0 0 24 24"><path d="M3 3v18h18"/><circle cx="9" cy="9" r="1.8"/><circle cx="14" cy="14" r="1.8"/><circle cx="18" cy="7" r="1.8"/><circle cx="12" cy="17.5" r="1.8"/></symbol>
+<symbol id="i-board" viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M4 9h16M4 14h16M9 9v11"/></symbol>
+<symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 2 9 5-9 5-9-5 9-5z"/><path d="m3 12 9 5 9-5M3 17l9 5 9-5"/></symbol>
+<symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+<symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18 14 14 0 0 1 0-18z"/></symbol>
+<symbol id="i-flag" viewBox="0 0 24 24"><path d="M4 21V4s1.5-1.5 5-1.5 5 2 8 2c2 0 3-.7 3-.7v11s-1 .7-3 .7c-3 0-5-2-8-2s-5 1.5-5 1.5"/></symbol>
+<symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5M4 21h16"/></symbol>
+<symbol id="i-swap" viewBox="0 0 24 24"><path d="M7 16V4M7 4 3 8M7 4l4 4M17 8v12M17 20l4-4M17 20l-4-4"/></symbol>
+<symbol id="i-vs" viewBox="0 0 24 24"><path d="M5 4l4 9M9 13l-1 7M19 4l-4 9M15 13l1 7M9 13h6"/></symbol>
+<symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.1 7-11a7 7 0 1 0-14 0c0 4.9 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+<symbol id="i-pie" viewBox="0 0 24 24"><path d="M21.2 15.9A10 10 0 1 1 8 2.8"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></symbol>
+<symbol id="i-team" viewBox="0 0 24 24"><path d="M3 21V8l7-5 7 5v13"/><path d="M3 21h18M13 21v-6h-4v6"/></symbol>
+<symbol id="i-map" viewBox="0 0 24 24"><path d="M9 3 3 6v15l6-3 6 3 6-3V3l-6 3-6-3z"/><path d="M9 3v15M15 6v15"/></symbol>
+</defs></svg>
+
+<div class="util-bar">
+  <a href="about.html">เกี่ยวกับเรา</a>
+  <a href="contact.html">ติดต่อเรา</a>
+  <a href="blog/">บทความ</a>
+  <a href="disclaimer.html">ข้อจำกัดความรับผิด</a>
+  <span class="util-bar-right">รวมผลมวยจากทุกรายการ · บันทึกโดยแฟนมวย</span>
+</div>
+<nav class="nav">
+  <a class="nav-logo" href="index.html">
+    <img src="https://res.cloudinary.com/dia2yts2f/image/upload/v1779892068/ChatGPT_Image_22_%E0%B8%A1.%E0%B8%84._2569_19_38_45.png" alt="Boxfan" onerror="this.style.display='none'">
+    <div class="nav-logo-text"><span class="logo-main"><span>BOX</span>FAN</span><span class="logo-sub">ผลมวยทุกสังเวียน</span></div>
+  </a>
+  <div class="nav-tabs">
+    <a class="nav-tab" href="index.html">อันดับ</a>
+    <a class="nav-tab" href="rankings.html">ตารางคะแนน</a>
+    <a class="nav-tab" href="weight-classes.html">แยกตามรุ่น</a>
+    <a class="nav-tab active" href="stats.html">สถิติ</a>
+    <a class="nav-tab" href="Fighters.html">นักมวยทั้งหมด</a>
+    <a class="nav-tab" href="schedule.html">โปรแกรมชก</a>
+    <a class="nav-tab" href="results.html">ผลการแข่งขัน</a>
+    <a class="nav-tab" href="compare.html">เปรียบเทียบ</a>
+    <a class="nav-tab" href="blog/">บทความ</a>
+    <a class="nav-tab" href="tierlist.html">Tier List</a>
+  </div>
+  <div class="nav-right">
+    <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" aria-label="เปลี่ยนโหมดสี" title="เปลี่ยนโหมดสี">
+      <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+    <div class="nav-search-btn" id="search-toggle" onclick="toggleSearch()" aria-label="ค้นหา">
+      <span class="ic"><svg viewBox="0 0 24 24"><use href="#i-search"/></svg></span>
+      <div class="search-panel" id="search-panel" onclick="event.stopPropagation()">
+        <input type="text" id="sinput" placeholder="ค้นหานักมวย…" autocomplete="off">
+        <div class="sdrop-inner" id="sdrop"></div>
+      </div>
+    </div>
+    <a class="nav-signin" href="about.html">เกี่ยวกับ</a>
+  </div>
+</nav>
+
+<div class="page-w" style="padding-top:30px">
+  <header class="page-head">
+    <div class="page-kicker"><span class="ic"><svg viewBox="0 0 24 24"><use href="#i-chart"/></svg></span>Stats Hub</div>
+    <h1 class="page-title">ศูนย์สถิติ</h1>
+    <p class="st-intro">ศูนย์รวมสถิตินักมวยครบทุกมุมมอง — ภาพรวมทั้งวงการ กราฟจุดเรียงตามเกณฑ์ กราฟ 2 แกน ตารางจัดอันดับ และสถิติแยกกลุ่ม กรองตามรุ่น ชาติ กติกา และฤดูกาลได้ทุกมุมมอง กดปุ่ม + เพื่อจับนักมวยมาเทียบกันได้สูงสุด 3 คน</p>
+  </header>
+
+  <!-- SMART SEARCH (Google-like) -->
+  <div class="ms-wrap">
+    <div class="ms-box">
+      <span class="ms-icon"><svg viewBox="0 0 24 24"><use href="#i-search"/></svg></span>
+      <input type="text" id="ms-q" class="ms-input" placeholder='ค้นสถิติแบบพิมพ์ถาม — "นักมวยสูงสุด", "ชนะเยอะสุด", "KO มากที่สุดของไทย"…' autocomplete="off">
+      <button class="ms-clear" id="ms-clear" onclick="clearMegaSearch()" style="display:none" aria-label="ล้าง">✕</button>
+    </div>
+    <div class="ms-drop" id="ms-drop"></div>
+    <div class="ms-hints" id="ms-hints">
+      <span class="ms-hint-lbl">ลองพิมพ์:</span>
+      <button class="ms-chip" data-q="นักมวยสูงสุด">นักมวยสูงสุด</button>
+      <button class="ms-chip" data-q="ชนะเยอะสุด">ชนะเยอะสุด</button>
+      <button class="ms-chip" data-q="KO มากสุด">KO มากสุด</button>
+      <button class="ms-chip" data-q="อายุน้อยสุด">อายุน้อยสุด</button>
+      <button class="ms-chip" data-q="ชนะรวดยาวสุด">ชนะรวดยาวสุด</button>
+      <button class="ms-chip" data-q="อัตราชนะสูงสุด">อัตราชนะสูงสุด</button>
+    </div>
+  </div>
+
+  <!-- VIEW TABS -->
+  <div class="view-tabs" id="view-tabs" role="tablist">
+    <button class="vtab active" data-v="overview" role="tab"><span class="ic"><svg viewBox="0 0 24 24"><use href="#i-home"/></svg></span>ภาพรวม</button>
+    <button class="vtab" data-v="swarm" role="tab"><span class="ic"><svg viewBox="0 0 24 24"><use href="#i-grid"/></svg></span>กราฟจุด</button>
+    <button class="vtab" data-v="scatter" role="tab"><span class="ic"><svg viewBox="0 0 24 24"><use href="#i-scatter"/></svg></span>กราฟ 2 แกน</button>
+    <button class="vtab" data-v="board" role="tab"><span class="ic"><svg viewBox="0 0 24 24"><use href="#i-board"/></svg></span>ตารางรวม</button>
+    <button class="vtab" data-v="groups" role="tab"><span class="ic"><svg viewBox="0 0 24 24"><use href="#i-layers"/></svg></span>แยกกลุ่ม</button>
+    <button class="vtab" data-v="map" role="tab"><span class="ic"><svg viewBox="0 0 24 24"><use href="#i-map"/></svg></span>แผนที่โลก</button>
+  </div>
+
+  <!-- SHARED TOOLBAR -->
+  <div class="st-bar" style="margin-top:0">
+    <button class="fp-open-btn" id="fp-open" onclick="openFilterModal()"><span class="ic"><svg viewBox="0 0 24 24"><use href="#i-filter"/></svg></span>ตัวกรอง<span class="fp-badge" id="fp-badge" style="display:none">0</span></button>
+    <span class="chip-count" id="count"><b>—</b> คน</span>
+    <button class="fp-reset" id="quick-reset" style="display:none">ล้างตัวกรอง</button>
+  </div>
+
+  <!-- ══ VIEW: OVERVIEW ══ -->
+  <section class="sec show" id="sec-overview">
+    <div class="kpi-grid" id="kpi-grid"></div>
+    <div class="mglabel" style="display:block;margin:4px 0 9px">สถิติสูงสุด — กดเพื่อดูอันดับเต็ม</div>
+    <div class="records" id="records"></div>
+    <div class="chart-grid">
+      <div class="chart-card">
+        <div class="chart-title"><span class="ic"><svg viewBox="0 0 24 24"><use href="#i-medal"/></svg></span>นักมวยแยกตามรุ่น</div>
+        <div class="chart-sub">กดที่แถบเพื่อกรองเฉพาะรุ่นนั้น</div>
+        <div id="ov-divs"></div>
+      </div>
+      <div class="chart-card">
+        <div class="chart-title"><span class="ic"><svg viewBox="0 0 24 24"><use href="#i-flag"/></svg></span>ชาติที่มีนักมวยมากสุด</div>
+        <div class="chart-sub">กดที่แถบเพื่อกรองเฉพาะชาตินั้น · <a href="#" id="ov-goto-map" style="color:var(--red);font-weight:700">→ ดูบนแผนที่โลก</a></div>
+        <div id="ov-nations"></div>
+      </div>
+      <div class="chart-card">
+        <div class="chart-title"><span class="ic"><svg viewBox="0 0 24 24"><use href="#i-glove"/></svg></span>จำนวนไฟต์ต่อปี</div>
+        <div class="chart-sub">นับผลการแข่งขันที่บันทึกไว้ (ไม่รวมไฟต์ที่ยังไม่แข่ง)</div>
+        <div class="vbars" id="ov-years"></div>
+      </div>
+      <div class="chart-card">
+        <div class="chart-title"><span class="ic"><svg viewBox="0 0 24 24"><use href="#i-pie"/></svg></span>สัดส่วนผลการชก</div>
+        <div class="chart-sub">มุมมองรายนักมวยตามตัวกรองปัจจุบัน</div>
+        <div class="stackbar" id="ov-stack"></div>
+        <div class="stack-legend" id="ov-stack-legend"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ VIEW: SWARM (กราฟจุด) ══ -->
+  <section class="sec" id="sec-swarm">
+    <div class="mgroup" id="metric-phys"><span class="mglabel">ร่างกาย</span></div>
+    <div class="mgroup" id="metric-rec"><span class="mglabel">สถิติ</span></div>
+    <div class="st-bar">
+      <div class="seg" id="seg-dir">
+        <button data-dir="desc" class="on"><span class="ic"><svg viewBox="0 0 24 24"><use href="#i-sort"/></svg></span>มาก→น้อย</button>
+        <button data-dir="asc">น้อย→มาก</button>
+      </div>
+      <div class="seg" id="seg-color">
+        <button data-color="div" class="on"><span class="ic"><svg viewBox="0 0 24 24"><use href="#i-palette"/></svg></span>สีตามรุ่น</button>
+        <button data-color="country">สีตามชาติ</button>
+      </div>
+      <div class="seg" id="seg-view">
+        <button data-view="plot" class="on"><span class="ic"><svg viewBox="0 0 24 24"><use href="#i-grid"/></svg></span>กราฟจุด</button>
+        <button data-view="table"><span class="ic"><svg viewBox="0 0 24 24"><use href="#i-list"/></svg></span>ตาราง</button>
+      </div>
+      <div class="hl-wrap" style="margin-left:auto">
+        <span class="ic"><svg viewBox="0 0 24 24"><use href="#i-pin"/></svg></span>
+        <input class="hl-input" id="hl-input" type="text" placeholder="ปักหมุดหานักมวยในกราฟ…" autocomplete="off">
+        <div class="hl-drop" id="hl-drop"></div>
+      </div>
+    </div>
+    <div id="view-plot" class="plot-wrap">
+      <div class="plot-head"><div class="plot-title" id="plot-title">ส่วนสูง</div><div class="plot-sub" id="plot-sub"></div></div>
+      <div class="legend" id="legend"></div>
+      <div class="plot" id="plot"></div>
+      <div class="note" id="plot-note"></div>
+      <div class="tip" id="tip"></div>
+    </div>
+    <div id="view-table" class="st-table hidden">
+      <div class="st-th"><div class="c">#</div><div>นักมวย</div><div class="r" id="th-metric">ค่า</div></div>
+      <div id="st-body"></div>
+    </div>
+  </section>
+
+  <!-- ══ VIEW: SCATTER (กราฟ 2 แกน) ══ -->
+  <section class="sec" id="sec-scatter">
+    <div class="sc-controls">
+      <div class="fp-item"><label>แกนนอน (X)</label><select class="fp-sel" id="sc-x"></select></div>
+      <button class="sc-swap" id="sc-swap" title="สลับแกน" aria-label="สลับแกน"><span class="ic"><svg viewBox="0 0 24 24"><use href="#i-swap"/></svg></span></button>
+      <div class="fp-item"><label>แกนตั้ง (Y)</label><select class="fp-sel" id="sc-y"></select></div>
+      <div class="seg" id="seg-sc-color" style="align-self:flex-end">
+        <button data-color="div" class="on"><span class="ic"><svg viewBox="0 0 24 24"><use href="#i-palette"/></svg></span>สีตามรุ่น</button>
+        <button data-color="country">สีตามชาติ</button>
+      </div>
+    </div>
+    <div class="plot-wrap">
+      <div class="plot-head"><div class="plot-title" id="sc-title">—</div><div class="plot-sub" id="sc-sub"></div></div>
+      <div class="legend" id="sc-legend"></div>
+      <div class="scatter" id="scatter"></div>
+      <div class="note">เส้นประสีทอง = ค่ามัธยฐานของแต่ละแกน · ชี้/แตะที่รูปเพื่อดูรายละเอียด</div>
+      <div class="tip" id="sc-tip"></div>
+    </div>
+  </section>
+
+  <!-- ══ VIEW: BOARD (ตารางรวม) ══ -->
+  <section class="sec" id="sec-board">
+    <div class="lb-controls">
+      <div class="lb-search">
+        <span class="ic"><svg viewBox="0 0 24 24"><use href="#i-search"/></svg></span>
+        <input type="text" id="lb-q" placeholder="ค้นหาชื่อ ค่าย…" autocomplete="off">
+      </div>
+      <button class="lb-export" id="lb-export"><span class="ic"><svg viewBox="0 0 24 24"><use href="#i-download"/></svg></span>ดาวน์โหลด CSV</button>
+    </div>
+    <div class="lb-wrap"><div class="lb-scroll">
+      <div class="lb-head" id="lb-head"></div>
+      <div id="lb-body"></div>
+    </div>
+    <button class="lb-more hidden" id="lb-more">แสดงเพิ่มอีก</button>
+    </div>
+  </section>
+
+  <!-- ══ VIEW: GROUPS (แยกกลุ่ม) ══ -->
+  <section class="sec" id="sec-groups">
+    <div class="grp-controls">
+      <div class="seg" id="seg-group">
+        <button data-g="div" class="on"><span class="ic"><svg viewBox="0 0 24 24"><use href="#i-medal"/></svg></span>ตามรุ่น</button>
+        <button data-g="country"><span class="ic"><svg viewBox="0 0 24 24"><use href="#i-globe"/></svg></span>ตามชาติ</button>
+        <button data-g="team"><span class="ic"><svg viewBox="0 0 24 24"><use href="#i-team"/></svg></span>ตามค่าย</button>
+      </div>
+      <div class="fp-item" style="min-width:190px"><label>จัดเรียงตาม</label>
+        <select class="fp-sel" id="grp-metric">
+          <option value="n">จำนวนนักมวย</option>
+          <option value="wins">ชนะรวม</option>
+          <option value="ko">จำนวน KO รวม</option>
+          <option value="avgS">คะแนนเฉลี่ย</option>
+          <option value="wr">อัตราชนะเฉลี่ย</option>
+        </select>
+      </div>
+    </div>
+    <div class="grp-list" id="grp-list"></div>
+  </section>
+
+  <!-- ══ VIEW: MAP (แผนที่โลก) ══ -->
+  <section class="sec" id="sec-map">
+    <div class="map-controls mp-controls">
+      <div class="seg" id="seg-map-mode">
+        <button data-mode="heat" class="on">🔥 ระบายสีตามความหนาแน่น</button>
+        <button data-mode="bubble">🫧 วงกลม (มีตัวเลข)</button>
+        <button data-mode="dot">📍 จุดต่อนักมวย</button>
+      </div>
+    </div>
+    <div class="plot-wrap" style="padding:18px">
+      <div class="plot-head">
+        <div class="plot-title" id="mp-title">แผนที่โลก</div>
+        <div class="plot-sub" id="mp-sub">ชี้ประเทศเพื่อดูรายละเอียด · ลากเพื่อเลื่อน · ล้อเมาส์ zoom · คลิกเพื่อกรอง</div>
+      </div>
+      <div class="map-wrap" id="mp-wrap">
+        <div class="mp-loading" id="mp-loading">กำลังโหลดแผนที่โลก…</div>
+      </div>
+      <div class="mp-legend" id="mp-legend">
+        <span>ความเข้ม:</span>
+        <span style="color:var(--tx-4);font-family:var(--serif);font-weight:700">น้อย</span>
+        <span class="mp-heat-scale">
+          <i style="background:#2a1f1e"></i>
+          <i style="background:#5c2419"></i>
+          <i style="background:#9b3220"></i>
+          <i style="background:#d64828"></i>
+          <i style="background:var(--gold)"></i>
+        </span>
+        <span style="color:var(--tx-4);font-family:var(--serif);font-weight:700">มาก</span>
+        <span style="color:var(--tx-4);margin-left:auto">💡 คลิกประเทศเพื่อกรองในทุกมุมมอง</span>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- COMPARE TRAY -->
+<div class="cmp-tray" id="cmp-tray" aria-live="polite">
+  <span class="cmp-tray-lbl">เปรียบเทียบ</span>
+  <div class="cmp-avs" id="cmp-avs"></div>
+  <button class="cmp-go" id="cmp-go" onclick="openCmpModal()">เทียบเลย</button>
+  <button class="cmp-clear" onclick="clearCmp()">ล้าง</button>
+</div>
+
+<!-- COMPARE MODAL -->
+<div class="fp-modal-overlay" id="cmp-overlay" onclick="if(event.target===this)closeCmpModal()">
+  <div class="fp-modal cmp-modal" role="dialog" aria-modal="true" aria-label="เปรียบเทียบนักมวย">
+    <div class="fp-modal-head"><div class="fp-modal-title">เปรียบเทียบนักมวย</div><button class="fp-modal-x" onclick="closeCmpModal()" aria-label="ปิด">✕</button></div>
+    <div id="cmp-body" style="max-height:70vh;overflow-y:auto"></div>
+    <div class="fp-modal-foot"><span style="font-size:11px;color:var(--tx-4)">● = ค่าที่ดีที่สุดในแถว</span><a class="cmp-foot-link" href="compare.html" style="margin-left:auto">เปิดหน้าเปรียบเทียบเต็ม ›</a></div>
+  </div>
+</div>
+
+<!-- FILTER MODAL -->
+<div class="fp-modal-overlay" id="fp-overlay" onclick="if(event.target===this)closeFilterModal()">
+  <div class="fp-modal" role="dialog" aria-modal="true" aria-label="ตัวกรอง">
+    <div class="fp-modal-head"><div class="fp-modal-title">ตัวกรอง</div><button class="fp-modal-x" id="fp-close" onclick="closeFilterModal()" aria-label="ปิด">✕</button></div>
+    <div class="fp-modal-body">
+      <div class="fp-item"><label>รุ่นน้ำหนัก</label><div class="combo" id="combo-div"><input class="combo-input" type="text" placeholder="ทุกรุ่น" autocomplete="off"><div class="combo-list"></div></div></div>
+      <div class="fp-item"><label>ประเทศ</label><div class="combo" id="combo-country"><input class="combo-input" type="text" placeholder="ทุกชาติ" autocomplete="off"><div class="combo-list"></div></div></div>
+      <div class="fp-item"><label>กติกา</label><select class="fp-sel" id="f-rules"><option value="all">ทุกกติกา</option><option value="มวยไทย">มวยไทย</option><option value="คิกบ็อกซิ่ง">คิกบ็อกซิ่ง</option><option value="MMA">MMA</option></select></div>
+      <div class="fp-item"><label>ช่วงเวลา</label><select class="fp-sel" id="f-season"><option value="all">ตลอดอาชีพ</option><option value="latest">ฤดูกาลล่าสุด</option></select></div>
+      <div class="fp-item"><label>ไฟต์ขั้นต่ำ</label><select class="fp-sel" id="f-min"><option value="0">ไม่จำกัด</option><option value="3">ตั้งแต่ 3 ไฟต์</option><option value="5">ตั้งแต่ 5 ไฟต์</option><option value="10">ตั้งแต่ 10 ไฟต์</option></select></div>
+    </div>
+    <div class="fp-modal-foot"><button class="fp-reset" id="f-reset">ล้างตัวกรอง</button><button class="fp-apply" onclick="closeFilterModal()">ดูผล (<span id="apply-count">—</span>)</button></div>
+  </div>
+</div>
+
+<footer class="site-footer"><div class="footer-in">
+  <div class="footer-brand">BOX<span>FAN</span></div>
+  <div class="footer-tag">ผลมวยทุกสังเวียน</div>
+  <div class="footer-links">
+    <a href="about.html">เกี่ยวกับเรา</a><a href="contact.html">ติดต่อเรา</a>
+    <a href="privacy.html">นโยบายความเป็นส่วนตัว</a><a href="disclaimer.html">ข้อจำกัดความรับผิด</a>
+  </div>
+  <div class="footer-copy">© <span id="yr"></span> Boxfan · รวมผลมวยจากทุกรายการ บันทึกโดยแฟนมวย</div>
+</div></footer>
+
+<script src="data/fighters_data.js"></script>
+<script src="utils.js"></script>
+<script>
+/* ═══════════════════════════════════════════════════════════════
+   BOXFAN STATS HUB v2
+   5 มุมมอง: ภาพรวม / กราฟจุด / กราฟ 2 แกน / ตารางรวม / แยกกลุ่ม
+   + ตัวกรองใช้ร่วมกันทุกมุมมอง + เทียบนักมวย 3 คน + ลิงก์แชร์ (#hash)
+   ═══════════════════════════════════════════════════════════════ */
+
+var PH_IMG='images/noname1.png';
+function num(x){ if(x===null||x===undefined||x==='') return null; var n=parseFloat(x); return isNaN(n)?null:n; }
+function fImg(f){ if(typeof cImg!=='undefined'){var u=cImg(f.image_filename,'sm'); if(u&&u!=='undefined'&&u!=='null') return u;} return PH_IMG; }
+function furl(f){ return typeof getFighterUrl!=='undefined'?getFighterUrl(f):'profile.html?id='+f.id; }
+function esc2(s){ return typeof esc!=='undefined'?esc(s):(''+s); }
+function fmtN(v){ if(v==null||isNaN(v)) return '—'; return (Math.round(v*10)/10).toLocaleString('th-TH'); }
+
+var PAL=['#e8412e','#3b8df0','#f4b740','#34d27f','#a06cf0','#e86a9c','#2fb8b0','#f0863b','#8a97a5','#c94f8a','#5b8f2f','#d0a020'];
+
+var METRICS=[
+ {key:'height_cm',label:'ส่วนสูง',unit:'ซม.',icon:'i-ruler',kind:'phys',get:function(f){return num(f.height_cm);}},
+ {key:'weight_kg',label:'น้ำหนัก',unit:'กก.',icon:'i-weight',kind:'phys',get:function(f){return num(f.weight_kg);}},
+ {key:'age',label:'อายุ',unit:'ปี',icon:'i-cake',kind:'phys',get:function(f){return num(f.age);}},
+ {key:'_s',label:'คะแนน Boxfan',unit:'pts',icon:'i-star',kind:'rec',get:function(f){return f._s;}},
+ {key:'_w',label:'ชนะ',unit:'ครั้ง',icon:'i-trophy',kind:'rec',get:function(f){return f._w;}},
+ {key:'_l',label:'แพ้',unit:'ครั้ง',icon:'i-alert',kind:'rec',get:function(f){return f._l;}},
+ {key:'_total',label:'จำนวนไฟต์',unit:'ครั้ง',icon:'i-glove',kind:'rec',get:function(f){return f._total;}},
+ {key:'_wr',label:'อัตราชนะ',unit:'%',icon:'i-percent',kind:'rec',rate:true,get:function(f){return f._wr;}},
+ {key:'_koCount',label:'จำนวน KO',unit:'ครั้ง',icon:'i-bolt',kind:'rec',get:function(f){return f._koCount;}},
+ {key:'_ko',label:'อัตรา KO',unit:'%',icon:'i-bolt',kind:'rec',rate:true,get:function(f){return f._ko;}},
+ {key:'_streak',label:'ชนะรวด',unit:'ไฟต์',icon:'i-fire',kind:'rec',get:function(f){return f._streak;}}
+];
+var METRIC_BY={}; METRICS.forEach(function(m){METRIC_BY[m.key]=m;});
+
+var state={
+  view:'overview',
+  metric:'_s',dir:'desc',colorBy:'div',plotMode:'plot',hl:null,
+  sx:'age',sy:'_wr',scColor:'div',
+  sortKey:'_s',sortDir:'desc',q:'',
+  groupBy:'div',groupMetric:'n',
+  mapMode:'heat',
+  division:'all',country:'all',rules:'all',season:'all',minFights:0
+};
+var MAXDOTS=140, LB_STEP=50, lbShow=LB_STEP;
+var comboDiv, comboCountry;
+
+/* ── ข้อมูล (แคชตามหน้าต่างเวลา/กติกา) ── */
+var _cache={};
+function computeAll(){
+  var yr = state.season==='latest' ? (typeof rankingYear!=='undefined'?rankingYear():'all') : 'all';
+  var k=yr+'|'+state.rules;
+  if(!_cache[k]) _cache[k]=FIGHTERS.map(function(f){ return computeStats(f,{year:yr,rules:state.rules}); });
+  return _cache[k];
+}
+function filtered(){
+  return computeAll().filter(function(f){
+    if(state.division!=='all' && f._divKey!==state.division) return false;
+    if(state.country!=='all' && f.country!==state.country) return false;
+    if(state.minFights && f._total < state.minFights) return false;
+    return true;
+  });
+}
+function metricAvailable(m){
+  if(m.kind!=='phys') return true;
+  return FIGHTERS.some(function(f){ return m.get(f)!=null; });
+}
+function metricPoints(mkey,dir){
+  var m=METRIC_BY[mkey];
+  var arr=filtered().map(function(f){ return {f:f,v:m.get(f)}; })
+    .filter(function(p){ if(p.v==null||isNaN(p.v)) return false; if(m.kind==='rec'&&p.f._total<=0) return false; return true; });
+  arr.sort(function(a,b){ return dir==='desc'?(b.v-a.v):(a.v-b.v); });
+  return {m:m,pts:arr};
+}
+function catOf(f,colorBy){ return colorBy==='div' ? (f._divKey||'?') : (f.country||'?'); }
+function catLabel(k,colorBy){ if(colorBy==='div'){ return (typeof divLabel!=='undefined'&&divLabel(k))||k; } return k; }
+function buildColorMap(pts,colorBy){
+  var counts={}; pts.forEach(function(p){var k=catOf(p.f,colorBy);counts[k]=(counts[k]||0)+1;});
+  var keys=Object.keys(counts).sort(function(a,b){return counts[b]-counts[a];});
+  var map={}, legend=[];
+  keys.forEach(function(k,i){
+    if(i<PAL.length-1){ map[k]=PAL[i]; legend.push({k:k,c:PAL[i],n:counts[k]}); }
+    else { map[k]=PAL[PAL.length-1]; }
+  });
+  var restN=keys.slice(PAL.length-1).reduce(function(s,k){return s+counts[k];},0);
+  if(restN>0) legend.push({k:'__rest',c:PAL[PAL.length-1],n:restN});
+  return {map:map,legend:legend};
+}
+function median(arr){ if(!arr.length)return null; var s=arr.slice().sort(function(a,b){return a-b;}); var m=Math.floor(s.length/2); return s.length%2? s[m] : (s[m-1]+s[m])/2; }
+
+/* ═══ HASH STATE (ลิงก์แชร์ได้) ═══ */
+var DEFAULTS=JSON.parse(JSON.stringify(state));
+var HASH_KEYS=['view','metric','dir','colorBy','plotMode','sx','sy','scColor','sortKey','sortDir','groupBy','groupMetric','mapMode','division','country','rules','season','minFights','q'];
+function writeHash(){
+  var parts=[];
+  HASH_KEYS.forEach(function(k){ if(String(state[k])!==String(DEFAULTS[k])) parts.push(k+'='+encodeURIComponent(state[k])); });
+  var h=parts.length?('#'+parts.join('&')):' ';
+  try{ history.replaceState(null,'',parts.length?('#'+parts.join('&')):location.pathname+location.search); }catch(e){}
+}
+function readHash(){
+  if(!location.hash||location.hash.length<2) return;
+  location.hash.slice(1).split('&').forEach(function(p){
+    var i=p.indexOf('='); if(i<0)return;
+    var k=p.slice(0,i), v=decodeURIComponent(p.slice(i+1));
+    if(HASH_KEYS.indexOf(k)===-1) return;
+    if(k==='minFights') v=parseInt(v,10)||0;
+    state[k]=v;
+  });
+}
+
+/* ═══ RENDER DISPATCH ═══ */
+function render(){
+  var n=filtered().length;
+  document.getElementById('count').innerHTML='<b>'+n+'</b> คน';
+  document.getElementById('apply-count').textContent=n;
+  updateBadge();
+  document.querySelectorAll('.vtab').forEach(function(b){ b.classList.toggle('active', b.getAttribute('data-v')===state.view); });
+  document.querySelectorAll('.sec').forEach(function(s){ s.classList.remove('show'); });
+  var sec=document.getElementById('sec-'+state.view); if(sec)sec.classList.add('show');
+  if(state.view==='overview') renderOverview();
+  else if(state.view==='swarm') renderSwarm();
+  else if(state.view==='scatter') renderScatter();
+  else if(state.view==='board') renderBoard();
+  else if(state.view==='groups') renderGroups();
+  else if(state.view==='map') renderMap();
+  writeHash();
+}
+function setView(v){ state.view=v; render(); window.scrollTo({top:0,behavior:'smooth'}); }
+
+/* ═══════════════════════ 1) OVERVIEW ═══════════════════════ */
+function renderOverview(){
+  var L=filtered();
+  var totalFights=0,totKO=0,totW=0,totL=0,bestStreak=0,ages=[],cset={},tset={};
+  L.forEach(function(f){
+    totalFights+=f._windowCount; totKO+=f._koCount; totW+=f._w; totL+=f._l;
+    if(f._streak>bestStreak)bestStreak=f._streak;
+    var a=num(f.age); if(a!=null)ages.push(a);
+    if(f.country)cset[f.country]=1; if(f.team)tset[f.team]=1;
+  });
+  var avgAge=ages.length? (ages.reduce(function(s,a){return s+a;},0)/ages.length) : null;
+  var koPct=totW>0?Math.round(totKO/totW*100):0;
+  var kpis=[
+    {lbl:'นักมวย',icon:'i-users',c:'var(--red)',v:L.length,u:'คน',sub:(state.division!=='all'||state.country!=='all')?'ตามตัวกรองปัจจุบัน':'ทั้งหมดในระบบ'},
+    {lbl:'ไฟต์ที่บันทึก',icon:'i-glove',c:'var(--blue)',v:totalFights,u:'ไฟต์',sub:'มุมมองรายนักมวย'},
+    {lbl:'ชนะน็อค',icon:'i-bolt',c:'var(--gold)',v:totKO,u:'ครั้ง',sub:koPct+'% ของชัยชนะทั้งหมด'},
+    {lbl:'ชนะรวดสูงสุด',icon:'i-fire',c:'var(--red)',v:bestStreak,u:'ไฟต์',sub:'สตรีคที่ยังไม่จบ'},
+    {lbl:'ประเทศ',icon:'i-globe',c:'var(--green)',v:Object.keys(cset).length,u:'ชาติ',sub:Object.keys(tset).length+' ค่ายมวย'},
+    {lbl:'อายุเฉลี่ย',icon:'i-cake',c:'var(--blue)',v:avgAge!=null?fmtN(avgAge):'—',u:avgAge!=null?'ปี':'',sub:ages.length?('จากข้อมูล '+ages.length+' คน'):'ยังไม่มีข้อมูลอายุ'}
+  ];
+  document.getElementById('kpi-grid').innerHTML=kpis.map(function(k){
+    return '<div class="kpi" style="--kpi-c:'+k.c+'"><div class="kpi-lbl"><span class="ic"><svg viewBox="0 0 24 24"><use href="#'+k.icon+'"/></svg></span>'+k.lbl+'</div>'+
+      '<div class="kpi-val">'+k.v+'<small>'+k.u+'</small></div><div class="kpi-sub">'+esc2(k.sub)+'</div></div>';
+  }).join('');
+
+  renderRecords(L);
+
+  /* นักมวยแยกตามรุ่น */
+  var dc={}; L.forEach(function(f){ if(f._divKey)dc[f._divKey]=(dc[f._divKey]||0)+1; });
+  var order=(typeof DIV_MAP!=='undefined'?DIV_MAP:[]).filter(function(d){return dc[d.key];});
+  var maxD=Math.max.apply(null,order.map(function(d){return dc[d.key];}).concat([1]));
+  document.getElementById('ov-divs').innerHTML=order.length?order.map(function(d){
+    return '<div class="hbar-row" data-div="'+d.key+'"><div class="hbar-lbl">'+esc2(d.label)+'</div>'+
+      '<div class="hbar-track"><div class="hbar-fill" style="width:'+Math.round(dc[d.key]/maxD*100)+'%"></div></div>'+
+      '<div class="hbar-num">'+dc[d.key]+'</div></div>';
+  }).join(''):'<div class="st-empty">ไม่มีข้อมูล</div>';
+
+  /* ชาติ */
+  var nc={}; L.forEach(function(f){ if(f.country)nc[f.country]=(nc[f.country]||0)+1; });
+  var nations=Object.keys(nc).sort(function(a,b){return nc[b]-nc[a];}).slice(0,8);
+  var maxN=nations.length?nc[nations[0]]:1;
+  document.getElementById('ov-nations').innerHTML=nations.length?nations.map(function(c){
+    var flag=typeof fl!=='undefined'?fl(c)+' ':'';
+    return '<div class="hbar-row" data-country="'+encodeURIComponent(c)+'"><div class="hbar-lbl">'+flag+esc2(c)+'</div>'+
+      '<div class="hbar-track"><div class="hbar-fill" style="width:'+Math.round(nc[c]/maxN*100)+'%"></div></div>'+
+      '<div class="hbar-num">'+nc[c]+'</div></div>';
+  }).join(''):'<div class="st-empty">ไม่มีข้อมูล</div>';
+
+  /* ไฟต์ต่อปี */
+  var ids={}; L.forEach(function(f){ids[f.id]=1;});
+  var yc={};
+  if(typeof HISTORY!=='undefined') HISTORY.forEach(function(h){
+    if(h.result_type==='upcoming'||!h.date||!ids[h.fighter_id]) return;
+    if(state.rules!=='all'&&h.rules!==state.rules) return;
+    var y=String(h.date).substr(0,4); yc[y]=(yc[y]||0)+1;
+  });
+  var years=Object.keys(yc).sort().slice(-8);
+  var maxY=Math.max.apply(null,years.map(function(y){return yc[y];}).concat([1]));
+  document.getElementById('ov-years').innerHTML=years.length?years.map(function(y){
+    return '<div class="vbar" title="'+yc[y]+' ไฟต์"><span class="vbar-n">'+yc[y]+'</span>'+
+      '<div class="vbar-fill" style="height:'+Math.max(3,Math.round(yc[y]/maxY*110))+'px"></div>'+
+      '<span class="vbar-lbl">'+(parseInt(y,10)+543)+'</span></div>';
+  }).join(''):'<div class="st-empty" style="width:100%">ไม่มีข้อมูล</div>';
+
+  /* สัดส่วนผล */
+  var koW=totKO, decW=totW-totKO, losses=totL, other=Math.max(0,totalFights-totW-totL);
+  var segs=[
+    {lbl:'ชนะน็อค',v:koW,c:'var(--red)'},
+    {lbl:'ชนะคะแนน',v:decW,c:'var(--gold)'},
+    {lbl:'แพ้',v:losses,c:'var(--blue)'},
+    {lbl:'เสมอ / NC',v:other,c:'var(--tx-4)'}
+  ];
+  var tot=segs.reduce(function(s,x){return s+x.v;},0)||1;
+  document.getElementById('ov-stack').innerHTML=segs.filter(function(s){return s.v>0;}).map(function(s){
+    return '<i style="width:'+ (s.v/tot*100) +'%;background:'+s.c+'" title="'+s.lbl+' '+s.v+'"></i>';
+  }).join('');
+  document.getElementById('ov-stack-legend').innerHTML=segs.map(function(s){
+    return '<span class="lg"><i style="background:'+s.c+'"></i>'+s.lbl+'<b>'+s.v+'</b> <span style="color:var(--tx-4)">('+Math.round(s.v/tot*100)+'%)</span></span>';
+  }).join('');
+}
+
+/* records strip */
+function renderRecords(L){
+  var defs=[
+    {lbl:'สูงที่สุด',icon:'i-ruler',metric:'height_cm',dir:'desc',get:function(f){return num(f.height_cm);},pick:'max',unit:'ซม.'},
+    {lbl:'อายุน้อยสุด',icon:'i-cake',metric:'age',dir:'asc',get:function(f){return num(f.age);},pick:'min',unit:'ปี'},
+    {lbl:'ชนะมากสุด',icon:'i-trophy',metric:'_w',dir:'desc',get:function(f){return f._w;},pick:'max',unit:'ครั้ง'},
+    {lbl:'KO มากสุด',icon:'i-bolt',metric:'_koCount',dir:'desc',get:function(f){return f._koCount;},pick:'max',unit:'ครั้ง'},
+    {lbl:'ชนะรวดยาวสุด',icon:'i-fire',metric:'_streak',dir:'desc',get:function(f){return f._streak;},pick:'max',unit:'ไฟต์'},
+    {lbl:'อัตราชนะสูงสุด',icon:'i-percent',metric:'_wr',dir:'desc',get:function(f){return f._wr;},pick:'max',unit:'%',guard:function(f){return f._total>=5;}}
+  ];
+  var host=document.getElementById('records'); host.innerHTML='';
+  defs.forEach(function(d){
+    var best=null,bv=null;
+    L.forEach(function(f){ var v=d.get(f); if(v==null||isNaN(v))return; if(d.guard&&!d.guard(f))return;
+      if(bv===null||(d.pick==='max'?v>bv:v<bv)){bv=v;best=f;} });
+    if(!best) return;
+    var el=document.createElement('div'); el.className='rec';
+    el.innerHTML='<div class="rec-lbl"><span class="ic"><svg viewBox="0 0 24 24"><use href="#'+d.icon+'"/></svg></span>'+d.lbl+'</div>'+
+      '<div class="rec-val">'+bv+'<small>'+d.unit+'</small></div>'+
+      '<div class="rec-who">'+esc2(best.name_th)+'</div>';
+    el.addEventListener('click',function(){
+      state.metric=d.metric; state.dir=d.dir; state.view='swarm';
+      syncSeg('seg-dir','dir',state.dir); render();
+      window.scrollTo({top:0,behavior:'smooth'});
+    });
+    host.appendChild(el);
+  });
+}
+
+/* ═══════════════════════ 2) SWARM (กราฟจุด) ═══════════════════════ */
+function renderChips(){
+  var phys=document.getElementById('metric-phys'), rec=document.getElementById('metric-rec');
+  [phys,rec].forEach(function(h){ h.querySelectorAll('.mchip').forEach(function(x){x.remove();}); });
+  METRICS.forEach(function(m){
+    var host=(m.kind==='phys')?phys:rec;
+    var b=document.createElement('button');
+    b.className='mchip'+(m.key===state.metric?' active':'');
+    var ok=metricAvailable(m);
+    if(!ok) b.setAttribute('disabled','');
+    b.innerHTML='<span class="ic"><svg viewBox="0 0 24 24"><use href="#'+m.icon+'"/></svg></span>'+m.label;
+    b.setAttribute('data-metric',m.key);
+    if(ok) b.addEventListener('click',function(){ setMetric(m.key); });
+    else b.title='ต้องมีข้อมูล'+m.label+'ในไฟล์ข้อมูลก่อน';
+    host.appendChild(b);
+  });
+}
+function setMetric(k){
+  if(!metricAvailable(METRIC_BY[k])) return;
+  state.metric=k;
+  document.querySelectorAll('.mchip').forEach(function(b){ b.classList.toggle('active', b.getAttribute('data-metric')===k); });
+  render();
+}
+function renderSwarm(){
+  renderChips();
+  var res=metricPoints(state.metric,state.dir), m=res.m, pts=res.pts;
+  document.getElementById('plot-title').textContent=m.label;
+  var truncated=false;
+  if(pts.length>MAXDOTS){ pts=pts.slice(0,MAXDOTS); truncated=true; }
+  var cm=buildColorMap(pts,state.colorBy);
+  renderLegend('legend',cm.legend,state.colorBy);
+  if(state.plotMode==='plot') renderPlot(m,pts,cm,truncated); else renderSwarmTable(m,pts,truncated);
+}
+function renderLegend(hostId,legend,colorBy){
+  var host=document.getElementById(hostId); host.innerHTML='';
+  legend.forEach(function(g){
+    var lab=g.k==='__rest'?'อื่นๆ':catLabel(g.k,colorBy);
+    var flag=(colorBy==='country'&&g.k!=='__rest'&&typeof fl!=='undefined')?(fl(g.k)+' '):'';
+    var el=document.createElement('span'); el.className='lg';
+    el.innerHTML='<i style="background:'+g.c+'"></i>'+flag+esc2(lab)+' ('+g.n+')';
+    host.appendChild(el);
+  });
+}
+function beeswarm(items,width,r,gap){
+  var d=r*2+gap, placed=[], maxAbs=0;
+  items.forEach(function(p){
+    var y=0,k=0,step=d*0.62;
+    while(true){ var ok=true;
+      for(var i=placed.length-1;i>=0;i--){ var q=placed[i]; var dx=p.cx-q.cx; if(dx>d) break;
+        var dy=y-q.cy; if(dx*dx+dy*dy < d*d - 0.5){ ok=false; break; } }
+      if(ok) break; k++; y=(k%2?1:-1)*Math.ceil(k/2)*step;
+    }
+    p.cy=y; placed.push(p); if(Math.abs(y)>maxAbs) maxAbs=Math.abs(y);
+  });
+  return maxAbs;
+}
+function niceTicks(min,max,n){
+  if(min===max){ return [min]; }
+  var span=max-min, step=Math.pow(10,Math.floor(Math.log10(span/n)));
+  var err=(span/n)/step; if(err>=7.5)step*=10; else if(err>=3.5)step*=5; else if(err>=1.5)step*=2;
+  var t=[], start=Math.ceil(min/step)*step;
+  for(var v=start; v<=max+1e-9; v+=step) t.push(Math.round(v*100)/100);
+  return t;
+}
+function renderPlot(m,pts,cm,truncated){
+  document.getElementById('view-plot').classList.remove('hidden');
+  document.getElementById('view-table').classList.add('hidden');
+  var plot=document.getElementById('plot'); plot.innerHTML='';
+  if(!pts.length){ plot.style.height='auto'; plot.innerHTML='<div class="st-empty">ไม่พบนักมวยที่ตรงกับตัวกรอง</div>'; document.getElementById('plot-sub').textContent=''; document.getElementById('plot-note').textContent=''; return; }
+  var W=plot.clientWidth||plot.getBoundingClientRect().width||700;
+  var mobile=W<560; var size=mobile?26:34, r=size/2, gap=mobile?4:5, padX=Math.max(size,20);
+  var vals=pts.map(function(p){return p.v;});
+  var min=Math.min.apply(null,vals), max=Math.max.apply(null,vals);
+  var xspan=(max-min)||1;
+  pts.forEach(function(p){ p.cx=padX + (max===min? (W-2*padX)/2 : (p.v-min)/xspan*(W-2*padX)); });
+  var order=pts.slice().sort(function(a,b){return a.cx-b.cx;});
+  var maxAbs=beeswarm(order,W,r,gap);
+  var axisY=maxAbs+r+18, H=axisY+34;
+  plot.style.height=H+'px';
+  document.getElementById('plot-sub').textContent=m.label+' '+min+'–'+max+' '+m.unit;
+
+  var axis=document.createElement('div'); axis.className='axis-line'; axis.style.top=axisY+'px'; plot.appendChild(axis);
+  niceTicks(min,max,mobile?4:6).forEach(function(tv){
+    var cx=padX + (max===min?(W-2*padX)/2:(tv-min)/xspan*(W-2*padX));
+    var t=document.createElement('div'); t.className='tick'; t.style.left=cx+'px'; t.style.top=(axisY+9)+'px';
+    t.innerHTML='<i></i>'+tv; plot.appendChild(t);
+  });
+
+  /* ค่ามัธยฐาน */
+  var med=median(vals);
+  if(med!=null&&max!==min){
+    var mx=padX+(med-min)/xspan*(W-2*padX);
+    var mk=document.createElement('div'); mk.className='axis-marker'; mk.style.left=mx+'px'; mk.style.top='0';
+    mk.innerHTML='<span>มัธยฐาน '+(Math.round(med*10)/10)+'</span><i style="height:'+(axisY-16)+'px"></i>';
+    plot.appendChild(mk);
+  }
+
+  pts.forEach(function(p,idx){
+    var rank=idx+1;
+    var dot=document.createElement('div'); dot.className='dot'+(rank<=3?' r'+rank:'')+(state.hl&&String(p.f.id)===String(state.hl)?' hl':'');
+    dot.style.width=size+'px'; dot.style.height=size+'px';
+    dot.style.left=p.cx+'px'; dot.style.top=(axisY - r - (p.cy))+'px';
+    dot.setAttribute('data-idx',idx);
+    var col=cm.map[catOf(p.f,state.colorBy)]||PAL[PAL.length-1];
+    var img='<img class="av" src="'+fImg(p.f)+'" loading="lazy" onerror="this.src=PH_IMG" alt="" style="--cat:'+col+'">';
+    if(rank<=3) img='<span class="led-wrap led-'+rank+'">'+img+'</span>';
+    dot.innerHTML=img+'<span class="rk">'+rank+'</span>';
+    plot.appendChild(dot);
+  });
+  window._pts=pts; window._m=m;
+  var note = truncated ? ('แสดง '+MAXDOTS+' อันดับแรกจากทั้งหมด (กรองเพิ่มเพื่อดูเจาะจง)') : '';
+  if(state.hl){
+    var found=pts.some(function(p){return String(p.f.id)===String(state.hl);});
+    if(!found) note='ไม่พบนักมวยที่ปักหมุดในมุมมองนี้ (อาจถูกกรองออกหรืออยู่นอก '+MAXDOTS+' อันดับแรก)'+(note?' · '+note:'');
+  }
+  document.getElementById('plot-note').textContent=note;
+}
+function renderSwarmTable(m,pts,truncated){
+  document.getElementById('view-table').classList.remove('hidden');
+  document.getElementById('view-plot').classList.add('hidden');
+  document.getElementById('th-metric').textContent=m.label;
+  var body=document.getElementById('st-body');
+  if(!pts.length){ body.innerHTML='<div class="st-empty">ไม่พบนักมวยที่ตรงกับตัวกรอง</div>'; return; }
+  var html='';
+  pts.forEach(function(p,idx){
+    var rank=idx+1, f=p.f;
+    var flag=typeof fl!=='undefined'?fl(f.country):'';
+    var nm = rank<=3 ? '<span class="led-wrap led-'+rank+'"><span class="st-nm led-txt">'+esc2(f.name_th)+'</span></span>' : '<div class="st-nm">'+esc2(f.name_th)+'</div>';
+    html+='<div class="st-tr'+(rank<=3?' r'+rank:'')+'" data-url="'+furl(f)+'">'+
+      '<div class="st-rk">'+rank+'</div>'+
+      '<div class="st-fi"><img class="st-av" src="'+fImg(f)+'" loading="lazy" onerror="this.src=PH_IMG" alt="">'+
+      '<div style="min-width:0">'+nm+'<div class="st-sb">'+flag+' '+(f.country||'-')+(f.team?' · '+esc2(f.team):'')+' · '+(typeof ds!=='undefined'?ds(f.division):f.division)+'</div></div></div>'+
+      '<div class="st-mv">'+p.v+'<small>'+m.unit+'</small></div>'+
+    '</div>';
+  });
+  body.innerHTML=html;
+}
+
+/* ปักหมุดหานักมวยในกราฟ */
+function initHighlight(){
+  var inp=document.getElementById('hl-input'), drop=document.getElementById('hl-drop');
+  inp.addEventListener('input',function(){
+    var q=inp.value.trim().toLowerCase();
+    if(!q){ drop.classList.remove('open'); state.hl=null; if(state.view==='swarm')render(); return; }
+    var hits=FIGHTERS.filter(function(f){ return (f.name_th||'').toLowerCase().indexOf(q)!==-1||(f.name_en||'').toLowerCase().indexOf(q)!==-1; }).slice(0,7);
+    drop.innerHTML=hits.length?hits.map(function(f){
+      return '<a class="si" href="javascript:void(0)" data-id="'+f.id+'"><img src="'+fImg(f)+'" loading="lazy" onerror="this.src=PH_IMG" alt=""><div><div class="si-nm">'+esc2(f.name_th)+'</div><div class="si-mt">'+(typeof fl!=='undefined'?fl(f.country):'')+' '+(typeof ds!=='undefined'?ds(f.division):'')+'</div></div></a>';
+    }).join(''):'<div class="s-empty">ไม่พบ</div>';
+    drop.classList.add('open');
+  });
+  drop.addEventListener('click',function(e){
+    var a=e.target.closest('.si'); if(!a)return;
+    var id=a.getAttribute('data-id');
+    var f=FIGHTERS.find(function(x){return String(x.id)===String(id);});
+    state.hl=id; inp.value=f?f.name_th:''; drop.classList.remove('open');
+    render();
+    setTimeout(function(){
+      var d=document.querySelector('.dot.hl');
+      if(d){ d.scrollIntoView({block:'center',behavior:'smooth'}); showTipAt('plot','tip',+d.getAttribute('data-idx'),d); }
+    },80);
+  });
+  document.addEventListener('click',function(e){ if(!e.target.closest('.hl-wrap')) drop.classList.remove('open'); });
+}
+
+/* ═══════════════════════ TOOLTIP ใช้ร่วมกัน ═══════════════════════ */
+function tipHtml(f,valHtml,rankHtml){
+  var flag=typeof fl!=='undefined'?fl(f.country):'';
+  var inCmp=cmp.indexOf(String(f.id))!==-1;
+  return '<div class="tip-top"><img class="tip-av" src="'+fImg(f)+'" onerror="this.src=PH_IMG" alt="">'+
+    '<div><div class="tip-nm">'+esc2(f.name_th)+'</div><div class="tip-sub">'+flag+' '+(f.country||'')+(f.team?' · '+esc2(f.team):'')+'</div></div></div>'+
+    valHtml+rankHtml+
+    '<a class="tip-go" href="'+furl(f)+'">ดูโปรไฟล์ ›</a>'+
+    '<button class="tip-add'+(inCmp?' in':'')+'" data-cmp="'+f.id+'">'+(inCmp?'✓ อยู่ในลิสต์เทียบ':'+ เทียบ')+'</button>';
+}
+function positionTip(containerId,tipId,dot){
+  var plot=document.getElementById(containerId), tipEl=document.getElementById(tipId);
+  var pr=plot.getBoundingClientRect(), dr=dot.getBoundingClientRect();
+  var x=dr.left-pr.left+dr.width/2, y=dr.top-pr.top;
+  tipEl.classList.add('show');
+  var tw=tipEl.offsetWidth, th=tipEl.offsetHeight;
+  var left=Math.max(6,Math.min(x-tw/2, plot.clientWidth-tw-6));
+  var top=y-th-10; if(top<0) top=y+dr.height+10;
+  tipEl.style.left=left+'px'; tipEl.style.top=top+'px';
+}
+function showTipAt(containerId,tipId,idx,dot){
+  var p=window._pts[idx], m=window._m; if(!p) return;
+  var tipEl=document.getElementById(tipId);
+  tipEl.innerHTML=tipHtml(p.f,
+    '<div class="tip-val">'+p.v+'<small>'+m.unit+'</small></div>',
+    '<div class="tip-rank">อันดับ '+(idx+1)+' · '+(typeof ds!=='undefined'?ds(p.f.division):p.f.division)+'</div>');
+  positionTip(containerId,tipId,dot);
+}
+function hideTips(){ ['tip','sc-tip'].forEach(function(id){var t=document.getElementById(id);if(t)t.classList.remove('show');}); }
+
+/* ═══════════════════════ 3) SCATTER (กราฟ 2 แกน) ═══════════════════════ */
+function fillScatterSelects(){
+  var opts=METRICS.filter(metricAvailable).map(function(m){return '<option value="'+m.key+'">'+m.label+' ('+m.unit+')</option>';}).join('');
+  var sx=document.getElementById('sc-x'), sy=document.getElementById('sc-y');
+  sx.innerHTML=opts; sy.innerHTML=opts;
+  if(!metricAvailable(METRIC_BY[state.sx])) state.sx=METRICS.filter(metricAvailable)[0].key;
+  if(!metricAvailable(METRIC_BY[state.sy])){ var alt=METRICS.filter(function(m){return metricAvailable(m)&&m.key!==state.sx;})[0]; state.sy=alt?alt.key:state.sx; }
+  sx.value=state.sx; sy.value=state.sy;
+}
+function renderScatter(){
+  var mx=METRIC_BY[state.sx], my=METRIC_BY[state.sy];
+  document.getElementById('sc-title').textContent=mx.label+' × '+my.label;
+  var host=document.getElementById('scatter'); host.innerHTML='';
+  var pts=filtered().map(function(f){ return {f:f,x:mx.get(f),y:my.get(f)}; })
+    .filter(function(p){
+      if(p.x==null||isNaN(p.x)||p.y==null||isNaN(p.y)) return false;
+      if((mx.kind==='rec'||my.kind==='rec')&&p.f._total<=0) return false;
+      return true;
+    });
+  var truncated=false;
+  if(pts.length>MAXDOTS){
+    pts.sort(function(a,b){return b.f._s-a.f._s;});
+    pts=pts.slice(0,MAXDOTS); truncated=true;
+  }
+  document.getElementById('sc-sub').textContent=pts.length+' คน'+(truncated?' (แสดงเฉพาะคะแนนสูงสุด '+MAXDOTS+' คน)':'');
+  if(!pts.length){ host.innerHTML='<div class="st-empty">ไม่พบนักมวยที่มีข้อมูลครบทั้ง 2 แกน</div>'; document.getElementById('sc-legend').innerHTML=''; return; }
+  var cm=buildColorMap(pts,state.scColor);
+  renderLegend('sc-legend',cm.legend,state.scColor);
+
+  var W=host.clientWidth||700, H=host.clientHeight||460;
+  var mobile=W<560, size=mobile?24:30, r=size/2;
+  var padL=48,padR=r+12,padT=r+10,padB=42;
+  var xs=pts.map(function(p){return p.x;}), ys=pts.map(function(p){return p.y;});
+  var xmin=Math.min.apply(null,xs),xmax=Math.max.apply(null,xs);
+  var ymin=Math.min.apply(null,ys),ymax=Math.max.apply(null,ys);
+  var xspan=(xmax-xmin)||1, yspan=(ymax-ymin)||1;
+  function X(v){ return padL+(xmax===xmin?(W-padL-padR)/2:(v-xmin)/xspan*(W-padL-padR)); }
+  function Y(v){ return H-padB-(ymax===ymin?(H-padT-padB)/2:(v-ymin)/yspan*(H-padT-padB)); }
+
+  /* gridlines + ticks */
+  niceTicks(xmin,xmax,mobile?4:6).forEach(function(tv){
+    var x=X(tv);
+    var g=document.createElement('div'); g.className='sc-grid-x'; g.style.left=x+'px'; g.style.top=padT+'px'; g.style.height=(H-padT-padB)+'px'; host.appendChild(g);
+    var t=document.createElement('div'); t.className='sc-tick'; t.style.left=x+'px'; t.style.top=(H-padB+7)+'px'; t.style.transform='translateX(-50%)'; t.textContent=tv; host.appendChild(t);
+  });
+  niceTicks(ymin,ymax,mobile?4:6).forEach(function(tv){
+    var y=Y(tv);
+    var g=document.createElement('div'); g.className='sc-grid-y'; g.style.top=y+'px'; g.style.left=padL+'px'; g.style.width=(W-padL-padR)+'px'; host.appendChild(g);
+    var t=document.createElement('div'); t.className='sc-tick'; t.style.top=(y-6)+'px'; t.style.left='4px'; t.textContent=tv; host.appendChild(t);
+  });
+  /* median crosshair */
+  var medx=median(xs), medy=median(ys);
+  if(medx!=null&&xmax!==xmin){ var mv=document.createElement('div'); mv.className='sc-median v'; mv.style.left=X(medx)+'px'; mv.style.top=padT+'px'; mv.style.height=(H-padT-padB)+'px'; host.appendChild(mv); }
+  if(medy!=null&&ymax!==ymin){ var mh=document.createElement('div'); mh.className='sc-median h'; mh.style.top=Y(medy)+'px'; mh.style.left=padL+'px'; mh.style.width=(W-padL-padR)+'px'; host.appendChild(mh); }
+  /* axis labels */
+  var xl=document.createElement('div'); xl.className='sc-axis-lbl'; xl.style.left='50%'; xl.style.bottom='2px'; xl.style.transform='translateX(-50%)'; xl.textContent=mx.label+' ('+mx.unit+') →'; host.appendChild(xl);
+  var yl=document.createElement('div'); yl.className='sc-axis-lbl y'; yl.style.left='14px'; yl.style.top='58%'; yl.textContent='↑ '+my.label+' ('+my.unit+')'; host.appendChild(yl);
+
+  pts.forEach(function(p,idx){
+    var dot=document.createElement('div'); dot.className='dot';
+    dot.style.width=size+'px'; dot.style.height=size+'px';
+    dot.style.left=X(p.x)+'px'; dot.style.top=Y(p.y)+'px';
+    dot.setAttribute('data-sidx',idx);
+    var col=cm.map[catOf(p.f,state.scColor)]||PAL[PAL.length-1];
+    dot.innerHTML='<img class="av" src="'+fImg(p.f)+'" loading="lazy" onerror="this.src=PH_IMG" alt="" style="--cat:'+col+'">';
+    host.appendChild(dot);
+  });
+  window._spts=pts; window._smx=mx; window._smy=my;
+}
+function showScTip(idx,dot){
+  var p=window._spts[idx]; if(!p)return;
+  var mx=window._smx,my=window._smy;
+  var tipEl=document.getElementById('sc-tip');
+  tipEl.innerHTML=tipHtml(p.f,
+    '<div class="tip-val" style="font-size:16px">'+mx.label+' '+p.x+'<small>'+mx.unit+'</small></div>'+
+    '<div class="tip-val" style="font-size:16px;margin-top:2px">'+my.label+' '+p.y+'<small>'+my.unit+'</small></div>',
+    '<div class="tip-rank">'+(typeof ds!=='undefined'?ds(p.f.division):p.f.division)+'</div>');
+  positionTip('scatter','sc-tip',dot);
+}
+
+/* ═══════════════════════ 4) BOARD (ตารางรวม) ═══════════════════════ */
+var LB_COLS=[
+  {key:'rank',lbl:'#',cls:'c'},
+  {key:'fighter',lbl:'นักมวย'},
+  {key:'div',lbl:'รุ่น'},
+  {key:'age',lbl:'อายุ',cls:'c',sort:true,get:function(f){return num(f.age);}},
+  {key:'height_cm',lbl:'สูง',cls:'c',sort:true,get:function(f){return num(f.height_cm);}},
+  {key:'_w',lbl:'W',cls:'c',sort:true,get:function(f){return f._w;}},
+  {key:'_l',lbl:'L',cls:'c',sort:true,get:function(f){return f._l;}},
+  {key:'_wr',lbl:'อัตราชนะ',sort:true,get:function(f){return f._wr;}},
+  {key:'_koCount',lbl:'KO',cls:'c',sort:true,get:function(f){return f._koCount;}},
+  {key:'_streak',lbl:'รวด',cls:'c',sort:true,get:function(f){return f._streak;}},
+  {key:'_s',lbl:'PTS',cls:'r',sort:true,get:function(f){return f._s;}},
+  {key:'add',lbl:''}
+];
+function lbData(){
+  var q=state.q.trim().toLowerCase();
+  var list=filtered().filter(function(f){
+    if(!q) return true;
+    return (f.name_th||'').toLowerCase().indexOf(q)!==-1||(f.name_en||'').toLowerCase().indexOf(q)!==-1||(f.team||'').toLowerCase().indexOf(q)!==-1;
+  });
+  var col=LB_COLS.find(function(c){return c.key===state.sortKey;});
+  var get=col&&col.get?col.get:function(f){return f._s;};
+  list.sort(function(a,b){
+    var va=get(a),vb=get(b);
+    if(va==null&&vb==null)return 0; if(va==null)return 1; if(vb==null)return -1;
+    return state.sortDir==='desc'?(vb-va):(va-vb);
+  });
+  return list;
+}
+function renderBoardHead(){
+  document.getElementById('lb-head').innerHTML=LB_COLS.map(function(c){
+    var on=c.key===state.sortKey;
+    var arr=on?('<span class="arr">'+(state.sortDir==='desc'?'▼':'▲')+'</span>'):'';
+    return '<div class="lb-th '+(c.cls||'')+(c.sort?' sortable':'')+(on?' on':'')+'" data-k="'+c.key+'">'+c.lbl+arr+'</div>';
+  }).join('');
+}
+function renderBoard(){
+  renderBoardHead();
+  var list=lbData();
+  var body=document.getElementById('lb-body');
+  if(!list.length){ body.innerHTML='<div class="st-empty">ไม่พบนักมวยที่ตรงกับเงื่อนไข</div>'; document.getElementById('lb-more').classList.add('hidden'); return; }
+  var show=list.slice(0,lbShow);
+  var html='';
+  show.forEach(function(f,i){
+    var flag=typeof fl!=='undefined'?fl(f.country):'';
+    var inCmp=cmp.indexOf(String(f.id))!==-1;
+    html+='<div class="lb-row" data-url="'+furl(f)+'">'+
+      '<div class="lb-td c" style="font-family:var(--serif);font-weight:800;color:var(--tx-3)">'+(i+1)+'</div>'+
+      '<div class="lb-td"><div class="mt-fighter"><img class="mt-av" src="'+fImg(f)+'" loading="lazy" onerror="this.src=PH_IMG" alt="">'+
+        '<div style="min-width:0"><div class="mt-name">'+esc2(f.name_th)+'</div><div class="mt-sub">'+flag+' '+(f.country||'-')+(f.team?' · '+esc2(f.team):'')+'</div></div></div></div>'+
+      '<div class="lb-td"><span class="div-pill">'+(typeof ds!=='undefined'?ds(f.division):esc2(f.division||'-'))+'</span></div>'+
+      '<div class="lb-td c">'+(num(f.age)!=null?f.age:'—')+'</div>'+
+      '<div class="lb-td c">'+(num(f.height_cm)!=null?f.height_cm:'—')+'</div>'+
+      '<div class="lb-td c txt-w">'+f._w+'</div>'+
+      '<div class="lb-td c txt-l">'+f._l+'</div>'+
+      '<div class="lb-td"><div class="wr-inline"><div class="wr-bar-sm"><div class="wr-fill-sm" style="width:'+f._wr+'%"></div></div><span class="wr-num">'+f._wr+'%</span></div></div>'+
+      '<div class="lb-td c txt-ko">'+f._koCount+'</div>'+
+      '<div class="lb-td c" style="font-family:var(--serif);font-weight:700;color:'+(f._streak>=3?'var(--red)':'var(--tx-2)')+'">'+(f._streak||'—')+'</div>'+
+      '<div class="lb-td r"><span class="score-big" style="font-size:19px">'+f._s+'</span></div>'+
+      '<div class="lb-td c"><button class="lb-add'+(inCmp?' in':'')+'" data-cmp="'+f.id+'" title="เพิ่มไปเปรียบเทียบ" aria-label="เพิ่มไปเปรียบเทียบ">'+(inCmp?'✓':'+')+'</button></div>'+
+    '</div>';
+  });
+  body.innerHTML=html;
+  var more=document.getElementById('lb-more');
+  if(list.length>lbShow){ more.classList.remove('hidden'); more.textContent='แสดงเพิ่มอีก ('+(list.length-lbShow)+' คนที่เหลือ)'; }
+  else more.classList.add('hidden');
+}
+function exportCSV(){
+  var list=lbData();
+  var head=['อันดับ','ชื่อ (ไทย)','ชื่อ (อังกฤษ)','ประเทศ','ค่าย','รุ่น','อายุ','ส่วนสูง (ซม.)','น้ำหนัก (กก.)','ชนะ','แพ้','ไฟต์','อัตราชนะ %','KO','อัตรา KO %','ชนะรวด','คะแนน Boxfan'];
+  var rows=list.map(function(f,i){
+    return [i+1,f.name_th||'',f.name_en||'',f.country||'',f.team||'',f.division||'',f.age||'',f.height_cm||'',f.weight_kg||'',f._w,f._l,f._total,f._wr,f._koCount,f._ko,f._streak,f._s];
+  });
+  var csv='\ufeff'+[head].concat(rows).map(function(r){
+    return r.map(function(c){ c=String(c==null?'':c); return /[",\n]/.test(c)?('"'+c.replace(/"/g,'""')+'"'):c; }).join(',');
+  }).join('\n');
+  var blob=new Blob([csv],{type:'text/csv;charset=utf-8'});
+  var a=document.createElement('a');
+  a.href=URL.createObjectURL(blob);
+  a.download='boxfan-stats.csv';
+  document.body.appendChild(a); a.click();
+  setTimeout(function(){URL.revokeObjectURL(a.href);a.remove();},300);
+}
+
+/* ═══════════════════════ 5) GROUPS (แยกกลุ่ม) ═══════════════════════ */
+var GRP_METRIC_META={
+  n:{lbl:'คน',get:function(g){return g.n;}},
+  wins:{lbl:'ชนะ',get:function(g){return g.wins;}},
+  ko:{lbl:'KO',get:function(g){return g.ko;}},
+  avgS:{lbl:'pts เฉลี่ย',get:function(g){return g.n?Math.round(g.sumS/g.n*10)/10:0;}},
+  wr:{lbl:'% เฉลี่ย',get:function(g){return (g.wins+g.losses)>0?Math.round(g.wins/(g.wins+g.losses)*100):0;}}
+};
+function renderGroups(){
+  var L=filtered(), by=state.groupBy;
+  var groups={};
+  L.forEach(function(f){
+    var k = by==='div' ? (f._divKey||'__none') : by==='country' ? (f.country||'__none') : (f.team||'__none');
+    if(!groups[k]) groups[k]={key:k,n:0,wins:0,losses:0,ko:0,sumS:0,top:null};
+    var g=groups[k];
+    g.n++; g.wins+=f._w; g.losses+=f._l; g.ko+=f._koCount; g.sumS+=f._s;
+    if(!g.top||f._s>g.top._s) g.top=f;
+  });
+  var meta=GRP_METRIC_META[state.groupMetric]||GRP_METRIC_META.n;
+  var arr=Object.keys(groups).map(function(k){return groups[k];})
+    .filter(function(g){return g.key!=='__none'||by==='team';});
+  arr.sort(function(a,b){return meta.get(b)-meta.get(a);});
+  if(by==='team') arr=arr.filter(function(g){return g.key!=='__none';}).slice(0,20);
+  var maxV=arr.length?Math.max.apply(null,arr.map(meta.get)):1; if(!maxV)maxV=1;
+  var host=document.getElementById('grp-list');
+  if(!arr.length){ host.innerHTML='<div class="st-empty">ไม่มีข้อมูลกลุ่มนี้</div>'; return; }
+  host.innerHTML=arr.map(function(g,i){
+    var name = by==='div' ? (typeof divLabel!=='undefined'?divLabel(g.key):g.key)
+             : by==='country' ? ((typeof fl!=='undefined'?fl(g.key)+' ':'')+g.key)
+             : g.key;
+    var wr=(g.wins+g.losses)>0?Math.round(g.wins/(g.wins+g.losses)*100):0;
+    var v=meta.get(g);
+    return '<div class="grp'+(i<3?' g'+(i+1):'')+'" data-g="'+encodeURIComponent(g.key)+'">'+
+      '<div class="grp-rk">'+(i+1)+'</div>'+
+      '<div style="min-width:0"><div class="grp-name">'+esc2(name)+'</div>'+
+        '<div class="grp-meta">'+g.n+' คน · ชนะ '+g.wins+' · KO '+g.ko+' · อัตราชนะ '+wr+'%'+(g.top?' · เบอร์ 1: '+esc2(g.top.name_th):'')+'</div></div>'+
+      '<div class="grp-bar"><div class="grp-fill" style="width:'+Math.max(2,Math.round(v/maxV*100))+'%"></div></div>'+
+      '<div class="grp-val">'+v+'<small>'+meta.lbl+'</small></div>'+
+    '</div>';
+  }).join('');
+}
+
+/* ═══════════════════════ SMART SEARCH (ตีความคำถามภาษาไทย) ═══════════════════════ */
+var STAT_SYN={
+  '_s'      :{syn:['คะแนน','แต้ม','pts','pt','point','score','บ็อกซ์แฟน','boxfan'], preferred:'desc'},
+  '_w'      :{syn:['ชนะ','ชัย','win','wins','วิน'], preferred:'desc'},
+  '_l'      :{syn:['แพ้','พ่าย','loss','losses','ลูส'], preferred:'desc'},
+  '_wr'     :{syn:['อัตราชนะ','เปอร์เซ็นต์ชนะ','%ชนะ','winrate','winratio','อัตรา'], preferred:'desc'},
+  '_koCount':{syn:['ko','น็อค','น็อก','น็อคเอาท์','น็อคเอ้าท์','knockout','จำนวนko','จำนวนน็อค'], preferred:'desc'},
+  '_ko'     :{syn:['อัตราko','อัตราน็อค','%ko'], preferred:'desc'},
+  '_total'  :{syn:['ไฟต์','จำนวนไฟต์','fight','fights','matches','ชกไป','ชกแล้ว'], preferred:'desc'},
+  '_streak' :{syn:['ชนะรวด','สตรีค','streak','ชนะติดต่อ','ชนะติดต่อกัน','รวด'], preferred:'desc'},
+  'height_cm':{syn:['สูง','ส่วนสูง','ความสูง','เตี้ย','ต่ำ','สั้น','height','tall','short'], preferred:'desc'},
+  'weight_kg':{syn:['น้ำหนัก','หนัก','เบา','weight','heavy','light'], preferred:'desc'},
+  'age'     :{syn:['อายุ','แก่','อาวุโส','เด็ก','อายุน้อย','young','old','age'], preferred:'desc'}
+};
+/* คำใบ้ทิศทาง (เจอก่อนคำถัดมาชนะ) */
+var DESC_HINTS=['เยอะสุด','เยอะที่สุด','มากสุด','มากที่สุด','สูงสุด','สูงที่สุด','ที่สุด','สุด','ยาวสุด','ยาวที่สุด','top','most','max','highest','tallest','biggest','เก่งสุด'];
+var ASC_HINTS=['เตี้ยสุด','เตี้ยที่สุด','น้อยสุด','น้อยที่สุด','ต่ำสุด','ต่ำที่สุด','สั้นสุด','สั้นที่สุด','เบาสุด','เบาที่สุด','เด็กสุด','อ่อนสุด','least','min','shortest','smallest','lowest','youngest','lightest'];
+/* คำที่ implies ทิศทาง asc โดยตรง (ไม่ต้องมี "สุด") */
+var ASC_METRIC_HINTS={height_cm:['เตี้ย','สั้น'], weight_kg:['เบา'], age:['เด็ก','อ่อน','young'], _l:[], _w:[], _s:[], _wr:[], _ko:[], _koCount:[], _total:[], _streak:[]};
+
+function _msNorm(s){ return String(s||'').toLowerCase().replace(/\s+/g,''); }
+
+function parseStatQuery(qRaw){
+  var q=_msNorm(qRaw); if(!q) return null;
+  /* หาทิศทาง */
+  var dir=null;
+  for(var i=0;i<ASC_HINTS.length;i++){ if(q.indexOf(_msNorm(ASC_HINTS[i]))!==-1){ dir='asc'; break; } }
+  if(!dir) for(var j=0;j<DESC_HINTS.length;j++){ if(q.indexOf(_msNorm(DESC_HINTS[j]))!==-1){ dir='desc'; break; } }
+
+  /* หา metric (คะแนนคำที่ยาวกว่าชนะ) */
+  var scores={};
+  Object.keys(STAT_SYN).forEach(function(mk){
+    STAT_SYN[mk].syn.forEach(function(s){
+      var n=_msNorm(s);
+      if(q.indexOf(n)!==-1) scores[mk]=Math.max(scores[mk]||0, n.length);
+    });
+  });
+  var best=null, bestScore=0;
+  Object.keys(scores).forEach(function(k){ if(scores[k]>bestScore){bestScore=scores[k]; best=k;} });
+  if(!best) return null;
+
+  /* implied asc metric */
+  if(!dir){
+    var ah=ASC_METRIC_HINTS[best]||[];
+    for(var k=0;k<ah.length;k++){ if(q.indexOf(_msNorm(ah[k]))!==-1){ dir='asc'; break; } }
+  }
+  if(!dir) dir=STAT_SYN[best].preferred||'desc';
+
+  /* detect filters (country, division) */
+  var filters={};
+  if(typeof FL!=='undefined'){
+    Object.keys(FL).forEach(function(c){
+      if(q.indexOf(_msNorm(c))!==-1) filters.country=c;
+    });
+  }
+  if(typeof DIV_MAP!=='undefined'){
+    DIV_MAP.forEach(function(d){
+      if(q.indexOf(_msNorm(d.kw))!==-1 || q.indexOf(_msNorm(d.label))!==-1) filters.division=d.key;
+    });
+  }
+  return {metric:best, dir:dir, filters:filters};
+}
+
+/* คำแนะนำเมื่อพิมพ์ */
+function msRenderDrop(qRaw){
+  var drop=document.getElementById('ms-drop');
+  var q=qRaw.trim();
+  if(!q){ drop.classList.remove('open'); drop.innerHTML=''; return; }
+
+  var parsed=parseStatQuery(q);
+  var fighters=(typeof FIGHTERS!=='undefined'?FIGHTERS:[]).filter(function(f){
+    return (f.name_th||'').toLowerCase().indexOf(q.toLowerCase())!==-1
+        || (f.name_en||'').toLowerCase().indexOf(q.toLowerCase())!==-1;
+  }).slice(0,5);
+
+  var html='';
+  if(parsed){
+    var m=METRIC_BY[parsed.metric]; if(m){
+      /* preview 3 อันดับตาม parsed */
+      var savedDiv=state.division, savedCountry=state.country;
+      if(parsed.filters.division) state.division=parsed.filters.division;
+      if(parsed.filters.country)  state.country =parsed.filters.country;
+      var res=metricPoints(parsed.metric, parsed.dir);
+      state.division=savedDiv; state.country=savedCountry;
+      var top3=res.pts.slice(0,3);
+
+      var dirLbl = parsed.dir==='desc' ? 'มากสุด' : 'น้อยสุด';
+      /* กรณีพิเศษ: height/age/weight ใช้ "สูง/เตี้ย" ฯลฯ ให้เข้าใจง่าย */
+      if(parsed.metric==='height_cm') dirLbl = parsed.dir==='desc' ? 'สูงที่สุด' : 'เตี้ยที่สุด';
+      else if(parsed.metric==='age')  dirLbl = parsed.dir==='desc' ? 'อายุมากสุด' : 'อายุน้อยสุด';
+      else if(parsed.metric==='weight_kg') dirLbl = parsed.dir==='desc' ? 'หนักที่สุด' : 'เบาที่สุด';
+      else if(parsed.metric==='_l')   dirLbl = parsed.dir==='desc' ? 'มากสุด' : 'น้อยสุด';
+
+      var filterChips='';
+      if(parsed.filters.division){
+        var divLb=(typeof divLabel!=='undefined'?divLabel(parsed.filters.division):parsed.filters.division);
+        filterChips+='<span class="ms-filter-hint">🏋️ '+esc2(divLb)+'</span>';
+      }
+      if(parsed.filters.country){
+        var flag=(typeof fl!=='undefined'?fl(parsed.filters.country):'🏳');
+        filterChips+='<span class="ms-filter-hint">'+flag+' '+esc2(parsed.filters.country)+'</span>';
+      }
+
+      html+='<div class="ms-sec"><div class="ms-sec-lbl">✨ ตีความคำถาม</div>';
+      html+='<div class="ms-interp hl" data-action="apply">';
+      html+='<div class="ms-interp-hd">';
+      html+='<span class="ms-interp-icon"><svg viewBox="0 0 24 24"><use href="#'+m.icon+'"/></svg></span>';
+      html+='<div class="ms-interp-txt"><div class="ms-interp-title">'+esc2(m.label)+' '+dirLbl+filterChips+'</div>';
+      html+='<div class="ms-interp-sub">พบ <b>'+res.pts.length+'</b> คน · กด Enter หรือคลิกเพื่อดูอันดับเต็ม</div></div>';
+      html+='<span class="ms-interp-cta">↵ ดูอันดับเต็ม</span></div>';
+      if(top3.length){
+        html+='<div class="ms-preview">';
+        top3.forEach(function(p,i){
+          html+='<div class="ms-prev-row"><span class="ms-prev-rk">'+(i+1)+'</span>'+
+                '<img class="ms-prev-av" src="'+fImg(p.f)+'" onerror="this.src=PH_IMG" alt="" loading="lazy">'+
+                '<span class="ms-prev-nm">'+esc2(p.f.name_th)+'</span>'+
+                '<span class="ms-prev-val">'+fmtN(p.v)+'<small>'+esc2(m.unit)+'</small></span></div>';
+        });
+        html+='</div>';
+      }
+      html+='</div></div>';
+    }
+  }
+  if(fighters.length){
+    html+='<div class="ms-sec"><div class="ms-sec-lbl">🥊 นักมวย</div>';
+    fighters.forEach(function(f){
+      var flag=typeof fl!=='undefined'?fl(f.country):'';
+      var div=typeof ds!=='undefined'?ds(f.division):(f.division||'');
+      html+='<a class="ms-fighter" href="'+furl(f)+'"><img src="'+fImg(f)+'" onerror="this.src=PH_IMG" alt="" loading="lazy">'+
+            '<div style="min-width:0"><div class="ms-fighter-nm">'+esc2(f.name_th)+'</div>'+
+            '<div class="ms-fighter-mt">'+flag+' '+esc2(f.country||'-')+' · '+esc2(div)+' · '+f._w+'W-'+f._l+'L</div></div></a>';
+    });
+    html+='</div>';
+  }
+  if(!parsed && !fighters.length){
+    html='<div class="ms-empty"><b>ไม่เข้าใจคำถามนี้</b>ลอง: "นักมวยสูงสุด", "ชนะเยอะสุดในเฮฟวี", "KO มากสุดของไทย"</div>';
+  }
+  drop.innerHTML=html;
+  drop.classList.add('open');
+}
+
+function msApplyQuery(qRaw){
+  var parsed=parseStatQuery(qRaw);
+  if(!parsed) return false;
+  /* apply metric + dir + filters */
+  state.metric=parsed.metric;
+  state.dir=parsed.dir;
+  if(parsed.filters.division){ state.division=parsed.filters.division; if(comboDiv) comboDiv.setValue(state.division); }
+  if(parsed.filters.country){  state.country =parsed.filters.country;  if(comboCountry) comboCountry.setValue(state.country); }
+  state.view='swarm';
+  syncSeg('seg-dir','dir',state.dir);
+  render();
+  window.scrollTo({top:0,behavior:'smooth'});
+  return true;
+}
+
+function clearMegaSearch(){
+  var inp=document.getElementById('ms-q');
+  inp.value=''; inp.focus();
+  document.getElementById('ms-drop').classList.remove('open');
+  document.getElementById('ms-clear').style.display='none';
+}
+
+function initMegaSearch(){
+  var inp=document.getElementById('ms-q');
+  var drop=document.getElementById('ms-drop');
+  var clr=document.getElementById('ms-clear');
+  if(!inp) return;
+  var t;
+  inp.addEventListener('input',function(){
+    clr.style.display=inp.value?'inline-flex':'none';
+    clearTimeout(t); t=setTimeout(function(){ msRenderDrop(inp.value); },100);
+  });
+  inp.addEventListener('focus',function(){ if(inp.value) msRenderDrop(inp.value); });
+  inp.addEventListener('keydown',function(e){
+    if(e.key==='Enter'){ e.preventDefault();
+      if(msApplyQuery(inp.value)){ drop.classList.remove('open'); inp.blur(); }
+    } else if(e.key==='Escape'){ drop.classList.remove('open'); inp.blur(); }
+  });
+  drop.addEventListener('click',function(e){
+    var interp=e.target.closest('.ms-interp'); if(interp){ if(msApplyQuery(inp.value)) drop.classList.remove('open'); return; }
+    /* .ms-fighter link ปล่อยให้เบราว์เซอร์นำทางเอง */
+  });
+  /* click hints */
+  document.querySelectorAll('.ms-chip').forEach(function(b){
+    b.addEventListener('click',function(){
+      var q=b.getAttribute('data-q');
+      inp.value=q; clr.style.display='inline-flex';
+      msApplyQuery(q);
+      drop.classList.remove('open');
+    });
+  });
+  document.addEventListener('click',function(e){
+    if(!e.target.closest('.ms-wrap')) drop.classList.remove('open');
+  });
+}
+
+/* ═══════════════════════ 6) MAP (แผนที่โลก) ═══════════════════════ */
+/* Country name (Thai) → ISO 3166-1 numeric code (matches world-atlas topojson) */
+var COUNTRY_ISO={
+  'ไทย':'764','ญี่ปุ่น':'392','เกาหลีใต้':'410','จีน':'156','รัสเซีย':'643',
+  'บราซิล':'076','เวเนซุเอลา':'862','ฝรั่งเศส':'250','ฝรั่งเศส/ไทย':'250',
+  'สหราชอาณาจักร':'826','โมร็อกโก':'504','เวียดนาม':'704','เมียนมา':'104','ตุรกี':'792',
+  'สหรัฐอเมริกา':'840','แคนาดา':'124','เม็กซิโก':'484','อาร์เจนตินา':'032',
+  'เยอรมนี':'276','สเปน':'724','อิตาลี':'380','เนเธอร์แลนด์':'528','โปแลนด์':'616',
+  'ยูเครน':'804','อียิปต์':'818','แอฟริกาใต้':'710','ไนจีเรีย':'566','เคนยา':'404',
+  'อินเดีย':'356','ปากีสถาน':'586','บังกลาเทศ':'050','อินโดนีเซีย':'360',
+  'ฟิลิปปินส์':'608','มาเลเซีย':'458','สิงคโปร์':'702','กัมพูชา':'116','ลาว':'418',
+  'ออสเตรเลีย':'036','นิวซีแลนด์':'554','คาซัคสถาน':'398','อุซเบกิสถาน':'860',
+  'อิหร่าน':'364','ซาอุดีอาระเบีย':'682','อิสราเอล':'376','จอร์เจีย':'268',
+  'อาเซอร์ไบจาน':'031','อาร์เมเนีย':'051'
+};
+var _mapState={
+  loaded:false,loading:false,d3:null,topojson:null,world:null,countries:null,
+  svg:null,gRoot:null,gCountries:null,gOverlay:null,zoom:null,path:null,W:1180,H:560,
+  loadError:false
+};
+
+function _mapLoadScript(src){
+  return new Promise(function(res,rej){
+    var s=document.createElement('script'); s.src=src;
+    s.onload=res; s.onerror=function(){rej(new Error('load fail: '+src));};
+    document.head.appendChild(s);
+  });
+}
+function _mapLoad(){
+  if(_mapState.loaded) return Promise.resolve();
+  if(_mapState.loading) return _mapState.loading;
+  _mapState.loading = Promise.all([
+    (typeof d3!=='undefined')?Promise.resolve():_mapLoadScript('https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js'),
+    (typeof topojson!=='undefined')?Promise.resolve():_mapLoadScript('https://cdn.jsdelivr.net/npm/topojson-client@3/dist/topojson-client.min.js')
+  ]).then(function(){
+    return fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json').then(function(r){return r.json();});
+  }).then(function(topo){
+    _mapState.world=topo;
+    _mapState.countries=topojson.feature(topo, topo.objects.countries).features;
+    _mapState.loaded=true;
+  }).catch(function(e){
+    _mapState.loadError=true;
+    throw e;
+  });
+  return _mapState.loading;
+}
+function _mapBuildStats(){
+  /* Aggregate filtered fighters by country → { isoCode: {name, flag, n, top, avgS, wr, fighters[]} } */
+  var L=filtered();
+  var byC={};
+  L.forEach(function(f){
+    if(!f.country) return;
+    var iso=COUNTRY_ISO[f.country]; if(!iso) return;
+    if(!byC[iso]) byC[iso]={name:f.country,flag:(typeof fl!=='undefined'?fl(f.country):''),n:0,sumS:0,wins:0,losses:0,top:null,fighters:[]};
+    var g=byC[iso];
+    g.n++; g.sumS+=f._s; g.wins+=f._w; g.losses+=f._l;
+    g.fighters.push(f);
+    if(!g.top||f._s>g.top._s) g.top=f;
+  });
+  Object.keys(byC).forEach(function(k){
+    var g=byC[k];
+    g.avgS=g.n?Math.round(g.sumS/g.n*10)/10:0;
+    g.wr=(g.wins+g.losses)>0?Math.round(g.wins/(g.wins+g.losses)*100):0;
+    /* sort fighters by score desc for dot mode (deterministic) */
+    g.fighters.sort(function(a,b){return b._s-a._s;});
+  });
+  return byC;
+}
+function _mapInitSvg(){
+  var host=document.getElementById('mp-wrap');
+  var loading=document.getElementById('mp-loading'); if(loading) loading.remove();
+  /* clear old */
+  Array.prototype.slice.call(host.querySelectorAll('svg,.mp-zoom,.mp-tip,.mp-err')).forEach(function(n){n.remove();});
+  var W=_mapState.W, H=_mapState.H;
+  var svgEl=document.createElementNS('http://www.w3.org/2000/svg','svg');
+  svgEl.setAttribute('class','mp-svg');
+  svgEl.setAttribute('viewBox','0 0 '+W+' '+H);
+  svgEl.setAttribute('preserveAspectRatio','xMidYMid meet');
+  host.appendChild(svgEl);
+  var svg=_mapState.d3.select(svgEl);
+  svg.append('rect').attr('class','mp-ocean').attr('width',W).attr('height',H);
+  var gRoot=svg.append('g').attr('class','mp-groot');
+  var gCountries=gRoot.append('g').attr('class','mp-gcountries');
+  var gOverlay=gRoot.append('g').attr('class','mp-goverlay');
+
+  var zoom=_mapState.d3.zoom().scaleExtent([1,10]).on('zoom',function(e){
+    gRoot.attr('transform', e.transform);
+    gCountries.selectAll('.mp-country').attr('stroke-width', .5/e.transform.k);
+    gOverlay.selectAll('.mp-bubble').attr('stroke-width', 1.2/e.transform.k);
+    gOverlay.selectAll('.mp-fdot circle').attr('stroke-width', 1/e.transform.k);
+  });
+  svg.call(zoom);
+
+  /* zoom buttons */
+  var zc=document.createElement('div'); zc.className='mp-zoom';
+  zc.innerHTML='<button data-z="in" title="ซูมเข้า">+</button><button data-z="out" title="ซูมออก">−</button><button data-z="reset" title="รีเซ็ต" style="font-size:12px">⟲</button>';
+  host.appendChild(zc);
+  zc.addEventListener('click',function(e){
+    var b=e.target.closest('button'); if(!b)return;
+    var a=b.getAttribute('data-z');
+    if(a==='in')       svg.transition().duration(220).call(zoom.scaleBy, 1.6);
+    else if(a==='out') svg.transition().duration(220).call(zoom.scaleBy, 1/1.6);
+    else               svg.transition().duration(380).call(zoom.transform, _mapState.d3.zoomIdentity);
+  });
+
+  /* tip */
+  var tip=document.createElement('div'); tip.className='mp-tip'; tip.id='mp-tip'; host.appendChild(tip);
+
+  _mapState.svg=svg; _mapState.gRoot=gRoot; _mapState.gCountries=gCountries; _mapState.gOverlay=gOverlay; _mapState.zoom=zoom;
+}
+function _mapShowTip(e,c,fighterIdx){
+  var tip=document.getElementById('mp-tip'); if(!tip) return;
+  var top=c.top?esc2(c.top.name_th):'—';
+  var html='<div class="mp-tip-hd"><span class="mp-tip-flag">'+c.flag+'</span><span class="mp-tip-nm">'+esc2(c.name)+'</span></div>';
+  if(fighterIdx){
+    var f=c.fighters[fighterIdx-1];
+    if(f){ html+='<div class="mp-tip-row"><span>นักมวย</span><b>'+esc2(f.name_th)+'</b></div>'; }
+    html+='<div class="mp-tip-row"><span>อันดับในประเทศ</span><b>#'+fighterIdx+' / '+c.n+'</b></div>';
+  }
+  html+='<div class="mp-tip-row"><span>นักมวยทั้งหมด</span><b>'+c.n+' คน</b></div>'+
+        '<div class="mp-tip-row"><span>pts เฉลี่ย</span><b>'+c.avgS+'</b></div>'+
+        '<div class="mp-tip-row"><span>อัตราชนะรวม</span><b>'+c.wr+'%</b></div>'+
+        '<div class="mp-tip-top">🥇 อันดับ 1: <b>'+top+'</b></div>';
+  tip.innerHTML=html;
+  tip.classList.add('show');
+  _mapMoveTip(e);
+}
+function _mapMoveTip(e){
+  var tip=document.getElementById('mp-tip'); if(!tip) return;
+  var host=document.getElementById('mp-wrap'); var wr=host.getBoundingClientRect();
+  var x=e.clientX-wr.left, y=e.clientY-wr.top;
+  var tw=tip.offsetWidth, th=tip.offsetHeight;
+  var left=x+14; if(left+tw>wr.width-8) left=x-tw-14;
+  var top=y+14;  if(top+th>wr.height-8) top=y-th-14;
+  if(top<4) top=4; if(left<4) left=4;
+  tip.style.left=left+'px'; tip.style.top=top+'px';
+}
+function _mapHideTip(){ var t=document.getElementById('mp-tip'); if(t) t.classList.remove('show'); }
+
+function _mapDraw(){
+  var d3=_mapState.d3, W=_mapState.W, H=_mapState.H;
+  var projection = d3.geoNaturalEarth1().fitSize([W,H], {type:'Sphere'});
+  var path = d3.geoPath(projection);
+  _mapState.path=path;
+
+  var byC=_mapBuildStats();
+  var counts=Object.values(byC).map(function(c){return c.n;});
+  var maxN=counts.length?Math.max.apply(null,counts):1;
+  function heatClass(n){
+    if(!n) return '';
+    var t=n/maxN;
+    return t>.8?'h5':t>.55?'h4':t>.35?'h3':t>.15?'h2':'h1';
+  }
+
+  /* update sub */
+  var totalCountries=Object.keys(byC).length;
+  var totalFighters=counts.reduce(function(s,x){return s+x;},0);
+  document.getElementById('mp-sub').textContent=totalCountries+' ประเทศ · '+totalFighters+' นักมวย · ชี้เพื่อดูรายละเอียด · คลิกเพื่อกรอง';
+
+  /* countries layer */
+  var sel=_mapState.gCountries.selectAll('path.mp-country').data(_mapState.countries, function(d){return d.id;});
+  sel.exit().remove();
+  var entered=sel.enter().append('path').attr('class','mp-country');
+  var all=entered.merge(sel);
+  all.attr('d', path)
+     .attr('class', function(d){
+       var data=byC[d.id]||byC[String(+d.id)];
+       var cls='mp-country';
+       if(state.mapMode==='heat' && data) cls+=' has-data '+heatClass(data.n);
+       else if(data) cls+=' has-data';
+       if(data && state.country===data.name) cls+=' sel';
+       return cls;
+     })
+     .on('mouseover', function(e,d){
+       var data=byC[d.id]||byC[String(+d.id)]; if(!data) return;
+       d3.select(this).classed('hover', true);
+       _mapShowTip(e, data);
+     })
+     .on('mousemove', function(e,d){ if(byC[d.id]||byC[String(+d.id)]) _mapMoveTip(e); })
+     .on('mouseout', function(e,d){ d3.select(this).classed('hover', false); _mapHideTip(); })
+     .on('click', function(e,d){
+       var data=byC[d.id]||byC[String(+d.id)]; if(!data) return;
+       _mapFilterCountry(data.name);
+     });
+
+  /* overlay */
+  _mapState.gOverlay.selectAll('*').remove();
+
+  if(state.mapMode==='bubble'){
+    var maxR=32, minR=8;
+    Object.keys(byC).forEach(function(iso){
+      var c=byC[iso];
+      var feat=_mapState.countries.find(function(f){return f.id===iso||+f.id===+iso;});
+      if(!feat) return;
+      var centroid=path.centroid(feat); if(isNaN(centroid[0])) return;
+      var r=minR+Math.sqrt(c.n/maxN)*(maxR-minR);
+      var g=_mapState.gOverlay.append('g').style('cursor','pointer')
+        .on('mouseover',function(e){_mapShowTip(e,c);})
+        .on('mousemove',_mapMoveTip)
+        .on('mouseout',_mapHideTip)
+        .on('click',function(){_mapFilterCountry(c.name);});
+      g.append('circle').attr('class','mp-bubble').attr('cx',centroid[0]).attr('cy',centroid[1]).attr('r',r);
+      g.append('text').attr('class','mp-bubble-count').attr('x',centroid[0]).attr('y',centroid[1]).text(c.n);
+    });
+  }
+  if(state.mapMode==='dot'){
+    Object.keys(byC).forEach(function(iso){
+      var c=byC[iso];
+      var feat=_mapState.countries.find(function(f){return f.id===iso||+f.id===+iso;});
+      if(!feat) return;
+      var centroid=path.centroid(feat); if(isNaN(centroid[0])) return;
+      for(var i=0;i<c.n;i++){
+        var angle=(i/Math.max(c.n,6))*Math.PI*2 + i*.4;
+        var radius=6 + Math.floor(i/8)*7;
+        var dx=Math.cos(angle)*radius, dy=Math.sin(angle)*radius;
+        (function(idx){
+          var g=_mapState.gOverlay.append('g').attr('class','mp-fdot'+(idx===0?' top':''))
+            .on('mouseover',function(e){_mapShowTip(e,c,idx+1);})
+            .on('mousemove',_mapMoveTip)
+            .on('mouseout',_mapHideTip)
+            .on('click',function(){_mapFilterCountry(c.name);});
+          g.append('circle').attr('cx',centroid[0]+dx).attr('cy',centroid[1]+dy).attr('r', idx===0?3.5:2.4);
+        })(i);
+      }
+    });
+  }
+}
+function _mapFilterCountry(name){
+  state.country=name;
+  if(typeof comboCountry!=='undefined' && comboCountry) comboCountry.setValue(name);
+  render();
+}
+function renderMap(){
+  var host=document.getElementById('mp-wrap');
+  if(_mapState.loadError){
+    host.innerHTML='<div class="mp-err">โหลดแผนที่โลกไม่สำเร็จ · <b>เช็คการเชื่อมต่ออินเทอร์เน็ต</b><br><span style="font-size:11px;color:var(--tx-4)">CDN: cdn.jsdelivr.net</span></div>';
+    return;
+  }
+  if(!_mapState.loaded){
+    _mapLoad().then(function(){
+      _mapState.d3=window.d3; _mapState.topojson=window.topojson;
+      _mapInitSvg();
+      _mapDraw();
+    }).catch(function(){
+      host.innerHTML='<div class="mp-err">โหลดแผนที่โลกไม่สำเร็จ · <b>เช็คการเชื่อมต่ออินเทอร์เน็ต</b></div>';
+    });
+    return;
+  }
+  if(!_mapState.svg) _mapInitSvg();
+  _mapDraw();
+}
+
+/* ═══════════════════════ COMPARE (เทียบนักมวย) ═══════════════════════ */
+var cmp=[];
+function toggleCmp(id){
+  id=String(id);
+  var i=cmp.indexOf(id);
+  if(i>=0) cmp.splice(i,1);
+  else{ if(cmp.length>=3){ cmp.shift(); } cmp.push(id); }
+  renderTray();
+  /* อัปเดตปุ่มที่โชว์อยู่ */
+  document.querySelectorAll('[data-cmp]').forEach(function(b){
+    var inC=cmp.indexOf(b.getAttribute('data-cmp'))!==-1;
+    b.classList.toggle('in',inC);
+    if(b.classList.contains('lb-add')) b.textContent=inC?'✓':'+';
+    else b.textContent=inC?'✓ อยู่ในลิสต์เทียบ':'+ เทียบ';
+  });
+}
+function clearCmp(){ cmp=[]; renderTray(); document.querySelectorAll('[data-cmp]').forEach(function(b){ b.classList.remove('in'); if(b.classList.contains('lb-add'))b.textContent='+'; else b.textContent='+ เทียบ'; }); }
+function renderTray(){
+  var tray=document.getElementById('cmp-tray');
+  var avs=document.getElementById('cmp-avs');
+  if(!cmp.length){ tray.classList.remove('show'); avs.innerHTML=''; return; }
+  avs.innerHTML=cmp.map(function(id){
+    var f=FIGHTERS.find(function(x){return String(x.id)===id;});
+    if(!f)return '';
+    return '<div class="cmp-av" title="'+esc2(f.name_th)+'"><img src="'+fImg(f)+'" onerror="this.src=PH_IMG" alt=""><button data-rm="'+id+'" aria-label="เอาออก">✕</button></div>';
+  }).join('');
+  document.getElementById('cmp-go').disabled=cmp.length<2;
+  tray.classList.add('show');
+}
+var CMP_ROWS=[
+  {lbl:'อายุ',get:function(f){return num(f.age);},u:'ปี'},
+  {lbl:'ส่วนสูง',get:function(f){return num(f.height_cm);},u:'ซม.'},
+  {lbl:'น้ำหนัก',get:function(f){return num(f.weight_kg);},u:'กก.'},
+  {lbl:'ชนะ',get:function(f){return f._w;},best:'max'},
+  {lbl:'แพ้',get:function(f){return f._l;},best:'min'},
+  {lbl:'อัตราชนะ',get:function(f){return f._wr;},u:'%',best:'max'},
+  {lbl:'KO',get:function(f){return f._koCount;},best:'max'},
+  {lbl:'อัตรา KO',get:function(f){return f._ko;},u:'%',best:'max'},
+  {lbl:'ชนะรวด',get:function(f){return f._streak;},best:'max'},
+  {lbl:'คะแนน Boxfan',get:function(f){return f._s;},best:'max'}
+];
+function openCmpModal(){
+  if(cmp.length<2) return;
+  var all=computeAll();
+  var fs=cmp.map(function(id){ return all.find(function(f){return String(f.id)===id;}); }).filter(Boolean);
+  var cols='140px repeat('+fs.length+',1fr)';
+  var html='<div class="cmp-hd" style="grid-template-columns:'+cols+'"><div></div>'+fs.map(function(f){
+    return '<div class="cmp-hd-cell"><a href="'+furl(f)+'"><img src="'+fImg(f)+'" onerror="this.src=PH_IMG" alt=""></a>'+
+      '<div class="cmp-hd-nm">'+esc2(f.name_th)+'</div><div class="cmp-hd-sb">'+(typeof fl!=='undefined'?fl(f.country):'')+' '+(typeof ds!=='undefined'?ds(f.division):'')+'</div></div>';
+  }).join('')+'</div>';
+  CMP_ROWS.forEach(function(r){
+    var vals=fs.map(r.get);
+    var bestV=null;
+    if(r.best){
+      vals.forEach(function(v){ if(v==null||isNaN(v))return; if(bestV===null||(r.best==='max'?v>bestV:v<bestV))bestV=v; });
+    }
+    html+='<div class="cmp-row" style="grid-template-columns:'+cols+'"><div class="cmp-metric">'+r.lbl+(r.u?' ('+r.u+')':'')+'</div>'+
+      vals.map(function(v){
+        var isBest=r.best&&v!=null&&!isNaN(v)&&v===bestV&&vals.filter(function(x){return x===bestV;}).length<fs.length;
+        return '<div class="cmp-cell'+(isBest?' best':'')+'">'+(v==null||isNaN(v)?'—':v)+'</div>';
+      }).join('')+'</div>';
+  });
+  /* ฟอร์ม 5 ไฟต์ล่าสุด */
+  html+='<div class="cmp-row" style="grid-template-columns:'+cols+'"><div class="cmp-metric">ฟอร์ม 5 ไฟต์</div>'+
+    fs.map(function(f){
+      var dots=(f._form||[]).map(function(x){ return '<span class="fd '+(x.result_type==='win'?'w':x.result_type==='loss'?'l':'nc')+'"></span>'; }).join('');
+      return '<div class="cmp-cell"><span class="form-dots" style="justify-content:center">'+(dots||'—')+'</span></div>';
+    }).join('')+'</div>';
+  document.getElementById('cmp-body').innerHTML=html;
+  document.getElementById('cmp-overlay').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeCmpModal(){ document.getElementById('cmp-overlay').classList.remove('open'); document.body.style.overflow=''; }
+
+/* ═══════════════════════ FILTERS / SEG / MODAL ═══════════════════════ */
+function syncSeg(id,attr,val){
+  document.querySelectorAll('#'+id+' button').forEach(function(b){ b.classList.toggle('on', b.getAttribute('data-'+attr)===val); });
+}
+function updateBadge(){
+  var n=0;
+  if(state.division!=='all')n++; if(state.country!=='all')n++; if(state.rules!=='all')n++;
+  if(state.season!=='all')n++; if(state.minFights)n++;
+  var b=document.getElementById('fp-badge'); b.textContent=n; b.style.display=n?'inline-flex':'none';
+  document.getElementById('quick-reset').style.display=n?'inline-block':'none';
+}
+function openFilterModal(){ document.getElementById('fp-overlay').classList.add('open'); document.body.style.overflow='hidden'; }
+function closeFilterModal(){ document.getElementById('fp-overlay').classList.remove('open'); document.body.style.overflow=''; }
+function resetFilters(){
+  state.division='all';state.country='all';state.rules='all';state.season='all';state.minFights=0;
+  comboDiv.setValue('all');comboCountry.setValue('all');
+  document.getElementById('f-rules').value='all';document.getElementById('f-season').value='all';document.getElementById('f-min').value='0';
+  render();
+}
+
+/* combobox แบบพิมพ์ค้นหาได้ */
+function makeCombo(rootId,allLabel,onChange){
+  var root=document.getElementById(rootId), inp=root.querySelector('.combo-input'), menu=root.querySelector('.combo-list');
+  var items=[{value:'all',label:allLabel}], value='all', label='', active=-1;
+  function renderList(q){ q=(q||'').trim().toLowerCase();
+    var list=items.filter(function(o){return !q||o.label.toLowerCase().indexOf(q)!==-1;});
+    menu.innerHTML=list.map(function(o){return '<div class="combo-opt'+(o.value===value?' sel':'')+'" data-v="'+encodeURIComponent(o.value)+'">'+esc2(o.label)+'</div>';}).join('')||'<div class="combo-empty">ไม่พบ</div>';
+    active=-1;
+    menu.classList.add('open');
+  }
+  function close(){ menu.classList.remove('open'); inp.value=label; }
+  function setData(list){ items=[{value:'all',label:allLabel}].concat(list); }
+  function setValue(v){ var f=items.filter(function(o){return o.value===v;})[0]; value=f?f.value:'all'; label=(f&&f.value!=='all')?f.label:''; inp.value=label; }
+  inp.addEventListener('focus',function(){ renderList(inp.value===label?'':inp.value); });
+  inp.addEventListener('input',function(){ renderList(inp.value); });
+  inp.addEventListener('keydown',function(e){
+    var opts=menu.querySelectorAll('.combo-opt[data-v]');
+    if(e.key==='ArrowDown'){e.preventDefault();active=Math.min(active+1,opts.length-1);}
+    else if(e.key==='ArrowUp'){e.preventDefault();active=Math.max(active-1,0);}
+    else if(e.key==='Enter'){e.preventDefault(); if(opts[active])opts[active].dispatchEvent(new MouseEvent('mousedown'));return;}
+    else return;
+    opts.forEach(function(o,i){o.classList.toggle('hl',i===active);}); if(opts[active])opts[active].scrollIntoView({block:'nearest'});
+  });
+  menu.addEventListener('mousedown',function(e){ var el=e.target.closest('.combo-opt[data-v]'); if(!el)return; e.preventDefault();
+    var v=decodeURIComponent(el.getAttribute('data-v')); setValue(v); menu.classList.remove('open'); onChange(v); });
+  inp.addEventListener('blur',function(){ setTimeout(close,130); });
+  return {setData:setData,setValue:setValue,getValue:function(){return value;}};
+}
+function initFilters(){
+  comboDiv=makeCombo('combo-div','ทุกรุ่น',function(v){ state.division=v; render(); });
+  comboCountry=makeCombo('combo-country','ทุกชาติ',function(v){ state.country=v; render(); });
+  var divs=(typeof DIV_MAP!=='undefined'?DIV_MAP:[]).filter(function(d){ return FIGHTERS.some(function(f){return (typeof divKey!=='undefined'?divKey(f.division):null)===d.key;}); })
+     .map(function(d){ return {value:d.key,label:d.label}; });
+  comboDiv.setData(divs);
+  var cset={}; FIGHTERS.forEach(function(f){ if(f.country)cset[f.country]=1; });
+  var countries=Object.keys(cset).sort().map(function(c){ return {value:c,label:(typeof fl!=='undefined'?fl(c)+' ':'')+c}; });
+  comboCountry.setData(countries);
+  comboDiv.setValue(state.division); comboCountry.setValue(state.country);
+  document.getElementById('f-rules').value=state.rules;
+  document.getElementById('f-season').value=state.season;
+  document.getElementById('f-min').value=String(state.minFights);
+
+  document.getElementById('f-rules').addEventListener('change',function(){ state.rules=this.value; render(); });
+  document.getElementById('f-season').addEventListener('change',function(){ state.season=this.value; render(); });
+  document.getElementById('f-min').addEventListener('change',function(){ state.minFights=parseInt(this.value,10)||0; render(); });
+  document.getElementById('f-reset').addEventListener('click',resetFilters);
+  document.getElementById('quick-reset').addEventListener('click',resetFilters);
+}
+
+/* ═══════════════════════ EVENTS ═══════════════════════ */
+function initEvents(){
+  /* view tabs */
+  document.getElementById('view-tabs').addEventListener('click',function(e){
+    var b=e.target.closest('.vtab'); if(!b)return; setView(b.getAttribute('data-v'));
+  });
+  /* swarm segs */
+  document.getElementById('seg-dir').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;state.dir=b.getAttribute('data-dir');syncSeg('seg-dir','dir',state.dir);render();});
+  document.getElementById('seg-color').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;state.colorBy=b.getAttribute('data-color');syncSeg('seg-color','color',state.colorBy);render();});
+  document.getElementById('seg-view').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;state.plotMode=b.getAttribute('data-view');syncSeg('seg-view','view',state.plotMode);render();});
+  /* swarm plot hover/click */
+  var plot=document.getElementById('plot');
+  plot.addEventListener('mouseover',function(e){var d=e.target.closest('.dot');if(!d)return;d.classList.add('sel');showTipAt('plot','tip',+d.getAttribute('data-idx'),d);});
+  plot.addEventListener('mouseout',function(e){var d=e.target.closest('.dot');if(!d)return;d.classList.remove('sel');if(!e.relatedTarget||!e.relatedTarget.closest('.tip'))hideTips();});
+  plot.addEventListener('click',function(e){var d=e.target.closest('.dot');if(!d)return;
+    if(matchMedia('(hover:none)').matches){
+      document.querySelectorAll('.dot.sel').forEach(function(x){if(x!==d)x.classList.remove('sel');});
+      d.classList.add('sel'); showTipAt('plot','tip',+d.getAttribute('data-idx'),d);
+    } else { location.href=furl(window._pts[+d.getAttribute('data-idx')].f); }
+  });
+  document.getElementById('view-table').addEventListener('click',function(e){var r=e.target.closest('.st-tr');if(r)location.href=r.getAttribute('data-url');});
+  /* scatter */
+  document.getElementById('sc-x').addEventListener('change',function(){ state.sx=this.value; render(); });
+  document.getElementById('sc-y').addEventListener('change',function(){ state.sy=this.value; render(); });
+  document.getElementById('sc-swap').addEventListener('click',function(){
+    var t=state.sx; state.sx=state.sy; state.sy=t;
+    document.getElementById('sc-x').value=state.sx; document.getElementById('sc-y').value=state.sy;
+    render();
+  });
+  document.getElementById('seg-sc-color').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;state.scColor=b.getAttribute('data-color');syncSeg('seg-sc-color','color',state.scColor);render();});
+  var sc=document.getElementById('scatter');
+  sc.addEventListener('mouseover',function(e){var d=e.target.closest('.dot');if(!d)return;d.classList.add('sel');showScTip(+d.getAttribute('data-sidx'),d);});
+  sc.addEventListener('mouseout',function(e){var d=e.target.closest('.dot');if(!d)return;d.classList.remove('sel');if(!e.relatedTarget||!e.relatedTarget.closest('.tip'))hideTips();});
+  sc.addEventListener('click',function(e){var d=e.target.closest('.dot');if(!d)return;
+    if(matchMedia('(hover:none)').matches){
+      document.querySelectorAll('#scatter .dot.sel').forEach(function(x){if(x!==d)x.classList.remove('sel');});
+      d.classList.add('sel'); showScTip(+d.getAttribute('data-sidx'),d);
+    } else { location.href=furl(window._spts[+d.getAttribute('data-sidx')].f); }
+  });
+  /* board */
+  document.getElementById('lb-head').addEventListener('click',function(e){
+    var th=e.target.closest('.lb-th.sortable'); if(!th)return;
+    var k=th.getAttribute('data-k');
+    if(state.sortKey===k) state.sortDir=state.sortDir==='desc'?'asc':'desc';
+    else { state.sortKey=k; state.sortDir='desc'; }
+    lbShow=LB_STEP; render();
+  });
+  var lbT;
+  document.getElementById('lb-q').addEventListener('input',function(){
+    var v=this.value; clearTimeout(lbT);
+    lbT=setTimeout(function(){ state.q=v; lbShow=LB_STEP; render(); },180);
+  });
+  document.getElementById('lb-export').addEventListener('click',exportCSV);
+  document.getElementById('lb-more').addEventListener('click',function(){ lbShow+=LB_STEP; renderBoard(); });
+  document.getElementById('lb-body').addEventListener('click',function(e){
+    var b=e.target.closest('[data-cmp]');
+    if(b){ e.stopPropagation(); toggleCmp(b.getAttribute('data-cmp')); return; }
+    var r=e.target.closest('.lb-row'); if(r)location.href=r.getAttribute('data-url');
+  });
+  /* map */
+  document.getElementById('seg-map-mode').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;state.mapMode=b.getAttribute('data-mode');syncSeg('seg-map-mode','mode',state.mapMode);render();});
+  /* groups */
+  document.getElementById('seg-group').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;state.groupBy=b.getAttribute('data-g');syncSeg('seg-group','g',state.groupBy);render();});
+  document.getElementById('grp-metric').addEventListener('change',function(){ state.groupMetric=this.value; render(); });
+  document.getElementById('grp-list').addEventListener('click',function(e){
+    var g=e.target.closest('.grp'); if(!g)return;
+    var key=decodeURIComponent(g.getAttribute('data-g'));
+    if(state.groupBy==='div'){ state.division=key; comboDiv.setValue(key); state.view='swarm'; render(); window.scrollTo({top:0,behavior:'smooth'}); }
+    else if(state.groupBy==='country'){ state.country=key; comboCountry.setValue(key); state.view='swarm'; render(); window.scrollTo({top:0,behavior:'smooth'}); }
+    else { state.q=key; document.getElementById('lb-q').value=key; state.view='board'; lbShow=LB_STEP; render(); window.scrollTo({top:0,behavior:'smooth'}); }
+  });
+  /* overview clicks */
+  document.getElementById('ov-divs').addEventListener('click',function(e){
+    var r=e.target.closest('.hbar-row'); if(!r)return;
+    state.division=r.getAttribute('data-div'); comboDiv.setValue(state.division);
+    state.view='swarm'; render(); window.scrollTo({top:0,behavior:'smooth'});
+  });
+  document.getElementById('ov-nations').addEventListener('click',function(e){
+    var r=e.target.closest('.hbar-row'); if(!r)return;
+    state.country=decodeURIComponent(r.getAttribute('data-country')); comboCountry.setValue(state.country);
+    state.view='swarm'; render(); window.scrollTo({top:0,behavior:'smooth'});
+  });
+  document.getElementById('ov-goto-map').addEventListener('click',function(e){
+    e.preventDefault(); state.view='map'; render(); window.scrollTo({top:0,behavior:'smooth'});
+  });
+  /* compare buttons in tooltips */
+  ['tip','sc-tip'].forEach(function(id){
+    document.getElementById(id).addEventListener('click',function(e){
+      var b=e.target.closest('[data-cmp]'); if(!b)return;
+      e.stopPropagation(); toggleCmp(b.getAttribute('data-cmp'));
+    });
+  });
+  document.getElementById('cmp-avs').addEventListener('click',function(e){
+    var b=e.target.closest('[data-rm]'); if(!b)return; toggleCmp(b.getAttribute('data-rm'));
+  });
+  /* global */
+  document.addEventListener('click',function(e){ if(!e.target.closest('#plot')&&!e.target.closest('#scatter')&&!e.target.closest('.tip')) hideTips(); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape'){ closeFilterModal(); closeCmpModal(); hideTips(); } });
+  var _rt;
+  window.addEventListener('resize',function(){ clearTimeout(_rt); _rt=setTimeout(function(){ if(state.view==='swarm'&&state.plotMode==='plot')render(); else if(state.view==='scatter')render(); else if(state.view==='map')render(); },180); });
+}
+
+/* ค้นหา + ธีม (เหมือนหน้าอื่น) */
+function toggleSearch(){var p=document.getElementById('search-panel');p.classList.toggle('open');if(p.classList.contains('open'))setTimeout(function(){document.getElementById('sinput').focus();},50);}
+document.addEventListener('click',function(e){if(!e.target.closest('#search-toggle')){var p=document.getElementById('search-panel');if(p)p.classList.remove('open');}});
+function toggleTheme(){var h=document.documentElement;var isL=h.getAttribute('data-theme')==='light';h.setAttribute('data-theme',isL?'dark':'light');try{localStorage.setItem('boxfan-theme',isL?'dark':'light');}catch(e){}}
+(function(){try{var s=localStorage.getItem('boxfan-theme');if(s==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}})();
+
+/* ═══════════════════════ INIT ═══════════════════════ */
+document.addEventListener('DOMContentLoaded',function(){
+  var yr=document.getElementById('yr'); if(yr)yr.textContent=new Date().getFullYear();
+  if(typeof FIGHTERS==='undefined'){
+    document.querySelector('.page-w').insertAdjacentHTML('beforeend','<div class="st-empty">ไม่พบข้อมูลนักมวย (data/fighters_data.js)</div>');
+    return;
+  }
+  readHash();
+  if(!metricAvailable(METRIC_BY[state.metric])){ var first=METRICS.filter(metricAvailable)[0]; if(first)state.metric=first.key; }
+  syncSeg('seg-dir','dir',state.dir);
+  syncSeg('seg-color','color',state.colorBy);
+  syncSeg('seg-view','view',state.plotMode);
+  syncSeg('seg-sc-color','color',state.scColor);
+  syncSeg('seg-group','g',state.groupBy);
+  syncSeg('seg-map-mode','mode',state.mapMode);
+  document.getElementById('grp-metric').value=state.groupMetric;
+  document.getElementById('lb-q').value=state.q;
+  fillScatterSelects();
+  initFilters(); initEvents(); initHighlight(); initMegaSearch();
+  /* ค้นหาในเมนูบน */
+  var inp=document.getElementById('sinput'),drop=document.getElementById('sdrop');
+  if(inp&&drop){ inp.addEventListener('input',function(){var q=inp.value.trim().toLowerCase();
+    if(!q){drop.innerHTML='';return;}
+    var hits=FIGHTERS.filter(function(f){return (f.name_th||'').toLowerCase().indexOf(q)!==-1||(f.name_en||'').toLowerCase().indexOf(q)!==-1;}).slice(0,7);
+    drop.innerHTML=hits.length?hits.map(function(f){return '<a class="si" href="'+furl(f)+'"><img src="'+fImg(f)+'" onerror="this.src=PH_IMG" alt=""><div><div class="si-nm">'+esc2(f.name_th)+'</div><div class="si-mt">'+(typeof fl!=='undefined'?fl(f.country):'')+' · '+(typeof ds!=='undefined'?ds(f.division):f.division)+'</div></div></a>';}).join(''):'<div class="s-empty">ไม่พบ</div>';
+  }); }
+  render();
+});
+</script>
+</body>
+</html>

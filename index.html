@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="th" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://res.cloudinary.com https://img.youtube.com https://i.ytimg.com; frame-src https://www.youtube.com">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#0d1014" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f0f2f5" media="(prefers-color-scheme: light)">
+<link rel="apple-touch-icon" href="/icons/icon-192.png">
+<title>Boxfan — อันดับนักมวย รวมผลจากทุกรายการ</title>
+<meta name="description" content="อันดับนักมวย สถิติ และผลการแข่งขัน มวยไทย คิกบ็อกซิง MMA จากทุกรายการ | Boxfan">
+<meta name="keywords" content="อันดับนักมวย,มวยไทย,ผลมวย,Boxfan,ONE Championship,สถิตินักมวย">
+<meta name="author" content="Boxfan">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://boxingfandom.com/">
+<meta property="og:title" content="Boxfan — อันดับนักมวย">
+<meta property="og:description" content="อันดับนักมวย สถิติ มวยไทย MMA รวมทุกรายการ | Boxfan">
+<meta property="og:image" content="https://boxingfandom.com/og-default.jpg">
+<meta property="og:url" content="https://boxingfandom.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Boxfan">
+<meta property="og:locale" content="th_TH">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Boxfan — Fighter Rankings">
+<meta name="twitter:description" content="Muay Thai, Kickboxing & MMA fighter rankings and results from every promotion">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"Boxfan","url":"https://boxingfandom.com/","description":"อันดับนักมวย สถิติ และผลการแข่งขัน มวยไทย คิกบ็อกซิง MMA จากทุกรายการ","inLanguage":["th","en"],"potentialAction":{"@type":"SearchAction","target":"https://boxingfandom.com/rankings.html?q={search_term_string}","query-input":"required name=search_term_string"}}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+Thai:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ══ GOOGLE-STYLE READABILITY ══ */
+:root {
+  --sans: 'Inter', 'Noto Sans Thai', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --serif: 'Inter', 'Noto Sans Thai', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --display: 'Inter', 'Noto Sans Thai', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+body {
+  font-size: 16px !important;
+  line-height: 1.65 !important;
+  letter-spacing: 0.01em;
+  -webkit-font-smoothing: antialiased;
+}
+[data-theme="light"] {
+  --bg: #ffffff;
+  --bg-2: #f8f9fa;
+  --surf: #ffffff;
+  --surf-2: #f1f3f4;
+  --surf-3: #e8eaed;
+  --tx: #202124;
+  --tx-2: #3c4043;
+  --tx-3: #5f6368;
+  --tx-4: #80868b;
+  --line: rgba(0,0,0,.08);
+  --line-2: rgba(0,0,0,.12);
+  --line-3: rgba(0,0,0,.20);
+  --nav-bg: rgba(255,255,255,.95);
+  --util-bg: #f1f3f4;
+  --footer-bg: #f1f3f4;
+  --rank-col-bg: #f8f9fa;
+  --body-bg-a: rgba(214,56,32,.04);
+  --body-bg-b: rgba(27,111,212,.03);
+  --edge: inset 0 1px 0 rgba(255,255,255,.95);
+  --sh-1: 0 1px 2px rgba(0,0,0,.08);
+  --sh-2: 0 1px 6px rgba(0,0,0,.10);
+  --sh-3: 0 4px 16px rgba(0,0,0,.12);
+  --sh-4: 0 8px 28px rgba(0,0,0,.15);
+}
+[data-theme="light"] body {
+  background: #ffffff !important;
+}
+[data-theme="light"] body::before {
+  display: none !important;
+}
+</style>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="boxfan-tokens.css">
+<style>
+/* ── override: ล้าง background สีชมพูบน nav-tab active ── */
+.nav-tab, .nav-tab.active, a.nav-tab, a.nav-tab.active {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+.nav-tab.active {
+  color: #f4f7fa !important;
+  border-bottom-color: var(--red, #e8412e) !important;
+  font-weight: 700 !important;
+}
+</style>
+
+<style>
+/* ═══════════════════════════════════════════════════════
+   BOXFAN — HOME · FIGHT NIGHT BROADCAST
+   พื้นเข้ม · มุมแดง/น้ำเงิน · ทอง = แชมป์/คะแนน
+   ═══════════════════════════════════════════════════════ */
+/* ── Dark Mode (default) ── */
+
+
+/* ── Light Mode ── */
+
+
+/* Light mode: ปรับ body background */
+[data-theme="light"] body{
+  background:
+    radial-gradient(70% 50% at 16% -6%, var(--body-bg-a) 0%, transparent 60%),
+    radial-gradient(70% 50% at 88% -4%, var(--body-bg-b) 0%, transparent 60%),
+    linear-gradient(180deg, var(--bg-2) 0%, var(--bg) 380px, var(--bg) 100%);
+}
+[data-theme="light"] body::before{opacity:.25;background-image:repeating-linear-gradient(115deg,rgba(0,0,0,.018) 0 2px,transparent 2px 7px)}
+[data-theme="light"] .util-bar{background:var(--util-bg);border-top-color:var(--line)}
+[data-theme="light"] .ticker-bar{background:var(--util-bg);border-bottom-color:var(--line)}
+[data-theme="light"] .nav{background:var(--nav-bg);border-bottom-color:var(--line-2)}
+[data-theme="light"] .rank-col-hdr{background:var(--rank-col-bg)}
+[data-theme="light"] .card-inner-head{background:var(--surf-2)}
+[data-theme="light"] .stats-more{background:var(--surf-2)}
+[data-theme="light"] .site-footer{background:var(--footer-bg);border-top-color:var(--line-2)}
+[data-theme="light"] .search-panel input{background:var(--bg);color:var(--tx)}
+[data-theme="light"] .ticker-item b{color:var(--tx)}
+[data-theme="light"] .ticker-item{color:var(--tx-3)}
+[data-theme="light"] .um-fade{background:linear-gradient(180deg,rgba(255,255,255,0),var(--surf))}
+[data-theme="light"] #upcoming-body::-webkit-scrollbar-thumb{background:var(--line-2);border:2px solid var(--surf)}
+[data-theme="light"] ::selection{background:var(--red);color:#fff}
+[data-theme="light"] .nav-tab.active{color:var(--tx)!important}
+[data-theme="light"] .logo-main{color:var(--tx)}
+[data-theme="light"] .skel{background:linear-gradient(90deg,var(--skel-a) 25%,var(--skel-b) 50%,var(--skel-a) 75%);background-size:200% 100%}
+[data-theme="light"] .ag-img-wrap::after{background:linear-gradient(180deg,rgba(240,242,245,0) 45%,rgba(240,242,245,.5) 100%)}
+[data-theme="light"] .vi-thumb::after{background:linear-gradient(180deg,rgba(0,0,0,0) 55%,rgba(0,0,0,.25) 100%)}
+
+/* ── Theme Toggle Button ── */
+.theme-toggle{
+  width:40px;height:40px;border-radius:50%;
+  border:1px solid var(--theme-toggle-border);
+  background:var(--theme-toggle-bg);
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;color:var(--theme-icon-color);
+  transition:all .2s cubic-bezier(.2,.8,.2,1);
+  position:relative;flex-shrink:0;font-size:17px;
+  box-shadow:var(--sh-1);
+}
+.theme-toggle:hover{transform:scale(1.08);box-shadow:var(--sh-2)}
+.theme-toggle svg{display:block;width:18px;height:18px;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;fill:none;transition:transform .3s}
+.theme-toggle:hover svg{transform:rotate(20deg)}
+/* เมื่ออยู่ใน Light Mode แสดง moon icon / Dark Mode แสดง sun icon */
+.icon-sun{display:none}
+.icon-moon{display:block}
+[data-theme="light"] .icon-sun{display:block}
+[data-theme="light"] .icon-moon{display:none}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--sans);color:var(--tx);font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;font-feature-settings:"tnum" 1;
+  background:
+    radial-gradient(70% 50% at 16% -6%, var(--body-bg-a) 0%, transparent 60%),
+    radial-gradient(70% 50% at 88% -4%, var(--body-bg-b) 0%, transparent 60%),
+    linear-gradient(180deg, var(--bg-2) 0%, var(--bg) 380px, var(--bg) 100%);
+  background-attachment:fixed;transition:background .25s,color .25s;}
+body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.5;background-image:repeating-linear-gradient(115deg, rgba(255,255,255,.012) 0 2px, transparent 2px 7px)}
+body>*{position:relative;z-index:1}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--red);color:#fff}
+.tnum{font-variant-numeric:tabular-nums}
+
+.ic{display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;vertical-align:middle}
+.ic svg{display:block;width:1em;height:1em;stroke:currentColor;stroke-width:1.85;stroke-linecap:round;stroke-linejoin:round;fill:none}
+
+/* ══ TOP SEARCH BAR (แถบค้นหาบนสุด) ══ */
+.top-search-bar{background:var(--util-bg);border-bottom:1px solid var(--line);padding:10px 26px;position:relative;z-index:230}
+.top-search-inner{max-width:1240px;margin:0 auto;position:relative}
+.top-search-inner .search-ic{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--tx-3);font-size:16px;pointer-events:none}
+.top-search-inner input{width:100%;border:1px solid var(--line-2);border-radius:8px;padding:11px 14px 11px 40px;font-family:var(--sans);font-size:14px;outline:none;color:var(--tx);background:var(--surf);transition:border-color .15s,box-shadow .15s}
+.top-search-inner input::placeholder{color:var(--tx-4)}
+.top-search-inner input:focus{border-color:var(--red);box-shadow:0 0 0 3px var(--red-soft)}
+.top-search-drop{display:none;position:absolute;top:calc(100% + 8px);left:0;right:0;background:var(--surf);border:1px solid var(--line-2);border-radius:11px;box-shadow:var(--sh-4);padding:8px;z-index:300;max-height:340px;overflow-y:auto}
+.top-search-drop.open{display:block}
+[data-theme="light"] .top-search-bar{background:var(--util-bg);border-bottom-color:var(--line)}
+[data-theme="light"] .top-search-inner input{background:#fff}
+
+/* ══ UTIL BAR ══ */
+.util-bar{background:var(--util-bg);height:34px;display:flex;align-items:center;padding:0 26px;position:relative;z-index:210;border-top:1px solid var(--line)}
+.util-bar a{font-size:11px;color:var(--tx-3);font-weight:500;letter-spacing:.02em;margin-right:22px;transition:color .15s}
+.util-bar a:hover{color:var(--tx)}
+.util-bar-right{margin-left:auto;font-size:10px;color:var(--tx-4);font-weight:500;letter-spacing:.05em;white-space:nowrap;text-transform:uppercase}
+
+/* ══ NAV ══ */
+.nav{position:sticky;top:0;z-index:200;background:var(--nav-bg);backdrop-filter:saturate(150%) blur(16px);-webkit-backdrop-filter:saturate(150%) blur(16px);border-bottom:1px solid var(--line);height:66px;display:flex;align-items:center;padding:0 26px;box-shadow:var(--sh-2)}
+.nav-logo{display:flex;align-items:center;gap:12px;margin-right:34px;flex-shrink:0}
+.nav-logo img{height:42px;width:42px;object-fit:contain;border-radius:8px;background:#fff;box-shadow:var(--sh-1)}
+.nav-logo-text{display:flex;flex-direction:column;line-height:1}
+.logo-main{font-family:var(--serif);font-weight:800;font-size:27px;color:var(--tx);letter-spacing:.5px;line-height:.9;text-transform:uppercase}
+.logo-main span{color:var(--red)}
+.logo-sub{font-size:8.5px;color:var(--tx-3);font-weight:700;letter-spacing:.28em;text-transform:uppercase;margin-top:4px}
+.nav-tabs{display:flex;align-items:center;flex:1;height:100%;overflow-x:auto;scrollbar-width:none}
+.nav-tabs::-webkit-scrollbar{display:none}
+.nav-tab{display:inline-flex;align-items:center;height:100%;padding:0 17px;font-size:13.5px;font-weight:600;color:var(--tx-2);white-space:nowrap;border-bottom:2.5px solid transparent;transition:.15s;letter-spacing:.005em}
+.nav-tab:hover{color:var(--tx)}
+.nav-tab.active{color:var(--tx);border-bottom-color:var(--red);font-weight:700;background:transparent!important}
+/* fix: ล้าง background สีชมพูที่อาจมาจาก style.css ภายนอก */
+.nav-tab{background:transparent!important}
+.nav-tab.active{background:transparent!important;color:#f4f7fa!important}
+.nav-right{display:flex;align-items:center;gap:11px;margin-left:16px;flex-shrink:0}
+.nav-search-btn{width:40px;height:40px;border-radius:50%;border:1px solid var(--line-2);background:var(--surf);display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--tx-2);transition:.15s;position:relative;flex-shrink:0;font-size:17px}
+.nav-search-btn:hover{color:#fff;border-color:var(--red);background:var(--surf-2)}
+.nav-signin{display:inline-flex;align-items:center;padding:9px 20px;background:var(--red);border:1px solid var(--red);border-radius:6px;font-size:12px;font-weight:700;color:#fff;transition:.15s;letter-spacing:.05em;text-transform:uppercase;box-shadow:var(--sh-1)}
+.nav-signin:hover{background:#ff5440;box-shadow:var(--glow-red)}
+.search-panel{display:none;position:absolute;top:calc(100% + 12px);right:0;width:310px;background:var(--surf);border:1px solid var(--line-2);border-radius:11px;box-shadow:var(--sh-4);padding:12px;z-index:300}
+.search-panel.open{display:block}
+.search-panel input{width:100%;border:1px solid var(--line-2);border-radius:7px;padding:10px 12px;font-family:var(--sans);font-size:14px;outline:none;color:var(--tx);background:var(--bg-2)}
+.search-panel input:focus{border-color:var(--red);box-shadow:0 0 0 3px var(--red-soft)}
+.sdrop-inner{margin-top:8px}
+.si{display:flex;align-items:center;gap:11px;padding:8px;border-radius:7px;cursor:pointer;transition:background .12s}
+.si:hover{background:var(--surf-2)}
+.si img{width:36px;height:36px;border-radius:7px;object-fit:cover;border:1px solid var(--line-2);flex-shrink:0}
+.si-nm{font-size:13px;font-weight:600;color:var(--tx)}
+.si-mt{font-size:11px;color:var(--tx-3);margin-top:1px}
+.s-empty{padding:12px;text-align:center;font-size:13px;color:var(--tx-4)}
+
+/* ══ HERO ══ */
+.hero{position:relative;border-bottom:1px solid var(--line);overflow:hidden}
+.hero::after{content:'';position:absolute;left:0;right:0;bottom:0;height:1px;background:linear-gradient(90deg,transparent,var(--red),var(--blue),transparent);opacity:.55}
+.hero-in{max-width:1240px;margin:0 auto;padding:36px 26px 30px;display:flex;align-items:flex-end;justify-content:space-between;gap:22px;flex-wrap:wrap}
+.hero-kicker{font-family:var(--serif);font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:9px;display:inline-flex;align-items:center;gap:9px}
+.hero-kicker .ic{font-size:15px}
+.hero-h1{font-family:var(--serif);font-weight:800;font-size:clamp(38px,5.6vw,64px);line-height:.88;letter-spacing:.5px;color:var(--tx);text-transform:uppercase;margin:0}
+.hero-h1 em{font-style:normal;color:var(--red)}
+.hero-sub{font-size:14px;color:var(--tx-2);margin-top:11px;max-width:470px;line-height:1.6}
+.hero-meta{text-align:right;flex-shrink:0;padding:8px 0 8px 20px;border-left:1px solid var(--line-2)}
+.hero-date{font-family:var(--serif);font-weight:800;font-size:40px;color:var(--gold);line-height:1;letter-spacing:.5px}
+.hero-date-lbl{font-family:var(--serif);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--tx-3);font-weight:600;margin-top:5px}
+
+/* ══ TICKER ══ */
+.ticker-bar{background:var(--util-bg);height:40px;display:flex;align-items:center;padding:0 26px;gap:14px;overflow:hidden;position:relative;z-index:5;border-bottom:1px solid var(--line)}
+.ticker-vp{flex:1;overflow:hidden;min-width:0}
+.ticker-tag{font-family:var(--serif);font-size:12px;font-weight:800;letter-spacing:.14em;color:#fff;background:var(--red);padding:5px 12px;border-radius:5px;flex-shrink:0;text-transform:uppercase;display:inline-flex;align-items:center;gap:7px;box-shadow:var(--glow-red)}
+.ticker-tag .dot{width:7px;height:7px;border-radius:50%;background:#fff;animation:pulse 1.5s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.7)}}
+.ticker-scroll{display:flex;white-space:nowrap;animation:ticker 40s linear infinite}
+.ticker-scroll:hover{animation-play-state:paused}
+.ticker-item{font-size:11.5px;color:var(--tx-2);font-weight:500;flex-shrink:0;cursor:pointer;letter-spacing:.01em}
+.ticker-item:hover{color:#fff}
+.ticker-item b{color:#fff;font-weight:600}
+@keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* ══ WRAPPERS ══ */
+.page-w{max-width:1240px;margin:0 auto;padding:0 26px}
+
+/* ══ SECTION HEADER ══ */
+.sec-head{display:flex;align-items:baseline;justify-content:space-between;padding:6px 0 13px;margin-bottom:16px;border-bottom:1px solid var(--line);position:relative}
+.sec-head::after{content:'';position:absolute;left:0;bottom:-1px;width:64px;height:2px;background:var(--red)}
+.sec-head-title{font-family:var(--serif);font-weight:800;font-size:23px;letter-spacing:.5px;color:var(--tx);display:flex;align-items:center;gap:10px;text-transform:uppercase;line-height:1}
+.sec-num{font-family:var(--serif);font-size:13px;font-weight:700;color:var(--red);letter-spacing:.04em;background:var(--red-soft);border:1px solid var(--red-line);padding:2px 8px;border-radius:5px}
+.sec-head-link{font-family:var(--serif);font-size:13px;font-weight:600;color:var(--tx-3);transition:color .15s;letter-spacing:.05em;text-transform:uppercase;display:inline-flex;align-items:center;gap:5px}
+.sec-head-link:hover{color:var(--gold)}
+
+/* ══ CARD ══ */
+.card-box{background:var(--surf);border:1px solid var(--line);border-radius:13px;overflow:hidden;margin-bottom:24px;box-shadow:var(--sh-2),var(--edge)}
+.card-inner-head{display:flex;align-items:center;justify-content:space-between;padding:15px 19px 13px;border-bottom:1px solid var(--line);background:var(--bg-2)}
+.card-inner-head .t{font-family:var(--display);font-size:15px;font-weight:700;color:var(--tx);display:flex;align-items:center;gap:9px}
+.card-inner-head .t .ic{font-size:17px;color:var(--gold)}
+.card-inner-head a{font-family:var(--serif);font-size:13px;font-weight:600;color:var(--tx-3);letter-spacing:.04em;text-transform:uppercase;display:inline-flex;align-items:center;gap:4px}
+.card-inner-head a:hover{color:var(--gold)}
+
+/* ══ TOP LAYOUT ══ */
+.top-2col{display:grid;grid-template-columns:1.85fr 1fr;gap:24px;padding-top:30px;align-items:start}
+
+/* ── Ranking ── */
+.rank-dtabs{display:flex;border-bottom:1px solid var(--line);background:var(--bg-2);padding:0 6px}
+.rdt{padding:13px 15px;font-family:var(--serif);font-size:13px;font-weight:700;color:var(--tx-3);cursor:pointer;border:none;border-bottom:2.5px solid transparent;background:none;transition:all .14s;letter-spacing:.06em;text-transform:uppercase;position:relative;top:1px}
+.rdt:hover{color:var(--tx)}
+.rdt.active{color:var(--red);border-bottom-color:var(--red)}
+.rank-col-hdr{display:grid;grid-template-columns:50px 1fr 34px 34px 50px;padding:9px 19px;background:var(--rank-col-bg);border-bottom:1px solid var(--line)}
+.rch{font-family:var(--serif);font-size:11px;font-weight:700;color:var(--tx-3);letter-spacing:.1em;text-transform:uppercase}
+.rch.c{text-align:center}.rch.r{text-align:right}
+.rank-entry{display:grid;grid-template-columns:50px 1fr 34px 34px 50px;align-items:center;padding:11px 19px;border-bottom:1px solid var(--line);cursor:pointer;transition:background .14s,box-shadow .14s;position:relative}
+.rank-entry:last-child{border-bottom:none}
+.rank-entry:hover{background:var(--surf-2)}
+.rank-entry::before{content:'';position:absolute;left:0;top:0;bottom:0;width:0;transition:width .14s}
+.rank-entry.z1::before{width:3px;background:var(--red)}
+.rank-entry.z2::before{width:3px;background:var(--gold)}
+.rank-entry.z3::before{width:3px;background:var(--blue)}
+.re-pos{font-family:var(--serif);font-weight:800;font-size:24px;color:var(--tx-4);text-align:center;line-height:1}
+.re-pos.p1{color:var(--red)}.re-pos.p2{color:var(--gold)}.re-pos.p3{color:var(--blue)}
+.re-fighter{display:flex;align-items:center;gap:12px;min-width:0}
+.re-av{width:44px;height:44px;border-radius:9px;object-fit:cover;background:var(--surf-2);border:1px solid var(--line-2);flex-shrink:0;filter:grayscale(.25);transition:filter .2s}
+.rank-entry:hover .re-av{filter:none}
+.re-name{font-size:14.5px;font-weight:700;color:var(--tx);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rank-entry:hover .re-name{color:var(--gold)}
+.re-flag{font-size:11px;color:var(--tx-3);display:block;margin-top:2px;font-weight:500}
+.re-num{font-family:var(--serif);font-size:16px;font-weight:700;text-align:center;font-variant-numeric:tabular-nums}
+.re-num.win{color:var(--green)}.re-num.loss{color:var(--tx-4)}
+.re-pts{font-family:var(--serif);font-weight:800;font-size:21px;color:var(--gold);text-align:right;font-variant-numeric:tabular-nums}
+
+/* ── Upcoming ── */
+.um-match{display:flex;flex-direction:column;padding:15px 17px;border-bottom:1px solid var(--line);cursor:pointer;transition:background .14s}
+.um-match:last-child{border-bottom:none}
+.um-match:hover{background:var(--surf-2)}
+.um-ev-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:11px}
+.um-ev-name{font-family:var(--serif);font-size:11px;font-weight:700;color:var(--red);letter-spacing:.06em;text-transform:uppercase;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.um-days{font-family:var(--serif);font-size:11px;font-weight:700;color:var(--tx);background:var(--surf-3);border:1px solid var(--line-2);padding:4px 11px;border-radius:20px;flex-shrink:0;margin-left:8px;letter-spacing:.03em}
+.um-fighters{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.um-side{display:flex;flex-direction:column;align-items:center;gap:6px;flex:1;min-width:0}
+.um-av{width:50px;height:50px;border-radius:10px;object-fit:cover;border:1px solid var(--line-2);background:var(--surf-2);transition:all .15s;filter:grayscale(.25)}
+.um-side:first-child .um-av{border-color:var(--red-line)}
+.um-side:last-child .um-av{border-color:var(--blue-line)}
+.um-match:hover .um-av{filter:none}
+.um-name{font-size:11px;font-weight:600;color:var(--tx);text-align:center;line-height:1.25;max-width:92px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.um-vs{font-family:var(--serif);font-weight:800;font-size:16px;color:var(--tx-4);flex-shrink:0}
+.um-tags{display:flex;gap:6px;margin-top:11px;flex-wrap:wrap;align-items:center}
+.um-tag{font-family:var(--serif);font-size:11px;font-weight:600;padding:4px 9px;border-radius:20px;background:var(--bg-2);border:1px solid var(--line-2);color:var(--tx-2);letter-spacing:.02em;display:inline-flex;align-items:center;gap:4px}
+.um-tag .ic{font-size:12px;color:var(--tx-3)}
+.um-cmp{display:inline-flex;align-items:center;gap:5px;font-family:var(--serif);font-size:12px;font-weight:700;color:var(--tx);border:1px solid var(--line-2);border-radius:20px;padding:5px 13px;margin-top:11px;align-self:flex-end;transition:all .15s;cursor:pointer;background:var(--surf-2);letter-spacing:.04em;text-transform:uppercase}
+.um-cmp .ic{font-size:13px}
+.um-cmp:hover{color:#fff;background:var(--red);border-color:var(--red)}
+.no-data{padding:30px;text-align:center;color:var(--tx-3);font-size:12px;font-weight:600;display:flex;flex-direction:column;align-items:center;gap:8px}
+.no-data .ic{font-size:24px;color:var(--line-3)}
+
+#upcoming-card{display:flex;flex-direction:column;position:relative}
+#upcoming-card .card-inner-head{flex-shrink:0}
+#upcoming-body{overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:var(--line-2) transparent}
+#upcoming-body::-webkit-scrollbar{width:7px}
+#upcoming-body::-webkit-scrollbar-track{background:transparent}
+#upcoming-body::-webkit-scrollbar-thumb{background:var(--line-2);border-radius:10px;border:2px solid var(--surf)}
+#upcoming-body::-webkit-scrollbar-thumb:hover{background:var(--line-3)}
+.um-fade{position:absolute;left:1px;right:8px;bottom:1px;height:40px;border-radius:0 0 13px 13px;background:linear-gradient(180deg,rgba(22,28,36,0),var(--surf));pointer-events:none;opacity:0;transition:opacity .2s}
+#upcoming-card.has-overflow:not(.at-bottom) .um-fade{opacity:1}
+@media(max-width:900px){#upcoming-body{max-height:none!important}.um-fade{display:none}}
+
+/* ══ STATS ══ */
+.stats-cols{display:grid;grid-template-columns:repeat(4,1fr)}
+.stat-col{border-right:1px solid var(--line);padding:18px 17px}
+.stat-col:last-child{border-right:none}
+.stat-col-title{font-family:var(--display);font-size:13px;font-weight:700;color:var(--tx);margin-bottom:13px;padding-bottom:10px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:7px;letter-spacing:.02em;justify-content:space-between}
+.stat-col-title .lhs{display:flex;align-items:center;gap:7px}
+.stat-col-title .ic{font-size:16px;color:var(--gold)}
+.stat-col-title a{font-family:var(--serif);font-size:11px;font-weight:600;color:var(--tx-4);letter-spacing:.05em;text-transform:uppercase}
+.stat-col-title a:hover{color:var(--gold)}
+.sri{display:flex;align-items:center;gap:10px;padding:8px 3px;border-bottom:1px solid var(--line);cursor:pointer;transition:background .12s;border-radius:6px}
+.sri:last-child{border-bottom:none}
+.sri:hover{background:var(--surf-2)}
+.sri-rank{font-family:var(--serif);font-weight:800;font-size:16px;color:var(--tx-4);width:20px;text-align:center;flex-shrink:0;line-height:1}
+.sri:nth-child(2) .sri-rank{color:var(--gold)}
+.sri-av{width:32px;height:32px;border-radius:7px;object-fit:cover;background:var(--surf-2);border:1px solid var(--line-2);flex-shrink:0;filter:grayscale(.25);transition:filter .2s}
+.sri:hover .sri-av{filter:none}
+.sri-info{flex:1;min-width:0}
+.sri-name{font-size:11.5px;font-weight:600;color:var(--tx);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sri-sub{font-size:9px;color:var(--tx-4);margin-top:1px}
+.sri-val{font-family:var(--serif);font-weight:800;font-size:18px;color:var(--gold);flex-shrink:0;font-variant-numeric:tabular-nums}
+.sri-unit{font-size:9px;color:var(--tx-4);font-weight:600;margin-left:2px;font-family:var(--sans)}
+.stats-more{display:flex;align-items:center;justify-content:center;gap:6px;padding:13px;font-family:var(--serif);font-size:12px;font-weight:700;color:var(--tx-3);border-top:1px solid var(--line);transition:all .15s;letter-spacing:.06em;text-transform:uppercase;background:var(--surf-2)}
+.stats-more:hover{color:var(--gold);background:var(--surf-2)}
+
+/* ══ ARTICLES ══ */
+.ag-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:18px}
+.ag-card{background:var(--surf);border:1px solid var(--line);border-radius:12px;overflow:hidden;cursor:pointer;display:block;transition:transform .18s,box-shadow .18s,border-color .18s;box-shadow:var(--sh-2)}
+.ag-card:hover{transform:translateY(-3px);box-shadow:var(--sh-3);border-color:var(--line-2)}
+.ag-img-wrap{overflow:hidden;height:128px;background:var(--surf-2);position:relative}
+.ag-img-wrap::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,16,20,0) 45%,rgba(13,16,20,.5) 100%)}
+.ag-img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease;filter:grayscale(.2)}
+.ag-card:hover .ag-img{transform:scale(1.07);filter:none}
+.ag-body{padding:13px 14px 15px}
+.ag-cat{font-family:var(--serif);font-size:11px;font-weight:700;color:var(--red);letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px}
+.ag-title{font-size:13px;font-weight:600;color:var(--tx);line-height:1.45;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.ag-card:hover .ag-title{color:var(--gold)}
+.ag-date{font-size:10px;color:var(--tx-4);margin-top:8px;letter-spacing:.02em}
+.ag-empty{text-align:center;padding:44px;color:var(--tx-3);font-size:13px;font-weight:600;grid-column:1/-1;background:var(--surf);border:1px solid var(--line);border-radius:12px}
+.ag-empty a{color:var(--gold);font-weight:700}
+
+/* ══ VIDEO ══ */
+.video-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.vi{display:block;cursor:pointer;overflow:hidden}
+.vi-thumb{position:relative;width:100%;padding-top:56.25%;background:#000;overflow:hidden;border-radius:11px;box-shadow:var(--sh-2),var(--edge);border:1px solid var(--line)}
+.vi-thumb img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;transition:transform .5s;filter:grayscale(.2)}
+.vi:hover .vi-thumb img{transform:scale(1.05);filter:none}
+.vi-thumb::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 55%,rgba(0,0,0,.5) 100%);pointer-events:none}
+.vi-dur{position:absolute;bottom:9px;right:9px;background:rgba(0,0,0,.82);color:#fff;font-size:11px;font-weight:700;padding:3px 8px;border-radius:5px;font-family:var(--serif);z-index:2;font-variant-numeric:tabular-nums;letter-spacing:.02em}
+.vi-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) scale(.85);width:56px;height:56px;background:var(--red);border-radius:50%;display:flex;align-items:center;justify-content:center;opacity:0;transition:all .22s;z-index:2;box-shadow:0 8px 24px -6px rgba(232,65,46,.7)}
+.vi:hover .vi-play{opacity:1;transform:translate(-50%,-50%) scale(1)}
+.vi-play svg{fill:#fff;margin-left:4px}
+.vi-body{padding:12px 2px 4px}
+.vi-title{font-size:13.5px;font-weight:600;color:var(--tx);line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.vi:hover .vi-title{color:var(--gold)}
+.vi-ch{font-size:11px;color:var(--tx-3);margin-top:5px;font-weight:500;letter-spacing:.02em;display:flex;align-items:center;gap:5px}
+.vi-ch .ic{font-size:13px;color:var(--red)}
+
+/* ══ SKELETON ══ */
+.skel{background:linear-gradient(90deg,var(--skel-a) 25%,var(--skel-b) 50%,var(--skel-a) 75%);background-size:200% 100%;animation:shimmer 1.4s infinite;border-radius:7px}
+@keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
+
+/* transition สำหรับ theme switching */
+*,*::before,*::after{transition-property:background-color,border-color,color;transition-duration:.2s;transition-timing-function:ease}
+/* ยกเว้น animations ที่ไม่ต้องการ transition */
+.skel,.ticker-scroll,.ticker-tag .dot,.rank-entry,.ag-card,.vi,.theme-toggle svg{transition:none}
+.rank-entry{transition:background .14s,box-shadow .14s}
+.ag-card{transition:transform .18s,box-shadow .18s,border-color .18s}
+.vi .vi-thumb img{transition:transform .5s}
+.vi .vi-play{transition:all .22s}
+.theme-toggle{transition:all .2s cubic-bezier(.2,.8,.2,1)}
+.theme-toggle svg{transition:transform .3s}
+
+/* ══ LOAD ANIM ══ */
+.card-box{animation:rise .5s cubic-bezier(.2,.7,.2,1) both}
+.top-2col>.card-box:nth-child(2){animation-delay:.07s}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+/* ══ FOOTER ══ */
+.site-footer{border-top:1px solid var(--line);background:var(--footer-bg);margin-top:10px}
+.footer-in{max-width:1240px;margin:0 auto;padding:30px 26px;text-align:center}
+.footer-brand{font-family:var(--serif);font-weight:800;font-size:24px;color:var(--tx);text-transform:uppercase;letter-spacing:.5px}
+.footer-brand span{color:var(--red)}
+.footer-tag{font-size:10px;color:var(--tx-4);font-weight:700;letter-spacing:.26em;text-transform:uppercase;margin-top:2px}
+.footer-links{margin:16px 0 10px;display:flex;flex-wrap:wrap;justify-content:center;gap:8px 18px}
+.footer-links a{font-size:13px;color:var(--tx-2);font-weight:500;transition:color .15s}
+.footer-links a:hover{color:var(--gold)}
+.footer-copy{font-size:11.5px;color:var(--tx-4);line-height:1.6}
+
+/* ══ RESPONSIVE ══ */
+@media(max-width:1100px){.ag-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:900px){
+  .top-2col{grid-template-columns:1fr}
+  .stats-cols{grid-template-columns:repeat(2,1fr)}
+  .stat-col:nth-child(2){border-right:none}
+  .ag-grid{grid-template-columns:repeat(2,1fr)}
+  .util-bar{display:none}
+  .hero-meta{display:none}
+}
+@media(max-width:640px){
+  body{font-size:14px}
+  .nav{padding:0 16px;height:60px}
+  .logo-main{font-size:23px}
+  .page-w,.hero-in,.ticker-bar{padding-left:16px;padding-right:16px}
+  .stats-cols{grid-template-columns:1fr 1fr}
+  .ag-grid{grid-template-columns:1fr 1fr}
+  .video-grid{grid-template-columns:1fr}
+  .nav-tab{padding:0 12px;font-size:12px}
+  .nav-signin{display:none}
+  .sec-head-title{font-size:19px}
+}
+@media(max-width:420px){
+  .ag-grid{grid-template-columns:1fr}
+  .stats-cols{grid-template-columns:1fr}
+  .stat-col{border-right:none}
+}
+</style>
+</head>
+<body>
+<noscript><div style="background:#e8412e;color:#fff;padding:12px 18px;text-align:center;font-family:sans-serif;font-size:14px">Boxfan — อันดับนักมวย สถิติ และผลการแข่งขัน มวยไทย คิกบ็อกซิง MMA จากทุกรายการ — เว็บไซต์นี้ใช้ JavaScript เพื่อแสดงข้อมูลสถิติแบบเรียลไทม์ กรุณาเปิดใช้งาน JavaScript · <a href="index.html" style="color:#fff;text-decoration:underline">หน้าหลัก</a></div></noscript>
+
+<!-- ICON DEFS -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+    <symbol id="i-glove" viewBox="0 0 24 24"><path d="M16 12V7a3 3 0 0 0-6 0v5"/><path d="M10 9a2.5 2.5 0 0 0-5 0v3a6 6 0 0 0 6 6h2a5 5 0 0 0 5-5v-2a2 2 0 0 0-2-2h-3"/><path d="M7 18v1a2 2 0 0 0 2 2h4"/></symbol>
+    <symbol id="i-scale" viewBox="0 0 24 24"><path d="M12 3v18M7 21h10M5 7h14M5 7l-2 6a3 3 0 0 0 6 0L7 7M19 7l-2 6a3 3 0 0 0 6 0l-2-6"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 14l3-4 3 2 4-6"/></symbol>
+    <symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 22a6 6 0 0 0 6-6c0-4-3-6-3-9 0 0-2 3-5 4-2 1-4 3-4 5a6 6 0 0 0 6 6z"/><path d="M12 22a2.5 2.5 0 0 0 2.5-2.5c0-1.5-1.2-2.2-1.2-3.6 0 0-1 1-2.1 1.5"/></symbol>
+    <symbol id="i-trend" viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M17 7h4v4"/></symbol>
+    <symbol id="i-trophy" viewBox="0 0 24 24"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4z"/><path d="M7 6H4v2a3 3 0 0 0 3 3M17 6h3v2a3 3 0 0 1-3 3"/></symbol>
+    <symbol id="i-swords" viewBox="0 0 24 24"><path d="M14 3h7v7M21 3l-9 9M3 21l6-6M14 21l7-7-3-3-7 7zM10 3 3 10l3 3 7-7z"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18 14 14 0 0 1 0-18z"/></symbol>
+    <symbol id="i-youtube" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9l5 3-5 3V9z" fill="currentColor" stroke="none"/></symbol>
+  </defs>
+</svg>
+
+<!-- TOP SEARCH BAR (แถบค้นหา — บนสุด) -->
+<div class="top-search-bar">
+  <div class="top-search-inner">
+    <span class="ic search-ic"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></span>
+    <input type="text" id="sinput" placeholder="ค้นหานักมวย…" autocomplete="off">
+    <div class="top-search-drop" id="sdrop"></div>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav class="nav">
+  <a class="nav-logo" href="index.html">
+    <img src="https://res.cloudinary.com/dia2yts2f/image/upload/v1779892068/ChatGPT_Image_22_%E0%B8%A1.%E0%B8%84._2569_19_38_45.png" alt="Boxfan" onerror="this.style.display='none'">
+    <div class="nav-logo-text">
+      <span class="logo-main"><span>BOX</span>FAN</span>
+      <span class="logo-sub">ผลมวยทุกสังเวียน</span>
+    </div>
+  </a>
+  <div class="nav-tabs">
+    <a class="nav-tab active" href="index.html">อันดับ</a>
+    <a class="nav-tab" href="rankings.html">ตารางคะแนน</a>
+    <a class="nav-tab" href="weight-classes.html">แยกตามรุ่น</a>
+    <a class="nav-tab" href="Fighters.html">นักมวยทั้งหมด</a>
+    <a class="nav-tab" href="schedule.html">โปรแกรมชก</a>
+    <a class="nav-tab" href="results.html">ผลการแข่งขัน</a>
+    <a class="nav-tab" href="compare.html">เปรียบเทียบ</a>
+    <a class="nav-tab" href="blog/">บทความ</a>
+    <a class="nav-tab" href="tierlist.html">Tier List</a>
+  </div>
+  <div class="nav-right">
+    <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" aria-label="เปลี่ยนโหมดสี" title="เปลี่ยนโหมดสี">
+      <!-- Sun icon (แสดงใน Light mode เพื่อสลับไป Dark) -->
+      <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      <!-- Moon icon (แสดงใน Dark mode เพื่อสลับไป Light) -->
+      <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+    <a class="nav-signin" href="about.html">เกี่ยวกับ</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-in">
+    <div>
+      <span class="hero-kicker"><span class="ic"><svg viewBox="0 0 24 24"><use href="#i-globe"/></svg></span>มวยไทย · คิกบ็อกซิง · MMA</span>
+      <h1 class="hero-h1">อันดับ<em>นักมวย</em></h1>
+      <p class="hero-sub">สถิติ คะแนน และผลการแข่งขันจากทุกรายการ รวบรวมและจัดอันดับโดยแฟนกีฬา อัปเดตตามไฟต์ล่าสุดทุกสัปดาห์</p>
+    </div>
+    <div class="hero-meta">
+      <div class="hero-date tnum" id="hero-year">2569</div>
+      <div class="hero-date-lbl">ฤดูกาลปัจจุบัน</div>
+    </div>
+  </div>
+</div>
+
+<!-- TICKER -->
+<div class="ticker-bar">
+  <span class="ticker-tag"><span class="dot"></span> สด</span>
+  <div class="ticker-vp"><div class="ticker-scroll" id="ticker"></div></div>
+</div>
+
+<!-- TOP 2-COL -->
+<div class="page-w">
+  <div class="top-2col">
+
+    <!-- อันดับนักมวย -->
+    <div class="card-box" id="rank-card">
+      <div class="rank-dtabs">
+        <button class="rdt active" onclick="switchDiv(this,'all')">ทุกรุ่น</button>
+        <button class="rdt" onclick="switchDiv(this,'fly')">Fly</button>
+        <button class="rdt" onclick="switchDiv(this,'bantam')">Ban</button>
+        <button class="rdt" onclick="switchDiv(this,'feather')">Feat</button>
+        <button class="rdt" onclick="switchDiv(this,'light')">Light</button>
+      </div>
+      <div class="rank-col-hdr">
+        <div class="rch c">อันดับ</div>
+        <div class="rch">นักมวย</div>
+        <div class="rch c">W</div>
+        <div class="rch c">L</div>
+        <div class="rch r">PTS</div>
+      </div>
+      <div id="rank-body">
+        <div style="padding:18px;display:flex;flex-direction:column;gap:9px">
+          <div class="skel" style="height:38px"></div><div class="skel" style="height:38px"></div>
+          <div class="skel" style="height:38px"></div><div class="skel" style="height:38px"></div>
+          <div class="skel" style="height:38px"></div><div class="skel" style="height:38px"></div>
+          <div class="skel" style="height:38px"></div><div class="skel" style="height:38px"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ไฟต์ที่กำลังจะมา -->
+    <div class="card-box" id="upcoming-card">
+      <div class="card-inner-head">
+        <span class="t"><span class="ic"><svg viewBox="0 0 24 24"><use href="#i-calendar"/></svg></span> ไฟต์ที่กำลังจะมา</span>
+        <a href="schedule.html">ทั้งหมด <span class="ic" style="font-size:13px"><svg viewBox="0 0 24 24"><use href="#i-arrow"/></svg></span></a>
+      </div>
+      <div id="upcoming-body">
+        <div style="padding:18px;display:flex;flex-direction:column;gap:13px">
+          <div class="skel" style="height:100px"></div><div class="skel" style="height:100px"></div>
+          <div class="skel" style="height:100px"></div><div class="skel" style="height:100px"></div>
+        </div>
+      </div>
+      <div class="um-fade" aria-hidden="true"></div>
+    </div>
+
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="page-w" style="padding-top:10px">
+  <div class="sec-head">
+    <span class="sec-head-title"><span class="sec-num">01</span> สถิติรายบุคคล</span>
+    <a class="sec-head-link" href="rankings.html">ดูตารางเต็ม <span class="ic" style="font-size:13px"><svg viewBox="0 0 24 24"><use href="#i-arrow"/></svg></span></a>
+  </div>
+  <div class="card-box">
+    <div class="stats-cols" id="stats-cols">
+      <div style="padding:18px;display:flex;flex-direction:column;gap:10px">
+        <div class="skel" style="height:15px;width:70%"></div>
+        <div class="skel" style="height:36px"></div><div class="skel" style="height:36px"></div><div class="skel" style="height:36px"></div>
+      </div>
+      <div style="padding:18px;display:flex;flex-direction:column;gap:10px">
+        <div class="skel" style="height:15px;width:70%"></div>
+        <div class="skel" style="height:36px"></div><div class="skel" style="height:36px"></div><div class="skel" style="height:36px"></div>
+      </div>
+      <div style="padding:18px;display:flex;flex-direction:column;gap:10px">
+        <div class="skel" style="height:15px;width:70%"></div>
+        <div class="skel" style="height:36px"></div><div class="skel" style="height:36px"></div><div class="skel" style="height:36px"></div>
+      </div>
+      <div style="padding:18px;display:flex;flex-direction:column;gap:10px">
+        <div class="skel" style="height:15px;width:70%"></div>
+        <div class="skel" style="height:36px"></div><div class="skel" style="height:36px"></div><div class="skel" style="height:36px"></div>
+      </div>
+    </div>
+    <a class="stats-more" href="rankings.html">ดูสถิติเพิ่มเติม <span class="ic" style="font-size:13px"><svg viewBox="0 0 24 24"><use href="#i-arrow"/></svg></span></a>
+  </div>
+</div>
+
+<!-- ARTICLES -->
+<div class="page-w" style="padding-top:10px">
+  <div class="sec-head">
+    <span class="sec-head-title"><span class="sec-num">02</span> บทความล่าสุด</span>
+    <a class="sec-head-link" href="blog/">ดูทั้งหมด <span class="ic" style="font-size:13px"><svg viewBox="0 0 24 24"><use href="#i-arrow"/></svg></span></a>
+  </div>
+  <div class="ag-grid" id="ag-grid">
+    <div class="ag-empty">ยังไม่มีบทความ — <a href="blog/">ดูบล็อก ›</a></div>
+  </div>
+</div>
+
+<!-- VIDEO -->
+<div class="page-w" style="padding-top:24px;padding-bottom:52px">
+  <div class="sec-head">
+    <span class="sec-head-title"><span class="sec-num">03</span> วิดีโอ</span>
+    <a class="sec-head-link" href="https://www.youtube.com/@Boxingfandom" target="_blank" rel="noopener noreferrer">YouTube <span class="ic" style="font-size:14px"><svg viewBox="0 0 24 24"><use href="#i-youtube"/></svg></span></a>
+  </div>
+  <div class="video-grid" id="video-grid"></div>
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-in">
+    <div class="footer-brand">BOX<span>FAN</span></div>
+    <div class="footer-tag">ผลมวยทุกสังเวียน</div>
+    <div class="footer-links">
+      <a href="about.html">เกี่ยวกับเรา</a>
+      <a href="contact.html">ติดต่อเรา</a>
+      <a href="privacy.html">นโยบายความเป็นส่วนตัว</a>
+      <a href="disclaimer.html">ข้อจำกัดความรับผิด</a>
+    </div>
+    <div class="footer-copy">© <span id="yr"></span> Boxfan · รวมผลมวยจากทุกรายการ บันทึกโดยแฟนมวย</div>
+  </div>
+</footer>
+
+<!-- UTIL BAR (ย้ายมาล่างสุด) -->
+<div class="util-bar">
+  <a href="about.html">เกี่ยวกับเรา</a>
+  <a href="contact.html">ติดต่อเรา</a>
+  <a href="blog/">บทความ</a>
+  <a href="disclaimer.html">ข้อจำกัดความรับผิด</a>
+  <span class="util-bar-right">รวมผลมวยจากทุกรายการ · บันทึกโดยแฟนมวย</span>
+</div>
+
+<!-- JAVASCRIPT -->
+<script src="blog/articles.js"></script>
+<script src="data/fighters_data.js"></script>
+<script src="utils.js"></script>
+<script>
+var PH_IMG="images/noname1.png";
+var PH_ART=PH_IMG;
+function svgIcon(id,sz){return '<span class="ic" style="font-size:'+(sz||14)+'px"><svg viewBox="0 0 24 24"><use href="#'+id+'"/></svg></span>';}
+
+/* ══ VIDEOS ══ */
+var VIDEOS=[
+  {id:'zjskjbJrSwo',title:'เปิดใบคะแนน ยอดไอคิว ชนะ เคียมรันได้ยังไง! วันลุมพินี155',ch:'Boxingfandom',dur:'5:24'},
+  {id:'KAPId6t7MvI',title:'สถิติและวิเคราะห์นักมวยจากทุกรายการ',ch:'Boxingfandom',dur:'7:10'},
+  {id:'ikRae5c8vAQ',title:'Boxfan — Fighter Stats Review จัด Tier List 115 ป.',ch:'Boxingfandom',dur:'4:58'},
+  {id:'zjskjbJrSwo',title:'ไฮไลต์มวยเด็ดประจำสัปดาห์',ch:'Boxingfandom',dur:'6:12'}
+];
+function ytThumb(id){return 'https://img.youtube.com/vi/'+id+'/mqdefault.jpg';}
+function renderVideos(){
+  document.getElementById('video-grid').innerHTML=VIDEOS.map(function(v){
+    return '<a class="vi" href="https://www.youtube.com/watch?v='+v.id+'" target="_blank" rel="noopener noreferrer">'+
+      '<div class="vi-thumb">'+
+        '<img src="'+ytThumb(v.id)+'" loading="lazy" alt="'+esc(v.title)+'" onerror="this.src=PH_IMG">'+
+        '<span class="vi-dur">'+v.dur+'</span>'+
+        '<div class="vi-play"><svg width="18" height="18" viewBox="0 0 24 24"><polygon points="6,4 20,12 6,20"/></svg></div>'+
+      '</div>'+
+      '<div class="vi-body">'+
+        '<div class="vi-title">'+esc(v.title)+'</div>'+
+        '<div class="vi-ch">'+svgIcon('i-youtube',13)+esc(v.ch)+'</div>'+
+      '</div>'+
+    '</a>';
+  }).join('');
+}
+
+/* ══ RANKING ══ */
+var _curDiv='all';
+var CUR_YEAR=new Date().getFullYear().toString();
+function getRanked(divFilter,max,yearFilter){
+  if(typeof FIGHTERS==='undefined') return [];
+  /* ใช้แกนกลางจาก utils.js เพื่อให้ผลตรงกับ rankings.html / weight-classes.html เป๊ะ
+     'current' = ฤดูกาลปัจจุบัน (rankingYear: ปีนี้ถ้ามีไฟต์ ไม่งั้นถอยไปปีล่าสุดที่มีข้อมูล) */
+  var useYear=(yearFilter==='current')?rankingYear():'all';
+  return rankFighters({ year:useYear, division:(divFilter||'all'), max:(max||null) });
+}
+function switchDiv(btn,divKey){
+  _curDiv=divKey;
+  document.querySelectorAll('.rdt').forEach(function(b){b.classList.remove('active');});
+  btn.classList.add('active');renderRanking();requestAnimationFrame(syncColumnHeights);
+}
+function renderRanking(){
+  var list=getRanked(_curDiv,20,'current');
+  var body=document.getElementById('rank-body');
+  if(!list.length){body.innerHTML='<div class="no-data">'+svgIcon('i-alert',24)+'ไม่มีข้อมูล</div>';return;}
+  var zones=['z1','z2','z2','z3','z3'];
+  body.innerHTML=list.map(function(f,i){
+    var rank=i+1;var pc=rank===1?'p1':rank===2?'p2':rank===3?'p3':'';
+    var zc=zones[i]||'';var rd=rank<10?'0'+rank:rank;
+    return '<div class="rank-entry '+zc+'" onclick="location.href=\''+getFighterUrl(f)+'\'">'+
+      '<div class="re-pos '+pc+'">'+rd+'</div>'+
+      '<div class="re-fighter">'+
+        '<img class="re-av" src="'+cImg(f.image_filename,'sm')+'" loading="lazy" onerror="this.src=\''+PH_IMG+'\'" alt="'+esc(f.name_th)+'">'+
+        '<div style="min-width:0"><div class="re-name">'+esc(f.name_th)+'</div><span class="re-flag">'+fl(f.country)+' '+ds(f.division)+'</span></div>'+
+      '</div>'+
+      '<div class="re-num win">'+f._w+'</div>'+
+      '<div class="re-num loss">'+f._l+'</div>'+
+      '<div class="re-pts">'+f._s+'</div>'+
+    '</div>';
+  }).join('');
+}
+
+/* ══ STATS ══ */
+function renderStats(){
+  if(typeof FIGHTERS==='undefined') return;
+  var all=getRanked('all',null,'all');
+  var cols=[
+    {title:'KO สูงสุด',icon:'i-flame',key:'_koCount',unit:'KO',list:all.slice().sort(function(a,b){return b._koCount-a._koCount;}).slice(0,8)},
+    {title:'Win Rate',icon:'i-trend',key:'_wr',unit:'%',list:all.filter(function(f){return f._total>=3;}).sort(function(a,b){return b._wr-a._wr;}).slice(0,8)},
+    {title:'คะแนนรวม',icon:'i-trophy',key:'_s',unit:'pts',list:all.slice().sort(function(a,b){return b._s-a._s;}).slice(0,8)},
+    {title:'ชกมากสุด',icon:'i-swords',key:'_total',unit:'',list:all.slice().sort(function(a,b){return b._total-a._total;}).slice(0,8)}
+  ];
+  document.getElementById('stats-cols').innerHTML=cols.map(function(col){
+    return '<div class="stat-col">'+
+      '<div class="stat-col-title"><span class="lhs">'+svgIcon(col.icon,15)+col.title+'</span><a href="rankings.html">เพิ่ม ›</a></div>'+
+      col.list.map(function(f,i){
+        return '<div class="sri" onclick="location.href=\''+getFighterUrl(f)+'\'">'+
+          '<span class="sri-rank">'+(i+1)+'</span>'+
+          '<img class="sri-av" src="'+cImg(f.image_filename,'sm')+'" loading="lazy" onerror="this.src=\''+PH_IMG+'\'" alt="'+esc(f.name_th)+'">'+
+          '<div class="sri-info"><div class="sri-name">'+esc(f.name_th)+'</div><div class="sri-sub">'+fl(f.country)+' '+ds(f.division)+'</div></div>'+
+          '<div class="sri-val">'+f[col.key]+'<span class="sri-unit">'+col.unit+'</span></div>'+
+        '</div>';
+      }).join('')+
+    '</div>';
+  }).join('');
+}
+
+/* ══ UPCOMING ══ */
+function getUpcoming(max){
+  if(typeof HISTORY==='undefined') return [];
+  var today=new Date();today.setHours(0,0,0,0);
+  var matchSeen={},list=[];
+  HISTORY.forEach(function(h){
+    if(h.result_type!=='upcoming') return;
+    if(h.date && new Date(h.date) < today) return;
+    var fA=FIGHTERS.find(function(x){return x.id===h.fighter_id;});
+    var fB=FIGHTERS.find(function(x){return x.name_th===h.opponent||x.name_en===h.opponent;});
+    var nameA=fA?fA.name_th:String(h.fighter_id);
+    var nameB=h.opponent||'';
+    var pairKey=[nameA,nameB].sort().join('|')+'|'+(h.event||'');
+    if(matchSeen[pairKey]) return; matchSeen[pairKey]=true;
+    var d=h.date?new Date(h.date):null;
+    var dLeft=d?Math.round((d-today)/86400000):null;
+    list.push({h:h,fA:fA,fB:fB,date:d,dLeft:dLeft});
+  });
+  list.sort(function(a,b){
+    if(!a.date&&!b.date) return 0;
+    if(!a.date) return 1;
+    if(!b.date) return -1;
+    return a.date-b.date;
+  });
+  return max?list.slice(0,max):list;
+}
+function renderUpcoming(){
+  var list=getUpcoming(10);
+  var body=document.getElementById('upcoming-body');
+  if(!list.length){body.innerHTML='<div class="no-data">'+svgIcon('i-clock',24)+'ยังไม่มีไฟต์กำหนด</div>';return;}
+  body.innerHTML=list.map(function(item){
+    var h=item.h,fA=item.fA,fB=item.fB;
+    var imgA=fA?cImg(fA.image_filename,'sm'):PH_IMG;
+    var imgB=fB?cImg(fB.image_filename,'sm'):PH_IMG;
+    var nameA=fA?fA.name_th:'—';var nameB=fB?fB.name_th:(h.opponent||'—');
+    var flagA=fA?fl(fA.country):'',flagB=fB?fl(fB.country):'';
+    var dateStr=h.date?fDate(h.date):'TBA';
+    var dStr,dStyle;
+    if(item.dLeft===null){dStr=dateStr;dStyle='';}
+    else if(item.dLeft===0){dStr='วันนี้!';dStyle='background:var(--red);border-color:var(--red);color:#fff';}
+    else if(item.dLeft===1){dStr='พรุ่งนี้';dStyle='background:#d97706;border-color:#b45309;color:#fff';}
+    else if(item.dLeft<=7){dStr='อีก '+item.dLeft+' วัน';dStyle='background:var(--green);border-color:#2d8a57;color:#08130c';}
+    else{dStr='อีก '+item.dLeft+' วัน';dStyle='';}
+    var cmpUrl=(fA&&fB)?'compare.html?a='+fA.id+'&b='+fB.id:'compare.html';
+    return '<div class="um-match" onclick="location.href=\''+cmpUrl+'\'">'+
+      '<div class="um-ev-row">'+
+        '<span class="um-ev-name">'+esc(h.event||'อีเวนต์มวย')+'</span>'+
+        '<span class="um-days" style="'+dStyle+'">'+dStr+'</span>'+
+      '</div>'+
+      '<div class="um-fighters">'+
+        '<div class="um-side"><img class="um-av" src="'+imgA+'" loading="lazy" onerror="this.src=\''+PH_IMG+'\'" alt=""><div class="um-name">'+flagA+' '+esc(nameA)+'</div></div>'+
+        '<span class="um-vs">VS</span>'+
+        '<div class="um-side"><img class="um-av" src="'+imgB+'" loading="lazy" onerror="this.src=\''+PH_IMG+'\'" alt=""><div class="um-name">'+esc(nameB)+' '+flagB+'</div></div>'+
+      '</div>'+
+      '<div class="um-tags">'+
+        (h.rules?'<span class="um-tag">'+svgIcon('i-glove',12)+esc(h.rules)+'</span>':'')+
+        (h.division?'<span class="um-tag">'+ds(h.division)+'</span>':'')+
+        '<span class="um-tag">'+svgIcon('i-calendar',12)+dateStr+'</span>'+
+      '</div>'+
+      '<button class="um-cmp" onclick="event.stopPropagation();location.href=\''+cmpUrl+'\'">'+svgIcon('i-scale',13)+' เทียบสถิติ</button>'+
+    '</div>';
+  }).join('');
+}
+
+/* ── ปรับความสูงคอลัมน์ ── */
+function syncColumnHeights(){
+  var rankCard=document.getElementById('rank-card');
+  var upCard=document.getElementById('upcoming-card');
+  var upBody=document.getElementById('upcoming-body');
+  if(!rankCard||!upCard||!upBody) return;
+  if(window.innerWidth<=900){
+    upBody.style.maxHeight='';
+    upCard.classList.remove('has-overflow','at-bottom');
+    return;
+  }
+  var head=upCard.querySelector('.card-inner-head');
+  var headH=head?head.offsetHeight:0;
+  var avail=rankCard.offsetHeight-headH;
+  if(avail<200) avail=200;
+  upBody.style.maxHeight=avail+'px';
+  requestAnimationFrame(updateUpcomingFade);
+}
+function updateUpcomingFade(){
+  var upCard=document.getElementById('upcoming-card');
+  var upBody=document.getElementById('upcoming-body');
+  if(!upCard||!upBody) return;
+  var overflow=upBody.scrollHeight>upBody.clientHeight+2;
+  upCard.classList.toggle('has-overflow',overflow);
+  var atBottom=upBody.scrollTop+upBody.clientHeight>=upBody.scrollHeight-4;
+  upCard.classList.toggle('at-bottom',atBottom);
+}
+
+/* ══ ARTICLES ══ */
+function renderArticles(){
+  var list=(typeof ARTICLES!=='undefined')?ARTICLES:[];
+  var grid=document.getElementById('ag-grid');
+  if(!list.length){grid.innerHTML='<div class="ag-empty">ยังไม่มีบทความ — <a href="blog/">ดูบล็อก ›</a></div>';return;}
+  var CAT={technique:'วิเคราะห์แทคติก',news:'ข่าวสาร',gear:'รีวิวอุปกรณ์',analysis:'วิเคราะห์',ranking:'อันดับ',guide:'คู่มือ'};
+  grid.innerHTML=list.slice(0,10).map(function(a){
+    var cat=CAT[a.cat]||CAT[a.category]||a.cat||a.category||'บทความ';
+    var dt=a.date?new Date(a.date).toLocaleDateString('th-TH',{year:'numeric',month:'short',day:'numeric'}):'';
+    var img=a.image||PH_ART;var href=a.file||'#';
+    if(href!=='#'&&href.indexOf('http')===-1&&href.indexOf('blog/')===-1){href='blog/'+href;}
+    return '<a class="ag-card" href="'+href+'">'+
+      '<div class="ag-img-wrap"><img class="ag-img" src="'+img+'" loading="lazy" alt="'+esc(a.title)+'" onerror="this.src=\''+PH_ART+'\'"></div>'+
+      '<div class="ag-body"><div class="ag-cat">'+esc(cat)+'</div><div class="ag-title">'+esc(a.title)+'</div><div class="ag-date">'+dt+'</div></div>'+
+    '</a>';
+  }).join('');
+}
+
+/* ══ TICKER ══ */
+function renderTicker(){
+  var top5=getRanked('all',5,'current'),up=getUpcoming(3),items=[];
+  top5.forEach(function(f,i){items.push('#'+(i+1)+'  <b>'+esc(f.name_th)+'</b>  '+f._w+'W '+f._l+'L  ·  '+f._s+' pts');});
+  up.forEach(function(item){
+    var nA=item.fA?item.fA.name_th:'—';var nB=item.fB?item.fB.name_th:(item.h.opponent||'—');
+    var dInfo=item.dLeft!==null?(item.dLeft===0?' · วันนี้!':item.dLeft===1?' · พรุ่งนี้':' · '+fDate(item.h.date)):(item.h.date?' · '+fDate(item.h.date):'');
+    items.push('<b>'+esc(nA)+'</b> vs <b>'+esc(nB)+'</b>'+dInfo);
+  });
+  if(!items.length) items.push('ยินดีต้อนรับสู่ Boxfan · รวมผลมวยจากทุกรายการ');
+  var d=items.concat(items);
+  document.getElementById('ticker').innerHTML=d.map(function(t){
+    return '<span class="ticker-item">'+t+'</span><span style="color:rgba(255,255,255,.16);margin:0 20px">/</span>';
+  }).join('');
+}
+
+/* ══ SEARCH (แถบค้นหาบนสุด) ══ */
+document.addEventListener('click',function(e){
+  if(!e.target.closest('.top-search-inner')){var d=document.getElementById('sdrop');if(d)d.classList.remove('open');}
+});
+document.addEventListener('DOMContentLoaded',function(){
+  var inp=document.getElementById('sinput'),drop=document.getElementById('sdrop');
+  if(!inp||!drop) return;
+  inp.addEventListener('focus',function(){
+    if(drop.innerHTML.trim()) drop.classList.add('open');
+  });
+  inp.addEventListener('input',function(){
+    var q=inp.value.trim().toLowerCase();
+    if(!q||typeof FIGHTERS==='undefined'){drop.innerHTML='';drop.classList.remove('open');return;}
+    var hits=FIGHTERS.filter(function(f){
+      return (f.name_th||'').toLowerCase().indexOf(q)!==-1||(f.name_en||'').toLowerCase().indexOf(q)!==-1;
+    }).slice(0,7);
+    drop.innerHTML=hits.length?hits.map(function(f){
+      return '<a class="si" href="'+getFighterUrl(f)+'">'+
+        '<img src="'+cImg(f.image_filename,'sm')+'" loading="lazy" onerror="this.src=\''+PH_IMG+'\'" alt="">'+
+        '<div><div class="si-nm">'+esc(f.name_th)+'</div><div class="si-mt">'+fl(f.country)+' · '+ds(f.division)+'</div></div>'+
+      '</a>';
+    }).join(''):'<div class="s-empty">ไม่พบ "'+esc(inp.value)+'"</div>';
+    drop.classList.add('open');
+  });
+});
+
+/* ══ INIT ══ */
+(function(){
+  var hy=document.getElementById('hero-year');
+  if(hy) hy.textContent=(new Date().getFullYear()+543);
+  var yr=document.getElementById('yr');
+  if(yr) yr.textContent=new Date().getFullYear();
+  if(typeof FIGHTERS==='undefined'||typeof HISTORY==='undefined'){
+    ['rank-body','upcoming-body','stats-cols'].forEach(function(id){
+      var el=document.getElementById(id);
+      if(el) el.innerHTML='<div class="no-data">'+svgIcon('i-alert',24)+'ไม่พบ fighters_data.js<br><span style="color:var(--tx-4);font-size:10px">path: data/fighters_data.js</span></div>';
+    });
+  }
+  if(typeof setMeta==='function') setMeta({
+    title:'อันดับนักมวย | Boxfan',titleEn:'Fighter Rankings | Boxfan',
+    desc:'อันดับนักมวย สถิติ มวยไทย คิกบ็อกซิง MMA รวมทุกรายการ | Boxfan',
+    url:'https://boxingfandom.com/',keywords:'อันดับนักมวย,มวยไทย,ผลมวย,Boxfan'
+  });
+  renderVideos();renderRanking();renderStats();renderUpcoming();renderArticles();renderTicker();
+
+  requestAnimationFrame(syncColumnHeights);
+  setTimeout(syncColumnHeights,400);
+  window.addEventListener('load',syncColumnHeights);
+  var _rt;
+  window.addEventListener('resize',function(){clearTimeout(_rt);_rt=setTimeout(syncColumnHeights,150);});
+  var upBody=document.getElementById('upcoming-body');
+  if(upBody) upBody.addEventListener('scroll',updateUpcomingFade,{passive:true});
+})();
+/* ══ THEME TOGGLE ══ */
+function toggleTheme(){
+  var html=document.documentElement;
+  var isLight=html.getAttribute('data-theme')==='light';
+  var newTheme=isLight?'dark':'light';
+  html.setAttribute('data-theme',newTheme);
+  try{localStorage.setItem('boxfan-theme',newTheme);}catch(e){}
+}
+/* โหลด theme ที่บันทึกไว้ */
+(function(){
+  try{
+    var saved=localStorage.getItem('boxfan-theme');
+    if(saved==='dark') document.documentElement.setAttribute('data-theme','dark');
+  }catch(e){}
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+/* ═══════════════════════════════════════════════════════════════
+   BOXFAN — boxfan-tokens.css
+   แหล่งความจริงเดียว (single source of truth) ของ design tokens
+   • รวมจากทุกหน้า — แก้สีทีเดียวมีผลทั้งเว็บ
+   • Contrast ผ่าน WCAG 2.1 AA (--tx-3/--tx-4 ปรับใหม่)
+   ต้องลิงก์ "หลัง" style.css และ "ก่อน" inline <style> ของแต่ละหน้า
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── Dark Mode (ค่าเริ่มต้น) ── */
+:root{
+  --bg:#0d1014;
+  --bg-2:#11151b;
+  --surf:#161c24;
+  --surf-2:#1c2430;
+  --surf-3:#232d3b;
+  --line:rgba(255,255,255,.07);
+  --line-2:rgba(255,255,255,.13);
+  --line-3:rgba(255,255,255,.20);
+  --tx:#f4f7fa;
+  --tx-2:#b3bdc9;
+  --tx-3:#98a4b2;
+  --tx-4:#828e9c;
+  --red:#e8412e;
+  --red-600:#c2331f;
+  --red-soft:rgba(232,65,46,.14);
+  --red-line:rgba(232,65,46,.4);
+  --blue:#3b8df0;
+  --blue-soft:rgba(59,141,240,.14);
+  --blue-line:rgba(59,141,240,.4);
+  --gold:#f4b740;
+  --gold-soft:rgba(244,183,64,.14);
+  --gold-line:rgba(244,183,64,.42);
+  --green:#34d27f;
+  --sh-1:0 1px 2px rgba(0,0,0,.4);
+  --sh-2:0 4px 14px -4px rgba(0,0,0,.5);
+  --sh-3:0 10px 32px -10px rgba(0,0,0,.6);
+  --sh-4:0 18px 48px -16px rgba(0,0,0,.7);
+  --glow-red:0 0 0 1px var(--red-line), 0 6px 24px -8px rgba(232,65,46,.5);
+  --edge:inset 0 1px 0 rgba(255,255,255,.05);
+  --serif:'Barlow Condensed','Bai Jamjuree',sans-serif;
+  --display:'Bai Jamjuree','IBM Plex Sans Thai',sans-serif;
+  --sans:'IBM Plex Sans Thai','Barlow','Sarabun',sans-serif;
+  --body-bg-a:rgba(232,65,46,.16);
+  --body-bg-b:rgba(59,141,240,.14);
+  --nav-bg:rgba(13,16,20,.82);
+  --util-bg:#070a0d;
+  --footer-bg:#070a0d;
+  --rank-col-bg:#070a0d;
+  --skel-a:var(--surf);
+  --skel-b:var(--surf-2);
+  --theme-toggle-bg:var(--surf-2);
+  --theme-toggle-border:var(--line-2);
+  --theme-icon-color:var(--gold);
+  --green-soft:rgba(52,210,127,.12);
+  --cond:'Barlow Condensed','Bai Jamjuree',sans-serif;
+  --ink:var(--tx);
+  --ink-2:var(--tx-2);
+  --ink-3:var(--tx-3);
+  --ink-4:var(--tx-4);
+  --card:var(--surf);
+  --paper:var(--bg-2);
+  --loss:#e8694e;
+  --win:var(--green);
+  --border:var(--line-2);
+  --dark:var(--tx);
+  --muted:var(--tx-3);
+  --text:var(--tx);
+  --adv-win-a-bg:rgba(232,65,46,.14);
+  --adv-win-b-bg:rgba(59,141,240,.14);
+  --hist-ha-bg:rgba(232,65,46,.10);
+  --hist-hb-bg:rgba(59,141,240,.10);
+  --hist-row-hover:var(--surf-2);
+  --sel-a-bg:rgba(232,65,46,.07);
+  --sel-a-border:var(--red-line);
+  --sel-b-bg:rgba(59,141,240,.07);
+  --sel-b-border:var(--blue-line);
+}
+
+/* ── Light Mode ── */
+[data-theme="light"]{
+  --bg:#f0f2f5;
+  --bg-2:#e8ecf0;
+  --surf:#ffffff;
+  --surf-2:#f5f7fa;
+  --surf-3:#edf0f4;
+  --line:rgba(0,0,0,.09);
+  --line-2:rgba(0,0,0,.14);
+  --line-3:rgba(0,0,0,.22);
+  --tx:#0f1923;
+  --tx-2:#3d4f61;
+  --tx-3:#566472;
+  --tx-4:#636f7c;
+  --red:#d63820;
+  --red-600:#b52e18;
+  --red-soft:rgba(214,56,32,.10);
+  --red-line:rgba(214,56,32,.35);
+  --blue:#1b6fd4;
+  --blue-soft:rgba(27,111,212,.10);
+  --blue-line:rgba(27,111,212,.35);
+  --gold:#c9830a;
+  --gold-soft:rgba(201,131,10,.12);
+  --gold-line:rgba(201,131,10,.38);
+  --green:#1a9f5c;
+  --sh-1:0 1px 3px rgba(0,0,0,.12);
+  --sh-2:0 4px 14px -4px rgba(0,0,0,.14);
+  --sh-3:0 10px 32px -10px rgba(0,0,0,.18);
+  --sh-4:0 18px 48px -16px rgba(0,0,0,.22);
+  --glow-red:0 0 0 1px var(--red-line), 0 6px 24px -8px rgba(214,56,32,.3);
+  --edge:inset 0 1px 0 rgba(255,255,255,.9);
+  --body-bg-a:rgba(214,56,32,.07);
+  --body-bg-b:rgba(27,111,212,.06);
+  --nav-bg:rgba(255,255,255,.88);
+  --util-bg:#e2e6eb;
+  --footer-bg:#e2e6eb;
+  --rank-col-bg:#edf0f4;
+  --skel-a:#e8ecf0;
+  --skel-b:#dde1e7;
+  --theme-toggle-bg:#ffffff;
+  --theme-toggle-border:rgba(0,0,0,.18);
+  --theme-icon-color:#c9830a;
+  --green-soft:rgba(26,159,92,.11);
+  --loss:#c9200a;
+  --card:var(--surf);
+  --border:var(--line-2);
+  --dark:var(--tx);
+  --muted:var(--tx-3);
+  --text:var(--tx);
+  --win:var(--green);
+  --adv-win-a-bg:rgba(214,56,32,.10);
+  --adv-win-b-bg:rgba(27,111,212,.10);
+  --hist-ha-bg:rgba(214,56,32,.07);
+  --hist-hb-bg:rgba(27,111,212,.07);
+  --hist-row-hover:#f0f2f5;
+  --sel-a-bg:rgba(214,56,32,.05);
+  --sel-a-border:var(--red-line);
+  --sel-b-bg:rgba(27,111,212,.05);
+  --sel-b-border:var(--blue-line);
+  --filter-sticky-bg:rgba(240,242,245,.92);
+}
+
+/* ── เคารพ prefers-reduced-motion (a11y) ── */
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{
+    animation-duration:.001ms!important;animation-iteration-count:1!important;
+    transition-duration:.001ms!important;scroll-behavior:auto!important;
+  }
+}
