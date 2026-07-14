@@ -365,7 +365,7 @@ function fScore(f){ return score(hist(f.id)); }
 function cardHtml(f){
     var wins = f.total_wins || 0, losses = f.total_losses || 0, wr = f.win_rate || 0;
     var sc = fScore(f);
-    return '<a class="fcard" href="profile.html?id=' + f.id + '">' +
+    return '<a class="fcard" href="' + (typeof getFighterUrl!=='undefined'?getFighterUrl(f):'profile.html?id='+f.id) + '">' +
         '<div class="fcard-img-wrap">' +
             '<img src="' + fImg(f.image_filename,'md') + '" loading="lazy" onerror="this.onerror=null;this.src=NO_IMG" alt="' + esc(f.name_th) + '">' +
             '<div class="fcard-flag">' + fl(f.country) + '</div>' +
@@ -447,7 +447,7 @@ function init(){
                 '@type':'ItemList',
                 'numberOfItems': FIGHTERS.length,
                 'itemListElement': FIGHTERS.map(function(f, i){
-                    return { '@type':'ListItem', 'position': i+1, 'url': SITE + '/profile.html?id=' + f.id, 'name': f.name_th };
+                    return { '@type':'ListItem', 'position': i+1, 'url': SITE + '/' + (typeof getFighterUrl!=='undefined'?getFighterUrl(f):'profile.html?id='+f.id), 'name': f.name_th };
                 })
             }
         }
@@ -481,7 +481,7 @@ document.addEventListener('DOMContentLoaded', function(){
             return (f.name_th||'').toLowerCase().indexOf(q) !== -1 || (f.name_en||'').toLowerCase().indexOf(q) !== -1;
         }).slice(0, 7);
         drop.innerHTML = hits.length ? hits.map(function(f){
-            return '<a class="si" href="profile.html?id=' + f.id + '">' +
+            return '<a class="si" href="' + (typeof getFighterUrl!=='undefined'?getFighterUrl(f):'profile.html?id='+f.id) + '">' +
                 '<img src="' + fImg(f.image_filename,'sm') + '" loading="lazy" onerror="this.onerror=null;this.src=NO_IMG" alt="">' +
                 '<div><div class="si-nm">' + esc(f.name_th) + '</div><div class="si-mt">' + fl(f.country) + ' · ' + ds(f.division) + '</div></div>' +
             '</a>';

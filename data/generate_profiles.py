@@ -81,7 +81,7 @@ def load_external_css():
     return css
 
 
-def generate(f, history, full_css):
+def generate(f, history, full_css, fighters_map):
     name_th = esc(f.get('name_th',''))
     name_en = esc(f.get('name_en',''))
     country = esc(f.get('country',''))
@@ -107,6 +107,16 @@ def generate(f, history, full_css):
     up = [h for h in history if h.get('result_type') == 'upcoming']
     sc = round(wins * 3 - losses * 1, 1)
 
+    # Days since last fight
+    days_rest = ''
+    if past:
+        from datetime import datetime, date
+        try:
+            last_date = datetime.strptime(past[0].get('date',''), '%Y-%m-%d').date()
+            delta = (date.today() - last_date).days
+            days_rest = f'<span class="htag">พัก {delta} วัน</span>'
+        except: pass
+
     # Form bar
     form = ''
     for h in reversed(past[:10]):
@@ -121,6 +131,7 @@ def generate(f, history, full_css):
     if team: tags += f'<span class="htag">{team}</span>'
     if age: tags += f'<span class="htag">อายุ {age} ปี</span>'
     tags += f'<span class="htag htag-pts">{sc} pts</span>'
+    if days_rest: tags += f' {days_rest}'
 
     # Physical grid
     pg = ''
@@ -137,6 +148,7 @@ def generate(f, history, full_css):
         nc_html = f'<div class="rsep">–</div><div><div class="rn n">{nc}</div><div class="rl">NC</div></div>'
 
     # Fight table rows
+    PH_IMG = 'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2250%22 height=%2250%22><rect fill=%22%23232d3b%22 width=%2250%22 height=%2250%22 rx=%228%22/></svg>'
     rows = ''
     for h in (up + past[:10]):
         r = h.get('result_type','')
@@ -144,18 +156,35 @@ def generate(f, history, full_css):
         elif r == 'loss': badge = '<span class="bl">แพ้</span>'
         elif r == 'upcoming': badge = '<span class="bu">รอผล</span>'
         else: badge = '<span class="bn">NC</span>'
-        opp = esc(h.get('opponent','—'))
+        opp_name = h.get('opponent','—')
+        opp = esc(opp_name)
         date = esc(h.get('date','—'))
         event = esc(h.get('event','—'))
         decision = esc(h.get('decision',''))
         rules = esc(h.get('rules',''))
         rnd = h.get('round','')
         time = h.get('time','')
+        opp_country = h.get('opponent_country','')
         method = f'<span class="deco-pill">{decision}</span>' if decision else '<span class="dash">—</span>'
         if rnd: method += f'<div style="font-size:11px;color:var(--tx-3);margin-top:3px">ยก {rnd}{" · "+time if time else ""}</div>'
+
+        # Opponent image + link lookup
+        opp_f = fighters_map.get(opp_name)
+        if opp_f:
+            opp_img = cimg(opp_f.get('image_filename'), 'sm') or PH_IMG
+            opp_slug = slug(opp_f)
+            opp_link = f'../fighters/{opp_slug}.html'
+            opp_td = f'''<td><div class="opp-row"><a href="{opp_link}"><img class="opp-av" src="{opp_img}" loading="lazy" alt="{opp}"></a><div><a href="{opp_link}" class="opp-name-link">{opp}</a>'''
+        else:
+            opp_td = f'''<td><div class="opp-row"><img class="opp-av no-link" src="{PH_IMG}" alt=""><div><span class="opp-name-nolink">{opp}</span>'''
+
+        if opp_country and opp_country != '-':
+            opp_td += f'<div style="font-size:11px;color:var(--tx-3)">{fl(opp_country)} {esc(opp_country)}</div>'
+        opp_td += '</div></div></td>'
+
         rows += f'''<tr>
 <td>{badge}</td>
-<td><div class="opp-row"><div><span style="font-weight:700;font-size:13px">{opp}</span></div></div></td>
+{opp_td}
 <td class="col-hide-sm">{method}</td>
 <td class="col-hide-sm" style="color:var(--tx-3);font-size:12px">{rules or "—"}</td>
 <td class="col-hide-sm" style="font-size:12px">{event}</td>
@@ -269,7 +298,7 @@ def generate(f, history, full_css):
 
   <a class="back" href="../profile.html?id={fid}" style="margin-top:18px;background:var(--red);color:#fff;border-color:var(--red)">ดูข้อมูลเต็ม + เปรียบเทียบสถิติ →</a>
 
-  {('<div style="margin-top:18px;padding:24px;background:var(--surf);border:1px solid var(--line-2);border-radius:11px;box-shadow:var(--sh-2)"><p style="line-height:1.9;color:var(--tx-2);font-size:14px;margin:0">' + bio + '</p></div>') if bio else ''}
+  {('<div style="margin-top:18px;padding:24px;background:var(--surf);border:1px solid var(--line-2);border-radius:11px;box-shadow:var(--sh-2)"><div style="font-family:var(--sans);font-size:15px;font-weight:800;color:var(--tx);margin-bottom:12px;display:flex;align-items:center;gap:8px;text-transform:uppercase"><span style="color:var(--gold)">★</span> ประวัตินักมวย</div><p style="line-height:1.9;color:var(--tx-2);font-size:14px;margin:0">' + bio + '</p></div>') if bio else ''}
 </div>
 
 <!-- FOOTER -->
@@ -318,6 +347,12 @@ def main():
     external_css = load_external_css()
     full_css = external_css + '\n' + profile_css
 
+    # สร้าง map ชื่อ → fighter object สำหรับหารูปคู่ต่อสู้
+    fighters_map = {}
+    for ff in fighters:
+        if ff.get('name_th'): fighters_map[ff['name_th']] = ff
+        if ff.get('name_en'): fighters_map[ff['name_en']] = ff
+
     os.makedirs(OUT, exist_ok=True)
     old = [x for x in os.listdir(OUT) if x.endswith('.html')]
     for x in old: os.remove(os.path.join(OUT, x))
@@ -327,7 +362,7 @@ def main():
     for f in fighters:
         s = slug(f)
         path = os.path.join(OUT, f'{s}.html')
-        content = generate(f, hmap.get(f['id'], []), full_css)
+        content = generate(f, hmap.get(f['id'], []), full_css, fighters_map)
         with open(path, 'w', encoding='utf-8') as fh:
             fh.write(content)
         count += 1

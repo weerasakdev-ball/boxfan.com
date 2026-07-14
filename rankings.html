@@ -859,7 +859,7 @@ function updateSortArrows(){
         el.innerHTML=sortCol===c?(sortAsc?up:dn):'';
     });
 }
-function go(id){location.href='profile.html?id='+id;}
+function go(id){var f=typeof FIGHTERS!=='undefined'&&FIGHTERS.find(function(x){return x.id===id;});location.href=f&&typeof getFighterUrl!=='undefined'?getFighterUrl(f):'profile.html?id='+id;}
 
 /* ── search nav ── */
 function toggleSearch(){
@@ -880,7 +880,7 @@ document.addEventListener('DOMContentLoaded',function(){
             return (f.name_th||'').toLowerCase().indexOf(q)!==-1||(f.name_en||'').toLowerCase().indexOf(q)!==-1;
         }).slice(0,7);
         drop.innerHTML=hits.length?hits.map(function(f){
-            return '<a class="si" href="profile.html?id='+f.id+'">'+
+            return '<a class="si" href="'+(typeof getFighterUrl!=='undefined'?getFighterUrl(f):'profile.html?id='+f.id)+'">'+
                 '<img src="'+fImg(f)+'" loading="lazy" onerror="this.src=PH_IMG" alt="">'+
                 '<div><div class="si-nm">'+f.name_th+'</div><div class="si-mt">'+fl(f.country)+' · '+ds(f.division)+'</div></div>'+
             '</a>';

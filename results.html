@@ -765,7 +765,7 @@ function buildMatchRow(h){
   html+='<div class="'+aClass+'">'+
     '<div class="m-av-wrap"><img class="m-av" src="'+imgA+'" loading="lazy" onerror="this.src=\''+PH+'\'" alt="'+esc(fA.name_th)+'">'+beltSvg+'</div>'+
     '<div class="m-info">'+
-      '<span class="m-name" onclick="location.href=\'profile.html?id='+fA.id+'\'">'+esc(fA.name_th)+'</span>'+
+      '<span class="m-name" onclick="location.href=\''+(typeof getFighterUrl!=='undefined'?getFighterUrl(fA):'profile.html?id='+fA.id)+'\'">'+esc(fA.name_th)+'</span>'+
       '<div class="m-country">'+flagA+' '+esc(fA.country||'')+'</div>'+
       '<div class="m-rec"><span class="w">'+fA.total_wins+'W</span> <span class="l">'+fA.total_losses+'L</span></div>'+
     '</div></div>';
@@ -781,7 +781,7 @@ function buildMatchRow(h){
   html+='<div class="'+bClass+'">'+
     '<div class="m-av-wrap"><img class="m-av" src="'+imgB+'" loading="lazy" onerror="this.src=\''+PH+'\'" alt="'+nameB+'">'+beltSvg+'</div>'+
     '<div class="m-info">'+
-      '<span class="m-name'+(fB?'':' no-link')+'"'+(fB?' onclick="location.href=\'profile.html?id='+fB.id+'\'"':'')+'>'+nameB+'</span>'+
+      '<span class="m-name'+(fB?'':' no-link')+'"'+(fB?' onclick="location.href=\''+(typeof getFighterUrl!=='undefined'?getFighterUrl(fB):'profile.html?id='+fB.id)+'\'"':'')+'>'+nameB+'</span>'+
       '<div class="m-country">'+countryB+'</div>'+
       '<div class="m-rec">'+recB+'</div>'+
     '</div></div>';
@@ -837,7 +837,7 @@ document.addEventListener('DOMContentLoaded',function(){
     }).slice(0,7);
     drop.innerHTML=hits.length?hits.map(function(f){
       var img=(typeof cImg==='function')?cImg(f.image_filename,'sm'):PH;
-      return '<a class="si" href="profile.html?id='+f.id+'">'+
+      return '<a class="si" href="'+(typeof getFighterUrl!=='undefined'?getFighterUrl(f):'profile.html?id='+f.id)+'">'+
         '<img src="'+img+'" loading="lazy" onerror="this.src=\''+PH+'\'" alt="">'+
         '<div><div class="si-nm">'+esc(f.name_th)+'</div><div class="si-mt">'+((typeof fl==='function')?fl(f.country):'')+' · '+((typeof ds==='function')?esc(ds(f.division)):esc(f.division||''))+'</div></div>'+
       '</a>';

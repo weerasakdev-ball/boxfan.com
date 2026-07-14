@@ -666,7 +666,7 @@ function init(){
       sinput.addEventListener('input',function(){
         var q=sinput.value.trim().toLowerCase();if(!q){sdrop.innerHTML='';return;}
         var hits=FIGHTERS.filter(function(f){return(f.name_th||'').toLowerCase().indexOf(q)!==-1||(f.name_en||'').toLowerCase().indexOf(q)!==-1;}).slice(0,7);
-        sdrop.innerHTML=hits.length?hits.map(function(f){return'<a class="si" href="profile.html?id='+f.id+'"><img src="'+cImg(f.image_filename,'sm')+'" loading="lazy" onerror="this.src=PH" alt=""><div><div class="si-nm">'+esc(f.name_th)+'</div><div class="si-mt">'+fl(f.country)+' · '+esc(ds(f.division))+'</div></div></a>';}).join(''):'<div class="s-empty">ไม่พบ "'+esc(sinput.value)+'"</div>';
+        sdrop.innerHTML=hits.length?hits.map(function(f){var u=typeof getFighterUrl!=='undefined'?getFighterUrl(f):'profile.html?id='+f.id;return'<a class="si" href="'+u+'"><img src="'+cImg(f.image_filename,'sm')+'" loading="lazy" onerror="this.src=PH" alt=""><div><div class="si-nm">'+esc(f.name_th)+'</div><div class="si-mt">'+fl(f.country)+' · '+esc(ds(f.division))+'</div></div></a>';}).join(''):'<div class="s-empty">ไม่พบ "'+esc(sinput.value)+'"</div>';
       });
     }
 
@@ -733,7 +733,7 @@ function render(allMatches){
             html+='<div class="match-fighter left">'+
                 '<img class="match-av red" src="'+cImg(fA.image_filename,'md')+'" loading="lazy" onerror="this.src=PH" alt="'+esc(fA.name_th)+'">'+
                 '<div class="match-info">'+
-                    '<div class="match-name" onclick="location.href=\'profile.html?id='+fA.id+'\'">'+esc(fA.name_th)+'</div>'+
+                    '<div class="match-name" onclick="location.href=\''+(typeof getFighterUrl!=='undefined'?getFighterUrl(fA):'profile.html?id='+fA.id)+'\'">'+esc(fA.name_th)+'</div>'+
                     '<div class="match-meta">'+fl(fA.country)+' '+esc(fA.country)+(fA.team?' · '+esc(fA.team):'')+'</div>'+
                     '<div class="match-record"><span class="w">'+fA.total_wins+'W</span> <span class="l">'+fA.total_losses+'L</span></div>'+
                 '</div></div>';
@@ -746,7 +746,7 @@ function render(allMatches){
             html+='<div class="match-fighter right">'+
                 '<img class="match-av blue" src="'+imgB+'" loading="lazy" onerror="this.src=PH" alt="'+nameB+'">'+
                 '<div class="match-info">'+
-                    '<div class="match-name"'+(fB?' onclick="location.href=\'profile.html?id='+fB.id+'\'"':' style="cursor:default"')+'>'+nameB+'</div>'+
+                    '<div class="match-name"'+(fB?' onclick="location.href=\''+(typeof getFighterUrl!=='undefined'?getFighterUrl(fB):'profile.html?id='+fB.id)+'\'"':' style="cursor:default"')+'>'+nameB+'</div>'+
                     '<div class="match-meta">'+(fB?fl(fB.country)+' '+esc(fB.country)+(fB.team?' · '+esc(fB.team):''):'')+'</div>'+
                     '<div class="match-record">'+(fB?'<span class="w">'+fB.total_wins+'W</span> <span class="l">'+fB.total_losses+'L</span>':'')+'</div>'+
                 '</div></div>';
