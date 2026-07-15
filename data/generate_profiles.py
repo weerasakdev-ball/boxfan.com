@@ -211,6 +211,7 @@ def generate(f, history, full_css, fighters_map):
 <meta property="og:site_name" content="Boxfan">
 <meta property="og:locale" content="th_TH">
 <meta name="twitter:card" content="summary_large_image">
+<script defer src="https://cloud.umami.is/script.js" data-website-id="40ec0b51-4f08-45be-801d-9cf01fc79260"></script>
 <script type="application/ld+json">{jsonld}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
