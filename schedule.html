@@ -217,6 +217,18 @@ a{color:inherit;text-decoration:none}
 .mf-weight{background:rgba(52,210,127,.12);color:var(--green);border:1px solid rgba(52,210,127,.3)}
 .mf-time{margin-left:auto;font-family:var(--serif);font-size:11px;color:var(--tx-4);font-weight:600;letter-spacing:.04em}
 
+/* NEAREST EVENT HIGHLIGHT */
+.nearest-event{position:relative}
+.nearest-event::before{content:'';position:absolute;left:-4px;top:0;bottom:0;width:4px;background:var(--gold);border-radius:2px}
+.nearest-event .match-card{border-color:var(--gold-line);box-shadow:var(--sh-2),0 0 0 1px var(--gold-line)}
+.badge-nearest{background:var(--gold);color:#1a1400}
+.chip-today{background:var(--red-soft);border-color:var(--red-line);color:var(--red);font-weight:800;animation:pulse-chip 2s infinite}
+@keyframes pulse-chip{0%,100%{opacity:1}50%{opacity:.7}}
+.chip-past{background:var(--surf-2);border-color:var(--line-2);color:var(--tx-4)}
+.past-event{opacity:.55}
+.past-event:hover{opacity:.85}
+.past-event .event-date-badge{background:var(--tx-4)}
+
 /* NO DATA */
 .no-data{padding:60px 30px;text-align:center;color:var(--tx-3);font-size:13px;font-weight:600;display:flex;flex-direction:column;align-items:center;gap:12px}
 .no-data svg{width:36px;height:36px;stroke:var(--line-3);stroke-width:1.5;fill:none}
@@ -611,7 +623,7 @@ function renderPoster(allMatches){
         html+='<div class="p-head">'+
             '<div class="p-promo">BOXFAN</div>'+
             '<div class="p-event">'+esc(g.event)+'</div>'+
-            (daysLeft!==null?'<div class="p-countdown">อีก '+daysLeft+' วัน</div>':'')+
+            (daysLeft!==null?'<div class="p-countdown">'+countdownLabel(daysLeft)+'</div>':'')+
         '</div>';
         html+='<div class="p-bouts cols-1" style="grid-template-columns:1fr">'+posterBout(head,true)+'</div>';
         if(rest.length){
@@ -646,11 +658,12 @@ function init(){
     Array.from(events).sort().forEach(function(e){evSel.innerHTML+='<option value="'+esc(e)+'">'+esc(e)+'</option>';});
     var fighters=new Set();
     matches.forEach(function(m){fighters.add(m.fA.id);if(m.fB)fighters.add(m.fB.id);});
-    var dates=matches.map(function(m){return m.date;}).filter(Boolean).sort();
+    var todayStr=new Date().toISOString().slice(0,10);
+    var futureDates=matches.map(function(m){return m.date;}).filter(function(d){return d&&d>=todayStr;}).sort();
     document.getElementById('st-matches').textContent=matches.length;
     document.getElementById('st-events').textContent=new Set(matches.map(function(m){return m.event;})).size;
     document.getElementById('st-fighters').textContent=fighters.size;
-    document.getElementById('st-next').textContent=dates.length?fDate(dates[0]):'—';
+    document.getElementById('st-next').textContent=futureDates.length?fDate(futureDates[0]):'—';
     ['f-event','f-rules','f-div'].forEach(function(id){
         document.getElementById(id).addEventListener('change',function(){draw(matches);});
     });
@@ -676,6 +689,7 @@ function init(){
 
 function buildMatches(upcoming){
     var seen=new Set(),matches=[];
+    var todayStr=new Date().toISOString().slice(0,10);
     upcoming.forEach(function(h){
         var fA=FIGHTERS.find(function(f){return f.id===h.fighter_id;});
         if(!fA)return;
@@ -686,41 +700,48 @@ function buildMatches(upcoming){
         seen.add(key);
         matches.push({fA:fA,fB:fB||null,oppName:h.opponent||'—',date:h.date||'',event:h.event||'ไม่ระบุอีเวนต์',rules:h.rules||'',division:h.division||fA.division||'',weigh:h.weigh_in_lbs||null});
     });
-    matches.sort(function(a,b){return(a.date||'zzz').localeCompare(b.date||'zzz')||(a.event||'').localeCompare(b.event||'');});
+    // sort: nearest upcoming first, then future by date, TBD last
+    matches.sort(function(a,b){
+        var da=a.date||'', db=b.date||'';
+        // no-date goes last
+        if(!da&&db) return 1;
+        if(da&&!db) return -1;
+        if(!da&&!db) return (a.event||'').localeCompare(b.event||'');
+        // absolute distance from today, but future dates get priority over past
+        var aFuture=da>=todayStr, bFuture=db>=todayStr;
+        if(aFuture&&!bFuture) return -1;
+        if(!aFuture&&bFuture) return 1;
+        if(aFuture&&bFuture) return da.localeCompare(db); // nearest future first
+        return db.localeCompare(da); // most recent past first (fallback)
+    });
     return matches;
 }
 
 function render(allMatches){
-    var evFilter=document.getElementById('f-event').value;
-    var rlFilter=document.getElementById('f-rules').value;
-    var dvFilter=document.getElementById('f-div').value;
-    var list=allMatches.filter(function(m){
-        if(evFilter!=='all'&&m.event!==evFilter)return false;
-        if(rlFilter!=='all'&&m.rules!==rlFilter)return false;
-        if(dvFilter!=='all'&&m.division.indexOf(dvFilter)===-1)return false;
-        return true;
-    });
+    var data=filterAndGroup(allMatches);
     var area=document.getElementById('schedule');
-    if(!list.length){
+    if(!data.count){
         area.innerHTML='<div class="no-data"><svg viewBox="0 0 24 24"><use href="#i-alert"/></svg><p>ไม่พบโปรแกรมการแข่งขันที่ตรงกับเงื่อนไข</p></div>';
         return;
     }
-    var groups={},groupOrder=[];
-    list.forEach(function(m){
-        var key=(m.date||'')+'||'+m.event;
-        if(!groups[key]){groups[key]={date:m.date,event:m.event,matches:[]};groupOrder.push(key);}
-        groups[key].matches.push(m);
-    });
     var html='';
-    groupOrder.forEach(function(key){
-        var g=groups[key];
+    var isFirst=true;
+    data.order.forEach(function(key){
+        var g=data.groups[key];
         var dateStr=g.date?fDate(g.date):'รอกำหนดการ';
-        var daysLeft=g.date?daysUntil(g.date):null;
-        html+='<div class="event-group">';
+        var days=g.date?daysUntil(g.date):null;
+        var label=countdownLabel(days);
+        var isPast=days!==null&&days<0;
+        var isNearest=isFirst&&!isPast;
+        if(isNearest) isFirst=false;
+        var chipCls='countdown-chip';
+        if(days===0||days===1) chipCls+=' chip-today';
+        else if(isPast) chipCls+=' chip-past';
+        html+='<div class="event-group'+(isNearest?' nearest-event':'')+(isPast?' past-event':'')+'">';
         html+='<div class="event-header">'+
-            '<div class="event-date-badge">'+dateStr+'</div>'+
+            '<div class="event-date-badge'+(isNearest?' badge-nearest':'')+'">'+dateStr+'</div>'+
             '<div class="event-name">'+esc(g.event)+'</div>'+
-            (daysLeft!==null?'<span class="countdown-chip">อีก '+daysLeft+' วัน</span>':'')+
+            (label?'<span class="'+chipCls+'">'+label+'</span>':'')+
             '<div class="event-line"></div>'+
             '<div class="event-count">'+g.matches.length+' คู่</div>'+
         '</div>';
@@ -768,8 +789,14 @@ function daysUntil(dateStr){
     if(!dateStr)return null;
     var today=new Date();today.setHours(0,0,0,0);
     var target=new Date(dateStr);target.setHours(0,0,0,0);
-    var diff=Math.round((target-today)/(1000*60*60*24));
-    return diff>=0?diff:null;
+    return Math.round((target-today)/(1000*60*60*24));
+}
+function countdownLabel(days){
+    if(days===null) return '';
+    if(days<0) return 'ผ่านไป '+Math.abs(days)+' วันแล้ว';
+    if(days===0) return 'วันนี้!';
+    if(days===1) return 'พรุ่งนี้!';
+    return 'อีก '+days+' วัน';
 }
 
 init();
