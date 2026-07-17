@@ -6,8 +6,32 @@
 var ARTICLES = [
 
     // 🔽 นำบทความใหม่ล่าสุด มาวางไว้บนสุดตรงนี้เสมอ 🔽
-
-   {
+{
+        cat     : 'technique',
+        image   : 'https://images.unsplash.com/photo-1680022546558-550eaf22351e?w=800&fit=crop',
+        title   : 'ประวัตินักมวย UFC: จากยุคไร้กฎ ถึงแชมป์ 2026 ที่ AI จัดอันดับ',
+        excerpt : 'เปิดประวัติ UFC ตั้งแต่ปี 1993 ผ่านตำนาน GSP, Khabib, Jon Jones สู่แชมป์ยุคใหม่ Aspinall, Makhachev, Gaethje พร้อมเจาะระบบ Meta UFC Rankings และโศกนาฏกรรม McGregor ใน UFC 329',
+        file    : 'articles/th/ufc-fighters-history-2026.html',
+        date    : '2026-07-16'
+    },
+    {
+        cat     : 'technique',
+        image   : 'https://images.unsplash.com/photo-1680022702604-292f21514497?w=800&fit=crop',
+        title   : 'ONE Championship: จากสตาร์ทอัปสิงคโปร์ สู่อาณาจักรกีฬาต่อสู้ 1.35 พันล้านดอลลาร์',
+        excerpt : 'เจาะลึก ONE ตั้งแต่ชาตรี ศิษย์ยอดธง ก่อตั้งจากศูนย์ ระบบ Hydration ปฏิวัติวงการ ONE ลุมพินีปลดแอกมวยไทย สู่ทำเนียบแชมป์โลก 2569 ครบทุกมิติ',
+        file    : 'articles/th/one-championship-history.html',
+        date    : '2026-07-16'
+    },
+    {
+        cat     : 'technique',
+        image   : 'https://images.unsplash.com/photo-1552072092-7f9b8d63efcb?w=800&fit=crop',
+        title   : '20 อันดับนักกีฬาต่อสู้รายได้สูงสุดจากเอเชียและยุโรป 2026: ใครรวยที่สุด?',
+        excerpt : 'เปิดตัวเลขรายได้จาก McGregor $311M, Joshua $250M, Pacquiao $220M ถึง Inoue $62M พร้อมวิเคราะห์ว่าทำไมนักมวยรวยกว่านักสู้ MMA และเงินตะวันออกกลางเปลี่ยนวงการยังไง',
+        file    : 'articles/th/top-20-richest-fighters-asia-europe-2026.html',
+        date    : '2026-07-16'
+    },
+   
+    {
     cat     : 'technique',
     image   : 'https://res.cloudinary.com/dia2yts2f/image/upload/v1779866148/ChatGPT_Image_27_%E0%B8%9E.%E0%B8%84._2569_14_14_58.png',
     title   : 'เทคนิค MMA ขั้นสูง: วิเคราะห์ฟิสิกส์และชีวกลศาสตร์ระดับโลก',
