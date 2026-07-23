@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cloud.umami.is; connect-src 'self' https://cloud.umami.is; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://res.cloudinary.com https://img.youtube.com https://i.ytimg.com; frame-src https://www.youtube.com">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://res.cloudinary.com https://img.youtube.com https://i.ytimg.com; frame-src https://www.youtube.com">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <link rel="manifest" href="manifest.webmanifest">
 <meta name="theme-color" content="#0d1014" media="(prefers-color-scheme: dark)">
@@ -31,52 +31,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+Thai:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
-/* ══ GOOGLE-STYLE READABILITY ══ */
-:root {
-  --sans: 'Inter', 'Noto Sans Thai', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --serif: 'Inter', 'Noto Sans Thai', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --display: 'Inter', 'Noto Sans Thai', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-}
-body {
-  font-size: 16px !important;
-  line-height: 1.65 !important;
-  letter-spacing: 0.01em;
-  -webkit-font-smoothing: antialiased;
-}
-[data-theme="light"] {
-  --bg: #ffffff;
-  --bg-2: #f8f9fa;
-  --surf: #ffffff;
-  --surf-2: #f1f3f4;
-  --surf-3: #e8eaed;
-  --tx: #202124;
-  --tx-2: #3c4043;
-  --tx-3: #5f6368;
-  --tx-4: #80868b;
-  --line: rgba(0,0,0,.08);
-  --line-2: rgba(0,0,0,.12);
-  --line-3: rgba(0,0,0,.20);
-  --nav-bg: rgba(255,255,255,.95);
-  --util-bg: #f1f3f4;
-  --footer-bg: #f1f3f4;
-  --rank-col-bg: #f8f9fa;
-  --body-bg-a: rgba(214,56,32,.04);
-  --body-bg-b: rgba(27,111,212,.03);
-  --edge: inset 0 1px 0 rgba(255,255,255,.95);
-  --sh-1: 0 1px 2px rgba(0,0,0,.08);
-  --sh-2: 0 1px 6px rgba(0,0,0,.10);
-  --sh-3: 0 4px 16px rgba(0,0,0,.12);
-  --sh-4: 0 8px 28px rgba(0,0,0,.15);
-}
-[data-theme="light"] body {
-  background: #ffffff !important;
-}
-[data-theme="light"] body::before {
-  display: none !important;
-}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Barlow:wght@500;600&family=Bai+Jamjuree:wght@600;700&family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="boxfan-tokens.css">
 <style>
@@ -443,7 +398,6 @@ a{color:inherit;text-decoration:none}
   .stat-col{border-right:none}
 }
 </style>
-  <script defer src="https://cloud.umami.is/script.js" data-website-id="40ec0b51-4f08-45be-801d-9cf01fc79260"></script>
 </head>
 <body>
 <noscript><div style="background:#e8412e;color:#fff;padding:12px 18px;text-align:center;font-family:sans-serif;font-size:14px">Boxfan — อันดับนักมวย สถิติ และผลการแข่งขัน มวยไทย คิกบ็อกซิง MMA จากทุกรายการ — เว็บไซต์นี้ใช้ JavaScript เพื่อแสดงข้อมูลสถิติแบบเรียลไทม์ กรุณาเปิดใช้งาน JavaScript · <a href="index.html" style="color:#fff;text-decoration:underline">หน้าหลัก</a></div></noscript>
@@ -488,13 +442,12 @@ a{color:inherit;text-decoration:none}
   <div class="nav-tabs">
     <a class="nav-tab active" href="index.html">อันดับ</a>
     <a class="nav-tab" href="rankings.html">ตารางคะแนน</a>
-    <a class="nav-tab" href="weight-classes.html">แยกตามรุ่น</a>
     <a class="nav-tab" href="Fighters.html">นักมวยทั้งหมด</a>
     <a class="nav-tab" href="schedule.html">โปรแกรมชก</a>
     <a class="nav-tab" href="results.html">ผลการแข่งขัน</a>
     <a class="nav-tab" href="compare.html">เปรียบเทียบ</a>
     <a class="nav-tab" href="blog/">บทความ</a>
-    <a class="nav-tab" href="Tierlist.html">Tier List</a>
+    <a class="nav-tab" href="tierlist.html">Tier List</a>
   </div>
   <div class="nav-right">
     <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" aria-label="เปลี่ยนโหมดสี" title="เปลี่ยนโหมดสี">
@@ -655,6 +608,174 @@ a{color:inherit;text-decoration:none}
 <script src="utils.js"></script>
 <script>
 var PH_IMG="images/noname1.png";
+
+/* ═══════════════════════════════════════════════════════
+   BOXFAN COMPAT — เชื่อมข้อมูลจาก fighters_data.js เข้ากับหน้าเว็บ
+   ทุกฟังก์ชันในบล็อกนี้จะถูกสร้างก็ต่อเมื่อ utils.js ยังไม่มีให้
+   แก้ค่าตั้งต้นได้ที่ BOXFAN_CFG ด้านล่าง
+   ═══════════════════════════════════════════════════════ */
+var BOXFAN_CFG = {
+  imgBase: 'images/',      // โฟลเดอร์เก็บรูปนักมวย
+  imgExt:  '.jpg',         // นามสกุลไฟล์รูป
+  pointsWin: 3,            // แต้มต่อการชนะ
+  pointsFinishBonus: 1,    // แต้มโบนัสถ้าชนะน็อก/ทีเคโอ/ซับมิชชัน
+  pointsDraw: 1            // แต้มต่อการเสมอ
+};
+
+(function(){
+  var W = window;
+
+  /* ── 1. แปลงผลการแข่งภาษาไทย -> รหัสอังกฤษที่หน้าเว็บใช้ ── */
+  var RESULT_MAP = {
+    'ชนะ':'win', 'แพ้':'loss', 'เสมอ':'draw',
+    'ไม่มีผล':'nc', 'ไม่มีผลการแข่งขัน':'nc',
+    'รอแข่งขัน':'upcoming'
+  };
+  var FINISH_RE = /เคโอ|ทีเคโอ|น็อก|น๊อก|ซับมิชชัน|ซับมิส|\bko\b|\btko\b|submission/i;
+  var DECISION_RE = /คะแนน|ตัดสิน|decision/i;
+
+  function methodOf(decision){
+    var d = String(decision || '');
+    if(!d) return '';
+    if(/ทีเคโอ|\btko\b/i.test(d)) return 'tko';
+    if(/เคโอ|น็อก|น๊อก|\bko\b/i.test(d)) return 'ko';
+    if(/ซับมิชชัน|ซับมิส|submission/i.test(d)) return 'submission';
+    if(DECISION_RE.test(d)) return 'decision';
+    return 'other';
+  }
+
+  if(typeof W.HISTORY !== 'undefined' && Array.isArray(W.HISTORY)){
+    W.HISTORY.forEach(function(h){
+      if(!h.result_type) h.result_type = RESULT_MAP[String(h.result||'').trim()] || 'other';
+      if(!h.method)      h.method      = methodOf(h.decision);
+    });
+  }
+
+  /* ── 2. ตัวช่วยพื้นฐาน ── */
+  if(typeof W.esc !== 'function') W.esc = function(s){
+    return String(s == null ? '' : s).replace(/[&<>"']/g, function(c){
+      return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];
+    });
+  };
+
+  /* ประวัติการชกของนักมวยคนหนึ่ง (ทำดัชนีครั้งเดียว ไม่วนซ้ำทุกครั้ง) */
+  var _idx = null;
+  if(typeof W.hist !== 'function') W.hist = function(id){
+    if(!_idx){
+      _idx = {};
+      (W.HISTORY || []).forEach(function(h){
+        (_idx[h.fighter_id] = _idx[h.fighter_id] || []).push(h);
+      });
+      Object.keys(_idx).forEach(function(k){
+        _idx[k].sort(function(a,b){ return String(b.date||'').localeCompare(String(a.date||'')); });
+      });
+    }
+    return _idx[id] || [];
+  };
+
+  /* ── 3. พิกัดรุ่น: ไทย -> คีย์ที่ปุ่มแท็บใช้ ── */
+  var DIV_KEYS = [
+    ['ไลท์เฮฟวี','lightheavy'], ['อะตอม','atom'],   ['สตรอว์','straw'],
+    ['ฟลาย','fly'],            ['แบนตัม','bantam'], ['เฟเธอร์','feather'],
+    ['ไลท์','light'],          ['เวลเทอร์','welter'],['มิดเดิล','middle'],
+    ['เฮฟวี','heavy'],         ['แคช','catch']
+  ];
+  if(typeof W.divKey !== 'function') W.divKey = function(div){
+    var s = String(div || '');
+    for(var i = 0; i < DIV_KEYS.length; i++){
+      if(s.indexOf(DIV_KEYS[i][0]) !== -1) return DIV_KEYS[i][1];
+    }
+    return '';
+  };
+
+  /* ชื่อรุ่นแบบสั้นสำหรับแสดงผล */
+  if(typeof W.ds !== 'function') W.ds = function(div){
+    return div ? W.esc(div) : '';
+  };
+
+  /* ── 4. ธงชาติ ── */
+  var FLAGS = {
+    'ไทย':'🇹🇭','ญี่ปุ่น':'🇯🇵','เมียนมา':'🇲🇲','จีน':'🇨🇳','เกาหลีใต้':'🇰🇷',
+    'ฟิลิปปินส์':'🇵🇭','เวียดนาม':'🇻🇳','กัมพูชา':'🇰🇭','ลาว':'🇱🇦','มาเลเซีย':'🇲🇾',
+    'อินโดนีเซีย':'🇮🇩','สิงคโปร์':'🇸🇬','อินเดีย':'🇮🇳','ไต้หวัน':'🇹🇼','มองโกเลีย':'🇲🇳',
+    'สหรัฐอเมริกา':'🇺🇸','แคนาดา':'🇨🇦','บราซิล':'🇧🇷','เม็กซิโก':'🇲🇽','อาร์เจนตินา':'🇦🇷',
+    'อังกฤษ':'🏴󠁧󠁢󠁥󠁮󠁧󠁿','สหราชอาณาจักร':'🇬🇧','สกอตแลนด์':'🏴󠁧󠁢󠁳󠁣󠁴󠁿','ไอร์แลนด์':'🇮🇪','ฝรั่งเศส':'🇫🇷',
+    'เยอรมนี':'🇩🇪','อิตาลี':'🇮🇹','สเปน':'🇪🇸','โปรตุเกส':'🇵🇹','เนเธอร์แลนด์':'🇳🇱',
+    'เบลเยียม':'🇧🇪','สวีเดน':'🇸🇪','นอร์เวย์':'🇳🇴','เดนมาร์ก':'🇩🇰','ฟินแลนด์':'🇫🇮',
+    'โปแลนด์':'🇵🇱','รัสเซีย':'🇷🇺','ยูเครน':'🇺🇦','เบลารุส':'🇧🇾','คาซัคสถาน':'🇰🇿',
+    'อุซเบกิสถาน':'🇺🇿','คีร์กีซสถาน':'🇰🇬','ทาจิกิสถาน':'🇹🇯','อาเซอร์ไบจาน':'🇦🇿',
+    'จอร์เจีย':'🇬🇪','อาร์เมเนีย':'🇦🇲','ตุรกี':'🇹🇷','อิหร่าน':'🇮🇷','อิรัก':'🇮🇶',
+    'อิสราเอล':'🇮🇱','คูเวต':'🇰🇼','ซาอุดีอาระเบีย':'🇸🇦','สหรัฐอาหรับเอมิเรตส์':'🇦🇪',
+    'อียิปต์':'🇪🇬','โมร็อกโก':'🇲🇦','แอลจีเรีย':'🇩🇿','ตูนิเซีย':'🇹🇳',
+    'แอฟริกาใต้':'🇿🇦','ไนจีเรีย':'🇳🇬','เคนยา':'🇰🇪','แคเมอรูน':'🇨🇲','เซเนกัล':'🇸🇳',
+    'ออสเตรเลีย':'🇦🇺','นิวซีแลนด์':'🇳🇿','กรีซ':'🇬🇷','โครเอเชีย':'🇭🇷','เซอร์เบีย':'🇷🇸',
+    'บอสเนียและเฮอร์เซโกวีนา':'🇧🇦','โรมาเนีย':'🇷🇴','บัลแกเรีย':'🇧🇬','ฮังการี':'🇭🇺',
+    'เช็กเกีย':'🇨🇿','สโลวาเกีย':'🇸🇰','สวิตเซอร์แลนด์':'🇨🇭','ออสเตรีย':'🇦🇹','เวลส์':'🏴󠁧󠁢󠁷󠁬󠁳󠁿'
+  };
+  if(typeof W.fl !== 'function') W.fl = function(country){
+    if(!country) return '';
+    // รองรับหลายสัญชาติ เช่น "บอสเนียและเฮอร์เซโกวีนา/แคนาดา"
+    return String(country).split('/').map(function(c){
+      return FLAGS[c.trim()] || '';
+    }).filter(Boolean).join(' ');
+  };
+
+  /* ── 5. รูปนักมวย ── */
+  if(typeof W.cImg !== 'function') W.cImg = function(filename){
+    if(!filename) return PH_IMG;
+    if(/^https?:|^data:|^\//.test(filename)) return filename;
+    if(/\.(jpg|jpeg|png|webp|gif|avif)$/i.test(filename)) return BOXFAN_CFG.imgBase + filename;
+    return BOXFAN_CFG.imgBase + filename + BOXFAN_CFG.imgExt;
+  };
+
+  /* ── 6. คะแนนและสถิติ ── */
+  if(typeof W.score !== 'function') W.score = function(list){
+    var pts = 0;
+    (list || []).forEach(function(h){
+      if(h.result_type === 'win'){
+        pts += BOXFAN_CFG.pointsWin;
+        if(h.method === 'ko' || h.method === 'tko' || h.method === 'submission'){
+          pts += BOXFAN_CFG.pointsFinishBonus;
+        }
+      } else if(h.result_type === 'draw'){
+        pts += BOXFAN_CFG.pointsDraw;
+      }
+    });
+    return pts;
+  };
+
+  /* สตรีคชนะรวด (นับจากไฟต์ล่าสุดย้อนกลับ) + วันที่ชกล่าสุด */
+  if(typeof W.fightStreak !== 'function') W.fightStreak = function(list){
+    var arr = (list || []).slice().sort(function(a,b){
+      return String(b.date||'').localeCompare(String(a.date||''));
+    });
+    var streak = 0;
+    for(var i = 0; i < arr.length; i++){
+      if(arr[i].result_type === 'win') streak++;
+      else if(arr[i].result_type === 'loss') break;
+    }
+    return { streak: streak, lastDate: arr.length ? (arr[0].date || '') : '' };
+  };
+
+  /* ── 7. วันที่แบบไทย ── */
+  if(typeof W.fDate !== 'function') W.fDate = function(d){
+    if(!d) return 'TBA';
+    var dt = new Date(d);
+    if(isNaN(dt)) return String(d);
+    try{
+      return dt.toLocaleDateString('th-TH', { day:'numeric', month:'short', year:'2-digit' });
+    }catch(e){
+      return String(d);
+    }
+  };
+
+  /* ── 8. ตรวจว่าชนะแบบน็อกหรือไม่ (ใช้ในคอลัมน์ KO) ── */
+  if(typeof W.isFinish !== 'function') W.isFinish = function(h){
+    return h.method === 'ko' || h.method === 'tko' || h.method === 'submission' ||
+           FINISH_RE.test(String(h.decision || ''));
+  };
+})();
+
 var PH_ART=PH_IMG;
 function svgIcon(id,sz){return '<span class="ic" style="font-size:'+(sz||14)+'px"><svg viewBox="0 0 24 24"><use href="#'+id+'"/></svg></span>';}
 
@@ -687,10 +808,21 @@ var _curDiv='all';
 var CUR_YEAR=new Date().getFullYear().toString();
 function getRanked(divFilter,max,yearFilter){
   if(typeof FIGHTERS==='undefined') return [];
-  /* ใช้แกนกลางจาก utils.js เพื่อให้ผลตรงกับ rankings.html / weight-classes.html เป๊ะ
-     'current' = ฤดูกาลปัจจุบัน (rankingYear: ปีนี้ถ้ามีไฟต์ ไม่งั้นถอยไปปีล่าสุดที่มีข้อมูล) */
-  var useYear=(yearFilter==='current')?rankingYear():'all';
-  return rankFighters({ year:useYear, division:(divFilter||'all'), max:(max||null) });
+  var useYear=yearFilter||'all';
+  var list=FIGHTERS.map(function(f){
+    var hAll=hist(f.id).filter(function(x){return x.result_type!=='upcoming';});
+    var h=useYear==='current'?hAll.filter(function(x){return x.date&&x.date.startsWith(CUR_YEAR);}):hAll;
+    if(divFilter&&divFilter!=='all'&&divKey(f.division)!==divFilter) return null;
+    var w=h.filter(function(x){return x.result_type==='win';}).length;
+    var l=h.filter(function(x){return x.result_type==='loss';}).length;
+    if(w+l===0) return null;
+    var ko=hAll.filter(function(x){return x.result_type==='win'&&isFinish(x);}).length;
+    var sc=score(h);var wr=Math.round(w/(w+l)*100);
+    var sd=fightStreak(h);
+    return Object.assign({},f,{_w:w,_l:l,_total:w+l,_ko:ko,_s:sc,_wr:wr,_streak:sd.streak,_lastDate:sd.lastDate});
+  }).filter(Boolean);
+  list.sort(function(a,b){return b._s-a._s||b._streak-a._streak||(b._lastDate||'').localeCompare(a._lastDate||'')||b._w-a._w;});
+  return max?list.slice(0,max):list;
 }
 function switchDiv(btn,divKey){
   _curDiv=divKey;
@@ -699,13 +831,15 @@ function switchDiv(btn,divKey){
 }
 function renderRanking(){
   var list=getRanked(_curDiv,20,'current');
+  // ถ้าปีนี้ยังไม่มีไฟต์ ให้ใช้สถิติรวมทุกปีแทน จะได้ไม่ขึ้นหน้าว่าง
+  if(!list.length) list=getRanked(_curDiv,20,'all');
   var body=document.getElementById('rank-body');
   if(!list.length){body.innerHTML='<div class="no-data">'+svgIcon('i-alert',24)+'ไม่มีข้อมูล</div>';return;}
   var zones=['z1','z2','z2','z3','z3'];
   body.innerHTML=list.map(function(f,i){
     var rank=i+1;var pc=rank===1?'p1':rank===2?'p2':rank===3?'p3':'';
     var zc=zones[i]||'';var rd=rank<10?'0'+rank:rank;
-    return '<div class="rank-entry '+zc+'" onclick="location.href=\''+getFighterUrl(f)+'\'">'+
+    return '<div class="rank-entry '+zc+'" onclick="location.href=\''+fighterUrl(f)+'\'">'+
       '<div class="re-pos '+pc+'">'+rd+'</div>'+
       '<div class="re-fighter">'+
         '<img class="re-av" src="'+cImg(f.image_filename,'sm')+'" loading="lazy" onerror="this.src=\''+PH_IMG+'\'" alt="'+esc(f.name_th)+'">'+
@@ -723,7 +857,7 @@ function renderStats(){
   if(typeof FIGHTERS==='undefined') return;
   var all=getRanked('all',null,'all');
   var cols=[
-    {title:'KO สูงสุด',icon:'i-flame',key:'_koCount',unit:'KO',list:all.slice().sort(function(a,b){return b._koCount-a._koCount;}).slice(0,8)},
+    {title:'KO สูงสุด',icon:'i-flame',key:'_ko',unit:'KO',list:all.slice().sort(function(a,b){return b._ko-a._ko;}).slice(0,8)},
     {title:'Win Rate',icon:'i-trend',key:'_wr',unit:'%',list:all.filter(function(f){return f._total>=3;}).sort(function(a,b){return b._wr-a._wr;}).slice(0,8)},
     {title:'คะแนนรวม',icon:'i-trophy',key:'_s',unit:'pts',list:all.slice().sort(function(a,b){return b._s-a._s;}).slice(0,8)},
     {title:'ชกมากสุด',icon:'i-swords',key:'_total',unit:'',list:all.slice().sort(function(a,b){return b._total-a._total;}).slice(0,8)}
@@ -732,7 +866,7 @@ function renderStats(){
     return '<div class="stat-col">'+
       '<div class="stat-col-title"><span class="lhs">'+svgIcon(col.icon,15)+col.title+'</span><a href="rankings.html">เพิ่ม ›</a></div>'+
       col.list.map(function(f,i){
-        return '<div class="sri" onclick="location.href=\''+getFighterUrl(f)+'\'">'+
+        return '<div class="sri" onclick="location.href=\''+fighterUrl(f)+'\'">'+
           '<span class="sri-rank">'+(i+1)+'</span>'+
           '<img class="sri-av" src="'+cImg(f.image_filename,'sm')+'" loading="lazy" onerror="this.src=\''+PH_IMG+'\'" alt="'+esc(f.name_th)+'">'+
           '<div class="sri-info"><div class="sri-name">'+esc(f.name_th)+'</div><div class="sri-sub">'+fl(f.country)+' '+ds(f.division)+'</div></div>'+
@@ -786,7 +920,7 @@ function renderUpcoming(){
     else if(item.dLeft===1){dStr='พรุ่งนี้';dStyle='background:#d97706;border-color:#b45309;color:#fff';}
     else if(item.dLeft<=7){dStr='อีก '+item.dLeft+' วัน';dStyle='background:var(--green);border-color:#2d8a57;color:#08130c';}
     else{dStr='อีก '+item.dLeft+' วัน';dStyle='';}
-    var cmpUrl=(fA&&fB)?'compare.html?a='+fA.id+'&b='+fB.id:'compare.html';
+    var cmpUrl=(fA&&fB)?'compare.html?a='+encodeURIComponent(fA.id)+'&b='+encodeURIComponent(fB.id):'compare.html';
     return '<div class="um-match" onclick="location.href=\''+cmpUrl+'\'">'+
       '<div class="um-ev-row">'+
         '<span class="um-ev-name">'+esc(h.event||'อีเวนต์มวย')+'</span>'+
@@ -855,7 +989,9 @@ function renderArticles(){
 
 /* ══ TICKER ══ */
 function renderTicker(){
-  var top5=getRanked('all',5,'current'),up=getUpcoming(3),items=[];
+  var top5=getRanked('all',5,'current');
+  if(!top5.length) top5=getRanked('all',5,'all');
+  var up=getUpcoming(3),items=[];
   top5.forEach(function(f,i){items.push('#'+(i+1)+'  <b>'+esc(f.name_th)+'</b>  '+f._w+'W '+f._l+'L  ·  '+f._s+' pts');});
   up.forEach(function(item){
     var nA=item.fA?item.fA.name_th:'—';var nB=item.fB?item.fB.name_th:(item.h.opponent||'—');
@@ -886,7 +1022,7 @@ document.addEventListener('DOMContentLoaded',function(){
       return (f.name_th||'').toLowerCase().indexOf(q)!==-1||(f.name_en||'').toLowerCase().indexOf(q)!==-1;
     }).slice(0,7);
     drop.innerHTML=hits.length?hits.map(function(f){
-      return '<a class="si" href="'+getFighterUrl(f)+'">'+
+      return '<a class="si" href="'+fighterUrl(f)+'">'+
         '<img src="'+cImg(f.image_filename,'sm')+'" loading="lazy" onerror="this.src=\''+PH_IMG+'\'" alt="">'+
         '<div><div class="si-nm">'+esc(f.name_th)+'</div><div class="si-mt">'+fl(f.country)+' · '+ds(f.division)+'</div></div>'+
       '</a>';
@@ -904,7 +1040,7 @@ document.addEventListener('DOMContentLoaded',function(){
   if(typeof FIGHTERS==='undefined'||typeof HISTORY==='undefined'){
     ['rank-body','upcoming-body','stats-cols'].forEach(function(id){
       var el=document.getElementById(id);
-      if(el) el.innerHTML='<div class="no-data">'+svgIcon('i-alert',24)+'ไม่พบ fighters_data.js<br><span style="color:var(--tx-4);font-size:10px">path: data/fighters_data.js</span></div>';
+      if(el) el.innerHTML='<div class="no-data">'+svgIcon('i-alert',24)+'ไม่พบไฟล์ข้อมูล<br><span style="color:var(--tx-4);font-size:10px">วางไฟล์ fighters_data.js ไว้ที่ data/fighters_data.js</span></div>';
     });
   }
   if(typeof setMeta==='function') setMeta({
