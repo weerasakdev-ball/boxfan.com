@@ -1,26 +1,55 @@
 """
-BOXFAN — generate_profiles.py v4
-สร้าง static HTML โปรไฟล์ self-contained (CSS ในตัว ไม่พึ่งไฟล์นอก)
-ดีไซน์เหมือน profile.html ต้นฉบับ 100%
+BOXFAN — generate_profiles.py  v5
+สร้าง static HTML โปรไฟล์นักมวย แบบ self-contained (ฝัง CSS ในตัว ไม่พึ่งไฟล์นอก)
+ดีไซน์ยึดตาม profile.html ต้นฉบับ 100%
 
-v4: อ่านข้อมูลจากโฟลเดอร์ไฟล์ JSON โดยตรง (ไม่ใช้ fighters.db แล้ว)
+อ่านข้อมูลจาก fighters_data.js (ผลลัพธ์จาก export_json.py) — ไม่ใช้ fighters.db แล้ว
 
 วิธีรัน:
-    python generate_profiles.py                 # อ่าน ./data
-    python generate_profiles.py C:/path/to/data # ระบุโฟลเดอร์เอง
+    python generate_profiles.py                        # หาไฟล์ข้อมูลให้เอง
+    python generate_profiles.py C:/path/to/data        # ระบุโฟลเดอร์
+    python generate_profiles.py C:/path/fighters_data.js   # ระบุไฟล์ตรง ๆ
+
+─── สิ่งที่แก้ใน v5 ────────────────────────────────────────────────
+ 1. ลิงก์กลับหน้ารวมนักมวยเป็น ../fighters.html (เดิม ../Fighters.html
+    ตัว F ใหญ่ → 404 บนโฮสต์ Linux/GitHub Pages ที่แยกตัวพิมพ์)
+ 2. ชื่อไฟล์ที่โดนกันซ้ำ (เติม -2) ถูกนำไปใช้ทำลิงก์คู่ต่อสู้ด้วย
+    (เดิมลิงก์ชี้ชื่อเดิมที่ไม่มีไฟล์อยู่จริง)
+ 3. ไม่ลบหน้าเก่าทิ้งก่อนเจน — เจนเสร็จค่อยเก็บกวาดหน้าที่ตกค้าง
+    (เดิมถ้าสคริปต์พังกลางทาง หน้าเก่าหายหมดทั้งโฟลเดอร์)
+ 4. JSON-LD ใช้ข้อความดิบ ไม่ใช่ข้อความที่ escape HTML แล้ว
+    และตัดคีย์ที่เป็น null ทิ้ง
+ 5. เขียนไฟล์ด้วย newline='\\n' เสมอ — ไฟล์ผลลัพธ์ไม่ปนขึ้นบรรทัดแบบ CRLF
+ 6. เตือนเมื่อชื่อไฟล์มีตัวพิมพ์ใหญ่ปน (เสี่ยง 404 แบบเดียวกับข้อ 1)
+ 7. เก็บกวาดโค้ด: ตัด import ซ้ำซ้อนในฟังก์ชัน, เลิกใช้ except เปล่า,
+    เลิกใช้ตัวแปรชื่อ date ทับชื่อชนิดข้อมูล, กัน KeyError จาก f['id']
+──────────────────────────────────────────────────────────────────
 """
-import json, os, re, sys, html as H
-from datetime import datetime, date
+import html as H
+import json
+import os
+import re
+import sys
+from datetime import date, datetime
 from urllib.parse import quote
 
+# ═══════════════════════════════════════════════════════════
+# ค่าตั้งต้น
+# ═══════════════════════════════════════════════════════════
 BASE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(BASE) if os.path.basename(BASE) == 'data' else BASE
-OUT  = os.path.join(ROOT, 'fighters')
+OUT = os.path.join(ROOT, 'fighters')
 SITE = 'https://www.boxingfandom.com'
 CLOUD = 'dpvyl7nan'
 
-# ไฟล์ข้อมูลรวม — ระบุทาง argument ได้ ถ้าไม่ระบุจะหาให้เอง
 DATA_FILENAME = 'fighters_data.js'
+SEARCH_FOLDERS = ('data', '.', '..', os.path.join('..', 'data'))
+
+# ─── หน้ารวมนักมวย ────────────────────────────────────────────
+# ต้องสะกดตรงกับชื่อไฟล์จริงบนดิสก์แบบเป๊ะ ๆ รวมถึงตัวพิมพ์ใหญ่-เล็ก
+# โฮสต์ Linux (GitHub Pages / Netlify / Vercel) แยกตัวพิมพ์
+# ส่วน Windows ไม่แยก — จึงเป็นบั๊กที่ทดสอบบนเครื่องแล้วไม่เจอ
+FIGHTERS_PAGE = 'fighters.html'
 
 # ═══════════════════════════════════════════════════════════
 # โหมดตั้งชื่อไฟล์ HTML  (สำคัญมาก — ต้องตรงกับที่เว็บใช้ลิงก์)
@@ -39,13 +68,13 @@ DATA_FILENAME = 'fighters_data.js'
 FILENAME_MODE = 'slug'
 
 
-SEARCH_FOLDERS = ('data', '.', '..', os.path.join('..', 'data'))
-
-
+# ═══════════════════════════════════════════════════════════
+# หาไฟล์ข้อมูล
+# ═══════════════════════════════════════════════════════════
 def _mtime_str(path):
     try:
         return datetime.fromtimestamp(os.path.getmtime(path)).strftime('%Y-%m-%d %H:%M:%S')
-    except Exception:
+    except OSError:
         return '?'
 
 
@@ -80,7 +109,7 @@ def find_data_file():
     if not found:
         return None
     if len(found) > 1:
-        found.sort(key=lambda x: os.path.getmtime(x), reverse=True)
+        found.sort(key=os.path.getmtime, reverse=True)
         print('⚠️   เจอ %s หลายสำเนา — จะใช้ตัวที่ใหม่ที่สุด' % DATA_FILENAME)
         for i, f in enumerate(found):
             mark = '  <-- ใช้ตัวนี้' if i == 0 else ''
@@ -95,8 +124,9 @@ def warn_if_stale(data_path):
     """เตือนถ้ามีไฟล์ JSON นักมวยที่ใหม่กว่าไฟล์ข้อมูลรวม (แปลว่ายังไม่ได้ export)"""
     try:
         data_mtime = os.path.getmtime(data_path)
-    except Exception:
+    except OSError:
         return
+
     newer, folder_hit = 0, None
     for base in (ROOT, BASE, os.path.dirname(data_path)):
         for rel in ('data', '.'):
@@ -105,7 +135,7 @@ def warn_if_stale(data_path):
                 continue
             try:
                 names = os.listdir(folder)
-            except Exception:
+            except OSError:
                 continue
             count = 0
             for n in names:
@@ -114,10 +144,11 @@ def warn_if_stale(data_path):
                 try:
                     if os.path.getmtime(os.path.join(folder, n)) > data_mtime:
                         count += 1
-                except Exception:
+                except OSError:
                     pass
             if count > newer:
                 newer, folder_hit = count, folder
+
     if newer:
         print('⚠️   มีไฟล์ JSON ใหม่กว่าไฟล์ข้อมูลรวม %d ไฟล์' % newer)
         print('       ที่: %s' % folder_hit)
@@ -133,14 +164,17 @@ def extract_js_const(text, name):
     m = re.search(r'(?:const|var|let)\s+' + re.escape(name) + r'\s*=\s*', text)
     if not m:
         return None
+
     i = m.end()
     while i < len(text) and text[i].isspace():
         i += 1
     if i >= len(text) or text[i] not in '[{':
         return None
+
     open_ch = text[i]
     close_ch = ']' if open_ch == '[' else '}'
     start, depth, in_str, escaped = i, 0, False, False
+
     while i < len(text):
         ch = text[i]
         if in_str:
@@ -162,9 +196,10 @@ def extract_js_const(text, name):
         i += 1
     return None
 
-# ═══════════════════════════════════════════════════
+
+# ═══════════════════════════════════════════════════════════
 # แปลงผลการแข่งภาษาไทย -> รหัสอังกฤษที่เทมเพลตใช้
-# ═══════════════════════════════════════════════════
+# ═══════════════════════════════════════════════════════════
 RESULT_TYPE_MAP = {
     'ชนะ': 'win', 'แพ้': 'loss', 'เสมอ': 'draw',
     'ไม่มีผล': 'nc', 'ไม่มีผลการแข่งขัน': 'nc',
@@ -181,72 +216,47 @@ def result_type_of(result):
 def is_finish(fight):
     return bool(FINISH_RE.search(str(fight.get('decision') or '')))
 
+
+# ═══════════════════════════════════════════════════════════
+# ธงชาติ
+# ═══════════════════════════════════════════════════════════
 FLAGS = {
-    'ไทย':'🇹🇭','ญี่ปุ่น':'🇯🇵','เกาหลีใต้':'🇰🇷','จีน':'🇨🇳',
-    'บราซิล':'🇧🇷','ฟิลิปปินส์':'🇵🇭','รัสเซีย':'🇷🇺','อิตาลี':'🇮🇹',
-    'ฝรั่งเศส':'🇫🇷','อังกฤษ':'🇬🇧','สหรัฐ':'🇺🇸','แคนาดา':'🇨🇦',
-    'ออสเตรเลีย':'🇦🇺','เนเธอร์แลนด์':'🇳🇱','สเปน':'🇪🇸',
-    'เมียนมาร์':'🇲🇲','กัมพูชา':'🇰🇭','มาเลเซีย':'🇲🇾',
-    'อินโดนีเซีย':'🇮🇩','อินเดีย':'🇮🇳','มองโกเลีย':'🇲🇳',
-    'คาซัคสถาน':'🇰🇿','จอร์เจีย':'🇬🇪','อุซเบกิสถาน':'🇺🇿',
-    'ตุรกี':'🇹🇷','โมร็อกโก':'🇲🇦','แอลจีเรีย':'🇩🇿',
-    'อาร์เจนตินา':'🇦🇷','เม็กซิโก':'🇲🇽','โคลอมเบีย':'🇨🇴',
-    'เยอรมนี':'🇩🇪','โปแลนด์':'🇵🇱','ยูเครน':'🇺🇦',
-    'เบลารุส':'🇧🇾','โรมาเนีย':'🇷🇴','เช็ก':'🇨🇿',
-    'สวีเดน':'🇸🇪','นอร์เวย์':'🇳🇴','เดนมาร์ก':'🇩🇰',
-    'ไอร์แลนด์':'🇮🇪','นิวซีแลนด์':'🇳🇿','แอฟริกาใต้':'🇿🇦',
-    'ซาอุดีอาระเบีย':'🇸🇦','อิหร่าน':'🇮🇷','ปากีสถาน':'🇵🇰',
-    'เวียดนาม':'🇻🇳','ลาว':'🇱🇦','สิงคโปร์':'🇸🇬',
-    'เบลเยียม':'🇧🇪','ออสเตรีย':'🇦🇹','สวิตเซอร์แลนด์':'🇨🇭',
-    'โปรตุเกส':'🇵🇹','กรีซ':'🇬🇷','ทาจิกิสถาน':'🇹🇯',
-    'คีร์กีซสถาน':'🇰🇬','ฮ่องกง':'🇭🇰','ไต้หวัน':'🇹🇼',
+    'ไทย': '🇹🇭', 'ญี่ปุ่น': '🇯🇵', 'เกาหลีใต้': '🇰🇷', 'จีน': '🇨🇳',
+    'บราซิล': '🇧🇷', 'ฟิลิปปินส์': '🇵🇭', 'รัสเซีย': '🇷🇺', 'อิตาลี': '🇮🇹',
+    'ฝรั่งเศส': '🇫🇷', 'อังกฤษ': '🇬🇧', 'สหรัฐ': '🇺🇸', 'แคนาดา': '🇨🇦',
+    'ออสเตรเลีย': '🇦🇺', 'เนเธอร์แลนด์': '🇳🇱', 'สเปน': '🇪🇸',
+    'เมียนมาร์': '🇲🇲', 'กัมพูชา': '🇰🇭', 'มาเลเซีย': '🇲🇾',
+    'อินโดนีเซีย': '🇮🇩', 'อินเดีย': '🇮🇳', 'มองโกเลีย': '🇲🇳',
+    'คาซัคสถาน': '🇰🇿', 'จอร์เจีย': '🇬🇪', 'อุซเบกิสถาน': '🇺🇿',
+    'ตุรกี': '🇹🇷', 'โมร็อกโก': '🇲🇦', 'แอลจีเรีย': '🇩🇿',
+    'อาร์เจนตินา': '🇦🇷', 'เม็กซิโก': '🇲🇽', 'โคลอมเบีย': '🇨🇴',
+    'เยอรมนี': '🇩🇪', 'โปแลนด์': '🇵🇱', 'ยูเครน': '🇺🇦',
+    'เบลารุส': '🇧🇾', 'โรมาเนีย': '🇷🇴', 'เช็ก': '🇨🇿',
+    'สวีเดน': '🇸🇪', 'นอร์เวย์': '🇳🇴', 'เดนมาร์ก': '🇩🇰',
+    'ไอร์แลนด์': '🇮🇪', 'นิวซีแลนด์': '🇳🇿', 'แอฟริกาใต้': '🇿🇦',
+    'ซาอุดีอาระเบีย': '🇸🇦', 'อิหร่าน': '🇮🇷', 'ปากีสถาน': '🇵🇰',
+    'เวียดนาม': '🇻🇳', 'ลาว': '🇱🇦', 'สิงคโปร์': '🇸🇬',
+    'เบลเยียม': '🇧🇪', 'ออสเตรีย': '🇦🇹', 'สวิตเซอร์แลนด์': '🇨🇭',
+    'โปรตุเกส': '🇵🇹', 'กรีซ': '🇬🇷', 'ทาจิกิสถาน': '🇹🇯',
+    'คีร์กีซสถาน': '🇰🇬', 'ฮ่องกง': '🇭🇰', 'ไต้หวัน': '🇹🇼',
+    'สหรัฐอเมริกา': '🇺🇸', 'สหราชอาณาจักร': '🇬🇧', 'เมียนมา': '🇲🇲',
+    'ไอซ์แลนด์': '🇮🇸', 'เช็กเกีย': '🇨🇿', 'สกอตแลนด์': '🏴󠁧󠁢󠁳󠁣󠁴󠁿', 'เวลส์': '🏴󠁧󠁢󠁷󠁬󠁳󠁿',
+    'ฟินแลนด์': '🇫🇮', 'ฮังการี': '🇭🇺', 'บัลแกเรีย': '🇧🇬', 'โครเอเชีย': '🇭🇷',
+    'เซอร์เบีย': '🇷🇸', 'สโลวาเกีย': '🇸🇰', 'สโลวีเนีย': '🇸🇮',
+    'บอสเนียและเฮอร์เซโกวีนา': '🇧🇦', 'อาเซอร์ไบจาน': '🇦🇿', 'อาร์เมเนีย': '🇦🇲',
+    'อิสราเอล': '🇮🇱', 'อิรัก': '🇮🇶', 'ซีเรีย': '🇸🇾', 'เลบานอน': '🇱🇧',
+    'จอร์แดน': '🇯🇴', 'คูเวต': '🇰🇼', 'สหรัฐอาหรับเอมิเรตส์': '🇦🇪',
+    'กาตาร์': '🇶🇦', 'บาห์เรน': '🇧🇭', 'โอมาน': '🇴🇲',
+    'อียิปต์': '🇪🇬', 'ตูนิเซีย': '🇹🇳', 'ไนจีเรีย': '🇳🇬', 'เคนยา': '🇰🇪',
+    'แคเมอรูน': '🇨🇲', 'เซเนกัล': '🇸🇳', 'กานา': '🇬🇭',
+    'ชิลี': '🇨🇱', 'เปรู': '🇵🇪', 'เวเนซุเอลา': '🇻🇪', 'อุรุกวัย': '🇺🇾',
+    'คิวบา': '🇨🇺', 'จาเมกา': '🇯🇲', 'บรูไน': '🇧🇳', 'มาเก๊า': '🇲🇴',
+    'เนปาล': '🇳🇵', 'บังกลาเทศ': '🇧🇩', 'ศรีลังกา': '🇱🇰', 'อัฟกานิสถาน': '🇦🇫',
+    'มัลดีฟส์': '🇲🇻', 'เติร์กเมนิสถาน': '🇹🇲', 'มอลโดวา': '🇲🇩',
+    'ลิทัวเนีย': '🇱🇹', 'ลัตเวีย': '🇱🇻', 'เอสโตเนีย': '🇪🇪',
+    'แอลเบเนีย': '🇦🇱', 'มอนเตเนโกร': '🇲🇪', 'มาซิโดเนียเหนือ': '🇲🇰',
+    'โคโซโว': '🇽🇰', 'ไซปรัส': '🇨🇾', 'มอลตา': '🇲🇹',
 }
-
-def slug(f):
-    """
-    ชื่อไฟล์หน้าโปรไฟล์
-    ถ้าข้อมูลมีช่อง slug มาให้แล้ว (จาก export_json.py) ให้ใช้ตัวนั้นเสมอ
-    เพื่อให้ชื่อไฟล์ตรงกับลิงก์บนเว็บ 100%
-    """
-    if f.get('slug'):
-        return f['slug']
-    return _slug_fallback(f)
-
-
-def _slug_fallback(f):
-    """สร้าง slug จากชื่ออังกฤษ หรือชื่อไทยถ้าไม่มีอังกฤษ"""
-    name = (f.get('name_en') or '').strip() or (f.get('name_th') or '').strip() or str(f.get('id') or 'fighter')
-    s = name.strip()
-    # English: lowercase
-    if all(ord(c) < 128 or c in ' -' for c in s):
-        s = s.lower()
-    s = re.sub(r'[\s]+', '-', s)
-    s = re.sub(r'[/\\:*?"<>|]', '', s)
-    s = re.sub(r'-+', '-', s).strip('-')
-    return s
-
-FLAGS.update({
-    'สหรัฐอเมริกา':'🇺🇸','สหราชอาณาจักร':'🇬🇧','เมียนมา':'🇲🇲','ไอซ์แลนด์':'🇮🇸',
-    'เช็กเกีย':'🇨🇿','สกอตแลนด์':'🏴󠁧󠁢󠁳󠁣󠁴󠁿','เวลส์':'🏴󠁧󠁢󠁷󠁬󠁳󠁿','ฟินแลนด์':'🇫🇮','ฮังการี':'🇭🇺',
-    'บัลแกเรีย':'🇧🇬','โครเอเชีย':'🇭🇷','เซอร์เบีย':'🇷🇸','สโลวาเกีย':'🇸🇰','สโลวีเนีย':'🇸🇮',
-    'บอสเนียและเฮอร์เซโกวีนา':'🇧🇦','อาเซอร์ไบจาน':'🇦🇿','อาร์เมเนีย':'🇦🇲',
-    'อิสราเอล':'🇮🇱','อิรัก':'🇮🇶','ซีเรีย':'🇸🇾','เลบานอน':'🇱🇧','จอร์แดน':'🇯🇴',
-    'คูเวต':'🇰🇼','สหรัฐอาหรับเอมิเรตส์':'🇦🇪','กาตาร์':'🇶🇦','บาห์เรน':'🇧🇭','โอมาน':'🇴🇲',
-    'อียิปต์':'🇪🇬','ตูนิเซีย':'🇹🇳','ไนจีเรีย':'🇳🇬','เคนยา':'🇰🇪','แคเมอรูน':'🇨🇲',
-    'เซเนกัล':'🇸🇳','กานา':'🇬🇭','ชิลี':'🇨🇱','เปรู':'🇵🇪','เวเนซุเอลา':'🇻🇪',
-    'อุรุกวัย':'🇺🇾','คิวบา':'🇨🇺','จาเมกา':'🇯🇲','บรูไน':'🇧🇳','มาเก๊า':'🇲🇴',
-    'เนปาล':'🇳🇵','บังกลาเทศ':'🇧🇩','ศรีลังกา':'🇱🇰','อัฟกานิสถาน':'🇦🇫',
-    'มัลดีฟส์':'🇲🇻','เติร์กเมนิสถาน':'🇹🇲','มอลโดวา':'🇲🇩','ลิทัวเนีย':'🇱🇹',
-    'ลัตเวีย':'🇱🇻','เอสโตเนีย':'🇪🇪','แอลเบเนีย':'🇦🇱','มอนเตเนโกร':'🇲🇪',
-    'มาซิโดเนียเหนือ':'🇲🇰','โคโซโว':'🇽🇰','ไซปรัส':'🇨🇾','มอลตา':'🇲🇹',
-})
-
-
-def page_name(f):
-    """ชื่อไฟล์ HTML ของนักมวยคนนี้ (ไม่รวม .html) ตาม FILENAME_MODE"""
-    if FILENAME_MODE == 'id':
-        return str(f.get('id') or slug(f))
-    return f.get('slug') or slug(f)
 
 
 def fl(c):
@@ -261,8 +271,82 @@ def fl(c):
         if out:
             return ' '.join(out)
     return '🏳️'
-def esc(s): return H.escape(str(s)) if s else ''
 
+
+def esc(s):
+    """escape HTML — None / ค่าว่าง คืนสตริงว่าง"""
+    return H.escape(str(s)) if s not in (None, '') else ''
+
+
+# ═══════════════════════════════════════════════════════════
+# ชื่อไฟล์หน้าโปรไฟล์
+# ═══════════════════════════════════════════════════════════
+def _slug_fallback(f):
+    """สร้าง slug จากชื่ออังกฤษ หรือชื่อไทยถ้าไม่มีอังกฤษ"""
+    name = ((f.get('name_en') or '').strip()
+            or (f.get('name_th') or '').strip()
+            or str(f.get('id') or 'fighter'))
+    s = name.strip()
+    # ชื่ออังกฤษล้วน -> ตัวพิมพ์เล็กทั้งหมด (กันปัญหาโฮสต์แยกตัวพิมพ์)
+    if all(ord(c) < 128 or c in ' -' for c in s):
+        s = s.lower()
+    s = re.sub(r'\s+', '-', s)
+    s = re.sub(r'[/\\:*?"<>|]', '', s)
+    s = re.sub(r'-+', '-', s).strip('-')
+    return s or 'fighter'
+
+
+def slug(f):
+    """
+    ถ้าข้อมูลมีช่อง slug มาให้แล้ว (จาก export_json.py) ให้ใช้ตัวนั้นเสมอ
+    เพื่อให้ชื่อไฟล์ตรงกับลิงก์บนเว็บ 100%
+    """
+    return f.get('slug') or _slug_fallback(f)
+
+
+def base_page_name(f):
+    """ชื่อไฟล์ตั้งต้น (ยังไม่ผ่านการกันซ้ำ) ตาม FILENAME_MODE"""
+    if FILENAME_MODE == 'id':
+        return str(f.get('id') or slug(f))
+    return f.get('slug') or slug(f)
+
+
+def assign_page_names(fighters):
+    """
+    กำหนดชื่อไฟล์สุดท้ายให้นักมวยทุกคนล่วงหน้า แล้วเก็บไว้ใน f['_page']
+
+    ต้องทำก่อนเจนหน้าใด ๆ เพราะลิงก์คู่ต่อสู้ต้องใช้ชื่อไฟล์ "ตัวจริง"
+    ถ้าคนไหนโดนกันซ้ำจนได้ชื่อ -2 แล้วลิงก์ยังชี้ชื่อเดิม ลิงก์นั้นจะ 404
+    """
+    used, dups = {}, []
+    for f in fighters:
+        name = base_page_name(f)
+        key = name.lower()          # กันซ้ำแบบไม่สนตัวพิมพ์ — โฮสต์บางเจ้าไม่แยก
+        if key in used:
+            used[key] += 1
+            new_name = '%s-%d' % (name, used[key])
+            dups.append((f.get('name_th') or f.get('id'), name, new_name))
+            name = new_name
+            used[name.lower()] = 1
+        else:
+            used[key] = 1
+        f['_page'] = name
+    return dups
+
+
+def page_name(f):
+    """ชื่อไฟล์ HTML ของนักมวยคนนี้ (ไม่รวม .html)"""
+    return f.get('_page') or base_page_name(f)
+
+
+def page_href(f):
+    """ทางไปหน้าโปรไฟล์ของนักมวย เมื่อเรียกจากในโฟลเดอร์ fighters/"""
+    return '%s.html' % quote(page_name(f), safe='')
+
+
+# ═══════════════════════════════════════════════════════════
+# อ่าน / ประมวลผลข้อมูล
+# ═══════════════════════════════════════════════════════════
 def derive_stats(fighter, history):
     """
     เติมสถิติที่เทมเพลตต้องใช้ (total_wins / total_losses / total_nc /
@@ -270,23 +354,19 @@ def derive_stats(fighter, history):
     ไฟต์ที่ยัง "รอแข่งขัน" ไม่ถูกนับ
     """
     past = [h for h in history if h.get('result_type') != 'upcoming']
-    wins   = sum(1 for h in past if h.get('result_type') == 'win')
+    wins = sum(1 for h in past if h.get('result_type') == 'win')
     losses = sum(1 for h in past if h.get('result_type') == 'loss')
-    draws  = sum(1 for h in past if h.get('result_type') == 'draw')
-    nc     = sum(1 for h in past if h.get('result_type') == 'nc')
-    total  = len(past)
-    fighter['total_wins']   = wins
+    draws = sum(1 for h in past if h.get('result_type') == 'draw')
+    nc = sum(1 for h in past if h.get('result_type') == 'nc')
+
+    fighter['total_wins'] = wins
     fighter['total_losses'] = losses
-    fighter['total_draws']  = draws
-    fighter['total_nc']     = nc
-    fighter['total_fights'] = total
-    fighter['win_rate']     = round(wins / (wins + losses) * 100) if (wins + losses) else 0
-    fighter['ko_wins']      = sum(1 for h in past if h.get('result_type') == 'win' and is_finish(h))
+    fighter['total_draws'] = draws
+    fighter['total_nc'] = nc
+    fighter['total_fights'] = len(past)
+    fighter['win_rate'] = round(wins / (wins + losses) * 100) if (wins + losses) else 0
+    fighter['ko_wins'] = sum(1 for h in past if h.get('result_type') == 'win' and is_finish(h))
     return fighter
-
-
-def fighters_count(fighters):
-    return len(fighters)
 
 
 def load_from_js(path):
@@ -298,8 +378,8 @@ def load_from_js(path):
         text = fh.read()
 
     fighters = extract_js_const(text, 'FIGHTERS')
-    history  = extract_js_const(text, 'HISTORY')
-    meta     = extract_js_const(text, 'META') or {}
+    history = extract_js_const(text, 'HISTORY')
+    meta = extract_js_const(text, 'META') or {}
 
     if fighters is None:
         raise ValueError('ไม่พบ FIGHTERS ในไฟล์ — ไฟล์อาจไม่ใช่ผลลัพธ์จาก export_json.py')
@@ -323,63 +403,56 @@ def load_from_js(path):
 
 
 def cimg(fn, size='lg'):
-    if not fn: return ''
-    clean = re.sub(r'\.(jpg|jpeg|png|webp)$', '', fn, flags=re.IGNORECASE)
-    d = {'sm':'w_80,h_80,g_face','md':'w_160,h_160,g_face','lg':'w_300,h_375,g_north'}
-    return f'https://res.cloudinary.com/{CLOUD}/image/upload/c_fill,{d.get(size,d["lg"])},f_auto,q_auto/{clean}'
+    """URL รูปจาก Cloudinary"""
+    if not fn:
+        return ''
+    clean = re.sub(r'\.(jpg|jpeg|png|webp)$', '', str(fn), flags=re.IGNORECASE)
+    d = {'sm': 'w_80,h_80,g_face', 'md': 'w_160,h_160,g_face', 'lg': 'w_300,h_375,g_north'}
+    return ('https://res.cloudinary.com/%s/image/upload/c_fill,%s,f_auto,q_auto/%s'
+            % (CLOUD, d.get(size, d['lg']), clean))
 
-# ═══ ดึง CSS จาก profile.html ต้นฉบับ ═══
-# อ่านจากไฟล์จริงเพื่อให้ตรง 100%
+
+# ═══════════════════════════════════════════════════════════
+# CSS — ดึงจากไฟล์จริงเพื่อให้หน้าตาตรงกับ profile.html 100%
+# ═══════════════════════════════════════════════════════════
 def load_profile_css():
     """อ่าน CSS ทั้งหมดจาก profile.html ต้นฉบับ"""
     profile_path = os.path.join(ROOT, 'profile.html')
-    if not os.path.exists(profile_path):
-        print(f'⚠️  ไม่พบ {profile_path} — ใช้ CSS fallback')
-        return None
-    with open(profile_path, 'r', encoding='utf-8') as f:
-        content = f.read()
-    # ดึง <style>...</style> ทั้งหมด
-    blocks = re.findall(r'<style>(.*?)</style>', content, re.DOTALL)
+    if not os.path.isfile(profile_path):
+        print('⚠️   ไม่พบ %s — หน้าที่เจนจะไม่มี CSS ของ profile.html' % profile_path)
+        return ''
+    with open(profile_path, 'r', encoding='utf-8') as fh:
+        content = fh.read()
+    blocks = re.findall(r'<style[^>]*>(.*?)</style>', content, re.DOTALL)
     return '\n'.join(blocks)
 
-# ═══ ดึง CSS จาก style.css + boxfan-tokens.css ═══
+
 def load_external_css():
     """อ่าน CSS จากไฟล์ภายนอกที่ profile.html อ้างถึง"""
     css = ''
-    for fn in ['style.css', 'boxfan-tokens.css']:
+    for fn in ('style.css', 'boxfan-tokens.css'):
         path = os.path.join(ROOT, fn)
-        if os.path.exists(path):
-            with open(path, 'r', encoding='utf-8') as f:
-                css += f'\n/* ── {fn} ── */\n' + f.read()
+        if os.path.isfile(path):
+            with open(path, 'r', encoding='utf-8') as fh:
+                css += '\n/* ── %s ── */\n' % fn + fh.read()
+        else:
+            print('⚠️   ไม่พบ %s' % path)
     return css
 
 
-def generate(f, history, full_css, fighters_map):
-    name_th = esc(f.get('name_th',''))
-    name_en = esc(f.get('name_en',''))
-    country = esc(f.get('country',''))
-    division = esc(f.get('division',''))
-    team = esc(f.get('team',''))
-    wins = f.get('total_wins',0)
-    losses = f.get('total_losses',0)
-    nc = f.get('total_nc',0) or 0
-    total = f.get('total_fights',0)
-    wr = f.get('win_rate',0) or 0
-    bio = esc(f.get('biography',''))
-    age = f.get('age','')
-    img = cimg(f.get('image_filename'),'lg')
-    fid = quote(str(f['id']), safe='')   # id เป็นข้อความไทย ต้อง encode ก่อนใส่ URL
-    s = quote(page_name(f), safe='')     # ชื่อไฟล์สำหรับ canonical URL
+# ═══════════════════════════════════════════════════════════
+# เจนหน้า HTML
+# ═══════════════════════════════════════════════════════════
+PH_IMG = ('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 '
+          'width=%2250%22 height=%2250%22><rect fill=%22%23232d3b%22 '
+          'width=%2250%22 height=%2250%22 rx=%228%22/></svg>')
 
-    title = f'{name_th} ({name_en}) สถิตินักมวย | Boxfan' if name_en else f'{name_th} สถิตินักมวย | Boxfan'
-    desc = f'{name_th} นักมวย ONE Championship {division} สถิติ {wins}W {losses}L อัตราชนะ {wr}% | Boxfan'
-    canonical = f'{SITE}/fighters/{s}.html'
 
-    past = [h for h in history if h.get('result_type') != 'upcoming']
-    past.sort(key=lambda x: x.get('date',''), reverse=True)
-    up = [h for h in history if h.get('result_type') == 'upcoming']
-    # คะแนน: ต้องใช้สูตรเดียวกับ score() ใน utils.js ไม่งั้นตัวเลขจะไม่ตรงกับหน้าอันดับ
-    #   ชนะ +3 · ชนะน็อก/ซับมิชชันในยกแรก +1 · แพ้ -3
+def build_score(past):
+    """
+    คะแนน: ต้องใช้สูตรเดียวกับ score() ใน utils.js ไม่งั้นตัวเลขจะไม่ตรงกับหน้าอันดับ
+      ชนะ +3 · ชนะน็อก/ซับมิชชันในยกแรก +1 · แพ้ -3
+    """
     sc = 0
     for h in past:
         if h.get('result_type') == 'win':
@@ -388,79 +461,53 @@ def generate(f, history, full_css, fighters_map):
                 sc += 1
         elif h.get('result_type') == 'loss':
             sc -= 3
+    return sc
 
-    # Days since last fight
-    days_rest = ''
-    if past:
-        from datetime import datetime, date
-        try:
-            last_date = datetime.strptime(past[0].get('date',''), '%Y-%m-%d').date()
-            delta = (date.today() - last_date).days
-            days_rest = f'<span class="htag">พัก {delta} วัน</span>'
-        except: pass
 
-    # Form bar
-    form = ''
-    for h in reversed(past[:10]):
-        r = h.get('result_type','')
-        if r == 'win': form += '<div class="fseg win">W</div>'
-        elif r == 'loss': form += '<div class="fseg loss">L</div>'
-        else: form += '<div class="fseg nc">NC</div>'
-
-    # Tags
-    tags = ''
-    if country: tags += f'<span class="htag">{fl(f.get("country",""))} {country}</span>'
-    if team: tags += f'<span class="htag">{team}</span>'
-    if age: tags += f'<span class="htag">อายุ {age} ปี</span>'
-    tags += f'<span class="htag htag-pts">{sc} pts</span>'
-    if days_rest: tags += f' {days_rest}'
-
-    # Physical grid
-    pg = ''
-    if f.get('height_ft_in'): pg += f'<div class="pitem"><div class="pval">{f["height_ft_in"]}</div><div class="plbl">ส่วนสูง</div></div>'
-    if f.get('height_cm'): pg += f'<div class="pitem"><div class="pval">{f["height_cm"]}</div><div class="plbl">ซม.</div></div>'
-    if f.get('weight_lbs'): pg += f'<div class="pitem"><div class="pval">{f["weight_lbs"]}</div><div class="plbl">ปอนด์</div></div>'
-    if f.get('weight_kg'): pg += f'<div class="pitem"><div class="pval">{f["weight_kg"]}</div><div class="plbl">กก.</div></div>'
-    pg += f'<div class="pitem accent"><div class="pval">{sc}</div><div class="plbl">คะแนน</div></div>'
-    pg += f'<div class="pitem"><div class="pval">{total}</div><div class="plbl">แมตช์รวม</div></div>'
-
-    # NC record
-    nc_html = ''
-    if nc > 0:
-        nc_html = f'<div class="rsep">–</div><div><div class="rn n">{nc}</div><div class="rl">NC</div></div>'
-
-    # Fight table rows
-    PH_IMG = 'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2250%22 height=%2250%22><rect fill=%22%23232d3b%22 width=%2250%22 height=%2250%22 rx=%228%22/></svg>'
+def build_rows(fights, fighters_map):
+    """แถวตารางประวัติการชก"""
     rows = ''
-    for h in (up + past[:10]):
-        r = h.get('result_type','')
-        if r == 'win': badge = '<span class="bw">ชนะ</span>'
-        elif r == 'loss': badge = '<span class="bl">แพ้</span>'
-        elif r == 'upcoming': badge = '<span class="bu">รอผล</span>'
-        else: badge = '<span class="bn">NC</span>'
-        opp_name = h.get('opponent','—')
-        opp = esc(opp_name)
-        date = esc(h.get('date','—'))
-        event = esc(h.get('event','—'))
-        decision = esc(h.get('decision',''))
-        rules = esc(h.get('rules',''))
-        rnd = h.get('round','')
-        time = h.get('time','')
-        opp_country = h.get('opponent_country','')
-        method = f'<span class="deco-pill">{decision}</span>' if decision else '<span class="dash">—</span>'
-        if rnd: method += f'<div style="font-size:11px;color:var(--tx-3);margin-top:3px">ยก {rnd}{" · "+time if time else ""}</div>'
+    for h in fights:
+        r = h.get('result_type', '')
+        if r == 'win':
+            badge = '<span class="bw">ชนะ</span>'
+        elif r == 'loss':
+            badge = '<span class="bl">แพ้</span>'
+        elif r == 'upcoming':
+            badge = '<span class="bu">รอผล</span>'
+        else:
+            badge = '<span class="bn">NC</span>'
 
-        # Opponent image + link lookup
+        opp_name = h.get('opponent') or ''
+        opp = esc(opp_name) or '—'
+        fight_date = esc(h.get('date')) or '—'
+        event = esc(h.get('event')) or '—'
+        decision = esc(h.get('decision'))
+        rules = esc(h.get('rules'))
+        rnd = h.get('round') or ''
+        tm = h.get('time') or ''
+        opp_country = h.get('opponent_country') or ''
+
+        method = ('<span class="deco-pill">%s</span>' % decision) if decision else '<span class="dash">—</span>'
+        if rnd:
+            method += ('<div style="font-size:11px;color:var(--tx-3);margin-top:3px">ยก %s%s</div>'
+                       % (rnd, ' · ' + esc(tm) if tm else ''))
+
+        # รูป + ลิงก์คู่ต่อสู้ (ใช้ชื่อไฟล์ตัวจริงที่ผ่านการกันซ้ำแล้ว)
         opp_f = fighters_map.get(opp_name)
         if opp_f:
             opp_img = cimg(opp_f.get('image_filename'), 'sm') or PH_IMG
-            opp_link = '../fighters/%s.html' % quote(page_name(opp_f), safe='')
-            opp_td = f'''<td><div class="opp-row"><a href="{opp_link}"><img class="opp-av" src="{opp_img}" loading="lazy" alt="{opp}"></a><div><a href="{opp_link}" class="opp-name-link">{opp}</a>'''
+            opp_link = '../fighters/%s' % page_href(opp_f)
+            opp_td = ('<td><div class="opp-row"><a href="%s"><img class="opp-av" src="%s" '
+                      'loading="lazy" alt="%s"></a><div><a href="%s" class="opp-name-link">%s</a>'
+                      % (opp_link, opp_img, opp, opp_link, opp))
         else:
-            opp_td = f'''<td><div class="opp-row"><img class="opp-av no-link" src="{PH_IMG}" alt=""><div><span class="opp-name-nolink">{opp}</span>'''
+            opp_td = ('<td><div class="opp-row"><img class="opp-av no-link" src="%s" alt="">'
+                      '<div><span class="opp-name-nolink">%s</span>' % (PH_IMG, opp))
 
         if opp_country and opp_country != '-':
-            opp_td += f'<div style="font-size:11px;color:var(--tx-3)">{fl(opp_country)} {esc(opp_country)}</div>'
+            opp_td += ('<div style="font-size:11px;color:var(--tx-3)">%s %s</div>'
+                       % (fl(opp_country), esc(opp_country)))
         opp_td += '</div></div></td>'
 
         rows += f'''<tr>
@@ -469,10 +516,122 @@ def generate(f, history, full_css, fighters_map):
 <td class="col-hide-sm">{method}</td>
 <td class="col-hide-sm" style="color:var(--tx-3);font-size:12px">{rules or "—"}</td>
 <td class="col-hide-sm" style="font-size:12px">{event}</td>
-<td style="color:var(--tx-3);font-size:12px;white-space:nowrap">{date}</td>
+<td style="color:var(--tx-3);font-size:12px;white-space:nowrap">{fight_date}</td>
 </tr>'''
+    return rows
 
-    jsonld = json.dumps({"@context":"https://schema.org","@type":"Person","name":f.get('name_th',''),"alternateName":f.get('name_en') or None,"description":f'{name_th} นักมวย ONE Championship {division}',"image":img,"url":canonical,"nationality":f.get('country') or None,"sport":"Muay Thai / Kickboxing / MMA","memberOf":{"@type":"SportsOrganization","name":"ONE Championship"}}, ensure_ascii=False)
+
+def generate(f, history, full_css, fighters_map):
+    name_th = esc(f.get('name_th'))
+    name_en = esc(f.get('name_en'))
+    country = esc(f.get('country'))
+    division = esc(f.get('division'))
+    team = esc(f.get('team'))
+    bio = esc(f.get('biography'))
+    age = f.get('age') or ''
+
+    wins = f.get('total_wins', 0) or 0
+    losses = f.get('total_losses', 0) or 0
+    nc = f.get('total_nc', 0) or 0
+    total = f.get('total_fights', 0) or 0
+    wr = float(f.get('win_rate') or 0)
+
+    img = cimg(f.get('image_filename'), 'lg')
+    fid = quote(str(f.get('id') or ''), safe='')     # id เป็นข้อความไทย ต้อง encode ก่อนใส่ URL
+    s = quote(page_name(f), safe='')                 # ชื่อไฟล์สำหรับ canonical URL
+
+    title = (f'{name_th} ({name_en}) สถิตินักมวย | Boxfan' if name_en
+             else f'{name_th} สถิตินักมวย | Boxfan')
+    desc = f'{name_th} นักมวย ONE Championship {division} สถิติ {wins}W {losses}L อัตราชนะ {wr:.0f}% | Boxfan'
+    canonical = f'{SITE}/fighters/{s}.html'
+
+    past = [h for h in history if h.get('result_type') != 'upcoming']
+    past.sort(key=lambda x: x.get('date') or '', reverse=True)
+    up = [h for h in history if h.get('result_type') == 'upcoming']
+    up.sort(key=lambda x: x.get('date') or '')       # ไฟต์ที่จะถึง เรียงใกล้ -> ไกล
+
+    sc = build_score(past)
+
+    # จำนวนวันนับจากไฟต์ล่าสุด
+    days_rest = ''
+    if past:
+        try:
+            last_date = datetime.strptime(str(past[0].get('date') or ''), '%Y-%m-%d').date()
+            days_rest = '<span class="htag">พัก %d วัน</span>' % (date.today() - last_date).days
+        except (ValueError, TypeError):
+            pass
+
+    # แถบฟอร์มล่าสุด
+    form = ''
+    for h in reversed(past[:10]):
+        r = h.get('result_type', '')
+        if r == 'win':
+            form += '<div class="fseg win">W</div>'
+        elif r == 'loss':
+            form += '<div class="fseg loss">L</div>'
+        else:
+            form += '<div class="fseg nc">NC</div>'
+
+    # ป้ายกำกับ
+    tags = ''
+    if country:
+        tags += f'<span class="htag">{fl(f.get("country"))} {country}</span>'
+    if team:
+        tags += f'<span class="htag">{team}</span>'
+    if age:
+        tags += f'<span class="htag">อายุ {esc(age)} ปี</span>'
+    tags += f'<span class="htag htag-pts">{sc} pts</span>'
+    if days_rest:
+        tags += f' {days_rest}'
+
+    # ตารางข้อมูลร่างกาย
+    pg = ''
+    for key, label in (('height_ft_in', 'ส่วนสูง'), ('height_cm', 'ซม.'),
+                       ('weight_lbs', 'ปอนด์'), ('weight_kg', 'กก.')):
+        if f.get(key):
+            pg += f'<div class="pitem"><div class="pval">{esc(f[key])}</div><div class="plbl">{label}</div></div>'
+    pg += f'<div class="pitem accent"><div class="pval">{sc}</div><div class="plbl">คะแนน</div></div>'
+    pg += f'<div class="pitem"><div class="pval">{total}</div><div class="plbl">แมตช์รวม</div></div>'
+
+    nc_html = ''
+    if nc > 0:
+        nc_html = f'<div class="rsep">–</div><div><div class="rn n">{nc}</div><div class="rl">NC</div></div>'
+
+    rows = build_rows(up + past[:10], fighters_map)
+
+    # JSON-LD — ใช้ข้อความดิบ (json.dumps จะ escape ให้เอง) และตัดคีย์ที่ว่างทิ้ง
+    ld = {
+        '@context': 'https://schema.org',
+        '@type': 'Person',
+        'name': f.get('name_th') or '',
+        'alternateName': f.get('name_en') or None,
+        'description': ('%s นักมวย ONE Championship %s'
+                        % (f.get('name_th') or '', f.get('division') or '')).strip(),
+        'image': img or None,
+        'url': canonical,
+        'nationality': f.get('country') or None,
+        'sport': 'Muay Thai / Kickboxing / MMA',
+        'memberOf': {'@type': 'SportsOrganization', 'name': 'ONE Championship'},
+    }
+    jsonld = json.dumps({k: v for k, v in ld.items() if v is not None}, ensure_ascii=False)
+
+    form_html = (('<div class="form-label">ฟอร์มล่าสุด %d แมตช์</div><div class="fbar">%s</div>'
+                  % (min(len(past), 10), form)) if form else '')
+    empty_row = ('<tr><td colspan="6" style="padding:32px;text-align:center;'
+                 'color:var(--tx-3)">ยังไม่มีประวัติการชก</td></tr>')
+    more_html = (('<div style="margin-top:8px;font-size:12px;color:var(--tx-4);text-align:center">'
+                  'แสดง %d จาก %d แมตช์</div>'
+                  % (min(len(past), 10) + len(up), len(past) + len(up))) if len(past) > 10 else '')
+    bio_html = (('<div style="margin-top:18px;padding:24px;background:var(--surf);'
+                 'border:1px solid var(--line-2);border-radius:11px;box-shadow:var(--sh-2)">'
+                 '<div style="font-family:var(--sans);font-size:15px;font-weight:800;color:var(--tx);'
+                 'margin-bottom:12px;display:flex;align-items:center;gap:8px;text-transform:uppercase">'
+                 '<span style="color:var(--gold)">★</span> ประวัตินักมวย</div>'
+                 '<p style="line-height:1.9;color:var(--tx-2);font-size:14px;margin:0">%s</p></div>'
+                 % bio) if bio else '')
+    flag_html = ('<div class="hflag">%s</div>' % fl(f.get('country'))) if country else ''
+    div_html = ('<div class="hdiv">%s</div>' % division) if division else ''
+    name_en_html = ('<div class="hname-en">%s</div>' % name_en) if name_en else ''
 
     return f'''<!DOCTYPE html>
 <html lang="th" data-theme="light">
@@ -525,7 +684,7 @@ def generate(f, history, full_css, fighters_map):
     <a class="nav-tab" href="../index.html">อันดับ</a>
     <a class="nav-tab" href="../rankings.html">ตารางคะแนน</a>
     <a class="nav-tab" href="../weight-classes.html">แยกตามรุ่น</a>
-    <a class="nav-tab" href="../Fighters.html">นักมวยทั้งหมด</a>
+    <a class="nav-tab" href="../{FIGHTERS_PAGE}">นักมวยทั้งหมด</a>
     <a class="nav-tab" href="../schedule.html">โปรแกรมชก</a>
     <a class="nav-tab" href="../results.html">ผลการแข่งขัน</a>
     <a class="nav-tab" href="../compare.html">เปรียบเทียบ</a>
@@ -535,18 +694,18 @@ def generate(f, history, full_css, fighters_map):
 </nav>
 
 <div class="page">
-  <a class="back" href="../Fighters.html">← นักมวยทั้งหมด</a>
+  <a class="back" href="../{FIGHTERS_PAGE}">← นักมวยทั้งหมด</a>
 
   <!-- HERO -->
   <div class="hero">
     <div class="hav-wrap">
       <img class="hav" src="{img}" alt="{name_th}" loading="eager">
-      {'<div class="hflag">' + fl(f.get("country","")) + '</div>' if country else ''}
+      {flag_html}
     </div>
     <div class="hinfo">
-      {'<div class="hdiv">' + division + '</div>' if division else ''}
+      {div_html}
       <h1 class="hname">{name_th}</h1>
-      {'<div class="hname-en">' + name_en + '</div>' if name_en else ''}
+      {name_en_html}
       <div class="htags">{tags}</div>
       <div class="hrec">
         <div><div class="rn w">{wins}</div><div class="rl">ชนะ</div></div>
@@ -565,22 +724,22 @@ def generate(f, history, full_css, fighters_map):
   <div class="pgrid">{pg}</div>
 
   <!-- FORM BAR -->
-  {('<div class="form-label">ฟอร์มล่าสุด ' + str(min(len(past),10)) + ' แมตช์</div><div class="fbar">' + form + '</div>') if form else ''}
+  {form_html}
 
   <!-- FIGHT HISTORY -->
   <div class="card" style="overflow:hidden">
     <table class="tbl"><thead><tr>
       <th>ผล</th><th>คู่ต่อสู้</th><th class="col-hide-sm">วิธี/ยก</th><th class="col-hide-sm">กติกา</th><th class="col-hide-sm">อีเวนต์</th><th>วันที่</th>
     </tr></thead><tbody>
-    {rows if rows else '<tr><td colspan="6" style="padding:32px;text-align:center;color:var(--tx-3)">ยังไม่มีประวัติการชก</td></tr>'}
+    {rows if rows else empty_row}
     </tbody></table>
   </div>
 
-  {('<div style="margin-top:8px;font-size:12px;color:var(--tx-4);text-align:center">แสดง ' + str(min(len(past),10)+len(up)) + ' จาก ' + str(len(past)+len(up)) + ' แมตช์</div>') if len(past) > 10 else ''}
+  {more_html}
 
   <a class="back" href="../profile.html?id={fid}" style="margin-top:18px;background:var(--red);color:#fff;border-color:var(--red)">ดูข้อมูลเต็ม + เปรียบเทียบสถิติ →</a>
 
-  {('<div style="margin-top:18px;padding:24px;background:var(--surf);border:1px solid var(--line-2);border-radius:11px;box-shadow:var(--sh-2)"><div style="font-family:var(--sans);font-size:15px;font-weight:800;color:var(--tx);margin-bottom:12px;display:flex;align-items:center;gap:8px;text-transform:uppercase"><span style="color:var(--gold)">★</span> ประวัตินักมวย</div><p style="line-height:1.9;color:var(--tx-2);font-size:14px;margin:0">' + bio + '</p></div>') if bio else ''}
+  {bio_html}
 </div>
 
 <!-- FOOTER -->
@@ -605,6 +764,41 @@ def generate(f, history, full_css, fighters_map):
 </html>'''
 
 
+# ═══════════════════════════════════════════════════════════
+# ตรวจความเรียบร้อยก่อน/หลังเจน
+# ═══════════════════════════════════════════════════════════
+def check_fighters_page():
+    """เตือนถ้าหน้ารวมนักมวยที่ลิงก์ไปหาไม่มีอยู่จริง หรือสะกดตัวพิมพ์ไม่ตรง"""
+    target = os.path.join(ROOT, FIGHTERS_PAGE)
+    if os.path.isfile(target):
+        # เทียบชื่อจริงบนดิสก์ เพื่อจับกรณี Windows เปิดผ่านแต่ Linux 404
+        try:
+            actual = [n for n in os.listdir(ROOT) if n.lower() == FIGHTERS_PAGE.lower()]
+        except OSError:
+            return
+        if actual and actual[0] != FIGHTERS_PAGE:
+            print('⚠️   ลิงก์ชี้ไป "%s" แต่ไฟล์จริงชื่อ "%s"' % (FIGHTERS_PAGE, actual[0]))
+            print('       ตัวพิมพ์ไม่ตรง = 404 บน GitHub Pages / Netlify / เซิร์ฟเวอร์ Linux')
+            print('       แก้ชื่อไฟล์ให้เป็น %s หรือแก้ค่า FIGHTERS_PAGE ในสคริปต์' % FIGHTERS_PAGE)
+            print()
+    else:
+        print('⚠️   ไม่พบ %s — ปุ่ม "← นักมวยทั้งหมด" จะกดไม่ติด' % target)
+        print()
+
+
+def check_uppercase(fighters):
+    """เตือนถ้าชื่อไฟล์มีตัวพิมพ์ใหญ่ปน (เสี่ยง 404 บนโฮสต์ที่แยกตัวพิมพ์)"""
+    ups = [f['_page'] for f in fighters if f['_page'] != f['_page'].lower()]
+    if ups:
+        print('⚠️   ชื่อไฟล์ %d หน้ามีตัวพิมพ์ใหญ่ปน — ต้องแน่ใจว่าลิงก์ในเว็บสะกดตรงกันเป๊ะ' % len(ups))
+        for name in ups[:5]:
+            print('       %s.html' % name)
+        if len(ups) > 5:
+            print('       …และอีก %d หน้า' % (len(ups) - 5))
+        print()
+
+
+# ═══════════════════════════════════════════════════════════
 def main():
     path = find_data_file()
     if not path:
@@ -616,29 +810,40 @@ def main():
         print()
         print('    วิธีแก้: รัน export_json.py ก่อน หรือระบุทางเอง')
         print('      python generate_profiles.py C:/path/to/fighters_data.js')
-        return
+        return 1
 
     print('📄  ไฟล์ข้อมูล : %s' % os.path.abspath(path))
     print('🕐  แก้ล่าสุด  : %s' % _mtime_str(path))
     try:
         fighters, hmap, meta = load_from_js(path)
-    except Exception as err:
+    except (OSError, ValueError, json.JSONDecodeError) as err:
         print('❌  อ่านไฟล์ไม่สำเร็จ: %s' % err)
-        return
+        return 1
 
     if not fighters:
         print('❌  ไม่มีข้อมูลนักมวยในไฟล์')
-        return
-    if meta.get('generated_at'):
-        print('📊  export เมื่อ : %s  (%s คน)' % (meta['generated_at'], meta.get('fighter_count', len(fighters))))
-    print('👤  อ่านได้    : %d คน / %d ไฟต์' % (fighters_count(fighters), sum(len(v) for v in hmap.values())))
-    print()
-    warn_if_stale(path)
+        return 1
 
-    # โหลด CSS จาก profile.html + style.css + boxfan-tokens.css
-    profile_css = load_profile_css() or ''
-    external_css = load_external_css()
-    full_css = external_css + '\n' + profile_css
+    total_fights = sum(len(v) for v in hmap.values())
+    if meta.get('generated_at'):
+        print('📊  export เมื่อ : %s  (%s คน)'
+              % (meta['generated_at'], meta.get('fighter_count', len(fighters))))
+    print('👤  อ่านได้    : %d คน / %d ไฟต์' % (len(fighters), total_fights))
+    print()
+
+    warn_if_stale(path)
+    check_fighters_page()
+
+    full_css = load_external_css() + '\n' + load_profile_css()
+
+    # ── ขั้นที่ 1: กำหนดชื่อไฟล์ให้ครบทุกคนก่อน ──
+    # ต้องทำก่อนเจน เพราะลิงก์คู่ต่อสู้ต้องรู้ชื่อไฟล์ตัวจริงของอีกฝ่าย
+    dups = assign_page_names(fighters)
+    for who, old, new in dups:
+        print('⚠️   ชื่อไฟล์ซ้ำ: %s (%s) -> เปลี่ยนเป็น %s.html' % (who, old, new))
+    if dups:
+        print()
+    check_uppercase(fighters)
 
     # แผนที่ ชื่อ -> นักมวย สำหรับหารูปและลิงก์ของคู่ต่อสู้
     fighters_map = {}
@@ -648,48 +853,55 @@ def main():
                 fighters_map[ff[key]] = ff
 
     os.makedirs(OUT, exist_ok=True)
-    old_files = set(x for x in os.listdir(OUT) if x.endswith('.html'))
-    for x in old_files:
-        os.remove(os.path.join(OUT, x))
-    if old_files:
-        print('🧹  ลบหน้าเก่า %d ไฟล์' % len(old_files))
+    before = set(n for n in os.listdir(OUT) if n.lower().endswith('.html'))
 
+    # ── ขั้นที่ 2: เจนทุกหน้า (ยังไม่ลบอะไรทั้งนั้น) ──
     print('🏷️   โหมดตั้งชื่อไฟล์: %s' % FILENAME_MODE)
-    count, used_slugs, made = 0, {}, []
+    written, failed = [], []
     for f in fighters:
-        s = page_name(f)
-        # กันชื่อไฟล์ซ้ำ (นักมวยคนละคนแต่ชื่อไฟล์ตรงกัน)
-        if s in used_slugs:
-            used_slugs[s] += 1
-            s = '%s-%d' % (s, used_slugs[s])
-            print('⚠️   ชื่อไฟล์ซ้ำ: %s -> เปลี่ยนเป็น %s.html' % (f.get('name_th'), s))
-        else:
-            used_slugs[s] = 1
-        fname = '%s.html' % s
-        target = os.path.join(OUT, fname)
-        content = generate(f, hmap.get(f['id'], []), full_css, fighters_map)
-        with open(target, 'w', encoding='utf-8') as fh:
-            fh.write(content)
-        made.append((fname, f.get('name_th') or f.get('id')))
-        count += 1
+        fname = '%s.html' % f['_page']
+        try:
+            content = generate(f, hmap.get(f.get('id'), []), full_css, fighters_map)
+            with open(os.path.join(OUT, fname), 'w', encoding='utf-8', newline='\n') as fh:
+                fh.write(content)
+            written.append((fname, f.get('name_th') or f.get('id')))
+        except Exception as err:                       # noqa: BLE001 — คนเดียวพังไม่ควรล้มทั้งชุด
+            failed.append((f.get('name_th') or f.get('id'), err))
 
-    total_fights = sum(len(v) for v in hmap.values())
     print()
-    print('✅  สร้าง %d หน้านักมวย (%d ไฟต์) → %s' % (count, total_fights, OUT))
+    print('✅  สร้าง %d หน้านักมวย (%d ไฟต์) → %s' % (len(written), total_fights, OUT))
 
-    # หน้าที่ไม่เคยมีมาก่อน (เทียบกับรอบก่อนหน้า)
-    fresh = [n for n, _ in made if n not in old_files]
-    if fresh and old_files:
+    if failed:
+        print('❌  เจนไม่สำเร็จ %d คน:' % len(failed))
+        for who, err in failed[:10]:
+            print('       %s — %s' % (who, err))
+
+    # ── ขั้นที่ 3: เจนครบแล้วค่อยเก็บกวาดหน้าที่ตกค้าง ──
+    # (ถ้าลบก่อนแล้วสคริปต์พังกลางทาง หน้าเก่าจะหายเกลี้ยงโฟลเดอร์)
+    current = set(n for n, _ in written)
+    stale = sorted(before - current)
+    if stale and not failed:
+        for n in stale:
+            try:
+                os.remove(os.path.join(OUT, n))
+            except OSError as err:
+                print('⚠️   ลบ %s ไม่ได้: %s' % (n, err))
+        print('🧹  ลบหน้าที่ไม่มีในข้อมูลแล้ว %d ไฟล์: %s'
+              % (len(stale), ', '.join(stale[:10]) + ('…' if len(stale) > 10 else '')))
+    elif stale and failed:
+        print('⏸️   ข้ามการลบหน้าเก่า %d ไฟล์ เพราะมีหน้าที่เจนไม่สำเร็จ' % len(stale))
+
+    fresh = [n for n, _ in written if n not in before]
+    if fresh and before:
+        who_of = dict(written)
         print('🆕  หน้าใหม่ %d คน:' % len(fresh))
         for fname in fresh[:20]:
-            who = dict(made).get(fname, '')
-            print('       %s  (%s)' % (fname, who))
+            print('       %s  (%s)' % (fname, who_of.get(fname, '')))
         if len(fresh) > 20:
             print('       …และอีก %d คน' % (len(fresh) - 20))
-    gone = [n for n in old_files if n not in set(x for x, _ in made)]
-    if gone:
-        print('🗑️   หน้าที่หายไป %d ไฟล์ (ไม่มีในข้อมูลแล้ว): %s' % (len(gone), ', '.join(sorted(gone)[:10])))
+
+    return 1 if failed else 0
 
 
 if __name__ == '__main__':
-    main()
+    sys.exit(main())
