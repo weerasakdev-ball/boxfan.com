@@ -1,17 +1,185 @@
 """
-BOXFAN — generate_profiles.py v3
+BOXFAN — generate_profiles.py v4
 สร้าง static HTML โปรไฟล์ self-contained (CSS ในตัว ไม่พึ่งไฟล์นอก)
 ดีไซน์เหมือน profile.html ต้นฉบับ 100%
-วางใน data/ รันด้วย: python data/generate_profiles.py
+
+v4: อ่านข้อมูลจากโฟลเดอร์ไฟล์ JSON โดยตรง (ไม่ใช้ fighters.db แล้ว)
+
+วิธีรัน:
+    python generate_profiles.py                 # อ่าน ./data
+    python generate_profiles.py C:/path/to/data # ระบุโฟลเดอร์เอง
 """
-import sqlite3, json, os, re, html as H
+import json, os, re, sys, html as H
+from datetime import datetime, date
+from urllib.parse import quote
 
 BASE = os.path.dirname(os.path.abspath(__file__))
-ROOT = os.path.dirname(BASE)
-DB   = os.path.join(BASE, 'fighters.db')
+ROOT = os.path.dirname(BASE) if os.path.basename(BASE) == 'data' else BASE
 OUT  = os.path.join(ROOT, 'fighters')
 SITE = 'https://www.boxingfandom.com'
 CLOUD = 'dpvyl7nan'
+
+# ไฟล์ข้อมูลรวม — ระบุทาง argument ได้ ถ้าไม่ระบุจะหาให้เอง
+DATA_FILENAME = 'fighters_data.js'
+
+# ═══════════════════════════════════════════════════════════
+# โหมดตั้งชื่อไฟล์ HTML  (สำคัญมาก — ต้องตรงกับที่เว็บใช้ลิงก์)
+#
+#   'id'   ->  fighters/ริวจิน-นาสึกาวา.html
+#             ใช้ id เดียวกับที่ทั้งเว็บอ้างถึง (f.id ในหน้าอื่น ๆ)
+#             ลิงก์จากหน้าเว็บ:  'fighters/' + encodeURIComponent(f.id) + '.html'
+#
+#   'slug' ->  fighters/ryujin-nasukawa.html
+#             ชื่ออังกฤษ อ่านง่ายกว่าใน URL แต่หน้าเว็บต้องลิงก์ด้วย f.slug
+#             ลิงก์จากหน้าเว็บ:  'fighters/' + f.slug + '.html'
+#
+# ค่าเริ่มต้นคือ 'slug' — ตรงกับฟังก์ชัน fighterUrl() ใน utils.js
+# ถ้าอยากเปลี่ยนเป็นชื่อไทย ให้แก้เป็น 'id' แล้วแก้ fighterUrl() ใน utils.js ให้ตรงกัน
+# ═══════════════════════════════════════════════════════════
+FILENAME_MODE = 'slug'
+
+
+SEARCH_FOLDERS = ('data', '.', '..', os.path.join('..', 'data'))
+
+
+def _mtime_str(path):
+    try:
+        return datetime.fromtimestamp(os.path.getmtime(path)).strftime('%Y-%m-%d %H:%M:%S')
+    except Exception:
+        return '?'
+
+
+def find_all_data_files():
+    """หา fighters_data.js ทุกตัวที่เจอ (เพื่อเตือนถ้ามีหลายสำเนา)"""
+    found, seen = [], set()
+    for base in (ROOT, BASE):
+        for rel in SEARCH_FOLDERS:
+            cand = os.path.normpath(os.path.join(base, rel, DATA_FILENAME))
+            if cand not in seen and os.path.isfile(cand):
+                seen.add(cand)
+                found.append(cand)
+    return found
+
+
+def find_data_file():
+    """
+    หาไฟล์ข้อมูล — ถ้าเจอหลายสำเนาจะเลือกตัวที่ใหม่ที่สุด และเตือนให้ทราบ
+    ระบุทาง argument ได้เสมอ (ชนะทุกกรณี)
+    """
+    if len(sys.argv) > 1:
+        arg = sys.argv[1]
+        if os.path.isfile(arg):
+            return arg
+        if os.path.isdir(arg):
+            cand = os.path.join(arg, DATA_FILENAME)
+            if os.path.isfile(cand):
+                return cand
+        print('⚠️   ไม่พบไฟล์ตามที่ระบุ: %s' % arg)
+
+    found = find_all_data_files()
+    if not found:
+        return None
+    if len(found) > 1:
+        found.sort(key=lambda x: os.path.getmtime(x), reverse=True)
+        print('⚠️   เจอ %s หลายสำเนา — จะใช้ตัวที่ใหม่ที่สุด' % DATA_FILENAME)
+        for i, f in enumerate(found):
+            mark = '  <-- ใช้ตัวนี้' if i == 0 else ''
+            print('       %s  (แก้ล่าสุด %s)%s' % (f, _mtime_str(f), mark))
+        print('       ถ้าไม่ใช่ตัวที่ต้องการ ให้ระบุเอง:')
+        print('       python generate_profiles.py "<ทางไปยังไฟล์>"')
+        print()
+    return found[0]
+
+
+def warn_if_stale(data_path):
+    """เตือนถ้ามีไฟล์ JSON นักมวยที่ใหม่กว่าไฟล์ข้อมูลรวม (แปลว่ายังไม่ได้ export)"""
+    try:
+        data_mtime = os.path.getmtime(data_path)
+    except Exception:
+        return
+    newer, folder_hit = 0, None
+    for base in (ROOT, BASE, os.path.dirname(data_path)):
+        for rel in ('data', '.'):
+            folder = os.path.normpath(os.path.join(base, rel))
+            if not os.path.isdir(folder):
+                continue
+            try:
+                names = os.listdir(folder)
+            except Exception:
+                continue
+            count = 0
+            for n in names:
+                if not n.lower().endswith('.json') or n.startswith('_') or n.endswith('.bak.json'):
+                    continue
+                try:
+                    if os.path.getmtime(os.path.join(folder, n)) > data_mtime:
+                        count += 1
+                except Exception:
+                    pass
+            if count > newer:
+                newer, folder_hit = count, folder
+    if newer:
+        print('⚠️   มีไฟล์ JSON ใหม่กว่าไฟล์ข้อมูลรวม %d ไฟล์' % newer)
+        print('       ที่: %s' % folder_hit)
+        print('       แปลว่ายังไม่ได้ export — รัน export_json.py ก่อน แล้วค่อยรันตัวนี้อีกที')
+        print()
+
+
+def extract_js_const(text, name):
+    """
+    ดึงค่าของ const/var ชื่อ name ออกจากไฟล์ .js แล้วแปลงเป็นออบเจกต์ Python
+    ใช้การนับวงเล็บโดยข้ามข้อความในเครื่องหมายคำพูด จึงรองรับทั้งแบบบีบอัดและแบบจัดรูปแบบ
+    """
+    m = re.search(r'(?:const|var|let)\s+' + re.escape(name) + r'\s*=\s*', text)
+    if not m:
+        return None
+    i = m.end()
+    while i < len(text) and text[i].isspace():
+        i += 1
+    if i >= len(text) or text[i] not in '[{':
+        return None
+    open_ch = text[i]
+    close_ch = ']' if open_ch == '[' else '}'
+    start, depth, in_str, escaped = i, 0, False, False
+    while i < len(text):
+        ch = text[i]
+        if in_str:
+            if escaped:
+                escaped = False
+            elif ch == '\\':
+                escaped = True
+            elif ch == '"':
+                in_str = False
+        else:
+            if ch == '"':
+                in_str = True
+            elif ch == open_ch:
+                depth += 1
+            elif ch == close_ch:
+                depth -= 1
+                if depth == 0:
+                    return json.loads(text[start:i + 1])
+        i += 1
+    return None
+
+# ═══════════════════════════════════════════════════
+# แปลงผลการแข่งภาษาไทย -> รหัสอังกฤษที่เทมเพลตใช้
+# ═══════════════════════════════════════════════════
+RESULT_TYPE_MAP = {
+    'ชนะ': 'win', 'แพ้': 'loss', 'เสมอ': 'draw',
+    'ไม่มีผล': 'nc', 'ไม่มีผลการแข่งขัน': 'nc',
+    'รอแข่งขัน': 'upcoming',
+}
+
+FINISH_RE = re.compile(r'เคโอ|ทีเคโอ|น็อก|น๊อก|ซับมิชชัน|ซับมิส|\bko\b|\btko\b|submission', re.I)
+
+
+def result_type_of(result):
+    return RESULT_TYPE_MAP.get(str(result or '').strip(), 'other')
+
+
+def is_finish(fight):
+    return bool(FINISH_RE.search(str(fight.get('decision') or '')))
 
 FLAGS = {
     'ไทย':'🇹🇭','ญี่ปุ่น':'🇯🇵','เกาหลีใต้':'🇰🇷','จีน':'🇨🇳',
@@ -35,8 +203,19 @@ FLAGS = {
 }
 
 def slug(f):
+    """
+    ชื่อไฟล์หน้าโปรไฟล์
+    ถ้าข้อมูลมีช่อง slug มาให้แล้ว (จาก export_json.py) ให้ใช้ตัวนั้นเสมอ
+    เพื่อให้ชื่อไฟล์ตรงกับลิงก์บนเว็บ 100%
+    """
+    if f.get('slug'):
+        return f['slug']
+    return _slug_fallback(f)
+
+
+def _slug_fallback(f):
     """สร้าง slug จากชื่ออังกฤษ หรือชื่อไทยถ้าไม่มีอังกฤษ"""
-    name = f.get('name_en') or f.get('name_th') or str(f['id'])
+    name = (f.get('name_en') or '').strip() or (f.get('name_th') or '').strip() or str(f.get('id') or 'fighter')
     s = name.strip()
     # English: lowercase
     if all(ord(c) < 128 or c in ' -' for c in s):
@@ -46,8 +225,102 @@ def slug(f):
     s = re.sub(r'-+', '-', s).strip('-')
     return s
 
-def fl(c): return FLAGS.get(c, '🏳️')
+FLAGS.update({
+    'สหรัฐอเมริกา':'🇺🇸','สหราชอาณาจักร':'🇬🇧','เมียนมา':'🇲🇲','ไอซ์แลนด์':'🇮🇸',
+    'เช็กเกีย':'🇨🇿','สกอตแลนด์':'🏴󠁧󠁢󠁳󠁣󠁴󠁿','เวลส์':'🏴󠁧󠁢󠁷󠁬󠁳󠁿','ฟินแลนด์':'🇫🇮','ฮังการี':'🇭🇺',
+    'บัลแกเรีย':'🇧🇬','โครเอเชีย':'🇭🇷','เซอร์เบีย':'🇷🇸','สโลวาเกีย':'🇸🇰','สโลวีเนีย':'🇸🇮',
+    'บอสเนียและเฮอร์เซโกวีนา':'🇧🇦','อาเซอร์ไบจาน':'🇦🇿','อาร์เมเนีย':'🇦🇲',
+    'อิสราเอล':'🇮🇱','อิรัก':'🇮🇶','ซีเรีย':'🇸🇾','เลบานอน':'🇱🇧','จอร์แดน':'🇯🇴',
+    'คูเวต':'🇰🇼','สหรัฐอาหรับเอมิเรตส์':'🇦🇪','กาตาร์':'🇶🇦','บาห์เรน':'🇧🇭','โอมาน':'🇴🇲',
+    'อียิปต์':'🇪🇬','ตูนิเซีย':'🇹🇳','ไนจีเรีย':'🇳🇬','เคนยา':'🇰🇪','แคเมอรูน':'🇨🇲',
+    'เซเนกัล':'🇸🇳','กานา':'🇬🇭','ชิลี':'🇨🇱','เปรู':'🇵🇪','เวเนซุเอลา':'🇻🇪',
+    'อุรุกวัย':'🇺🇾','คิวบา':'🇨🇺','จาเมกา':'🇯🇲','บรูไน':'🇧🇳','มาเก๊า':'🇲🇴',
+    'เนปาล':'🇳🇵','บังกลาเทศ':'🇧🇩','ศรีลังกา':'🇱🇰','อัฟกานิสถาน':'🇦🇫',
+    'มัลดีฟส์':'🇲🇻','เติร์กเมนิสถาน':'🇹🇲','มอลโดวา':'🇲🇩','ลิทัวเนีย':'🇱🇹',
+    'ลัตเวีย':'🇱🇻','เอสโตเนีย':'🇪🇪','แอลเบเนีย':'🇦🇱','มอนเตเนโกร':'🇲🇪',
+    'มาซิโดเนียเหนือ':'🇲🇰','โคโซโว':'🇽🇰','ไซปรัส':'🇨🇾','มอลตา':'🇲🇹',
+})
+
+
+def page_name(f):
+    """ชื่อไฟล์ HTML ของนักมวยคนนี้ (ไม่รวม .html) ตาม FILENAME_MODE"""
+    if FILENAME_MODE == 'id':
+        return str(f.get('id') or slug(f))
+    return f.get('slug') or slug(f)
+
+
+def fl(c):
+    """ธงชาติ — ไม่มีข้อมูลคืนค่าว่าง / รองรับหลายสัญชาติที่คั่นด้วย /"""
+    if not c:
+        return ''
+    if c in FLAGS:
+        return FLAGS[c]
+    parts = [x.strip() for x in str(c).split('/') if x.strip()]
+    if len(parts) > 1:
+        out = [FLAGS[x] for x in parts if x in FLAGS]
+        if out:
+            return ' '.join(out)
+    return '🏳️'
 def esc(s): return H.escape(str(s)) if s else ''
+
+def derive_stats(fighter, history):
+    """
+    เติมสถิติที่เทมเพลตต้องใช้ (total_wins / total_losses / total_nc /
+    total_fights / win_rate / ko_wins) โดยนับจากประวัติการชกจริง
+    ไฟต์ที่ยัง "รอแข่งขัน" ไม่ถูกนับ
+    """
+    past = [h for h in history if h.get('result_type') != 'upcoming']
+    wins   = sum(1 for h in past if h.get('result_type') == 'win')
+    losses = sum(1 for h in past if h.get('result_type') == 'loss')
+    draws  = sum(1 for h in past if h.get('result_type') == 'draw')
+    nc     = sum(1 for h in past if h.get('result_type') == 'nc')
+    total  = len(past)
+    fighter['total_wins']   = wins
+    fighter['total_losses'] = losses
+    fighter['total_draws']  = draws
+    fighter['total_nc']     = nc
+    fighter['total_fights'] = total
+    fighter['win_rate']     = round(wins / (wins + losses) * 100) if (wins + losses) else 0
+    fighter['ko_wins']      = sum(1 for h in past if h.get('result_type') == 'win' and is_finish(h))
+    return fighter
+
+
+def fighters_count(fighters):
+    return len(fighters)
+
+
+def load_from_js(path):
+    """
+    อ่าน fighters_data.js แล้วคืน (fighters, history_map, meta)
+    ใช้ข้อมูลชุดเดียวกับที่เว็บใช้ จึงไม่มีทางไม่ตรงกัน
+    """
+    with open(path, 'r', encoding='utf-8-sig') as fh:
+        text = fh.read()
+
+    fighters = extract_js_const(text, 'FIGHTERS')
+    history  = extract_js_const(text, 'HISTORY')
+    meta     = extract_js_const(text, 'META') or {}
+
+    if fighters is None:
+        raise ValueError('ไม่พบ FIGHTERS ในไฟล์ — ไฟล์อาจไม่ใช่ผลลัพธ์จาก export_json.py')
+    if history is None:
+        history = []
+
+    hmap = {}
+    for row in history:
+        fight = dict(row)
+        fight['result_type'] = result_type_of(fight.get('result'))
+        hmap.setdefault(fight.get('fighter_id'), []).append(fight)
+
+    for fights in hmap.values():
+        fights.sort(key=lambda x: x.get('date') or '', reverse=True)
+
+    for fighter in fighters:
+        derive_stats(fighter, hmap.get(fighter.get('id'), []))
+
+    fighters.sort(key=lambda x: x.get('name_th') or x.get('id') or '')
+    return fighters, hmap, meta
+
 
 def cimg(fn, size='lg'):
     if not fn: return ''
@@ -95,8 +368,8 @@ def generate(f, history, full_css, fighters_map):
     bio = esc(f.get('biography',''))
     age = f.get('age','')
     img = cimg(f.get('image_filename'),'lg')
-    fid = f['id']
-    s = slug(f)
+    fid = quote(str(f['id']), safe='')   # id เป็นข้อความไทย ต้อง encode ก่อนใส่ URL
+    s = quote(page_name(f), safe='')     # ชื่อไฟล์สำหรับ canonical URL
 
     title = f'{name_th} ({name_en}) สถิตินักมวย | Boxfan' if name_en else f'{name_th} สถิตินักมวย | Boxfan'
     desc = f'{name_th} นักมวย ONE Championship {division} สถิติ {wins}W {losses}L อัตราชนะ {wr}% | Boxfan'
@@ -105,7 +378,16 @@ def generate(f, history, full_css, fighters_map):
     past = [h for h in history if h.get('result_type') != 'upcoming']
     past.sort(key=lambda x: x.get('date',''), reverse=True)
     up = [h for h in history if h.get('result_type') == 'upcoming']
-    sc = round(wins * 3 - losses * 1, 1)
+    # คะแนน: ต้องใช้สูตรเดียวกับ score() ใน utils.js ไม่งั้นตัวเลขจะไม่ตรงกับหน้าอันดับ
+    #   ชนะ +3 · ชนะน็อก/ซับมิชชันในยกแรก +1 · แพ้ -3
+    sc = 0
+    for h in past:
+        if h.get('result_type') == 'win':
+            sc += 3
+            if str(h.get('round')) == '1' and is_finish(h):
+                sc += 1
+        elif h.get('result_type') == 'loss':
+            sc -= 3
 
     # Days since last fight
     days_rest = ''
@@ -172,8 +454,7 @@ def generate(f, history, full_css, fighters_map):
         opp_f = fighters_map.get(opp_name)
         if opp_f:
             opp_img = cimg(opp_f.get('image_filename'), 'sm') or PH_IMG
-            opp_slug = slug(opp_f)
-            opp_link = f'../fighters/{opp_slug}.html'
+            opp_link = '../fighters/%s.html' % quote(page_name(opp_f), safe='')
             opp_td = f'''<td><div class="opp-row"><a href="{opp_link}"><img class="opp-av" src="{opp_img}" loading="lazy" alt="{opp}"></a><div><a href="{opp_link}" class="opp-name-link">{opp}</a>'''
         else:
             opp_td = f'''<td><div class="opp-row"><img class="opp-av no-link" src="{PH_IMG}" alt=""><div><span class="opp-name-nolink">{opp}</span>'''
@@ -325,50 +606,90 @@ def generate(f, history, full_css, fighters_map):
 
 
 def main():
-    if not os.path.exists(DB):
-        print(f'❌  ไม่พบ {DB}'); return
+    path = find_data_file()
+    if not path:
+        print('❌  ไม่พบ %s' % DATA_FILENAME)
+        print()
+        print('    หาไว้ที่:')
+        for folder in (os.path.join(ROOT, 'data'), os.path.join(BASE, 'data'), BASE, ROOT):
+            print('      ' + os.path.join(folder, DATA_FILENAME))
+        print()
+        print('    วิธีแก้: รัน export_json.py ก่อน หรือระบุทางเอง')
+        print('      python generate_profiles.py C:/path/to/fighters_data.js')
+        return
 
-    conn = sqlite3.connect(DB)
-    conn.row_factory = sqlite3.Row
-    cur = conn.cursor()
-    cur.execute('SELECT * FROM fighters ORDER BY name_th')
-    fighters = [dict(r) for r in cur.fetchall()]
-    cur.execute('SELECT * FROM fight_history ORDER BY fighter_id, date DESC')
-    all_history = [dict(r) for r in cur.fetchall()]
-    conn.close()
+    print('📄  ไฟล์ข้อมูล : %s' % os.path.abspath(path))
+    print('🕐  แก้ล่าสุด  : %s' % _mtime_str(path))
+    try:
+        fighters, hmap, meta = load_from_js(path)
+    except Exception as err:
+        print('❌  อ่านไฟล์ไม่สำเร็จ: %s' % err)
+        return
 
-    hmap = {}
-    for h in all_history:
-        fid = h.get('fighter_id')
-        if fid not in hmap: hmap[fid] = []
-        hmap[fid].append(h)
+    if not fighters:
+        print('❌  ไม่มีข้อมูลนักมวยในไฟล์')
+        return
+    if meta.get('generated_at'):
+        print('📊  export เมื่อ : %s  (%s คน)' % (meta['generated_at'], meta.get('fighter_count', len(fighters))))
+    print('👤  อ่านได้    : %d คน / %d ไฟต์' % (fighters_count(fighters), sum(len(v) for v in hmap.values())))
+    print()
+    warn_if_stale(path)
 
     # โหลด CSS จาก profile.html + style.css + boxfan-tokens.css
     profile_css = load_profile_css() or ''
     external_css = load_external_css()
     full_css = external_css + '\n' + profile_css
 
-    # สร้าง map ชื่อ → fighter object สำหรับหารูปคู่ต่อสู้
+    # แผนที่ ชื่อ -> นักมวย สำหรับหารูปและลิงก์ของคู่ต่อสู้
     fighters_map = {}
     for ff in fighters:
-        if ff.get('name_th'): fighters_map[ff['name_th']] = ff
-        if ff.get('name_en'): fighters_map[ff['name_en']] = ff
+        for key in ('name_th', 'name_en'):
+            if ff.get(key):
+                fighters_map[ff[key]] = ff
 
     os.makedirs(OUT, exist_ok=True)
-    old = [x for x in os.listdir(OUT) if x.endswith('.html')]
-    for x in old: os.remove(os.path.join(OUT, x))
-    if old: print(f'🧹  ลบไฟล์เก่า {len(old)} ไฟล์')
+    old_files = set(x for x in os.listdir(OUT) if x.endswith('.html'))
+    for x in old_files:
+        os.remove(os.path.join(OUT, x))
+    if old_files:
+        print('🧹  ลบหน้าเก่า %d ไฟล์' % len(old_files))
 
-    count = 0
+    print('🏷️   โหมดตั้งชื่อไฟล์: %s' % FILENAME_MODE)
+    count, used_slugs, made = 0, {}, []
     for f in fighters:
-        s = slug(f)
-        path = os.path.join(OUT, f'{s}.html')
+        s = page_name(f)
+        # กันชื่อไฟล์ซ้ำ (นักมวยคนละคนแต่ชื่อไฟล์ตรงกัน)
+        if s in used_slugs:
+            used_slugs[s] += 1
+            s = '%s-%d' % (s, used_slugs[s])
+            print('⚠️   ชื่อไฟล์ซ้ำ: %s -> เปลี่ยนเป็น %s.html' % (f.get('name_th'), s))
+        else:
+            used_slugs[s] = 1
+        fname = '%s.html' % s
+        target = os.path.join(OUT, fname)
         content = generate(f, hmap.get(f['id'], []), full_css, fighters_map)
-        with open(path, 'w', encoding='utf-8') as fh:
+        with open(target, 'w', encoding='utf-8') as fh:
             fh.write(content)
+        made.append((fname, f.get('name_th') or f.get('id')))
         count += 1
 
-    print(f'✅  สร้าง {count} หน้านักมวย → fighters/')
+    total_fights = sum(len(v) for v in hmap.values())
+    print()
+    print('✅  สร้าง %d หน้านักมวย (%d ไฟต์) → %s' % (count, total_fights, OUT))
+
+    # หน้าที่ไม่เคยมีมาก่อน (เทียบกับรอบก่อนหน้า)
+    fresh = [n for n, _ in made if n not in old_files]
+    if fresh and old_files:
+        print('🆕  หน้าใหม่ %d คน:' % len(fresh))
+        for fname in fresh[:20]:
+            who = dict(made).get(fname, '')
+            print('       %s  (%s)' % (fname, who))
+        if len(fresh) > 20:
+            print('       …และอีก %d คน' % (len(fresh) - 20))
+    gone = [n for n in old_files if n not in set(x for x, _ in made)]
+    if gone:
+        print('🗑️   หน้าที่หายไป %d ไฟล์ (ไม่มีในข้อมูลแล้ว): %s' % (len(gone), ', '.join(sorted(gone)[:10])))
+
 
 if __name__ == '__main__':
     main()
