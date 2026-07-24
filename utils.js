@@ -354,7 +354,7 @@ function nav(active, basePath) {
     var tabs = [
         { id: 'ranking',  label: 'อันดับ',        href: base + 'index.html',    icon: '🏆' },
         { id: 'rankings', label: 'ตารางคะแนน',    href: base + 'rankings.html', icon: '📊' },
-        { id: 'fighters', label: 'นักมวยทั้งหมด', href: base + 'Fighters.html', icon: '🥋' },
+        { id: 'fighters', label: 'นักมวยทั้งหมด', href: base + 'fighters.html', icon: '🥋' },
         { id: 'schedule', label: 'โปรแกรมชก',     href: base + 'schedule.html', icon: '📅' },
         { id: 'results',  label: 'ผลการแข่งขัน',  href: base + 'results.html',  icon: '🥊' },
         { id: 'compare',  label: 'เปรียบเทียบ',   href: base + 'compare.html',  icon: '⚖️' },
