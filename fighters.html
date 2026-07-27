@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#1a3661">
+<meta name="theme-color" content="#F5F4EF">
 
 <!-- ══ SEO: PRIMARY ══════════════════════════════════ -->
 <title>รวมนักมวยทั้งหมด — ประวัตินักมวย สถิตินักมวยทั่วโลก มวยไทย คิกบ็อกซิง MMA | Boxfan</title>
@@ -123,6 +123,83 @@
   .seo-box{padding:14px 15px}
 }
 </style>
+
+<!-- ══ ปรับธีมให้ตรงกับเว็บหลัก (index.html) — ทอง/หมึกเข้ม บนพื้นขาว ══ -->
+<style id="bf-theme-align">
+:root{
+  /* พาเลตหลักของเว็บหลัก */
+  --gold:#D4AF37; --gold-light:#F2D879; --gold-text:#9A7A10; --gold-dim:rgba(212,175,55,.16);
+  --ink:#17140D; --ink-2:#2A251A;
+  /* แทนสีฟ้า/กรมท่าเดิมด้วยหมึกเข้ม และแทนแดงด้วยทองเข้ม (คอนทราสต์ผ่านบนพื้นขาว) */
+  --navy:#17140D;
+  --red:#9A7A10;
+  --sh-2:0 8px 24px rgba(35,28,8,.10);
+}
+[data-theme="dark"]:root,[data-theme="dark"]{
+  --navy:#F2D879; --red:#D4AF37; --gold-text:#D4AF37;
+}
+
+/* ── แถบด้านบน (chrome จาก boxfan-shared.js) ── */
+#bf-chrome header,#bf-chrome .site-header,#bf-chrome .masthead,
+#bf-chrome .topbar,#bf-chrome .bf-header,#bf-chrome .bf-top{
+  background:var(--paper,#fff)!important;
+  border-bottom:1px solid var(--line)!important;
+  box-shadow:0 1px 0 rgba(212,175,55,.35)!important;
+  color:var(--tx)!important;
+}
+#bf-chrome .brand,#bf-chrome .logo,#bf-chrome [class*="logo"]{color:var(--ink)!important}
+#bf-chrome a{color:var(--tx-2)}
+#bf-chrome a:hover{color:var(--gold-text)}
+#bf-chrome a.active,#bf-chrome .active>a,#bf-chrome [aria-current="page"]{
+  color:var(--ink)!important;font-weight:600;
+  box-shadow:inset 0 -2px 0 var(--gold);
+}
+/* เส้นทองคาดบนสุด แทนแถบฟ้าเดิม */
+#bf-chrome::before{
+  content:'';display:block;height:3px;
+  background:linear-gradient(90deg,var(--gold),var(--gold-light),var(--gold));
+}
+
+/* ── หัวเรื่องหน้า ── */
+.page-hd .kicker{color:var(--gold-text)}
+.page-hd h1 em{color:var(--gold-text);font-style:normal}
+.crumb a:hover{color:var(--gold-text)}
+
+/* ── การ์ดนักมวย: ภาพใหญ่/คมขึ้น ขอบมนแบบเว็บหลัก ── */
+.tk{border-radius:10px;grid-template-columns:96px 1fr}
+.tk:hover{border-color:var(--gold);box-shadow:var(--sh-2)}
+.tk:hover .tk-name{color:var(--gold-text)}
+.tk-img{background:linear-gradient(200deg,#efece3,#e2ded1)}
+[data-theme="dark"] .tk-img{background:linear-gradient(200deg,#2a2820,#1a1915)}
+.tk-img img{min-height:126px;image-rendering:auto}
+.tk-kicker{color:var(--gold-text)}
+[data-theme="dark"] .tk-kicker{color:var(--gold-light)}
+.tk-line .p{color:var(--gold-text)}
+.tk-tag.new{background:var(--ink)}
+.tk-tag.next{background:var(--gold);color:#161200}
+.tk-crest{border-radius:4px;color:var(--ink)}
+
+/* ── แถบตัวอักษร / ปุ่ม / ตัวกรอง ── */
+.alpha button{border-radius:999px}
+.alpha button:hover{border-color:var(--gold);color:var(--gold-text)}
+.alpha button.active{background:var(--ink);border-color:var(--ink);color:#fff}
+[data-theme="dark"] .alpha button.active{background:var(--gold);border-color:var(--gold);color:#161200}
+.filter-bar input,.filter-bar select,.filter-bar .btn{border-radius:999px}
+.filter-bar input:focus,.filter-bar select:focus{border-color:var(--gold);outline:none}
+
+/* ── กล่อง SEO ── */
+.seo-box{border-radius:12px}
+.seo-box h2{color:var(--ink)}
+[data-theme="dark"] .seo-box h2{color:var(--gold-light)}
+.seo-box a{color:var(--gold-text)}
+.seo-links a{border-radius:999px}
+.seo-links a:hover{border-color:var(--gold);color:var(--gold-text)}
+
+@media(max-width:640px){
+  .tk{grid-template-columns:78px 1fr}
+  .tk-img img{min-height:110px}
+}
+</style>
 </head>
 <body>
 
@@ -234,6 +311,18 @@
   }
 
   var TODAY = new Date().toISOString().slice(0,10);
+
+  /* ── ภาพนักมวย: ครอปแนวตั้ง 200x280 + dpr_2 ให้คมบนจอ retina
+        (cImg ของ utils.js เป็นสี่เหลี่ยมจัตุรัส จึงยืดเบลอเมื่อวางในกรอบสูง) ── */
+  var NOIMG = 'images/noname1.png';
+  var CLOUD_NAME = (typeof CLOUD !== 'undefined') ? CLOUD : 'dpvyl7nan';
+  function fImg(f){
+    var fn = f && f.image_filename;
+    if(!fn) return NOIMG;
+    var clean = String(fn).replace(/\.(jpg|jpeg|png|webp)$/i,'');
+    return 'https://res.cloudinary.com/'+CLOUD_NAME+
+      '/image/upload/c_fill,g_face,w_200,h_280,dpr_2.0,f_auto,q_auto:good/'+encodeURIComponent(clean);
+  }
 
   /* ── รหัสประเทศ 3 ตัว (แทนธงอีโมจิ) ───────────────── */
   var CC = {
@@ -390,8 +479,8 @@
 
     return '<a class="tk" href="'+fighterUrl(f)+'" title="ประวัติและสถิติ '+esc(f.name_th)+'">'+
       '<div class="tk-img">'+
-        '<img src="'+cImg(f.image_filename,'md')+'" loading="lazy" decoding="async" '+
-        'onerror="this.onerror=null;this.src=PH" '+
+        '<img src="'+fImg(f)+'" loading="lazy" decoding="async" '+
+        'onerror="this.onerror=null;this.src=NOIMG" '+
         'alt="ประวัตินักมวย '+esc(f.name_th)+' สถิติ '+(f.total_wins||0)+' ชนะ '+(f.total_losses||0)+' แพ้">'+
       '</div>'+
       '<div class="tk-body">'+

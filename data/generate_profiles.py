@@ -402,14 +402,20 @@ def load_from_js(path):
     return fighters, hmap, meta
 
 
+# ภาพสำรองกลาง — ไฟล์เดียวกับที่หน้าเว็บ (index.html / weight-classes.html) ใช้
+# หน้าโปรไฟล์อยู่ในโฟลเดอร์ fighters/ จึงต้องถอยหนึ่งระดับ
+NO_IMG = '../images/noname1.png'
+
+
 def cimg(fn, size='lg'):
-    """URL รูปจาก Cloudinary"""
+    """URL รูปจาก Cloudinary — อ่านจากฟิลด์ image_filename เหมือน cImg() ใน utils.js
+    ถ้าไม่มีชื่อไฟล์ คืนภาพสำรอง noname1.png"""
     if not fn:
-        return ''
+        return NO_IMG
     clean = re.sub(r'\.(jpg|jpeg|png|webp)$', '', str(fn), flags=re.IGNORECASE)
     d = {'sm': 'w_80,h_80,g_face', 'md': 'w_160,h_160,g_face', 'lg': 'w_300,h_375,g_north'}
     return ('https://res.cloudinary.com/%s/image/upload/c_fill,%s,f_auto,q_auto/%s'
-            % (CLOUD, d.get(size, d['lg']), clean))
+            % (CLOUD, d.get(size, d['lg']), quote(clean, safe='')))
 
 
 # ═══════════════════════════════════════════════════════════
@@ -443,22 +449,18 @@ def load_external_css():
 # ═══════════════════════════════════════════════════════════
 # เจนหน้า HTML
 # ═══════════════════════════════════════════════════════════
-PH_IMG = ('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 '
-          'width=%2250%22 height=%2250%22><rect fill=%22%23232d3b%22 '
-          'width=%2250%22 height=%2250%22 rx=%228%22/></svg>')
+PH_IMG = NO_IMG
 
 
 def build_score(past):
     """
-    คะแนน: ต้องใช้สูตรเดียวกับ score() ใน utils.js ไม่งั้นตัวเลขจะไม่ตรงกับหน้าอันดับ
-      ชนะ +3 · ชนะน็อก/ซับมิชชันในยกแรก +1 · แพ้ -3
+    คะแนน: ใช้สูตรเดียวกับ calcScore() ใน index.html และ weight-classes.html
+      ชนะ +3 · แพ้ -3 · เสมอ 0 (ไม่มีโบนัส) ไม่งั้นตัวเลขจะไม่ตรงกับหน้าอันดับ
     """
     sc = 0
     for h in past:
         if h.get('result_type') == 'win':
             sc += 3
-            if str(h.get('round')) == '1' and is_finish(h):
-                sc += 1
         elif h.get('result_type') == 'loss':
             sc -= 3
     return sc
@@ -496,14 +498,16 @@ def build_rows(fights, fighters_map):
         # รูป + ลิงก์คู่ต่อสู้ (ใช้ชื่อไฟล์ตัวจริงที่ผ่านการกันซ้ำแล้ว)
         opp_f = fighters_map.get(opp_name)
         if opp_f:
-            opp_img = cimg(opp_f.get('image_filename'), 'sm') or PH_IMG
+            opp_img = cimg(opp_f.get('image_filename'), 'sm')
             opp_link = '../fighters/%s' % page_href(opp_f)
             opp_td = ('<td><div class="opp-row"><a href="%s"><img class="opp-av" src="%s" '
-                      'loading="lazy" alt="%s"></a><div><a href="%s" class="opp-name-link">%s</a>'
-                      % (opp_link, opp_img, opp, opp_link, opp))
+                      'loading="lazy" alt="%s" onerror="this.onerror=null;this.src=\'%s\'"></a>'
+                      '<div><a href="%s" class="opp-name-link">%s</a>'
+                      % (opp_link, opp_img, opp, NO_IMG, opp_link, opp))
         else:
-            opp_td = ('<td><div class="opp-row"><img class="opp-av no-link" src="%s" alt="">'
-                      '<div><span class="opp-name-nolink">%s</span>' % (PH_IMG, opp))
+            opp_td = ('<td><div class="opp-row"><img class="opp-av no-link" src="%s" alt="" '
+                      'onerror="this.onerror=null;this.src=\'%s\'">'
+                      '<div><span class="opp-name-nolink">%s</span>' % (PH_IMG, NO_IMG, opp))
 
         if opp_country and opp_country != '-':
             opp_td += ('<div style="font-size:11px;color:var(--tx-3)">%s %s</div>'
@@ -537,6 +541,8 @@ def generate(f, history, full_css, fighters_map):
     wr = float(f.get('win_rate') or 0)
 
     img = cimg(f.get('image_filename'), 'lg')
+    # og:image ต้องเป็น URL เต็ม — ถ้าใช้ภาพสำรอง ให้ชี้เป็น absolute
+    og_img = img if img.startswith('http') else (SITE + '/images/noname1.png')
     fid = quote(str(f.get('id') or ''), safe='')     # id เป็นข้อความไทย ต้อง encode ก่อนใส่ URL
     s = quote(page_name(f), safe='')                 # ชื่อไฟล์สำหรับ canonical URL
 
@@ -645,7 +651,7 @@ def generate(f, history, full_css, fighters_map):
 <link rel="canonical" href="{canonical}">
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{desc}">
-<meta property="og:image" content="{img}">
+<meta property="og:image" content="{og_img}">
 <meta property="og:url" content="{canonical}">
 <meta property="og:type" content="profile">
 <meta property="og:site_name" content="Boxfan">
@@ -699,7 +705,7 @@ def generate(f, history, full_css, fighters_map):
   <!-- HERO -->
   <div class="hero">
     <div class="hav-wrap">
-      <img class="hav" src="{img}" alt="{name_th}" loading="eager">
+      <img class="hav" src="{img}" alt="{name_th}" loading="eager" onerror="this.onerror=null;this.src='../images/noname1.png'">
       {flag_html}
     </div>
     <div class="hinfo">

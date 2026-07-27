@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#1a3661">
-<title>อันดับนักมวย · ตารางคะแนน — Boxfan</title>
-<meta name="description" content="ตารางอันดับนักมวยเต็ม แยกรุ่นน้ำหนัก คิกบ็อกซิง มวยไทย MMA">
+<title>อันดับนักมวย · ตารางคะแนนรายปี แยกรุ่นน้ำหนัก | Boxfan</title>
+<meta name="description" content="ตารางอันดับนักมวยเต็ม เลือกดูอันดับรายปีได้ คะแนนนับเฉพาะไฟต์ในปีที่เลือก ชนะ +3 แพ้ -3 แยกตามรุ่นน้ำหนัก ประเทศ มวยไทย คิกบ็อกซิง MMA">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -23,7 +23,8 @@
 <div class="page-hd">
   <div class="kicker"><svg viewBox="0 0 24 24"><use href="#i-trophy"/></svg> Rankings · ตารางคะแนน</div>
   <h1>อันดับ<em>นักมวย</em></h1>
-  <p class="sub">จัดอันดับตามคะแนนสะสมจากผลการแข่งขันจริง — ชนะ +3, ชนะน็อกยกแรก +1, เสมอ +1, แพ้ -3</p>
+  <p class="sub">จัดอันดับตามคะแนนสะสมจากผลการแข่งขันจริง — <strong>ชนะ +3 · เสมอ 0 · แพ้ -3</strong> (สูตรเดียวกันทุกหน้า)<br>
+  เลือกปีเพื่อดู<strong>อันดับเฉพาะปีนั้น</strong> ทุกตัวเลขในตาราง (ไฟต์ ชนะ แพ้ %ชนะ คะแนน ชนะรวด) จะนับจากไฟต์ในปีที่เลือกเท่านั้น นักมวยที่ยังไม่มีไฟต์ในปีนั้นจะไม่ถูกจัดอันดับ</p>
 </div>
 
 <div class="wrap full">
@@ -56,8 +57,8 @@
   <!-- MAIN TABLE -->
   <div class="card">
     <div class="card-hd">
-      <div class="card-hd-l"><svg viewBox="0 0 24 24"><use href="#i-trophy"/></svg> ตารางอันดับเต็ม</div>
-      <span id="fp-badge" style="color:#c8d4e8;font-size:11px">ทุกรุ่น</span>
+      <div class="card-hd-l"><svg viewBox="0 0 24 24"><use href="#i-trophy"/></svg> ตารางอันดับเต็ม <span id="fp-scope-note" style="font-weight:500;font-size:11px;opacity:.75"></span></div>
+      <span id="fp-badge" style="color:#c8d4e8;font-size:11px">ทุกรุ่น · ตลอดอาชีพ</span>
     </div>
     <div style="overflow-x:auto">
       <table class="dtbl" id="tbl">
@@ -96,29 +97,63 @@
     return;
   }
 
-  // pre-compute
-  FIGHTERS.forEach(function(f){
-    var h = hist(f.id);
-    f._score = score(h);
-    var st = fightStreak(h);
-    f._streak = st.streak;
-    f._lastDate = st.lastDate;
-    f._fights = f.total_fights || (f.total_wins + f.total_losses + f.total_draws);
-    f._wr = f._fights ? Math.round(f.total_wins / f._fights * 100) : 0;
-  });
+  /* ══════════════════════════════════════════════════════════
+     สูตรคะแนนกลางของเว็บ: ชนะ +3 · เสมอ 0 · แพ้ -3 (ไม่มีโบนัส)
+     ใช้ตรงกับ index.html, weight-classes.html และหน้าโปรไฟล์
+     ══════════════════════════════════════════════════════════ */
+  function calcScore(hs){
+    var s = 0;
+    (hs||[]).forEach(function(x){
+      if(x.result_type === 'win') s += 3;
+      else if(x.result_type === 'loss') s -= 3;
+    });
+    return s;
+  }
 
-  // ── Build country + year dropdowns ──
+  /* คำนวณสถิติ "จากชุดไฟต์ที่ส่งเข้ามาเท่านั้น"
+     ถ้ากรองปี 2026 ก็จะเห็นเฉพาะผลของปี 2026 ไม่ปนปีอื่น */
+  function statsFrom(hs){
+    var w=0,l=0,d=0,nc=0,fin=0;
+    var past = (hs||[]).filter(function(x){ return x.result_type !== 'upcoming' && x.date; });
+    past.forEach(function(x){
+      if(x.result_type==='win'){ w++; if(typeof isFinish==='function' && isFinish(x)) fin++; }
+      else if(x.result_type==='loss') l++;
+      else if(x.result_type==='draw') d++;
+      else if(x.result_type==='nc') nc++;
+    });
+    past.sort(function(a,b){ return String(b.date).localeCompare(String(a.date)); });
+    var streak = 0;
+    for(var i=0;i<past.length;i++){ if(past[i].result_type==='win') streak++; else break; }
+    var n = w+l+d+nc;
+    return {
+      n:n, w:w, l:l, d:d, nc:nc, finishes:fin,
+      score: calcScore(past),
+      streak: streak,
+      lastDate: past.length ? past[0].date : '',
+      wr: n ? Math.round(w/n*100) : 0
+    };
+  }
+
+  /* เก็บประวัติของแต่ละคนไว้ล่วงหน้า (เร็วกว่าเรียก hist() ซ้ำ) */
+  var HMAP = {};
+  FIGHTERS.forEach(function(f){ HMAP[f.id] = hist(f.id); });
+
+  /* ── Build country + year dropdowns ── */
   (function(){
     var countries = {}, years = {};
     FIGHTERS.forEach(function(f){ if(f.country) countries[f.country] = true; });
-    HISTORY.forEach(function(h){ if(h.date) years[h.date.slice(0,4)] = true; });
+    HISTORY.forEach(function(h){
+      if(h.date && h.result_type !== 'upcoming') years[String(h.date).slice(0,4)] = true;
+    });
     var cSel = document.getElementById('fp-country');
     Object.keys(countries).sort().forEach(function(c){
       var o = document.createElement('option'); o.value = c; o.textContent = c; cSel.appendChild(o);
     });
     var ySel = document.getElementById('fp-yr');
     Object.keys(years).sort().reverse().forEach(function(y){
-      var o = document.createElement('option'); o.value = y; o.textContent = y; ySel.appendChild(o);
+      var o = document.createElement('option'); o.value = y;
+      o.textContent = 'ปี ' + (parseInt(y,10)+543) + ' (' + y + ')';
+      ySel.appendChild(o);
     });
   })();
 
@@ -128,42 +163,55 @@
     page:1, perPage:20
   };
 
+  /* คืนรายการ {f, st} โดย st คำนวณจากไฟต์ในขอบเขตที่กรองแล้ว */
   function apply(){
-    var arr = FIGHTERS.slice();
+    var rows = FIGHTERS.map(function(f){
+      var hs = HMAP[f.id] || [];
+      if(state.year){
+        hs = hs.filter(function(h){ return h.date && String(h.date).slice(0,4) === state.year; });
+      }
+      return { f:f, st:statsFrom(hs) };
+    });
+
+    /* เลือกปีแล้ว = ต้องมีไฟต์ที่ชกจริงในปีนั้น ไม่งั้นไม่มีคะแนน ไม่ติดอันดับ */
+    if(state.year) rows = rows.filter(function(r){ return r.st.n > 0; });
+
     if(state.q){
       var q = state.q.toLowerCase();
-      arr = arr.filter(function(f){
-        return (f.name_th||'').toLowerCase().indexOf(q)>-1 || (f.name_en||'').toLowerCase().indexOf(q)>-1;
+      rows = rows.filter(function(r){
+        return (r.f.name_th||'').toLowerCase().indexOf(q)>-1 || (r.f.name_en||'').toLowerCase().indexOf(q)>-1;
       });
     }
-    if(state.div) arr = arr.filter(function(f){ return divKey(f.division) === state.div; });
-    if(state.country) arr = arr.filter(function(f){ return (f.country||'').indexOf(state.country)>-1; });
-    if(state.year){
-      arr = arr.filter(function(f){
-        return hist(f.id).some(function(h){ return h.date && h.date.slice(0,4) === state.year; });
-      });
-    }
+    if(state.div)     rows = rows.filter(function(r){ return divKey(r.f.division) === state.div; });
+    if(state.country) rows = rows.filter(function(r){ return (r.f.country||'').indexOf(state.country)>-1; });
+
     var dir = state.sortDir === 'desc' ? -1 : 1;
-    arr.sort(function(a,b){
+    rows.sort(function(a,b){
       var va, vb;
       switch(state.sortBy){
-        case 'fights': va=a._fights; vb=b._fights; break;
-        case 'wins': va=a.total_wins||0; vb=b.total_wins||0; break;
-        case 'losses': va=a.total_losses||0; vb=b.total_losses||0; break;
-        case 'wr': va=a._wr; vb=b._wr; break;
-        case 'streak': va=a._streak; vb=b._streak; break;
-        case 'score': default: va=a._score; vb=b._score;
+        case 'fights': va=a.st.n; vb=b.st.n; break;
+        case 'wins':   va=a.st.w; vb=b.st.w; break;
+        case 'losses': va=a.st.l; vb=b.st.l; break;
+        case 'wr':     va=a.st.wr; vb=b.st.wr; break;
+        case 'streak': va=a.st.streak; vb=b.st.streak; break;
+        case 'score': default: va=a.st.score; vb=b.st.score;
       }
       if(va !== vb) return dir * (va < vb ? -1 : 1);
-      return String(b._lastDate||'').localeCompare(String(a._lastDate||''));
+      return String(b.st.lastDate||'').localeCompare(String(a.st.lastDate||''));
     });
-    return arr;
+    return rows;
   }
 
   function render(){
     var arr = apply();
     document.getElementById('fp-count').textContent = arr.length;
-    document.getElementById('fp-badge').textContent = state.div ? divLabel(state.div) : 'ทุกรุ่น';
+    var scopeTxt = (state.div ? divLabel(state.div) : 'ทุกรุ่น') + ' · ' +
+      (state.year ? ('เฉพาะปี ' + (parseInt(state.year,10)+543)) : 'ตลอดอาชีพ');
+    document.getElementById('fp-badge').textContent = scopeTxt;
+    var note = document.getElementById('fp-scope-note');
+    if(note) note.textContent = state.year
+      ? '— ตัวเลขทั้งหมดนับเฉพาะไฟต์ปี ' + (parseInt(state.year,10)+543)
+      : '— นับรวมทุกไฟต์ตลอดอาชีพ';
     var total = arr.length;
     var totalPages = Math.max(1, Math.ceil(total / state.perPage));
     if(state.page > totalPages) state.page = 1;
@@ -172,23 +220,27 @@
 
     var body = document.getElementById('tbl-body');
     if(!slice.length){
-      body.innerHTML = '<tr><td colspan="8" class="empty">ไม่พบนักมวยที่ตรงเงื่อนไข</td></tr>';
+      var msg = state.year
+        ? 'ไม่มีนักมวยที่ขึ้นชกในปี ' + (parseInt(state.year,10)+543) + ' ตามเงื่อนไขนี้'
+        : 'ไม่พบนักมวยที่ตรงเงื่อนไข';
+      body.innerHTML = '<tr><td colspan="8" class="empty">'+msg+'</td></tr>';
       document.getElementById('pager').innerHTML = '';
       return;
     }
-    body.innerHTML = slice.map(function(f, i){
+    body.innerHTML = slice.map(function(r, i){
+      var f = r.f, st = r.st;
       var rank = start + i + 1;
       var rankCls = rank<=3 ? 'rk-no top3' : 'rk-no';
-      var streakBadge = f._streak >= 3 ? ' <span class="bd bd-win">'+f._streak+' รวด</span>' : '';
+      var streakBadge = st.streak >= 3 ? ' <span class="bd bd-win">'+st.streak+' รวด</span>' : '';
       return '<tr class="clk" onclick="location.href=\''+fighterUrl(f)+'\'">'+
         '<td><span class="'+rankCls+'">'+rank+'</span></td>'+
         '<td class="l">'+bfFxCell(f,{badge:streakBadge})+'</td>'+
-        '<td>'+f._fights+'</td>'+
-        '<td class="c-w">'+(f.total_wins||0)+'</td>'+
-        '<td class="c-l">'+(f.total_losses||0)+'</td>'+
-        '<td>'+f._wr+'%</td>'+
-        '<td class="r c-pts">'+f._score+'</td>'+
-        '<td>'+(f._streak||0)+'</td>'+
+        '<td>'+st.n+'</td>'+
+        '<td class="c-w">'+st.w+'</td>'+
+        '<td class="c-l">'+st.l+'</td>'+
+        '<td>'+st.wr+'%</td>'+
+        '<td class="r c-pts">'+st.score+'</td>'+
+        '<td>'+st.streak+'</td>'+
       '</tr>';
     }).join('');
 

@@ -3,38 +3,172 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#1a3661">
-<title>โปรแกรมชก · Schedule — Boxfan</title>
-<meta name="description" content="โปรแกรมการแข่งขันมวย ONE Championship มวยไทย MMA ที่จะมีขึ้น">
+<meta name="theme-color" content="#F5F4EF">
+<title>วิเคราะห์มวยวันนี้ · โปรแกรมชกและวิเคราะห์คู่มวย ONE มวยไทย MMA | Boxfan</title>
+<meta name="description" content="วิเคราะห์มวยวันนี้และโปรแกรมชกล่วงหน้า แยกตามศึก ONE Championship มวยไทย ราชดำเนิน ลุมพินี RWS และ MMA พร้อมเปรียบเทียบสถิติคู่ชกทีละคู่ ใครฟอร์มดีกว่า สถิติชนะแพ้ ชนะน็อก ชนะรวด อัปเดตทุกไฟต์">
+<meta name="keywords" content="วิเคราะห์มวยวันนี้,วิเคราะห์มวย,วิเคราะห์มวย ONE,วิเคราะห์มวยไทย,ทีเด็ดมวยวันนี้,โปรแกรมมวยวันนี้,โปรแกรมชก,ตารางมวย,มวยวันนี้ชกกี่โมง,วิเคราะห์คู่มวย,เปรียบเทียบสถิตินักมวย,ONE Championship วันนี้,มวยไทย 7 สี,ศึกราชดำเนิน,ศึกลุมพินี,RWS,วิเคราะห์ MMA,สถิตินักมวย">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+<link rel="canonical" href="https://boxingfandom.com/schedule.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Boxfan">
+<meta property="og:locale" content="th_TH">
+<meta property="og:title" content="วิเคราะห์มวยวันนี้ · โปรแกรมชกและวิเคราะห์คู่มวยทุกศึก | Boxfan">
+<meta property="og:description" content="โปรแกรมชกแยกตามศึก พร้อมวิเคราะห์เปรียบเทียบสถิติคู่ชกทีละคู่ ONE มวยไทย MMA">
+<meta property="og:url" content="https://boxingfandom.com/schedule.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="วิเคราะห์มวยวันนี้ · โปรแกรมชกทุกศึก | Boxfan">
+<meta name="twitter:description" content="วิเคราะห์คู่มวยก่อนชก เปรียบเทียบสถิติชนะแพ้ ฟอร์มล่าสุด ครบทุกศึก">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="boxfan-theme.css">
 <script>(function(){try{var s=localStorage.getItem('boxfan-theme');if(s==='dark'||s==='light')document.documentElement.setAttribute('data-theme',s);}catch(e){}})();</script>
 <style>
-.sch-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:14px}
+/* ══ ธีมให้ตรงกับเว็บหลัก (index.html) — ทอง/หมึกเข้ม บนพื้นขาว ══ */
+:root{
+  --gold:#D4AF37; --gold-light:#F2D879; --gold-text:#9A7A10; --gold-dim:rgba(212,175,55,.16);
+  --ink:#17140D; --ink-2:#2A251A;
+  --navy:#17140D;      /* แถบฟ้า/กรมท่าเดิม -> หมึกเข้ม */
+  --red:#9A7A10;       /* แดงเดิม -> ทองเข้ม */
+  --sh-2:0 8px 24px rgba(35,28,8,.10);
+}
+[data-theme="dark"]{--navy:#F2D879;--red:#D4AF37;--gold-text:#D4AF37}
+
+/* แถบบน (chrome จาก boxfan-shared.js) */
+#bf-chrome::before{content:'';display:block;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold-light),var(--gold))}
+#bf-chrome header,#bf-chrome .site-header,#bf-chrome .masthead,#bf-chrome .topbar,#bf-chrome .bf-header,#bf-chrome .bf-top{
+  background:var(--paper,#fff)!important;border-bottom:1px solid var(--line)!important;color:var(--tx)!important;
+  box-shadow:0 1px 0 rgba(212,175,55,.35)!important;
+}
+#bf-chrome a:hover{color:var(--gold-text)}
+#bf-chrome a.active,#bf-chrome [aria-current="page"]{color:var(--ink)!important;font-weight:600;box-shadow:inset 0 -2px 0 var(--gold)}
+.page-hd .kicker{color:var(--gold-text)}
+.page-hd h1 em{color:var(--gold-text);font-style:normal}
+
+.sch-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:16px}
 @media(max-width:640px){.sch-stats{grid-template-columns:repeat(2,1fr)}}
-.month-hd{background:var(--navy);color:#fff;padding:8px 14px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;border-radius:3px 3px 0 0;margin-top:14px}
-.match{background:var(--paper);border:1px solid var(--line);border-top:0;padding:12px 14px;display:grid;grid-template-columns:80px 1fr 1fr auto;gap:14px;align-items:center;transition:background .1s;cursor:pointer}
-.match:hover{background:var(--hover)}
-.match:last-child{border-radius:0 0 3px 3px}
-.match-date{text-align:center;padding:6px;border:1px solid var(--line);border-radius:3px;flex-shrink:0}
-.match-date .d{font-family:'Inter';font-weight:800;font-size:20px;color:var(--red);line-height:1}
-.match-date .m{font-size:9px;font-weight:700;color:var(--tx-3);text-transform:uppercase;margin-top:2px}
-.match-date .cd{font-size:9px;color:var(--red);margin-top:3px;font-weight:700}
-.match-side{display:flex;align-items:center;gap:10px;min-width:0}
-.match-side.b{flex-direction:row-reverse;text-align:right}
-.match-side.b .fx-info{text-align:right}
-.match-vs{text-align:center;color:var(--tx-3);font-size:10px;font-weight:700;letter-spacing:.05em;text-transform:uppercase}
-.match-info{text-align:right;font-size:11px;color:var(--tx-3)}
-.match-info .event{color:var(--tx-2);font-weight:600;margin-bottom:2px}
+.filter-bar input,.filter-bar select,.filter-bar .btn{border-radius:999px}
+.filter-bar input:focus,.filter-bar select:focus{border-color:var(--gold);outline:none}
+
+/* ══ หัวเดือน ══ */
+.month-hd{
+  display:flex;align-items:center;gap:10px;margin:26px 0 12px;
+  font-size:13px;font-weight:800;letter-spacing:.04em;color:var(--ink);text-transform:none;
+}
+[data-theme="dark"] .month-hd{color:var(--gold-light)}
+.month-hd::before{content:'';width:4px;height:18px;border-radius:2px;background:linear-gradient(180deg,var(--gold-light),var(--gold))}
+.month-hd .n{margin-left:auto;font-size:11px;font-weight:600;color:var(--tx-3)}
+
+/* ══ การ์ด "ศึก" (แยกตามรายการ) ══ */
+.ev-card{background:var(--paper);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-bottom:16px;box-shadow:var(--sh-2)}
+.ev-hd{
+  display:flex;align-items:center;gap:14px;padding:14px 16px;
+  background:linear-gradient(100deg,var(--ink) 0%,var(--ink-2) 65%,#3a3427 100%);
+  color:#fff;position:relative;overflow:hidden;
+}
+.ev-hd::after{content:'';position:absolute;inset:0;background:radial-gradient(70% 140% at 88% 0%,rgba(212,175,55,.30),transparent 62%);pointer-events:none}
+.ev-date{
+  flex-shrink:0;width:56px;text-align:center;padding:7px 4px;border-radius:9px;
+  background:rgba(255,255,255,.08);border:1px solid rgba(242,216,121,.35);position:relative;z-index:1;
+}
+.ev-date .d{font-family:'Inter';font-size:22px;font-weight:800;color:var(--gold-light);line-height:1}
+.ev-date .m{font-size:9.5px;font-weight:700;color:rgba(255,255,255,.66);margin-top:2px}
+.ev-meta{min-width:0;position:relative;z-index:1}
+.ev-name{font-size:16.5px;font-weight:800;line-height:1.28;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ev-sub{font-size:11.5px;color:rgba(255,255,255,.62);margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ev-right{margin-left:auto;display:flex;align-items:center;gap:8px;flex-shrink:0;position:relative;z-index:1}
+.ev-cd{font-size:10.5px;font-weight:800;padding:5px 10px;border-radius:999px;background:var(--gold);color:#161200;white-space:nowrap}
+.ev-cd.far{background:rgba(255,255,255,.12);color:rgba(255,255,255,.8)}
+.ev-cnt{font-size:11px;font-weight:700;color:rgba(255,255,255,.72);white-space:nowrap}
+
+/* ══ การ์ดประกบคู่ ══ */
+.bout{border-top:1px solid var(--line);padding:16px;cursor:pointer;transition:background .12s}
+.bout:hover{background:var(--hover)}
+.bout-top{display:flex;align-items:center;gap:8px;margin-bottom:12px}
+.bout-no{font-size:9.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:999px;background:var(--surf-2);border:1px solid var(--line);color:var(--tx-3)}
+.bout-no.main{background:var(--ink);border-color:var(--ink);color:var(--gold-light)}
+.bout-tag{font-size:11px;color:var(--tx-3)}
+.bout-tag b{color:var(--gold-text);font-weight:700}
+.bout-cmp{margin-left:auto;font-size:11px;font-weight:700;color:var(--gold-text);white-space:nowrap}
+
+.vs-row{display:grid;grid-template-columns:1fr 118px 1fr;align-items:center;gap:10px}
+.vs-side{display:flex;flex-direction:column;align-items:center;gap:9px;min-width:0;color:inherit}
+.vs-photo{
+  width:118px;height:150px;border-radius:12px;overflow:hidden;flex-shrink:0;
+  background:linear-gradient(200deg,#efece3,#ded9c9);border:1px solid var(--line);position:relative;
+}
+[data-theme="dark"] .vs-photo{background:linear-gradient(200deg,#2a2820,#1a1915)}
+.vs-photo img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+.vs-side:hover .vs-photo{border-color:var(--gold);box-shadow:0 6px 18px rgba(212,175,55,.28)}
+.vs-name{font-size:15px;font-weight:800;color:var(--tx);text-align:center;line-height:1.25}
+.vs-side:hover .vs-name{color:var(--gold-text)}
+.vs-en{font-size:11px;color:var(--tx-3);font-weight:500}
+.vs-meta{font-size:11px;color:var(--tx-3);text-align:center;margin-top:1px}
+.vs-rec{font-family:'Inter';font-size:12px;font-weight:800;margin-top:3px}
+.vs-rec .w{color:var(--win)}.vs-rec .l{color:var(--loss)}.vs-rec .s{color:var(--tx-3);font-weight:600}
+.vs-badge{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px}
+.vs-badge .vs{
+  position:relative;width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  font-family:'Inter';font-size:13px;font-weight:800;color:#161200;
+  background:linear-gradient(140deg,var(--gold-light),var(--gold));box-shadow:0 4px 14px rgba(212,175,55,.4);
+  transition:transform .18s var(--ease,ease)
+}
+/* วงแหวนกระเพื่อม — บอกใบ้ว่ากดได้ */
+.vs-badge .vs::after{
+  content:'';position:absolute;inset:-5px;border-radius:50%;
+  border:2px solid #E23B2E;opacity:.5;animation:vsPulse 2.4s ease-out infinite;pointer-events:none
+}
+@keyframes vsPulse{0%{transform:scale(.9);opacity:.55}70%{transform:scale(1.25);opacity:0}100%{opacity:0}}
+@media(prefers-reduced-motion:reduce){.vs-badge .vs::after{animation:none;opacity:.35}}
+
+/* ปุ่มชวนกด "ดูวิเคราะห์คู่นี้" */
+.vs-cta{
+  display:inline-flex;align-items:center;gap:4px;max-width:100%;
+  padding:6px 11px;border-radius:999px;white-space:nowrap;
+  font-size:10.5px;font-weight:800;line-height:1;color:#fff;
+  background:linear-gradient(140deg,#E23B2E,#B91C1C);
+  border:1px solid #A61818;box-shadow:0 3px 10px rgba(185,28,28,.32);
+  transition:all .18s ease
+}
+.vs-cta svg{width:11px;height:11px;stroke:currentColor;stroke-width:2.4;fill:none;transition:transform .18s ease}
+.bout:hover .vs-cta{background:linear-gradient(140deg,#F04B3C,#D01F1F);box-shadow:0 6px 18px rgba(226,59,46,.45);transform:translateY(-1px)}
+.bout:hover .vs-cta svg{transform:translateX(2px)}
+.bout:hover .vs-badge .vs{transform:scale(1.06)}
+.vs-badge .rule{font-size:9.5px;font-weight:700;color:var(--tx-3);text-align:center;line-height:1.3;text-transform:uppercase;letter-spacing:.03em}
+.vs-cta .short{display:none}
+/* หัวข้อสำหรับ SEO ของแต่ละคู่ — ไม่รบกวนสายตา แต่กูเกิลอ่านได้ */
+.bout-h3{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+
 @media(max-width:768px){
-  .match{grid-template-columns:60px 1fr;gap:10px}
-  .match-side.b,.match-vs,.match-info{grid-column:2}
-  .match-side.b{flex-direction:row;text-align:left}
-  .match-side.b .fx-info{text-align:left}
-  .match-vs{text-align:left;margin:3px 0}
-  .match-date .d{font-size:16px}
+  .ev-name{font-size:14.5px;white-space:normal}
+  .ev-hd{gap:10px;padding:12px}
+  .ev-cnt{display:none}
+  .vs-row{grid-template-columns:1fr 84px 1fr;gap:6px}
+  .vs-cta{font-size:9.5px;padding:5px 8px}
+  .vs-cta .full{display:none}.vs-cta .short{display:inline}
+  .vs-badge .rule{display:none}
+  .vs-photo{width:96px;height:124px}
+  .vs-name{font-size:13.5px}
+  .vs-badge .vs{width:38px;height:38px;font-size:11.5px}
+  .bout{padding:13px 10px}
+}
+/* ══ กล่องเนื้อหา SEO ══ */
+.seo-box{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:20px 22px;margin-top:26px;font-size:13px;line-height:1.75;color:var(--tx-2)}
+.seo-box h2{font-size:16px;font-weight:800;color:var(--ink);margin-bottom:8px}
+[data-theme="dark"] .seo-box h2{color:var(--gold-light)}
+.seo-box h3{font-size:13.5px;font-weight:700;color:var(--tx);margin:16px 0 6px}
+.seo-box p{margin-bottom:10px}
+.seo-box ul{margin:0 0 10px 18px}
+.seo-box li{margin-bottom:4px}
+.seo-links{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}
+.seo-links a{font-size:11.5px;font-weight:600;padding:5px 11px;border-radius:999px;background:var(--surf-2);border:1px solid var(--line);color:var(--tx-2)}
+.seo-links a:hover{border-color:var(--gold);color:var(--gold-text)}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+@media(max-width:640px){.seo-box{padding:16px}}
+
+@media(max-width:400px){
+  .vs-photo{width:82px;height:106px}
+  .vs-en{display:none}
 }
 </style>
 </head>
@@ -48,8 +182,8 @@
 
 <div class="page-hd">
   <div class="kicker"><svg viewBox="0 0 24 24"><use href="#i-calendar"/></svg> Fight Schedule · โปรแกรมชก</div>
-  <h1>โปรแกรม<em>การแข่งขัน</em></h1>
-  <p class="sub">ไฟต์ทั้งหมดที่กำหนดวันแล้ว จัดกลุ่มตามเดือน — ล่าสุดขึ้นก่อน</p>
+  <h1>วิเคราะห์มวย<em>วันนี้</em> · โปรแกรมชกทุกศึก</h1>
+  <p class="sub"><strong>วิเคราะห์มวยวันนี้</strong>และโปรแกรมชกล่วงหน้า แยกตาม<strong>ศึก/รายการ</strong> ทั้ง <strong>วิเคราะห์มวย ONE Championship</strong> มวยไทย ราชดำเนิน ลุมพินี RWS และ MMA — กดปุ่ม <strong>“กดดูวิเคราะห์คู่นี้”</strong> ตรงกลางระหว่างคู่ชก เพื่อเปรียบเทียบสถิติชนะ-แพ้ ฟอร์มล่าสุด และคะแนนสะสมของทั้งสองคน</p>
 </div>
 
 <div class="wrap full">
@@ -111,6 +245,40 @@
   </div>
 
   <div id="schedule"></div>
+
+  <!-- ══ SEO CONTENT ══ -->
+  <div class="seo-box">
+    <h2>วิเคราะห์มวยวันนี้ ทุกศึก ทุกกติกา</h2>
+    <p>หน้านี้รวม<strong>โปรแกรมมวยวันนี้</strong>และไฟต์ที่กำหนดวันแล้วทั้งหมด แยกเป็นการ์ดราย<strong>ศึก</strong> เพื่อให้เห็นชัดว่าคู่ไหนอยู่ในรายการใด วันไหน กติกาอะไร ทุกคู่กดเข้าไปดู<strong>บทวิเคราะห์มวย</strong>แบบเปรียบเทียบสถิติสองคนได้ทันทีจากปุ่มสีแดงตรงกลางคู่ชก</p>
+
+    <h3>วิเคราะห์คู่มวยดูอะไรบ้าง</h3>
+    <ul>
+      <li><strong>สถิติชนะแพ้</strong>ของทั้งสองฝ่าย พร้อมอัตราชนะและจำนวนไฟต์รวม</li>
+      <li><strong>ฟอร์มล่าสุด</strong> — ชนะรวดกี่ไฟต์ ชกล่าสุดเมื่อไร ห่างหายไปนานแค่ไหน</li>
+      <li><strong>สถิติชนะน็อก</strong>และวิธีจบเกม เพื่อดูว่าใครมีโอกาสจบไฟต์ก่อนครบยก</li>
+      <li><strong>คะแนนสะสมและอันดับ</strong>ในรุ่นน้ำหนักเดียวกัน</li>
+      <li>รุ่นน้ำหนัก ค่ายมวย สัญชาติ และอายุของทั้งคู่</li>
+    </ul>
+
+    <h3>ครอบคลุมศึกไหนบ้าง</h3>
+    <p><strong>วิเคราะห์มวย ONE Championship</strong> · <strong>วิเคราะห์มวยไทย</strong>ศึกราชดำเนิน ศึกลุมพินี มวยไทย 7 สี RWS (Rajadamnern World Series) Fairtex Fight รวมถึงคิกบ็อกซิงและ MMA ข้อมูลอัปเดตทุกครั้งที่มีการประกาศคู่ชกใหม่</p>
+
+    <h3>ดูข้อมูลเพิ่มเติม</h3>
+    <div class="seo-links">
+      <a href="compare.html">เปรียบเทียบนักมวย (วิเคราะห์คู่มวย)</a>
+      <a href="rankings.html">อันดับนักมวย</a>
+      <a href="weight-classes.html">อันดับแยกรุ่นน้ำหนัก</a>
+      <a href="fighters.html">ประวัติและสถิตินักมวย</a>
+      <a href="results.html">ผลการแข่งขันล่าสุด</a>
+      <a href="blog/">บทความวิเคราะห์มวย</a>
+      <a href="weight-classes.html?div=fly">วิเคราะห์มวยฟลายเวท</a>
+      <a href="weight-classes.html?div=bantam">วิเคราะห์มวยแบนตัมเวท</a>
+      <a href="weight-classes.html?div=feather">วิเคราะห์มวยเฟเธอร์เวท</a>
+      <a href="weight-classes.html?div=light">วิเคราะห์มวยไลท์เวท</a>
+    </div>
+
+    <p class="sr-only">คำค้นที่เกี่ยวข้อง: วิเคราะห์มวยวันนี้ วิเคราะห์มวย ONE วิเคราะห์มวยไทย โปรแกรมมวยวันนี้ มวยวันนี้ชกกี่โมง ตารางมวยล่วงหน้า วิเคราะห์คู่มวยก่อนชก เปรียบเทียบสถิตินักมวย ทีเด็ดมวยวันนี้ วิเคราะห์ MMA ศึกราชดำเนิน ศึกลุมพินี มวยไทย 7 สี RWS Fairtex Fight</p>
+  </div>
 </div>
 
 <div id="bf-foot"></div>
@@ -130,23 +298,55 @@
   }
 
   var TODAY = new Date().toISOString().slice(0,10);
+
+  /* ── รูปนักมวยแนวตั้งความละเอียดสูง (cImg ของ utils.js เป็นจัตุรัส 80px จะเบลอ) ── */
+  var NOIMG = 'images/noname1.png';
+  var CLOUD_NAME = (typeof CLOUD !== 'undefined') ? CLOUD : 'dpvyl7nan';
+  function bigImg(f){
+    var fn = f && f.image_filename;
+    if(!fn) return NOIMG;
+    var clean = String(fn).replace(/\.(jpg|jpeg|png|webp)$/i,'');
+    return 'https://res.cloudinary.com/'+CLOUD_NAME+
+      '/image/upload/c_fill,g_face,w_260,h_330,dpr_2.0,f_auto,q_auto:good/'+encodeURIComponent(clean);
+  }
+
   var FMAP = {}, FBYNAME = {};
   FIGHTERS.forEach(function(f){ FMAP[f.id] = f; FBYNAME[f.name_th] = f; if(f.name_en) FBYNAME[f.name_en] = f; });
 
   function isUpcoming(h){ return h.result_type === 'upcoming' || h.result === 'รอแข่งขัน' || (h.date && h.date > TODAY && !h.result_type); }
 
   // build unique matches
+  /* ── ทำให้ชื่อ/ไอดีเป็นค่าเดียวกันก่อนเทียบ
+        เดิมคีย์ฝั่งหนึ่งเป็น fighter_id อีกฝั่งเป็นชื่อคู่ชก
+        ไฟต์เดียวกันที่บันทึกไว้ทั้งสองฝั่งจึงถูกนับเป็น 2 คู่ ── */
+  function canonId(v){
+    if(!v) return '';
+    var f = FMAP[v] || FBYNAME[v];
+    return String(f ? f.id : v).trim().toLowerCase();
+  }
+  function normDate(d){ return String(d||'').slice(0,10); }
+
+  /* คะแนนความสมบูรณ์ของเรคคอร์ด — ถ้าซ้ำ เก็บอันที่ข้อมูลครบกว่า */
+  function richness(h){
+    var n = 0;
+    ['event','rules','division','promotion','venue','location','time'].forEach(function(k){ if(h[k]) n++; });
+    if(FMAP[h.fighter_id]) n += 2;
+    if(FBYNAME[h.opponent]) n += 2;
+    return n;
+  }
+
   function buildMatches(){
-    var raw = HISTORY.filter(function(h){ return isUpcoming(h) && h.date && h.date >= TODAY; });
-    var seen = {};
-    var out = [];
+    var raw = HISTORY.filter(function(h){ return isUpcoming(h) && h.date && normDate(h.date) >= TODAY; });
+    var best = {}, order = [];
     raw.forEach(function(h){
-      var key = [h.fighter_id, h.opponent].sort().join('|') + '|' + h.date;
-      if(seen[key]) return;
-      seen[key] = true;
-      out.push(h);
+      var a = canonId(h.fighter_id), b = canonId(h.opponent);
+      if(!a && !b) return;
+      var key = [a, b].sort().join('|') + '|' + normDate(h.date);
+      if(!best[key]){ best[key] = h; order.push(key); return; }
+      if(richness(h) > richness(best[key])) best[key] = h;   /* ซ้ำ = เก็บอันข้อมูลครบกว่า */
     });
-    out.sort(function(a,b){ return String(a.date).localeCompare(String(b.date)); });
+    var out = order.map(function(k){ return best[k]; });
+    out.sort(function(a,b){ return normDate(a.date).localeCompare(normDate(b.date)); });
     return out;
   }
 
@@ -193,6 +393,43 @@
   var TMONTH = ['ม.ค.','ก.พ.','มี.ค.','เม.ย.','พ.ค.','มิ.ย.','ก.ค.','ส.ค.','ก.ย.','ต.ค.','พ.ย.','ธ.ค.'];
   var TMONTH_FULL = ['มกราคม','กุมภาพันธ์','มีนาคม','เมษายน','พฤษภาคม','มิถุนายน','กรกฎาคม','สิงหาคม','กันยายน','ตุลาคม','พฤศจิกายน','ธันวาคม'];
 
+  /* ── ชื่อศึก/โปรโมชัน สำหรับป้ายกำกับ ── */
+  function promoOf(h){
+    var t = (h.promotion || h.event || '');
+    if(/one/i.test(t)) return 'ONE Championship';
+    if(/rws|rajadamnern\s*world/i.test(t)) return 'RWS';
+    if(/fairtex|แฟร์เท็กซ์/i.test(t)) return 'Fairtex Fight';
+    if(/7\s?สี|ช่อง\s?7/i.test(t)) return 'มวยไทย 7 สี';
+    if(/ลุมพินี|lumpinee/i.test(t)) return 'ลุมพินี';
+    if(/ราชดำเนิน|rajadamnern/i.test(t)) return 'ราชดำเนิน';
+    return h.promotion || '';
+  }
+
+  function recOf(f){
+    if(!f) return '';
+    return '<div class="vs-rec"><span class="w">'+(f.total_wins||0)+'</span>'+
+           '<span class="s">–</span><span class="l">'+(f.total_losses||0)+'</span>'+
+           (f.total_draws ? '<span class="s">–'+f.total_draws+'</span>' : '')+'</div>';
+  }
+
+  function sidePanel(f, fallbackName, fallbackCountry, fallbackDiv, side){
+    var nm   = f ? f.name_th : (fallbackName || 'รอประกาศคู่ชก');
+    var en   = (f && f.name_en) ? f.name_en : '';
+    var flag = f ? fl(f.country) : (fallbackCountry ? fl(fallbackCountry) : '');
+    var team = f ? (f.team || '') : '';
+    var dv   = f ? (f.division || '') : (fallbackDiv || '');
+    var link = f ? fighterUrl(f) : '#';
+    return '<a class="vs-side '+side+'" href="'+link+'" onclick="event.stopPropagation()">'+
+      '<div class="vs-photo"><img src="'+bigImg(f)+'" loading="lazy" decoding="async" '+
+        'onerror="this.onerror=null;this.src=NOIMG" alt="'+esc(nm)+'"></div>'+
+      '<div>'+
+        '<div class="vs-name">'+esc(nm)+(en?' <span class="vs-en">'+esc(en)+'</span>':'')+'</div>'+
+        recOf(f)+
+        '<div class="vs-meta">'+flag+' '+esc(team || dv || '')+'</div>'+
+      '</div>'+
+    '</a>';
+  }
+
   function render(){
     var arr = apply();
     var wrap = document.getElementById('schedule');
@@ -200,53 +437,80 @@
       wrap.innerHTML = '<div class="empty">ไม่มีไฟต์ตามเงื่อนไข</div>';
       return;
     }
-    // group by month
-    var groups = {}, order = [];
-    arr.forEach(function(h){
-      var k = h.date.slice(0,7);
-      if(!groups[k]){ groups[k] = []; order.push(k); }
-      groups[k].push(h);
-    });
-    wrap.innerHTML = order.map(function(k){
-      var mo = parseInt(k.slice(5,7))-1, yr = parseInt(k.slice(0,4))+543;
-      var head = '<div class="month-hd">'+TMONTH_FULL[mo]+' '+yr+' — '+groups[k].length+' ไฟต์</div>';
-      var items = groups[k].map(function(h){
-        var fA = FMAP[h.fighter_id];
-        var fB = FBYNAME[h.opponent];
-        var d = new Date(h.date);
-        var diff = Math.round((d - new Date(TODAY))/86400000);
-        var cd = '';
-        if(diff === 0) cd = 'วันนี้';
-        else if(diff === 1) cd = 'พรุ่งนี้';
-        else if(diff > 0 && diff <= 7) cd = 'อีก '+diff+' วัน';
 
-        function panel(f, fallbackName, fallbackCountry, side){
-          var img = f ? cImg(f.image_filename,'sm') : PH;
-          var nm = f ? f.name_th : (fallbackName || '—');
-          var meta = f ? fl(f.country) : (fallbackCountry ? fl(fallbackCountry) : '');
-          var link = f ? fighterUrl(f) : '#';
-          return '<a class="match-side '+side+'" href="'+link+'" onclick="event.stopPropagation()" style="color:inherit">'+
-            '<div class="fx-img"><img src="'+img+'" loading="lazy" onerror="this.onerror=null;this.src=PH" alt=""></div>'+
-            '<div class="fx-info">'+
-              '<div class="fx-name">'+esc(nm)+'</div>'+
-              '<div class="fx-meta">'+meta+' '+esc(f?f.division:(h.division||''))+'</div>'+
+    /* จัดกลุ่ม: เดือน -> ศึก (ชื่อรายการ + วันที่) */
+    var months = {}, mOrder = [];
+    arr.forEach(function(h){
+      var mk = h.date.slice(0,7);
+      if(!months[mk]){ months[mk] = {evs:{}, order:[], n:0}; mOrder.push(mk); }
+      var M = months[mk];
+      var evName = h.event || 'รอประกาศชื่อรายการ';
+      var ek = evName + '|' + h.date;
+      if(!M.evs[ek]){ M.evs[ek] = {name:evName, date:h.date, list:[]}; M.order.push(ek); }
+      M.evs[ek].list.push(h); M.n++;
+    });
+
+    wrap.innerHTML = mOrder.map(function(mk){
+      var mo = parseInt(mk.slice(5,7),10)-1, yr = parseInt(mk.slice(0,4),10)+543;
+      var M  = months[mk];
+      var head = '<div class="month-hd">'+TMONTH_FULL[mo]+' '+yr+'<span class="n">'+
+                 M.order.length+' ศึก · '+M.n+' ไฟต์</span></div>';
+
+      var cards = M.order.map(function(ek){
+        var ev = M.evs[ek];
+        var d  = new Date(ev.date);
+        var diff = Math.round((d - new Date(TODAY))/86400000);
+        var cd = diff === 0 ? 'วันนี้' : diff === 1 ? 'พรุ่งนี้' : 'อีก '+diff+' วัน';
+        var cdCls = (diff > 14) ? ' far' : '';
+        var promo = promoOf(ev.list[0]);
+        var venue = ev.list[0].venue || ev.list[0].location || '';
+        var sub = [promo, venue, fDate(ev.date)].filter(Boolean).join(' · ');
+
+        var bouts = ev.list.map(function(h, i){
+          var fA = FMAP[h.fighter_id];
+          var fB = FBYNAME[h.opponent];
+          var cmpUrl = (fA && fB) ? ('compare.html?a='+encodeURIComponent(fA.id)+'&b='+encodeURIComponent(fB.id)) : '';
+          var nameA = fA ? fA.name_th : (h.fighter_id || '—');
+          var nameB = fB ? fB.name_th : (h.opponent || 'รอประกาศคู่ชก');
+          var isMain = (i === 0 && ev.list.length > 1);
+          var label  = isMain ? 'Main Event' : (ev.list.length > 1 ? 'ไฟต์ '+(i+1) : 'ไฟต์เดี่ยว');
+          var dv = h.division || (fA ? fA.division : '') || '';
+          var rules = h.rules || '';
+          return '<div class="bout"'+(cmpUrl?' onclick="location.href=\''+cmpUrl+'\'"':'')+'>'+
+            '<div class="bout-top">'+
+              '<span class="bout-no'+(isMain?' main':'')+'">'+label+'</span>'+
+              '<span class="bout-tag">'+(dv?'<b>'+esc(dv)+'</b>':'')+(dv&&rules?' · ':'')+esc(rules)+'</span>'+
+              '<h3 class="bout-h3">วิเคราะห์มวย '+esc(nameA)+' vs '+esc(nameB)+' '+fDate(h.date)+'</h3>'+
+              (cmpUrl?'<span class="bout-cmp">เทียบสถิติ →</span>':'')+
             '</div>'+
-          '</a>';
-        }
-        var cmpUrl = (fA && fB) ? ('compare.html?a='+encodeURIComponent(fA.id)+'&b='+encodeURIComponent(fB.id)) : '';
-        return '<div class="match" '+(cmpUrl?'onclick="location.href=\''+cmpUrl+'\'"':'')+'>'+
-          '<div class="match-date">'+
-            '<div class="d">'+d.getDate()+'</div>'+
-            '<div class="m">'+TMONTH[d.getMonth()]+'</div>'+
-            (cd?'<div class="cd">'+cd+'</div>':'')+
+            '<div class="vs-row">'+
+              sidePanel(fA, null, null, dv, 'a')+
+              '<div class="vs-badge"><div class="vs">VS</div>'+
+                (cmpUrl
+                  ? '<a class="vs-cta" href="'+cmpUrl+'" onclick="event.stopPropagation()" '+
+                    'title="วิเคราะห์มวยคู่ '+esc(nameA)+' vs '+esc(nameB)+' เปรียบเทียบสถิติก่อนชก">'+
+                    '<span class="full">กดดูวิเคราะห์คู่นี้</span><span class="short">วิเคราะห์</span>'+
+                    '<svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>'
+                  : '')+
+                (rules?'<div class="rule">'+esc(rules)+'</div>':'')+'</div>'+
+              sidePanel(fB, h.opponent, h.opponent_country, dv, 'b')+
+            '</div>'+
+          '</div>';
+        }).join('');
+
+        return '<div class="ev-card">'+
+          '<div class="ev-hd">'+
+            '<div class="ev-date"><div class="d">'+d.getDate()+'</div><div class="m">'+TMONTH[d.getMonth()]+'</div></div>'+
+            '<div class="ev-meta"><div class="ev-name">'+esc(ev.name)+'</div>'+
+              (sub?'<div class="ev-sub">'+esc(sub)+'</div>':'')+'</div>'+
+            '<div class="ev-right"><span class="ev-cnt">'+ev.list.length+' ไฟต์</span>'+
+              '<span class="ev-cd'+cdCls+'">'+cd+'</span></div>'+
           '</div>'+
-          panel(fA, null, null, 'a')+
-          '<div class="match-vs">VS</div>'+
-          panel(fB, h.opponent, h.opponent_country, 'b')+
-          '<div class="match-info"><div class="event">'+esc(h.event||'')+'</div><div>'+esc(h.rules||'')+'</div></div>'+
+          bouts+
         '</div>';
       }).join('');
-      return head + items;
+
+      return head + cards;
     }).join('');
   }
 
@@ -262,10 +526,69 @@
 
   render();
 
+  /* ── JSON-LD: บอกกูเกิลว่าหน้านี้คือ "วิเคราะห์มวย" + รายการไฟต์ที่จะมาถึง ── */
+  function injectJsonLd(list){
+    var SITE_URL = 'https://boxingfandom.com';
+    function abs(u){ return /^https?:/i.test(u) ? u : (SITE_URL + '/' + String(u).replace(/^\.?\//,'')); }
+    var old = document.getElementById('jsonld-schedule');
+    if(old) old.remove();
+
+    var events = list.slice(0, 40).map(function(h, i){
+      var fA = FMAP[h.fighter_id], fB = FBYNAME[h.opponent];
+      var nA = fA ? fA.name_th : (h.fighter_id || '');
+      var nB = fB ? fB.name_th : (h.opponent || 'รอประกาศคู่ชก');
+      var url = (fA && fB)
+        ? abs('compare.html?a='+encodeURIComponent(fA.id)+'&b='+encodeURIComponent(fB.id))
+        : abs('schedule.html');
+      return {
+        "@type":"ListItem","position":i+1,
+        "item":{
+          "@type":"SportsEvent",
+          "name": nA+' vs '+nB+(h.event ? ' — '+h.event : ''),
+          "description":'วิเคราะห์มวยคู่ '+nA+' พบ '+nB+' เปรียบเทียบสถิติชนะแพ้และฟอร์มล่าสุดก่อนชก',
+          "startDate": normDate(h.date),
+          "eventStatus":"https://schema.org/EventScheduled",
+          "eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode",
+          "sport": h.rules || 'มวยไทย',
+          "url": url,
+          "location":{"@type":"Place","name":(h.venue||h.location||h.event||'รอประกาศสถานที่'),
+                      "address":{"@type":"PostalAddress","addressCountry":"TH"}},
+          "competitor":[{"@type":"Person","name":nA},{"@type":"Person","name":nB}],
+          "organizer":{"@type":"Organization","name":(h.promotion||h.event||'Boxfan')}
+        }
+      };
+    });
+
+    var blocks = [
+      {"@context":"https://schema.org","@type":"ItemList",
+       "name":"โปรแกรมชกและวิเคราะห์คู่มวยที่จะมาถึง","numberOfItems":events.length,
+       "itemListElement":events},
+      {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+        {"@type":"ListItem","position":1,"name":"หน้าแรก","item":SITE_URL+'/'},
+        {"@type":"ListItem","position":2,"name":"วิเคราะห์มวยวันนี้ · โปรแกรมชก","item":SITE_URL+'/schedule.html'}
+      ]},
+      {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+        {"@type":"Question","name":"วิเคราะห์มวยวันนี้ดูได้ที่ไหน?",
+         "acceptedAnswer":{"@type":"Answer","text":"ดูได้ที่หน้าโปรแกรมชกของ Boxfan ทุกคู่มีปุ่มวิเคราะห์ที่พาไปหน้าเปรียบเทียบสถิติชนะ-แพ้ ฟอร์มล่าสุด และคะแนนสะสมของนักมวยทั้งสองคน"}},
+        {"@type":"Question","name":"วิเคราะห์มวย ONE Championship มีคู่ไหนบ้าง?",
+         "acceptedAnswer":{"@type":"Answer","text":"หน้าโปรแกรมชกแยกไฟต์ตามศึก ทั้ง ONE Championship มวยไทยราชดำเนิน ลุมพินี มวยไทย 7 สี RWS และ MMA เลือกกรองตามกติกาและรุ่นน้ำหนักได้"}},
+        {"@type":"Question","name":"Boxfan วิเคราะห์คู่มวยจากอะไร?",
+         "acceptedAnswer":{"@type":"Answer","text":"วิเคราะห์จากสถิติจริงของทั้งสองฝ่าย ได้แก่ สถิติชนะแพ้ อัตราชนะ จำนวนชนะน็อก ชนะรวดล่าสุด วันชกล่าสุด และคะแนนสะสมที่คำนวณจากผลการแข่งขัน ไม่ใช้ความรู้สึก"}}
+      ]}
+    ];
+
+    var sc = document.createElement('script');
+    sc.type = 'application/ld+json'; sc.id = 'jsonld-schedule';
+    sc.text = JSON.stringify(blocks);
+    document.head.appendChild(sc);
+  }
+  injectJsonLd(ALL);
+
   if(typeof setMeta === 'function') setMeta({
-    title:'โปรแกรมชก · Schedule', titleEn:'Schedule',
-    desc:'โปรแกรมมวย ONE Championship มวยไทย MMA | Boxfan',
-    url:'https://boxingfandom.com/schedule.html', keywords:'โปรแกรมชก,ตารางมวย'
+    title:'วิเคราะห์มวยวันนี้ · โปรแกรมชกทุกศึก', titleEn:'Fight Schedule & Analysis',
+    desc:'วิเคราะห์มวยวันนี้ โปรแกรมชก ONE Championship มวยไทย MMA พร้อมเปรียบเทียบสถิติคู่ชก | Boxfan',
+    url:'https://boxingfandom.com/schedule.html',
+    keywords:'วิเคราะห์มวยวันนี้,วิเคราะห์มวย,วิเคราะห์มวย ONE,วิเคราะห์มวยไทย,โปรแกรมมวยวันนี้,โปรแกรมชก,ตารางมวย,วิเคราะห์คู่มวย,เปรียบเทียบสถิตินักมวย'
   });
 })();
 </script>
