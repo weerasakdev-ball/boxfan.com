@@ -132,6 +132,14 @@ nav a.active::after{content:'';position:absolute;left:16px;right:16px;bottom:2px
 .nav-menu a .nm-en{font-size:11px;color:var(--mute);font-family:'Inter',sans-serif}
 .nav-menu .nm-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px}
 .nav-menu .nm-foot{display:block;margin-top:6px;padding-top:8px;border-top:1px solid var(--line);text-align:center;font-size:12.5px;color:var(--gold-text);font-weight:600}
+/* ── เมนู "ผลมวย" (results.html) ── */
+nav > a.nav-results{padding-right:24px}
+nav > a.nav-results .nav-dot{position:absolute;top:9px;right:9px;width:6px;height:6px;border-radius:50%;background:var(--gold);animation:navDot 2.2s var(--ease) infinite}
+@keyframes navDot{0%{box-shadow:0 0 0 0 rgba(212,175,55,.55)}70%{box-shadow:0 0 0 7px rgba(212,175,55,0)}100%{box-shadow:0 0 0 0 rgba(212,175,55,0)}}
+@media(prefers-reduced-motion:reduce){nav > a.nav-results .nav-dot{animation:none}}
+.nav-new{display:inline-block;margin-left:8px;padding:2px 7px;border-radius:6px;background:var(--gold-dim);color:var(--gold-text);font-size:11px;font-weight:700;line-height:1.5;vertical-align:middle}
+@media(max-width:1080px){nav a{padding:10px 11px;font-size:14.5px}nav a.active::after{left:11px;right:11px}nav > a.nav-results{padding-right:20px}nav > a.nav-results .nav-dot{right:6px}}
+
 .drawer .nav-sub{display:flex;flex-direction:column;padding:4px 0 10px 14px}
 .drawer .nav-sub a{padding:11px 12px;font-size:14.5px;color:var(--sub);border-bottom:none}
 .header-actions{display:flex;align-items:center;gap:12px;position:relative}
@@ -523,6 +531,7 @@ footer{background:var(--footer-bg);border-top:1px solid var(--line);padding:72px
       </div>
       <a href="fighters.html">นักมวย</a>
       <a href="schedule.html">ไฟต์</a>
+      <a href="results.html" class="nav-results" title="ผลมวยล่าสุดทุกไฟต์">ผลมวย<span class="nav-dot" aria-hidden="true"></span></a>
       <a href="blog/">ข่าวสาร</a>
       <a href="about.html">เกี่ยวกับเรา</a>
     </nav>
@@ -557,6 +566,7 @@ footer{background:var(--footer-bg);border-top:1px solid var(--line);padding:72px
     <div class="nav-sub" id="drawer-rank-sub"></div>
     <a href="fighters.html">นักมวย</a>
     <a href="schedule.html">ไฟต์</a>
+    <a href="results.html">ผลมวย<span class="nav-new">ล่าสุด</span></a>
     <a href="blog/">ข่าวสาร</a>
     <a href="about.html">เกี่ยวกับเรา</a>
   </nav>
@@ -675,7 +685,10 @@ footer{background:var(--footer-bg);border-top:1px solid var(--line);padding:72px
 <section class="section">
   <div class="sec-head">
     <div><div class="sec-title">ไฟต์ที่กำลังจะมาถึง</div><div class="sec-sub">โปรแกรมชกจากฐานข้อมูลจริง</div></div>
-    <a href="schedule.html" class="sec-link">ดูทั้งหมด <svg class="icon" style="width:14px;height:14px" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+    <div style="display:flex;align-items:center;gap:20px;flex-wrap:wrap">
+      <a href="results.html" class="sec-link">ผลมวยล่าสุด <svg class="icon" style="width:14px;height:14px" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+      <a href="schedule.html" class="sec-link">ดูทั้งหมด <svg class="icon" style="width:14px;height:14px" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+    </div>
   </div>
   <div class="fight-row" id="upcoming-grid">
     <div class="skel" style="height:220px;border-radius:16px"></div><div class="skel" style="height:220px;border-radius:16px"></div><div class="skel" style="height:220px;border-radius:16px"></div><div class="skel" style="height:220px;border-radius:16px"></div>
