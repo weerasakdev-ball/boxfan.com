@@ -84,6 +84,9 @@
 /* ══ การ์ดประกบคู่ ══ */
 .bout{border-top:1px solid var(--line);padding:16px;cursor:pointer;transition:background .12s}
 .bout:hover{background:var(--hover)}
+.bout-focus{background:var(--hover);box-shadow:inset 3px 0 0 var(--red,#E23B2E);animation:boutPulse 1.5s ease 2}
+@keyframes boutPulse{0%,100%{background:var(--hover)}50%{background:rgba(226,59,46,.10)}}
+@media(prefers-reduced-motion:reduce){.bout-focus{animation:none}}
 .bout-top{display:flex;align-items:center;gap:8px;margin-bottom:12px}
 .bout-no{font-size:9.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:999px;background:var(--surf-2);border:1px solid var(--line);color:var(--tx-3)}
 .bout-no.main{background:var(--ink);border-color:var(--ink);color:var(--gold-light)}
@@ -266,6 +269,7 @@
     <h3>ดูข้อมูลเพิ่มเติม</h3>
     <div class="seo-links">
       <a href="compare.html">เปรียบเทียบนักมวย (วิเคราะห์คู่มวย)</a>
+      <a href="stats.html">สถิติและจัดอันดับนักมวยทุกด้าน</a>
       <a href="rankings.html">อันดับนักมวย</a>
       <a href="weight-classes.html">อันดับแยกรุ่นน้ำหนัก</a>
       <a href="fighters.html">ประวัติและสถิตินักมวย</a>
@@ -476,7 +480,8 @@
           var label  = isMain ? 'Main Event' : (ev.list.length > 1 ? 'ไฟต์ '+(i+1) : 'ไฟต์เดี่ยว');
           var dv = h.division || (fA ? fA.division : '') || '';
           var rules = h.rules || '';
-          return '<div class="bout"'+(cmpUrl?' onclick="location.href=\''+cmpUrl+'\'"':'')+'>'+
+          var fkey = [canonId(h.fighter_id), canonId(h.opponent)].sort().join('|')+'|'+normDate(h.date);
+          return '<div class="bout" data-fkey="'+esc(fkey)+'"'+(cmpUrl?' onclick="location.href=\''+cmpUrl+'\'"':'')+'>'+
             '<div class="bout-top">'+
               '<span class="bout-no'+(isMain?' main':'')+'">'+label+'</span>'+
               '<span class="bout-tag">'+(dv?'<b>'+esc(dv)+'</b>':'')+(dv&&rules?' · ':'')+esc(rules)+'</span>'+
@@ -514,6 +519,30 @@
     }).join('');
   }
 
+  /* ── มาจากหน้าแรก: schedule.html?a=<fighter_id>&b=<opponent>&d=<date>
+        เลื่อนไปที่คู่นั้นแล้วไฮไลต์ให้เห็นชัด จากนั้นผู้ใช้กด "วิเคราะห์" ต่อไปหน้า compare ── */
+  function focusFromUrl(){
+    var p = new URLSearchParams(location.search);
+    var a = p.get('a'), b = p.get('b'), d = p.get('d');
+    if(!a && !b) return;
+    var want = [canonId(a), canonId(b)].sort().join('|') + '|' + normDate(d||'');
+    var el = document.querySelector('.bout[data-fkey="'+want.replace(/"/g,'')+'"]');
+    if(!el && !d){
+      /* ไม่ระบุวันที่ → หาคู่แรกที่ตรงกันสองฝั่ง */
+      var pair = [canonId(a), canonId(b)].sort().join('|');
+      var all = document.querySelectorAll('.bout[data-fkey]');
+      for(var i=0;i<all.length;i++){
+        if(all[i].getAttribute('data-fkey').indexOf(pair+'|')===0){ el = all[i]; break; }
+      }
+    }
+    if(!el) return;
+    el.classList.add('bout-focus');
+    setTimeout(function(){
+      var y = el.getBoundingClientRect().top + window.pageYOffset - 90;
+      window.scrollTo({top:y, behavior:'smooth'});
+    }, 120);
+  }
+
   var qi = document.getElementById('f-event'), qt;
   qi.addEventListener('input', function(){ clearTimeout(qt); qt = setTimeout(function(){ state.q = qi.value.trim(); render(); }, 150); });
   document.getElementById('f-div').addEventListener('change', function(){ state.div = this.value; render(); });
@@ -525,6 +554,7 @@
   });
 
   render();
+  focusFromUrl();
 
   /* ── JSON-LD: บอกกูเกิลว่าหน้านี้คือ "วิเคราะห์มวย" + รายการไฟต์ที่จะมาถึง ── */
   function injectJsonLd(list){

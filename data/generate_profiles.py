@@ -452,6 +452,135 @@ def load_external_css():
 PH_IMG = NO_IMG
 
 
+# ═══════════════════════════════════════════════════════════
+# ไฟต์ที่จะมาถึง — การ์ดพร้อมปุ่มเปรียบเทียบ (ส่งไป compare.html)
+# ═══════════════════════════════════════════════════════════
+UPCOMING_CSS = '''
+.upnext{margin:18px 0 0}
+.upnext-hd{display:flex;align-items:center;gap:9px;margin-bottom:12px}
+.upnext-hd .t{font-family:var(--sans);font-size:15px;font-weight:800;color:var(--tx);text-transform:uppercase;letter-spacing:.02em}
+.upnext-hd .n{font-size:11px;font-weight:800;color:#fff;background:var(--red);border-radius:999px;padding:2px 9px}
+.upnext-hd svg{width:17px;height:17px;stroke:var(--red);stroke-width:2;fill:none}
+.upcard{background:var(--surf);border:1px solid var(--line-2);border-left:3px solid var(--red);border-radius:11px;padding:16px 18px;margin-bottom:12px;box-shadow:var(--sh-2)}
+.upcard-top{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+.upcard-date{font-family:var(--sans);font-size:12.5px;font-weight:800;color:var(--red)}
+.upcard-cd{font-size:11px;font-weight:700;color:var(--tx-3);background:var(--surf-2,rgba(128,128,128,.10));border:1px solid var(--line-2);border-radius:999px;padding:2px 9px}
+.upcard-ev{font-size:11.5px;color:var(--tx-3);margin-left:auto;text-align:right}
+.upcard-vs{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.upcard-side{display:flex;align-items:center;gap:10px;min-width:0;flex:1}
+.upcard-side img{width:52px;height:52px;border-radius:50%;object-fit:cover;border:1px solid var(--line-2);flex-shrink:0}
+.upcard-nm{font-size:14px;font-weight:700;color:var(--tx);line-height:1.3}
+.upcard-nm a{color:var(--tx)}
+.upcard-nm a:hover{color:var(--red)}
+.upcard-rec{font-size:11.5px;color:var(--tx-3);margin-top:2px}
+.upcard-mid{font-family:var(--sans);font-size:11px;font-weight:800;color:var(--tx-3);letter-spacing:.08em;flex-shrink:0}
+.upcard-foot{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:14px;padding-top:13px;border-top:1px solid var(--line-2)}
+.upcard-meta{font-size:11.5px;color:var(--tx-3)}
+.upcard-btns{display:flex;gap:8px;margin-left:auto;flex-wrap:wrap}
+.upbtn{display:inline-flex;align-items:center;gap:6px;padding:9px 15px;border-radius:8px;font-size:12.5px;font-weight:700;border:1px solid var(--line-2);color:var(--tx-2);transition:all .18s}
+.upbtn:hover{border-color:var(--red);color:var(--red)}
+.upbtn.primary{background:var(--red);border-color:var(--red);color:#fff}
+.upbtn.primary:hover{filter:brightness(1.08);color:#fff}
+.upbtn svg{width:14px;height:14px;stroke:currentColor;stroke-width:2.2;fill:none}
+@media(max-width:560px){
+  .upcard-vs{gap:8px}
+  .upcard-side{flex:1 1 100%}
+  .upcard-mid{width:100%;text-align:center}
+  .upcard-btns{margin-left:0;width:100%}
+  .upbtn{flex:1;justify-content:center}
+}
+'''
+
+ICON_CAL_SVG = ('<svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/>'
+                '<path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h18"/></svg>')
+ICON_CHART_SVG = '<svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 15l4-6 4 3 5-8"/></svg>'
+
+
+def build_upcoming(f, up, fighters_map):
+    """การ์ด 'ไฟต์ที่จะมาถึง' — แต่ละคู่กดไป compare.html ได้ทันที
+    คืนค่าว่างถ้านักมวยคนนี้ยังไม่มีรายการแข่งขัน"""
+    if not up:
+        return ''
+
+    fid_q = quote(str(f.get('id') or ''), safe='')
+    cards = ''
+    for h in up:
+        opp_name = h.get('opponent') or ''
+        opp_f = fighters_map.get(opp_name)
+        date_raw = str(h.get('date') or '')
+
+        # นับถอยหลัง
+        cd = ''
+        try:
+            d = datetime.strptime(date_raw, '%Y-%m-%d').date()
+            n = (d - date.today()).days
+            cd = 'วันนี้' if n == 0 else ('พรุ่งนี้' if n == 1 else ('อีก %d วัน' % n if n > 0 else 'รอผล'))
+        except (ValueError, TypeError):
+            pass
+
+        # ฝั่งเจ้าของหน้า
+        side_a = ('<div class="upcard-side"><img src="%s" alt="%s" loading="lazy" '
+                  'onerror="this.onerror=null;this.src=\'%s\'">'
+                  '<div><div class="upcard-nm">%s</div>'
+                  '<div class="upcard-rec">สถิติ %s-%s</div></div></div>'
+                  % (cimg(f.get('image_filename'), 'sm'), esc(f.get('name_th')), NO_IMG,
+                     esc(f.get('name_th')), f.get('total_wins', 0) or 0, f.get('total_losses', 0) or 0))
+
+        # ฝั่งคู่ชก
+        if opp_f:
+            opp_link = '../fighters/%s' % page_href(opp_f)
+            opp_img = cimg(opp_f.get('image_filename'), 'sm')
+            opp_rec = 'สถิติ %s-%s' % (opp_f.get('total_wins', 0) or 0, opp_f.get('total_losses', 0) or 0)
+            opp_nm = '<a href="%s">%s</a>' % (opp_link, esc(opp_name))
+        else:
+            opp_img = PH_IMG
+            opp_rec = 'ยังไม่มีสถิติในระบบ'
+            opp_nm = esc(opp_name) or 'รอประกาศคู่ชก'
+        oc = h.get('opponent_country') or ''
+        if oc and oc != '-':
+            opp_rec = '%s %s' % (fl(oc), opp_rec)
+
+        side_b = ('<div class="upcard-side"><img src="%s" alt="%s" loading="lazy" '
+                  'onerror="this.onerror=null;this.src=\'%s\'">'
+                  '<div><div class="upcard-nm">%s</div>'
+                  '<div class="upcard-rec">%s</div></div></div>'
+                  % (opp_img, esc(opp_name), NO_IMG, opp_nm, opp_rec))
+
+        # ปุ่ม: เปรียบเทียบ (ถ้ามีคู่ชกในระบบ = เติมทั้งสองฝั่งให้เลย) + ดูโปรแกรมชก
+        if opp_f:
+            cmp_url = '../compare.html?a=%s&b=%s' % (fid_q, quote(str(opp_f.get('id') or ''), safe=''))
+            cmp_lbl = 'เปรียบเทียบคู่นี้'
+        else:
+            cmp_url = '../compare.html?a=%s' % fid_q
+            cmp_lbl = 'เลือกคู่เปรียบเทียบ'
+        sch_url = ('../schedule.html?a=%s&b=%s&d=%s'
+                   % (fid_q, quote(opp_name, safe=''), quote(date_raw, safe='')))
+
+        meta_bits = [x for x in (h.get('division') or f.get('division') or '', h.get('rules') or '',
+                                 h.get('venue') or h.get('location') or '') if x]
+        meta = esc(' · '.join(meta_bits))
+
+        cards += ('<div class="upcard">'
+                  '<div class="upcard-top"><span class="upcard-date">%s</span>'
+                  '%s<span class="upcard-ev">%s</span></div>'
+                  '<div class="upcard-vs">%s<span class="upcard-mid">VS</span>%s</div>'
+                  '<div class="upcard-foot"><span class="upcard-meta">%s</span>'
+                  '<span class="upcard-btns">'
+                  '<a class="upbtn primary" href="%s">%s%s</a>'
+                  '<a class="upbtn" href="%s">%sโปรแกรมชก</a>'
+                  '</span></div></div>'
+                  % (esc(date_raw) or 'รอประกาศวัน',
+                     ('<span class="upcard-cd">%s</span>' % cd) if cd else '',
+                     esc(h.get('event') or 'รอประกาศชื่อรายการ'),
+                     side_a, side_b, meta or '—',
+                     cmp_url, ICON_CHART_SVG, cmp_lbl,
+                     sch_url, ICON_CAL_SVG))
+
+    return ('<div class="upnext"><div class="upnext-hd">%s<span class="t">ไฟต์ที่จะมาถึง</span>'
+            '<span class="n">%d</span></div>%s</div>'
+            % (ICON_CAL_SVG, len(up), cards))
+
+
 def build_score(past):
     """
     คะแนน: ใช้สูตรเดียวกับ calcScore() ใน index.html และ weight-classes.html
@@ -603,7 +732,9 @@ def generate(f, history, full_css, fighters_map):
     if nc > 0:
         nc_html = f'<div class="rsep">–</div><div><div class="rn n">{nc}</div><div class="rl">NC</div></div>'
 
-    rows = build_rows(up + past[:10], fighters_map)
+    # ไฟต์ที่จะมาถึงย้ายไปแสดงเป็นการ์ดของตัวเอง (มีปุ่มเปรียบเทียบ) จึงไม่ซ้ำในตารางประวัติ
+    upcoming_html = build_upcoming(f, up, fighters_map)
+    rows = build_rows(past[:10], fighters_map)
 
     # JSON-LD — ใช้ข้อความดิบ (json.dumps จะ escape ให้เอง) และตัดคีย์ที่ว่างทิ้ง
     ld = {
@@ -627,7 +758,7 @@ def generate(f, history, full_css, fighters_map):
                  'color:var(--tx-3)">ยังไม่มีประวัติการชก</td></tr>')
     more_html = (('<div style="margin-top:8px;font-size:12px;color:var(--tx-4);text-align:center">'
                   'แสดง %d จาก %d แมตช์</div>'
-                  % (min(len(past), 10) + len(up), len(past) + len(up))) if len(past) > 10 else '')
+                  % (min(len(past), 10), len(past))) if len(past) > 10 else '')
     bio_html = (('<div style="margin-top:18px;padding:24px;background:var(--surf);'
                  'border:1px solid var(--line-2);border-radius:11px;box-shadow:var(--sh-2)">'
                  '<div style="font-family:var(--sans);font-size:15px;font-weight:800;color:var(--tx);'
@@ -664,6 +795,7 @@ def generate(f, history, full_css, fighters_map):
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+Thai:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 {full_css}
+{UPCOMING_CSS}
 </style>
 </head>
 <body>
@@ -728,6 +860,9 @@ def generate(f, history, full_css, fighters_map):
 
   <!-- PHYSICAL -->
   <div class="pgrid">{pg}</div>
+
+  <!-- UPCOMING FIGHTS -->
+  {upcoming_html}
 
   <!-- FORM BAR -->
   {form_html}

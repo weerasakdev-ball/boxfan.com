@@ -340,6 +340,54 @@ nav > a.nav-results .nav-dot{position:absolute;top:9px;right:9px;width:6px;heigh
 .fc-btn{display:flex;align-items:center;justify-content:center;gap:6px;width:100%;padding:11px;border-radius:var(--r-sm);border:1px solid var(--line-strong);font-size:13px;font-weight:600;color:var(--sub);transition:all .2s var(--ease)}
 .fc-btn:hover{border-color:var(--gold);color:var(--gold-text)}
 
+/* ── การ์ดวิเคราะห์คู่เด่น (ใช้อัลกอริทึมเดียวกับหน้า compare) ───────────── */
+.pred-card{background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow-card)}
+.pred-hd{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 20px;border-bottom:1px solid var(--line);background:var(--bg-2);flex-wrap:wrap}
+.pred-hd .l{display:flex;align-items:center;gap:8px;font-size:12.5px;font-weight:700;color:var(--gold-text);font-family:'Inter',sans-serif;letter-spacing:.04em;text-transform:uppercase}
+.pred-hd .l svg{width:14px;height:14px;stroke:currentColor;stroke-width:2;fill:none}
+.pred-hd .r{font-size:12.5px;color:var(--sub);font-weight:600}
+.pred-body{padding:26px 22px 22px}
+.pred-row{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:14px}
+.pred-side{text-align:center;min-width:0}
+.pred-side .ph-avatar{width:96px;height:96px;border-radius:50%;margin:0 auto 12px;border:2px solid var(--line-strong)}
+.pred-side.a .ph-avatar{border-color:#5aabff}
+.pred-side.b .ph-avatar{border-color:#ff5a5a}
+.pred-nm{font-size:15px;font-weight:700;line-height:1.3;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pred-sub{font-size:11.5px;color:var(--mute);margin-top:3px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pred-pct{font-family:'Inter',sans-serif;font-size:38px;font-weight:800;line-height:1.05;margin-top:10px;letter-spacing:-.02em}
+.pred-side.a .pred-pct{color:#5aabff}
+.pred-side.b .pred-pct{color:#ff5a5a}
+.pred-pct-lbl{font-size:9.5px;font-weight:700;letter-spacing:.14em;color:var(--mute);text-transform:uppercase;margin-top:2px;font-family:'Inter',sans-serif}
+.pred-vs{width:44px;height:44px;border-radius:50%;background:var(--bg-2);border:1px solid var(--line-strong);display:flex;align-items:center;justify-content:center;font-family:'Inter',sans-serif;font-size:12px;font-weight:800;color:var(--gold-text);flex-shrink:0}
+.pred-bar{margin:22px 0 8px;height:12px;border-radius:99px;overflow:hidden;display:flex;background:var(--bg-2);border:1px solid var(--line)}
+.pred-bar i{display:block;height:100%;transition:width .6s var(--ease)}
+.pred-bar .ba{background:linear-gradient(90deg,#2f74c0,#5aabff)}
+.pred-bar .bb{background:linear-gradient(90deg,#ff5a5a,#c02f2f)}
+.pred-forms{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+.pred-forms>div:last-child{text-align:right}
+.pred-form-lbl{font-size:11px;color:var(--mute);font-weight:600;margin-bottom:6px}
+.pred-fb{display:inline-flex;align-items:center;justify-content:center;width:23px;height:23px;border-radius:6px;font-family:'Inter',sans-serif;font-size:10.5px;font-weight:800;color:#fff;margin-right:4px}
+.pred-forms>div:last-child .pred-fb{margin-right:0;margin-left:4px}
+.pred-fb.w{background:#1f9d55}.pred-fb.l{background:#d64545}.pred-fb.nc{background:var(--mute)}
+.pred-meta{margin-top:18px;padding-top:16px;border-top:1px solid var(--line);display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:12.5px;color:var(--sub)}
+.pred-meta svg{width:14px;height:14px;stroke:var(--mute);stroke-width:2;fill:none;flex-shrink:0}
+.pred-cta{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}
+.pred-btn{flex:1;min-width:180px;display:flex;align-items:center;justify-content:center;gap:7px;padding:13px 16px;border-radius:var(--r-sm);font-size:14px;font-weight:700;transition:all .2s var(--ease);border:1px solid var(--line-strong);color:var(--sub);background:transparent;cursor:pointer;font-family:inherit}
+.pred-btn svg{width:15px;height:15px;stroke:currentColor;stroke-width:2.2;fill:none}
+.pred-btn:hover{border-color:var(--gold);color:var(--gold-text)}
+.pred-btn.primary{background:linear-gradient(135deg,var(--gold),var(--gold-light));border-color:var(--gold);color:#12100a}
+.pred-btn.primary:hover{filter:brightness(1.06);color:#12100a}
+.pred-note{margin-top:12px;font-size:11.5px;color:var(--mute);line-height:1.6}
+@media(max-width:640px){
+  .pred-body{padding:20px 14px 18px}
+  .pred-row{gap:8px}
+  .pred-side .ph-avatar{width:70px;height:70px}
+  .pred-nm{font-size:13px}
+  .pred-pct{font-size:28px}
+  .pred-vs{width:34px;height:34px;font-size:10.5px}
+  .pred-btn{min-width:100%}
+}
+
 .news-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
 .news-card{background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;transition:all .25s var(--ease)}
 .news-card:hover{transform:translateY(-4px);border-color:var(--line-strong);box-shadow:var(--shadow-card)}
@@ -531,6 +579,8 @@ footer{background:var(--footer-bg);border-top:1px solid var(--line);padding:72px
       </div>
       <a href="fighters.html">นักมวย</a>
       <a href="schedule.html">ไฟต์</a>
+      <a href="compare.html" title="เปรียบเทียบสถิตินักมวย วิเคราะห์คู่มวยก่อนชก">เปรียบเทียบ</a>
+      <a href="stats.html" title="จัดอันดับนักมวยได้ทุกสถิติ พร้อมภาพ">สถิติ</a>
       <a href="results.html" class="nav-results" title="ผลมวยล่าสุดทุกไฟต์">ผลมวย<span class="nav-dot" aria-hidden="true"></span></a>
       <a href="blog/">ข่าวสาร</a>
       <a href="about.html">เกี่ยวกับเรา</a>
@@ -566,6 +616,8 @@ footer{background:var(--footer-bg);border-top:1px solid var(--line);padding:72px
     <div class="nav-sub" id="drawer-rank-sub"></div>
     <a href="fighters.html">นักมวย</a>
     <a href="schedule.html">ไฟต์</a>
+    <a href="compare.html">เปรียบเทียบ<span class="nav-new">วิเคราะห์</span></a>
+    <a href="stats.html">สถิติ<span class="nav-new">จัดอันดับ</span></a>
     <a href="results.html">ผลมวย<span class="nav-new">ล่าสุด</span></a>
     <a href="blog/">ข่าวสาร</a>
     <a href="about.html">เกี่ยวกับเรา</a>
@@ -680,6 +732,18 @@ footer{background:var(--footer-bg);border-top:1px solid var(--line);padding:72px
   </div>
   <p class="divs-intro">อันดับนักมวยไทยแยกตามรุ่นน้ำหนักทุกรุ่น ตั้งแต่อะตอมเวท สตรอว์เวท ฟลายเวท แบนตัมเวท เฟเธอร์เวท ไปจนถึงเวลเทอร์เวท คำนวณคะแนนจากสถิติจริง อยากรู้ว่านักมวยรุ่นไหนเก่งที่สุด ดูได้เลยที่นี่</p>
   <div class="divs-grid" id="divs-grid"></div>
+</section>
+
+<section class="section" id="prediction">
+  <div class="sec-head">
+    <div><div class="sec-title">วิเคราะห์คู่เด่น</div><div class="sec-sub">คำนวณเปอร์เซ็นต์แพ้-ชนะจากสถิติจริง ด้วยอัลกอริทึมเดียวกับหน้าเปรียบเทียบ</div></div>
+    <div style="display:flex;align-items:center;gap:20px;flex-wrap:wrap">
+      <a href="compare.html" class="sec-link">เปรียบเทียบเอง <svg class="icon" style="width:14px;height:14px" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </div>
+  <div id="pred-wrap">
+    <div class="skel" style="height:420px;border-radius:16px"></div>
+  </div>
 </section>
 
 <section class="section">
@@ -1159,6 +1223,138 @@ footer{background:var(--footer-bg);border-top:1px solid var(--line);padding:72px
     }).join('');
   }
 
+  /* ══ วิเคราะห์คู่เด่น — อัลกอริทึมเดียวกับ compare.html (buildSummary/fightWindow) ══
+     ใช้ผลชก 5 ไฟต์ล่าสุดของแต่ละคน → อัตราชนะ → เทียบสัดส่วนกัน → ตัดขอบที่ 5%-95%
+     ตัวเลขที่ได้จึงตรงกับที่ผู้ใช้จะเห็นเมื่อกดเข้าไปหน้า compare.html   */
+  var PRED_WIN=5;
+  function predWindow(fid){
+    var h=hist(fid).filter(function(x){return x.result_type!=='upcoming';});
+    var list=h.slice(0,Math.min(PRED_WIN,h.length));
+    var w=list.filter(function(x){return x.result_type==='win';}).length;
+    var l=list.filter(function(x){return x.result_type==='loss';}).length;
+    return {list:list,n:list.length,w:w,l:l,rate:list.length?(w/list.length*100):0};
+  }
+  function predPct(a,b){
+    var wa=predWindow(a).rate,wb=predWindow(b).rate,pA;
+    if(wa===0&&wb===0) pA=50;
+    else pA=Math.round((wa/((wa+wb)||1))*100);
+    pA=Math.max(5,Math.min(95,pA));
+    return {a:pA,b:100-pA};
+  }
+
+  var PRED_LIST=[],PRED_IDX=0;
+
+  /* เลือกคู่ที่จะเอามาโชว์ — ไล่จากดีที่สุดลงมา เพื่อไม่ให้ส่วนนี้ว่างเปล่า
+     1) ไฟต์จริงที่ประกาศวันแล้ว และมีสถิติครบทั้งสองฝั่ง
+     2) ไฟต์จริงที่ยังรอแข่ง แม้วันจะเลยมาแล้ว (ข้อมูลยังไม่อัปเดตผล)
+     3) คู่ในฝัน — จับ 2 อันดับคะแนนสูงสุดในแต่ละรุ่นน้ำหนักมาเทียบกัน */
+  function buildPredList(){
+    var out=[],seen={};
+    function pushReal(h){
+      var fA=FMAP[h.fighter_id],fB=FBYNAME[h.opponent];
+      if(!fA||!fB||fA.id===fB.id) return;
+      var k=[fA.id,fB.id].sort().join('|')+'|'+(h.date||'');
+      if(seen[k]) return; seen[k]=true;
+      out.push({kind:'real',h:h,fA:fA,fB:fB});
+    }
+    var ups=HISTORY.filter(isUpcoming).sort(function(a,b){return String(a.date||'').localeCompare(String(b.date||''));});
+    ups.forEach(function(h){ if(h.date&&h.date>=TODAY) pushReal(h); });
+    if(!out.length) ups.forEach(pushReal);
+    if(out.length) return out;
+
+    /* ── คู่ในฝัน ── */
+    var byDiv={};
+    FIGHTERS.forEach(function(f){
+      var k=divKey(f.division); if(!k) return;
+      (byDiv[k]=byDiv[k]||[]).push(f);
+    });
+    var dream=[];
+    DIV_MAP.forEach(function(d){
+      var arr=byDiv[d.key]; if(!arr||arr.length<2) return;
+      arr=arr.slice().sort(function(x,y){
+        if(y._score!==x._score) return y._score-x._score;
+        return String(y._lastDate||'').localeCompare(String(x._lastDate||''));
+      });
+      dream.push({kind:'dream',h:{division:arr[0].division},fA:arr[0],fB:arr[1],_n:arr.length});
+    });
+    dream.sort(function(a,b){return b._n-a._n;}); /* รุ่นที่มีนักมวยเยอะสุดขึ้นก่อน */
+    return dream;
+  }
+
+  function predBadges(list,rev){
+    var arr=list.slice().reverse();
+    return arr.map(function(x){
+      var cls=x.result_type==='win'?'w':x.result_type==='loss'?'l':'nc';
+      var lbl=x.result_type==='win'?'W':x.result_type==='loss'?'L':'NC';
+      return '<span class="pred-fb '+cls+'">'+lbl+'</span>';
+    }).join('');
+  }
+  function renderPrediction(){
+    var wrap=document.getElementById('pred-wrap'); if(!wrap) return;
+    if(!PRED_LIST.length) PRED_LIST=buildPredList();
+    if(!PRED_LIST.length){
+      wrap.innerHTML='<div class="pred-card"><div class="pred-body" style="text-align:center;color:var(--sub)">'+ICON_CHART+
+        '<p style="margin:10px 0 14px">ยังไม่มีข้อมูลมากพอสำหรับการวิเคราะห์คู่มวยในขณะนี้</p>'+
+        '<a class="pred-btn primary" style="display:inline-flex;flex:0 0 auto" href="compare.html">เลือกนักมวยเปรียบเทียบเอง</a></div></div>';
+      return;
+    }
+    var it=PRED_LIST[PRED_IDX%PRED_LIST.length];
+    var h=it.h||{},fA=it.fA,fB=it.fB;
+    var p=predPct(fA.id,fB.id),wA=predWindow(fA.id),wB=predWindow(fB.id);
+    var dv=h.division||fA.division||fB.division||'';
+    var cmp='compare.html?a='+encodeURIComponent(fA.id)+'&b='+encodeURIComponent(fB.id);
+    var sch=it.kind==='dream'?'schedule.html'
+      :'schedule.html?a='+encodeURIComponent(h.fighter_id||'')+'&b='+encodeURIComponent(h.opponent||'')+'&d='+encodeURIComponent(h.date||'');
+
+    var hdR;
+    if(it.kind==='dream'){
+      hdR=esc(dv)+' · 2 อันดับแรกของรุ่น';
+    }else{
+      var diff=Math.round((new Date(h.date)-new Date(TODAY))/86400000);
+      var cd=diff===0?'วันนี้':diff===1?'พรุ่งนี้':(diff>0?'อีก '+diff+' วัน':'รอผล');
+      hdR=esc(h.event||'รอประกาศชื่อรายการ')+' · '+fDate(h.date)+' ('+cd+')';
+    }
+
+    wrap.innerHTML='<div class="pred-card">'+
+      '<div class="pred-hd">'+
+        '<span class="l">'+ICON_CHART+(it.kind==='dream'?'DREAM MATCH · คู่ในฝัน':'STATS PREDICTION · 5 ไฟต์ล่าสุด')+'</span>'+
+        '<span class="r">'+hdR+'</span>'+
+      '</div>'+
+      '<div class="pred-body">'+
+        '<div class="pred-row">'+
+          '<div class="pred-side a">'+avatar(fA,'md')+
+            '<div class="pred-nm">'+esc(fA.name_th)+'</div>'+
+            '<div class="pred-sub">'+(fA.total_wins||0)+'W-'+(fA.total_losses||0)+'L · '+esc(fA.team||fA.country||'')+'</div>'+
+            '<div class="pred-pct">'+p.a+'%</div><div class="pred-pct-lbl">Win Probability</div>'+
+          '</div>'+
+          '<div class="pred-vs">VS</div>'+
+          '<div class="pred-side b">'+avatar(fB,'md')+
+            '<div class="pred-nm">'+esc(fB.name_th)+'</div>'+
+            '<div class="pred-sub">'+(fB.total_wins||0)+'W-'+(fB.total_losses||0)+'L · '+esc(fB.team||fB.country||'')+'</div>'+
+            '<div class="pred-pct">'+p.b+'%</div><div class="pred-pct-lbl">Win Probability</div>'+
+          '</div>'+
+        '</div>'+
+        '<div class="pred-bar"><i class="ba" style="width:'+p.a+'%"></i><i class="bb" style="width:'+p.b+'%"></i></div>'+
+        '<div class="pred-forms">'+
+          '<div><div class="pred-form-lbl">ฟอร์ม '+wA.n+' ไฟต์ล่าสุด · ชนะ '+wA.w+'</div><div>'+predBadges(wA.list)+'</div></div>'+
+          '<div><div class="pred-form-lbl">ฟอร์ม '+wB.n+' ไฟต์ล่าสุด · ชนะ '+wB.w+'</div><div>'+predBadges(wB.list)+'</div></div>'+
+        '</div>'+
+        '<div class="pred-meta">'+ICON_PIN+esc(dv)+(h.rules?'<span class="dot"></span>'+esc(h.rules):'')+
+          (h.venue||h.location?'<span class="dot"></span>'+esc(h.venue||h.location):'')+'</div>'+
+        '<div class="pred-cta">'+
+          '<a class="pred-btn primary" href="'+cmp+'"><svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 15l4-6 4 3 5-8"/></svg>ดูวิเคราะห์เต็มคู่นี้</a>'+
+          '<a class="pred-btn" href="'+sch+'"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h18"/></svg>'+(it.kind==='dream'?'ดูโปรแกรมชกทั้งหมด':'ดูโปรแกรมชกทั้งศึก')+'</a>'+
+          (PRED_LIST.length>1?'<button class="pred-btn" id="pred-next" type="button"><svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>คู่ถัดไป ('+((PRED_IDX%PRED_LIST.length)+1)+'/'+PRED_LIST.length+')</button>':'')+
+        '</div>'+
+        '<div class="pred-note">'+(it.kind==='dream'?'ยังไม่มีคู่ชกที่ประกาศวันในขณะนี้ ระบบจึงจับคู่ 2 อันดับแรกของรุ่นให้ดูว่าถ้าเจอกันผลจะเป็นอย่างไร · ':'')+
+          'คำนวณจากอัตราชนะ 5 ไฟต์ล่าสุดของทั้งสองฝ่ายเทียบสัดส่วนกัน เป็นการประเมินจากสถิติล้วน ๆ ไม่ใช่การรับประกันผลการแข่งขัน</div>'+
+      '</div>'+
+    '</div>';
+
+    var nx=document.getElementById('pred-next');
+    if(nx) nx.addEventListener('click',function(){ PRED_IDX++; renderPrediction(); });
+  }
+
   function renderUpcoming(){
     var list=HISTORY.filter(function(h){return isUpcoming(h)&&h.date&&h.date>=TODAY;})
       .sort(function(a,b){return String(a.date).localeCompare(String(b.date));}); /* ใกล้ที่สุดก่อน */
@@ -1176,7 +1372,9 @@ footer{background:var(--footer-bg);border-top:1px solid var(--line);padding:72px
       var tag=diff===0?'วันนี้':diff===1?'พรุ่งนี้':'อีก '+diff+' วัน';
       var nameA=fA?fA.name_th:(h.fighter_id||'—'),nameB=fB?fB.name_th:(h.opponent||'—');
       var div=h.division||(fA?fA.division:'')||'';
-      return '<a class="fight-card" href="'+(fA?fighterUrl(fA):'#')+'"><div class="fc-top"><span class="fc-date num">'+fDate(h.date)+' · '+tag+'</span><span class="fc-event">'+esc(h.event||'')+'</span></div><div class="fc-versus"><div class="fc-fighter">'+avatar(fA,'md')+'<div class="fc-fighter-name">'+esc(nameA)+'</div></div><span class="fc-vs">VS</span><div class="fc-fighter">'+avatar(fB,'md')+'<div class="fc-fighter-name">'+esc(nameB)+'</div></div></div><div class="fc-bottom"><div class="fc-tags">'+ICON_PIN+esc(div)+'</div><span class="fc-btn">รายละเอียดไฟต์</span></div></a>';
+      /* คลิกการ์ด → หน้าโปรแกรมชก (schedule) แล้วโฟกัสไปที่คู่นี้ จากนั้นผู้ใช้กด "วิเคราะห์" ต่อไปหน้า compare */
+      var schedUrl='schedule.html?a='+encodeURIComponent(h.fighter_id||'')+'&b='+encodeURIComponent(h.opponent||'')+'&d='+encodeURIComponent(h.date||'');
+      return '<a class="fight-card" href="'+schedUrl+'"><div class="fc-top"><span class="fc-date num">'+fDate(h.date)+' · '+tag+'</span><span class="fc-event">'+esc(h.event||'')+'</span></div><div class="fc-versus"><div class="fc-fighter">'+avatar(fA,'md')+'<div class="fc-fighter-name">'+esc(nameA)+'</div></div><span class="fc-vs">VS</span><div class="fc-fighter">'+avatar(fB,'md')+'<div class="fc-fighter-name">'+esc(nameB)+'</div></div></div><div class="fc-bottom"><div class="fc-tags">'+ICON_PIN+esc(div)+'</div><span class="fc-btn">ดูโปรแกรม &amp; วิเคราะห์</span></div></a>';
     }).join('');
   }
 
@@ -1302,7 +1500,7 @@ footer{background:var(--footer-bg);border-top:1px solid var(--line);padding:72px
     document.addEventListener('click',function(e){if(!e.target.closest('.search-box')){drop.classList.remove('open');wrap.classList.remove('open');}});
   }
 
-  buildTabs();bindShowMore();buildRankMenu();renderHeroStats();renderRanking('all');renderFeatured();renderDivisions();renderUpcoming();renderNews();initSearch();
+  buildTabs();bindShowMore();buildRankMenu();renderHeroStats();renderRanking('all');renderFeatured();renderDivisions();renderPrediction();renderUpcoming();renderNews();initSearch();
   injectSEO(FIGHTERS.slice().sort(function(a,b){ if(b._score!==a._score)return b._score-a._score; return String(b._lastDate||'').localeCompare(String(a._lastDate||'')); }));
 
   if(typeof setMeta==='function')setMeta({title:'จัดอันดับนักมวยไทย',titleEn:'Muay Thai Rankings',desc:'จัดอันดับนักมวยไทย ONE Championship ด้วยระบบคะแนนจากสถิติจริง | Boxfan',url:'https://boxingfandom.com/',keywords:'อันดับนักมวย,มวยไทย,ONE Championship,Boxfan'});
