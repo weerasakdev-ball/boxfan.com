@@ -5,7 +5,7 @@
 
 /* ── Constants ───────────────────────────────────────────────────────────── */
 var BRAND = 'Boxfan';
-var SITE  = 'https://boxingfandom.com';
+var SITE  = 'https://www.boxingfandom.com';
 var CLOUD = 'dpvyl7nan'; /* ← Cloudinary cloud name */
 var PH    = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80'%3E%3Crect width='80' height='80' fill='%23f1f3f4'/%3E%3Ctext x='50%25' y='55%25' text-anchor='middle' dominant-baseline='middle' font-size='36'%3E%F0%9F%A5%8A%3C/text%3E%3C/svg%3E";
 
@@ -77,6 +77,9 @@ function fighterUrl(f, prefix) {
     if (f.slug) return base + 'fighters/' + encodeURIComponent(f.slug) + '.html';
     return base + 'profile.html?id=' + encodeURIComponent(f.id);
 }
+
+/* alias — หลายหน้าเรียกชื่อ getFighterUrl() ห้ามลบ */
+function getFighterUrl(f, prefix) { return fighterUrl(f, prefix); }
 
 /* ── Image helpers ───────────────────────────────────────────────────────── */
 var IMG_SIZES = { sm: 'w_80,h_80', md: 'w_160,h_160', lg: 'w_600,h_400', xl: 'w_800,h_600' };
@@ -417,6 +420,36 @@ function renderFooter(extraText) {
 
     var extra = extraText ? '<span style="opacity:.4"> &nbsp;·&nbsp; </span>' + extraText : '';
 
+    /* ── SEO keyword cluster (internal links, ทุกหน้ามีเหมือนกัน) ── */
+    var KW = [
+        ['index.html',           'จัดอันดับนักมวยไทย'],
+        ['index.html',           'นักมวยไทยเก่งที่สุด'],
+        ['rankings.html',        'อันดับนักมวย ONE'],
+        ['rankings.html',        'pound for pound มวยไทย'],
+        ['weight-classes.html',  'รุ่นน้ำหนัก ONE มวยไทย'],
+        ['weight-classes.html',  'แชมป์โลก ONE มวยไทย'],
+        ['fighters.html',        'ประวัตินักมวย'],
+        ['fighters.html',        'สถิตินักมวยไทย'],
+        ['schedule.html',        'โปรแกรมมวยวันนี้'],
+        ['schedule.html',        'วิเคราะห์มวยวันนี้'],
+        ['schedule.html',        'มวยพรุ่งนี้'],
+        ['results.html',         'ผลมวยล่าสุด'],
+        ['results.html',         'ผลมวยวันนี้'],
+        ['results.html',         'ผลมวยย้อนหลัง'],
+        ['results.html',         'ผลมวย ONE ลุมพินี'],
+        ['results.html',         'ผลมวยราชดำเนิน'],
+        ['compare.html',         'เปรียบเทียบนักมวย'],
+        ['stats.html',           'สถิติมวยไทย ชนะ KO'],
+        ['tierlist.html',        'Tier List นักมวย'],
+        ['blog/',                'บทความมวยไทย']
+    ];
+    var kwHtml = '<nav aria-label="หัวข้อยอดนิยม" style="max-width:1000px;margin:0 auto 18px;padding-top:14px;border-top:1px solid rgba(255,255,255,.08);display:flex;flex-wrap:wrap;gap:6px 10px;justify-content:center">' +
+        KW.map(function(k){
+            return '<a href="' + k[0] + '" style="font-size:11px;color:rgba(255,255,255,.42);white-space:nowrap">' + k[1] + '</a>';
+        }).join('<span style="color:rgba(255,255,255,.15);font-size:10px">·</span>') +
+    '</nav>';
+
+
     el.innerHTML =
         '<div style="max-width:1200px;margin:0 auto;padding:0 20px">' +
             /* Brand line */
@@ -431,6 +464,7 @@ function renderFooter(extraText) {
             '</div>' +
             /* Links */
             '<div style="margin-bottom:8px">' + linksHtml + '</div>' +
+            kwHtml +
             /* Copyright */
             '<div style="font-size:10px;color:rgba(255,255,255,.3);letter-spacing:.04em">' +
                 '© ' + yr + ' Boxfan — ข้อมูลรวบรวมโดยแฟนกีฬา ไม่ใช่เว็บทางการของ ONE Championship' +

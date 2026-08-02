@@ -12,9 +12,9 @@
 <title>โปรไฟล์นักมวย | Boxfan</title>
 <meta name="description" content="สถิติและประวัติการชกนักมวย ONE Championship | Boxfan">
 <meta name="keywords" content="โปรไฟล์นักมวย,สถิตินักมวย,ONE Championship,Boxfan">
-<meta name="robots" content="index,follow">
+<meta name="robots" content="noindex,follow">
 <meta name="author" content="Boxfan">
-<link rel="canonical" href="https://boxingfandom.com/profile.html">
+<link rel="canonical" href="https://www.boxingfandom.com/fighters/">
 <meta property="og:site_name" content="Boxfan">
 <meta property="og:type" content="profile">
 <meta property="og:locale" content="th_TH">
@@ -333,7 +333,7 @@ a{color:inherit;text-decoration:none}
     <a class="nav-tab" href="index.html">อันดับ</a>
     <a class="nav-tab" href="rankings.html">ตารางคะแนน</a>
     <a class="nav-tab" href="weight-classes.html">แยกตามรุ่น</a>
-    <a class="nav-tab" href="Fighters.html">นักมวยทั้งหมด</a>
+    <a class="nav-tab" href="fighters.html">นักมวยทั้งหมด</a>
     <a class="nav-tab" href="schedule.html">โปรแกรมชก</a>
     <a class="nav-tab" href="results.html">ผลการแข่งขัน</a>
     <a class="nav-tab" href="compare.html">เปรียบเทียบ</a>
@@ -380,15 +380,52 @@ function heroImg(filename){
     return 'https://res.cloudinary.com/'+CLOUD+'/image/upload/c_fill,g_face,w_440,h_550,f_auto,q_auto/'+encodeURIComponent(clean);
 }
 
+function resolveFighter(){
+    var q=new URLSearchParams(location.search);
+    var raw=(q.get('id')||q.get('slug')||q.get('f')||'').trim();
+    if(!raw) return null;
+    var dec=raw; try{dec=decodeURIComponent(raw);}catch(e){}
+    var lower=dec.toLowerCase();
+    var norm=function(v){return String(v==null?'':v).trim().toLowerCase();};
+
+    /* 1) ตรงกับ id (string หรือ number) */
+    var f=FIGHTERS.find(function(x){return norm(x.id)===lower;});
+    if(f) return f;
+    /* 2) ตรงกับ slug */
+    f=FIGHTERS.find(function(x){return norm(x.slug)===lower;});
+    if(f) return f;
+    /* 3) ตรงกับชื่อไทย/อังกฤษ */
+    f=FIGHTERS.find(function(x){return norm(x.name_th)===lower||norm(x.name_en)===lower;});
+    if(f) return f;
+    /* 4) legacy id ตัวเลขเก่า (ระบบเดิม) -> map ถ้ามี */
+    if(typeof LEGACY_ID_MAP!=='undefined'&&LEGACY_ID_MAP[dec]){
+        var t=norm(LEGACY_ID_MAP[dec]);
+        f=FIGHTERS.find(function(x){return norm(x.slug)===t||norm(x.id)===t;});
+        if(f) return f;
+    }
+    /* 5) เดาจาก slug ที่ใกล้เคียง (ขีดกลาง/ช่องว่าง) */
+    var loose=lower.replace(/[\s_]+/g,'-');
+    f=FIGHTERS.find(function(x){return norm(x.slug)===loose;});
+    return f||null;
+}
+
 function init(){
-    var id=parseInt(new URLSearchParams(location.search).get('id'));
-    var f=FIGHTERS.find(function(x){return x.id===id;});
+    var f=resolveFighter();
+
+    /* หน้านี้เป็น legacy — ถ้าเจอนักมวย ให้ส่งไปหน้า static ที่ Google index */
+    if(f&&f.slug){
+        location.replace('fighters/'+encodeURIComponent(f.slug)+'.html'+location.hash);
+        return;
+    }
+
     if(!f){
         document.getElementById('root').innerHTML=
             '<div style="text-align:center;padding:80px 0;color:var(--tx-3)">'+
             svgIcon('i-glove',48)+
-            '<div style="font-size:18px;margin-top:14px;font-weight:600">ไม่พบนักมวย</div>'+
-            '<a href="index.html" style="color:var(--red);display:inline-block;margin-top:12px;font-weight:600">‹ กลับหน้าหลัก</a></div>';
+            '<div style="font-size:18px;margin-top:14px;font-weight:600">ไม่พบนักมวยที่ค้นหา</div>'+
+            '<div style="font-size:14px;margin-top:8px;color:var(--tx-4)">ลิงก์นี้เป็นรูปแบบเก่า — ดูรายชื่อนักมวยทั้งหมดได้ที่หน้ารวมนักมวย</div>'+
+            '<a href="fighters.html" style="color:var(--red);display:inline-block;margin-top:14px;font-weight:700">ดูนักมวยทั้งหมด ›</a>'+
+            '<a href="index.html" style="color:var(--tx-3);display:inline-block;margin-top:8px;margin-left:16px;font-weight:600">กลับหน้าหลัก</a></div>';
         return;
     }
 
@@ -409,7 +446,7 @@ function init(){
         url:SITE+'/'+getFighterUrl(f),
         image:fighterImg,type:'profile',
         keywords:f.name_th+','+(f.name_en||'')+',ONE Championship,'+(f.division||'')+',มวยไทย,Muay Thai,Boxfan',
-        jsonld:{'@context':'https://schema.org','@type':'Person','name':f.name_th,'alternateName':f.name_en||undefined,'description':f.biography||(f.name_th+' นักมวย ONE Championship'),'image':fighterImg,'url':SITE+'/profile.html?id='+id,'nationality':f.country||undefined,'sport':'Muay Thai / Kickboxing / MMA','memberOf':{'@type':'SportsOrganization','name':'ONE Championship'}}
+        jsonld:{'@context':'https://schema.org','@type':'Person','name':f.name_th,'alternateName':f.name_en||undefined,'description':f.biography||(f.name_th+' นักมวย ONE Championship'),'image':fighterImg,'url':SITE+'/'+fighterUrl(f),'nationality':f.country||undefined,'sport':'Muay Thai / Kickboxing / MMA','memberOf':{'@type':'SportsOrganization','name':'ONE Championship'}}
     });
 
     document.title=f.name_th+' — Boxfan';
