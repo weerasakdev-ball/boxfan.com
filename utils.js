@@ -67,6 +67,46 @@ function normalizeData() {
 normalizeData();
 
 /* ═══════════════════════════════════════════════════════════════
+   LAZY LOADER — โหมด --split ของ export_json.py
+   หน้าเบา (index/rankings/weight-classes/tierlist/fighters) จะโหลดแค่
+     fighters_index.js  → มี FIGHTERS_INDEX พร้อม record เต็ม (ไม่มี HISTORY)
+   หน้าหนัก (stats/compare/schedule/results) ต้องเรียก:
+     await ensureFullData()
+   ก่อนใช้ FIGHTERS/HISTORY เต็ม
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ถ้ามี INDEX แต่ไม่มี FIGHTERS ให้ alias ให้ FIGHTERS = INDEX ก่อน
+   หน้าเบาจะใช้งานได้ทันทีโดยไม่ต้องรอ full data */
+if (typeof FIGHTERS_INDEX !== 'undefined' && typeof FIGHTERS === 'undefined') {
+    /* eslint-disable-next-line no-global-assign */
+    FIGHTERS = FIGHTERS_INDEX;
+}
+if (typeof HISTORY === 'undefined') {
+    /* eslint-disable-next-line no-global-assign */
+    HISTORY = [];
+}
+
+var _fullDataPromise = null;
+function ensureFullData() {
+    /* ถ้ามี HISTORY อยู่แล้ว = โหลด full data ตั้งแต่แรก ไม่ต้องทำอะไร */
+    if (HISTORY && HISTORY.length > 0) return Promise.resolve();
+    if (_fullDataPromise) return _fullDataPromise;
+
+    _fullDataPromise = new Promise(function(resolve, reject) {
+        var sc = document.createElement('script');
+        sc.src = 'fighters_data.js';
+        sc.onload = function() {
+            /* หลังโหลดเสร็จ FIGHTERS/HISTORY กลายเป็นข้อมูลเต็ม → normalize ใหม่ */
+            normalizeData();
+            resolve();
+        };
+        sc.onerror = function() { reject(new Error('ไม่สามารถโหลด fighters_data.js')); };
+        document.head.appendChild(sc);
+    });
+    return _fullDataPromise;
+}
+
+/* ═══════════════════════════════════════════════════════════════
    ลิงก์ไปหน้านักมวย — ใช้ฟังก์ชันนี้ทุกที่ อย่าต่อ URL เอง
    ถ้าข้อมูลมี slug (จาก export_json.py) จะชี้ไปหน้า static ที่ generate_profiles.py สร้าง
    ถ้าไม่มี slug จะถอยไปใช้หน้า dynamic profile.html?id=...
@@ -80,6 +120,13 @@ function fighterUrl(f, prefix) {
 
 /* alias — หลายหน้าเรียกชื่อ getFighterUrl() ห้ามลบ */
 function getFighterUrl(f, prefix) { return fighterUrl(f, prefix); }
+
+/* ── Service Worker: cache assets ให้เว็บโหลดเร็วครั้งที่ 2 เป็นต้นไป ── */
+if ('serviceWorker' in navigator && location.protocol === 'https:') {
+    window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/service-worker.js').catch(function() {});
+    });
+}
 
 /* ── Image helpers ───────────────────────────────────────────────────────── */
 var IMG_SIZES = { sm: 'w_80,h_80', md: 'w_160,h_160', lg: 'w_600,h_400', xl: 'w_800,h_600' };
