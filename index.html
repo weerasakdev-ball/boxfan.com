@@ -1354,7 +1354,14 @@ footer{background:var(--footer-bg);border-top:1px solid var(--line);padding:72px
   function renderUpcoming(){
     var list=HISTORY.filter(function(h){return isUpcoming(h)&&h.date&&h.date>=TODAY;})
       .sort(function(a,b){return String(a.date).localeCompare(String(b.date));}); /* ใกล้ที่สุดก่อน */
-    var seen={},uniq=list.filter(function(h){var k=[h.fighter_id,h.opponent].sort().join('|')+'|'+h.date;if(seen[k])return false;seen[k]=true;return true;}).slice(0,8);
+    /* dedupe: ไฟต์เดียวกันมี 2 รายการ (มุม A และมุม B). แปลง opponent (ชื่อ) → id ก่อน sort เพื่อให้ 2 มุมได้คีย์เดียวกัน */
+    var seen={},uniq=list.filter(function(h){
+      var oppF=FBYNAME[h.opponent];
+      var oppKey=oppF?oppF.id:(h.opponent||'');
+      var selfKey=h.fighter_id||'';
+      var k=[selfKey,oppKey].sort().join('|')+'|'+(h.date||'')+'|'+(h.event||'');
+      if(seen[k])return false;seen[k]=true;return true;
+    }).slice(0,8);
     var grid=document.getElementById('upcoming-grid');
     if(!uniq.length){
       grid.style.display='block';
