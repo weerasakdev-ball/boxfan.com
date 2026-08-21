@@ -562,6 +562,41 @@ a{color:inherit;text-decoration:none}
 }
 @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 
+
+.upnext{margin:18px 0 0}
+.upnext-hd{display:flex;align-items:center;gap:9px;margin-bottom:12px}
+.upnext-hd .t{font-family:var(--sans);font-size:15px;font-weight:800;color:var(--tx);text-transform:uppercase;letter-spacing:.02em}
+.upnext-hd .n{font-size:11px;font-weight:800;color:#fff;background:var(--red);border-radius:999px;padding:2px 9px}
+.upnext-hd svg{width:17px;height:17px;stroke:var(--red);stroke-width:2;fill:none}
+.upcard{background:var(--surf);border:1px solid var(--line-2);border-left:3px solid var(--red);border-radius:11px;padding:16px 18px;margin-bottom:12px;box-shadow:var(--sh-2)}
+.upcard-top{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+.upcard-date{font-family:var(--sans);font-size:12.5px;font-weight:800;color:var(--red)}
+.upcard-cd{font-size:11px;font-weight:700;color:var(--tx-3);background:var(--surf-2,rgba(128,128,128,.10));border:1px solid var(--line-2);border-radius:999px;padding:2px 9px}
+.upcard-ev{font-size:11.5px;color:var(--tx-3);margin-left:auto;text-align:right}
+.upcard-vs{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.upcard-side{display:flex;align-items:center;gap:10px;min-width:0;flex:1}
+.upcard-side img{width:52px;height:52px;border-radius:50%;object-fit:cover;border:1px solid var(--line-2);flex-shrink:0}
+.upcard-nm{font-size:14px;font-weight:700;color:var(--tx);line-height:1.3}
+.upcard-nm a{color:var(--tx)}
+.upcard-nm a:hover{color:var(--red)}
+.upcard-rec{font-size:11.5px;color:var(--tx-3);margin-top:2px}
+.upcard-mid{font-family:var(--sans);font-size:11px;font-weight:800;color:var(--tx-3);letter-spacing:.08em;flex-shrink:0}
+.upcard-foot{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:14px;padding-top:13px;border-top:1px solid var(--line-2)}
+.upcard-meta{font-size:11.5px;color:var(--tx-3)}
+.upcard-btns{display:flex;gap:8px;margin-left:auto;flex-wrap:wrap}
+.upbtn{display:inline-flex;align-items:center;gap:6px;padding:9px 15px;border-radius:8px;font-size:12.5px;font-weight:700;border:1px solid var(--line-2);color:var(--tx-2);transition:all .18s}
+.upbtn:hover{border-color:var(--red);color:var(--red)}
+.upbtn.primary{background:var(--red);border-color:var(--red);color:#fff}
+.upbtn.primary:hover{filter:brightness(1.08);color:#fff}
+.upbtn svg{width:14px;height:14px;stroke:currentColor;stroke-width:2.2;fill:none}
+@media(max-width:560px){
+  .upcard-vs{gap:8px}
+  .upcard-side{flex:1 1 100%}
+  .upcard-mid{width:100%;text-align:center}
+  .upcard-btns{margin-left:0;width:100%}
+  .upbtn{flex:1;justify-content:center}
+}
+
 </style>
 </head>
 <body>
@@ -610,7 +645,7 @@ a{color:inherit;text-decoration:none}
       <div class="hdiv">แคชเวท</div>
       <h1 class="hname">นิฮัด ทากิซาเด</h1>
       
-      <div class="htags"><span class="htag">🇦🇿 อาเซอร์ไบจาน</span><span class="htag">Glory Sports Azerbaijan</span><span class="htag">อายุ 21 ปี</span><span class="htag htag-pts">-3 pts</span> <span class="htag">พัก 22 วัน</span></div>
+      <div class="htags"><span class="htag">🇦🇿 อาเซอร์ไบจาน</span><span class="htag">Glory Sports Azerbaijan</span><span class="htag">อายุ 21 ปี</span><span class="htag htag-pts">-3 pts</span> <span class="htag">พัก 42 วัน</span></div>
       <div class="hrec">
         <div><div class="rn w">0</div><div class="rl">ชนะ</div></div>
         <div class="rsep">–</div>
@@ -626,6 +661,9 @@ a{color:inherit;text-decoration:none}
 
   <!-- PHYSICAL -->
   <div class="pgrid"><div class="pitem"><div class="pval">121.2</div><div class="plbl">ปอนด์</div></div><div class="pitem"><div class="pval">55</div><div class="plbl">กก.</div></div><div class="pitem accent"><div class="pval">-3</div><div class="plbl">คะแนน</div></div><div class="pitem"><div class="pval">1</div><div class="plbl">แมตช์รวม</div></div></div>
+
+  <!-- UPCOMING FIGHTS -->
+  
 
   <!-- FORM BAR -->
   <div class="form-label">ฟอร์มล่าสุด 1 แมตช์</div><div class="fbar"><div class="fseg loss">L</div></div>
