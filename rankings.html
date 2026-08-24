@@ -33,6 +33,23 @@
 </div>
 
 <div class="wrap full">
+  <!-- GENDER TABS -->
+  <style>
+    .gender-tabs{display:inline-flex;gap:4px;padding:4px;background:var(--surf-2,#eef2f7);
+      border:1px solid var(--line-2,#dbe3ee);border-radius:999px;margin:0 0 14px}
+    .gender-tabs button{appearance:none;border:0;background:transparent;cursor:pointer;
+      padding:8px 18px;border-radius:999px;font:600 13px/1 'IBM Plex Sans Thai',system-ui;
+      color:var(--tx-2,#4a5a72);transition:all .18s}
+    .gender-tabs button:hover{color:var(--navy,#1a3661)}
+    .gender-tabs button.active{background:var(--navy,#1a3661);color:#fff;box-shadow:0 2px 8px rgba(26,54,97,.25)}
+    .gender-tabs button .cnt{opacity:.7;font-weight:500;margin-left:4px;font-size:11px}
+    .gender-tabs button.active .cnt{opacity:.85}
+  </style>
+  <div class="gender-tabs" id="fp-gender-tabs" role="tablist" aria-label="แบ่งตามเพศ">
+    <button type="button" data-g="ชาย"  class="active" role="tab">ชาย <span class="cnt" id="g-cnt-m">–</span></button>
+    <button type="button" data-g="หญิง"                role="tab">หญิง <span class="cnt" id="g-cnt-f">–</span></button>
+  </div>
+
   <!-- FILTER BAR -->
   <div class="filter-bar">
     <input type="text" id="fp-search" class="grow" placeholder="ค้นหาชื่อนักมวย...">
@@ -163,10 +180,21 @@
   })();
 
   var state = {
-    q:'', div:'', country:'', year:'',
+    q:'', div:'', country:'', year:'', gender:'ชาย',
     sortBy:'score', sortDir:'desc',
     page:1, perPage:20
   };
+
+  /* นับจำนวนนักมวยแยกเพศ ไว้โชว์บนแท็บ */
+  (function(){
+    var m=0,fCnt=0;
+    FIGHTERS.forEach(function(f){
+      if(f.gender==='ชาย') m++;
+      else if(f.gender==='หญิง') fCnt++;
+    });
+    document.getElementById('g-cnt-m').textContent = m;
+    document.getElementById('g-cnt-f').textContent = fCnt;
+  })();
 
   /* คืนรายการ {f, st} โดย st คำนวณจากไฟต์ในขอบเขตที่กรองแล้ว */
   function apply(){
@@ -189,6 +217,7 @@
     }
     if(state.div)     rows = rows.filter(function(r){ return divKey(r.f.division) === state.div; });
     if(state.country) rows = rows.filter(function(r){ return (r.f.country||'').indexOf(state.country)>-1; });
+    if(state.gender)  rows = rows.filter(function(r){ return (r.f.gender||'') === state.gender; });
 
     var dir = state.sortDir === 'desc' ? -1 : 1;
     rows.sort(function(a,b){
@@ -210,7 +239,9 @@
   function render(){
     var arr = apply();
     document.getElementById('fp-count').textContent = arr.length;
-    var scopeTxt = (state.div ? divLabel(state.div) : 'ทุกรุ่น') + ' · ' +
+    var genderTxt = state.gender ? state.gender : 'ทุกเพศ';
+    var scopeTxt = genderTxt + ' · ' +
+      (state.div ? divLabel(state.div) : 'ทุกรุ่น') + ' · ' +
       (state.year ? ('เฉพาะปี ' + (parseInt(state.year,10)+543)) : 'ตลอดอาชีพ');
     document.getElementById('fp-badge').textContent = scopeTxt;
     var note = document.getElementById('fp-scope-note');
@@ -285,9 +316,23 @@
   document.getElementById('fp-country').addEventListener('change', function(){ state.country = this.value; state.page = 1; render(); });
   document.getElementById('fp-yr').addEventListener('change', function(){ state.year = this.value; state.page = 1; render(); });
   document.getElementById('fp-reset').addEventListener('click', function(){
-    state.q=''; state.div=''; state.country=''; state.year=''; state.page=1;
+    state.q=''; state.div=''; state.country=''; state.year=''; state.gender='ชาย'; state.page=1;
     q.value=''; document.getElementById('fp-div').value=''; document.getElementById('fp-country').value=''; document.getElementById('fp-yr').value='';
+    document.querySelectorAll('#fp-gender-tabs button').forEach(function(b){
+      b.classList.toggle('active', b.getAttribute('data-g') === 'ชาย');
+    });
     render();
+  });
+
+  // Gender tabs
+  document.querySelectorAll('#fp-gender-tabs button').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      document.querySelectorAll('#fp-gender-tabs button').forEach(function(b){ b.classList.remove('active'); });
+      this.classList.add('active');
+      state.gender = this.getAttribute('data-g') || '';
+      state.page = 1;
+      render();
+    });
   });
   // Sort clicks
   document.querySelectorAll('th.sortable').forEach(function(th){

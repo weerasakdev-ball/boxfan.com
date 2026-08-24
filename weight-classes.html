@@ -418,6 +418,11 @@ footer{background:var(--footer-bg);border-top:1px solid var(--line);padding:72px
 .back-btn{display:inline-flex;align-items:center;gap:7px;background:transparent;border:1px solid var(--line-strong);color:var(--sub);padding:9px 16px;border-radius:999px;font-size:13px;font-weight:600;margin-bottom:22px;transition:all .2s var(--ease)}
 .back-btn:hover{border-color:var(--gold);color:var(--gold-text)}.back-btn svg{width:14px;height:14px;stroke:currentColor;stroke-width:2;fill:none}
 .filter-bar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:22px}
+.gtabs{display:inline-flex;gap:4px;padding:4px;background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:999px;margin-bottom:14px}
+.gtabs button{appearance:none;border:0;background:transparent;cursor:pointer;padding:8px 18px;border-radius:999px;font:600 13px/1 inherit;color:var(--sub);transition:all .18s;letter-spacing:.02em}
+.gtabs button:hover{color:var(--text)}
+.gtabs button.active{background:var(--gold);color:#111;box-shadow:0 2px 8px rgba(212,175,55,.35)}
+.gtabs .cnt{opacity:.7;font-weight:500;margin-left:4px;font-size:11.5px}
 .filter-bar select{background:var(--card);border:1px solid var(--line-strong);border-radius:999px;padding:10px 16px;color:var(--text);font-family:inherit;font-size:13.5px;font-weight:500;outline:none;cursor:pointer}
 .filter-bar select:focus{border-color:var(--gold)}
 .filter-bar .reset{background:transparent;border:1px solid var(--line);border-radius:999px;padding:10px 16px;font-size:13px;color:var(--sub);font-weight:600}
@@ -618,8 +623,10 @@ footer{background:var(--footer-bg);border-top:1px solid var(--line);padding:72px
     document.getElementById('crumb').innerHTML='<a href="index.html">หน้าแรก</a><span class="sep">›</span><span>รุ่นน้ำหนัก</span>';
     document.getElementById('wc-title').innerHTML='อันดับนักมวยแยกตาม<em>รุ่นน้ำหนัก</em>';
     document.getElementById('wc-sub').textContent='จัดอันดับนักมวยไทยทุกรุ่นน้ำหนัก คำนวณจากสถิติจริง คลิกที่รุ่นเพื่อดูอันดับเต็ม กรองตามศึก ประเทศ ค่าย และปีได้';
+    /* กันแคชเวทออกจากแผงรุ่นน้ำหนัก — จะโชว์เป็นลิงก์แยกด้านล่างแทน */
+    var STANDARD_DIVS = REAL_DIVS.filter(function(d){ return d.key !== 'catch'; });
     var grid=document.createElement('div'); grid.className='divs-grid';
-    grid.innerHTML=REAL_DIVS.map(function(d){
+    grid.innerHTML=STANDARD_DIVS.map(function(d){
       var list=fightersInDiv(d.key).sort(function(a,b){if(b._score!==a._score)return b._score-a._score;return String(b._lastDate||'').localeCompare(String(a._lastDate||''));});
       var range=DIV_RANGE[d.key]||'';
       var rows=list.slice(0,15).map(function(f,i){var rk=i+1;
@@ -629,6 +636,24 @@ footer{background:var(--footer-bg);border-top:1px solid var(--line);padding:72px
       return '<div class="div-panel"><a class="div-phd" href="?div='+d.key+'" style="color:inherit"><div><div class="th">'+d.label+'</div><div class="en">'+d.en+'</div>'+(range?'<div class="rng">'+range+'</div>':'')+'</div><span class="div-cnt">'+list.length+' คน</span></a>'+(list.length?rows:'<div class="dp-empty">ยังไม่มีนักมวย</div>')+'<div class="dp-actions">'+moreBtn+'<a class="dp-full" href="?div='+d.key+'">ดูอันดับเต็ม<svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a></div></div>';
     }).join('');
     var c=document.getElementById('wc-content'); c.innerHTML=''; c.appendChild(grid);
+
+    /* ลิงก์แยกสำหรับแคชเวท — ไม่ถือเป็นรุ่นน้ำหนัก แต่ยังเข้าดูอันดับได้ */
+    var catchCnt = fightersInDiv('catch').length;
+    if(catchCnt > 0){
+      var note = document.createElement('div');
+      note.style.cssText = 'margin-top:20px;padding:18px 22px;border:1px dashed var(--line);border-radius:14px;'+
+        'background:rgba(255,255,255,.02);display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap';
+      note.innerHTML =
+        '<div style="font-size:13.5px;color:var(--sub);line-height:1.55">'+
+          '<b style="color:var(--text);font-size:15px">แคชเวท</b> — น้ำหนักเฉพาะกิจ ไม่จัดในรุ่นน้ำหนักด้านบน '+
+          '<div style="font-size:12px;color:var(--mute);margin-top:2px">มีนักมวย '+catchCnt+' คน · ยังคงนับในคะแนนรวมทั้งหมด</div>'+
+        '</div>'+
+        '<a href="?div=catch" style="font-size:13.5px;font-weight:700;color:var(--gold-text);white-space:nowrap;padding:8px 14px;border:1px solid var(--gold);border-radius:999px">'+
+          'ดูอันดับแคชเวท →'+
+        '</a>';
+      c.appendChild(note);
+    }
+
     grid.querySelectorAll('[data-more]').forEach(function(btn){
       btn.addEventListener('click',function(e){e.stopPropagation();var p=btn.closest('.div-panel');var ex=p.querySelectorAll('.dp-row.extra');var open=btn.getAttribute('data-open')==='1';ex.forEach(function(r){r.classList.toggle('show',!open);});btn.setAttribute('data-open',open?'0':'1');btn.innerHTML=open?'ดูเพิ่ม (ถึง 15) ▾':'ย่อ ▴';});
     });
@@ -644,6 +669,8 @@ footer{background:var(--footer-bg);border-top:1px solid var(--line);padding:72px
     document.getElementById('wc-sub').textContent=(range?range+' — ':'')+'อันดับนักมวย'+d.label+' ('+d.en+') ชนะ +3 · เสมอ 0 · แพ้ -3 เลือกศึกหรือปีเพื่อดูอันดับเฉพาะช่วงนั้น คะแนนจะคำนวณใหม่ตามที่เลือก';
 
     var all=fightersInDiv(k);
+    var gM=0,gF=0;
+    all.forEach(function(f){ if(f.gender==='ชาย')gM++; else if(f.gender==='หญิง')gF++; });
     var countries={},teams={},years={};
     all.forEach(function(f){ if(f.country)countries[f.country]=1; if(f.team)teams[f.team]=1; hist(f.id).forEach(function(h){if(h.date)years[h.date.slice(0,4)]=1;}); });
 
@@ -651,6 +678,13 @@ footer{background:var(--footer-bg);border-top:1px solid var(--line);padding:72px
     var html='<button class="back-btn" onclick="location.href=\'weight-classes.html\'"><svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg> ทุกรุ่น</button>';
     // promotion tabs
     html+='<div class="wc-tabs" id="wc-tabs">'+PROMOS.map(function(p,i){var has=(p.key==='all')||all.some(function(f){return statsInPromo(f,p).n>0;});return '<button class="wc-tab'+(i===0?' active':'')+'" data-k="'+p.key+'">'+p.label+(has?'':'<span class="soon">เร็วๆ นี้</span>')+'</button>';}).join('')+'</div>';
+    // gender tabs — บังคับแยกเพศ ห้ามผสม
+    // ถ้ารุ่นนี้ไม่มีเพศใดเลย ปุ่มนั้นจะ disabled และเลือกเพศที่มีคนอัตโนมัติ
+    var defaultG = gM>0 ? 'ชาย' : (gF>0 ? 'หญิง' : 'ชาย');
+    html+='<div class="gtabs" id="g-tabs" role="tablist" aria-label="แบ่งตามเพศ">'+
+      '<button type="button" data-g="ชาย" class="'+(defaultG==='ชาย'?'active':'')+'"'+(gM===0?' disabled style="opacity:.35;cursor:not-allowed"':'')+' role="tab">ชาย <span class="cnt">'+gM+'</span></button>'+
+      '<button type="button" data-g="หญิง" class="'+(defaultG==='หญิง'?'active':'')+'"'+(gF===0?' disabled style="opacity:.35;cursor:not-allowed"':'')+' role="tab">หญิง <span class="cnt">'+gF+'</span></button>'+
+    '</div>';
     html+='<div class="filter-bar">'+
       '<select id="f-sort"><option value="score">เรียงตามคะแนน</option><option value="wins">ชนะมากสุด</option><option value="fights">ไฟต์รวม</option><option value="recent">ชกล่าสุด</option></select>'+
       '<select id="f-country"><option value="">ทุกประเทศ</option>'+Object.keys(countries).sort().map(function(c){return '<option value="'+c+'">'+esc(c)+'</option>';}).join('')+'</select>'+
@@ -664,12 +698,14 @@ footer{background:var(--footer-bg);border-top:1px solid var(--line);padding:72px
     html+='<button class="show-more" id="show-more" style="display:none">แสดงเพิ่มจนครบ <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>';
     content.innerHTML=html;
 
-    var state={sort:'score',country:'',team:'',year:'',promo:'all',limit:15};
+    var state={sort:'score',country:'',team:'',year:'',promo:'all',limit:15,gender:defaultG};
 
     function computed(){
       var def=promoDef(state.promo);
-      var scoped=(def.key!=='all')||!!state.year;   /* กรองศึกหรือปี = คิดคะแนนใหม่ในขอบเขตนั้น */
-      var arr=all.map(function(f){
+      var scoped=(def.key!=='all')||!!state.year;
+      /* บังคับแยกเพศเสมอ — ห้ามผสมในตารางเดียว */
+      var pool = all.filter(function(f){return (f.gender||'')===state.gender;});
+      var arr=pool.map(function(f){
         var st=statsFrom(scopedHist(f,(def.key==='all'?null:def),state.year));
         return {f:f,score:st.score,w:st.w,l:st.l,n:st.n,streak:st.streak,wr:st.wr,last:st.lastDate};
       });
@@ -692,12 +728,10 @@ footer{background:var(--footer-bg);border-top:1px solid var(--line);padding:72px
       document.getElementById('f-count').textContent=arr.length;
       var sn=document.getElementById('f-scope');
       if(sn){
-        var parts=[];
+        var parts=['เพศ '+state.gender];
         if(state.promo!=='all') parts.push('ศึก '+promoDef(state.promo).label);
         if(state.year) parts.push('ปี '+(parseInt(state.year,10)+543));
-        sn.textContent = parts.length
-          ? 'คะแนนและสถิตินับเฉพาะ '+parts.join(' · ')+' เท่านั้น — นักมวยที่ไม่มีไฟต์ในขอบเขตนี้จะไม่ถูกจัดอันดับ'
-          : 'คะแนนและสถิตินับรวมทุกไฟต์ตลอดอาชีพ';
+        sn.textContent = 'คะแนนและสถิตินับเฉพาะ '+parts.join(' · ')+' เท่านั้น — นักมวยที่ไม่มีไฟต์ในขอบเขตนี้จะไม่ถูกจัดอันดับ';
       }
       var tb=document.getElementById('wc-rows');
       if(!arr.length){ tb.innerHTML='<tr><td colspan="7" style="padding:40px;text-align:center;color:var(--sub)">ไม่มีนักมวยตามเงื่อนไข</td></tr>'; document.getElementById('show-more').style.display='none'; return; }
@@ -711,11 +745,12 @@ footer{background:var(--footer-bg);border-top:1px solid var(--line);padding:72px
       else sm.style.display='none';
     }
     document.getElementById('wc-tabs').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;this.querySelectorAll('button').forEach(function(x){x.classList.remove('active');});b.classList.add('active');state.promo=b.getAttribute('data-k');state.limit=15;render();});
+    document.getElementById('g-tabs').addEventListener('click',function(e){var b=e.target.closest('button');if(!b||b.disabled)return;this.querySelectorAll('button').forEach(function(x){x.classList.remove('active');});b.classList.add('active');state.gender=b.getAttribute('data-g')||defaultG;state.limit=15;render();});
     document.getElementById('f-sort').addEventListener('change',function(){state.sort=this.value;render();});
     document.getElementById('f-country').addEventListener('change',function(){state.country=this.value;state.limit=15;render();});
     document.getElementById('f-team').addEventListener('change',function(){state.team=this.value;state.limit=15;render();});
     document.getElementById('f-year').addEventListener('change',function(){state.year=this.value;state.limit=15;render();});
-    document.getElementById('f-reset').addEventListener('click',function(){state={sort:'score',country:'',team:'',year:'',promo:'all',limit:15};document.getElementById('f-sort').value='score';document.getElementById('f-country').value='';document.getElementById('f-team').value='';document.getElementById('f-year').value='';document.getElementById('wc-tabs').querySelectorAll('button').forEach(function(x,i){x.classList.toggle('active',i===0);});render();});
+    document.getElementById('f-reset').addEventListener('click',function(){state={sort:'score',country:'',team:'',year:'',promo:'all',limit:15,gender:defaultG};document.getElementById('f-sort').value='score';document.getElementById('f-country').value='';document.getElementById('f-team').value='';document.getElementById('f-year').value='';document.getElementById('wc-tabs').querySelectorAll('button').forEach(function(x,i){x.classList.toggle('active',i===0);});document.getElementById('g-tabs').querySelectorAll('button').forEach(function(x){x.classList.toggle('active',x.getAttribute('data-g')===defaultG);});render();});
     document.getElementById('show-more').addEventListener('click',function(){state.limit+=15;render();});
     render();
   }

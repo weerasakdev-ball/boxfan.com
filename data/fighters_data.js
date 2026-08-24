@@ -1,12 +1,12 @@
 // สร้างอัตโนมัติโดย export_json.py — อย่าแก้ไขไฟล์นี้ด้วยมือ
-// ที่มา: E:\old 30 7 2569\data\data
-// เวลา: 2026-08-22 14:43:15
+// ที่มา: C:\Users\Weera\Desktop\data\data
+// เวลา: 2026-08-24 19:32:02
 
 const META     = {
-  "generated_at": "2026-08-22 14:43:15",
-  "fighter_count": 2144,
-  "fight_count": 6865,
-  "source_folder": "E:\\old 30 7 2569\\data\\data"
+  "generated_at": "2026-08-24 19:32:02",
+  "fighter_count": 2157,
+  "fight_count": 6890,
+  "source_folder": "C:\\Users\\Weera\\Desktop\\data\\data"
 };
 const FIGHTERS = [
   {
@@ -51,6 +51,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -102,6 +104,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -153,6 +157,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -204,6 +210,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -255,6 +263,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 8,
     "record": {
       "win": 3,
@@ -306,6 +316,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -357,6 +369,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -408,6 +422,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 3,
@@ -459,6 +475,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -510,6 +528,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "หญิง",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -561,6 +581,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 3,
@@ -612,6 +634,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -663,6 +687,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -714,6 +740,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -765,6 +793,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 2,
@@ -812,10 +842,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-08-24",
     "division": null,
     "nickname": null,
     "gender": "หญิง",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -867,6 +899,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -918,6 +952,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -969,6 +1005,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 3,
@@ -1020,6 +1058,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -1071,6 +1111,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -1122,6 +1164,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -1169,10 +1213,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-08-24",
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": "แชมป์ปัจจุบัน",
+    "titles_history": "แชมป์โลก | อดีตแชมป์โลก คิกบ็อกซิง รุ่นแบนตัมเวต",
     "fight_count": 5,
     "record": {
       "win": 3,
@@ -1224,6 +1270,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -1275,6 +1323,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "หญิง",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 0,
@@ -1326,6 +1376,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 1,
@@ -1377,6 +1429,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -1428,6 +1482,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -1479,6 +1535,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -1530,6 +1588,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -1581,6 +1641,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -1632,6 +1694,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 3,
@@ -1683,6 +1747,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -1734,6 +1800,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -1785,6 +1853,8 @@ const FIGHTERS = [
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 3,
@@ -1836,6 +1906,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -1887,6 +1959,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -1938,6 +2012,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -1989,6 +2065,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 10,
     "record": {
       "win": 5,
@@ -1996,6 +2074,59 @@ const FIGHTERS = [
       "draw": 0,
       "pending": 0,
       "total": 10
+    }
+  },
+  {
+    "id": "กึน-โฮ-ซอน",
+    "slug": "กึน-โฮ-ซอน",
+    "name_th": "กึน โฮ ซอน",
+    "name_en": null,
+    "biography": "",
+    "weight_kg": null,
+    "weight_lbs": null,
+    "height_cm": null,
+    "height_ft_in": null,
+    "country": null,
+    "age": null,
+    "team": null,
+    "level": "",
+    "fight_purse": {
+      "amount_thb": null,
+      "currency": "THB",
+      "note": null
+    },
+    "market_value": {
+      "amount_thb": null,
+      "currency": "THB",
+      "note": null
+    },
+    "profile_url": null,
+    "image_filename": "กึน-โฮ-ซอน",
+    "strike_stats": {
+      "strikes_per_minute": {
+        "head": 0,
+        "body": 0,
+        "leg": 0
+      },
+      "overall_strikes": {
+        "head": 0,
+        "body": 0,
+        "leg": 0
+      }
+    },
+    "last_updated": "2026-08-24",
+    "division": "ฟลายเวท",
+    "nickname": null,
+    "gender": null,
+    "championship_status": null,
+    "titles_history": null,
+    "fight_count": 1,
+    "record": {
+      "win": 0,
+      "loss": 0,
+      "draw": 0,
+      "pending": 1,
+      "total": 0
     }
   },
   {
@@ -2040,6 +2171,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -2091,6 +2224,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -2142,6 +2277,8 @@ const FIGHTERS = [
     "division": "เฮฟวีเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 2,
@@ -2193,6 +2330,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 2,
@@ -2244,6 +2383,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 19,
     "record": {
       "win": 12,
@@ -2295,6 +2436,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 17,
     "record": {
       "win": 11,
@@ -2346,6 +2489,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -2397,6 +2542,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -2448,6 +2595,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 13,
     "record": {
       "win": 9,
@@ -2499,6 +2648,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -2550,6 +2701,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 0,
@@ -2601,6 +2754,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -2652,6 +2807,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 14,
     "record": {
       "win": 6,
@@ -2703,6 +2860,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -2754,6 +2913,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 0,
@@ -2805,6 +2966,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 8,
     "record": {
       "win": 3,
@@ -2856,6 +3019,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -2907,6 +3072,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -2958,6 +3125,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 3,
@@ -3009,6 +3178,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -3060,6 +3231,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -3111,6 +3284,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 1,
@@ -3162,6 +3337,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 2,
@@ -3213,6 +3390,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 4,
@@ -3264,6 +3443,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 13,
     "record": {
       "win": 10,
@@ -3315,6 +3496,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 4,
@@ -3366,6 +3549,8 @@ const FIGHTERS = [
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 15,
     "record": {
       "win": 8,
@@ -3417,6 +3602,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -3468,6 +3655,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 3,
@@ -3519,6 +3708,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -3570,6 +3761,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 2,
@@ -3621,6 +3814,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -3672,6 +3867,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -3723,6 +3920,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -3774,6 +3973,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -3825,6 +4026,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -3876,6 +4079,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 15,
     "record": {
       "win": 8,
@@ -3927,6 +4132,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 12,
     "record": {
       "win": 7,
@@ -3978,6 +4185,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -4029,6 +4238,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "หญิง",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -4049,7 +4260,7 @@ const FIGHTERS = [
     "height_cm": 180,
     "height_ft_in": "5'11\"",
     "country": "สหรัฐอเมริกา/สิงคโปร์",
-    "age": 27,
+    "age": 28,
     "team": "Evolve MMA / United MMA",
     "level": "B",
     "fight_purse": {
@@ -4076,10 +4287,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-08-24",
     "division": "เวลเทอร์เวท",
-    "nickname": null,
+    "nickname": "THE WARRIOR",
     "gender": "ชาย",
+    "championship_status": "แชมป์ปัจจุบัน",
+    "titles_history": "แชมป์โลก",
     "fight_count": 23,
     "record": {
       "win": 18,
@@ -4131,6 +4344,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -4182,6 +4397,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -4233,6 +4450,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -4284,6 +4503,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 14,
     "record": {
       "win": 9,
@@ -4335,6 +4556,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 0,
@@ -4386,6 +4609,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 2,
@@ -4437,6 +4662,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -4488,6 +4715,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -4539,6 +4768,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -4590,6 +4821,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -4641,6 +4874,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 3,
@@ -4692,6 +4927,8 @@ const FIGHTERS = [
     "division": "เฮฟวีเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 8,
     "record": {
       "win": 4,
@@ -4743,6 +4980,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -4794,6 +5033,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -4845,6 +5086,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 2,
@@ -4896,6 +5139,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 2,
@@ -4947,6 +5192,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -4998,6 +5245,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 0,
@@ -5049,6 +5298,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -5100,6 +5351,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -5151,6 +5404,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -5202,6 +5457,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -5253,6 +5510,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -5304,6 +5563,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 2,
@@ -5355,6 +5616,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -5406,6 +5669,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -5457,6 +5722,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -5508,6 +5775,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -5559,6 +5828,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 3,
@@ -5610,6 +5881,8 @@ const FIGHTERS = [
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "หญิง",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 3,
@@ -5661,6 +5934,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "หญิง",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 2,
@@ -5712,6 +5987,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -5763,6 +6040,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 2,
@@ -5814,6 +6093,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -5865,6 +6146,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -5916,6 +6199,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -5967,6 +6252,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 7,
     "record": {
       "win": 5,
@@ -6018,6 +6305,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 11,
     "record": {
       "win": 9,
@@ -6069,6 +6358,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 2,
@@ -6120,6 +6411,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -6171,6 +6464,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -6222,6 +6517,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -6273,6 +6570,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 2,
@@ -6324,6 +6623,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -6375,6 +6676,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -6426,6 +6729,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -6477,6 +6782,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -6528,6 +6835,8 @@ const FIGHTERS = [
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 2,
@@ -6579,6 +6888,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "หญิง",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -6630,6 +6941,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -6681,6 +6994,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 9,
     "record": {
       "win": 4,
@@ -6732,6 +7047,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -6783,6 +7100,8 @@ const FIGHTERS = [
     "division": "เฮฟวีเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 7,
     "record": {
       "win": 5,
@@ -6834,6 +7153,8 @@ const FIGHTERS = [
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -6885,6 +7206,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -6936,6 +7259,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 3,
@@ -6987,6 +7312,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -7038,6 +7365,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -7089,6 +7418,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -7140,6 +7471,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -7191,6 +7524,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -7242,6 +7577,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -7293,6 +7630,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 2,
@@ -7344,6 +7683,8 @@ const FIGHTERS = [
     "division": "มิดเดิลเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -7395,6 +7736,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -7446,6 +7789,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -7497,6 +7842,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -7548,6 +7895,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 2,
@@ -7599,6 +7948,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 4,
@@ -7650,6 +8001,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -7701,6 +8054,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 7,
     "record": {
       "win": 3,
@@ -7752,6 +8107,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 2,
@@ -7803,6 +8160,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -7854,6 +8213,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -7905,6 +8266,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -7956,6 +8319,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -8007,6 +8372,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -8058,6 +8425,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -8109,6 +8478,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -8160,6 +8531,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -8211,6 +8584,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 8,
     "record": {
       "win": 6,
@@ -8262,6 +8637,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -8313,6 +8690,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 8,
     "record": {
       "win": 6,
@@ -8364,6 +8743,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -8415,6 +8796,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -8466,6 +8849,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -8517,6 +8902,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 2,
@@ -8568,6 +8955,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 2,
@@ -8588,7 +8977,7 @@ const FIGHTERS = [
     "height_cm": 160,
     "height_ft_in": "5'3\"",
     "country": "บราซิล",
-    "age": 35,
+    "age": 36,
     "team": "American Top Team",
     "level": "C",
     "fight_purse": {
@@ -8615,10 +9004,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-08-24",
     "division": "แบนตัมเวท",
-    "nickname": null,
+    "nickname": "Hands of Stone",
     "gender": "ชาย",
+    "championship_status": "แชมป์ปัจจุบัน",
+    "titles_history": "แชมป์โลก | อดีตแชมป์โลก การต่อสู้แบบผสมผสาน รุ่นแบนตัมเวต",
     "fight_count": 14,
     "record": {
       "win": 8,
@@ -8670,6 +9061,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -8721,6 +9114,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -8772,6 +9167,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 2,
@@ -8823,6 +9220,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -8874,6 +9273,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 11,
     "record": {
       "win": 6,
@@ -8925,6 +9326,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -8976,6 +9379,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 4,
@@ -9027,6 +9432,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -9078,6 +9485,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -9129,6 +9538,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 1,
@@ -9180,6 +9591,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -9231,6 +9644,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 9,
     "record": {
       "win": 3,
@@ -9282,6 +9697,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 0,
@@ -9333,6 +9750,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 2,
@@ -9384,6 +9803,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -9435,6 +9856,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -9486,6 +9909,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 7,
     "record": {
       "win": 4,
@@ -9537,6 +9962,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 11,
     "record": {
       "win": 3,
@@ -9588,6 +10015,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 2,
@@ -9639,6 +10068,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 11,
     "record": {
       "win": 6,
@@ -9690,6 +10121,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -9741,6 +10174,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -9792,6 +10227,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -9843,6 +10280,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -9894,6 +10333,8 @@ const FIGHTERS = [
     "division": "เฮฟวีเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -9945,6 +10386,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -9996,6 +10439,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 4,
@@ -10047,6 +10492,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -10098,6 +10545,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 2,
@@ -10149,6 +10598,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -10196,10 +10647,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-08-24",
     "division": "สตรอว์เวท",
-    "nickname": null,
+    "nickname": "The Monkey God",
     "gender": "ชาย",
+    "championship_status": "แชมป์ปัจจุบัน",
+    "titles_history": "แชมป์โลก | อดีตแชมป์โลก การต่อสู้แบบผสมผสาน รุ่นสตรอว์เวต",
     "fight_count": 10,
     "record": {
       "win": 5,
@@ -10251,6 +10704,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -10302,6 +10757,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -10353,6 +10810,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -10404,6 +10863,8 @@ const FIGHTERS = [
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -10455,6 +10916,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -10506,6 +10969,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -10557,6 +11022,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -10608,6 +11075,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 1,
@@ -10659,6 +11128,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -10710,6 +11181,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 11,
     "record": {
       "win": 8,
@@ -10761,6 +11234,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -10812,6 +11287,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -10863,6 +11340,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 2,
@@ -10914,6 +11393,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 0,
@@ -10965,6 +11446,8 @@ const FIGHTERS = [
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "หญิง",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 15,
     "record": {
       "win": 9,
@@ -11016,6 +11499,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -11023,6 +11508,59 @@ const FIGHTERS = [
       "draw": 0,
       "pending": 0,
       "total": 1
+    }
+  },
+  {
+    "id": "จุง-ฮยุน-วู",
+    "slug": "จุง-ฮยุน-วู",
+    "name_th": "จุง ฮยุน วู",
+    "name_en": null,
+    "biography": "",
+    "weight_kg": null,
+    "weight_lbs": null,
+    "height_cm": null,
+    "height_ft_in": null,
+    "country": null,
+    "age": null,
+    "team": null,
+    "level": "",
+    "fight_purse": {
+      "amount_thb": null,
+      "currency": "THB",
+      "note": null
+    },
+    "market_value": {
+      "amount_thb": null,
+      "currency": "THB",
+      "note": null
+    },
+    "profile_url": null,
+    "image_filename": "จุง-ฮยุน-วู",
+    "strike_stats": {
+      "strikes_per_minute": {
+        "head": 0,
+        "body": 0,
+        "leg": 0
+      },
+      "overall_strikes": {
+        "head": 0,
+        "body": 0,
+        "leg": 0
+      }
+    },
+    "last_updated": "2026-08-24",
+    "division": "สตรอว์เวท",
+    "nickname": null,
+    "gender": null,
+    "championship_status": null,
+    "titles_history": null,
+    "fight_count": 1,
+    "record": {
+      "win": 0,
+      "loss": 0,
+      "draw": 0,
+      "pending": 1,
+      "total": 0
     }
   },
   {
@@ -11067,6 +11605,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -11118,6 +11658,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -11169,6 +11711,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -11220,6 +11764,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -11271,6 +11817,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 4,
@@ -11322,6 +11870,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 4,
@@ -11373,6 +11923,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -11424,6 +11976,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 8,
     "record": {
       "win": 7,
@@ -11475,6 +12029,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -11526,6 +12082,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -11577,6 +12135,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -11624,16 +12184,18 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-08-24",
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
-    "fight_count": 1,
+    "championship_status": null,
+    "titles_history": null,
+    "fight_count": 2,
     "record": {
       "win": 1,
       "loss": 0,
       "draw": 0,
-      "pending": 0,
+      "pending": 1,
       "total": 1
     }
   },
@@ -11679,6 +12241,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 3,
@@ -11730,6 +12294,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 1,
@@ -11781,6 +12347,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -11832,6 +12400,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 14,
     "record": {
       "win": 8,
@@ -11883,6 +12453,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -11934,6 +12506,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -11985,6 +12559,8 @@ const FIGHTERS = [
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -12036,6 +12612,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -12087,6 +12665,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -12094,6 +12674,59 @@ const FIGHTERS = [
       "draw": 0,
       "pending": 0,
       "total": 3
+    }
+  },
+  {
+    "id": "ฉลามขาว-ศิษย์คุณมะ",
+    "slug": "ฉลามขาว-ศิษย์คุณมะ",
+    "name_th": "ฉลามขาว ศิษย์คุณมะ",
+    "name_en": null,
+    "biography": "",
+    "weight_kg": null,
+    "weight_lbs": null,
+    "height_cm": null,
+    "height_ft_in": null,
+    "country": null,
+    "age": null,
+    "team": null,
+    "level": "",
+    "fight_purse": {
+      "amount_thb": null,
+      "currency": "THB",
+      "note": null
+    },
+    "market_value": {
+      "amount_thb": null,
+      "currency": "THB",
+      "note": null
+    },
+    "profile_url": null,
+    "image_filename": "ฉลามขาว-ศิษย์คุณมะ",
+    "strike_stats": {
+      "strikes_per_minute": {
+        "head": 0,
+        "body": 0,
+        "leg": 0
+      },
+      "overall_strikes": {
+        "head": 0,
+        "body": 0,
+        "leg": 0
+      }
+    },
+    "last_updated": "2026-08-24",
+    "division": "แบนตัมเวท",
+    "nickname": null,
+    "gender": null,
+    "championship_status": null,
+    "titles_history": null,
+    "fight_count": 1,
+    "record": {
+      "win": 0,
+      "loss": 0,
+      "draw": 0,
+      "pending": 1,
+      "total": 0
     }
   },
   {
@@ -12138,6 +12771,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 2,
@@ -12189,6 +12824,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -12240,6 +12877,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -12291,6 +12930,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -12342,6 +12983,8 @@ const FIGHTERS = [
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -12393,6 +13036,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -12444,6 +13089,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -12495,6 +13142,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -12546,6 +13195,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -12597,6 +13248,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 16,
     "record": {
       "win": 9,
@@ -12648,6 +13301,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 3,
@@ -12699,6 +13354,8 @@ const FIGHTERS = [
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 7,
     "record": {
       "win": 5,
@@ -12750,6 +13407,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -12801,6 +13460,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -12852,6 +13513,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -12903,6 +13566,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -12954,6 +13619,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -13005,6 +13672,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 1,
@@ -13056,6 +13725,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -13107,6 +13778,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -13158,6 +13831,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -13209,6 +13884,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -13256,16 +13933,18 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-08-24",
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
-    "fight_count": 12,
+    "championship_status": null,
+    "titles_history": null,
+    "fight_count": 13,
     "record": {
       "win": 10,
       "loss": 2,
       "draw": 0,
-      "pending": 0,
+      "pending": 1,
       "total": 12
     }
   },
@@ -13311,6 +13990,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 9,
     "record": {
       "win": 7,
@@ -13362,6 +14043,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -13413,6 +14096,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 2,
@@ -13464,6 +14149,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 2,
@@ -13515,6 +14202,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -13566,6 +14255,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -13617,6 +14308,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -13668,6 +14361,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 2,
@@ -13719,6 +14414,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 8,
     "record": {
       "win": 6,
@@ -13770,6 +14467,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -13821,6 +14520,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 5,
@@ -13872,6 +14573,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 5,
@@ -13923,6 +14626,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -13974,6 +14679,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -14025,6 +14732,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 2,
@@ -14076,6 +14785,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -14127,6 +14838,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -14178,6 +14891,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 10,
     "record": {
       "win": 6,
@@ -14229,6 +14944,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -14280,6 +14997,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -14327,10 +15046,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-08-24",
     "division": "เฟเธอร์เวท",
-    "nickname": null,
+    "nickname": "Chinga",
     "gender": "ชาย",
+    "championship_status": "แชมป์ปัจจุบัน",
+    "titles_history": "แชมป์โลก | อดีตแชมป์โลก คิกบ็อกซิง รุ่นเฟเธอร์เวต | อดีตแชมป์เวิลด์ กรังด์ปรีซ์ คิกบ็อกซิง รุ่นเฟเธอร์เวต",
     "fight_count": 6,
     "record": {
       "win": 5,
@@ -14382,6 +15103,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -14433,6 +15156,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 1,
@@ -14480,10 +15205,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-08-24",
     "division": "ไลท์เวท",
-    "nickname": null,
+    "nickname": "TOBIKAN JUDAN",
     "gender": "ชาย",
+    "championship_status": "แชมป์ปัจจุบัน",
+    "titles_history": "แชมป์โลก | อดีตแชมป์โลก การต่อสู้แบบผสมผสาน รุ่นไลต์เวต",
     "fight_count": 25,
     "record": {
       "win": 15,
@@ -14535,6 +15262,8 @@ const FIGHTERS = [
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -14586,6 +15315,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 1,
@@ -14637,6 +15368,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 5,
@@ -14688,6 +15421,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -14739,6 +15474,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -14790,6 +15527,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 8,
     "record": {
       "win": 7,
@@ -14841,6 +15580,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 9,
     "record": {
       "win": 5,
@@ -14892,6 +15633,8 @@ const FIGHTERS = [
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -14943,6 +15686,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -14994,6 +15739,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -15045,6 +15792,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 6,
@@ -15096,6 +15845,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -15147,6 +15898,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -15198,6 +15951,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -15249,6 +16004,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -15300,6 +16057,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 7,
     "record": {
       "win": 4,
@@ -15351,6 +16110,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -15402,6 +16163,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 0,
@@ -15453,6 +16216,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -15500,10 +16265,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-08-24",
     "division": "แคชเวท",
-    "nickname": null,
-    "gender": "ชาย",
+    "nickname": "The Panda",
+    "gender": "หญิง",
+    "championship_status": "แชมป์ปัจจุบัน",
+    "titles_history": "แชมป์โลก | อดีตแชมป์โลก การต่อสู้แบบผสมผสาน รุ่นสตรอว์เวต",
     "fight_count": 12,
     "record": {
       "win": 11,
@@ -15555,6 +16322,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -15606,6 +16375,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 7,
     "record": {
       "win": 4,
@@ -15657,6 +16428,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -15708,6 +16481,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 7,
     "record": {
       "win": 3,
@@ -15759,6 +16534,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -15810,6 +16587,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -15861,6 +16640,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 7,
     "record": {
       "win": 3,
@@ -15912,6 +16693,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -15963,6 +16746,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 3,
@@ -16014,6 +16799,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -16065,6 +16852,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -16116,6 +16905,8 @@ const FIGHTERS = [
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -16167,6 +16958,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 1,
@@ -16218,6 +17011,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -16269,6 +17064,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 8,
     "record": {
       "win": 7,
@@ -16320,6 +17117,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -16371,6 +17170,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 2,
@@ -16422,6 +17223,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -16473,6 +17276,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -16524,6 +17329,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -16575,6 +17382,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -16626,6 +17435,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -16677,6 +17488,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -16728,6 +17541,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -16779,6 +17594,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -16830,6 +17647,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -16881,6 +17700,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -16932,6 +17753,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -16983,6 +17806,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -17034,6 +17859,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -17085,6 +17912,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 3,
@@ -17136,6 +17965,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 2,
@@ -17187,6 +18018,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 2,
@@ -17238,6 +18071,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -17289,6 +18124,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -17340,6 +18177,8 @@ const FIGHTERS = [
     "division": "เฮฟวีเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -17391,6 +18230,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -17442,6 +18283,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -17493,6 +18336,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -17544,6 +18389,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 13,
     "record": {
       "win": 7,
@@ -17595,6 +18442,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -17646,6 +18495,8 @@ const FIGHTERS = [
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "หญิง",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -17697,6 +18548,8 @@ const FIGHTERS = [
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "หญิง",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 0,
@@ -17748,6 +18601,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 8,
     "record": {
       "win": 2,
@@ -17799,6 +18654,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -17850,6 +18707,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 2,
@@ -17901,6 +18760,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -17952,6 +18813,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -17972,7 +18835,7 @@ const FIGHTERS = [
     "height_cm": 177,
     "height_ft_in": "5'10\"",
     "country": "ไทย",
-    "age": 35,
+    "age": 36,
     "team": "ซุปเปอร์บอน เทรนนิง แคมป์",
     "level": "B",
     "fight_purse": {
@@ -17999,10 +18862,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-08-24",
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": "แชมป์ปัจจุบัน",
+    "titles_history": "แชมป์โลก",
     "fight_count": 10,
     "record": {
       "win": 7,
@@ -18054,6 +18919,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 4,
@@ -18061,6 +18928,59 @@ const FIGHTERS = [
       "draw": 0,
       "pending": 0,
       "total": 6
+    }
+  },
+  {
+    "id": "ซุปเปอร์บอล-ศิษย์-ช.",
+    "slug": "ซุปเปอร์บอล-ศิษย์-ช.",
+    "name_th": "ซุปเปอร์บอล ศิษย์ ช.",
+    "name_en": null,
+    "biography": "",
+    "weight_kg": null,
+    "weight_lbs": null,
+    "height_cm": null,
+    "height_ft_in": null,
+    "country": null,
+    "age": null,
+    "team": null,
+    "level": "",
+    "fight_purse": {
+      "amount_thb": null,
+      "currency": "THB",
+      "note": null
+    },
+    "market_value": {
+      "amount_thb": null,
+      "currency": "THB",
+      "note": null
+    },
+    "profile_url": null,
+    "image_filename": "ซุปเปอร์บอล-ศิษย์-ช.",
+    "strike_stats": {
+      "strikes_per_minute": {
+        "head": 0,
+        "body": 0,
+        "leg": 0
+      },
+      "overall_strikes": {
+        "head": 0,
+        "body": 0,
+        "leg": 0
+      }
+    },
+    "last_updated": "2026-08-24",
+    "division": "ฟลายเวท",
+    "nickname": null,
+    "gender": null,
+    "championship_status": null,
+    "titles_history": null,
+    "fight_count": 1,
+    "record": {
+      "win": 0,
+      "loss": 0,
+      "draw": 0,
+      "pending": 1,
+      "total": 0
     }
   },
   {
@@ -18105,6 +19025,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "หญิง",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 3,
@@ -18156,6 +19078,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 2,
@@ -18207,6 +19131,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -18254,10 +19180,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-08-24",
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 20,
     "record": {
       "win": 15,
@@ -18309,6 +19237,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -18360,6 +19290,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -18411,6 +19343,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -18462,6 +19396,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -18513,6 +19449,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 1,
@@ -18564,6 +19502,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -18615,6 +19555,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -18666,6 +19608,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -18717,6 +19661,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 18,
     "record": {
       "win": 10,
@@ -18768,6 +19714,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 17,
     "record": {
       "win": 9,
@@ -18819,6 +19767,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 3,
@@ -18870,6 +19820,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 2,
@@ -18921,6 +19873,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -18972,6 +19926,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 0,
@@ -19023,6 +19979,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "หญิง",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 3,
@@ -19074,6 +20032,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 7,
     "record": {
       "win": 4,
@@ -19125,6 +20085,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -19176,6 +20138,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 2,
@@ -19227,6 +20191,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -19278,6 +20244,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -19329,6 +20297,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 8,
     "record": {
       "win": 4,
@@ -19380,6 +20350,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -19431,6 +20403,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -19482,6 +20456,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 0,
@@ -19533,6 +20509,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 2,
@@ -19584,6 +20562,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -19635,6 +20615,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -19686,6 +20668,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -19737,6 +20721,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -19788,6 +20774,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -19839,6 +20827,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -19890,6 +20880,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -19941,6 +20933,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 1,
@@ -19992,6 +20986,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -20043,6 +21039,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -20094,6 +21092,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -20145,6 +21145,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -20196,6 +21198,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -20247,6 +21251,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 2,
@@ -20298,6 +21304,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -20349,6 +21357,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -20400,6 +21410,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 7,
     "record": {
       "win": 6,
@@ -20451,6 +21463,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -20502,6 +21516,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 2,
@@ -20553,6 +21569,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -20604,6 +21622,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -20655,6 +21675,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -20702,10 +21724,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-08-24",
     "division": "ฟลายเวท",
-    "nickname": null,
+    "nickname": "Baby Shark",
     "gender": "ชาย",
+    "championship_status": "แชมป์ปัจจุบัน",
+    "titles_history": "แชมป์โลก",
     "fight_count": 3,
     "record": {
       "win": 3,
@@ -20757,6 +21781,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -20808,6 +21834,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 8,
     "record": {
       "win": 6,
@@ -20859,6 +21887,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -20910,6 +21940,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -20961,6 +21993,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -21012,6 +22046,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -21063,6 +22099,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 2,
@@ -21114,6 +22152,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -21165,6 +22205,8 @@ const FIGHTERS = [
     "division": "เฮฟวีเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -21216,6 +22258,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -21267,6 +22311,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -21318,6 +22364,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 13,
     "record": {
       "win": 10,
@@ -21369,6 +22417,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -21420,6 +22470,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -21471,6 +22523,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 4,
@@ -21522,6 +22576,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -21573,6 +22629,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 3,
@@ -21624,6 +22682,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 1,
@@ -21675,6 +22735,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -21726,6 +22788,8 @@ const FIGHTERS = [
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 7,
     "record": {
       "win": 4,
@@ -21777,6 +22841,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 9,
     "record": {
       "win": 6,
@@ -21828,6 +22894,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -21879,6 +22947,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 9,
     "record": {
       "win": 5,
@@ -21930,6 +23000,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -21981,6 +23053,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 4,
@@ -22032,6 +23106,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -22047,7 +23123,7 @@ const FIGHTERS = [
     "name_th": "ถัง ไค",
     "name_en": "Tang Kai",
     "biography": "",
-    "weight_kg": 70,
+    "weight_kg": 70.0,
     "weight_lbs": 154.3,
     "height_cm": 177,
     "height_ft_in": "5'10\"",
@@ -22079,10 +23155,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-08-24",
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": "แชมป์ปัจจุบัน",
+    "titles_history": "แชมป์โลก",
     "fight_count": 10,
     "record": {
       "win": 9,
@@ -22134,6 +23212,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -22185,6 +23265,8 @@ const FIGHTERS = [
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 14,
     "record": {
       "win": 10,
@@ -22236,6 +23318,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 3,
@@ -22287,6 +23371,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -22338,6 +23424,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -22389,6 +23477,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -22440,6 +23530,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -22491,6 +23583,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 7,
     "record": {
       "win": 5,
@@ -22542,6 +23636,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 11,
     "record": {
       "win": 5,
@@ -22593,6 +23689,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 10,
     "record": {
       "win": 7,
@@ -22644,6 +23742,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -22695,6 +23795,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 3,
@@ -22746,6 +23848,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 2,
@@ -22797,6 +23901,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 2,
@@ -22848,6 +23954,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 14,
     "record": {
       "win": 7,
@@ -22899,6 +24007,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -22950,6 +24060,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 7,
     "record": {
       "win": 3,
@@ -23001,6 +24113,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -23052,6 +24166,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -23103,6 +24219,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -23154,6 +24272,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -23205,6 +24325,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -23256,6 +24378,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -23307,6 +24431,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 3,
@@ -23358,6 +24484,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -23409,6 +24537,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -23460,6 +24590,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -23511,6 +24643,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 2,
@@ -23562,6 +24696,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 16,
     "record": {
       "win": 10,
@@ -23613,6 +24749,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -23633,7 +24771,7 @@ const FIGHTERS = [
     "height_cm": 168,
     "height_ft_in": "5'6\"",
     "country": "ญี่ปุ่น",
-    "age": 34,
+    "age": 35,
     "team": "Team Vasileus",
     "level": "B",
     "fight_purse": {
@@ -23660,10 +24798,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-08-24",
     "division": "ฟลายเวท",
-    "nickname": null,
+    "nickname": "Natural Born Krusher",
     "gender": "ชาย",
+    "championship_status": "แชมป์ปัจจุบัน",
+    "titles_history": "แชมป์โลก",
     "fight_count": 5,
     "record": {
       "win": 3,
@@ -23715,6 +24855,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -23766,6 +24908,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -23817,6 +24961,8 @@ const FIGHTERS = [
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 10,
     "record": {
       "win": 8,
@@ -23868,6 +25014,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 14,
     "record": {
       "win": 7,
@@ -23919,6 +25067,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -23970,6 +25120,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 7,
     "record": {
       "win": 2,
@@ -24021,6 +25173,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -24072,6 +25226,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -24123,6 +25279,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -24174,6 +25332,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -24225,6 +25385,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -24276,6 +25438,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -24327,6 +25491,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 0,
@@ -24378,6 +25544,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 7,
     "record": {
       "win": 2,
@@ -24425,10 +25593,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-08-24",
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": "แชมป์ปัจจุบัน",
+    "titles_history": "แชมป์โลก | อดีตแชมป์โลก การต่อสู้แบบผสมผสาน รุ่นเฟเธอร์เวต เฉพาะกาล",
     "fight_count": 8,
     "record": {
       "win": 6,
@@ -24480,6 +25650,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -24531,6 +25703,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -24582,6 +25756,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -24633,6 +25809,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 1,
@@ -24684,6 +25862,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 8,
     "record": {
       "win": 6,
@@ -24735,6 +25915,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -24786,6 +25968,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 16,
     "record": {
       "win": 11,
@@ -24837,6 +26021,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -24888,6 +26074,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -24939,6 +26127,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 7,
     "record": {
       "win": 3,
@@ -24990,6 +26180,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -25041,6 +26233,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 4,
@@ -25092,6 +26286,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -25143,6 +26339,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -25194,6 +26392,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 3,
@@ -25245,6 +26445,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -25292,10 +26494,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-08-24",
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": "แชมป์ปัจจุบัน",
+    "titles_history": "แชมป์โลก",
     "fight_count": 5,
     "record": {
       "win": 5,
@@ -25347,6 +26551,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -25398,6 +26604,8 @@ const FIGHTERS = [
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -25449,6 +26657,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 8,
     "record": {
       "win": 6,
@@ -25500,6 +26710,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -25551,6 +26763,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -25602,6 +26816,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 12,
     "record": {
       "win": 8,
@@ -25653,6 +26869,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -25704,6 +26922,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -25755,6 +26975,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -25806,6 +27028,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -25857,6 +27081,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -25908,6 +27134,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -25959,6 +27187,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 2,
@@ -26010,6 +27240,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -26061,6 +27293,8 @@ const FIGHTERS = [
     "division": "เวลเทอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 10,
     "record": {
       "win": 6,
@@ -26112,6 +27346,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 0,
@@ -26163,6 +27399,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 2,
@@ -26214,6 +27452,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -26265,6 +27505,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -26316,6 +27558,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 9,
     "record": {
       "win": 8,
@@ -26367,6 +27611,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 0,
@@ -26418,6 +27664,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -26469,6 +27717,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -26520,6 +27770,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -26571,6 +27823,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -26622,6 +27876,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "หญิง",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 2,
@@ -26673,6 +27929,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "หญิง",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -26724,6 +27982,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "หญิง",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 3,
@@ -26775,6 +28035,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "หญิง",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 7,
     "record": {
       "win": 4,
@@ -26826,6 +28088,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -26877,6 +28141,8 @@ const FIGHTERS = [
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -26928,6 +28194,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -26979,6 +28247,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -27030,6 +28300,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "หญิง",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 8,
     "record": {
       "win": 7,
@@ -27081,6 +28353,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -27132,6 +28406,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 18,
     "record": {
       "win": 13,
@@ -27183,6 +28459,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 2,
@@ -27234,6 +28512,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -27281,16 +28561,18 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-08-24",
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
-    "fight_count": 10,
+    "championship_status": null,
+    "titles_history": null,
+    "fight_count": 11,
     "record": {
       "win": 5,
       "loss": 5,
       "draw": 0,
-      "pending": 0,
+      "pending": 1,
       "total": 10
     }
   },
@@ -27336,6 +28618,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 1,
@@ -27387,6 +28671,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -27438,6 +28724,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -27489,6 +28777,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -27540,6 +28830,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -27591,6 +28883,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 2,
@@ -27642,6 +28936,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -27693,6 +28989,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -27744,6 +29042,8 @@ const FIGHTERS = [
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 7,
     "record": {
       "win": 6,
@@ -27795,6 +29095,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 1,
@@ -27846,6 +29148,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 2,
@@ -27897,6 +29201,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -27948,6 +29254,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 9,
     "record": {
       "win": 6,
@@ -27999,6 +29307,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 2,
@@ -28050,6 +29360,8 @@ const FIGHTERS = [
     "division": "เฮฟวีเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -28101,6 +29413,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -28152,6 +29466,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -28203,6 +29519,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -28254,6 +29572,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -28305,6 +29625,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -28356,6 +29678,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -28407,6 +29731,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -28458,6 +29784,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -28465,6 +29793,59 @@ const FIGHTERS = [
       "draw": 0,
       "pending": 0,
       "total": 1
+    }
+  },
+  {
+    "id": "บาสตา-อับเดลมูเนม",
+    "slug": "บาสตา-อับเดลมูเนม",
+    "name_th": "บาสตา อับเดลมูเนม",
+    "name_en": null,
+    "biography": "",
+    "weight_kg": null,
+    "weight_lbs": null,
+    "height_cm": null,
+    "height_ft_in": null,
+    "country": null,
+    "age": null,
+    "team": null,
+    "level": "",
+    "fight_purse": {
+      "amount_thb": null,
+      "currency": "THB",
+      "note": null
+    },
+    "market_value": {
+      "amount_thb": null,
+      "currency": "THB",
+      "note": null
+    },
+    "profile_url": null,
+    "image_filename": "บาสตา-อับเดลมูเนม",
+    "strike_stats": {
+      "strikes_per_minute": {
+        "head": 0,
+        "body": 0,
+        "leg": 0
+      },
+      "overall_strikes": {
+        "head": 0,
+        "body": 0,
+        "leg": 0
+      }
+    },
+    "last_updated": "2026-08-24",
+    "division": "ฟลายเวท",
+    "nickname": null,
+    "gender": null,
+    "championship_status": null,
+    "titles_history": null,
+    "fight_count": 1,
+    "record": {
+      "win": 0,
+      "loss": 0,
+      "draw": 0,
+      "pending": 1,
+      "total": 0
     }
   },
   {
@@ -28509,6 +29890,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -28560,6 +29943,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 3,
@@ -28611,6 +29996,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 3,
@@ -28662,6 +30049,8 @@ const FIGHTERS = [
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "หญิง",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 8,
     "record": {
       "win": 3,
@@ -28713,6 +30102,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 0,
@@ -28764,6 +30155,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -28815,6 +30208,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -28866,6 +30261,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 2,
@@ -28913,10 +30310,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-08-24",
     "division": "แคชเวท",
-    "nickname": null,
+    "nickname": "THE FLASH",
     "gender": "ชาย",
+    "championship_status": "แชมป์ปัจจุบัน",
+    "titles_history": "แชมป์โลก | อดีตแชมป์โลก การต่อสู้แบบผสมผสาน รุ่นแบนตัมเวต",
     "fight_count": 16,
     "record": {
       "win": 12,
@@ -28968,6 +30367,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -29019,6 +30420,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -29070,6 +30473,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -29121,6 +30526,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -29172,6 +30579,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -29223,6 +30632,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 3,
@@ -29274,6 +30685,8 @@ const FIGHTERS = [
     "division": "เฮฟวีเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -29325,6 +30738,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 3,
@@ -29376,6 +30791,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 4,
@@ -29427,6 +30844,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 1,
@@ -29478,6 +30897,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -29529,6 +30950,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -29580,6 +31003,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 3,
@@ -29631,6 +31056,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 2,
@@ -29682,6 +31109,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -29733,6 +31162,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -29784,6 +31215,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -29835,6 +31268,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 2,
@@ -29886,6 +31321,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 2,
@@ -29937,6 +31374,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 8,
     "record": {
       "win": 6,
@@ -29988,6 +31427,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 7,
     "record": {
       "win": 5,
@@ -30039,6 +31480,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -30090,6 +31533,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 1,
@@ -30141,6 +31586,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 2,
@@ -30192,6 +31639,8 @@ const FIGHTERS = [
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -30243,6 +31692,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -30294,6 +31745,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -30345,6 +31798,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 2,
@@ -30396,6 +31851,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 14,
     "record": {
       "win": 9,
@@ -30447,6 +31904,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -30498,6 +31957,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 12,
     "record": {
       "win": 7,
@@ -30549,6 +32010,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -30600,6 +32063,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 2,
@@ -30651,6 +32116,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 10,
     "record": {
       "win": 4,
@@ -30702,6 +32169,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 2,
@@ -30753,6 +32222,8 @@ const FIGHTERS = [
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -30804,6 +32275,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -30855,6 +32328,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 3,
@@ -30906,6 +32381,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -30957,6 +32434,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -31008,6 +32487,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -31059,6 +32540,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 0,
@@ -31106,10 +32589,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-08-24",
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": "แชมป์ปัจจุบัน",
+    "titles_history": "แชมป์โลก | อดีตแชมป์โลก คิกบ็อกซิง รุ่นสตรอว์เวต",
     "fight_count": 9,
     "record": {
       "win": 7,
@@ -31161,6 +32646,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -31212,6 +32699,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 12,
     "record": {
       "win": 7,
@@ -31263,6 +32752,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -31314,6 +32805,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -31365,6 +32858,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -31416,6 +32911,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -31467,6 +32964,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -31518,6 +33017,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -31569,6 +33070,8 @@ const FIGHTERS = [
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 2,
@@ -31620,6 +33123,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "หญิง",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -31671,6 +33176,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -31722,6 +33229,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -31773,6 +33282,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -31824,6 +33335,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -31875,6 +33388,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -31926,6 +33441,8 @@ const FIGHTERS = [
     "division": "เฮฟวีเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 2,
@@ -31977,6 +33494,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 3,
@@ -32028,6 +33547,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 12,
     "record": {
       "win": 8,
@@ -32079,6 +33600,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -32130,6 +33653,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 16,
     "record": {
       "win": 9,
@@ -32181,6 +33706,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -32232,6 +33759,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 3,
@@ -32283,6 +33812,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -32334,6 +33865,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 8,
     "record": {
       "win": 7,
@@ -32385,6 +33918,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -32436,6 +33971,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -32487,6 +34024,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 4,
@@ -32538,6 +34077,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 8,
     "record": {
       "win": 4,
@@ -32589,6 +34130,8 @@ const FIGHTERS = [
     "division": "เวลเทอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -32640,6 +34183,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 3,
@@ -32687,16 +34232,18 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
-    "division": null,
+    "last_updated": "2026-08-24",
+    "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
-    "fight_count": 2,
+    "championship_status": null,
+    "titles_history": null,
+    "fight_count": 3,
     "record": {
       "win": 0,
       "loss": 2,
       "draw": 0,
-      "pending": 0,
+      "pending": 1,
       "total": 2
     }
   },
@@ -32742,6 +34289,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -32793,6 +34342,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -32844,6 +34395,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "หญิง",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -32891,10 +34444,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-08-24",
     "division": "แคชเวท",
-    "nickname": null,
+    "nickname": "Wonder Boy",
     "gender": "ชาย",
+    "championship_status": "แชมป์ปัจจุบัน",
+    "titles_history": "แชมป์โลก | อดีตแชมป์โลก การต่อสู้แบบผสมผสาน รุ่นแบนตัมเวต",
     "fight_count": 10,
     "record": {
       "win": 7,
@@ -32946,6 +34501,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 3,
@@ -32997,6 +34554,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -33048,6 +34607,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 7,
     "record": {
       "win": 3,
@@ -33099,6 +34660,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -33150,6 +34713,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -33201,6 +34766,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 4,
@@ -33252,6 +34819,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -33303,6 +34872,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -33354,6 +34925,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 10,
     "record": {
       "win": 4,
@@ -33405,6 +34978,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -33456,6 +35031,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -33507,6 +35084,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -33558,6 +35137,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "หญิง",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -33609,6 +35190,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 2,
@@ -33660,6 +35243,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 4,
@@ -33711,6 +35296,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -33762,6 +35349,8 @@ const FIGHTERS = [
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -33813,6 +35402,8 @@ const FIGHTERS = [
     "division": "เวลเทอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -33864,6 +35455,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -33915,6 +35508,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -33966,6 +35561,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -34017,6 +35614,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 2,
@@ -34068,6 +35667,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -34075,6 +35676,59 @@ const FIGHTERS = [
       "draw": 0,
       "pending": 0,
       "total": 1
+    }
+  },
+  {
+    "id": "ฟ้าแลบ-โรงเรียนกีฬานครสวรรค์",
+    "slug": "ฟ้าแลบ-โรงเรียนกีฬานครสวรรค์",
+    "name_th": "ฟ้าแลบ โรงเรียนกีฬานครสวรรค์",
+    "name_en": null,
+    "biography": "",
+    "weight_kg": null,
+    "weight_lbs": null,
+    "height_cm": null,
+    "height_ft_in": null,
+    "country": null,
+    "age": null,
+    "team": null,
+    "level": "",
+    "fight_purse": {
+      "amount_thb": null,
+      "currency": "THB",
+      "note": null
+    },
+    "market_value": {
+      "amount_thb": null,
+      "currency": "THB",
+      "note": null
+    },
+    "profile_url": null,
+    "image_filename": "ฟ้าแลบ-โรงเรียนกีฬานครสวรรค์",
+    "strike_stats": {
+      "strikes_per_minute": {
+        "head": 0,
+        "body": 0,
+        "leg": 0
+      },
+      "overall_strikes": {
+        "head": 0,
+        "body": 0,
+        "leg": 0
+      }
+    },
+    "last_updated": "2026-08-24",
+    "division": "อะตอมเวท",
+    "nickname": null,
+    "gender": null,
+    "championship_status": null,
+    "titles_history": null,
+    "fight_count": 1,
+    "record": {
+      "win": 0,
+      "loss": 0,
+      "draw": 0,
+      "pending": 1,
+      "total": 0
     }
   },
   {
@@ -34119,6 +35773,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -34170,6 +35826,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -34221,6 +35879,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 7,
     "record": {
       "win": 6,
@@ -34272,6 +35932,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 4,
@@ -34323,6 +35985,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 2,
@@ -34374,6 +36038,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -34425,6 +36091,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -34476,6 +36144,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -34527,6 +36197,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -34578,6 +36250,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -34629,6 +36303,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -34680,6 +36356,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 2,
@@ -34731,6 +36409,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 3,
@@ -34782,6 +36462,8 @@ const FIGHTERS = [
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -34833,6 +36515,8 @@ const FIGHTERS = [
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -34884,6 +36568,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 7,
     "record": {
       "win": 2,
@@ -34935,6 +36621,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 10,
     "record": {
       "win": 6,
@@ -34986,6 +36674,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -35037,6 +36727,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -35088,6 +36780,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 1,
@@ -35139,6 +36833,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 2,
@@ -35190,6 +36886,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -35241,6 +36939,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 8,
     "record": {
       "win": 3,
@@ -35292,6 +36992,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -35343,6 +37045,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -35394,6 +37098,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 2,
@@ -35445,6 +37151,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -35496,6 +37204,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -35547,6 +37257,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -35598,6 +37310,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -35649,6 +37363,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -35700,6 +37416,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -35751,6 +37469,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 4,
@@ -35802,6 +37522,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -35853,6 +37575,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 2,
@@ -35904,6 +37628,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -35955,6 +37681,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 7,
     "record": {
       "win": 3,
@@ -36006,6 +37734,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 4,
@@ -36057,6 +37787,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 4,
@@ -36108,6 +37840,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 11,
     "record": {
       "win": 8,
@@ -36155,10 +37889,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-08-24",
     "division": "เวลเทอร์เวท",
-    "nickname": null,
+    "nickname": "Cobra",
     "gender": "ชาย",
+    "championship_status": "แชมป์ปัจจุบัน",
+    "titles_history": "แชมป์โลก | อดีตแชมป์โลก การต่อสู้แบบผสมผสาน รุ่นเฟเธอร์เวต",
     "fight_count": 16,
     "record": {
       "win": 10,
@@ -36210,6 +37946,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "หญิง",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -36261,6 +37999,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -36312,6 +38052,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 2,
@@ -36363,6 +38105,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -36414,6 +38158,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -36465,6 +38211,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 3,
@@ -36516,6 +38264,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 11,
     "record": {
       "win": 5,
@@ -36567,6 +38317,8 @@ const FIGHTERS = [
     "division": "เฮฟวีเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 5,
@@ -36618,6 +38370,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -36669,6 +38423,8 @@ const FIGHTERS = [
     "division": "เฮฟวีเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -36720,6 +38476,8 @@ const FIGHTERS = [
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 2,
@@ -36767,10 +38525,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-08-24",
     "division": "เฟเธอร์เวท",
-    "nickname": null,
+    "nickname": "THE SITU-ASIAN",
     "gender": "ชาย",
+    "championship_status": "แชมป์ปัจจุบัน",
+    "titles_history": "แชมป์โลก | อดีตแชมป์โลก การต่อสู้แบบผสมผสาน รุ่นไลต์เวต&การต่อสู้แบบผสมผสาน รุ่นเฟเธอร์เวต",
     "fight_count": 20,
     "record": {
       "win": 12,
@@ -36822,6 +38582,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "หญิง",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 4,
@@ -36873,6 +38635,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -36924,6 +38688,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 2,
@@ -36975,6 +38741,8 @@ const FIGHTERS = [
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -37026,6 +38794,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -37077,6 +38847,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -37128,6 +38900,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -37179,6 +38953,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -37230,6 +39006,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 3,
@@ -37281,6 +39059,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -37332,6 +39112,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 0,
@@ -37383,6 +39165,8 @@ const FIGHTERS = [
     "division": "เฮฟวีเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 7,
     "record": {
       "win": 3,
@@ -37434,6 +39218,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -37485,6 +39271,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -37536,6 +39324,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -37587,6 +39377,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 3,
@@ -37638,6 +39430,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -37689,6 +39483,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -37740,6 +39536,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -37791,6 +39589,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -37842,6 +39642,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -37893,6 +39695,8 @@ const FIGHTERS = [
     "division": "เฮฟวีเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -37944,6 +39748,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 2,
@@ -37995,6 +39801,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -38046,6 +39854,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -38097,6 +39907,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -38148,6 +39960,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -38199,6 +40013,8 @@ const FIGHTERS = [
     "division": "เฮฟวีเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -38250,6 +40066,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -38301,6 +40119,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -38352,6 +40172,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -38403,6 +40225,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 4,
@@ -38454,6 +40278,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -38505,6 +40331,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -38556,6 +40384,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -38607,6 +40437,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -38658,6 +40490,8 @@ const FIGHTERS = [
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 2,
@@ -38709,6 +40543,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 3,
@@ -38760,6 +40596,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 1,
@@ -38811,6 +40649,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 4,
@@ -38862,6 +40702,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -38913,6 +40755,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -38964,6 +40808,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -39015,6 +40861,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -39066,6 +40914,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -39117,6 +40967,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -39168,6 +41020,8 @@ const FIGHTERS = [
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 7,
     "record": {
       "win": 4,
@@ -39219,6 +41073,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -39270,6 +41126,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -39321,6 +41179,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 0,
@@ -39372,6 +41232,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 2,
@@ -39423,6 +41285,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -39474,6 +41338,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -39525,6 +41391,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -39576,6 +41444,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -39627,6 +41497,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 7,
     "record": {
       "win": 2,
@@ -39678,6 +41550,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 3,
@@ -39729,6 +41603,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -39780,6 +41656,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 7,
     "record": {
       "win": 6,
@@ -39831,6 +41709,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -39882,6 +41762,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -39933,6 +41815,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -39984,6 +41868,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -40035,6 +41921,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 12,
     "record": {
       "win": 7,
@@ -40086,6 +41974,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -40137,6 +42027,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -40188,6 +42080,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -40239,6 +42133,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -40290,6 +42186,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -40341,6 +42239,8 @@ const FIGHTERS = [
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 7,
     "record": {
       "win": 3,
@@ -40392,6 +42292,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 2,
@@ -40443,6 +42345,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 17,
     "record": {
       "win": 11,
@@ -40494,6 +42398,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 8,
     "record": {
       "win": 4,
@@ -40545,6 +42451,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 13,
     "record": {
       "win": 12,
@@ -40596,6 +42504,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -40647,6 +42557,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -40698,6 +42610,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 1,
@@ -40749,6 +42663,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -40800,6 +42716,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "หญิง",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -40851,6 +42769,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -40902,6 +42822,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 2,
@@ -40953,6 +42875,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -41004,6 +42928,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -41055,6 +42981,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -41106,6 +43034,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -41157,6 +43087,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -41208,6 +43140,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -41259,6 +43193,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -41310,6 +43246,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -41361,6 +43299,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -41412,6 +43352,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 4,
@@ -41463,6 +43405,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 1,
@@ -41514,6 +43458,8 @@ const FIGHTERS = [
     "division": "มิดเดิลเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 1,
@@ -41565,6 +43511,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -41616,6 +43564,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -41667,6 +43617,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 13,
     "record": {
       "win": 8,
@@ -41718,6 +43670,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 3,
@@ -41769,6 +43723,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -41820,6 +43776,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -41871,6 +43829,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 9,
     "record": {
       "win": 7,
@@ -41922,6 +43882,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 3,
@@ -41973,6 +43935,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -42024,6 +43988,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 15,
     "record": {
       "win": 10,
@@ -42075,6 +44041,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -42082,6 +44050,59 @@ const FIGHTERS = [
       "draw": 0,
       "pending": 0,
       "total": 1
+    }
+  },
+  {
+    "id": "ยูริ-ทานากะ",
+    "slug": "ยูริ-ทานากะ",
+    "name_th": "ยูริ ทานากะ",
+    "name_en": null,
+    "biography": "",
+    "weight_kg": null,
+    "weight_lbs": null,
+    "height_cm": null,
+    "height_ft_in": null,
+    "country": null,
+    "age": null,
+    "team": null,
+    "level": "",
+    "fight_purse": {
+      "amount_thb": null,
+      "currency": "THB",
+      "note": null
+    },
+    "market_value": {
+      "amount_thb": null,
+      "currency": "THB",
+      "note": null
+    },
+    "profile_url": null,
+    "image_filename": "ยูริ-ทานากะ",
+    "strike_stats": {
+      "strikes_per_minute": {
+        "head": 0,
+        "body": 0,
+        "leg": 0
+      },
+      "overall_strikes": {
+        "head": 0,
+        "body": 0,
+        "leg": 0
+      }
+    },
+    "last_updated": "2026-08-24",
+    "division": "แบนตัมเวท",
+    "nickname": null,
+    "gender": null,
+    "championship_status": null,
+    "titles_history": null,
+    "fight_count": 1,
+    "record": {
+      "win": 0,
+      "loss": 0,
+      "draw": 0,
+      "pending": 1,
+      "total": 0
     }
   },
   {
@@ -42126,6 +44147,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -42177,6 +44200,8 @@ const FIGHTERS = [
     "division": "เวลเทอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 2,
@@ -42228,6 +44253,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 3,
@@ -42279,6 +44306,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -42330,6 +44359,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -42381,6 +44412,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -42432,6 +44465,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -42483,6 +44518,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -42534,6 +44571,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -42585,6 +44624,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -42636,6 +44677,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -42687,6 +44730,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -42738,6 +44783,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -42789,6 +44836,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -42840,6 +44889,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -42891,6 +44942,8 @@ const FIGHTERS = [
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -42942,6 +44995,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -42962,7 +45017,7 @@ const FIGHTERS = [
     "height_cm": 168,
     "height_ft_in": "5'6\"",
     "country": "ไทย",
-    "age": 28,
+    "age": 29,
     "team": "จิตรเมืองนนท์",
     "level": "B",
     "fight_purse": {
@@ -42989,10 +45044,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-08-24",
     "division": "ฟลายเวท",
-    "nickname": null,
+    "nickname": "The Iron Man",
     "gender": "ชาย",
+    "championship_status": "แชมป์ปัจจุบัน",
+    "titles_history": "แชมป์โลก | อดีตแชมป์โลก มวยไทย รุ่นฟลายเวต",
     "fight_count": 20,
     "record": {
       "win": 17,
@@ -43044,6 +45101,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -43095,6 +45154,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 7,
     "record": {
       "win": 4,
@@ -43146,6 +45207,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -43197,6 +45260,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 2,
@@ -43248,6 +45313,8 @@ const FIGHTERS = [
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 10,
     "record": {
       "win": 5,
@@ -43299,6 +45366,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -43350,6 +45419,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -43401,6 +45472,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 3,
@@ -43452,6 +45525,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -43503,6 +45578,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -43554,6 +45631,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 20,
     "record": {
       "win": 12,
@@ -43605,6 +45684,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 1,
@@ -43656,6 +45737,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -43707,6 +45790,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -43758,6 +45843,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "หญิง",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -43809,6 +45896,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -43860,6 +45949,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -43911,6 +46002,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 1,
@@ -43962,6 +46055,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -44013,6 +46108,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -44064,6 +46161,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -44115,6 +46214,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -44166,6 +46267,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 7,
     "record": {
       "win": 6,
@@ -44217,6 +46320,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -44268,6 +46373,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -44319,6 +46426,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -44370,6 +46479,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -44421,6 +46532,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -44472,6 +46585,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -44523,6 +46638,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 2,
@@ -44574,6 +46691,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 9,
     "record": {
       "win": 3,
@@ -44625,6 +46744,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -44676,6 +46797,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -44727,6 +46850,8 @@ const FIGHTERS = [
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -44778,6 +46903,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -44829,6 +46956,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -44880,6 +47009,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 2,
@@ -44931,6 +47062,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 3,
@@ -44982,6 +47115,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -45033,6 +47168,8 @@ const FIGHTERS = [
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "หญิง",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 12,
     "record": {
       "win": 7,
@@ -45084,6 +47221,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -45135,6 +47274,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 2,
@@ -45186,6 +47327,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -45237,6 +47380,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -45288,6 +47433,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": "SHINDO",
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 4,
@@ -45339,6 +47486,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -45390,6 +47539,8 @@ const FIGHTERS = [
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 3,
@@ -45441,6 +47592,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -45492,6 +47645,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -45543,6 +47698,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 2,
@@ -45594,6 +47751,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 1,
@@ -45645,6 +47804,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -45696,6 +47857,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -45747,6 +47910,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -45798,6 +47963,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 17,
     "record": {
       "win": 11,
@@ -45849,6 +48016,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -45900,6 +48069,8 @@ const FIGHTERS = [
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 8,
     "record": {
       "win": 7,
@@ -45916,7 +48087,7 @@ const FIGHTERS = [
     "name_en": "Regian Eersel",
     "biography": "",
     "weight_kg": 77.1,
-    "weight_lbs": 170,
+    "weight_lbs": 170.0,
     "height_cm": 189,
     "height_ft_in": "6'2\"",
     "country": "ซูรินาม",
@@ -45947,10 +48118,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-08-24",
     "division": "ไลท์เวท",
-    "nickname": null,
+    "nickname": "THE IMMORTAL",
     "gender": "ชาย",
+    "championship_status": "แชมป์ปัจจุบัน",
+    "titles_history": "แชมป์โลก",
     "fight_count": 15,
     "record": {
       "win": 14,
@@ -46002,6 +48175,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -46053,6 +48228,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 11,
     "record": {
       "win": 4,
@@ -46104,6 +48281,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 8,
     "record": {
       "win": 8,
@@ -46155,6 +48334,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 2,
@@ -46206,6 +48387,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -46257,6 +48440,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -46308,6 +48493,8 @@ const FIGHTERS = [
     "division": "เวลเทอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 3,
@@ -46359,6 +48546,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -46410,6 +48599,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -46461,6 +48652,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -46512,6 +48705,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 10,
     "record": {
       "win": 6,
@@ -46563,6 +48758,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -46614,6 +48811,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 5,
@@ -46665,6 +48864,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -46716,6 +48917,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -46767,6 +48970,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -46818,6 +49023,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -46869,6 +49076,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -46920,6 +49129,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -46971,6 +49182,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -47022,6 +49235,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -47073,6 +49288,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 0,
@@ -47124,6 +49341,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -47175,6 +49394,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 3,
@@ -47226,6 +49447,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 1,
@@ -47277,6 +49500,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 9,
     "record": {
       "win": 4,
@@ -47328,6 +49553,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -47379,6 +49606,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -47430,6 +49659,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -47481,6 +49712,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 2,
@@ -47532,6 +49765,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -47583,6 +49818,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -47634,6 +49871,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -47685,6 +49924,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "หญิง",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 1,
@@ -47736,6 +49977,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 3,
@@ -47787,6 +50030,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 7,
     "record": {
       "win": 3,
@@ -47838,6 +50083,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -47889,6 +50136,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 2,
@@ -47940,6 +50189,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -47991,6 +50242,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -48042,6 +50295,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -48093,6 +50348,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -48144,6 +50401,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 17,
     "record": {
       "win": 11,
@@ -48195,6 +50454,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -48246,6 +50507,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -48297,6 +50560,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -48348,6 +50613,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -48399,6 +50666,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 6,
@@ -48450,6 +50719,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -48501,6 +50772,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -48552,6 +50825,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -48603,6 +50878,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -48654,6 +50931,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -48705,6 +50984,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -48756,6 +51037,8 @@ const FIGHTERS = [
     "division": "มิดเดิลเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 10,
     "record": {
       "win": 6,
@@ -48807,6 +51090,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 11,
     "record": {
       "win": 7,
@@ -48858,6 +51143,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -48909,6 +51196,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -48960,6 +51249,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -49011,6 +51302,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 3,
@@ -49062,6 +51355,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 2,
@@ -49113,6 +51408,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -49164,6 +51461,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -49215,6 +51514,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -49266,6 +51567,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -49317,6 +51620,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 2,
@@ -49368,6 +51673,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 5,
@@ -49415,16 +51722,18 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-08-24",
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
-    "fight_count": 15,
+    "championship_status": null,
+    "titles_history": null,
+    "fight_count": 16,
     "record": {
       "win": 9,
       "loss": 5,
       "draw": 0,
-      "pending": 0,
+      "pending": 1,
       "total": 15
     }
   },
@@ -49470,6 +51779,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -49521,6 +51832,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -49572,6 +51885,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -49623,6 +51938,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 9,
     "record": {
       "win": 5,
@@ -49674,6 +51991,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 9,
     "record": {
       "win": 2,
@@ -49725,6 +52044,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -49776,6 +52097,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 7,
     "record": {
       "win": 3,
@@ -49827,6 +52150,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 5,
@@ -49878,6 +52203,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -49929,6 +52256,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -49980,6 +52309,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -50031,6 +52362,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 3,
@@ -50082,6 +52415,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -50133,6 +52468,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 2,
@@ -50184,6 +52521,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -50235,6 +52574,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -50286,6 +52627,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -50337,6 +52680,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -50388,6 +52733,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -50439,6 +52786,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -50490,6 +52839,8 @@ const FIGHTERS = [
     "division": "เวลเทอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 1,
@@ -50541,6 +52892,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -50592,6 +52945,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -50599,6 +52954,59 @@ const FIGHTERS = [
       "draw": 0,
       "pending": 0,
       "total": 2
+    }
+  },
+  {
+    "id": "วาเลนตินา-กันเชลโล",
+    "slug": "วาเลนตินา-กันเชลโล",
+    "name_th": "วาเลนตินา กันเชลโล",
+    "name_en": null,
+    "biography": "",
+    "weight_kg": null,
+    "weight_lbs": null,
+    "height_cm": null,
+    "height_ft_in": null,
+    "country": null,
+    "age": null,
+    "team": null,
+    "level": "",
+    "fight_purse": {
+      "amount_thb": null,
+      "currency": "THB",
+      "note": null
+    },
+    "market_value": {
+      "amount_thb": null,
+      "currency": "THB",
+      "note": null
+    },
+    "profile_url": null,
+    "image_filename": "วาเลนตินา-กันเชลโล",
+    "strike_stats": {
+      "strikes_per_minute": {
+        "head": 0,
+        "body": 0,
+        "leg": 0
+      },
+      "overall_strikes": {
+        "head": 0,
+        "body": 0,
+        "leg": 0
+      }
+    },
+    "last_updated": "2026-08-24",
+    "division": "อะตอมเวท",
+    "nickname": null,
+    "gender": null,
+    "championship_status": null,
+    "titles_history": null,
+    "fight_count": 1,
+    "record": {
+      "win": 0,
+      "loss": 0,
+      "draw": 0,
+      "pending": 1,
+      "total": 0
     }
   },
   {
@@ -50643,6 +53051,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -50694,6 +53104,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -50745,6 +53157,8 @@ const FIGHTERS = [
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 7,
     "record": {
       "win": 4,
@@ -50796,6 +53210,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 3,
@@ -50847,6 +53263,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 0,
@@ -50898,6 +53316,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -50949,6 +53369,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -51000,6 +53422,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 1,
@@ -51051,6 +53475,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -51102,6 +53528,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -51153,6 +53581,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -51204,6 +53634,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -51255,6 +53687,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -51306,6 +53740,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -51357,6 +53793,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -51408,6 +53846,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -51459,6 +53899,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -51506,16 +53948,18 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-08-24",
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
-    "fight_count": 6,
+    "championship_status": null,
+    "titles_history": null,
+    "fight_count": 7,
     "record": {
       "win": 4,
       "loss": 2,
       "draw": 0,
-      "pending": 0,
+      "pending": 1,
       "total": 6
     }
   },
@@ -51561,6 +54005,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 2,
@@ -51612,6 +54058,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -51663,6 +54111,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 10,
     "record": {
       "win": 6,
@@ -51714,6 +54164,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -51765,6 +54217,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -51816,6 +54270,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -51867,6 +54323,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -51918,6 +54376,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 3,
@@ -51969,6 +54429,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -52020,6 +54482,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -52071,6 +54535,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -52122,6 +54588,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 2,
@@ -52173,6 +54641,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -52224,6 +54694,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -52275,6 +54747,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -52326,6 +54800,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -52377,6 +54853,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 2,
@@ -52428,6 +54906,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 9,
     "record": {
       "win": 7,
@@ -52479,6 +54959,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -52530,6 +55012,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 3,
@@ -52581,6 +55065,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 3,
@@ -52632,6 +55118,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 13,
     "record": {
       "win": 10,
@@ -52683,6 +55171,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -52730,10 +55220,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-08-24",
     "division": "แคชเวท",
-    "nickname": null,
+    "nickname": "The Storm",
     "gender": "หญิง",
+    "championship_status": "แชมป์ปัจจุบัน",
+    "titles_history": "แชมป์โลก | อดีตแชมป์โลก มวยไทย รุ่นสตรอว์เวต",
     "fight_count": 5,
     "record": {
       "win": 5,
@@ -52785,6 +55277,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 9,
     "record": {
       "win": 5,
@@ -52836,6 +55330,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -52887,6 +55383,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -52938,6 +55436,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -52989,6 +55489,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 2,
@@ -53040,6 +55542,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -53091,6 +55595,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 7,
     "record": {
       "win": 4,
@@ -53142,6 +55648,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -53193,6 +55701,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -53244,6 +55754,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 4,
@@ -53295,6 +55807,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 2,
@@ -53346,6 +55860,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -53397,6 +55913,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -53448,6 +55966,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 2,
@@ -53499,6 +56019,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 3,
@@ -53550,6 +56072,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -53597,10 +56121,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-08-24",
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": "แชมป์ปัจจุบัน",
+    "titles_history": "แชมป์โลก | อดีตแชมป์โลก มวยไทย รุ่นสตรอว์เวต&คิกบ็อกซิง รุ่นสตรอว์เวต&มวยไทย รุ่นฟลายเวต",
     "fight_count": 17,
     "record": {
       "win": 12,
@@ -53652,6 +56178,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -53703,6 +56231,8 @@ const FIGHTERS = [
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -53754,6 +56284,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -53805,6 +56337,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -53856,6 +56390,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -53907,6 +56443,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -53958,6 +56496,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -54009,6 +56549,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 3,
@@ -54060,6 +56602,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 3,
@@ -54111,6 +56655,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -54162,6 +56708,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -54213,6 +56761,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -54264,6 +56814,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -54315,6 +56867,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -54366,6 +56920,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 9,
     "record": {
       "win": 6,
@@ -54417,6 +56973,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 12,
     "record": {
       "win": 6,
@@ -54468,6 +57026,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -54519,6 +57079,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 11,
     "record": {
       "win": 5,
@@ -54570,6 +57132,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 0,
@@ -54621,6 +57185,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 4,
@@ -54672,6 +57238,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -54723,6 +57291,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -54774,6 +57344,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -54825,6 +57397,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 2,
@@ -54876,6 +57450,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -54927,6 +57503,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "หญิง",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -54978,6 +57556,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -55029,6 +57609,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -55080,6 +57662,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 18,
     "record": {
       "win": 11,
@@ -55131,6 +57715,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -55182,6 +57768,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 9,
     "record": {
       "win": 6,
@@ -55233,6 +57821,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -55280,10 +57870,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-08-24",
     "division": "สตรอว์เวท",
     "nickname": null,
-    "gender": "ชาย",
+    "gender": "หญิง",
+    "championship_status": "แชมป์ปัจจุบัน",
+    "titles_history": "แชมป์โลก",
     "fight_count": 6,
     "record": {
       "win": 6,
@@ -55335,6 +57927,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 10,
     "record": {
       "win": 6,
@@ -55386,6 +57980,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -55437,6 +58033,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -55488,6 +58086,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -55539,6 +58139,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -55590,6 +58192,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -55641,6 +58245,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -55692,6 +58298,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -55699,6 +58307,59 @@ const FIGHTERS = [
       "draw": 0,
       "pending": 0,
       "total": 1
+    }
+  },
+  {
+    "id": "หนึ่งเก้าหนึ่ง-เหล่าโชคเจริญ",
+    "slug": "หนึ่งเก้าหนึ่ง-เหล่าโชคเจริญ",
+    "name_th": "หนึ่งเก้าหนึ่ง เหล่าโชคเจริญ",
+    "name_en": null,
+    "biography": "",
+    "weight_kg": null,
+    "weight_lbs": null,
+    "height_cm": null,
+    "height_ft_in": null,
+    "country": null,
+    "age": null,
+    "team": null,
+    "level": "",
+    "fight_purse": {
+      "amount_thb": null,
+      "currency": "THB",
+      "note": null
+    },
+    "market_value": {
+      "amount_thb": null,
+      "currency": "THB",
+      "note": null
+    },
+    "profile_url": null,
+    "image_filename": "หนึ่งเก้าหนึ่ง-เหล่าโชคเจริญ",
+    "strike_stats": {
+      "strikes_per_minute": {
+        "head": 0,
+        "body": 0,
+        "leg": 0
+      },
+      "overall_strikes": {
+        "head": 0,
+        "body": 0,
+        "leg": 0
+      }
+    },
+    "last_updated": "2026-08-24",
+    "division": "แบนตัมเวท",
+    "nickname": null,
+    "gender": null,
+    "championship_status": null,
+    "titles_history": null,
+    "fight_count": 1,
+    "record": {
+      "win": 0,
+      "loss": 0,
+      "draw": 0,
+      "pending": 1,
+      "total": 0
     }
   },
   {
@@ -55743,6 +58404,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 2,
@@ -55794,6 +58457,8 @@ const FIGHTERS = [
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 9,
     "record": {
       "win": 7,
@@ -55845,6 +58510,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -55896,6 +58563,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -55947,6 +58616,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -55998,6 +58669,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -56049,6 +58722,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -56100,6 +58775,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 3,
@@ -56151,6 +58828,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -56202,6 +58881,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -56253,6 +58934,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 2,
@@ -56304,6 +58987,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 2,
@@ -56355,6 +59040,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -56406,6 +59093,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 0,
@@ -56457,6 +59146,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 2,
@@ -56508,6 +59199,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -56559,6 +59252,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -56610,6 +59305,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -56661,6 +59358,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 3,
@@ -56712,6 +59411,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -56763,6 +59464,8 @@ const FIGHTERS = [
     "division": "เวลเทอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -56814,6 +59517,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -56865,6 +59570,8 @@ const FIGHTERS = [
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "หญิง",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 10,
     "record": {
       "win": 7,
@@ -56916,6 +59623,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -56967,6 +59676,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -57018,6 +59729,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 5,
@@ -57069,6 +59782,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -57120,6 +59835,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 3,
@@ -57171,6 +59888,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -57222,6 +59941,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -57273,6 +59994,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -57324,6 +60047,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -57375,6 +60100,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -57426,6 +60153,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -57477,6 +60206,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -57528,6 +60259,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -57579,6 +60312,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 4,
@@ -57630,6 +60365,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -57681,6 +60418,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 2,
@@ -57732,6 +60471,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -57783,6 +60524,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -57834,6 +60577,8 @@ const FIGHTERS = [
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -57885,6 +60630,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -57936,6 +60683,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -57987,6 +60736,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 2,
@@ -58038,6 +60789,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -58089,6 +60842,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -58140,6 +60895,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 3,
@@ -58191,6 +60948,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -58242,6 +61001,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -58293,6 +61054,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -58344,6 +61107,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -58395,6 +61160,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 2,
@@ -58446,6 +61213,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -58497,6 +61266,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 2,
@@ -58548,6 +61319,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -58599,6 +61372,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 2,
@@ -58650,6 +61425,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -58701,6 +61478,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -58752,6 +61531,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -58803,6 +61584,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -58854,6 +61637,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -58905,6 +61690,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -58956,6 +61743,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -59007,6 +61796,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -59058,6 +61849,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -59109,6 +61902,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -59160,6 +61955,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -59211,6 +62008,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 3,
@@ -59262,6 +62061,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -59313,6 +62114,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -59364,6 +62167,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -59415,6 +62220,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -59466,6 +62273,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -59517,6 +62326,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -59568,6 +62379,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -59619,6 +62432,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -59670,6 +62485,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -59721,6 +62538,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 14,
     "record": {
       "win": 7,
@@ -59772,6 +62591,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -59823,6 +62644,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -59874,6 +62697,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -59925,6 +62750,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -59976,6 +62803,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -60027,6 +62856,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -60078,6 +62909,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -60129,6 +62962,8 @@ const FIGHTERS = [
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 4,
@@ -60180,6 +63015,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 2,
@@ -60231,6 +63068,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -60282,6 +63121,8 @@ const FIGHTERS = [
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 2,
@@ -60333,6 +63174,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -60380,10 +63223,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-08-24",
     "division": "เฮฟวีเวท",
-    "nickname": null,
+    "nickname": "Sladkiy",
     "gender": "ชาย",
+    "championship_status": "แชมป์ปัจจุบัน",
+    "titles_history": "แชมป์โลก | อดีตแชมป์โลก การต่อสู้แบบผสมผสาน รุ่นมิดเดิลเวต&การต่อสู้แบบผสมผสาน รุ่นไลต์เฮฟวีเวต&การต่อสู้แบบผสมผสาน รุ่นเฮฟวีเวต",
     "fight_count": 9,
     "record": {
       "win": 7,
@@ -60435,6 +63280,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -60486,6 +63333,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -60537,6 +63386,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 8,
     "record": {
       "win": 4,
@@ -60588,6 +63439,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -60639,6 +63492,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -60690,6 +63545,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -60741,6 +63598,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 2,
@@ -60792,6 +63651,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -60843,6 +63704,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -60894,6 +63757,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 2,
@@ -60945,6 +63810,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -60996,6 +63863,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -61043,10 +63912,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-08-24",
     "division": "แบนตัมเวท",
-    "nickname": null,
+    "nickname": "BABYFACE KILLER",
     "gender": "ชาย",
+    "championship_status": "แชมป์ปัจจุบัน",
+    "titles_history": "แชมป์โลก | อดีตแชมป์โลก คิกบ็อกซิง รุ่นแบนตัมเวต",
     "fight_count": 15,
     "record": {
       "win": 8,
@@ -61098,6 +63969,8 @@ const FIGHTERS = [
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "หญิง",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 1,
@@ -61149,6 +64022,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 9,
     "record": {
       "win": 5,
@@ -61200,6 +64075,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -61251,6 +64128,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -61302,6 +64181,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 3,
@@ -61353,6 +64234,8 @@ const FIGHTERS = [
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 0,
@@ -61404,6 +64287,8 @@ const FIGHTERS = [
     "division": "มิดเดิลเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 20,
     "record": {
       "win": 15,
@@ -61455,6 +64340,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -61506,6 +64393,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -61557,6 +64446,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -61608,6 +64499,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -61659,6 +64552,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 5,
@@ -61710,6 +64605,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -61761,6 +64658,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 3,
@@ -61812,6 +64711,8 @@ const FIGHTERS = [
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -61863,6 +64764,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -61914,6 +64817,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -61965,6 +64870,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 1,
@@ -62016,6 +64923,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -62067,6 +64976,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -62118,6 +65029,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -62169,6 +65082,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -62220,6 +65135,8 @@ const FIGHTERS = [
     "division": "ไลท์เฮฟวีเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 3,
@@ -62271,6 +65188,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -62322,6 +65241,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -62373,6 +65294,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -62424,6 +65347,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -62475,6 +65400,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -62526,6 +65453,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -62577,6 +65506,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 10,
     "record": {
       "win": 9,
@@ -62628,6 +65559,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -62679,6 +65612,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -62730,6 +65665,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 12,
     "record": {
       "win": 10,
@@ -62781,6 +65718,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -62832,6 +65771,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -62883,6 +65824,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 1,
@@ -62934,6 +65877,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -62985,6 +65930,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -63036,6 +65983,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -63087,6 +66036,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -63138,6 +66089,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -63189,6 +66142,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "หญิง",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 0,
@@ -63240,6 +66195,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -63291,6 +66248,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -63342,6 +66301,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -63389,10 +66350,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-08-24",
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "หญิง",
+    "championship_status": "แชมป์ปัจจุบัน",
+    "titles_history": "แชมป์โลก",
     "fight_count": 7,
     "record": {
       "win": 6,
@@ -63444,6 +66407,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -63495,6 +66460,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 0,
@@ -63546,6 +66513,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -63566,7 +66535,7 @@ const FIGHTERS = [
     "height_cm": 180,
     "height_ft_in": "5'11\"",
     "country": "รัสเซีย",
-    "age": 22,
+    "age": 23,
     "team": "Team Chingiz Allazov / Team Mehdi Zatout",
     "level": "A",
     "fight_purse": {
@@ -63593,10 +66562,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-08-24",
     "division": "ฟลายเวท",
-    "nickname": null,
+    "nickname": "The Dagestan Ninja",
     "gender": "ชาย",
+    "championship_status": "แชมป์ปัจจุบัน",
+    "titles_history": "แชมป์โลก",
     "fight_count": 9,
     "record": {
       "win": 9,
@@ -63648,6 +66619,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 2,
@@ -63699,6 +66672,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 11,
     "record": {
       "win": 10,
@@ -63750,6 +66725,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -63801,6 +66778,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -63852,6 +66831,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -63903,6 +66884,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 7,
     "record": {
       "win": 3,
@@ -63954,6 +66937,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -64005,6 +66990,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -64056,6 +67043,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -64107,6 +67096,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 5,
@@ -64158,6 +67149,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "หญิง",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 0,
@@ -64209,6 +67202,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -64260,6 +67255,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -64311,6 +67308,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 3,
@@ -64362,6 +67361,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -64413,6 +67414,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 2,
@@ -64464,6 +67467,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -64515,6 +67520,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -64566,6 +67573,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -64617,6 +67626,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -64668,6 +67679,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 2,
@@ -64719,6 +67732,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 2,
@@ -64770,6 +67785,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -64821,6 +67838,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 2,
@@ -64872,6 +67891,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -64923,6 +67944,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 8,
     "record": {
       "win": 5,
@@ -64974,6 +67997,8 @@ const FIGHTERS = [
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 15,
     "record": {
       "win": 9,
@@ -65025,6 +68050,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -65076,6 +68103,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -65127,6 +68156,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -65178,6 +68209,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 2,
@@ -65229,6 +68262,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -65280,6 +68315,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -65331,6 +68368,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 0,
@@ -65382,6 +68421,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -65433,6 +68474,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -65484,6 +68527,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -65535,6 +68580,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -65586,6 +68633,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -65637,6 +68686,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -65688,6 +68739,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -65739,6 +68792,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -65790,6 +68845,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 3,
@@ -65841,6 +68898,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -65892,6 +68951,8 @@ const FIGHTERS = [
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -65943,6 +69004,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -65994,6 +69057,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 2,
@@ -66045,6 +69110,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -66096,6 +69163,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -66147,6 +69216,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -66198,6 +69269,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -66249,6 +69322,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -66300,6 +69375,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 4,
@@ -66351,6 +69428,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -66402,6 +69481,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -66453,6 +69534,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 2,
@@ -66500,10 +69583,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-08-24",
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 12,
     "record": {
       "win": 10,
@@ -66555,6 +69640,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "หญิง",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -66571,7 +69658,7 @@ const FIGHTERS = [
     "name_en": "Avazbek Kholmirzaev",
     "biography": "",
     "weight_kg": 56.7,
-    "weight_lbs": 125,
+    "weight_lbs": 125.0,
     "height_cm": 175,
     "height_ft_in": "5'9\"",
     "country": "อุซเบกิสถาน",
@@ -66602,10 +69689,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-08-24",
     "division": "สตรอว์เวท",
-    "nickname": null,
+    "nickname": "Ninzya",
     "gender": "ชาย",
+    "championship_status": "แชมป์ปัจจุบัน",
+    "titles_history": "แชมป์โลก",
     "fight_count": 11,
     "record": {
       "win": 10,
@@ -66657,6 +69746,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -66708,6 +69799,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 2,
@@ -66759,6 +69852,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -66810,6 +69905,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 2,
@@ -66861,6 +69958,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 9,
     "record": {
       "win": 4,
@@ -66912,6 +70011,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -66963,6 +70064,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -67014,6 +70117,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 16,
     "record": {
       "win": 9,
@@ -67065,6 +70170,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 4,
@@ -67112,10 +70219,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-08-24",
     "division": "ฟลายเวท",
-    "nickname": null,
+    "nickname": "Mikinho",
     "gender": "ชาย",
+    "championship_status": "แชมป์ปัจจุบัน",
+    "titles_history": "แชมป์โลก | อดีตแชมป์โลก การต่อสู้แบบผสมผสาน รุ่นฟลายเวต",
     "fight_count": 17,
     "record": {
       "win": 11,
@@ -67167,6 +70276,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -67218,6 +70329,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 22,
     "record": {
       "win": 13,
@@ -67269,6 +70382,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 0,
@@ -67320,6 +70435,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 1,
@@ -67371,6 +70488,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -67422,6 +70541,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 2,
@@ -67473,6 +70594,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -67524,6 +70647,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -67575,6 +70700,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 7,
     "record": {
       "win": 3,
@@ -67626,6 +70753,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 2,
@@ -67677,6 +70806,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 2,
@@ -67728,6 +70859,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -67779,6 +70912,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -67830,6 +70965,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -67881,6 +71018,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -67932,6 +71071,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 2,
@@ -67983,6 +71124,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -68034,6 +71177,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -68085,6 +71230,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -68136,6 +71283,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -68187,6 +71336,8 @@ const FIGHTERS = [
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 12,
     "record": {
       "win": 7,
@@ -68238,6 +71389,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 3,
@@ -68289,6 +71442,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 2,
@@ -68340,6 +71495,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -68391,6 +71548,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -68442,6 +71601,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -68493,6 +71654,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 2,
@@ -68544,6 +71707,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -68595,6 +71760,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 2,
@@ -68646,6 +71813,8 @@ const FIGHTERS = [
     "division": "เวลเทอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -68697,6 +71866,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 2,
@@ -68748,6 +71919,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 10,
     "record": {
       "win": 4,
@@ -68799,6 +71972,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 3,
@@ -68850,6 +72025,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -68901,6 +72078,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -68952,6 +72131,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -69003,6 +72184,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 4,
@@ -69054,6 +72237,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -69105,6 +72290,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 3,
@@ -69156,6 +72343,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -69207,6 +72396,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 2,
@@ -69258,6 +72449,8 @@ const FIGHTERS = [
     "division": "เฮฟวีเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -69309,6 +72502,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 2,
@@ -69360,6 +72555,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -69411,6 +72608,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -69462,6 +72661,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -69513,6 +72714,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 2,
@@ -69564,6 +72767,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 2,
@@ -69615,6 +72820,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "หญิง",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 5,
@@ -69662,10 +72869,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-08-24",
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": "แชมป์ปัจจุบัน",
+    "titles_history": "แชมป์โลก | อดีตแชมป์โลก คิกบ็อกซิง รุ่นฟลายเวต",
     "fight_count": 6,
     "record": {
       "win": 5,
@@ -69717,6 +72926,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -69768,6 +72979,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -69819,6 +73032,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 3,
@@ -69870,6 +73085,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 2,
@@ -69921,6 +73138,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 2,
@@ -69972,6 +73191,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 2,
@@ -70023,6 +73244,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -70074,6 +73297,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -70121,16 +73346,18 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
-    "division": null,
+    "last_updated": "2026-08-24",
+    "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
-    "fight_count": 7,
+    "championship_status": null,
+    "titles_history": null,
+    "fight_count": 8,
     "record": {
       "win": 4,
       "loss": 3,
       "draw": 0,
-      "pending": 0,
+      "pending": 1,
       "total": 7
     }
   },
@@ -70176,6 +73403,8 @@ const FIGHTERS = [
     "division": "เวลเทอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 2,
@@ -70227,6 +73456,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 2,
@@ -70278,6 +73509,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 7,
     "record": {
       "win": 4,
@@ -70329,6 +73562,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -70380,6 +73615,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -70431,6 +73668,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 2,
@@ -70482,6 +73721,8 @@ const FIGHTERS = [
     "division": "เฮฟวีเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 10,
     "record": {
       "win": 7,
@@ -70529,16 +73770,18 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-08-24",
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
-    "fight_count": 7,
+    "championship_status": null,
+    "titles_history": null,
+    "fight_count": 8,
     "record": {
       "win": 7,
       "loss": 0,
       "draw": 0,
-      "pending": 0,
+      "pending": 1,
       "total": 7
     }
   },
@@ -70584,6 +73827,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -70635,6 +73880,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -70686,6 +73933,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -70737,6 +73986,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 2,
@@ -70788,6 +74039,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -70808,7 +74061,7 @@ const FIGHTERS = [
     "height_cm": 183,
     "height_ft_in": "6'0\"",
     "country": "ฝรั่งเศส",
-    "age": 27,
+    "age": 28,
     "team": "Mahmoudi Gym",
     "level": "C",
     "fight_purse": {
@@ -70835,10 +74088,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-08-24",
     "division": "ไลท์เวท",
-    "nickname": null,
+    "nickname": "Barboza",
     "gender": "ชาย",
+    "championship_status": "แชมป์ปัจจุบัน",
+    "titles_history": "แชมป์โลก | อดีตแชมป์โลก คิกบ็อกซิง รุ่นไลต์เวต",
     "fight_count": 4,
     "record": {
       "win": 2,
@@ -70890,6 +74145,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -70937,10 +74194,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-08-24",
     "division": "สตรอว์เวท",
-    "nickname": null,
+    "nickname": "LITTLE ROCK",
     "gender": "ชาย",
+    "championship_status": "แชมป์ปัจจุบัน",
+    "titles_history": "แชมป์โลก | อดีตแชมป์โลก การต่อสู้แบบผสมผสาน รุ่นสตรอว์เวต",
     "fight_count": 20,
     "record": {
       "win": 11,
@@ -70992,6 +74251,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -71043,6 +74304,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -71094,6 +74357,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -71145,6 +74410,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -71196,6 +74463,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 8,
     "record": {
       "win": 3,
@@ -71247,6 +74516,8 @@ const FIGHTERS = [
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -71294,10 +74565,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-08-24",
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": "แชมป์ปัจจุบัน",
+    "titles_history": "แชมป์โลก | อดีตแชมป์โลก การต่อสู้แบบผสมผสาน รุ่นไลต์เวต",
     "fight_count": 7,
     "record": {
       "win": 4,
@@ -71349,6 +74622,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -71400,6 +74675,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -71451,6 +74728,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 2,
@@ -71502,6 +74781,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -71553,6 +74834,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -71604,6 +74887,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -71655,6 +74940,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -71706,6 +74993,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 2,
@@ -71757,6 +75046,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 3,
@@ -71808,6 +75099,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -71859,6 +75152,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -71910,6 +75205,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -71961,6 +75258,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -72012,6 +75311,8 @@ const FIGHTERS = [
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "หญิง",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 3,
@@ -72063,6 +75364,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -72114,6 +75417,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 7,
     "record": {
       "win": 5,
@@ -72165,6 +75470,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -72216,6 +75523,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -72267,6 +75576,8 @@ const FIGHTERS = [
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 2,
@@ -72318,6 +75629,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -72369,6 +75682,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 3,
@@ -72420,6 +75735,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -72471,6 +75788,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -72522,6 +75841,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 3,
@@ -72573,6 +75894,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -72624,6 +75947,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -72675,6 +76000,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -72726,6 +76053,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -72777,6 +76106,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 5,
@@ -72828,6 +76159,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -72879,6 +76212,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -72930,6 +76265,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -72981,6 +76318,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 0,
@@ -73032,6 +76371,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 3,
@@ -73079,10 +76420,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-08-24",
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": "แชมป์ปัจจุบัน",
+    "titles_history": "แชมป์โลก | อดีตแชมป์โลก คิกบ็อกซิง รุ่นแบนตัมเวต",
     "fight_count": 13,
     "record": {
       "win": 9,
@@ -73134,6 +76477,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 8,
     "record": {
       "win": 4,
@@ -73185,6 +76530,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -73236,6 +76583,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -73287,6 +76636,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 2,
@@ -73338,6 +76689,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -73389,6 +76742,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 12,
     "record": {
       "win": 7,
@@ -73440,6 +76795,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -73491,6 +76848,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -73542,6 +76901,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -73593,6 +76954,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -73644,6 +77007,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -73695,6 +77060,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -73746,6 +77113,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 12,
     "record": {
       "win": 9,
@@ -73797,6 +77166,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -73848,6 +77219,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 2,
@@ -73899,6 +77272,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 4,
@@ -73950,6 +77325,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -74001,6 +77378,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 2,
@@ -74008,6 +77387,59 @@ const FIGHTERS = [
       "draw": 0,
       "pending": 0,
       "total": 6
+    }
+  },
+  {
+    "id": "เก็บตก-สท.เชษฐ์บ้านเขว้า",
+    "slug": "เก็บตก-สท.เชษฐ์บ้านเขว้า",
+    "name_th": "เก็บตก สท.เชษฐ์บ้านเขว้า",
+    "name_en": null,
+    "biography": "",
+    "weight_kg": null,
+    "weight_lbs": null,
+    "height_cm": null,
+    "height_ft_in": null,
+    "country": null,
+    "age": null,
+    "team": null,
+    "level": "",
+    "fight_purse": {
+      "amount_thb": null,
+      "currency": "THB",
+      "note": null
+    },
+    "market_value": {
+      "amount_thb": null,
+      "currency": "THB",
+      "note": null
+    },
+    "profile_url": null,
+    "image_filename": "เก็บตก-สท.เชษฐ์บ้านเขว้า",
+    "strike_stats": {
+      "strikes_per_minute": {
+        "head": 0,
+        "body": 0,
+        "leg": 0
+      },
+      "overall_strikes": {
+        "head": 0,
+        "body": 0,
+        "leg": 0
+      }
+    },
+    "last_updated": "2026-08-24",
+    "division": "อะตอมเวท",
+    "nickname": null,
+    "gender": null,
+    "championship_status": null,
+    "titles_history": null,
+    "fight_count": 1,
+    "record": {
+      "win": 0,
+      "loss": 0,
+      "draw": 0,
+      "pending": 1,
+      "total": 0
     }
   },
   {
@@ -74052,6 +77484,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -74103,6 +77537,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 4,
@@ -74150,10 +77586,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-08-24",
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": "แชมป์ปัจจุบัน",
+    "titles_history": "แชมป์โลก",
     "fight_count": 11,
     "record": {
       "win": 10,
@@ -74205,6 +77643,8 @@ const FIGHTERS = [
     "division": "มิดเดิลเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -74256,6 +77696,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 2,
@@ -74307,6 +77749,8 @@ const FIGHTERS = [
     "division": "เวลเทอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -74358,6 +77802,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -74409,6 +77855,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -74460,6 +77908,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -74511,6 +77961,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -74562,6 +78014,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -74613,6 +78067,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -74660,10 +78116,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-08-24",
     "division": "เฟเธอร์เวท",
-    "nickname": null,
+    "nickname": "The Silencer",
     "gender": "ชาย",
+    "championship_status": "แชมป์ปัจจุบัน",
+    "titles_history": "แชมป์โลก | อดีตแชมป์โลก การต่อสู้แบบผสมผสาน รุ่นแบนตัมเวต",
     "fight_count": 22,
     "record": {
       "win": 11,
@@ -74715,6 +78173,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -74762,16 +78222,18 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
-    "division": null,
+    "last_updated": "2026-08-24",
+    "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
-    "fight_count": 1,
+    "championship_status": null,
+    "titles_history": null,
+    "fight_count": 2,
     "record": {
       "win": 0,
       "loss": 1,
       "draw": 0,
-      "pending": 0,
+      "pending": 1,
       "total": 1
     }
   },
@@ -74817,6 +78279,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -74868,6 +78332,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -74919,6 +78385,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 5,
@@ -74970,6 +78438,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -75021,6 +78491,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 7,
     "record": {
       "win": 4,
@@ -75072,6 +78544,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -75123,6 +78597,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 0,
@@ -75174,6 +78650,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -75225,6 +78703,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -75276,6 +78756,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -75327,6 +78809,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 2,
@@ -75378,6 +78862,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 2,
@@ -75429,6 +78915,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -75480,6 +78968,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -75531,6 +79021,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -75582,6 +79074,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -75633,6 +79127,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -75684,6 +79180,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -75735,6 +79233,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 3,
@@ -75786,6 +79286,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -75837,6 +79339,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -75888,6 +79392,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -75939,6 +79445,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 2,
@@ -75990,6 +79498,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -76041,6 +79551,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -76092,6 +79604,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -76143,6 +79657,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -76194,6 +79710,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -76245,6 +79763,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 2,
@@ -76296,6 +79816,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 2,
@@ -76347,6 +79869,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -76398,6 +79922,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -76449,6 +79975,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 2,
@@ -76500,6 +80028,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -76551,6 +80081,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -76602,6 +80134,8 @@ const FIGHTERS = [
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 7,
     "record": {
       "win": 3,
@@ -76653,6 +80187,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 3,
@@ -76704,6 +80240,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 17,
     "record": {
       "win": 7,
@@ -76755,6 +80293,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 18,
     "record": {
       "win": 10,
@@ -76806,6 +80346,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -76857,6 +80399,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 3,
@@ -76908,6 +80452,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -76959,6 +80505,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -77010,6 +80558,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -77061,6 +80611,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -77112,6 +80664,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -77163,6 +80717,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 3,
@@ -77214,6 +80770,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 10,
     "record": {
       "win": 5,
@@ -77265,6 +80823,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -77316,6 +80876,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -77367,6 +80929,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -77418,6 +80982,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -77469,6 +81035,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -77520,6 +81088,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 0,
@@ -77571,6 +81141,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -77622,6 +81194,8 @@ const FIGHTERS = [
     "division": "เวลเทอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 0,
@@ -77673,6 +81247,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -77724,6 +81300,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 3,
@@ -77775,6 +81353,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 2,
@@ -77826,6 +81406,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -77877,6 +81459,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -77928,6 +81512,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 3,
@@ -77979,6 +81565,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -78030,6 +81618,8 @@ const FIGHTERS = [
     "division": "เวลเทอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 12,
     "record": {
       "win": 7,
@@ -78081,6 +81671,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -78132,6 +81724,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -78183,6 +81777,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -78234,6 +81830,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 8,
     "record": {
       "win": 3,
@@ -78285,6 +81883,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 2,
@@ -78336,6 +81936,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -78387,6 +81989,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -78438,6 +82042,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 3,
@@ -78489,6 +82095,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -78540,6 +82148,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -78591,6 +82201,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -78642,6 +82254,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -78693,6 +82307,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -78744,6 +82360,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 12,
     "record": {
       "win": 8,
@@ -78795,6 +82413,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -78846,6 +82466,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -78897,6 +82519,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "หญิง",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 7,
     "record": {
       "win": 3,
@@ -78948,6 +82572,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 5,
@@ -78999,6 +82625,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -79050,6 +82678,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 2,
@@ -79101,6 +82731,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -79152,6 +82784,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -79203,6 +82837,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -79254,6 +82890,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -79305,6 +82943,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -79352,16 +82992,18 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-08-24",
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
-    "fight_count": 3,
+    "championship_status": null,
+    "titles_history": null,
+    "fight_count": 4,
     "record": {
       "win": 2,
       "loss": 1,
       "draw": 0,
-      "pending": 0,
+      "pending": 1,
       "total": 3
     }
   },
@@ -79407,6 +83049,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 2,
@@ -79458,6 +83102,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -79509,6 +83155,8 @@ const FIGHTERS = [
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 9,
     "record": {
       "win": 7,
@@ -79560,6 +83208,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 3,
@@ -79611,6 +83261,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -79662,6 +83314,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -79713,6 +83367,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -79764,6 +83420,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -79815,6 +83473,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 7,
     "record": {
       "win": 5,
@@ -79866,6 +83526,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 7,
     "record": {
       "win": 5,
@@ -79917,6 +83579,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -79968,6 +83632,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 15,
     "record": {
       "win": 9,
@@ -80019,6 +83685,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -80070,6 +83738,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -80121,6 +83791,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 0,
@@ -80172,6 +83844,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -80223,6 +83897,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -80274,6 +83950,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 16,
     "record": {
       "win": 10,
@@ -80325,6 +84003,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 2,
@@ -80376,6 +84056,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -80427,6 +84109,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -80478,6 +84162,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -80529,6 +84215,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 7,
     "record": {
       "win": 3,
@@ -80580,6 +84268,8 @@ const FIGHTERS = [
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 2,
@@ -80631,6 +84321,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 8,
     "record": {
       "win": 5,
@@ -80682,6 +84374,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 2,
@@ -80733,6 +84427,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -80784,6 +84480,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -80835,6 +84533,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -80886,6 +84586,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -80937,6 +84639,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -80988,6 +84692,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 3,
@@ -81039,6 +84745,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 2,
@@ -81090,6 +84798,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -81141,6 +84851,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -81192,6 +84904,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -81243,6 +84957,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 2,
@@ -81294,6 +85010,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -81345,6 +85063,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -81396,6 +85116,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "หญิง",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -81447,6 +85169,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -81498,6 +85222,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -81549,6 +85275,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -81600,6 +85328,8 @@ const FIGHTERS = [
     "division": "เวลเทอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -81651,6 +85381,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -81702,6 +85434,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 2,
@@ -81753,6 +85487,8 @@ const FIGHTERS = [
     "division": "ไลท์เฮฟวีเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 4,
@@ -81804,6 +85540,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -81855,6 +85593,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -81906,6 +85646,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -81913,6 +85655,59 @@ const FIGHTERS = [
       "draw": 0,
       "pending": 0,
       "total": 3
+    }
+  },
+  {
+    "id": "เบิกฤกษ์-ลูกเมืองเพชร",
+    "slug": "เบิกฤกษ์-ลูกเมืองเพชร",
+    "name_th": "เบิกฤกษ์ ลูกเมืองเพชร",
+    "name_en": null,
+    "biography": "",
+    "weight_kg": null,
+    "weight_lbs": null,
+    "height_cm": null,
+    "height_ft_in": null,
+    "country": null,
+    "age": null,
+    "team": null,
+    "level": "",
+    "fight_purse": {
+      "amount_thb": null,
+      "currency": "THB",
+      "note": null
+    },
+    "market_value": {
+      "amount_thb": null,
+      "currency": "THB",
+      "note": null
+    },
+    "profile_url": null,
+    "image_filename": "เบิกฤกษ์-ลูกเมืองเพชร",
+    "strike_stats": {
+      "strikes_per_minute": {
+        "head": 0,
+        "body": 0,
+        "leg": 0
+      },
+      "overall_strikes": {
+        "head": 0,
+        "body": 0,
+        "leg": 0
+      }
+    },
+    "last_updated": "2026-08-24",
+    "division": "อะตอมเวท",
+    "nickname": null,
+    "gender": null,
+    "championship_status": null,
+    "titles_history": null,
+    "fight_count": 1,
+    "record": {
+      "win": 0,
+      "loss": 0,
+      "draw": 0,
+      "pending": 1,
+      "total": 0
     }
   },
   {
@@ -81957,6 +85752,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 2,
@@ -82008,6 +85805,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -82059,6 +85858,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -82110,6 +85911,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -82161,6 +85964,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -82212,6 +86017,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -82263,6 +86070,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -82314,6 +86123,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -82365,6 +86176,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 3,
@@ -82416,6 +86229,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -82467,6 +86282,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -82518,6 +86335,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 3,
@@ -82569,6 +86388,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -82620,6 +86441,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -82671,6 +86494,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -82722,6 +86547,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -82773,6 +86600,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -82824,6 +86653,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -82875,6 +86706,8 @@ const FIGHTERS = [
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 10,
     "record": {
       "win": 7,
@@ -82926,6 +86759,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -82977,6 +86812,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -83028,6 +86865,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -83079,6 +86918,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -83130,6 +86971,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 7,
     "record": {
       "win": 4,
@@ -83181,6 +87024,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -83232,6 +87077,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -83283,6 +87130,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -83330,10 +87179,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-08-24",
     "division": "อะตอมเวท",
-    "nickname": null,
+    "nickname": "The Queen",
     "gender": "หญิง",
+    "championship_status": "แชมป์ปัจจุบัน",
+    "titles_history": "แชมป์โลก",
     "fight_count": 9,
     "record": {
       "win": 8,
@@ -83385,6 +87236,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -83436,6 +87289,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -83487,6 +87342,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -83538,6 +87395,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 3,
@@ -83589,6 +87448,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -83640,6 +87501,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -83691,6 +87554,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -83738,10 +87603,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-08-24",
     "division": "ฟลายเวท",
-    "nickname": null,
+    "nickname": "The Baby Shark",
     "gender": "ชาย",
+    "championship_status": "แชมป์ปัจจุบัน",
+    "titles_history": "แชมป์โลก | อดีตแชมป์โลก คิกบ็อกซิง รุ่นฟลายเวต",
     "fight_count": 8,
     "record": {
       "win": 5,
@@ -83793,6 +87660,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 2,
@@ -83844,6 +87713,8 @@ const FIGHTERS = [
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -83895,6 +87766,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -83946,6 +87819,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 2,
@@ -83993,10 +87868,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-08-24",
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": "แชมป์ปัจจุบัน",
+    "titles_history": "แชมป์โลก | อดีตแชมป์โลก คิกบ็อกซิง รุ่นแบนตัมเวต",
     "fight_count": 6,
     "record": {
       "win": 4,
@@ -84048,6 +87925,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -84099,6 +87978,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 0,
@@ -84150,6 +88031,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 3,
@@ -84201,6 +88084,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -84252,6 +88137,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -84303,6 +88190,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -84354,6 +88243,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 2,
@@ -84405,6 +88296,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 2,
@@ -84456,6 +88349,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -84507,6 +88402,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -84558,6 +88455,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -84609,6 +88508,8 @@ const FIGHTERS = [
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 7,
     "record": {
       "win": 7,
@@ -84660,6 +88561,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -84711,6 +88614,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -84762,6 +88667,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -84813,6 +88720,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -84864,6 +88773,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 11,
     "record": {
       "win": 7,
@@ -84915,6 +88826,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -84966,6 +88879,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -85017,6 +88932,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -85068,6 +88985,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 2,
@@ -85119,6 +89038,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -85170,6 +89091,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -85221,6 +89144,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -85272,6 +89197,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -85323,6 +89250,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -85374,6 +89303,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -85425,6 +89356,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -85476,6 +89409,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 3,
@@ -85523,16 +89458,18 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-08-24",
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
-    "fight_count": 7,
+    "championship_status": null,
+    "titles_history": null,
+    "fight_count": 8,
     "record": {
       "win": 3,
       "loss": 4,
       "draw": 0,
-      "pending": 0,
+      "pending": 1,
       "total": 7
     }
   },
@@ -85578,6 +89515,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -85629,6 +89568,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -85680,6 +89621,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -85731,6 +89674,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -85778,10 +89723,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-08-24",
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": "แชมป์ปัจจุบัน",
+    "titles_history": "แชมป์โลก | อดีตแชมป์โลก 4x มวยไทย รุ่นเฟเธอร์เวต",
     "fight_count": 12,
     "record": {
       "win": 8,
@@ -85833,6 +89780,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -85884,6 +89833,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -85935,6 +89886,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 13,
     "record": {
       "win": 8,
@@ -85986,6 +89939,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -86037,6 +89992,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -86088,6 +90045,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 9,
     "record": {
       "win": 4,
@@ -86139,6 +90098,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -86190,6 +90151,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -86241,6 +90204,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -86292,6 +90257,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -86343,6 +90310,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 2,
@@ -86394,6 +90363,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 1,
@@ -86445,6 +90416,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -86496,6 +90469,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -86547,6 +90522,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -86598,6 +90575,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -86649,6 +90628,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 10,
     "record": {
       "win": 4,
@@ -86700,6 +90681,8 @@ const FIGHTERS = [
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -86751,6 +90734,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 2,
@@ -86802,6 +90787,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -86853,6 +90840,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 2,
@@ -86904,6 +90893,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -86955,6 +90946,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -87006,6 +90999,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -87057,6 +91052,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -87108,6 +91105,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -87159,6 +91158,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 4,
@@ -87210,6 +91211,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -87217,6 +91220,59 @@ const FIGHTERS = [
       "draw": 0,
       "pending": 0,
       "total": 1
+    }
+  },
+  {
+    "id": "เพชรเมืองช้าง-ส.คำสิงห์",
+    "slug": "เพชรเมืองช้าง-ส.คำสิงห์",
+    "name_th": "เพชรเมืองช้าง ส.คำสิงห์",
+    "name_en": null,
+    "biography": "",
+    "weight_kg": null,
+    "weight_lbs": null,
+    "height_cm": null,
+    "height_ft_in": null,
+    "country": null,
+    "age": null,
+    "team": null,
+    "level": "",
+    "fight_purse": {
+      "amount_thb": null,
+      "currency": "THB",
+      "note": null
+    },
+    "market_value": {
+      "amount_thb": null,
+      "currency": "THB",
+      "note": null
+    },
+    "profile_url": null,
+    "image_filename": "เพชรเมืองช้าง-ส.คำสิงห์",
+    "strike_stats": {
+      "strikes_per_minute": {
+        "head": 0,
+        "body": 0,
+        "leg": 0
+      },
+      "overall_strikes": {
+        "head": 0,
+        "body": 0,
+        "leg": 0
+      }
+    },
+    "last_updated": "2026-08-24",
+    "division": "ฟลายเวท",
+    "nickname": null,
+    "gender": null,
+    "championship_status": null,
+    "titles_history": null,
+    "fight_count": 1,
+    "record": {
+      "win": 0,
+      "loss": 0,
+      "draw": 0,
+      "pending": 1,
+      "total": 0
     }
   },
   {
@@ -87261,6 +91317,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 7,
     "record": {
       "win": 4,
@@ -87312,6 +91370,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -87363,6 +91423,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -87414,6 +91476,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 0,
@@ -87465,6 +91529,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -87516,6 +91582,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -87567,6 +91635,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -87618,6 +91688,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -87669,6 +91741,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 2,
@@ -87720,6 +91794,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 3,
@@ -87771,6 +91847,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -87822,6 +91900,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -87873,6 +91953,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 2,
@@ -87924,6 +92006,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -87975,6 +92059,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -88026,6 +92112,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 7,
     "record": {
       "win": 5,
@@ -88077,6 +92165,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 2,
@@ -88128,6 +92218,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 4,
@@ -88179,6 +92271,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 3,
@@ -88230,6 +92324,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -88281,6 +92377,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 7,
     "record": {
       "win": 3,
@@ -88332,6 +92430,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -88383,6 +92483,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 11,
     "record": {
       "win": 6,
@@ -88434,6 +92536,8 @@ const FIGHTERS = [
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 13,
     "record": {
       "win": 6,
@@ -88485,6 +92589,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 10,
     "record": {
       "win": 6,
@@ -88536,6 +92642,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -88587,6 +92695,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -88638,6 +92748,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -88689,6 +92801,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -88740,6 +92854,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 2,
@@ -88791,6 +92907,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 7,
     "record": {
       "win": 4,
@@ -88842,6 +92960,8 @@ const FIGHTERS = [
     "division": "เฮฟวีเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -88893,6 +93013,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -88944,6 +93066,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -88995,6 +93119,8 @@ const FIGHTERS = [
     "division": "เวลเทอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -89046,6 +93172,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -89097,6 +93225,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 8,
     "record": {
       "win": 4,
@@ -89148,6 +93278,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -89199,6 +93331,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -89250,6 +93384,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 16,
     "record": {
       "win": 10,
@@ -89301,6 +93437,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 3,
@@ -89352,6 +93490,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 0,
@@ -89403,6 +93543,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 2,
@@ -89454,6 +93596,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 2,
@@ -89505,6 +93649,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -89556,6 +93702,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -89607,6 +93755,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -89658,6 +93808,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -89709,6 +93861,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -89760,6 +93914,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -89811,6 +93967,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -89862,6 +94020,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -89913,6 +94073,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -89964,6 +94126,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -90015,6 +94179,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -90066,6 +94232,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 2,
@@ -90117,6 +94285,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -90168,6 +94338,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -90219,6 +94391,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -90270,6 +94444,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 2,
@@ -90321,6 +94497,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -90372,6 +94550,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -90423,6 +94603,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -90474,6 +94656,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 7,
     "record": {
       "win": 3,
@@ -90481,6 +94665,59 @@ const FIGHTERS = [
       "draw": 0,
       "pending": 0,
       "total": 7
+    }
+  },
+  {
+    "id": "เรียวโตะ-นิชิยามะ",
+    "slug": "เรียวโตะ-นิชิยามะ",
+    "name_th": "เรียวโตะ นิชิยามะ",
+    "name_en": null,
+    "biography": "",
+    "weight_kg": null,
+    "weight_lbs": null,
+    "height_cm": null,
+    "height_ft_in": null,
+    "country": null,
+    "age": null,
+    "team": null,
+    "level": "",
+    "fight_purse": {
+      "amount_thb": null,
+      "currency": "THB",
+      "note": null
+    },
+    "market_value": {
+      "amount_thb": null,
+      "currency": "THB",
+      "note": null
+    },
+    "profile_url": null,
+    "image_filename": "เรียวโตะ-นิชิยามะ",
+    "strike_stats": {
+      "strikes_per_minute": {
+        "head": 0,
+        "body": 0,
+        "leg": 0
+      },
+      "overall_strikes": {
+        "head": 0,
+        "body": 0,
+        "leg": 0
+      }
+    },
+    "last_updated": "2026-08-24",
+    "division": "ฟลายเวท",
+    "nickname": null,
+    "gender": null,
+    "championship_status": null,
+    "titles_history": null,
+    "fight_count": 1,
+    "record": {
+      "win": 0,
+      "loss": 0,
+      "draw": 0,
+      "pending": 1,
+      "total": 0
     }
   },
   {
@@ -90525,6 +94762,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -90576,6 +94815,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "หญิง",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -90627,6 +94868,8 @@ const FIGHTERS = [
     "division": "เฮฟวีเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -90674,16 +94917,18 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-08-24",
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
-    "fight_count": 6,
+    "championship_status": null,
+    "titles_history": null,
+    "fight_count": 7,
     "record": {
       "win": 3,
       "loss": 2,
       "draw": 0,
-      "pending": 0,
+      "pending": 1,
       "total": 6
     }
   },
@@ -90729,6 +94974,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -90780,6 +95027,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -90831,6 +95080,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 2,
@@ -90882,6 +95133,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 9,
     "record": {
       "win": 4,
@@ -90933,6 +95186,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -90984,6 +95239,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -91035,6 +95292,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -91086,6 +95345,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 6,
@@ -91137,6 +95398,8 @@ const FIGHTERS = [
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 4,
@@ -91188,6 +95451,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 7,
     "record": {
       "win": 5,
@@ -91239,6 +95504,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -91290,6 +95557,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 15,
     "record": {
       "win": 10,
@@ -91341,6 +95610,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 8,
     "record": {
       "win": 4,
@@ -91392,6 +95663,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -91443,6 +95716,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 18,
     "record": {
       "win": 9,
@@ -91494,6 +95769,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -91545,6 +95822,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 11,
     "record": {
       "win": 9,
@@ -91596,6 +95875,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -91647,6 +95928,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 14,
     "record": {
       "win": 9,
@@ -91698,6 +95981,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -91749,6 +96034,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -91800,6 +96087,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -91851,6 +96140,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -91902,6 +96193,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -91953,6 +96246,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -92004,6 +96299,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -92055,6 +96352,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -92106,6 +96405,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -92157,6 +96458,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -92208,6 +96511,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -92259,6 +96564,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -92310,6 +96617,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -92361,6 +96670,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -92412,6 +96723,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -92463,6 +96776,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -92514,6 +96829,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -92565,6 +96882,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -92616,6 +96935,8 @@ const FIGHTERS = [
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 5,
@@ -92667,6 +96988,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -92718,6 +97041,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 2,
@@ -92769,6 +97094,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 2,
@@ -92820,6 +97147,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 2,
@@ -92871,6 +97200,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 2,
@@ -92922,6 +97253,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 1,
@@ -92973,6 +97306,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -93024,6 +97359,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 3,
@@ -93075,6 +97412,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 2,
@@ -93126,6 +97465,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -93177,6 +97518,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -93228,6 +97571,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -93275,10 +97620,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-08-24",
     "division": "ไลท์เวท",
-    "nickname": null,
+    "nickname": "Landslide",
     "gender": "ชาย",
+    "championship_status": "แชมป์ปัจจุบัน",
+    "titles_history": "แชมป์โลก | อดีตแชมป์โลก การต่อสู้แบบผสมผสาน รุ่นไลต์เวต",
     "fight_count": 26,
     "record": {
       "win": 13,
@@ -93330,6 +97677,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -93381,6 +97730,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -93432,6 +97783,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 13,
     "record": {
       "win": 8,
@@ -93483,6 +97836,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -93534,6 +97889,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 2,
@@ -93585,6 +97942,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -93636,6 +97995,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -93687,6 +98048,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -93738,6 +98101,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -93789,6 +98154,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -93840,6 +98207,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -93891,6 +98260,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 11,
     "record": {
       "win": 9,
@@ -93942,6 +98313,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 2,
@@ -93993,6 +98366,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -94044,6 +98419,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -94095,6 +98472,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -94146,6 +98525,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -94197,6 +98578,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -94248,6 +98631,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -94299,6 +98684,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -94346,10 +98733,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-08-24",
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": "แชมป์ปัจจุบัน",
+    "titles_history": "แชมป์โลก",
     "fight_count": 3,
     "record": {
       "win": 3,
@@ -94401,6 +98790,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -94452,6 +98843,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -94503,6 +98896,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -94554,6 +98949,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -94605,6 +99002,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -94656,6 +99055,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -94707,6 +99108,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -94758,6 +99161,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -94809,6 +99214,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 7,
     "record": {
       "win": 2,
@@ -94860,6 +99267,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 8,
     "record": {
       "win": 5,
@@ -94911,6 +99320,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 3,
@@ -94962,6 +99373,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -95013,6 +99426,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -95064,6 +99479,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 13,
     "record": {
       "win": 7,
@@ -95115,6 +99532,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 9,
     "record": {
       "win": 7,
@@ -95166,6 +99585,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -95217,6 +99638,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 1,
@@ -95268,6 +99691,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 2,
@@ -95319,6 +99744,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 17,
     "record": {
       "win": 9,
@@ -95370,6 +99797,8 @@ const FIGHTERS = [
     "division": "มิดเดิลเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -95421,6 +99850,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 3,
@@ -95472,6 +99903,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 2,
@@ -95523,6 +99956,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -95574,6 +100009,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -95625,6 +100062,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 2,
@@ -95676,6 +100115,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 2,
@@ -95727,6 +100168,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 2,
@@ -95778,6 +100221,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 2,
@@ -95829,6 +100274,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -95880,6 +100327,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -95931,6 +100380,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -95982,6 +100433,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 10,
     "record": {
       "win": 7,
@@ -96033,6 +100486,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -96084,6 +100539,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 2,
@@ -96135,6 +100592,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -96186,6 +100645,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 1,
@@ -96237,6 +100698,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -96288,6 +100751,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -96339,6 +100804,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 14,
     "record": {
       "win": 6,
@@ -96390,6 +100857,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 4,
@@ -96441,6 +100910,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -96492,6 +100963,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 17,
     "record": {
       "win": 11,
@@ -96543,6 +101016,8 @@ const FIGHTERS = [
     "division": "มิดเดิลเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -96594,6 +101069,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -96645,6 +101122,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 3,
@@ -96696,6 +101175,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -96747,6 +101228,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -96798,6 +101281,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -96849,6 +101334,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 1,
@@ -96900,6 +101387,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 10,
     "record": {
       "win": 4,
@@ -96947,10 +101436,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-08-24",
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": "แชมป์ปัจจุบัน",
+    "titles_history": "แชมป์โลก | อดีตแชมป์โลก ปล้ำจับล็อก รุ่นอะตอมเวต",
     "fight_count": 6,
     "record": {
       "win": 3,
@@ -97002,6 +101493,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 0,
@@ -97053,6 +101546,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 2,
@@ -97104,6 +101599,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -97151,10 +101648,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-08-24",
     "division": "เฮฟวีเวท",
-    "nickname": null,
+    "nickname": "The Truth",
     "gender": "ชาย",
+    "championship_status": "แชมป์ปัจจุบัน",
+    "titles_history": "แชมป์โลก | อดีตแชมป์โลก การต่อสู้แบบผสมผสาน รุ่นเฮฟวีเวต",
     "fight_count": 7,
     "record": {
       "win": 4,
@@ -97206,6 +101705,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -97257,6 +101758,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -97308,6 +101811,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 7,
     "record": {
       "win": 6,
@@ -97359,6 +101864,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 0,
@@ -97410,6 +101917,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 3,
@@ -97461,6 +101970,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -97512,6 +102023,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -97563,6 +102076,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -97614,6 +102129,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -97665,6 +102182,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -97716,6 +102235,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -97767,6 +102288,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 3,
@@ -97818,6 +102341,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -97869,6 +102394,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -97920,6 +102447,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -97971,6 +102500,8 @@ const FIGHTERS = [
     "division": "เฮฟวีเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -98022,6 +102553,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -98073,6 +102606,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -98120,16 +102655,18 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-08-24",
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
-    "fight_count": 15,
+    "championship_status": null,
+    "titles_history": null,
+    "fight_count": 16,
     "record": {
       "win": 11,
       "loss": 4,
       "draw": 0,
-      "pending": 0,
+      "pending": 1,
       "total": 15
     }
   },
@@ -98175,6 +102712,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 0,
@@ -98222,10 +102761,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-08-24",
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": "แชมป์ปัจจุบัน",
+    "titles_history": "แชมป์โลก",
     "fight_count": 10,
     "record": {
       "win": 8,
@@ -98277,6 +102818,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -98328,6 +102871,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -98379,6 +102924,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 3,
@@ -98386,57 +102933,6 @@ const FIGHTERS = [
       "draw": 0,
       "pending": 0,
       "total": 4
-    }
-  },
-  {
-    "id": "stamp-fairtex",
-    "slug": "แสตมป์-แฟร์เท็กซ์",
-    "name_th": "แสตมป์ แฟร์เท็กซ์",
-    "name_en": null,
-    "biography": "แชมป์ เวิลด์ กรังด์ปรีซ์ การต่อสู้แบบผสมผสาน รุ่นอะตอมเวต, อดีตแชมป์โลก คิกบ็อกซิง รุ่นอะตอมเวต & มวยไทย รุ่นอะตอมเวต & การต่อสู้แบบผสมผสาน รุ่นอะตอมเวต",
-    "weight_kg": 52.2,
-    "weight_lbs": 115.1,
-    "height_cm": 157,
-    "height_ft_in": "5'2\"",
-    "country": "ไทย",
-    "age": 28,
-    "team": "แฟร์เท็กซ์ เทรนนิง เซนเตอร์",
-    "level": "ระดับ A",
-    "fight_purse": {
-      "amount_thb": null,
-      "currency": "THB",
-      "note": null
-    },
-    "market_value": {
-      "amount_thb": null,
-      "currency": "THB",
-      "note": null
-    },
-    "profile_url": "https://www.onefc.com/th/athletes/stamp/",
-    "image_filename": "แสตมป์-แฟร์เท็กซ์",
-    "strike_stats": {
-      "strikes_per_minute": {
-        "head": 0,
-        "body": 0,
-        "leg": 0
-      },
-      "overall_strikes": {
-        "head": 0,
-        "body": 0,
-        "leg": 0
-      }
-    },
-    "last_updated": "2026-08-22",
-    "division": "แคชเวท",
-    "nickname": null,
-    "gender": "หญิง",
-    "fight_count": 3,
-    "record": {
-      "win": 2,
-      "loss": 1,
-      "draw": 0,
-      "pending": 0,
-      "total": 3
     }
   },
   {
@@ -98452,7 +102948,7 @@ const FIGHTERS = [
     "country": "ไทย",
     "age": 28,
     "team": "แฟร์เท็กซ์ เทรนนิง เซนเตอร์",
-    "level": "B",
+    "level": "A",
     "fight_purse": {
       "amount_thb": 1000000,
       "currency": "THB",
@@ -98477,10 +102973,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-08-24",
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "หญิง",
+    "championship_status": "แชมป์ปัจจุบัน",
+    "titles_history": "แชมป์โลก | อดีตแชมป์โลก คิกบ็อกซิง รุ่นอะตอมเวต&มวยไทย รุ่นอะตอมเวต&การต่อสู้แบบผสมผสาน รุ่นอะตอมเวต",
     "fight_count": 20,
     "record": {
       "win": 15,
@@ -98532,6 +103030,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -98583,6 +103083,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 2,
@@ -98634,6 +103136,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "หญิง",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -98685,6 +103189,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -98736,6 +103242,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 10,
     "record": {
       "win": 7,
@@ -98787,6 +103295,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -98807,7 +103317,7 @@ const FIGHTERS = [
     "height_cm": 164,
     "height_ft_in": "5'5\"",
     "country": "สหรัฐอเมริกา/สิงคโปร์",
-    "age": 29,
+    "age": 30,
     "team": "Evolve MMA / United MMA",
     "level": "C",
     "fight_purse": {
@@ -98834,10 +103344,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-08-24",
     "division": "สตรอว์เวท",
-    "nickname": null,
+    "nickname": "Unstoppable",
     "gender": "หญิง",
+    "championship_status": "แชมป์ปัจจุบัน",
+    "titles_history": "แชมป์โลก | อดีตแชมป์โลก การต่อสู้แบบผสมผสาน รุ่นอะตอมเวต",
     "fight_count": 14,
     "record": {
       "win": 11,
@@ -98889,6 +103401,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -98940,6 +103454,8 @@ const FIGHTERS = [
     "division": "เฮฟวีเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -98991,6 +103507,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 2,
@@ -99042,6 +103560,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -99093,6 +103613,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -99144,6 +103666,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 11,
     "record": {
       "win": 7,
@@ -99195,6 +103719,8 @@ const FIGHTERS = [
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 3,
@@ -99246,6 +103772,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -99297,6 +103825,8 @@ const FIGHTERS = [
     "division": "มิดเดิลเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -99348,6 +103878,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -99399,6 +103931,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -99450,6 +103984,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -99501,6 +104037,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -99552,6 +104090,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -99603,6 +104143,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -99654,6 +104196,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -99705,6 +104249,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -99756,6 +104302,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 2,
@@ -99807,6 +104355,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -99858,6 +104408,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -99909,6 +104461,8 @@ const FIGHTERS = [
     "division": "มิดเดิลเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -99960,6 +104514,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -100011,6 +104567,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -100062,6 +104620,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -100113,6 +104673,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 3,
@@ -100164,6 +104726,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -100215,6 +104779,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -100266,6 +104832,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -100317,6 +104885,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -100368,6 +104938,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -100419,6 +104991,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -100470,6 +105044,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -100521,6 +105097,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 2,
@@ -100572,6 +105150,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -100623,6 +105203,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -100674,6 +105256,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -100725,6 +105309,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -100776,6 +105362,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -100827,6 +105415,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -100878,6 +105468,8 @@ const FIGHTERS = [
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -100929,6 +105521,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -100980,6 +105574,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -101031,6 +105627,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 15,
     "record": {
       "win": 6,
@@ -101082,6 +105680,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -101133,6 +105733,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -101184,6 +105786,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 0,
@@ -101231,10 +105835,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-08-24",
     "division": "สตรอว์เวท",
-    "nickname": null,
+    "nickname": "The Passion",
     "gender": "ชาย",
+    "championship_status": "แชมป์ปัจจุบัน",
+    "titles_history": "แชมป์โลก",
     "fight_count": 20,
     "record": {
       "win": 15,
@@ -101286,6 +105892,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -101306,7 +105914,7 @@ const FIGHTERS = [
     "height_cm": 175,
     "height_ft_in": "5'9\"",
     "country": "อิตาลี/แคนาดา",
-    "age": 29,
+    "age": 30,
     "team": "Team Di Bella Kickboxing",
     "level": "A",
     "fight_purse": {
@@ -101333,10 +105941,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-08-24",
     "division": "สตรอว์เวท",
-    "nickname": null,
+    "nickname": "โจนาธาน ดิ เบลลา",
     "gender": "ชาย",
+    "championship_status": "แชมป์ปัจจุบัน",
+    "titles_history": "แชมป์โลก",
     "fight_count": 7,
     "record": {
       "win": 6,
@@ -101359,7 +105969,7 @@ const FIGHTERS = [
     "country": "สหราชอาณาจักร",
     "age": 29,
     "team": "Knowlesy Academy / Team Underground",
-    "level": "B",
+    "level": "A",
     "fight_purse": {
       "amount_thb": 1267500,
       "currency": "THB",
@@ -101384,10 +105994,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-08-24",
     "division": "แบนตัมเวท",
-    "nickname": null,
+    "nickname": "The General",
     "gender": "ชาย",
+    "championship_status": "แชมป์ปัจจุบัน",
+    "titles_history": "แชมป์โลก | อดีตแชมป์โลก มวยไทย รุ่นฟลายเวต&มวยไทย รุ่นแบนตัมเวต",
     "fight_count": 13,
     "record": {
       "win": 10,
@@ -101439,6 +106051,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 0,
@@ -101490,6 +106104,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -101541,6 +106157,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 1,
@@ -101592,6 +106210,8 @@ const FIGHTERS = [
     "division": "เวลเทอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -101643,6 +106263,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -101694,6 +106316,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 13,
     "record": {
       "win": 8,
@@ -101714,7 +106338,7 @@ const FIGHTERS = [
     "height_cm": 170,
     "height_ft_in": "5'7\"",
     "country": "อิตาลี/โมร็อกโก",
-    "age": 34,
+    "age": 35,
     "team": "Kick and Punch Milano",
     "level": "C",
     "fight_purse": {
@@ -101741,10 +106365,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-08-24",
     "division": "สตรอว์เวท",
-    "nickname": null,
+    "nickname": "THE HURRICANE",
     "gender": "ชาย",
+    "championship_status": "แชมป์ปัจจุบัน",
+    "titles_history": "แชมป์โลก | อดีตแชมป์โลก มวยไทย รุ่นสตรอว์เวต",
     "fight_count": 11,
     "record": {
       "win": 4,
@@ -101796,6 +106422,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -101847,6 +106475,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -101898,6 +106528,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -101949,6 +106581,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -102000,6 +106634,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -102051,6 +106687,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -102102,6 +106740,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 0,
@@ -102153,6 +106793,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 9,
     "record": {
       "win": 5,
@@ -102204,6 +106846,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 10,
     "record": {
       "win": 5,
@@ -102255,6 +106899,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -102306,6 +106952,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -102357,6 +107005,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -102408,6 +107058,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -102459,6 +107111,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 4,
@@ -102510,6 +107164,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 4,
@@ -102561,6 +107217,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -102612,6 +107270,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -102663,6 +107323,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -102714,6 +107376,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -102765,6 +107429,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 4,
@@ -102816,6 +107482,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 2,
@@ -102867,6 +107535,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 4,
@@ -102918,6 +107588,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -102969,6 +107641,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -103020,6 +107694,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -103071,6 +107747,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 2,
@@ -103122,6 +107800,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -103173,6 +107853,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 12,
     "record": {
       "win": 6,
@@ -103224,6 +107906,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -103275,6 +107959,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -103326,6 +108012,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -103377,6 +108065,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -103428,6 +108118,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -103479,6 +108171,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -103530,6 +108224,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -103581,6 +108277,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 3,
@@ -103632,6 +108330,8 @@ const FIGHTERS = [
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -103683,6 +108383,8 @@ const FIGHTERS = [
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 1,
@@ -103734,6 +108436,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -103785,6 +108489,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 7,
     "record": {
       "win": 4,
@@ -103836,6 +108542,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 2,
@@ -103887,6 +108595,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -103938,6 +108648,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 3,
@@ -103989,6 +108701,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -104040,6 +108754,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "หญิง",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -104091,6 +108807,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -104142,6 +108860,8 @@ const FIGHTERS = [
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 2,
@@ -104193,6 +108913,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 9,
     "record": {
       "win": 5,
@@ -104244,6 +108966,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -104295,6 +109019,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -104346,6 +109072,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -104397,6 +109125,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -104448,6 +109178,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -104499,6 +109231,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -104550,6 +109284,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 2,
@@ -104601,6 +109337,8 @@ const FIGHTERS = [
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 2,
@@ -104652,6 +109390,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 3,
@@ -104703,6 +109443,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -104754,6 +109496,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 2,
@@ -104805,6 +109549,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -104856,6 +109602,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -104907,6 +109655,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -104954,16 +109704,18 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
-    "division": null,
+    "last_updated": "2026-08-24",
+    "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
-    "fight_count": 1,
+    "championship_status": null,
+    "titles_history": null,
+    "fight_count": 2,
     "record": {
       "win": 0,
       "loss": 1,
       "draw": 0,
-      "pending": 0,
+      "pending": 1,
       "total": 1
     }
   },
@@ -105009,6 +109761,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 11,
     "record": {
       "win": 9,
@@ -105060,6 +109814,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 3,
@@ -105111,6 +109867,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 7,
     "record": {
       "win": 2,
@@ -105162,6 +109920,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -105213,6 +109973,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -105264,6 +110026,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -105315,6 +110079,8 @@ const FIGHTERS = [
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -105366,6 +110132,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 2,
@@ -105417,6 +110185,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -105424,6 +110194,59 @@ const FIGHTERS = [
       "draw": 0,
       "pending": 0,
       "total": 1
+    }
+  },
+  {
+    "id": "โมฮาเหม็ด-เฟซาน",
+    "slug": "โมฮาเหม็ด-เฟซาน",
+    "name_th": "โมฮาเหม็ด เฟซาน",
+    "name_en": null,
+    "biography": "",
+    "weight_kg": null,
+    "weight_lbs": null,
+    "height_cm": null,
+    "height_ft_in": null,
+    "country": null,
+    "age": null,
+    "team": null,
+    "level": "",
+    "fight_purse": {
+      "amount_thb": null,
+      "currency": "THB",
+      "note": null
+    },
+    "market_value": {
+      "amount_thb": null,
+      "currency": "THB",
+      "note": null
+    },
+    "profile_url": null,
+    "image_filename": "โมฮาเหม็ด-เฟซาน",
+    "strike_stats": {
+      "strikes_per_minute": {
+        "head": 0,
+        "body": 0,
+        "leg": 0
+      },
+      "overall_strikes": {
+        "head": 0,
+        "body": 0,
+        "leg": 0
+      }
+    },
+    "last_updated": "2026-08-24",
+    "division": "แบนตัมเวท",
+    "nickname": null,
+    "gender": null,
+    "championship_status": null,
+    "titles_history": null,
+    "fight_count": 1,
+    "record": {
+      "win": 0,
+      "loss": 0,
+      "draw": 0,
+      "pending": 1,
+      "total": 0
     }
   },
   {
@@ -105468,6 +110291,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 3,
@@ -105519,6 +110344,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 4,
@@ -105570,6 +110397,8 @@ const FIGHTERS = [
     "division": "มิดเดิลเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 2,
@@ -105590,7 +110419,7 @@ const FIGHTERS = [
     "height_cm": 160,
     "height_ft_in": "5'3\"",
     "country": "ญี่ปุ่น",
-    "age": 38,
+    "age": 39,
     "team": "Wajutsu Keishukai Hearts",
     "level": "B",
     "fight_purse": {
@@ -105617,10 +110446,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-08-24",
     "division": "สตรอว์เวท",
-    "nickname": null,
+    "nickname": "THE NINJA",
     "gender": "ชาย",
+    "championship_status": "แชมป์ปัจจุบัน",
+    "titles_history": "แชมป์โลก | อดีตแชมป์โลก การต่อสู้แบบผสมผสาน รุ่นสตรอว์เวต",
     "fight_count": 9,
     "record": {
       "win": 3,
@@ -105672,6 +110503,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -105723,6 +110556,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -105774,6 +110609,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 8,
     "record": {
       "win": 6,
@@ -105825,6 +110662,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "หญิง",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -105876,6 +110715,8 @@ const FIGHTERS = [
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -105927,6 +110768,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 11,
     "record": {
       "win": 5,
@@ -105978,6 +110821,8 @@ const FIGHTERS = [
     "division": "เฮฟวีเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -106025,10 +110870,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-08-24",
     "division": "เฮฟวีเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": "แชมป์ปัจจุบัน",
+    "titles_history": "แชมป์โลก",
     "fight_count": 9,
     "record": {
       "win": 8,
@@ -106080,6 +110927,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -106131,6 +110980,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -106182,6 +111033,8 @@ const FIGHTERS = [
     "division": "เวลเทอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -106233,6 +111086,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -106284,6 +111139,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 9,
     "record": {
       "win": 7,
@@ -106335,6 +111192,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 3,
@@ -106386,6 +111245,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 2,
@@ -106437,6 +111298,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 2,
@@ -106488,6 +111351,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 2,
@@ -106539,6 +111404,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -106590,6 +111457,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 2,
@@ -106641,6 +111510,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -106692,6 +111563,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -106743,6 +111616,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 3,
@@ -106794,6 +111669,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 1,
@@ -106845,6 +111722,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -106896,6 +111775,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 2,
@@ -106947,6 +111828,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -106998,6 +111881,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 2,
@@ -107049,6 +111934,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 2,
@@ -107100,6 +111987,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -107151,6 +112040,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 2,
@@ -107202,6 +112093,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -107253,6 +112146,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -107304,6 +112199,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -107355,6 +112252,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -107406,6 +112305,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 18,
     "record": {
       "win": 9,
@@ -107457,6 +112358,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 2,
@@ -107508,6 +112411,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -107559,6 +112464,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -107610,6 +112517,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -107661,6 +112570,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -107712,6 +112623,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 3,
@@ -107759,10 +112672,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-08-24",
     "division": "ฟลายเวท",
-    "nickname": null,
+    "nickname": "THE KAZAKH",
     "gender": "ชาย",
+    "championship_status": "แชมป์ปัจจุบัน",
+    "titles_history": "แชมป์โลก | อดีตแชมป์โลก การต่อสู้แบบผสมผสาน รุ่นฟลายเวต",
     "fight_count": 10,
     "record": {
       "win": 8,
@@ -107814,6 +112729,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 2,
@@ -107865,6 +112782,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 2,
@@ -107916,6 +112835,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -107967,6 +112888,8 @@ const FIGHTERS = [
     "division": "เฮฟวีเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -108018,6 +112941,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -108069,6 +112994,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -108120,6 +113047,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -108171,6 +113100,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -108218,10 +113149,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-08-24",
     "division": "เวลเทอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": "แชมป์ปัจจุบัน",
+    "titles_history": "แชมป์โลก",
     "fight_count": 11,
     "record": {
       "win": 11,
@@ -108273,6 +113206,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 0,
@@ -108324,6 +113259,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 2,
@@ -108375,6 +113312,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -108426,6 +113365,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 8,
     "record": {
       "win": 4,
@@ -108477,6 +113418,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -108528,6 +113471,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 1,
@@ -108579,6 +113524,8 @@ const FIGHTERS = [
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -108630,6 +113577,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -108681,6 +113630,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -108732,6 +113683,8 @@ const FIGHTERS = [
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 2,
@@ -108783,6 +113736,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 0,
     "record": {
       "win": 0,
@@ -108834,6 +113789,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -108885,6 +113842,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 9,
     "record": {
       "win": 7,
@@ -108936,6 +113895,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 3,
@@ -108987,6 +113948,8 @@ const FIGHTERS = [
     "division": "เวลเทอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 3,
@@ -109038,6 +114001,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -109089,6 +114054,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -109140,6 +114107,8 @@ const FIGHTERS = [
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -109191,6 +114160,8 @@ const FIGHTERS = [
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -109242,6 +114213,8 @@ const FIGHTERS = [
     "division": null,
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -109293,6 +114266,8 @@ const FIGHTERS = [
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 4,
@@ -109344,6 +114319,8 @@ const FIGHTERS = [
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -109384,54 +114361,6 @@ const HISTORY  = [
     "event": "ONE Fight Night 33: อัลลิเซีย vs โยฮันนา",
     "promotion": "ONE",
     "fight_rating_stars": 3,
-    "division": "",
-    "weigh_in_lbs": null
-  },
-  {
-    "fighter_id": "stamp-fairtex",
-    "result": "แพ้",
-    "rules": "คิกบ็อกซิง",
-    "decision": "คะแนนเอกฉันท์",
-    "round": 3,
-    "time": "3:00",
-    "opponent": "คานะ",
-    "opponent_country": "ญี่ปุ่น",
-    "date": "2025-11-16",
-    "event": "ONE 173: ซุปเปอร์บอน vs มาซาอากิ",
-    "promotion": "ONE",
-    "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
-  },
-  {
-    "fighter_id": "stamp-fairtex",
-    "result": "ชนะ",
-    "rules": "MMA",
-    "decision": "ทีเคโอ",
-    "round": 3,
-    "time": "1:04",
-    "opponent": "ฮาม ซอ ฮี",
-    "opponent_country": "เกาหลีใต้",
-    "date": "2023-09-29",
-    "event": "ONE Fight Night 14: แสตมป์ vs ซอ ฮี",
-    "promotion": "ONE",
-    "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
-  },
-  {
-    "fighter_id": "stamp-fairtex",
-    "result": "ชนะ",
-    "rules": "MMA",
-    "decision": "น็อกเอาต์",
-    "round": 2,
-    "time": "2:27",
-    "opponent": "อลิส แอนเดอร์สัน",
-    "opponent_country": "สหรัฐอเมริกา",
-    "date": "2023-05-06",
-    "event": "ONE Fight Night 10: ดิมิเทรียส vs อาเดรียโน III",
-    "promotion": "ONE",
-    "fight_rating_stars": 0,
     "division": "",
     "weigh_in_lbs": null
   },
@@ -110777,6 +115706,22 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "",
+    "weigh_in_lbs": null
+  },
+  {
+    "fighter_id": "กึน-โฮ-ซอน",
+    "result": "รอแข่งขัน",
+    "rules": "MMA",
+    "decision": "",
+    "round": null,
+    "time": "",
+    "opponent": "เรียวโตะ นิชิยามะ",
+    "opponent_country": null,
+    "date": "2026-08-28",
+    "event": "ONE ลุมพินี 168",
+    "promotion": "ONE",
+    "fight_rating_stars": 0,
+    "division": "ฟลายเวท",
     "weigh_in_lbs": null
   },
   {
@@ -121036,6 +125981,22 @@ const HISTORY  = [
     "weigh_in_lbs": null
   },
   {
+    "fighter_id": "จุง-ฮยุน-วู",
+    "result": "รอแข่งขัน",
+    "rules": "คิกบ็อกซิง",
+    "decision": "",
+    "round": null,
+    "time": "",
+    "opponent": "เคสุเกะ มงกุชิ",
+    "opponent_country": null,
+    "date": "2026-08-28",
+    "event": "The Inner Circle 28",
+    "promotion": null,
+    "fight_rating_stars": 0,
+    "division": "สตรอว์เวท",
+    "weigh_in_lbs": null
+  },
+  {
     "fighter_id": "จู-คัง-เจี๋ย",
     "result": "ชนะ",
     "rules": "MMA",
@@ -121533,6 +126494,22 @@ const HISTORY  = [
   },
   {
     "fighter_id": "จ้าว-ฉงหยาง",
+    "result": "รอแข่งขัน",
+    "rules": "คิกบ็อกซิง",
+    "decision": "",
+    "round": null,
+    "time": "",
+    "opponent": "ยูริ ทานากะ",
+    "opponent_country": null,
+    "date": "2026-08-28",
+    "event": "ONE ลุมพินี 168",
+    "promotion": "ONE",
+    "fight_rating_stars": 0,
+    "division": "แบนตัมเวท",
+    "weigh_in_lbs": null
+  },
+  {
+    "fighter_id": "จ้าว-ฉงหยาง",
     "result": "ชนะ",
     "rules": "คิกบ็อกซิง",
     "decision": "",
@@ -122025,6 +127002,22 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "",
+    "weigh_in_lbs": null
+  },
+  {
+    "fighter_id": "ฉลามขาว-ศิษย์คุณมะ",
+    "result": "รอแข่งขัน",
+    "rules": "มวยไทย",
+    "decision": "",
+    "round": null,
+    "time": "",
+    "opponent": "โมฮาเหม็ด เฟซาน",
+    "opponent_country": null,
+    "date": "2026-08-28",
+    "event": "ONE ลุมพินี 168",
+    "promotion": "ONE",
+    "fight_rating_stars": 0,
+    "division": "แบนตัมเวท",
     "weigh_in_lbs": null
   },
   {
@@ -123033,6 +128026,22 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "",
+    "weigh_in_lbs": null
+  },
+  {
+    "fighter_id": "ชาติพยัคฆ์-ศักดิ์สตูล",
+    "result": "รอแข่งขัน",
+    "rules": "มวยไทย",
+    "decision": "",
+    "round": null,
+    "time": "",
+    "opponent": "แรมบ๊อง ส.เถระพัฒน์",
+    "opponent_country": null,
+    "date": "2026-08-28",
+    "event": "The Inner Circle 28",
+    "promotion": "ONE",
+    "fight_rating_stars": 0,
+    "division": "ฟลายเวท",
     "weigh_in_lbs": null
   },
   {
@@ -128281,6 +133290,22 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "",
+    "weigh_in_lbs": null
+  },
+  {
+    "fighter_id": "ซุปเปอร์บอล-ศิษย์-ช.",
+    "result": "รอแข่งขัน",
+    "rules": "มวยไทย",
+    "decision": "",
+    "round": null,
+    "time": "",
+    "opponent": "เพชรเมืองช้าง ส.คำสิงห์",
+    "opponent_country": null,
+    "date": "2026-08-28",
+    "event": "ONE ลุมพินี 168",
+    "promotion": "ONE",
+    "fight_rating_stars": 0,
+    "division": "ฟลายเวท",
     "weigh_in_lbs": null
   },
   {
@@ -138941,6 +143966,22 @@ const HISTORY  = [
   },
   {
     "fighter_id": "บราซิล-เอกเมืองนนท์",
+    "result": "รอแข่งขัน",
+    "rules": "มวยไทย",
+    "decision": "",
+    "round": null,
+    "time": "",
+    "opponent": "เพชรภูผา เอกปู่ยีนส์",
+    "opponent_country": null,
+    "date": "2026-08-28",
+    "event": "ONE ลุมพินี 168",
+    "promotion": "ONE",
+    "fight_rating_stars": 0,
+    "division": "ฟลายเวท",
+    "weigh_in_lbs": null
+  },
+  {
+    "fighter_id": "บราซิล-เอกเมืองนนท์",
     "result": "แพ้",
     "rules": "มวยไทย",
     "decision": "",
@@ -139961,6 +145002,22 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "",
+    "weigh_in_lbs": null
+  },
+  {
+    "fighter_id": "บาสตา-อับเดลมูเนม",
+    "result": "รอแข่งขัน",
+    "rules": "มวยไทย",
+    "decision": "",
+    "round": null,
+    "time": "",
+    "opponent": "ฟาคริดดิน คาซานอฟ",
+    "opponent_country": null,
+    "date": "2026-08-28",
+    "event": "The Inner Circle 28",
+    "promotion": null,
+    "fight_rating_stars": 0,
+    "division": "ฟลายเวท",
     "weigh_in_lbs": null
   },
   {
@@ -144797,6 +149854,22 @@ const HISTORY  = [
   },
   {
     "fighter_id": "ฟาคริดดิน-คาซานอฟ",
+    "result": "รอแข่งขัน",
+    "rules": "มวยไทย",
+    "decision": "",
+    "round": null,
+    "time": "",
+    "opponent": "บาสตา อับเดลมูเนม",
+    "opponent_country": null,
+    "date": "2026-08-28",
+    "event": "The Inner Circle 28",
+    "promotion": "ONE",
+    "fight_rating_stars": 0,
+    "division": "ฟลายเวท",
+    "weigh_in_lbs": null
+  },
+  {
+    "fighter_id": "ฟาคริดดิน-คาซานอฟ",
     "result": "แพ้",
     "rules": "มวยไทย",
     "decision": "",
@@ -145929,6 +151002,22 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "",
+    "weigh_in_lbs": null
+  },
+  {
+    "fighter_id": "ฟ้าแลบ-โรงเรียนกีฬานครสวรรค์",
+    "result": "รอแข่งขัน",
+    "rules": "มวยไทย",
+    "decision": "",
+    "round": null,
+    "time": "",
+    "opponent": "วาเลนตินา กันเชลโล",
+    "opponent_country": null,
+    "date": "2026-08-28",
+    "event": "ONE ลุมพินี 168",
+    "promotion": "ONE",
+    "fight_rating_stars": 0,
+    "division": "อะตอมเวท",
     "weigh_in_lbs": null
   },
   {
@@ -153964,6 +159053,22 @@ const HISTORY  = [
     "weigh_in_lbs": null
   },
   {
+    "fighter_id": "ยูริ-ทานากะ",
+    "result": "รอแข่งขัน",
+    "rules": "คิกบ็อกซิง",
+    "decision": "",
+    "round": null,
+    "time": "",
+    "opponent": "จ้าว ฉงหยาง",
+    "opponent_country": null,
+    "date": "2026-08-28",
+    "event": "ONE ลุมพินี 168",
+    "promotion": "ONE",
+    "fight_rating_stars": 0,
+    "division": "แบนตัมเวท",
+    "weigh_in_lbs": null
+  },
+  {
     "fighter_id": "ยูริก-ดาฟเทียน",
     "result": "แพ้",
     "rules": "คิกบ็อกซิง",
@@ -157685,7 +162790,7 @@ const HISTORY  = [
     "opponent": "รุ่งราวี ศิษย์สองพี่น้อง",
     "opponent_country": null,
     "date": "2026-04-10",
-    "event": "ONE ลุมพินี 150 & The Inner Circle",
+    "event": "ONE ลุมพินี 150 & The Inner Circle 10",
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "",
@@ -161117,6 +166222,22 @@ const HISTORY  = [
   },
   {
     "fighter_id": "วรพล-ลูกเจ้าพ่อโรงต้ม",
+    "result": "รอแข่งขัน",
+    "rules": "มวยไทย",
+    "decision": "",
+    "round": null,
+    "time": "",
+    "opponent": "เลนนี บลาซี",
+    "opponent_country": null,
+    "date": "2026-08-28",
+    "event": "The Inner Circle 28",
+    "promotion": "ONE",
+    "fight_rating_stars": 0,
+    "division": "แบนตัมเวท",
+    "weigh_in_lbs": null
+  },
+  {
+    "fighter_id": "วรพล-ลูกเจ้าพ่อโรงต้ม",
     "result": "ยกเลิกการแข่งขัน",
     "rules": "มวยไทย",
     "decision": "",
@@ -162412,6 +167533,22 @@ const HISTORY  = [
     "weigh_in_lbs": null
   },
   {
+    "fighter_id": "วาเลนตินา-กันเชลโล",
+    "result": "รอแข่งขัน",
+    "rules": "มวยไทย",
+    "decision": "",
+    "round": null,
+    "time": "",
+    "opponent": "ฟ้าแลบ โรงเรียนกีฬานครสวรรค์",
+    "opponent_country": null,
+    "date": "2026-08-28",
+    "event": "ONE ลุมพินี 168",
+    "promotion": "ONE",
+    "fight_rating_stars": 0,
+    "division": "อะตอมเวท",
+    "weigh_in_lbs": null
+  },
+  {
     "fighter_id": "วาเลรี-กูซารอฟ",
     "result": "ชนะ",
     "rules": "MMA",
@@ -163002,6 +168139,22 @@ const HISTORY  = [
     "fight_rating_stars": 0,
     "division": "ฟลายเวท",
     "weigh_in_lbs": 129.8
+  },
+  {
+    "fighter_id": "วุฒิไกร-ว.จักรวุฒิ",
+    "result": "รอแข่งขัน",
+    "rules": "มวยไทย",
+    "decision": "",
+    "round": null,
+    "time": "",
+    "opponent": "โมฮัมหมัด ฮาบิบปูร์",
+    "opponent_country": null,
+    "date": "2026-08-28",
+    "event": "ONE ลุมพินี 168",
+    "promotion": "ONE",
+    "fight_rating_stars": 0,
+    "division": "แบนตัมเวท",
+    "weigh_in_lbs": null
   },
   {
     "fighter_id": "วุฒิไกร-ว.จักรวุฒิ",
@@ -165109,7 +170262,7 @@ const HISTORY  = [
     "opponent": "อาลีฟ ส.เดชะพันธ์",
     "opponent_country": null,
     "date": "2026-07-24",
-    "event": "The Inner Circle 23",
+    "event": "ONE ลุมพินี 163 & The Inner Circle 23",
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "สตรอว์เวท",
@@ -167545,6 +172698,22 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "",
+    "weigh_in_lbs": null
+  },
+  {
+    "fighter_id": "หนึ่งเก้าหนึ่ง-เหล่าโชคเจริญ",
+    "result": "รอแข่งขัน",
+    "rules": "มวยไทย",
+    "decision": "",
+    "round": null,
+    "time": "",
+    "opponent": "เดนิส ดอตเซนโก",
+    "opponent_country": null,
+    "date": "2026-08-28",
+    "event": "ONE ลุมพินี 168",
+    "promotion": "ONE",
+    "fight_rating_stars": 0,
+    "division": "แบนตัมเวท",
     "weigh_in_lbs": null
   },
   {
@@ -173781,7 +178950,7 @@ const HISTORY  = [
     "opponent": "เพชรจีจ้า ลูกเจ้าพ่อโรงต้ม",
     "opponent_country": null,
     "date": "2026-06-19",
-    "event": "The Inner Circle 19",
+    "event": "ONE ลุมพินี 159 & The Inner Circle 19",
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "อะตอมเวท",
@@ -176469,7 +181638,7 @@ const HISTORY  = [
     "opponent": "สามเอ ไก่ย่างห้าดาว",
     "opponent_country": null,
     "date": "2026-07-24",
-    "event": "The Inner Circle 23",
+    "event": "ONE ลุมพินี 163 & The Inner Circle 23",
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "สตรอว์เวท",
@@ -180525,6 +185694,22 @@ const HISTORY  = [
   },
   {
     "fighter_id": "อีสานเหนือ-ศ.ศศิวัฒน์",
+    "result": "รอแข่งขัน",
+    "rules": "มวยไทย",
+    "decision": "",
+    "round": null,
+    "time": "",
+    "opponent": "อูเบด ฮัสเซน",
+    "opponent_country": null,
+    "date": "2026-08-28",
+    "event": "The Inner Circle 28",
+    "promotion": "ONE",
+    "fight_rating_stars": 0,
+    "division": "ฟลายเวท",
+    "weigh_in_lbs": null
+  },
+  {
+    "fighter_id": "อีสานเหนือ-ศ.ศศิวัฒน์",
     "result": "ชนะ",
     "rules": "มวยไทย",
     "decision": "",
@@ -181114,6 +186299,22 @@ const HISTORY  = [
     "fight_rating_stars": 0,
     "division": "เฮฟวีเวท",
     "weigh_in_lbs": 262.2
+  },
+  {
+    "fighter_id": "อูเบด-ฮัสเซน",
+    "result": "รอแข่งขัน",
+    "rules": "มวยไทย",
+    "decision": "",
+    "round": null,
+    "time": "",
+    "opponent": "อีสานเหนือ ศ.ศศิวัฒน์",
+    "opponent_country": null,
+    "date": "2026-08-28",
+    "event": "The Inner Circle 28",
+    "promotion": "ONE",
+    "fight_rating_stars": 0,
+    "division": "ฟลายเวท",
+    "weigh_in_lbs": null
   },
   {
     "fighter_id": "อูเบด-ฮัสเซน",
@@ -181984,12 +187185,12 @@ const HISTORY  = [
     "result": "แพ้",
     "rules": "MMA",
     "decision": "คะแนนไม่เอกฉันท์",
-    "round": null,
-    "time": "",
+    "round": 3,
+    "time": "5:00",
     "opponent": "ลูคัส กาเบรียล",
     "opponent_country": "บราซิล",
     "date": "2026-06-27",
-    "event": "ONE Fight Night 44",
+    "event": "ONE Fight Night 44: จอร์จ vs รุ่งราวี 2",
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "ไลท์เวท",
@@ -184684,6 +189885,22 @@ const HISTORY  = [
     "weigh_in_lbs": null
   },
   {
+    "fighter_id": "เก็บตก-สท.เชษฐ์บ้านเขว้า",
+    "result": "รอแข่งขัน",
+    "rules": "มวยไทย",
+    "decision": "",
+    "round": null,
+    "time": "",
+    "opponent": "เบิกฤกษ์ ลูกเมืองเพชร",
+    "opponent_country": null,
+    "date": "2026-08-28",
+    "event": "ONE ลุมพินี 168",
+    "promotion": "ONE",
+    "fight_rating_stars": 0,
+    "division": "อะตอมเวท",
+    "weigh_in_lbs": null
+  },
+  {
     "fighter_id": "เก้ากะรัต-ส.เทียนโพธิ์",
     "result": "แพ้",
     "rules": "มวยไทย",
@@ -185658,6 +190875,22 @@ const HISTORY  = [
     "fight_rating_stars": 0,
     "division": "เฟเธอร์เวท",
     "weigh_in_lbs": 155.8
+  },
+  {
+    "fighter_id": "เคสุเกะ-มงกุชิ",
+    "result": "รอแข่งขัน",
+    "rules": "คิกบ็อกซิง",
+    "decision": "",
+    "round": null,
+    "time": "",
+    "opponent": "จุง ฮยุน วู",
+    "opponent_country": null,
+    "date": "2026-08-28",
+    "event": "The Inner Circle 28",
+    "promotion": "ONE",
+    "fight_rating_stars": 0,
+    "division": "สตรอว์เวท",
+    "weigh_in_lbs": null
   },
   {
     "fighter_id": "เคสุเกะ-มงกุชิ",
@@ -189901,6 +195134,22 @@ const HISTORY  = [
   },
   {
     "fighter_id": "เดนิส-ดอตเซนโก",
+    "result": "รอแข่งขัน",
+    "rules": "มวยไทย",
+    "decision": "",
+    "round": null,
+    "time": "",
+    "opponent": "หนึ่งเก้าหนึ่ง เหล่าโชคเจริญ",
+    "opponent_country": null,
+    "date": "2026-08-28",
+    "event": "ONE ลุมพินี 168",
+    "promotion": "ONE",
+    "fight_rating_stars": 0,
+    "division": "แบนตัมเวท",
+    "weigh_in_lbs": null
+  },
+  {
+    "fighter_id": "เดนิส-ดอตเซนโก",
     "result": "ชนะ",
     "rules": "มวยไทย",
     "decision": "น็อกเอาต์",
@@ -192572,6 +197821,22 @@ const HISTORY  = [
     "weigh_in_lbs": null
   },
   {
+    "fighter_id": "เบิกฤกษ์-ลูกเมืองเพชร",
+    "result": "รอแข่งขัน",
+    "rules": "มวยไทย",
+    "decision": "",
+    "round": null,
+    "time": "",
+    "opponent": "เก็บตก สท.เชษฐ์บ้านเขว้า",
+    "opponent_country": null,
+    "date": "2026-08-28",
+    "event": "ONE ลุมพินี 168",
+    "promotion": "ONE",
+    "fight_rating_stars": 0,
+    "division": "อะตอมเวท",
+    "weigh_in_lbs": null
+  },
+  {
     "fighter_id": "เบียน-หยี",
     "result": "ชนะ",
     "rules": "MMA",
@@ -193317,7 +198582,7 @@ const HISTORY  = [
     "opponent": "อัลลิเซีย เฮลเลน รอดริเกส",
     "opponent_country": null,
     "date": "2026-06-19",
-    "event": "The Inner Circle 19",
+    "event": "ONE ลุมพินี 159 & The Inner Circle 19",
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "อะตอมเวท",
@@ -195085,6 +200350,22 @@ const HISTORY  = [
   },
   {
     "fighter_id": "เพชรภูผา-เอกปู่ยีนส์",
+    "result": "รอแข่งขัน",
+    "rules": "มวยไทย",
+    "decision": "",
+    "round": null,
+    "time": "",
+    "opponent": "บราซิล เอกเมืองนนท์",
+    "opponent_country": null,
+    "date": "2026-08-28",
+    "event": "ONE ลุมพินี 168",
+    "promotion": "ONE",
+    "fight_rating_stars": 0,
+    "division": "ฟลายเวท",
+    "weigh_in_lbs": null
+  },
+  {
+    "fighter_id": "เพชรภูผา-เอกปู่ยีนส์",
     "result": "ชนะ",
     "rules": "มวยไทย",
     "decision": "น็อกเอาต์",
@@ -196697,6 +201978,22 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "",
+    "weigh_in_lbs": null
+  },
+  {
+    "fighter_id": "เพชรเมืองช้าง-ส.คำสิงห์",
+    "result": "รอแข่งขัน",
+    "rules": "มวยไทย",
+    "decision": "",
+    "round": null,
+    "time": "",
+    "opponent": "ซุปเปอร์บอล ศิษย์ ช.",
+    "opponent_country": null,
+    "date": "2026-08-28",
+    "event": "ONE ลุมพินี 168",
+    "promotion": "ONE",
+    "fight_rating_stars": 0,
+    "division": "ฟลายเวท",
     "weigh_in_lbs": null
   },
   {
@@ -199772,6 +205069,22 @@ const HISTORY  = [
     "weigh_in_lbs": null
   },
   {
+    "fighter_id": "เรียวโตะ-นิชิยามะ",
+    "result": "รอแข่งขัน",
+    "rules": "MMA",
+    "decision": "",
+    "round": null,
+    "time": "",
+    "opponent": "กึน โฮ ซอน",
+    "opponent_country": null,
+    "date": "2026-08-28",
+    "event": "ONE ลุมพินี 168",
+    "promotion": "ONE",
+    "fight_rating_stars": 0,
+    "division": "ฟลายเวท",
+    "weigh_in_lbs": null
+  },
+  {
     "fighter_id": "เรียวโตะ-โออินูมะ",
     "result": "แพ้",
     "rules": "มวยไทย",
@@ -199818,6 +205131,22 @@ const HISTORY  = [
     "fight_rating_stars": 0,
     "division": "เฮฟวีเวท",
     "weigh_in_lbs": 241.4
+  },
+  {
+    "fighter_id": "เลนนี-บลาซี",
+    "result": "รอแข่งขัน",
+    "rules": "มวยไทย",
+    "decision": "",
+    "round": null,
+    "time": "",
+    "opponent": "วรพล ลูกเจ้าพ่อโรงต้ม",
+    "opponent_country": null,
+    "date": "2026-08-28",
+    "event": "The Inner Circle 28",
+    "promotion": "ONE",
+    "fight_rating_stars": 0,
+    "division": "แบนตัมเวท",
+    "weigh_in_lbs": null
   },
   {
     "fighter_id": "เลนนี-บลาซี",
@@ -202405,7 +207734,7 @@ const HISTORY  = [
     "opponent": "โชโสะ อิโซจิมะ",
     "opponent_country": "ญี่ปุ่น",
     "date": "2026-07-11",
-    "event": "The Inner Circle 21",
+    "event": "ONE ลุมพินี 161 & The Inner Circle 21",
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "ไลท์เวท",
@@ -207709,6 +213038,22 @@ const HISTORY  = [
   },
   {
     "fighter_id": "แรมบ๊อง-ส.เถระพัฒน์",
+    "result": "รอแข่งขัน",
+    "rules": "มวยไทย",
+    "decision": "",
+    "round": null,
+    "time": "",
+    "opponent": "ชาติพยัคฆ์ ศักดิ์สตูล",
+    "opponent_country": null,
+    "date": "2026-08-28",
+    "event": "The Inner Circle 28",
+    "promotion": "ONE",
+    "fight_rating_stars": 0,
+    "division": "ฟลายเวท",
+    "weigh_in_lbs": null
+  },
+  {
+    "fighter_id": "แรมบ๊อง-ส.เถระพัฒน์",
     "result": "ชนะ",
     "rules": "มวยไทย",
     "decision": "คะแนนไม่เอกฉันท์",
@@ -208261,7 +213606,7 @@ const HISTORY  = [
     "opponent": "ซินเทีย ฟลอเรส",
     "opponent_country": null,
     "date": "2026-06-26",
-    "event": "The Inner Circle 20",
+    "event": "ONE ลุมพินี 160 & The Inner Circle 20",
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "อะตอมเวท",
@@ -210565,7 +215910,7 @@ const HISTORY  = [
     "opponent": "มานซัวร์ มาลาชิเอฟ",
     "opponent_country": "รัสเซีย",
     "date": "2026-07-11",
-    "event": "The Inner Circle 21",
+    "event": "ONE ลุมพินี 161 & The Inner Circle 21",
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "สตรอว์เวท",
@@ -210933,7 +216278,7 @@ const HISTORY  = [
     "opponent": "จาง เป่ยเหมียน",
     "opponent_country": null,
     "date": "2026-07-17",
-    "event": "The Inner Circle 22",
+    "event": "ONE ลุมพินี 162 & The Inner Circle 22",
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "สตรอว์เวท",
@@ -214477,6 +219822,22 @@ const HISTORY  = [
   },
   {
     "fighter_id": "โมฮัมหมัด-ฮาบิบปูร์",
+    "result": "รอแข่งขัน",
+    "rules": "มวยไทย",
+    "decision": "",
+    "round": null,
+    "time": "",
+    "opponent": "วุฒิไกร ว.จักรวุฒิ",
+    "opponent_country": null,
+    "date": "2026-08-28",
+    "event": "ONE ลุมพินี 168",
+    "promotion": "ONE",
+    "fight_rating_stars": 0,
+    "division": "แบนตัมเวท",
+    "weigh_in_lbs": null
+  },
+  {
+    "fighter_id": "โมฮัมหมัด-ฮาบิบปูร์",
     "result": "แพ้",
     "rules": "มวยไทย",
     "decision": "",
@@ -215065,6 +220426,22 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "",
+    "weigh_in_lbs": null
+  },
+  {
+    "fighter_id": "โมฮาเหม็ด-เฟซาน",
+    "result": "รอแข่งขัน",
+    "rules": "มวยไทย",
+    "decision": "",
+    "round": null,
+    "time": "",
+    "opponent": "ฉลามขาว ศิษย์คุณมะ",
+    "opponent_country": null,
+    "date": "2026-08-28",
+    "event": "ONE ลุมพินี 168",
+    "promotion": "ONE",
+    "fight_rating_stars": 0,
+    "division": "แบนตัมเวท",
     "weigh_in_lbs": null
   },
   {
@@ -215877,7 +221254,7 @@ const HISTORY  = [
     "opponent": "ซาเมต อักเดเว",
     "opponent_country": null,
     "date": "2026-06-19",
-    "event": "The Inner Circle 19",
+    "event": "ONE ลุมพินี 159 & The Inner Circle 19",
     "promotion": "ONE",
     "fight_rating_stars": 4,
     "division": "เฮฟวีเวท",
