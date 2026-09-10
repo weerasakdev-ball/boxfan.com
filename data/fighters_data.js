@@ -1,11 +1,11 @@
 // สร้างอัตโนมัติโดย export_json.py — อย่าแก้ไขไฟล์นี้ด้วยมือ
 // ที่มา: C:\Users\Weera\Desktop\data\data
-// เวลา: 2026-09-10 09:23:35
+// เวลา: 2026-09-10 10:52:21
 
 const META     = {
-  "generated_at": "2026-09-10 09:23:35",
+  "generated_at": "2026-09-10 10:52:21",
   "fighter_count": 2180,
-  "fight_count": 7046,
+  "fight_count": 7016,
   "source_folder": "C:\\Users\\Weera\\Desktop\\data\\data"
 };
 const FIGHTERS = [
@@ -778,18 +778,18 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-08",
+    "last_updated": "2026-09-10",
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
     "championship_status": null,
     "titles_history": null,
-    "fight_count": 3,
+    "fight_count": 2,
     "record": {
       "win": 2,
       "loss": 0,
       "draw": 0,
-      "pending": 1,
+      "pending": 0,
       "total": 2
     }
   },
@@ -1354,7 +1354,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-07",
+    "last_updated": "2026-09-10",
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
@@ -2400,7 +2400,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-07",
+    "last_updated": "2026-09-10",
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
@@ -10994,18 +10994,18 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-08",
+    "last_updated": "2026-09-10",
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
     "championship_status": "แชมป์ปัจจุบัน",
     "titles_history": "แชมป์โลก",
-    "fight_count": 5,
+    "fight_count": 4,
     "record": {
       "win": 1,
       "loss": 3,
       "draw": 0,
-      "pending": 1,
+      "pending": 0,
       "total": 4
     }
   },
@@ -11726,7 +11726,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-07",
+    "last_updated": "2026-09-10",
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
@@ -11780,7 +11780,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-07",
+    "last_updated": "2026-09-10",
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
@@ -15122,7 +15122,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-07",
+    "last_updated": "2026-09-10",
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
@@ -16634,18 +16634,18 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-07",
+    "last_updated": "2026-09-10",
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
     "championship_status": null,
     "titles_history": null,
-    "fight_count": 1,
+    "fight_count": 0,
     "record": {
       "win": 0,
       "loss": 0,
       "draw": 0,
-      "pending": 1,
+      "pending": 0,
       "total": 0
     }
   },
@@ -16950,18 +16950,18 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-07",
+    "last_updated": "2026-09-10",
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
     "championship_status": null,
     "titles_history": null,
-    "fight_count": 1,
+    "fight_count": 0,
     "record": {
       "win": 0,
       "loss": 0,
       "draw": 0,
-      "pending": 1,
+      "pending": 0,
       "total": 0
     }
   },
@@ -18304,7 +18304,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-07",
+    "last_updated": "2026-09-10",
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
@@ -18880,18 +18880,18 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-07",
+    "last_updated": "2026-09-10",
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
     "championship_status": null,
     "titles_history": null,
-    "fight_count": 1,
+    "fight_count": 0,
     "record": {
       "win": 0,
       "loss": 0,
       "draw": 0,
-      "pending": 1,
+      "pending": 0,
       "total": 0
     }
   },
@@ -20392,7 +20392,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-07",
+    "last_updated": "2026-09-10",
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
@@ -22788,7 +22788,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-07",
+    "last_updated": "2026-09-10",
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
@@ -23832,7 +23832,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-07",
+    "last_updated": "2026-09-10",
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
@@ -26230,18 +26230,18 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-08",
+    "last_updated": "2026-09-10",
     "division": "สตรอว์เวท",
     "nickname": "The Northstar",
     "gender": "ชาย",
     "championship_status": "แชมป์ปัจจุบัน",
     "titles_history": "แชมป์โลก",
-    "fight_count": 4,
+    "fight_count": 3,
     "record": {
       "win": 3,
       "loss": 0,
       "draw": 0,
-      "pending": 1,
+      "pending": 0,
       "total": 3
     }
   },
@@ -29670,18 +29670,18 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-07",
+    "last_updated": "2026-09-10",
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
     "championship_status": null,
     "titles_history": null,
-    "fight_count": 1,
+    "fight_count": 0,
     "record": {
       "win": 0,
       "loss": 0,
       "draw": 0,
-      "pending": 1,
+      "pending": 0,
       "total": 0
     }
   },
@@ -30818,7 +30818,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-07",
+    "last_updated": "2026-09-10",
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
@@ -31444,18 +31444,18 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-07",
+    "last_updated": "2026-09-10",
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
     "championship_status": null,
     "titles_history": null,
-    "fight_count": 1,
+    "fight_count": 0,
     "record": {
       "win": 0,
       "loss": 0,
       "draw": 0,
-      "pending": 1,
+      "pending": 0,
       "total": 0
     }
   },
@@ -31706,7 +31706,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-07",
+    "last_updated": "2026-09-10",
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
@@ -42026,7 +42026,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-07",
+    "last_updated": "2026-09-10",
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
@@ -42132,7 +42132,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-07",
+    "last_updated": "2026-09-10",
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
@@ -42604,18 +42604,18 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-07",
+    "last_updated": "2026-09-10",
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
     "championship_status": null,
     "titles_history": null,
-    "fight_count": 1,
+    "fight_count": 0,
     "record": {
       "win": 0,
       "loss": 0,
       "draw": 0,
-      "pending": 1,
+      "pending": 0,
       "total": 0
     }
   },
@@ -43594,7 +43594,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-07",
+    "last_updated": "2026-09-10",
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
@@ -46672,7 +46672,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-07",
+    "last_updated": "2026-09-10",
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
@@ -48082,18 +48082,18 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-07",
+    "last_updated": "2026-09-10",
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
     "championship_status": null,
     "titles_history": null,
-    "fight_count": 1,
+    "fight_count": 0,
     "record": {
       "win": 0,
       "loss": 0,
       "draw": 0,
-      "pending": 1,
+      "pending": 0,
       "total": 0
     }
   },
@@ -48500,7 +48500,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-07",
+    "last_updated": "2026-09-10",
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
@@ -49490,16 +49490,18 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-09-10",
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
-    "fight_count": 1,
+    "championship_status": null,
+    "titles_history": null,
+    "fight_count": 0,
     "record": {
       "win": 0,
       "loss": 0,
       "draw": 0,
-      "pending": 1,
+      "pending": 0,
       "total": 0
     }
   },
@@ -54228,18 +54230,18 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-07",
+    "last_updated": "2026-09-10",
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
     "championship_status": null,
     "titles_history": null,
-    "fight_count": 1,
+    "fight_count": 0,
     "record": {
       "win": 0,
       "loss": 0,
       "draw": 0,
-      "pending": 1,
+      "pending": 0,
       "total": 0
     }
   },
@@ -58296,16 +58298,18 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-09-10",
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
-    "fight_count": 2,
+    "championship_status": null,
+    "titles_history": null,
+    "fight_count": 1,
     "record": {
       "win": 1,
       "loss": 0,
       "draw": 0,
-      "pending": 1,
+      "pending": 0,
       "total": 1
     }
   },
@@ -66520,18 +66524,18 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-04",
+    "last_updated": "2026-09-10",
     "division": "ฟลายเวท",
     "nickname": "King",
     "gender": "ชาย",
     "championship_status": "แชมป์ปัจจุบัน",
     "titles_history": "แชมป์โลก",
-    "fight_count": 7,
+    "fight_count": 6,
     "record": {
       "win": 5,
       "loss": 1,
       "draw": 0,
-      "pending": 1,
+      "pending": 0,
       "total": 6
     }
   },
@@ -68552,16 +68556,18 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-09-10",
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
-    "fight_count": 1,
+    "championship_status": null,
+    "titles_history": null,
+    "fight_count": 0,
     "record": {
       "win": 0,
       "loss": 0,
       "draw": 0,
-      "pending": 1,
+      "pending": 0,
       "total": 0
     }
   },
@@ -72408,18 +72414,18 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-04",
+    "last_updated": "2026-09-10",
     "division": "เฟเธอร์เวท",
     "nickname": "BeyBlade",
     "gender": "ชาย",
     "championship_status": "แชมป์ปัจจุบัน",
     "titles_history": "แชมป์โลก",
-    "fight_count": 3,
+    "fight_count": 2,
     "record": {
       "win": 2,
       "loss": 0,
       "draw": 0,
-      "pending": 1,
+      "pending": 0,
       "total": 2
     }
   },
@@ -73298,7 +73304,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-07",
+    "last_updated": "2026-09-10",
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
@@ -74346,7 +74352,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-07",
+    "last_updated": "2026-09-10",
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
@@ -76798,18 +76804,18 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-08",
+    "last_updated": "2026-09-10",
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": null,
     "championship_status": null,
     "titles_history": null,
-    "fight_count": 13,
+    "fight_count": 12,
     "record": {
       "win": 8,
       "loss": 4,
       "draw": 0,
-      "pending": 1,
+      "pending": 0,
       "total": 12
     }
   },
@@ -77898,18 +77904,18 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-07",
+    "last_updated": "2026-09-10",
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
     "championship_status": null,
     "titles_history": null,
-    "fight_count": 1,
+    "fight_count": 0,
     "record": {
       "win": 0,
       "loss": 0,
       "draw": 0,
-      "pending": 1,
+      "pending": 0,
       "total": 0
     }
   },
@@ -79044,16 +79050,18 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-09-10",
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
-    "fight_count": 3,
+    "championship_status": null,
+    "titles_history": null,
+    "fight_count": 2,
     "record": {
       "win": 1,
       "loss": 1,
       "draw": 0,
-      "pending": 1,
+      "pending": 0,
       "total": 2
     }
   },
@@ -83676,16 +83684,18 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-09-10",
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
-    "fight_count": 4,
+    "championship_status": null,
+    "titles_history": null,
+    "fight_count": 3,
     "record": {
       "win": 2,
       "loss": 1,
       "draw": 0,
-      "pending": 1,
+      "pending": 0,
       "total": 3
     }
   },
@@ -84976,18 +84986,18 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-07",
+    "last_updated": "2026-09-10",
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
     "championship_status": "แชมป์ปัจจุบัน",
     "titles_history": "แชมป์โลก",
-    "fight_count": 2,
+    "fight_count": 1,
     "record": {
       "win": 1,
       "loss": 0,
       "draw": 0,
-      "pending": 1,
+      "pending": 0,
       "total": 1
     }
   },
@@ -85290,18 +85300,18 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-07",
+    "last_updated": "2026-09-10",
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
     "championship_status": null,
     "titles_history": null,
-    "fight_count": 1,
+    "fight_count": 0,
     "record": {
       "win": 0,
       "loss": 0,
       "draw": 0,
-      "pending": 1,
+      "pending": 0,
       "total": 0
     }
   },
@@ -85502,7 +85512,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-08",
+    "last_updated": "2026-09-10",
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": null,
@@ -88318,18 +88328,18 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-08",
+    "last_updated": "2026-09-10",
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
     "championship_status": null,
     "titles_history": null,
-    "fight_count": 1,
+    "fight_count": 0,
     "record": {
       "win": 0,
       "loss": 0,
       "draw": 0,
-      "pending": 1,
+      "pending": 0,
       "total": 0
     }
   },
@@ -89728,18 +89738,18 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-07",
+    "last_updated": "2026-09-10",
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
     "championship_status": null,
     "titles_history": null,
-    "fight_count": 1,
+    "fight_count": 0,
     "record": {
       "win": 0,
       "loss": 0,
       "draw": 0,
-      "pending": 1,
+      "pending": 0,
       "total": 0
     }
   },
@@ -89782,7 +89792,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-07",
+    "last_updated": "2026-09-10",
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
@@ -90668,18 +90678,18 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-08",
+    "last_updated": "2026-09-10",
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
     "championship_status": null,
     "titles_history": null,
-    "fight_count": 5,
+    "fight_count": 4,
     "record": {
       "win": 3,
       "loss": 0,
       "draw": 1,
-      "pending": 1,
+      "pending": 0,
       "total": 4
     }
   },
@@ -91608,7 +91618,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-07",
+    "last_updated": "2026-09-10",
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
@@ -91870,18 +91880,18 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-07",
+    "last_updated": "2026-09-10",
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
     "championship_status": "แชมป์ปัจจุบัน",
     "titles_history": "แชมป์โลก",
-    "fight_count": 13,
+    "fight_count": 12,
     "record": {
       "win": 6,
       "loss": 4,
       "draw": 0,
-      "pending": 2,
+      "pending": 1,
       "total": 11
     }
   },
@@ -92756,7 +92766,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-07",
+    "last_updated": "2026-09-10",
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
@@ -93798,18 +93808,18 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-07",
+    "last_updated": "2026-09-10",
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
     "championship_status": null,
     "titles_history": null,
-    "fight_count": 1,
+    "fight_count": 0,
     "record": {
       "win": 0,
       "loss": 0,
       "draw": 0,
-      "pending": 1,
+      "pending": 0,
       "total": 0
     }
   },
@@ -94950,7 +94960,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-07",
+    "last_updated": "2026-09-10",
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
@@ -95732,18 +95742,18 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-08",
+    "last_updated": "2026-09-10",
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
     "championship_status": null,
     "titles_history": null,
-    "fight_count": 1,
+    "fight_count": 0,
     "record": {
       "win": 0,
       "loss": 0,
       "draw": 0,
-      "pending": 1,
+      "pending": 0,
       "total": 0
     }
   },
@@ -100894,18 +100904,18 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-07",
+    "last_updated": "2026-09-10",
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
     "championship_status": null,
     "titles_history": null,
-    "fight_count": 1,
+    "fight_count": 0,
     "record": {
       "win": 0,
       "loss": 0,
       "draw": 0,
-      "pending": 1,
+      "pending": 0,
       "total": 0
     }
   },
@@ -102306,7 +102316,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-07",
+    "last_updated": "2026-09-10",
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
@@ -102464,7 +102474,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-07",
+    "last_updated": "2026-09-10",
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
@@ -103718,16 +103728,18 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-09-10",
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
-    "fight_count": 1,
+    "championship_status": null,
+    "titles_history": null,
+    "fight_count": 0,
     "record": {
       "win": 0,
       "loss": 0,
       "draw": 0,
-      "pending": 1,
+      "pending": 0,
       "total": 0
     }
   },
@@ -110600,7 +110612,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-07",
+    "last_updated": "2026-09-10",
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
@@ -113258,7 +113270,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-07",
+    "last_updated": "2026-09-10",
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
@@ -114446,22 +114458,6 @@ const HISTORY  = [
     "weigh_in_lbs": null
   },
   {
-    "fighter_id": "กอไผ่-ส.ยิ่งเจริญการช่าง",
-    "result": "รอแข่งขัน",
-    "rules": "มวยไทย",
-    "decision": "",
-    "round": null,
-    "time": "",
-    "opponent": "เพชรบูรพา เพชรชมพู",
-    "opponent_country": null,
-    "date": null,
-    "event": "ONE ลุมพินี 168",
-    "promotion": "ONE",
-    "fight_rating_stars": 0,
-    "division": "แบนตัมเวท",
-    "weigh_in_lbs": 144.8
-  },
-  {
     "fighter_id": "กะทิ-ม.ราชภัฏโคราช",
     "result": "แพ้",
     "rules": "มวยไทย",
@@ -114774,7 +114770,7 @@ const HISTORY  = [
     "time": "",
     "opponent": "ทันทาวี อาเหม็ด",
     "opponent_country": null,
-    "date": "2026-09-07",
+    "date": "2026-09-11",
     "event": "ONE ลุมพินี 170",
     "promotion": "ONE",
     "fight_rating_stars": 0,
@@ -115590,7 +115586,7 @@ const HISTORY  = [
     "time": "",
     "opponent": "อเล็ก สิงห์มาวิน",
     "opponent_country": null,
-    "date": "2026-09-07",
+    "date": "2026-09-11",
     "event": "ONE ลุมพินี 170",
     "promotion": "ONE",
     "fight_rating_stars": 0,
@@ -125103,22 +125099,6 @@ const HISTORY  = [
   },
   {
     "fighter_id": "จิลเบิร์ต-นาคาทานี",
-    "result": "รอแข่งขัน",
-    "rules": "MMA",
-    "decision": "",
-    "round": null,
-    "time": "",
-    "opponent": "นาซาเรธ ลัลทาซูอาลา",
-    "opponent_country": null,
-    "date": "2026-09-05",
-    "event": "ONE Fight Night 47",
-    "promotion": "ONE",
-    "fight_rating_stars": 0,
-    "division": "สตรอว์เวท",
-    "weigh_in_lbs": null
-  },
-  {
-    "fighter_id": "จิลเบิร์ต-นาคาทานี",
     "result": "แพ้",
     "rules": "MMA",
     "decision": "",
@@ -125894,7 +125874,7 @@ const HISTORY  = [
     "time": "",
     "opponent": "ไม้ซางเงิน ส.ยิ่งเจริญการช่าง",
     "opponent_country": null,
-    "date": "2026-09-07",
+    "date": "2026-09-11",
     "event": "ONE ลุมพินี 170",
     "promotion": "ONE",
     "fight_rating_stars": 0,
@@ -126006,7 +125986,7 @@ const HISTORY  = [
     "time": "",
     "opponent": "เฟอร์รารี แฟร์เท็กซ์",
     "opponent_country": null,
-    "date": "2026-09-07",
+    "date": "2026-09-11",
     "event": "ONE ลุมพินี 170",
     "promotion": "ONE",
     "fight_rating_stars": 0,
@@ -129846,7 +129826,7 @@ const HISTORY  = [
     "time": "",
     "opponent": "เป็ก ปตท.ทองทวี",
     "opponent_country": null,
-    "date": "2026-09-07",
+    "date": "2026-09-11",
     "event": "ONE ลุมพินี 170",
     "promotion": "ONE",
     "fight_rating_stars": 0,
@@ -131534,22 +131514,6 @@ const HISTORY  = [
     "weigh_in_lbs": null
   },
   {
-    "fighter_id": "ซันเดย์-ส.สมบัติฟาร์ม",
-    "result": "รอแข่งขัน",
-    "rules": "มวยไทย",
-    "decision": "",
-    "round": null,
-    "time": "",
-    "opponent": "ก้องโพธิ์ชัย พีเค.แสนชัย",
-    "opponent_country": null,
-    "date": "2026-09-04",
-    "event": "ONE ลุมพินี 169",
-    "promotion": "ONE",
-    "fight_rating_stars": 0,
-    "division": "สตรอว์เวท",
-    "weigh_in_lbs": 117.6
-  },
-  {
     "fighter_id": "ซัลวาดอร์-เบลาซเกซ-บิยาเรโย",
     "result": "แพ้",
     "rules": "มวยไทย",
@@ -131740,22 +131704,6 @@ const HISTORY  = [
     "fight_rating_stars": 0,
     "division": "",
     "weigh_in_lbs": null
-  },
-  {
-    "fighter_id": "ซานจาร์-มานซูรอฟ",
-    "result": "รอแข่งขัน",
-    "rules": "MMA",
-    "decision": "",
-    "round": null,
-    "time": "",
-    "opponent": "รุสลัน บูลุต",
-    "opponent_country": null,
-    "date": "2026-09-04",
-    "event": "ONE ลุมพินี 169",
-    "promotion": "ONE",
-    "fight_rating_stars": 0,
-    "division": "สตรอว์เวท",
-    "weigh_in_lbs": 124.4
   },
   {
     "fighter_id": "ซานซาร์-ซาคิรอฟ",
@@ -132438,7 +132386,7 @@ const HISTORY  = [
     "time": "",
     "opponent": "ตุย ลิน ทัต",
     "opponent_country": null,
-    "date": "2026-09-07",
+    "date": "2026-09-11",
     "event": "ONE ลุมพินี 170",
     "promotion": "ONE",
     "fight_rating_stars": 0,
@@ -133259,22 +133207,6 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "",
-    "weigh_in_lbs": null
-  },
-  {
-    "fighter_id": "ซุปเปอร์บอล-ศิษย์-ช.",
-    "result": "รอแข่งขัน",
-    "rules": "มวยไทย",
-    "decision": "",
-    "round": null,
-    "time": "",
-    "opponent": "เพชรเมืองช้าง ส.คำสิงห์",
-    "opponent_country": null,
-    "date": "2026-08-28",
-    "event": "ONE ลุมพินี 168",
-    "promotion": "ONE",
-    "fight_rating_stars": 0,
-    "division": "ฟลายเวท",
     "weigh_in_lbs": null
   },
   {
@@ -135270,7 +135202,7 @@ const HISTORY  = [
     "time": "",
     "opponent": "เพชรสังวาลย์ ส.สมานการ์เม้นท์",
     "opponent_country": null,
-    "date": "2026-09-07",
+    "date": "2026-09-11",
     "event": "ONE ลุมพินี 170",
     "promotion": "ONE",
     "fight_rating_stars": 0,
@@ -137350,7 +137282,7 @@ const HISTORY  = [
     "time": "",
     "opponent": "ซาเวียร์ กอนซาเลส",
     "opponent_country": null,
-    "date": "2026-09-07",
+    "date": "2026-09-11",
     "event": "ONE ลุมพินี 170",
     "promotion": "ONE",
     "fight_rating_stars": 0,
@@ -139126,7 +139058,7 @@ const HISTORY  = [
     "time": "",
     "opponent": "กานต์ชัย จิตรเมืองนนท์",
     "opponent_country": null,
-    "date": "2026-09-07",
+    "date": "2026-09-11",
     "event": "ONE ลุมพินี 170",
     "promotion": "ONE",
     "fight_rating_stars": 0,
@@ -141739,22 +141671,6 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "",
-    "weigh_in_lbs": null
-  },
-  {
-    "fighter_id": "นาซาเรธ-ลัลทาซูอาลา",
-    "result": "รอแข่งขัน",
-    "rules": "MMA",
-    "decision": "",
-    "round": null,
-    "time": "",
-    "opponent": "จิลเบิร์ต นาคาทานี",
-    "opponent_country": null,
-    "date": "2026-09-05",
-    "event": "ONE Fight Night 47",
-    "promotion": "ONE",
-    "fight_rating_stars": 0,
-    "division": "สตรอว์เวท",
     "weigh_in_lbs": null
   },
   {
@@ -145054,22 +144970,6 @@ const HISTORY  = [
     "weigh_in_lbs": null
   },
   {
-    "fighter_id": "บาสตา-อับเดลมูเนม",
-    "result": "รอแข่งขัน",
-    "rules": "มวยไทย",
-    "decision": "",
-    "round": null,
-    "time": "",
-    "opponent": "ฟาคริดดิน คาซานอฟ",
-    "opponent_country": null,
-    "date": "2026-08-28",
-    "event": "The Inner Circle 28",
-    "promotion": "ONE",
-    "fight_rating_stars": 0,
-    "division": "ฟลายเวท",
-    "weigh_in_lbs": 126.4
-  },
-  {
     "fighter_id": "บาเบอร์ชอน-อิสรออิลอฟ",
     "result": "แพ้",
     "rules": "มวยไทย",
@@ -146214,7 +146114,7 @@ const HISTORY  = [
     "time": "",
     "opponent": "ฮัมซา ราชิด",
     "opponent_country": null,
-    "date": "2026-09-07",
+    "date": "2026-09-11",
     "event": "The Inner Circle 30",
     "promotion": "ONE",
     "fight_rating_stars": 0,
@@ -146862,22 +146762,6 @@ const HISTORY  = [
     "weigh_in_lbs": null
   },
   {
-    "fighter_id": "ปิ่นสยาม-ศิษย์บอลสกล",
-    "result": "รอแข่งขัน",
-    "rules": "คิกบ็อกซิง",
-    "decision": "",
-    "round": null,
-    "time": "",
-    "opponent": "ยอดภูผา ทีมเมห์ดีซาทูต",
-    "opponent_country": null,
-    "date": "2026-09-04",
-    "event": "ONE ลุมพินี 169",
-    "promotion": "ONE",
-    "fight_rating_stars": 0,
-    "division": "ฟลายเวท",
-    "weigh_in_lbs": 129.2
-  },
-  {
     "fighter_id": "ปิ่นเพชร-ม.ราชภัฏโคราช",
     "result": "แพ้",
     "rules": "มวยไทย",
@@ -147014,7 +146898,7 @@ const HISTORY  = [
     "time": "",
     "opponent": "ยอดเหล็กเพชร อ.อัจฉริยะ",
     "opponent_country": null,
-    "date": "2026-09-07",
+    "date": "2026-09-11",
     "event": "ONE ลุมพินี 170",
     "promotion": "ONE",
     "fight_rating_stars": 0,
@@ -157174,7 +157058,7 @@ const HISTORY  = [
     "time": "",
     "opponent": "ป้อมเพชร ป๋องสุพรรณ พีเค.",
     "opponent_country": null,
-    "date": "2026-09-07",
+    "date": "2026-09-11",
     "event": "ONE ลุมพินี 170",
     "promotion": "ONE",
     "fight_rating_stars": 0,
@@ -157590,7 +157474,7 @@ const HISTORY  = [
     "time": "",
     "opponent": "แรมโบ้เล็ก ฉ.อจลบุญ",
     "opponent_country": null,
-    "date": "2026-09-07",
+    "date": "2026-09-11",
     "event": "The Inner Circle 30",
     "promotion": "ONE",
     "fight_rating_stars": 0,
@@ -158108,22 +157992,6 @@ const HISTORY  = [
     "fight_rating_stars": 0,
     "division": "",
     "weigh_in_lbs": null
-  },
-  {
-    "fighter_id": "ยาสซีร์-ราสซาฟี",
-    "result": "รอแข่งขัน",
-    "rules": "มวยไทย",
-    "decision": "",
-    "round": null,
-    "time": "",
-    "opponent": "มงคลเดชเล็ก พ.พิมพ์อร",
-    "opponent_country": null,
-    "date": "2026-09-04",
-    "event": "The Inner Circle 29",
-    "promotion": "ONE",
-    "fight_rating_stars": 0,
-    "division": "แบนตัมเวท",
-    "weigh_in_lbs": 139.4
   },
   {
     "fighter_id": "ยี่-นัว",
@@ -158966,7 +158834,7 @@ const HISTORY  = [
     "time": "",
     "opponent": "ริคาร์โด ซานเชซ",
     "opponent_country": null,
-    "date": "2026-09-07",
+    "date": "2026-09-11",
     "event": "ONE ลุมพินี 170",
     "promotion": "ONE",
     "fight_rating_stars": 0,
@@ -161766,7 +161634,7 @@ const HISTORY  = [
     "time": "",
     "opponent": "ยูนิส อานาน",
     "opponent_country": null,
-    "date": "2026-09-07",
+    "date": "2026-09-11",
     "event": "ONE ลุมพินี 170",
     "promotion": "ONE",
     "fight_rating_stars": 0,
@@ -163726,22 +163594,6 @@ const HISTORY  = [
     "weigh_in_lbs": 136.8
   },
   {
-    "fighter_id": "รุสลัน-บูลุต",
-    "result": "รอแข่งขัน",
-    "rules": "MMA",
-    "decision": "",
-    "round": null,
-    "time": "",
-    "opponent": "ซานจาร์ มานซูรอฟ",
-    "opponent_country": null,
-    "date": "2026-09-04",
-    "event": "ONE ลุมพินี 169",
-    "promotion": "ONE",
-    "fight_rating_stars": 0,
-    "division": "สตรอว์เวท",
-    "weigh_in_lbs": 124.2
-  },
-  {
     "fighter_id": "รุสลัน-อาร์สลันเกเรฟ",
     "result": "แพ้",
     "rules": "MMA",
@@ -164086,7 +163938,7 @@ const HISTORY  = [
     "time": "",
     "opponent": "เฟรดดี แฮ็กเกอร์ตี",
     "opponent_country": null,
-    "date": "2026-09-07",
+    "date": "2026-09-11",
     "event": "The Inner Circle 30",
     "promotion": "ONE",
     "fight_rating_stars": 0,
@@ -164828,22 +164680,6 @@ const HISTORY  = [
     "fight_rating_stars": 0,
     "division": "",
     "weigh_in_lbs": null
-  },
-  {
-    "fighter_id": "ลามิน-ซูอายาห์",
-    "result": "รอแข่งขัน",
-    "rules": "มวยไทย",
-    "decision": "",
-    "round": null,
-    "time": "",
-    "opponent": "ดาเลียน ดาวอดี",
-    "opponent_country": null,
-    "date": null,
-    "event": "The Inner Circle 27",
-    "promotion": "ONE",
-    "fight_rating_stars": 0,
-    "division": "ไลท์เวท",
-    "weigh_in_lbs": 169.4
   },
   {
     "fighter_id": "ลามิน-อัล-ซูอายาห์",
@@ -169100,22 +168936,6 @@ const HISTORY  = [
     "fight_rating_stars": 0,
     "division": "",
     "weigh_in_lbs": null
-  },
-  {
-    "fighter_id": "ศิวนาถ-มาวินมวยไทย",
-    "result": "รอแข่งขัน",
-    "rules": "มวยไทย",
-    "decision": "",
-    "round": null,
-    "time": "",
-    "opponent": "ยานิส เบน อาลายา",
-    "opponent_country": null,
-    "date": "2026-09-04",
-    "event": "ONE ลุมพินี 169",
-    "promotion": "ONE",
-    "fight_rating_stars": 0,
-    "division": "ฟลายเวท",
-    "weigh_in_lbs": 128.4
   },
   {
     "fighter_id": "ศิษย์รัก-ป.ไผ่แดง",
@@ -173436,22 +173256,6 @@ const HISTORY  = [
     "fight_rating_stars": 0,
     "division": "สตรอว์เวท",
     "weigh_in_lbs": 122.4
-  },
-  {
-    "fighter_id": "หยกคีรี-ทีเอ็น.มวยไทย",
-    "result": "รอแข่งขัน",
-    "rules": "มวยไทย",
-    "decision": "",
-    "round": null,
-    "time": "",
-    "opponent": "เทพาธิป แชมป์ข้าวหมูทอด",
-    "opponent_country": null,
-    "date": "2026-08-21",
-    "event": "ONE ลุมพินี 167",
-    "promotion": "ONE",
-    "fight_rating_stars": 0,
-    "division": "สตรอว์เวท",
-    "weigh_in_lbs": null
   },
   {
     "fighter_id": "หยวน-ยี่",
@@ -180159,22 +179963,6 @@ const HISTORY  = [
   },
   {
     "fighter_id": "อาคีฟ-กูลูซาดา",
-    "result": "รอแข่งขัน",
-    "rules": "คิกบ็อกซิง",
-    "decision": "",
-    "round": null,
-    "time": "",
-    "opponent": "เฟอร์รารี แฟร์เท็กซ์",
-    "opponent_country": null,
-    "date": "2026-09-04",
-    "event": "The Inner Circle 29",
-    "promotion": "ONE",
-    "fight_rating_stars": 0,
-    "division": "แบนตัมเวท",
-    "weigh_in_lbs": null
-  },
-  {
-    "fighter_id": "อาคีฟ-กูลูซาดา",
     "result": "แพ้",
     "rules": "คิกบ็อกซิง",
     "decision": "คะแนนเอกฉันท์",
@@ -181820,22 +181608,6 @@ const HISTORY  = [
     "fight_rating_stars": 0,
     "division": "",
     "weigh_in_lbs": null
-  },
-  {
-    "fighter_id": "อาลี-อัล-กานานี",
-    "result": "รอแข่งขัน",
-    "rules": "มวยไทย",
-    "decision": "",
-    "round": null,
-    "time": "",
-    "opponent": "หยกคีรี ทีเอ็น.มวยไทย",
-    "opponent_country": null,
-    "date": null,
-    "event": "ONE ลุมพินี 167",
-    "promotion": "ONE",
-    "fight_rating_stars": 0,
-    "division": "สตรอว์เวท",
-    "weigh_in_lbs": 123.0
   },
   {
     "fighter_id": "อาลี-อัลกานานี",
@@ -186015,22 +185787,6 @@ const HISTORY  = [
   },
   {
     "fighter_id": "อีธาน-บร็อกเค็ต",
-    "result": "รอแข่งขัน",
-    "rules": "MMA",
-    "decision": "",
-    "round": null,
-    "time": "",
-    "opponent": "เปดรู ดูอาร์ต",
-    "opponent_country": null,
-    "date": "2026-09-04",
-    "event": "ONE ลุมพินี 169",
-    "promotion": "ONE",
-    "fight_rating_stars": 0,
-    "division": "เฟเธอร์เวท",
-    "weigh_in_lbs": null
-  },
-  {
-    "fighter_id": "อีธาน-บร็อกเค็ต",
     "result": "ชนะ",
     "rules": "MMA",
     "decision": "คะแนนเอกฉันท์",
@@ -187014,7 +186770,7 @@ const HISTORY  = [
     "time": "",
     "opponent": "ก้องชัย ไฉนดอนเมือง",
     "opponent_country": null,
-    "date": "2026-09-07",
+    "date": "2026-09-11",
     "event": "ONE ลุมพินี 170",
     "promotion": "ONE",
     "fight_rating_stars": 0,
@@ -188022,7 +187778,7 @@ const HISTORY  = [
     "time": "",
     "opponent": "ปตท. อภิชาติฟาร์ม",
     "opponent_country": null,
-    "date": "2026-09-07",
+    "date": "2026-09-11",
     "event": "The Inner Circle 30",
     "promotion": "ONE",
     "fight_rating_stars": 0,
@@ -190463,22 +190219,6 @@ const HISTORY  = [
   },
   {
     "fighter_id": "เก็บตก-สท.เชษฐ์บ้านเขว้า",
-    "result": "รอแข่งขัน",
-    "rules": "มวยไทย",
-    "decision": "",
-    "round": null,
-    "time": "",
-    "opponent": "เบิกฤกษ์ ลูกเมืองเพชร",
-    "opponent_country": null,
-    "date": "2026-08-28",
-    "event": "ONE ลุมพินี 168",
-    "promotion": "ONE",
-    "fight_rating_stars": 0,
-    "division": "อะตอมเวท",
-    "weigh_in_lbs": null
-  },
-  {
-    "fighter_id": "เก็บตก-สท.เชษฐ์บ้านเขว้า",
     "result": "ชนะ",
     "rules": null,
     "decision": "ตัดสินด้วยคะแนน",
@@ -191934,22 +191674,6 @@ const HISTORY  = [
     "weigh_in_lbs": null
   },
   {
-    "fighter_id": "เคียว-คาวากามิ",
-    "result": "รอแข่งขัน",
-    "rules": "คิกบ็อกซิง",
-    "decision": "",
-    "round": null,
-    "time": "",
-    "opponent": "ไอเซอาห์ บาดาทู",
-    "opponent_country": null,
-    "date": "2026-09-04",
-    "event": "The Inner Circle 29",
-    "promotion": "ONE",
-    "fight_rating_stars": 0,
-    "division": "ฟลายเวท",
-    "weigh_in_lbs": 129.2
-  },
-  {
     "fighter_id": "เคียแรน-จอบลิน",
     "result": "แพ้",
     "rules": "MMA",
@@ -192556,22 +192280,6 @@ const HISTORY  = [
     "fight_rating_stars": 0,
     "division": "เฟเธอร์เวท",
     "weigh_in_lbs": 154.2
-  },
-  {
-    "fighter_id": "เจสัน-เซดโดห์",
-    "result": "รอแข่งขัน",
-    "rules": "MMA",
-    "decision": "",
-    "round": null,
-    "time": "",
-    "opponent": "โกรุ คาวาซากิ",
-    "opponent_country": null,
-    "date": "2026-08-21",
-    "event": "ONE ลุมพินี 167",
-    "promotion": "ONE",
-    "fight_rating_stars": 0,
-    "division": "ฟลายเวท",
-    "weigh_in_lbs": null
   },
   {
     "fighter_id": "เจสัน-เซดโดห์",
@@ -197727,22 +197435,6 @@ const HISTORY  = [
   },
   {
     "fighter_id": "เทพาธิป-แชมป์ข้าวหมูทอด",
-    "result": "รอแข่งขัน",
-    "rules": "มวยไทย",
-    "decision": "",
-    "round": null,
-    "time": "",
-    "opponent": "หยกคีรี ทีเอ็น.มวยไทย",
-    "opponent_country": null,
-    "date": "2026-08-21",
-    "event": "ONE ลุมพินี 167",
-    "promotion": "ONE",
-    "fight_rating_stars": 0,
-    "division": "สตรอว์เวท",
-    "weigh_in_lbs": null
-  },
-  {
-    "fighter_id": "เทพาธิป-แชมป์ข้าวหมูทอด",
     "result": "ชนะ",
     "rules": "มวยไทย",
     "decision": "",
@@ -198638,22 +198330,6 @@ const HISTORY  = [
     "weigh_in_lbs": 111.0
   },
   {
-    "fighter_id": "เบิกฤกษ์-ลูกเมืองเพชร",
-    "result": "รอแข่งขัน",
-    "rules": "มวยไทย",
-    "decision": "",
-    "round": null,
-    "time": "",
-    "opponent": "เก็บตก สท.เชษฐ์บ้านเขว้า",
-    "opponent_country": null,
-    "date": "2026-08-28",
-    "event": "ONE ลุมพินี 168",
-    "promotion": "ONE",
-    "fight_rating_stars": 0,
-    "division": "อะตอมเวท",
-    "weigh_in_lbs": null
-  },
-  {
     "fighter_id": "เบียน-หยี",
     "result": "ชนะ",
     "rules": "MMA",
@@ -198715,22 +198391,6 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "",
-    "weigh_in_lbs": null
-  },
-  {
-    "fighter_id": "เปดรู-ดูอาร์ต",
-    "result": "รอแข่งขัน",
-    "rules": "MMA",
-    "decision": "",
-    "round": null,
-    "time": "",
-    "opponent": "อีธาน บร็อกเค็ต",
-    "opponent_country": null,
-    "date": "2026-09-04",
-    "event": "ONE ลุมพินี 169",
-    "promotion": "ONE",
-    "fight_rating_stars": 0,
-    "division": "เฟเธอร์เวท",
     "weigh_in_lbs": null
   },
   {
@@ -198822,7 +198482,7 @@ const HISTORY  = [
     "time": "",
     "opponent": "ชินิชิ วาตานาเบะ",
     "opponent_country": null,
-    "date": "2026-09-07",
+    "date": "2026-09-11",
     "event": "ONE ลุมพินี 170",
     "promotion": "ONE",
     "fight_rating_stars": 0,
@@ -201390,22 +201050,6 @@ const HISTORY  = [
     "weigh_in_lbs": 142.8
   },
   {
-    "fighter_id": "เพชรบูรพา-เพชรชมพู",
-    "result": "รอแข่งขัน",
-    "rules": "มวยไทย",
-    "decision": "",
-    "round": null,
-    "time": "",
-    "opponent": "กอไผ่ ส.ยิ่งเจริญการช่าง",
-    "opponent_country": null,
-    "date": null,
-    "event": "ONE ลุมพินี 168",
-    "promotion": "ONE",
-    "fight_rating_stars": 0,
-    "division": "แบนตัมเวท",
-    "weigh_in_lbs": 144.6
-  },
-  {
     "fighter_id": "เพชรบ้านไร่-มาวินมวยไทย",
     "result": "แพ้",
     "rules": "มวยไทย",
@@ -202622,22 +202266,6 @@ const HISTORY  = [
     "weigh_in_lbs": null
   },
   {
-    "fighter_id": "เพชรสยาม-ศูนย์สร้างทางตาก",
-    "result": "รอแข่งขัน",
-    "rules": "มวยไทย",
-    "decision": "",
-    "round": null,
-    "time": "",
-    "opponent": "สองแผ่นดิน ช.แก้ววิเศษ",
-    "opponent_country": null,
-    "date": "2026-09-04",
-    "event": "The Inner Circle 29",
-    "promotion": "ONE",
-    "fight_rating_stars": 0,
-    "division": "ฟลายเวท",
-    "weigh_in_lbs": 131.6
-  },
-  {
     "fighter_id": "เพชรสังวาลย์-ส.สมานการ์เม้นท์",
     "result": "รอแข่งขัน",
     "rules": "มวยไทย",
@@ -202646,7 +202274,7 @@ const HISTORY  = [
     "time": "",
     "opponent": "ดาบดำ ปตท.ทองทวี",
     "opponent_country": null,
-    "date": "2026-09-07",
+    "date": "2026-09-11",
     "event": "ONE ลุมพินี 170",
     "promotion": "ONE",
     "fight_rating_stars": 0,
@@ -203339,22 +202967,6 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "",
-    "weigh_in_lbs": null
-  },
-  {
-    "fighter_id": "เพชรเมืองช้าง-ส.คำสิงห์",
-    "result": "รอแข่งขัน",
-    "rules": "มวยไทย",
-    "decision": "",
-    "round": null,
-    "time": "",
-    "opponent": "ซุปเปอร์บอล ศิษย์ ช.",
-    "opponent_country": null,
-    "date": "2026-08-28",
-    "event": "ONE ลุมพินี 168",
-    "promotion": "ONE",
-    "fight_rating_stars": 0,
-    "division": "ฟลายเวท",
     "weigh_in_lbs": null
   },
   {
@@ -204118,7 +203730,7 @@ const HISTORY  = [
     "time": "",
     "opponent": "รุ่งเรืองเล็ก ทีเอ็น.มวยไทย",
     "opponent_country": null,
-    "date": "2026-09-07",
+    "date": "2026-09-11",
     "event": "The Inner Circle 30",
     "promotion": "ONE",
     "fight_rating_stars": 0,
@@ -204438,24 +204050,8 @@ const HISTORY  = [
     "time": "",
     "opponent": "จูลิโอ โลโบ",
     "opponent_country": null,
-    "date": "2026-09-07",
+    "date": "2026-09-11",
     "event": "ONE ลุมพินี 170",
-    "promotion": "ONE",
-    "fight_rating_stars": 0,
-    "division": "แบนตัมเวท",
-    "weigh_in_lbs": null
-  },
-  {
-    "fighter_id": "เฟอร์รารี-แฟร์เท็กซ์",
-    "result": "รอแข่งขัน",
-    "rules": "คิกบ็อกซิง",
-    "decision": "",
-    "round": null,
-    "time": "",
-    "opponent": "อาคีฟ กูลูซาดา",
-    "opponent_country": null,
-    "date": "2026-09-04",
-    "event": "The Inner Circle 29",
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "แบนตัมเวท",
@@ -205542,7 +205138,7 @@ const HISTORY  = [
     "time": "",
     "opponent": "เสกสรร อ.ขวัญเมือง",
     "opponent_country": null,
-    "date": "2026-09-07",
+    "date": "2026-09-11",
     "event": "The Inner Circle 30",
     "promotion": "ONE",
     "fight_rating_stars": 0,
@@ -206316,22 +205912,6 @@ const HISTORY  = [
     "fight_rating_stars": 0,
     "division": "",
     "weigh_in_lbs": null
-  },
-  {
-    "fighter_id": "เรียวยะ-อิไน",
-    "result": "รอแข่งขัน",
-    "rules": "คิกบ็อกซิง",
-    "decision": "",
-    "round": null,
-    "time": "",
-    "opponent": "แดเนียล วอเทียห์",
-    "opponent_country": null,
-    "date": "2026-09-04",
-    "event": "ONE ลุมพินี 169",
-    "promotion": "ONE",
-    "fight_rating_stars": 0,
-    "division": "เฟเธอร์เวท",
-    "weigh_in_lbs": 154.4
   },
   {
     "fighter_id": "เรียวสุเกะ-ฮอนดะ",
@@ -207462,7 +207042,7 @@ const HISTORY  = [
     "time": "",
     "opponent": "เมืองไทย พีเค.แสนชัย",
     "opponent_country": null,
-    "date": "2026-09-07",
+    "date": "2026-09-11",
     "event": "The Inner Circle 30",
     "promotion": "ONE",
     "fight_rating_stars": 0,
@@ -208556,22 +208136,6 @@ const HISTORY  = [
     "fight_rating_stars": 0,
     "division": "สตรอว์เวท",
     "weigh_in_lbs": 121
-  },
-  {
-    "fighter_id": "เหนือพยัคฆ์-พุฒประชาชื่น",
-    "result": "รอแข่งขัน",
-    "rules": "มวยไทย",
-    "decision": "",
-    "round": null,
-    "time": "",
-    "opponent": "เบิกฤกษ์ ลูกเมืองเพชร",
-    "opponent_country": null,
-    "date": null,
-    "event": "ONE ลุมพินี 168",
-    "promotion": "ONE",
-    "fight_rating_stars": 0,
-    "division": "อะตอมเวท",
-    "weigh_in_lbs": 109.8
   },
   {
     "fighter_id": "เหิร-ลูกสวน",
@@ -213694,22 +213258,6 @@ const HISTORY  = [
     "weigh_in_lbs": null
   },
   {
-    "fighter_id": "แดเนียล-วอเทียห์",
-    "result": "รอแข่งขัน",
-    "rules": "คิกบ็อกซิง",
-    "decision": "",
-    "round": null,
-    "time": "",
-    "opponent": "เรียวยะ อิไน",
-    "opponent_country": null,
-    "date": "2026-09-04",
-    "event": "ONE ลุมพินี 169",
-    "promotion": "ONE",
-    "fight_rating_stars": 0,
-    "division": "เฟเธอร์เวท",
-    "weigh_in_lbs": 154.4
-  },
-  {
     "fighter_id": "แดเนียล-วิลเลียมส์",
     "result": "แพ้",
     "rules": "มวยไทย",
@@ -215094,7 +214642,7 @@ const HISTORY  = [
     "time": "",
     "opponent": "ยอดไอคิว อ.พิมลศรี",
     "opponent_country": null,
-    "date": "2026-09-07",
+    "date": "2026-09-11",
     "event": "The Inner Circle 30",
     "promotion": "ONE",
     "fight_rating_stars": 0,
@@ -215302,7 +214850,7 @@ const HISTORY  = [
     "time": "",
     "opponent": "โลแกน ชาน",
     "opponent_country": null,
-    "date": "2026-09-07",
+    "date": "2026-09-11",
     "event": "The Inner Circle 30",
     "promotion": "ONE",
     "fight_rating_stars": 0,
@@ -216747,22 +216295,6 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "",
-    "weigh_in_lbs": null
-  },
-  {
-    "fighter_id": "โกรุ-คาวาซากิ",
-    "result": "รอแข่งขัน",
-    "rules": "MMA",
-    "decision": "",
-    "round": null,
-    "time": "",
-    "opponent": "เจสัน เซดโดห์",
-    "opponent_country": null,
-    "date": "2026-08-21",
-    "event": "ONE ลุมพินี 167",
-    "promotion": "ONE",
-    "fight_rating_stars": 0,
-    "division": "ฟลายเวท",
     "weigh_in_lbs": null
   },
   {
@@ -223462,7 +222994,7 @@ const HISTORY  = [
     "time": "",
     "opponent": "แสงอาทิตย์ ลูกทรายกองดิน",
     "opponent_country": null,
-    "date": "2026-09-07",
+    "date": "2026-09-11",
     "event": "The Inner Circle 30",
     "promotion": "ONE",
     "fight_rating_stars": 0,
@@ -226086,7 +225618,7 @@ const HISTORY  = [
     "time": "",
     "opponent": "จูราอิ อิชิอิ",
     "opponent_country": null,
-    "date": "2026-09-07",
+    "date": "2026-09-11",
     "event": "ONE ลุมพินี 170",
     "promotion": "ONE",
     "fight_rating_stars": 0,
