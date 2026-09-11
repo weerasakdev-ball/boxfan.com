@@ -1,9 +1,9 @@
 // สร้างอัตโนมัติโดย export_json.py — อย่าแก้ไขไฟล์นี้ด้วยมือ
 // ที่มา: C:\Users\Weera\Desktop\data\data
-// เวลา: 2026-09-11 08:43:37
+// เวลา: 2026-09-11 08:53:27
 
 const META     = {
-  "generated_at": "2026-09-11 08:43:37",
+  "generated_at": "2026-09-11 08:53:27",
   "fighter_count": 2181,
   "fight_count": 7018,
   "source_folder": "C:\\Users\\Weera\\Desktop\\data\\data"
@@ -15176,10 +15176,10 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-10",
+    "last_updated": "2026-09-11",
     "division": "อะตอมเวท",
     "nickname": null,
-    "gender": "ชาย",
+    "gender": null,
     "championship_status": null,
     "titles_history": null,
     "fight_count": 2,
