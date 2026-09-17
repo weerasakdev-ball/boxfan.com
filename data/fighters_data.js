@@ -1,11 +1,11 @@
 // สร้างอัตโนมัติโดย export_json.py — อย่าแก้ไขไฟล์นี้ด้วยมือ
 // ที่มา: C:\Users\Weera\Desktop\data\data
-// เวลา: 2026-09-13 11:42:37
+// เวลา: 2026-09-17 11:12:06
 
 const META     = {
-  "generated_at": "2026-09-13 11:42:37",
-  "fighter_count": 2200,
-  "fight_count": 7069,
+  "generated_at": "2026-09-17 11:12:06",
+  "fighter_count": 2197,
+  "fight_count": 7066,
   "source_folder": "C:\\Users\\Weera\\Desktop\\data\\data"
 };
 const FIGHTERS = [
@@ -308,10 +308,10 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-11",
+    "last_updated": "2026-09-17",
     "division": "แคชเวท",
     "nickname": null,
-    "gender": null,
+    "gender": "ชาย",
     "championship_status": null,
     "titles_history": "แชมป์โลก",
     "fight_count": 18,
@@ -5848,10 +5848,10 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-13",
+    "last_updated": "2026-09-17",
     "division": "สตรอว์เวท",
     "nickname": null,
-    "gender": null,
+    "gender": "ชาย",
     "championship_status": null,
     "titles_history": null,
     "fight_count": 1,
@@ -15292,10 +15292,10 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-13",
+    "last_updated": "2026-09-17",
     "division": "ฟลายเวท",
     "nickname": null,
-    "gender": null,
+    "gender": "ชาย",
     "championship_status": "แชมป์ปัจจุบัน",
     "titles_history": "แชมป์โลก",
     "fight_count": 7,
@@ -39082,10 +39082,10 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-13",
+    "last_updated": "2026-09-17",
     "division": "สตรอว์เวท",
     "nickname": null,
-    "gender": null,
+    "gender": "ชาย",
     "championship_status": null,
     "titles_history": null,
     "fight_count": 1,
@@ -40748,10 +40748,10 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-13",
+    "last_updated": "2026-09-17",
     "division": "ไลท์เวท",
     "nickname": null,
-    "gender": null,
+    "gender": "ชาย",
     "championship_status": null,
     "titles_history": null,
     "fight_count": 1,
@@ -43622,10 +43622,10 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-13",
+    "last_updated": "2026-09-17",
     "division": "สตรอว์เวท",
     "nickname": null,
-    "gender": null,
+    "gender": "ชาย",
     "championship_status": null,
     "titles_history": null,
     "fight_count": 1,
@@ -61200,10 +61200,10 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-13",
+    "last_updated": "2026-09-17",
     "division": "สตรอว์เวท",
     "nickname": null,
-    "gender": null,
+    "gender": "ชาย",
     "championship_status": null,
     "titles_history": null,
     "fight_count": 1,
@@ -68442,10 +68442,10 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-08",
+    "last_updated": "2026-09-17",
     "division": "แบนตัมเวท",
     "nickname": null,
-    "gender": null,
+    "gender": "ชาย",
     "championship_status": "แชมป์ปัจจุบัน",
     "titles_history": "แชมป์โลก",
     "fight_count": 3,
@@ -74084,10 +74084,10 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-13",
+    "last_updated": "2026-09-17",
     "division": "ไลท์เวท",
     "nickname": null,
-    "gender": null,
+    "gender": "ชาย",
     "championship_status": null,
     "titles_history": null,
     "fight_count": 1,
@@ -74242,10 +74242,10 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-13",
+    "last_updated": "2026-09-17",
     "division": "สตรอว์เวท",
     "nickname": null,
-    "gender": null,
+    "gender": "ชาย",
     "championship_status": null,
     "titles_history": null,
     "fight_count": 1,
@@ -76128,10 +76128,10 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-12",
+    "last_updated": "2026-09-17",
     "division": "ฟลายเวท",
     "nickname": null,
-    "gender": null,
+    "gender": "ชาย",
     "championship_status": null,
     "titles_history": null,
     "fight_count": 1,
@@ -86098,10 +86098,10 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-12",
+    "last_updated": "2026-09-17",
     "division": "อะตอมเวท",
     "nickname": null,
-    "gender": null,
+    "gender": "ชาย",
     "championship_status": null,
     "titles_history": "แชมป์ปูนเสือ",
     "fight_count": 28,
@@ -95974,10 +95974,10 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-13",
+    "last_updated": "2026-09-17",
     "division": "ฟลายเวท",
     "nickname": null,
-    "gender": null,
+    "gender": "ชาย",
     "championship_status": "แชมป์ปัจจุบัน",
     "titles_history": "แชมป์โลก",
     "fight_count": 15,
@@ -101138,10 +101138,10 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-10",
+    "last_updated": "2026-09-17",
     "division": "เฟเธอร์เวท",
     "nickname": null,
-    "gender": null,
+    "gender": "ชาย",
     "championship_status": null,
     "titles_history": "แชมป์โลก",
     "fight_count": 1,
@@ -105528,10 +105528,10 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-13",
+    "last_updated": "2026-09-17",
     "division": "ฟลายเวท",
     "nickname": null,
-    "gender": null,
+    "gender": "ชาย",
     "championship_status": null,
     "titles_history": null,
     "fight_count": 1,
@@ -114630,115 +114630,7 @@ const FIGHTERS = [
     }
   },
   {
-    "id": "“Little-Piranha”-ยูยะ-วากามัตสึ",
-    "slug": "“Little-Piranha”-ยูยะ-วากามัตสึ",
-    "name_th": "“Little Piranha” ยูยะ วากามัตสึ",
-    "name_en": null,
-    "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
-    "height_cm": null,
-    "height_ft_in": null,
-    "country": null,
-    "age": null,
-    "team": null,
-    "level": "",
-    "fight_purse": {
-      "amount_thb": null,
-      "currency": "THB",
-      "note": null
-    },
-    "market_value": {
-      "amount_thb": null,
-      "currency": "THB",
-      "note": null
-    },
-    "profile_url": null,
-    "thboxing_url": null,
-    "image_filename": "“Little-Piranha”-ยูยะ-วากามัตสึ",
-    "strike_stats": {
-      "strikes_per_minute": {
-        "head": 0,
-        "body": 0,
-        "leg": 0
-      },
-      "overall_strikes": {
-        "head": 0,
-        "body": 0,
-        "leg": 0
-      }
-    },
-    "last_updated": "2026-09-13",
-    "division": "ฟลายเวท",
-    "nickname": null,
-    "gender": null,
-    "championship_status": null,
-    "titles_history": null,
-    "fight_count": 1,
-    "record": {
-      "win": 1,
-      "loss": 0,
-      "draw": 0,
-      "pending": 0,
-      "total": 1
-    }
-  },
-  {
-    "id": "“Star-Of-The-SHIBUYA”-ฮิวมะ-ฮิตาชิ",
-    "slug": "“Star-Of-The-SHIBUYA”-ฮิวมะ-ฮิตาชิ",
-    "name_th": "“Star Of The SHIBUYA” ฮิวมะ ฮิตาชิ",
-    "name_en": null,
-    "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
-    "height_cm": null,
-    "height_ft_in": null,
-    "country": null,
-    "age": null,
-    "team": null,
-    "level": "",
-    "fight_purse": {
-      "amount_thb": null,
-      "currency": "THB",
-      "note": null
-    },
-    "market_value": {
-      "amount_thb": null,
-      "currency": "THB",
-      "note": null
-    },
-    "profile_url": null,
-    "thboxing_url": null,
-    "image_filename": "“Star-Of-The-SHIBUYA”-ฮิวมะ-ฮิตาชิ",
-    "strike_stats": {
-      "strikes_per_minute": {
-        "head": 0,
-        "body": 0,
-        "leg": 0
-      },
-      "overall_strikes": {
-        "head": 0,
-        "body": 0,
-        "leg": 0
-      }
-    },
-    "last_updated": "2026-09-13",
-    "division": "ฟลายเวท",
-    "nickname": null,
-    "gender": null,
-    "championship_status": null,
-    "titles_history": null,
-    "fight_count": 1,
-    "record": {
-      "win": 0,
-      "loss": 1,
-      "draw": 0,
-      "pending": 0,
-      "total": 1
-    }
-  },
-  {
-    "id": "“The-Blitz”-ยูกิ-ทานากะ",
+    "id": "ยูกิ-ทานากะ",
     "slug": "“The-Blitz”-ยูกิ-ทานากะ",
     "name_th": "“The Blitz” ยูกิ ทานากะ",
     "name_en": null,
@@ -114786,60 +114678,6 @@ const FIGHTERS = [
     "record": {
       "win": 1,
       "loss": 0,
-      "draw": 0,
-      "pending": 0,
-      "total": 1
-    }
-  },
-  {
-    "id": "“White-Lion”-วิลลี-ฟาน-รอยเอน",
-    "slug": "“White-Lion”-วิลลี-ฟาน-รอยเอน",
-    "name_th": "“White Lion” วิลลี ฟาน รอยเอน",
-    "name_en": null,
-    "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
-    "height_cm": null,
-    "height_ft_in": null,
-    "country": null,
-    "age": null,
-    "team": null,
-    "level": "",
-    "fight_purse": {
-      "amount_thb": null,
-      "currency": "THB",
-      "note": null
-    },
-    "market_value": {
-      "amount_thb": null,
-      "currency": "THB",
-      "note": null
-    },
-    "profile_url": null,
-    "thboxing_url": null,
-    "image_filename": "“White-Lion”-วิลลี-ฟาน-รอยเอน",
-    "strike_stats": {
-      "strikes_per_minute": {
-        "head": 0,
-        "body": 0,
-        "leg": 0
-      },
-      "overall_strikes": {
-        "head": 0,
-        "body": 0,
-        "leg": 0
-      }
-    },
-    "last_updated": "2026-09-13",
-    "division": "ฟลายเวท",
-    "nickname": null,
-    "gender": null,
-    "championship_status": null,
-    "titles_history": null,
-    "fight_count": 1,
-    "record": {
-      "win": 0,
-      "loss": 1,
       "draw": 0,
       "pending": 0,
       "total": 1
@@ -159485,6 +159323,22 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "",
+    "weigh_in_lbs": null
+  },
+  {
+    "fighter_id": "ยูกิ-ทานากะ",
+    "result": "ชนะ",
+    "rules": "คิกบ็อกซิง",
+    "decision": "น็อกเอาต์",
+    "round": 1,
+    "time": "1:07",
+    "opponent": "ไอจิ",
+    "opponent_country": null,
+    "date": "2026-09-12",
+    "event": "รออัปเดตรายการ",
+    "promotion": null,
+    "fight_rating_stars": 0,
+    "division": "เฟเธอร์เวท",
     "weigh_in_lbs": null
   },
   {
@@ -227885,70 +227739,6 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "อะตอมเวท",
-    "weigh_in_lbs": null
-  },
-  {
-    "fighter_id": "“Little-Piranha”-ยูยะ-วากามัตสึ",
-    "result": "ชนะ",
-    "rules": "MMA",
-    "decision": "ทีเคโอ",
-    "round": 2,
-    "time": "4:34",
-    "opponent": "“White Lion” วิลลี ฟาน รอยเอน",
-    "opponent_country": null,
-    "date": "2026-09-12",
-    "event": "รออัปเดตรายการ",
-    "promotion": null,
-    "fight_rating_stars": 0,
-    "division": "ฟลายเวท",
-    "weigh_in_lbs": null
-  },
-  {
-    "fighter_id": "“Star-Of-The-SHIBUYA”-ฮิวมะ-ฮิตาชิ",
-    "result": "แพ้",
-    "rules": "คิกบ็อกซิง",
-    "decision": "คะแนนเอกฉันท์",
-    "round": null,
-    "time": "",
-    "opponent": "ฮิว",
-    "opponent_country": null,
-    "date": "2026-09-12",
-    "event": "รออัปเดตรายการ",
-    "promotion": null,
-    "fight_rating_stars": 0,
-    "division": "ฟลายเวท",
-    "weigh_in_lbs": null
-  },
-  {
-    "fighter_id": "“The-Blitz”-ยูกิ-ทานากะ",
-    "result": "ชนะ",
-    "rules": "คิกบ็อกซิง",
-    "decision": "น็อกเอาต์",
-    "round": 1,
-    "time": "1:07",
-    "opponent": "ไอจิ",
-    "opponent_country": null,
-    "date": "2026-09-12",
-    "event": "รออัปเดตรายการ",
-    "promotion": null,
-    "fight_rating_stars": 0,
-    "division": "เฟเธอร์เวท",
-    "weigh_in_lbs": null
-  },
-  {
-    "fighter_id": "“White-Lion”-วิลลี-ฟาน-รอยเอน",
-    "result": "แพ้",
-    "rules": "MMA",
-    "decision": "ทีเคโอ",
-    "round": 2,
-    "time": "4:34",
-    "opponent": "“Little Piranha” ยูยะ วากามัตสึ",
-    "opponent_country": null,
-    "date": "2026-09-12",
-    "event": "รออัปเดตรายการ",
-    "promotion": null,
-    "fight_rating_stars": 0,
-    "division": "ฟลายเวท",
     "weigh_in_lbs": null
   }
 ];
