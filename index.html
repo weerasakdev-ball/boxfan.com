@@ -481,7 +481,7 @@ footer{background:var(--footer-bg);border-top:1px solid var(--line);padding:72px
   .hero-stats{margin-top:38px}.hstat{padding:18px 16px;gap:12px}.hstat-ic{width:38px;height:38px}.hstat b{font-size:21px}.hstat span{font-size:11.5px}
   .main-grid{padding:90px var(--pad) 60px;gap:22px}
   .rank-card-hd{padding:24px 20px 0}.rank-card-hd .sec-title{font-size:22px}.tabs{padding:18px 20px}
-  .rank-table{min-width:0}.rank-table .col-camp,.rank-table .col-div,.rank-table .col-form{display:none}.rank-table td,.rank-table th{padding:13px 8px}
+  .rank-table{min-width:0}.rank-table .col-camp,.rank-table .col-div,.rank-table .col-form,.rank-table .col-fights{display:none}.rank-table td,.rank-table th{padding:13px 8px}
   .fighter-cell{min-width:0}.fighter-cell .ph-avatar{width:40px;height:40px}.fighter-name{font-size:14px}
   .leaders-card{padding:24px 20px}.leaders-grid{grid-template-columns:1fr}
   .leader-col{padding:0;border-right:none}.leader-col:nth-child(2n){padding-left:0}.leader-col:nth-child(n+2){margin-top:22px;padding-top:22px;border-top:1px solid var(--line)}
@@ -686,9 +686,9 @@ footer{background:var(--footer-bg);border-top:1px solid var(--line);padding:72px
       <div class="rank-scroll">
         <table class="rank-table">
           <thead><tr>
-            <th style="width:58px">อันดับ</th><th>นักมวย</th><th class="col-camp">ค่าย</th><th class="col-div">รุ่น</th><th class="center">สถิติ</th><th class="center col-form">เปลี่ยนแปลง</th><th class="center">คะแนน</th>
+            <th style="width:58px">อันดับ</th><th>นักมวย</th><th class="col-camp">ค่าย</th><th class="col-div">รุ่น</th><th class="center col-fights">ไฟต์</th><th class="center">สถิติ</th><th class="center col-form">เปลี่ยนแปลง</th><th class="center">คะแนน</th>
           </tr></thead>
-          <tbody id="rank-body"><tr><td colspan="7" style="padding:20px"><div class="skel" style="height:40px;margin-bottom:10px"></div><div class="skel" style="height:40px;margin-bottom:10px"></div><div class="skel" style="height:40px"></div></td></tr></tbody>
+          <tbody id="rank-body"><tr><td colspan="8" style="padding:20px"><div class="skel" style="height:40px;margin-bottom:10px"></div><div class="skel" style="height:40px;margin-bottom:10px"></div><div class="skel" style="height:40px"></div></td></tr></tbody>
         </table>
       </div>
       <button class="show-more" id="show-more" style="display:none">แสดงเพิ่ม <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
@@ -929,13 +929,43 @@ footer{background:var(--footer-bg);border-top:1px solid var(--line);padding:72px
   var DIV_RANGE={atom:'ต่ำกว่า 115 ป.',straw:'115–125 ป.',fly:'125–135 ป.',bantam:'135–145 ป.',feather:'145–155 ป.',light:'155–170 ป.',welter:'170–185 ป.',middle:'185–205 ป.',lightheavy:'205–225 ป.',heavy:'225+ ป.',catch:''};
   function wtRange(div){var k=divKey(div);return (k&&DIV_RANGE[k])||'';}
 
+  /* จำแนก "ศึก" จาก event field เป็นหลัก (promotion field ในข้อมูลถูก tag "ONE" ทุกไฟต์
+     จึงใช้ไม่ได้) — matcher รับ h (fight object) ทั้งก้อน เพื่อดูได้ทั้ง event+promotion */
+  /* ตรวจว่าเป็น event หลักของ ONE จริง (ONE ลุมพินี N, ONE Fight Night N, ONE N, ONE X, ONE ซามูไร N, วันแชมเปียนชิพ...)
+     ครอบคลุมทั้ง combined events เช่น "ONE ลุมพินี 155 & The Inner Circle 15" — ก็เป็น ONE เพราะเป็นการ์ดหลัก */
+  function isOneMainEvent(ev){
+    return /\bONE\s+(ลุมพินี|Fight|ซามูไร|X\b|FN|\d)|วันแชมเปียนชิพ/i.test(ev);
+  }
+  function matchOne(h){
+    var ev = String(h.event||'');
+    /* ถ้า event เป็นของโปรโมเตอร์ไทยอื่นชัดเจน → ไม่ใช่ ONE */
+    if (/7\s?สี|ช่อง\s?7/i.test(ev)) return false;
+    if (/ช้างมวยไทย/i.test(ev)) return false;
+    if (/ท่อน้ำไทย/i.test(ev)) return false;
+    if (/มวยไทยวิถีถิ่นไทย|มวยไทย\s?มรดก/i.test(ev)) return false;
+    /* combined "ONE ลุมพินี X & The Inner Circle Y" ให้เป็น ONE (การ์ดหลัก) — ตรวจก่อน Inner exclusion */
+    if (isOneMainEvent(ev)) return true;
+    if (/Inner\s+Circle/i.test(ev)) return false;
+    /* fallback: ชื่อ event เป็น title ของ ONE main event (First Strike, No Surrender, LIGHTS OUT ฯลฯ)
+       — ในข้อมูลชุดนี้ทุกไฟต์ tag promotion=ONE ให้เชื่อ tag สำหรับกรณี fallback เท่านั้น */
+    return /\bone\b/i.test(String(h.promotion||''));
+  }
   var PROMOS=[
-    {key:'all',label:'ทั้งหมด',match:function(){return true;}},
-    {key:'one',label:'ONE',match:function(p){return /one/i.test(p);}},
-    {key:'rws',label:'RWS',match:function(p){return /rws/i.test(p);}},
-    {key:'fairtex',label:'Fairtex Fight',match:function(p){return /fairtex|แฟร์เท็กซ์/i.test(p);}},
-    {key:'ch7',label:'มวยไทย 7 สี',match:function(p){return /7\s?สี|ช่อง\s?7/i.test(p);}}
+    {key:'all',     label:'ทั้งหมด',        match:function(){return true;}},
+    {key:'one',     label:'ONE',            match:matchOne},
+    {key:'ch7',     label:'มวยไทย 7 สี',    match:function(h){return /7\s?สี|ช่อง\s?7/i.test(h.event||'');}},
+    {key:'chang',   label:'ช้างมวยไทย',     match:function(h){return /ช้างมวยไทย/i.test(h.event||'');}},
+    /* ท่อน้ำไทย TKO: ตัด "ช้างมวยไทยเกียรติเพชร" ออกก่อน (อยู่ bucket chang) */
+    {key:'tko',     label:'ท่อน้ำไทย TKO',  match:function(h){var ev=h.event||'';return !/ช้างมวยไทย/i.test(ev) && /ท่อน้ำไทย|ทีเคโอ|\bTKO\b/i.test(ev);}},
+    /* Inner Circle: เฉพาะ Inner Circle ล้วนๆ (ไม่ใช่ combined กับ ONE ลุมพินี) */
+    {key:'inner',   label:'Inner Circle',   match:function(h){var ev=h.event||'';return /Inner\s+Circle/i.test(ev) && !isOneMainEvent(ev);}},
+    /* มวยไทยดั้งเดิม: วิถีถิ่นไทย + มรดกคนไทย */
+    {key:'daedoem', label:'มวยไทยดั้งเดิม', match:function(h){return /มวยไทยวิถีถิ่นไทย|มวยไทย\s?มรดก/i.test(h.event||'');}},
+    {key:'rws',     label:'RWS',            match:function(h){return /\brws\b/i.test(h.event||'')||/\brws\b/i.test(h.promotion||'');}},
+    {key:'fairtex', label:'Fairtex',        match:function(h){return /\bfairtex\b|แฟร์เท็กซ์/i.test((h.event||'')+' '+(h.promotion||''));}}
   ];
+  /* ขั้นต่ำจำนวนไฟต์ในศึกที่เลือก จึงจะติดอันดับ (กันคนชก 1-2 ครั้งลอยขึ้นอันดับ 1) */
+  var MIN_FIGHTS_SCOPED = 3;
   function promoDef(k){for(var i=0;i<PROMOS.length;i++)if(PROMOS[i].key===k)return PROMOS[i];return PROMOS[0];}
 
   var FMAP={},FBYNAME={};
@@ -976,17 +1006,19 @@ footer{background:var(--footer-bg);border-top:1px solid var(--line);padding:72px
     return {n:n,w:w,l:l,d:d,hs:past,score:calcScore(past),streak:streak,
             lastDate:past.length?past[0].date:'',wr:n?Math.round(w/n*100):0};
   }
-  function scopedHist(f,def,year){
+  function scopedHist(f,def,year,divKeyFilter){
     return hist(f.id).filter(function(h){
       if(h.result_type==='upcoming'||!h.date) return false;
-      if(def && !def.match(h.promotion||'')) return false;
+      if(def && !def.match(h)) return false;
       if(year && String(h.date).slice(0,4)!==year) return false;
+      /* กรองตามรุ่นน้ำหนัก — ถ้าไฟต์ไม่ระบุรุ่น ถือว่าเป็นรุ่นปัจจุบันของนักมวย */
+      if(divKeyFilter && divKey(h.division || f.division) !== divKeyFilter) return false;
       return true;
     });
   }
 
   function statsInPromo(f,def){
-    var hs=hist(f.id).filter(function(h){return def.match(h.promotion||'');});
+    var hs=hist(f.id).filter(function(h){return def.match(h);});
     var w=0,l=0,d=0;
     hs.forEach(function(h){if(h.result_type==='win')w++;else if(h.result_type==='loss')l++;else if(h.result_type==='draw')d++;});
     return{n:hs.length,hs:hs,score:calcScore(hs),w:w,l:l,d:d};
@@ -1117,8 +1149,10 @@ footer{background:var(--footer-bg);border-top:1px solid var(--line);padding:72px
       var st=statsFrom(scopedHist(f,(def.key==='all'?null:def),''));
       return {f:f,score:st.score,w:st.w,l:st.l,n:st.n,hs:st.hs,streak:st.streak,last:st.lastDate};
     });
-    /* ไม่มีไฟต์ในขอบเขตที่เลือก = ไม่มีคะแนน ไม่ติดอันดับ */
-    if(scoped) rows=rows.filter(function(r){return r.n>0;});
+    /* ไม่มีไฟต์ในขอบเขต = ไม่ติดอันดับ
+       เมื่อเลือกศึก ต้องมีไฟต์ในศึกนั้นอย่างน้อย MIN_FIGHTS_SCOPED ไฟต์
+       (กันเคสชก 1 ครั้งชนะแล้วลอยขึ้นอันดับ 1) */
+    if(scoped) rows=rows.filter(function(r){return r.n>=MIN_FIGHTS_SCOPED;});
     rows.sort(function(a,b){
       if(b.score!==a.score) return b.score-a.score;
       return String(b.last||'').localeCompare(String(a.last||''));
@@ -1137,11 +1171,11 @@ footer{background:var(--footer-bg);border-top:1px solid var(--line);padding:72px
     if(sn){
       var gTxt = 'เฉพาะ<b style="color:var(--gold-text)">'+rkState.gender+'</b> · ';
       sn.innerHTML = gTxt + ((rkState.promo!=='all')
-        ? 'กำลังดูเฉพาะศึก <b style="color:var(--gold-text)">'+esc(def.label)+'</b> — คะแนนนับจากไฟต์ในศึกนี้เท่านั้น'
+        ? 'กำลังดูเฉพาะศึก <b style="color:var(--gold-text)">'+esc(def.label)+'</b> — คะแนนนับจากไฟต์ในศึกนี้เท่านั้น · ต้องมีอย่างน้อย '+MIN_FIGHTS_SCOPED+' ไฟต์ในศึกนี้จึงจะติดอันดับ'
         : 'ผลงานรวมทั้งหมดตลอดอาชีพ (ชนะ +3 · เสมอ 0 · แพ้ -3) — เลือกศึกด้านบนเพื่อดูว่าใครแรงที่สุดในแต่ละเวที');
     }
     if(!rows.length){
-      body.innerHTML='<tr><td colspan="7" class="rt-empty"><div class="empty-state">'+ICON_CAL+'<p>ไม่พบนักมวยตามเงื่อนไข '+esc(def.label)+'</p><div class="hint">ลองล้างตัวกรอง หรือเลือกศึกอื่น — เมื่อมีข้อมูล อันดับจะแสดงที่นี่โดยอัตโนมัติ</div></div></td></tr>';
+      body.innerHTML='<tr><td colspan="8" class="rt-empty"><div class="empty-state">'+ICON_CAL+'<p>ไม่พบนักมวยตามเงื่อนไข '+esc(def.label)+'</p><div class="hint">ลองล้างตัวกรอง หรือเลือกศึกอื่น — เมื่อมีข้อมูล อันดับจะแสดงที่นี่โดยอัตโนมัติ</div></div></td></tr>';
       sm.style.display='none';
       return;
     }
@@ -1155,6 +1189,7 @@ footer{background:var(--footer-bg);border-top:1px solid var(--line);padding:72px
         '<td><div class="fighter-cell">'+avatar(f)+'<div><div class="fighter-name">'+esc(f.name_th)+'</div><div class="fighter-sub">'+esc(f.team||'')+'</div></div></div></td>'+
         '<td class="col-camp"><span style="font-size:13.5px;color:var(--sub)">'+esc(f.team||'—')+'</span></td>'+
         '<td class="col-div td-div">'+esc(f.division||'—')+(range?'<span class="wt">('+range+')</span>':'')+'</td>'+
+        '<td class="center col-fights" style="font-family:Inter;color:var(--sub);font-weight:600">'+r.n+'</td>'+
         '<td class="center"><span class="td-record">'+rec+'</span></td>'+
         '<td class="center col-form">'+trendCell(r.hs)+'</td>'+
         '<td class="center td-score">'+r.score.toLocaleString('en-US')+'</td>'+
@@ -1518,19 +1553,27 @@ footer{background:var(--footer-bg);border-top:1px solid var(--line);padding:72px
     }).length;
 
     grid.innerHTML=STANDARD_DIVS.map(function(d){
+      /* คิดคะแนน/สถิติเฉพาะไฟต์ในรุ่นนี้ — ไม่เอาคะแนนจากรุ่นอื่นในอาชีพมาปน
+         นักมวยที่ไม่มีไฟต์ในรุ่นนี้จะไม่ถูกจัดอันดับในแผงนี้ */
       var list=FIGHTERS.filter(function(f){
         return divKey(f.division)===d.key && (f.gender||'')===g;
-      })
-        .sort(function(a,b){ if(b._score!==a._score)return b._score-a._score; return String(b._lastDate||'').localeCompare(String(a._lastDate||'')); });
+      }).map(function(f){
+        var st=statsFrom(scopedHist(f,null,'',d.key));
+        return {f:f, score:st.score, w:st.w, l:st.l, n:st.n, lastDate:st.lastDate};
+      }).filter(function(r){ return r.n>0; })
+        .sort(function(a,b){
+          if(b.score!==a.score) return b.score-a.score;
+          return String(b.lastDate||'').localeCompare(String(a.lastDate||''));
+        });
       var range=(DIV_RANGE[d.key]||'');
-      var rowsHtml=list.slice(0,15).map(function(f,i){
-        var rk=i+1;
+      var rowsHtml=list.slice(0,15).map(function(r,i){
+        var f=r.f, rk=i+1;
         return '<div class="dp-row'+(i>=5?' extra':'')+'" onclick="location.href=\''+fighterUrl(f)+'\'">'+
           '<span class="dp-rk'+(rk<=3?' g':'')+'">'+rk+'</span>'+
           avatar(f)+
           '<div class="dp-nm"><div class="n">'+esc(f.name_th)+'</div><div class="t">'+fl(f.country)+' '+esc(f.team||'')+'</div></div>'+
-          '<span class="dp-rec"><b>'+(f.total_wins||0)+'</b>-<i>'+(f.total_losses||0)+'</i></span>'+
-          '<span class="dp-pts">'+f._score+'</span>'+
+          '<span class="dp-rec"><b>'+r.w+'</b>-<i>'+r.l+'</i></span>'+
+          '<span class="dp-pts">'+r.score+'</span>'+
         '</div>';
       }).join('');
       var hasExtra=list.length>5;

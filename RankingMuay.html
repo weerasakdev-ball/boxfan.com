@@ -917,15 +917,34 @@ footer{background:var(--footer-bg);border-top:1px solid var(--line);padding:72px
   /* ═══════════════════════════════════════════════════════
      2) Filter definitions
      ═══════════════════════════════════════════════════════ */
+  /* จำแนกศึกจาก event field เป็นหลัก (promotion field ในข้อมูลถูก tag ONE ทุกไฟต์)
+     matcher รับ h ทั้งก้อน */
+  function isOneMainEvent(ev){
+    return /\bONE\s+(ลุมพินี|Fight|ซามูไร|X\b|FN|\d)|วันแชมเปียนชิพ/i.test(ev);
+  }
+  function matchOne(h){
+    var ev = String(h.event||'');
+    if (/7\s?สี|ช่อง\s?7/i.test(ev)) return false;
+    if (/ช้างมวยไทย/i.test(ev)) return false;
+    if (/ท่อน้ำไทย/i.test(ev)) return false;
+    if (/มวยไทยวิถีถิ่นไทย|มวยไทย\s?มรดก/i.test(ev)) return false;
+    if (isOneMainEvent(ev)) return true;              /* combined ONE×Inner นับเป็น ONE */
+    if (/Inner\s+Circle/i.test(ev)) return false;
+    return /\bone\b/i.test(String(h.promotion||''));  /* fallback: ONE main-event titles */
+  }
   var PROMOS=[
-    {key:'all',label:'ทุกศึก',match:function(){return true;}},
-    {key:'one',label:'ONE',match:function(p){return /one/i.test(p);}},
-    {key:'other',label:'ไม่ใช่ ONE',match:function(p){return !/one/i.test(p);}},
-    {key:'rws',label:'RWS',match:function(p){return /rws/i.test(p);}},
-    {key:'fairtex',label:'Fairtex',match:function(p){return /fairtex|แฟร์เท็กซ์/i.test(p);}},
-    {key:'ch7',label:'7 สี',match:function(p){return /7\s?สี|ช่อง\s?7/i.test(p);}},
-    {key:'lumpinee',label:'ลุมพินี',match:function(p){return /ลุมพินี|lumpinee/i.test(p);}},
-    {key:'rajadamnern',label:'ราชดำเนิน',match:function(p){return /ราชดำเนิน|rajadamnern/i.test(p);}}
+    {key:'all',        label:'ทุกศึก',        match:function(){return true;}},
+    {key:'one',        label:'ONE',            match:matchOne},
+    {key:'other',      label:'ไม่ใช่ ONE',     match:function(h){return !matchOne(h);}},
+    {key:'ch7',        label:'7 สี',           match:function(h){return /7\s?สี|ช่อง\s?7/i.test(h.event||'');}},
+    {key:'chang',      label:'ช้างมวยไทย',     match:function(h){return /ช้างมวยไทย/i.test(h.event||'');}},
+    {key:'tko',        label:'ท่อน้ำไทย TKO',  match:function(h){var ev=h.event||'';return !/ช้างมวยไทย/i.test(ev) && /ท่อน้ำไทย|ทีเคโอ|\bTKO\b/i.test(ev);}},
+    {key:'inner',      label:'Inner Circle',   match:function(h){var ev=h.event||'';return /Inner\s+Circle/i.test(ev) && !isOneMainEvent(ev);}},
+    {key:'daedoem',    label:'มวยไทยดั้งเดิม', match:function(h){return /มวยไทยวิถีถิ่นไทย|มวยไทย\s?มรดก/i.test(h.event||'');}},
+    {key:'rws',        label:'RWS',            match:function(h){return /\brws\b/i.test((h.event||'')+' '+(h.promotion||''));}},
+    {key:'fairtex',    label:'Fairtex',        match:function(h){return /\bfairtex\b|แฟร์เท็กซ์/i.test((h.event||'')+' '+(h.promotion||''));}},
+    {key:'lumpinee',   label:'ลุมพินี',        match:function(h){return /ลุมพินี|\blumpinee\b/i.test(h.event||'');}},
+    {key:'rajadamnern',label:'ราชดำเนิน',      match:function(h){return /ราชดำเนิน|\brajadamnern\b/i.test(h.event||'');}}
   ];
   var PERIODS=[
     {key:'all',label:'ทั้งหมด'},
@@ -962,7 +981,7 @@ footer{background:var(--footer-bg);border-top:1px solid var(--line);padding:72px
   /* ═══════════════════════════════════════════════════════
      3) State + URL sync
      ═══════════════════════════════════════════════════════ */
-  var DEFAULT={promo:'all',period:'all',year:THIS_YEAR,from:'',to:'',rules:'all',div:'',gender:'all',age:'all',ageMin:'',ageMax:'',nation:'all',country:'',team:'',minf:1,picks:[],sort:'score',limit:25,bonus:1};
+  var DEFAULT={promo:'all',period:'all',year:THIS_YEAR,from:'',to:'',rules:'all',div:'',gender:'all',age:'all',ageMin:'',ageMax:'',nation:'all',country:'',team:'',minf:3,picks:[],sort:'score',limit:25,bonus:1};
   var state=JSON.parse(JSON.stringify(DEFAULT));
   var shown=state.limit;
 
@@ -1028,9 +1047,12 @@ footer{background:var(--footer-bg);border-top:1px solid var(--line);padding:72px
     return _hist(f.id).filter(function(h){
       var t=rtype(h);
       if(t==='upcoming'||!h.date)return false;
-      if(!pd.match(h.promotion||''))return false;
+      if(!pd.match(h))return false;
       if(!rd.match(h.rules||''))return false;
       if(!dateInRange(h.date))return false;
+      /* ถ้าเลือกกรองรุ่นน้ำหนัก → นับเฉพาะไฟต์ในรุ่นนั้น
+         (ไฟต์ที่ไม่ระบุ h.division ถือว่าเป็นรุ่นปัจจุบันของนักมวย) */
+      if(state.div && (h.division || f.division) !== state.div) return false;
       return true;
     });
   }
