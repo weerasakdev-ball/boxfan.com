@@ -6,6 +6,7 @@
     <!-- จุดเชื่อมโยงไปหาไฟล์ข้อมูลที่อัปเดตไว้จริงในเว็บ -->
     <script src="data/fighters_data.js"></script>
     <script src="blog/articles.js"></script>
+    <script src="utils.js"></script>
   <script defer src="https://cloud.umami.is/script.js" data-website-id="40ec0b51-4f08-45be-801d-9cf01fc79260"></script>
     <link rel="icon" type="image/png" href="images/logoboxingfandom.png">
     <link rel="apple-touch-icon" href="images/logoboxingfandom.png">
@@ -32,13 +33,14 @@
         const mainPages = [
             { url: "https://www.boxingfandom.com/",                priority: "1.0" },
             { url: "https://www.boxingfandom.com/rankings.html",    priority: "0.9" },
-            { url: "https://www.boxingfandom.com/Fighters.html",    priority: "0.8" },
+            { url: "https://www.boxingfandom.com/fighters.html",    priority: "0.8" },
             { url: "https://www.boxingfandom.com/weight-classes.html", priority: "0.8" },
             { url: "https://www.boxingfandom.com/stats.html",          priority: "0.7" },
             { url: "https://www.boxingfandom.com/schedule.html",    priority: "0.9" },
             { url: "https://www.boxingfandom.com/results.html",     priority: "0.9" },
             { url: "https://www.boxingfandom.com/compare.html",     priority: "0.7" },
             { url: "https://www.boxingfandom.com/tierlist.html",    priority: "0.6" },
+            { url: "https://www.boxingfandom.com/bracket.html",     priority: "0.6" },
             { url: "https://www.boxingfandom.com/about.html",       priority: "0.4" },
             { url: "https://www.boxingfandom.com/contact.html",     priority: "0.3" },
             { url: "https://www.boxingfandom.com/privacy.html",     priority: "0.2" },
@@ -63,15 +65,28 @@
 
         // ── 3) วนลูปนักมวยทุกคนจาก data/fighters_data.js ──
         let statusMsg = [];
+        let dupes = [];
+        function xmlEsc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&apos;'); }
         xml += `\n  <!-- โปรไฟล์นักมวยทั้งหมด -->\n`;
         if (typeof FIGHTERS !== 'undefined') {
+            var seen = {};
             FIGHTERS.forEach(fighter => {
-                let name = fighter.name_en || fighter.name_th || String(fighter.id);
-                let s = name.trim();
-                if (/^[\x00-\x7F\s-]*$/.test(s)) s = s.toLowerCase();
-                let slug = encodeURIComponent(s.replace(/\s+/g, '-').replace(/[\/\\:*?"<>|]/g, '').replace(/-+/g, '-').replace(/^-|-$/g, ''));
+                var loc;
+                // ใช้ฟังก์ชันเดียวกับที่หน้าเว็บใช้ลิงก์ (utils.js) เพื่อให้ URL ตรงกัน 100%
+                if (typeof fighterUrl === 'function') {
+                    var u = fighterUrl(fighter);
+                    loc = /^https?:/i.test(u) ? u : 'https://www.boxingfandom.com/' + String(u).replace(/^\.?\//, '');
+                } else {
+                    let name = fighter.name_en || fighter.name_th || String(fighter.id);
+                    let s = name.trim();
+                    if (/^[\x00-\x7F\s-]*$/.test(s)) s = s.toLowerCase();
+                    let slug = encodeURIComponent(s.replace(/\s+/g, '-').replace(/[\/\\:*?"<>|]/g, '').replace(/-+/g, '-').replace(/^-|-$/g, ''));
+                    loc = 'https://www.boxingfandom.com/fighters/' + slug + '.html';
+                }
+                if (seen[loc]) { dupes.push(loc); return; }   // กัน URL ซ้ำในแผนผังไซต์
+                seen[loc] = 1;
                 xml += `  <url>\n`;
-                xml += `    <loc>https://www.boxingfandom.com/fighters/${slug}.html</loc>\n`;
+                xml += `    <loc>${xmlEsc(loc)}</loc>\n`;
                 xml += `    <changefreq>weekly</changefreq>\n`;
                 xml += `    <priority>0.8</priority>\n`;
                 xml += `  </url>\n`;
@@ -87,8 +102,9 @@
         if (typeof ARTICLES !== 'undefined') {
             ARTICLES.forEach(article => {
                 xml += `  <url>\n`;
-                xml += `    <loc>https://www.boxingfandom.com/blog/${article.file}</loc>\n`;
-                xml += `    <lastmod>${article.date || ''}</lastmod>\n`;
+                xml += `    <loc>${xmlEsc('https://www.boxingfandom.com/blog/' + article.file)}</loc>\n`;
+                // ใส่ lastmod เฉพาะเมื่อมีวันที่รูปแบบ YYYY-MM-DD (แท็กว่างทำให้ sitemap ผิดรูปแบบ)
+                if (/^\d{4}-\d{2}-\d{2}/.test(article.date || '')) xml += `    <lastmod>${article.date.slice(0,10)}</lastmod>\n`;
                 xml += `    <changefreq>monthly</changefreq>\n`;
                 xml += `    <priority>0.6</priority>\n`;
                 xml += `  </url>\n`;
@@ -102,6 +118,8 @@
         xml += `\n</urlset>`;
 
         document.getElementById('result').value = xml;
+        if (typeof fighterUrl !== 'function') statusMsg.push('⚠ ไม่พบ utils.js — ใช้สูตร slug สำรอง ตรวจว่า URL ตรงกับลิงก์ในเว็บ');
+        if (dupes.length) statusMsg.push('⚠ ตัด URL นักมวยที่ซ้ำออก ' + dupes.length + ' รายการ (ชื่อซ้ำกัน ควรตรวจ): ' + dupes.slice(0,5).join(', '));
         document.getElementById('status').textContent = statusMsg.join('   ·   ');
 
         function copyResult(){

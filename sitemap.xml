@@ -13,7 +13,7 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.boxingfandom.com/Fighters.html</loc>
+    <loc>https://www.boxingfandom.com/fighters.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -44,6 +44,11 @@
   </url>
   <url>
     <loc>https://www.boxingfandom.com/tierlist.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.boxingfandom.com/bracket.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -512,6 +517,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.boxingfandom.com/fighters/%E0%B8%84%E0%B8%AD%E0%B8%99%E0%B8%AA%E0%B9%81%E0%B8%95%E0%B8%99%E0%B8%95%E0%B8%B4%E0%B8%99-%E0%B8%8A%E0%B8%B1%E0%B8%84%E0%B8%95%E0%B8%B2%E0%B8%A3%E0%B8%B4%E0%B8%99.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.boxingfandom.com/fighters/konstantin-marareskul.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -818,6 +828,11 @@
   </url>
   <url>
     <loc>https://www.boxingfandom.com/fighters/kurbanali-isabekov.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.boxingfandom.com/fighters/%E0%B8%84%E0%B8%B9%E0%B8%A3%E0%B9%8C%E0%B9%80%E0%B8%8A%E0%B8%94-%E0%B8%81%E0%B8%B2%E0%B8%9F%E0%B8%B9%E0%B8%A3%E0%B8%AD%E0%B8%9F.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1927,6 +1942,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.boxingfandom.com/fighters/%E0%B8%8B%E0%B8%B9%E0%B8%8B%E0%B8%B2%E0%B8%99%E0%B8%95%E0%B8%B4-%E0%B9%80%E0%B8%AD%E0%B9%87%E0%B8%99%E0%B8%94%E0%B8%B2%E0%B8%9B%E0%B8%B2%E0%B8%95%E0%B8%B2%E0%B8%81%E0%B8%B2.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.boxingfandom.com/fighters/super-yay-chan.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -1978,6 +1998,11 @@
   </url>
   <url>
     <loc>https://www.boxingfandom.com/fighters/duangdawnoi.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.boxingfandom.com/fighters/%E0%B8%94%E0%B8%A7%E0%B8%87%E0%B8%9A%E0%B8%B8%E0%B8%9B%E0%B8%9C%E0%B8%B2-%E0%B8%AD.%E0%B9%81%E0%B8%AA%E0%B8%99%E0%B8%A8%E0%B8%B6%E0%B8%81.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -2872,6 +2897,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.boxingfandom.com/fighters/%E0%B8%9A%E0%B8%B2%E0%B8%8B%E0%B8%B5%E0%B8%A3%E0%B9%8C-%E0%B8%8B%E0%B8%B2%E0%B8%A3%E0%B8%B2%E0%B8%A5%E0%B8%B4%E0%B9%80%E0%B8%A2%E0%B8%9F.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.boxingfandom.com/fighters/batradz-gazzaev.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -3562,6 +3592,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.boxingfandom.com/fighters/%E0%B8%A1%E0%B8%B1%E0%B8%87%E0%B8%81%E0%B8%A3-%E0%B8%AA.%E0%B8%AA%E0%B8%A1%E0%B8%9A%E0%B8%B1%E0%B8%95%E0%B8%B4%E0%B8%9F%E0%B8%B2%E0%B8%A3%E0%B9%8C%E0%B8%A1.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.boxingfandom.com/fighters/ma-jia-wen.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -4002,6 +4037,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.boxingfandom.com/fighters/%E0%B8%A2%E0%B8%AD%E0%B8%94%E0%B8%81%E0%B8%95%E0%B8%B1%E0%B8%8D%E0%B8%8D%E0%B8%B9-%E0%B8%88%E0%B8%B4%E0%B8%95%E0%B8%A3%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%87%E0%B8%99%E0%B8%99%E0%B8%97%E0%B9%8C.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.boxingfandom.com/fighters/yodkritsada-sor-sommai.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -4258,6 +4298,11 @@
   </url>
   <url>
     <loc>https://www.boxingfandom.com/fighters/yutaro-asahi.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.boxingfandom.com/fighters/%E0%B8%A2%E0%B8%B9%E0%B8%97%E0%B8%B2%E0%B9%82%E0%B8%A3-%E0%B9%82%E0%B8%AE%E0%B8%A3%E0%B8%B4.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -5667,6 +5712,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.boxingfandom.com/fighters/%E0%B8%AB%E0%B8%A1%E0%B9%88%E0%B8%B2-%E0%B9%80%E0%B8%88%E0%B8%B4%E0%B8%99%E0%B9%80%E0%B8%88%E0%B8%B2.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.boxingfandom.com/fighters/ma-teng.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -6638,6 +6688,11 @@
   </url>
   <url>
     <loc>https://www.boxingfandom.com/fighters/harlysson-nunes.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.boxingfandom.com/fighters/%E0%B8%AD%E0%B8%B2%E0%B8%A3%E0%B9%8C%E0%B9%80%E0%B8%8B%E0%B8%99-%E0%B8%8B%E0%B8%AD%E0%B8%A2%E0%B8%B5%E0%B8%A3%E0%B9%8C%E0%B8%81%E0%B8%B1%E0%B8%AA.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -7857,6 +7912,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.boxingfandom.com/fighters/%E0%B9%80%E0%B8%8A%E0%B8%B5%E0%B8%A2%E0%B8%A7-%E0%B8%97%E0%B8%B5-%E0%B9%80%E0%B8%9F%E0%B8%B7%E0%B8%AD%E0%B8%87-%E0%B8%97%E0%B8%B8%E0%B8%A2.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.boxingfandom.com/fighters/ze-ru.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -8258,6 +8318,11 @@
   </url>
   <url>
     <loc>https://www.boxingfandom.com/fighters/blake-cooper.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.boxingfandom.com/fighters/%E0%B9%80%E0%B8%9A%E0%B8%A7%E0%B8%B2%E0%B8%99-%E0%B8%AD%E0%B8%B2%E0%B8%A5%E0%B8%B5-%E0%B9%82%E0%B8%AD%E0%B8%81%E0%B8%B8%E0%B8%8B.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -9168,6 +9233,11 @@
   </url>
   <url>
     <loc>https://www.boxingfandom.com/fighters/lenny-blasi.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.boxingfandom.com/fighters/%E0%B9%80%E0%B8%A5%E0%B8%A7%E0%B8%B5-%E0%B9%80%E0%B8%AE%E0%B9%82%E0%B8%99.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

@@ -138,6 +138,8 @@ nav > a.nav-results{padding-right:24px}
 nav > a.nav-results .nav-dot{position:absolute;top:9px;right:9px;width:6px;height:6px;border-radius:50%;background:var(--gold);animation:navDot 2.2s var(--ease) infinite}
 @keyframes navDot{0%{box-shadow:0 0 0 0 rgba(212,175,55,.55)}70%{box-shadow:0 0 0 7px rgba(212,175,55,0)}100%{box-shadow:0 0 0 0 rgba(212,175,55,0)}}
 @media(prefers-reduced-motion:reduce){nav > a.nav-results .nav-dot{animation:none}}
+/* เมนู "เล่นสนุก" เพิ่มเข้ามา: จอกลาง ซ่อน "เกี่ยวกับเรา" บนแถบเมนูเพื่อไม่ให้ล้น (ยังมีในเมนูมือถือและท้ายเว็บ) */
+@media(min-width:901px) and (max-width:1240px){header nav > a[href="about.html"]{display:none}}
 .nav-new{display:inline-block;margin-left:8px;padding:2px 7px;border-radius:6px;background:var(--gold-dim);color:var(--gold-text);font-size:11px;font-weight:700;line-height:1.5;vertical-align:middle}
 @media(max-width:1080px){nav a{padding:10px 11px;font-size:14.5px}nav a.active::after{left:11px;right:11px}nav > a.nav-results{padding-right:20px}nav > a.nav-results .nav-dot{right:6px}}
 
@@ -559,6 +561,45 @@ footer{background:var(--footer-bg);border-top:1px solid var(--line);padding:72px
   .news-form button{width:100%}
   .footer-bottom .fb-links{flex-wrap:wrap;gap:14px}
 }
+
+/* ===== Clean refresh: flatter, whiter, less ornament ===== */
+.hero-glow{display:none}
+.hero-stats{backdrop-filter:none;-webkit-backdrop-filter:none;background:var(--card)}
+@media(min-width:901px){
+  .hero{min-height:480px}
+  .hero-in{padding-top:48px;padding-bottom:48px}
+  .main-grid{padding-top:60px}
+}
+/* hero จัดกึ่งกลาง ไม่ให้เหลือที่ว่างด้านขวา */
+.hero-content{max-width:860px;margin-left:auto;margin-right:auto;text-align:center}
+.hero-eyebrow{justify-content:center}
+.hero-desc{margin-left:auto;margin-right:auto}
+.hero-actions{justify-content:center}
+
+/* ===== Promo: ชวนไปดูอันดับหน้าอื่น ===== */
+.rk-promo{max-width:var(--maxw);margin:0 auto;padding:20px var(--pad) 90px}
+.rk-promo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.rk-promo-card{display:flex;flex-direction:column;gap:14px;padding:26px 24px;background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow-card);transition:border-color .2s var(--ease),box-shadow .2s var(--ease)}
+.rk-promo-card:hover{border-color:var(--line-strong);box-shadow:var(--shadow-lift)}
+.rk-promo-ic{width:46px;height:46px;border-radius:12px;background:var(--gold-dim);display:flex;align-items:center;justify-content:center}
+.rk-promo-ic svg{width:24px;height:24px;stroke:var(--gold-text);stroke-width:1.8;fill:none}
+.rk-promo-card h3{font-size:18px;font-weight:700;letter-spacing:-.01em}
+.rk-promo-card p{font-size:14px;color:var(--sub);line-height:1.65;flex:1}
+.rk-promo-go{display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:700;color:var(--gold-text)}
+.rk-promo-go svg{width:16px;height:16px;stroke:currentColor;stroke-width:2.2;fill:none;transition:transform .2s var(--ease)}
+.rk-promo-card:hover .rk-promo-go svg{transform:translateX(4px)}
+@media(max-width:900px){.rk-promo-grid{grid-template-columns:1fr}}
+@media(max-width:640px){.rk-promo{padding:10px var(--pad) 56px}}
+
+/* ===== แถบสถิติเล็กท้ายหน้า ===== */
+.statbar-sec{padding:8px 0 40px}
+.statbar .hero-stats{margin-top:0;transform:none;background:var(--bg-2);border:1px solid var(--line);border-radius:var(--r-md);box-shadow:none}
+.statbar .hstat{padding:12px 16px;gap:10px}
+.statbar .hstat-ic{width:30px;height:30px;border-radius:8px}
+.statbar .hstat-ic svg{width:15px;height:15px}
+.statbar .hstat b{font-size:16px}
+.statbar .hstat span{font-size:10.5px;margin-top:1px}
+@media(max-width:560px){.statbar .hero-stats{grid-template-columns:repeat(2,1fr)}.statbar .hstat:nth-child(2){border-right:none}.statbar .hstat:nth-child(-n+2){border-bottom:1px solid var(--line)}}
 </style>
 <script type="application/ld+json" id="jsonld-static">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.boxingfandom.com/#org","name":"Boxfan","url":"https://www.boxingfandom.com","logo":{"@type":"ImageObject","url":"https://www.boxingfandom.com/icons/icon-192.png"},"description":"เว็บไซต์สถิติและจัดอันดับนักมวยไทย ONE Championship"},{"@type":"WebSite","@id":"https://www.boxingfandom.com/#website","url":"https://www.boxingfandom.com","name":"Boxfan","inLanguage":"th-TH","publisher":{"@id":"https://www.boxingfandom.com/#org"},"potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.boxingfandom.com/fighters.html?q={search_term_string}"},"query-input":"required name=search_term_string"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"นักมวยไทยเก่งที่สุดตอนนี้คือใคร","acceptedAnswer":{"@type":"Answer","text":"Boxfan จัดอันดับนักมวยไทยจากสถิติจริง คิดคะแนนจากผลชนะแพ้ในแต่ละไฟต์ ดูอันดับล่าสุดได้ที่หน้าจัดอันดับ ซึ่งอัปเดตหลังจบทุกอีเวนต์"}},{"@type":"Question","name":"Boxfan คำนวณอันดับนักมวยอย่างไร","acceptedAnswer":{"@type":"Answer","text":"ระบบให้คะแนนจากผลการชกจริง ชนะได้คะแนนบวก แพ้ได้คะแนนลบ แล้วนำมาจัดอันดับแยกตามรุ่นน้ำหนักและรายปี ไม่ใช้ความเห็นส่วนตัว"}},{"@type":"Question","name":"ดูโปรแกรมมวยวันนี้และผลมวยล่าสุดได้ที่ไหน","acceptedAnswer":{"@type":"Answer","text":"ดูโปรแกรมชกล่วงหน้าได้ที่หน้าโปรแกรมมวย และดูผลมวยล่าสุดทุกไฟต์แยกตามศึกได้ที่หน้าผลการแข่งขัน"}},{"@type":"Question","name":"Boxfan เป็นเว็บทางการของ ONE Championship หรือไม่","acceptedAnswer":{"@type":"Answer","text":"ไม่ใช่ Boxfan เป็นเว็บไซต์ที่รวบรวมข้อมูลโดยแฟนกีฬา ไม่มีความเกี่ยวข้องอย่างเป็นทางการกับ ONE Championship"}}]}]}</script>
     <link rel="icon" type="image/png" href="images/logoboxingfandom.png">
@@ -568,12 +609,12 @@ footer{background:var(--footer-bg);border-top:1px solid var(--line);padding:72px
 
 <header>
   <div class="header-in">
-    <a href="index.html" class="logo">
+    <a href="/" class="logo">
       <svg class="logo-mark" viewBox="0 0 42 42" fill="none"><circle cx="21" cy="21" r="20" stroke="#D4AF37" stroke-width="1.4"/><path d="M21 8 L24.5 17.5 L34 17.5 L26.2 23.6 L29 33 L21 27.3 L13 33 L15.8 23.6 L8 17.5 L17.5 17.5 Z" fill="#D4AF37"/></svg>
       <span class="logo-text"><b>BOX<span>FAN</span></b><small>MUAY THAI RANKINGS</small></span>
     </a>
     <nav>
-      <a href="index.html" class="active">หน้าแรก</a>
+      <a href="/" class="active">หน้าแรก</a>
       <div class="nav-item" id="nav-rank">
         <a href="weight-classes.html">จัดอันดับ<svg class="caret" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></a>
         <div class="nav-menu" id="rank-menu"></div>
@@ -583,6 +624,15 @@ footer{background:var(--footer-bg);border-top:1px solid var(--line);padding:72px
       <a href="compare.html" title="เปรียบเทียบสถิตินักมวย วิเคราะห์คู่มวยก่อนชก">เปรียบเทียบ</a>
       <a href="stats.html" title="จัดอันดับนักมวยได้ทุกสถิติ พร้อมภาพ">สถิติ</a>
       <a href="results.html" class="nav-results" title="ผลมวยล่าสุดทุกไฟต์">ผลมวย<span class="nav-dot" aria-hidden="true"></span></a>
+      <div class="nav-item" id="nav-play">
+        <a href="tierlist.html">เล่นสนุก<svg class="caret" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></a>
+        <div class="nav-menu" style="min-width:270px">
+          <div class="nm-hd">จัดเอง แคปแชร์ได้</div>
+          <a href="tierlist.html"><span>Tier List นักมวย</span><span class="nm-en">TIER</span></a>
+          <a href="bracket.html"><span>จัดสายมวย ทายผล</span><span class="nm-en">BRACKET</span></a>
+          <a href="ranking.html"><span>จัดอันดับเอง</span><span class="nm-en">RANKING</span></a>
+        </div>
+      </div>
       <a href="blog/">ข่าวสาร</a>
       <a href="about.html">เกี่ยวกับเรา</a>
     </nav>
@@ -611,7 +661,7 @@ footer{background:var(--footer-bg);border-top:1px solid var(--line);padding:72px
     <button class="drawer-close" id="drawer-close" aria-label="ปิด"><svg class="icon" viewBox="0 0 24 24"><path d="M18 6L6 18"/><path d="M6 6l12 12"/></svg></button>
   </div>
   <nav>
-    <a href="index.html" class="active">หน้าแรก</a>
+    <a href="/" class="active">หน้าแรก</a>
     <a href="weight-classes.html">จัดอันดับ</a>
     <div class="nav-sub" id="drawer-rank-sub"></div>
     <a href="fighters.html">นักมวย</a>
@@ -619,17 +669,15 @@ footer{background:var(--footer-bg);border-top:1px solid var(--line);padding:72px
     <a href="compare.html">เปรียบเทียบ<span class="nav-new">วิเคราะห์</span></a>
     <a href="stats.html">สถิติ<span class="nav-new">จัดอันดับ</span></a>
     <a href="results.html">ผลมวย<span class="nav-new">ล่าสุด</span></a>
+    <a href="tierlist.html">Tier List<span class="nav-new">จัดเทียร์</span></a>
+    <a href="bracket.html">จัดสายมวย<span class="nav-new">ใหม่</span></a>
+    <a href="ranking.html">จัดอันดับเอง<span class="nav-new">ใหม่</span></a>
     <a href="blog/">ข่าวสาร</a>
     <a href="about.html">เกี่ยวกับเรา</a>
   </nav>
 </aside>
 
 <section class="hero">
-  <div class="hero-glow"></div>
-  <div class="hero-cover">
-    <img id="hero-cover-img" src="images/hero-cover.png" alt="นักมวยไทย" onerror="this.style.display='none';var p=document.getElementById('hero-cover-ph');if(p)p.style.display='block'">
-    <div class="hero-cover-ph" id="hero-cover-ph"><svg viewBox="0 0 200 260" fill="none"><path d="M100 20c14 0 22 12 22 25s-8 22-22 22-22-9-22-22 8-25 22-25z" stroke-width="1.2"/><path d="M60 90c8-14 24-20 40-20s32 6 40 20l14 60-20 90H66l-20-90z" stroke-width="1.2"/><path d="M60 100L20 140l14 30 34-28" stroke-width="1.2"/><path d="M140 100l40 40-14 30-34-28" stroke-width="1.2"/></svg></div>
-  </div>
   <div class="hero-in">
     <div class="hero-content">
       <div class="hero-eyebrow"><span class="dot"></span><span class="eyebrow">มาตรฐานระดับโลก · ข้อมูลจริงจาก ONE Championship</span></div>
@@ -639,14 +687,6 @@ footer{background:var(--footer-bg);border-top:1px solid var(--line);padding:72px
         <a href="rankings.html" class="btn-gold">ดูอันดับทั้งหมด<svg class="icon" style="width:16px;height:16px;stroke:#161200" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
         <a href="#" class="btn-ghost">วิธีการจัดอันดับ</a>
       </div>
-    </div>
-  </div>
-  <div class="hero-stats-wrap">
-    <div class="hero-stats">
-      <div class="hstat"><div class="hstat-ic"><svg viewBox="0 0 24 24"><path d="M5 16l-2-9 6 4 3-7 3 7 6-4-2 9z"/><path d="M5 20h14"/></svg></div><div><b class="num" id="stat-fighters">–</b><span>นักมวยทั้งหมด</span></div></div>
-      <div class="hstat"><div class="hstat-ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><path d="M9 14l-2 7 5-3 5 3-2-7"/></svg></div><div><b class="num" id="stat-divisions">–</b><span>รุ่นน้ำหนัก</span></div></div>
-      <div class="hstat"><div class="hstat-ic"><svg viewBox="0 0 24 24"><path d="M18 4l3 3-8 8H6v-7l8-8 3 3z"/><path d="M2 21h20"/></svg></div><div><b class="num" id="stat-fights">–</b><span>ไฟต์ทั้งหมด</span></div></div>
-      <div class="hstat"><div class="hstat-ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><div><b class="num" id="stat-updated" style="font-size:20px">–</b><span>อัปเดตล่าสุด</span></div></div>
     </div>
   </div>
 </section>
@@ -735,17 +775,34 @@ footer{background:var(--footer-bg);border-top:1px solid var(--line);padding:72px
   </aside>
 </div>
 
-<!-- ============== DIVISION RANKINGS ============== -->
-<section class="section" id="divisions">
+<!-- ============== ชวนไปดูอันดับหน้าอื่น ============== -->
+<section class="rk-promo" id="more-rankings">
   <div class="sec-head">
     <div>
-      <div class="sec-title">อันดับนักมวยแยกตามรุ่นน้ำหนัก</div>
-      <div class="sec-sub">เลือกดูว่าใครเก่งที่สุดในแต่ละรุ่น คลิกเข้าไปดูอันดับเต็มและกรองตามศึกได้</div>
+      <div class="sec-title">ดูอันดับแบบเจาะลึก</div>
+      <div class="sec-sub">เลือกมุมที่อยากรู้ — แยกตามรุ่นน้ำหนัก ดูอันดับรายปี หรือจัดอันดับตามสถิติที่สนใจ</div>
     </div>
-    <a href="weight-classes.html" class="sec-link">ทุกรุ่น <svg class="icon" style="width:14px;height:14px" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
   </div>
-  <p class="divs-intro">อันดับนักมวยไทยแยกตามรุ่นน้ำหนักทุกรุ่น ตั้งแต่อะตอมเวท สตรอว์เวท ฟลายเวท แบนตัมเวท เฟเธอร์เวท ไปจนถึงเวลเทอร์เวท คำนวณคะแนนจากสถิติจริง อยากรู้ว่านักมวยรุ่นไหนเก่งที่สุด ดูได้เลยที่นี่</p>
-  <div class="divs-grid" id="divs-grid"></div>
+  <div class="rk-promo-grid">
+    <a class="rk-promo-card" href="weight-classes.html">
+      <div class="rk-promo-ic"><svg viewBox="0 0 24 24"><path d="M12 3v18"/><path d="M4 7h16"/><path d="M4 7l-2 6a4 4 0 0 0 8 0z"/><path d="M20 7l-2 6a4 4 0 0 0 8 0z"/><path d="M8 21h8"/></svg></div>
+      <h3>อันดับแยกรุ่นน้ำหนัก</h3>
+      <p>ดูว่าใครครองแต่ละรุ่น ตั้งแต่อะตอมเวทถึงเวลเทอร์เวท คำนวณคะแนนเฉพาะไฟต์ในรุ่นนั้น</p>
+      <span class="rk-promo-go">ดูทุกรุ่น <svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span>
+    </a>
+    <a class="rk-promo-card" href="rankings.html">
+      <div class="rk-promo-ic"><svg viewBox="0 0 24 24"><path d="M8 6h13"/><path d="M8 12h13"/><path d="M8 18h13"/><path d="M3 6h.01"/><path d="M3 12h.01"/><path d="M3 18h.01"/></svg></div>
+      <h3>ตารางอันดับเต็ม · รายปี</h3>
+      <p>กรองตามประเทศ ค่ายมวย และดูอันดับแยกรายปี รู้เลยว่าใครฟอร์มดีที่สุดในปีที่เลือก</p>
+      <span class="rk-promo-go">เปิดตารางเต็ม <svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span>
+    </a>
+    <a class="rk-promo-card" href="stats.html">
+      <div class="rk-promo-ic"><svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg></div>
+      <h3>จัดอันดับตามสถิติ</h3>
+      <p>ชนะน็อกมากสุด ชนะรวดยาวสุด และอีกหลายสถิติ จัดอันดับได้ทุกมุมพร้อมภาพ</p>
+      <span class="rk-promo-go">ดูสถิติทั้งหมด <svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span>
+    </a>
+  </div>
 </section>
 
 <section class="section" id="prediction">
@@ -811,11 +868,22 @@ footer{background:var(--footer-bg);border-top:1px solid var(--line);padding:72px
   </div>
 </section>
 
+<section class="statbar-sec">
+  <div class="hero-stats-wrap statbar">
+    <div class="hero-stats">
+      <div class="hstat"><div class="hstat-ic"><svg viewBox="0 0 24 24"><path d="M5 16l-2-9 6 4 3-7 3 7 6-4-2 9z"/><path d="M5 20h14"/></svg></div><div><b class="num" id="stat-fighters">–</b><span>นักมวยทั้งหมด</span></div></div>
+      <div class="hstat"><div class="hstat-ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><path d="M9 14l-2 7 5-3 5 3-2-7"/></svg></div><div><b class="num" id="stat-divisions">–</b><span>รุ่นน้ำหนัก</span></div></div>
+      <div class="hstat"><div class="hstat-ic"><svg viewBox="0 0 24 24"><path d="M18 4l3 3-8 8H6v-7l8-8 3 3z"/><path d="M2 21h20"/></svg></div><div><b class="num" id="stat-fights">–</b><span>ไฟต์ทั้งหมด</span></div></div>
+      <div class="hstat"><div class="hstat-ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><div><b class="num" id="stat-updated" style="font-size:18px">–</b><span>อัปเดตล่าสุด</span></div></div>
+    </div>
+  </div>
+</section>
+
 <footer>
   <div class="container">
     <div class="footer-grid">
       <div class="f-brand">
-        <a href="index.html" class="logo">
+        <a href="/" class="logo">
           <svg class="logo-mark" viewBox="0 0 42 42" fill="none"><circle cx="21" cy="21" r="20" stroke="#D4AF37" stroke-width="1.4"/><path d="M21 8 L24.5 17.5 L34 17.5 L26.2 23.6 L29 33 L21 27.3 L13 33 L15.8 23.6 L8 17.5 L17.5 17.5 Z" fill="#D4AF37"/></svg>
           <span class="logo-text"><b>BOX<span>FAN</span></b><small>MUAY THAI RANKINGS</small></span>
         </a>
@@ -945,7 +1013,8 @@ footer{background:var(--footer-bg);border-top:1px solid var(--line);padding:72px
     if (/มวยไทยวิถีถิ่นไทย|มวยไทย\s?มรดก/i.test(ev)) return false;
     /* combined "ONE ลุมพินี X & The Inner Circle Y" ให้เป็น ONE (การ์ดหลัก) — ตรวจก่อน Inner exclusion */
     if (isOneMainEvent(ev)) return true;
-    if (/Inner\s+Circle/i.test(ev)) return false;
+    /* Inner Circle เป็นแบรนด์ย่อยของ ONE → นับรวมเป็น ONE */
+    if (/Inner\s+Circle/i.test(ev)) return true;
     /* fallback: ชื่อ event เป็น title ของ ONE main event (First Strike, No Surrender, LIGHTS OUT ฯลฯ)
        — ในข้อมูลชุดนี้ทุกไฟต์ tag promotion=ONE ให้เชื่อ tag สำหรับกรณี fallback เท่านั้น */
     return /\bone\b/i.test(String(h.promotion||''));
@@ -957,8 +1026,6 @@ footer{background:var(--footer-bg);border-top:1px solid var(--line);padding:72px
     {key:'chang',   label:'ช้างมวยไทย',     match:function(h){return /ช้างมวยไทย/i.test(h.event||'');}},
     /* ท่อน้ำไทย TKO: ตัด "ช้างมวยไทยเกียรติเพชร" ออกก่อน (อยู่ bucket chang) */
     {key:'tko',     label:'ท่อน้ำไทย TKO',  match:function(h){var ev=h.event||'';return !/ช้างมวยไทย/i.test(ev) && /ท่อน้ำไทย|ทีเคโอ|\bTKO\b/i.test(ev);}},
-    /* Inner Circle: เฉพาะ Inner Circle ล้วนๆ (ไม่ใช่ combined กับ ONE ลุมพินี) */
-    {key:'inner',   label:'Inner Circle',   match:function(h){var ev=h.event||'';return /Inner\s+Circle/i.test(ev) && !isOneMainEvent(ev);}},
     /* มวยไทยดั้งเดิม: วิถีถิ่นไทย + มรดกคนไทย */
     {key:'daedoem', label:'มวยไทยดั้งเดิม', match:function(h){return /มวยไทยวิถีถิ่นไทย|มวยไทย\s?มรดก/i.test(h.event||'');}},
     {key:'rws',     label:'RWS',            match:function(h){return /\brws\b/i.test(h.event||'')||/\brws\b/i.test(h.promotion||'');}},
@@ -1644,6 +1711,16 @@ footer{background:var(--footer-bg);border-top:1px solid var(--line);padding:72px
   injectSEO(FIGHTERS.slice().sort(function(a,b){ if(b._score!==a._score)return b._score-a._score; return String(b._lastDate||'').localeCompare(String(a._lastDate||'')); }));
 
   if(typeof setMeta==='function')setMeta({title:'จัดอันดับนักมวยไทย',titleEn:'Muay Thai Rankings',desc:'จัดอันดับนักมวยไทย ONE Championship ด้วยระบบคะแนนจากสถิติจริง | Boxfan',url:'https://www.boxingfandom.com/',keywords:'อันดับนักมวย,มวยไทย,ONE Championship,Boxfan'});
+})();
+</script>
+<script>
+/* เมนู "เล่นสนุก": จอสัมผัส แตะครั้งแรกเปิดเมนู แตะนอกเมนูเพื่อปิด */
+(function(){
+  var item=document.getElementById('nav-play'); if(!item) return;
+  item.querySelector('a').addEventListener('click',function(e){
+    if(window.matchMedia('(hover: none)').matches && !item.classList.contains('open')){ e.preventDefault(); item.classList.add('open'); }
+  });
+  document.addEventListener('click',function(e){ if(!e.target.closest('#nav-play')) item.classList.remove('open'); });
 })();
 </script>
 </body>

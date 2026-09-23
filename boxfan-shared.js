@@ -96,6 +96,7 @@ window.nav = function(active, basePath){
   var tabs = [
     {id:'ranking',  label:'หน้าแรก',        href:base+'index.html'},
     {id:'rankings', label:'อันดับ',         href:base+'rankings.html'},
+    {id:'myrank',   label:'จัดอันดับเอง',   href:base+'my-ranking.html'},
     {id:'fighters', label:'นักมวย',         href:base+'fighters.html'},
     {id:'schedule', label:'โปรแกรมชก',     href:base+'schedule.html'},
     {id:'results',  label:'ผลการแข่งขัน',  href:base+'results.html'},
@@ -194,7 +195,7 @@ function bfToggleTheme(){
   try{ localStorage.setItem('boxfan-theme', next); }catch(e){}
   // update meta theme-color
   var meta = document.querySelector('meta[name="theme-color"]');
-  if(meta) meta.setAttribute('content', next === 'dark' ? '#0f1520' : '#1a3661');
+  if(meta) meta.setAttribute('content', next === 'dark' ? '#141414' : '#F6F4EF');
 }
 function bfLoadTheme(){
   try{

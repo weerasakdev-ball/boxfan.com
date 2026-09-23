@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: blob: https://res.cloudinary.com https://img.youtube.com https://i.ytimg.com; frame-src https://www.youtube.com">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#0d1014">
+<title>จัดสายมวย ทายผลรอบน็อคเอาท์ ลากวาง ทำคลิปได้ | Boxfan</title>
+<meta name="description" content="จัดสายมวยรอบน็อคเอาท์ 4 8 16 คน ลากนักมวยจากฐานข้อมูล Boxfan ไปวาง ส่งผู้ชนะเข้ารอบ บันทึกเป็นภาพ หรือเปิดโหมดเต็มจอเพื่อทำคลิปวิเคราะห์">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+<meta name="author" content="Boxfan">
+<link rel="canonical" href="https://www.boxingfandom.com/bracket.html">
+<meta property="og:title" content="จัดสายมวย ทายผลรอบน็อคเอาท์ ลากวาง ทำคลิปได้ | Boxfan">
+<meta property="og:description" content="จัดสายมวยรอบน็อคเอาท์ 4 8 16 คน ลากนักมวยจากฐานข้อมูล Boxfan ไปวาง ส่งผู้ชนะเข้ารอบ บันทึกเป็นภาพ หรือเปิดโหมดเต็มจอเพื่อทำคลิปวิเคราะห์">
+<meta property="og:image" content="https://www.boxingfandom.com/og-default.jpg">
+<meta property="og:url" content="https://www.boxingfandom.com/bracket.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Boxfan">
+<meta property="og:locale" content="th_TH">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"หน้าแรก","item":"https://www.boxingfandom.com/index.html"},{"@type":"ListItem","position":2,"name":"จัดสายมวย","item":"https://www.boxingfandom.com/bracket.html"}]},{"@type":"WebApplication","name":"จัดสายมวย Boxfan","url":"https://www.boxingfandom.com/bracket.html","applicationCategory":"SportsApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"THB"}}]}</script>
+<link rel="icon" type="image/png" href="images/logoboxingfandom.png">
+<link rel="apple-touch-icon" href="images/logoboxingfandom.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Bai+Jamjuree:wght@600;700&family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="board-kit.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<style>
+/* ══ BRACKET PAGE ══ */
+.seg{display:inline-flex;border:1px solid var(--line-2);border-radius:7px;overflow:hidden;background:var(--surf-2)}
+.seg button{border:0;background:transparent;color:var(--tx-2);font-family:var(--serif);font-weight:700;font-size:13px;letter-spacing:.04em;padding:10px 14px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--red);color:#fff}
+.bk-board{background:var(--surf);border:1px solid var(--line-2);border-radius:13px;overflow:hidden;margin-bottom:26px;box-shadow:var(--sh-3),var(--edge)}
+.br-stage{overflow-x:auto;padding:28px 18px 34px;
+  background:radial-gradient(60% 55% at 12% 0%,rgba(232,65,46,.13),transparent 70%),radial-gradient(60% 55% at 88% 0%,rgba(59,141,240,.12),transparent 70%),var(--surf)}
+.br-inner{width:max-content;min-width:100%;transform-origin:center center}
+.br-head{text-align:center;margin-bottom:24px}
+.br-title{font-family:var(--display);font-weight:700;font-size:clamp(24px,3vw,36px);line-height:1.25;color:var(--tx);margin:0;padding:2px 10px;display:inline-block;min-width:220px}
+.br-sub{font-family:var(--display);font-weight:600;font-size:16px;color:var(--gold);margin:6px 0 0;padding:0 10px;display:inline-block;min-width:160px}
+
+.bracket{--s:92px;position:relative;display:grid;grid-template-columns:repeat(var(--cols),auto);column-gap:46px;justify-content:center}
+.bracket.n4{--s:108px}.bracket.n16{--s:66px;column-gap:30px}
+.br-lines{position:absolute;left:0;top:0;pointer-events:none;overflow:visible}
+.br-col{position:relative;z-index:1;display:flex;flex-direction:column}
+.br-rnd{height:30px;text-align:center;font-family:var(--serif);font-weight:700;font-size:13px;letter-spacing:.06em;color:var(--tx-3);white-space:nowrap}
+.br-bouts{flex:1;display:flex;flex-direction:column;justify-content:space-around;gap:20px}
+.br-mid{flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:16px}
+.bout{position:relative;display:flex;flex-direction:column;align-items:center;gap:2px;padding:10px 8px;border-radius:12px;background:var(--bg-2);border:1px solid var(--line-2)}
+.bout.final{flex-direction:row;gap:12px;padding:12px}
+.vs{font-family:var(--serif);font-weight:800;font-style:italic;font-size:13px;color:var(--tx-4);line-height:1}
+.final .vs{font-size:20px;color:#111;background:var(--gold);padding:4px 7px;border-radius:4px}
+.final-label{font-family:var(--display);font-weight:700;font-size:18px;color:var(--tx)}
+.champ-wrap{display:flex;flex-direction:column;align-items:center;gap:10px}
+.champ-label{font-family:var(--serif);font-weight:800;font-size:24px;letter-spacing:.1em;color:var(--gold)}
+
+.slot{position:relative;width:var(--s);display:flex;flex-direction:column;align-items:center;border-radius:9px;transition:transform .12s}
+.slot .pic{position:relative;width:var(--s);height:var(--s);border-radius:8px;overflow:hidden;border:2px solid transparent;border-top:4px solid var(--red);background:var(--surf-2) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='40' r='18' fill='%23232d3b'/%3E%3Cpath d='M14 100c2-23 17-35 36-35s34 12 36 35z' fill='%23232d3b'/%3E%3C/svg%3E") center bottom/86% no-repeat;display:flex;align-items:center;justify-content:center}
+.slot.blue .pic{border-top-color:var(--blue)}
+.slot .pic img{width:100%;height:100%;object-fit:cover;display:block;pointer-events:none}
+.ph-txt{font-size:11px;color:var(--tx-3);background:rgba(13,16,20,.75);padding:1px 6px;border-radius:4px}
+.bracket.n16 .ph-txt{display:none}
+.slot .nm{width:calc(var(--s) + 30px);min-height:2.7em;margin-top:5px;text-align:center;font-size:12.5px;line-height:1.3;font-weight:600;color:var(--tx)}
+.bracket.n16 .slot .nm{font-size:11px;width:calc(var(--s) + 22px)}
+.slot.filled{cursor:grab}
+.slot.filled:hover .pic{box-shadow:0 0 0 2px var(--line-3)}
+.slot.win .pic{border-color:var(--gold);border-top-color:var(--red)}
+.slot.blue.win .pic{border-top-color:var(--blue)}
+.slot .dim{position:absolute;inset:0;background:rgba(13,16,20,.55)}
+.slot.win .nm{color:var(--gold)}
+.slot.lose .pic img{filter:grayscale(1)}
+.slot.lose .nm{color:var(--tx-4);text-decoration:line-through}
+.slot.drop-over{transform:scale(1.05);background-color:transparent!important;outline:none!important}
+.slot.drop-over .pic{box-shadow:0 0 0 3px var(--gold)}
+.slot .x{position:absolute;top:-4px;right:-8px;width:22px;height:22px;border-radius:50%;border:0;background:rgba(0,0,0,.8);color:#fff;font-size:13px;line-height:1;cursor:pointer;opacity:0;z-index:2}
+.slot:hover .x,.slot .x:focus-visible{opacity:1}
+@media (hover:none){.slot .x{opacity:.8}}
+.slot.champ{--c:calc(var(--s) * 1.45);width:var(--c)}
+.slot.champ .pic{width:var(--c);height:var(--c);border:3px solid var(--gold);border-radius:50%;box-shadow:0 0 0 7px var(--gold-soft),0 0 44px rgba(244,183,64,.3)}
+.slot.champ .nm{width:calc(var(--c) + 50px);color:var(--gold);font-size:16px;font-weight:700;font-family:var(--display)}
+
+/* โหมดถ่ายคลิป: บอร์ดเต็มจอ ซ่อนทุกอย่างรอบข้าง */
+.clip-exit{display:none}
+body.clip{overflow:hidden}
+body.clip .page-w{z-index:1600}
+body.clip .bk-board{position:fixed;inset:0;z-index:1500;margin:0;border:0;border-radius:0;display:flex;flex-direction:column}
+body.clip .br-stage{flex:1;overflow:hidden;display:flex;align-items:center;justify-content:center;padding:0}
+body.clip .br-inner{min-width:0}
+body.clip .slot .x,body.clip .ph-txt{display:none}
+body.clip .clip-exit{display:block;position:fixed;top:12px;right:14px;z-index:1600;border:0;border-radius:7px;background:rgba(255,255,255,.07);color:rgba(255,255,255,.4);font-family:var(--sans);font-size:12px;padding:7px 12px;cursor:pointer}
+body.clip .clip-exit:hover{color:#fff;background:rgba(255,255,255,.16)}
+body.bk-exporting .slot .x,body.bk-exporting .ph-txt{display:none}
+@media(max-width:640px){.bracket{column-gap:26px}.seg button{padding:9px 11px}}
+</style>
+</head>
+<body>
+
+<!-- UTIL BAR -->
+<div class="util-bar">
+  <a href="about.html">เกี่ยวกับเรา</a>
+  <a href="contact.html">ติดต่อเรา</a>
+  <a href="blog/">บทความ</a>
+  <a href="disclaimer.html">ข้อจำกัดความรับผิด</a>
+  <span class="util-bar-right">รวมผลมวยจากทุกรายการ · บันทึกโดยแฟนมวย</span>
+</div>
+
+<!-- NAV -->
+<nav class="nav">
+  <a class="nav-logo" href="index.html">
+    <img src="https://res.cloudinary.com/dia2yts2f/image/upload/v1779892068/ChatGPT_Image_22_%E0%B8%A1.%E0%B8%84._2569_19_38_45.png" alt="Boxfan" onerror="this.style.display='none'">
+    <div class="nav-logo-text">
+      <span class="logo-main"><span>BOX</span>FAN</span>
+      <span class="logo-sub">ผลมวยทุกสังเวียน</span>
+    </div>
+  </a>
+  <div class="nav-tabs">
+    <a class="nav-tab" href="index.html">อันดับ</a>
+    <a class="nav-tab" href="rankings.html">ตารางคะแนน</a>
+    <a class="nav-tab" href="schedule.html">โปรแกรมชก</a>
+    <a class="nav-tab" href="results.html">ผลการแข่งขัน</a>
+    <a class="nav-tab" href="compare.html">เปรียบเทียบ</a>
+    <a class="nav-tab" href="blog/">บทความ</a>
+    <a class="nav-tab" href="tierlist.html">Tier List</a>
+    <a class="nav-tab active" href="bracket.html">จัดสายมวย</a>
+    <a class="nav-tab" href="ranking.html">จัดอันดับ</a>
+  </div>
+  <div class="nav-right">
+    <div class="nav-search-btn" id="search-toggle" aria-label="ค้นหา" role="button" tabindex="0">
+      <span class="ic"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></span>
+      <div class="search-panel" id="search-panel">
+        <input type="text" id="sinput" placeholder="ค้นหานักมวย…" autocomplete="off">
+        <div class="sdrop-inner" id="sdrop"></div>
+      </div>
+    </div>
+    <a class="nav-signin" href="about.html">เกี่ยวกับ</a>
+  </div>
+</nav>
+
+<div class="page-w wide" style="padding-top:0;padding-bottom:48px">
+
+  <div class="tl-header no-capture">
+    <div>
+      <div class="tl-kicker">Boxfan · Interactive</div>
+      <h1 class="tl-h1">จัดสาย<em>มวย</em></h1>
+      <p class="tl-sub">ลากนักมวยจากคลังไปวางในสาย แตะนักมวยในสายเพื่อส่งเข้ารอบถัดไป เหมาะสำหรับทายผลหรือทำคลิปวิเคราะห์</p>
+    </div>
+    <div class="tl-actions">
+      <div class="seg" role="group" aria-label="จำนวนนักมวยในสาย">
+        <button type="button" data-size="4">4 คน</button><button type="button" data-size="8">8 คน</button><button type="button" data-size="16">16 คน</button>
+      </div>
+      <button class="btn btn-ghost" type="button" id="clearBtn"><span class="ic" style="font-size:14px"><svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg></span> ล้างสาย</button>
+      <button class="btn btn-ghost" type="button" id="pngBtn"><span class="ic" style="font-size:14px"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></span> ดาวน์โหลด PNG</button>
+      <button class="btn btn-red" type="button" id="clipBtn"><span class="ic" style="font-size:14px"><svg viewBox="0 0 24 24"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="m16 10 6-4v12l-6-4"/></svg></span> โหมดถ่ายคลิป</button>
+    </div>
+  </div>
+
+  <!-- BRACKET BOARD (ส่วนนี้คือที่ออกเป็นภาพ PNG / คลิป) -->
+  <section class="bk-board" id="capture-area" aria-label="สายการแข่งขัน">
+    <div class="br-stage" id="stage" data-hscroll>
+      <div class="br-inner" id="inner">
+        <header class="br-head">
+          <div><h2 class="br-title bk-edit" id="title" contenteditable="true" spellcheck="false" data-ph="พิมพ์ชื่อรายการ"></h2></div>
+          <div><p class="br-sub bk-edit" id="sub" contenteditable="true" spellcheck="false" data-ph="วันที่ / รุ่น"></p></div>
+        </header>
+        <div class="bracket" id="bracket"></div>
+      </div>
+    </div>
+    <div id="credit"></div>
+  </section>
+  <button class="clip-exit" type="button" id="clipExit">ออกจากโหมดถ่ายคลิป (Esc)</button>
+
+  <!-- POOL -->
+  <div class="no-capture">
+    <div class="sec-head"><span class="sec-head-title"><span class="sec-num">POOL</span> คลังนักมวย</span></div>
+    <p class="bk-tip">คอม: คลิกค้างแล้วลาก | มือถือ: แตะค้างครู่หนึ่งแล้วลาก | แตะรูปเฉย ๆ จะใส่ช่องว่างถัดไปให้เลย | ลากรูปจากเครื่องมาวางบนช่องในสายได้ หรือกด Ctrl+V วางรูปที่คัดลอกไว้</p>
+    <div id="pool"></div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer no-capture">
+  <div class="footer-in">
+    <div class="footer-brand">BOX<span>FAN</span></div>
+    <div class="footer-tag">ผลมวยทุกสังเวียน</div>
+    <div class="footer-links">
+      <a href="about.html">เกี่ยวกับเรา</a>
+      <a href="contact.html">ติดต่อเรา</a>
+      <a href="privacy.html">นโยบายความเป็นส่วนตัว</a>
+      <a href="disclaimer.html">ข้อจำกัดความรับผิด</a>
+    </div>
+    <div class="footer-copy">© <span id="yr-ft"></span> Boxfan · รวมผลมวยจากทุกรายการ บันทึกโดยแฟนมวย</div>
+  </div>
+</footer>
+
+<script src="data/fighters_data.js"></script>
+<script src="utils.js"></script>
+<script src="board-kit.js"></script>
+
+<script>
+(function () {
+var BK = window.BoardKit, h = BK.h;
+var KEY = 'boxfan-bracket-v1';
+var $ = function (s) { return document.querySelector(s); };
+
+function emptySlots(N) { var R = Math.log2(N), a = []; for (var r = 0; r <= R; r++) { var row = []; for (var i = 0; i < (N >> r); i++) row.push(null); a.push(row); } return a; }
+var S = BK.load(KEY, null);
+if (!S || !S.slots || [4, 8, 16].indexOf(S.size) === -1) S = { title: 'มวยไทย เวิลด์ กรังด์ปรีซ์', sub: 'รุ่นฟลายเวต', size: 8, slots: emptySlots(8) };
+function save() { BK.save(KEY, S); }
+
+/* ── ตรรกะสาย ── */
+function setSlot(r, k, key) {
+  var old = S.slots[r][k]; S.slots[r][k] = key;
+  if (old && old !== key) {                     // ถอนผู้ชนะเดิมออกจากรอบถัด ๆ ไป
+    var rr = r + 1, kk = k >> 1;
+    while (rr < S.slots.length && S.slots[rr][kk] === old) { S.slots[rr][kk] = null; rr++; kk >>= 1; }
+  }
+}
+function advance(r, k) {
+  if (r >= S.slots.length - 1) return;
+  var key = S.slots[r][k]; if (!key) return;
+  var t = k >> 1;
+  setSlot(r + 1, t, S.slots[r + 1][t] === key ? null : key);
+  save(); render();
+}
+function roundName(n) { return ({ 16: 'รอบ 16 คน', 8: 'รอบก่อนรองชนะเลิศ', 4: 'รอบรองชนะเลิศ' })[n] || ('รอบ ' + n + ' คน'); }
+
+/* ── วาดสาย ── */
+function slotHTML(r, k, corner, state) {
+  var key = S.slots[r][k], f = BK.get(key);
+  if (key && !f) { S.slots[r][k] = null; key = null; }
+  var px = { 4: 108, 8: 92, 16: 66 }[S.size] * (corner === 'champ' ? 1.45 : 1);
+  return '<div class="slot ' + corner + (f ? ' filled' : ' empty') + (state ? ' ' + state : '') + '" data-drop="slot" data-r="' + r + '" data-k="' + k + '"' +
+    (f ? ' data-key="' + h(key) + '" data-src="slot" tabindex="0" role="button" aria-label="' + h(f.name) + ' กดเพื่อส่งเข้ารอบถัดไป"' : '') + '>' +
+    '<div class="pic">' + (f ? BK.imgTag(f, px, f.name) + (state === 'lose' ? '<span class="dim"></span>' : '') : '<span class="ph-txt">วางนักมวย</span>') + '</div>' +
+    '<div class="nm">' + (f ? h(f.name) : '') + '</div>' +
+    (f ? '<button class="x" type="button" data-x aria-label="เอา ' + h(f.name) + ' ออกจากช่อง">×</button>' : '') + '</div>';
+}
+function boutHTML(r, j, side, extra) {
+  var a = 2 * j, b = a + 1, A = S.slots[r][a], B = S.slots[r][b], nx = S.slots[r + 1][j];
+  function st(me, other) { return (!nx || !me) ? '' : (nx === me ? 'win' : (nx === other ? 'lose' : '')); }
+  return '<div class="bout ' + (extra || '') + '" data-r="' + r + '" data-j="' + j + '" data-side="' + side + '">' +
+    slotHTML(r, a, 'red', st(A, B)) + '<span class="vs">VS</span>' + slotHTML(r, b, 'blue', st(B, A)) + '</div>';
+}
+function sideCol(r, side) {
+  var n = S.slots[r].length, bouts = n / 4, start = side === 'L' ? 0 : bouts, s = '';
+  for (var j = start; j < start + bouts; j++) s += boutHTML(r, j, side);
+  return '<div class="br-col"><div class="br-rnd">' + roundName(n) + '</div><div class="br-bouts">' + s + '</div></div>';
+}
+function render() {
+  var N = S.size, R = Math.log2(N), br = $('#bracket');
+  document.querySelectorAll('.seg button').forEach(function (b) { b.setAttribute('aria-pressed', +b.dataset.size === N); });
+  br.className = 'bracket n' + N; br.style.setProperty('--cols', 2 * (R - 1) + 1);
+  var s = '<svg class="br-lines" id="lines" aria-hidden="true"></svg>';
+  for (var r = 0; r <= R - 2; r++) s += sideCol(r, 'L');
+  s += '<div class="br-col"><div class="br-rnd"></div><div class="br-mid">' +
+       '<div class="champ-wrap"><div class="champ-label">แชมป์</div>' + slotHTML(R, 0, 'champ', S.slots[R][0] ? 'win' : '') + '</div>' +
+       boutHTML(R - 1, 0, 'C', 'final') + '<div class="final-label">รอบชิงชนะเลิศ</div></div></div>';
+  for (r = R - 2; r >= 0; r--) s += sideCol(r, 'R');
+  br.innerHTML = s;
+  if (document.activeElement !== $('#title')) $('#title').textContent = S.title;
+  if (document.activeElement !== $('#sub')) $('#sub').textContent = S.sub;
+  pool && pool.render();
+  requestAnimationFrame(function () { fitClip(); drawLines(); });
+}
+
+/* เส้นสาย: ใส่สีแบบ attribute ตรง ๆ เพื่อให้ออกมาใน PNG ด้วย */
+var scale = 1;
+function drawLines() {
+  var br = $('#bracket'), svg = $('#lines'); if (!svg) return;
+  var base = br.getBoundingClientRect();
+  svg.setAttribute('width', br.offsetWidth); svg.setAttribute('height', br.offsetHeight);
+  function P(el) { var r = el.getBoundingClientRect(); return { l: (r.left - base.left) / scale, r: (r.right - base.left) / scale, t: (r.top - base.top) / scale, b: (r.bottom - base.top) / scale, cx: (r.left + r.width / 2 - base.left) / scale, cy: (r.top + r.height / 2 - base.top) / scale }; }
+  var out = '';
+  br.querySelectorAll('.bout').forEach(function (bt) {
+    var r = +bt.dataset.r, j = +bt.dataset.j, side = bt.dataset.side;
+    var sl = br.querySelector('.slot[data-r="' + (r + 1) + '"][data-k="' + j + '"]'); if (!sl) return;
+    var a = P(bt), t = P(side === 'C' ? sl : sl.querySelector('.pic')), d, m;
+    var nx = S.slots[r + 1][j], on = nx && (nx === S.slots[r][2 * j] || nx === S.slots[r][2 * j + 1]);
+    if (side === 'L') { m = (a.r + t.l) / 2; d = 'M' + a.r + ' ' + a.cy + 'H' + m + 'V' + t.cy + 'H' + t.l; }
+    else if (side === 'R') { m = (a.l + t.r) / 2; d = 'M' + a.l + ' ' + a.cy + 'H' + m + 'V' + t.cy + 'H' + t.r; }
+    else d = 'M' + a.cx + ' ' + a.t + 'V' + (t.b + 2);
+    out += '<path d="' + d + '" fill="none" stroke="' + (on ? '#f4b740' : '#3a4656') + '" stroke-width="' + (on ? 3 : 2) + '"/>';
+  });
+  svg.innerHTML = out;
+}
+
+/* ── โหมดถ่ายคลิป ── */
+function fitClip() {
+  var inner = $('#inner');
+  if (!document.body.classList.contains('clip')) { inner.style.transform = ''; scale = 1; return; }
+  inner.style.transform = 'none';
+  var cr = $('#credit').offsetHeight;
+  scale = Math.min((innerWidth - 48) / inner.offsetWidth, (innerHeight - cr - 40) / inner.offsetHeight, 2.2);
+  inner.style.transform = 'scale(' + scale + ')';
+}
+function enterClip() {
+  document.body.classList.add('clip');
+  try { var p = document.documentElement.requestFullscreen && document.documentElement.requestFullscreen(); p && p.catch(function () {}); } catch (e) {}
+  render();
+}
+function exitClip() {
+  document.body.classList.remove('clip');
+  try { if (document.fullscreenElement) document.exitFullscreen(); } catch (e) {}
+  render();
+}
+
+/* ── คลัง + ลากวาง ── */
+function usedMap() { var u = {}; S.slots[0].forEach(function (k) { if (k) u[k] = 1; }); return u; }
+var pool = null;
+pool = BK.Pool({ root: $('#pool'), used: usedMap, onChange: function () { render(); }, onRename: function (f) {
+  document.querySelectorAll('.slot[data-key="' + f.key + '"] .nm').forEach(function (el) { el.textContent = f.name; });
+} });
+
+BK.Drag({
+  onTap: function (d) {
+    if (d.src === 'slot') return advance(+d.data.r, +d.data.k);
+    var i = S.slots[0].indexOf(null);
+    if (i < 0) return BK.toast('ช่องรอบแรกเต็มแล้ว ลากไปวางทับช่องที่ต้องการแทนได้');
+    setSlot(0, i, d.key); save(); render();
+  },
+  onDrop: function (d, t) {
+    if (t.dataset.drop === 'slot') {
+      var r = +t.dataset.r, k = +t.dataset.k;
+      if (d.src === 'slot' && +d.data.r === r) {          // รอบเดียวกัน = สลับช่อง
+        var a = S.slots[r][+d.data.k]; S.slots[r][+d.data.k] = S.slots[r][k]; S.slots[r][k] = a;
+      } else setSlot(r, k, d.key);                        // ข้ามรอบ = ส่งเข้ารอบ
+    } else if (t.dataset.drop === 'pool' && d.src === 'slot') {
+      setSlot(+d.data.r, +d.data.k, null);                // ลากกลับคลัง = เอาออก
+    } else return;
+    save(); render();
+  },
+  accept: function (d, t) {
+    if (t.dataset.drop === 'pool') return d.src === 'slot';
+    return !(d.src === 'slot' && t.dataset.r === d.data.r && t.dataset.k === d.data.k);
+  }
+});
+
+/* ลากไฟล์รูปจากเครื่องมาวางบนช่องในสาย */
+$('#bracket').addEventListener('dragover', function (e) { if (BK.hasFiles(e)) e.preventDefault(); });
+$('#bracket').addEventListener('drop', function (e) {
+  if (!BK.hasFiles(e)) return; e.preventDefault();
+  var t = e.target.closest('.slot');
+  BK.addUploads(e.dataTransfer.files).then(function (keys) {
+    if (t && keys[0]) setSlot(+t.dataset.r, +t.dataset.k, keys[0]);
+    save(); render();
+  });
+});
+BK.onPaste(function () { render(); });
+
+/* ── ปุ่ม / คีย์บอร์ด ── */
+document.addEventListener('click', function (e) {
+  var x = e.target.closest('[data-x]');
+  if (x) { var s = x.closest('.slot'); setSlot(+s.dataset.r, +s.dataset.k, null); save(); render(); }
+});
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape' && document.body.classList.contains('clip')) return exitClip();
+  var s = e.target.closest && e.target.closest('.slot.filled');
+  if (s && (e.key === 'Enter' || e.key === ' ')) {
+    e.preventDefault(); var r = s.dataset.r, k = s.dataset.k; advance(+r, +k);
+    var n = document.querySelector('.slot[data-r="' + r + '"][data-k="' + k + '"]'); n && n.focus();
+  }
+  if (e.target.matches && e.target.matches('.bk-edit') && e.key === 'Enter') { e.preventDefault(); e.target.blur(); }
+});
+$('#title').addEventListener('input', function () { S.title = this.textContent; save(); });
+$('#sub').addEventListener('input', function () { S.sub = this.textContent; save(); });
+document.querySelectorAll('.seg button').forEach(function (b) {
+  b.addEventListener('click', function () {
+    var N = +b.dataset.size; if (N === S.size) return;
+    var old = S.slots[0]; S.size = N; S.slots = emptySlots(N);
+    for (var i = 0; i < Math.min(N, old.length); i++) S.slots[0][i] = old[i];
+    save(); render();
+  });
+});
+$('#clearBtn').addEventListener('click', function () { S.slots = emptySlots(S.size); save(); render(); BK.toast('ล้างสายแล้ว'); });
+$('#clipBtn').addEventListener('click', enterClip);
+$('#clipExit').addEventListener('click', exitClip);
+$('#pngBtn').addEventListener('click', function () {
+  var board = $('#capture-area'), inner = $('#inner');
+  BK.exportPNG(board, {
+    filename: 'boxfan-bracket', bg: '#161c24',
+    measure: function () { return { width: Math.max(board.clientWidth, inner.scrollWidth + 40) }; },
+    prepare: function (doc, w) {
+      doc.getElementById('capture-area').style.width = w + 'px';
+      doc.getElementById('stage').style.overflow = 'visible';
+    }
+  });
+});
+document.addEventListener('fullscreenchange', function () { if (!document.fullscreenElement && document.body.classList.contains('clip')) exitClip(); else requestAnimationFrame(function () { fitClip(); drawLines(); }); });
+var rz; window.addEventListener('resize', function () { cancelAnimationFrame(rz); rz = requestAnimationFrame(function () { fitClip(); drawLines(); }); });
+if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { fitClip(); drawLines(); });
+
+$('#credit').innerHTML = BK.creditHTML();
+BK.initNav();
+render();
+})();
+</script>
+</body>
+</html>

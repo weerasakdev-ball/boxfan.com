@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: blob: https://res.cloudinary.com https://img.youtube.com https://i.ytimg.com; frame-src https://www.youtube.com">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#0d1014">
+<title>จัดอันดับนักมวย สร้างตารางอันดับของคุณเอง ลากวาง แชร์ได้ | Boxfan</title>
+<meta name="description" content="สร้างตารางจัดอันดับนักมวยไทยและ ONE Championship ของคุณเอง เพิ่มแถว เพิ่มคอลัมน์ได้อิสระ ลากนักมวยจากฐานข้อมูล Boxfan แล้วบันทึกเป็นภาพแชร์ได้ทันที">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+<meta name="author" content="Boxfan">
+<link rel="canonical" href="https://www.boxingfandom.com/ranking.html">
+<meta property="og:title" content="จัดอันดับนักมวย สร้างตารางอันดับของคุณเอง ลากวาง แชร์ได้ | Boxfan">
+<meta property="og:description" content="สร้างตารางจัดอันดับนักมวยไทยและ ONE Championship ของคุณเอง เพิ่มแถว เพิ่มคอลัมน์ได้อิสระ ลากนักมวยจากฐานข้อมูล Boxfan แล้วบันทึกเป็นภาพแชร์ได้ทันที">
+<meta property="og:image" content="https://www.boxingfandom.com/og-default.jpg">
+<meta property="og:url" content="https://www.boxingfandom.com/ranking.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Boxfan">
+<meta property="og:locale" content="th_TH">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"หน้าแรก","item":"https://www.boxingfandom.com/index.html"},{"@type":"ListItem","position":2,"name":"จัดอันดับ","item":"https://www.boxingfandom.com/ranking.html"}]},{"@type":"WebApplication","name":"จัดอันดับ Boxfan","url":"https://www.boxingfandom.com/ranking.html","applicationCategory":"SportsApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"THB"}}]}</script>
+<link rel="icon" type="image/png" href="images/logoboxingfandom.png">
+<link rel="apple-touch-icon" href="images/logoboxingfandom.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Bai+Jamjuree:wght@600;700&family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="board-kit.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<style>
+/* ══ RANKING PAGE ══ */
+.rk-tools{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:14px}
+.rk-tools .filter-input{width:auto}
+.rk-check{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--tx-2);cursor:pointer;padding:8px 12px;border:1px solid var(--line-2);border-radius:7px;background:var(--surf-2)}
+.rk-check input{accent-color:var(--gold);width:16px;height:16px}
+.bk-board{background:var(--surf);border:1px solid var(--line-2);border-radius:13px;overflow:hidden;margin-bottom:26px;box-shadow:var(--sh-3),var(--edge)}
+.rk-top{text-align:center;padding:24px 18px 18px;background:radial-gradient(60% 90% at 12% 0%,rgba(232,65,46,.13),transparent 70%),radial-gradient(60% 90% at 88% 0%,rgba(59,141,240,.12),transparent 70%)}
+.rk-title{font-family:var(--display);font-weight:700;font-size:clamp(22px,3vw,34px);line-height:1.25;color:var(--tx);margin:0;padding:2px 10px;display:inline-block;min-width:220px}
+.rk-sub{font-family:var(--display);font-weight:600;font-size:15px;color:var(--gold);margin:6px 0 0;padding:0 10px;display:inline-block;min-width:160px}
+.rk-scroll{overflow-x:auto}
+.rk-table{min-width:100%;width:max-content}
+.rk-row{display:grid;grid-template-columns:var(--cols) 140px;align-items:stretch;border-top:1px solid var(--line);transition:background .12s}
+body.capture-mode .rk-row,body.bk-exporting .rk-row{grid-template-columns:var(--cols)}
+.rk-row>div{display:flex;align-items:center;min-width:0}
+.rk-row.hd{background:var(--surf-2);border-top:0}
+.rk-row.hd>div{padding:10px 12px;font-family:var(--serif);font-size:12.5px;font-weight:700;letter-spacing:.08em;color:var(--tx-3);gap:6px}
+.rk-row.hd .rk-hl{font-family:var(--serif);letter-spacing:.06em;padding:2px 6px;min-width:40px}
+.rk-row.hd .del-col{border:0;background:transparent;color:var(--tx-4);cursor:pointer;font-size:14px;padding:2px 4px;border-radius:4px}
+.rk-row.hd .del-col:hover{color:var(--red)}
+.rk-row.drop-over{outline-offset:-2px!important}
+.rk-rank{justify-content:center;flex-direction:column;font-family:var(--serif);font-weight:800;font-size:34px;line-height:1;color:var(--tx-2);border-right:1px solid var(--line)}
+.rk-rank small{font-family:var(--display);font-size:11px;font-weight:600;letter-spacing:.04em;margin-top:3px}
+.rk-row.g1 .rk-rank{color:var(--gold);background:var(--gold-soft)}
+.rk-row.g2 .rk-rank{color:#cfd6e0}
+.rk-row.g3 .rk-rank{color:#d7925a}
+.rk-f{gap:12px;padding:8px 12px}
+.rk-ph{width:64px;height:64px;flex:none;border-radius:9px;overflow:hidden;border:2px solid var(--line-2);background:var(--surf-2)}
+.rk-row.g1 .rk-ph{border-color:var(--gold)}
+.rk-ph img{width:100%;height:100%;object-fit:cover;display:block;pointer-events:none}
+.rk-f.filled{cursor:grab}
+.rk-f.filled:hover .rk-ph{border-color:var(--red-line)}
+.rk-nm{min-width:0;line-height:1.3}
+.rk-nm b{display:block;font-size:15.5px;font-weight:600;color:var(--tx)}
+.rk-nm small{display:block;font-size:12px;color:var(--tx-3);margin-top:2px}
+.rk-empty .rk-ph{border-style:dashed;border-color:var(--line-3);background:transparent}
+.rk-empty .rk-nm{font-size:13px;color:var(--tx-4)}
+.rk-cell{padding:8px 12px;font-size:13.5px;color:var(--tx-2);border-left:1px solid var(--line)}
+.rk-cell.bk-edit{border-radius:0;white-space:pre-wrap;word-break:break-word}
+.rk-cell.bk-edit:focus{box-shadow:inset 0 0 0 2px var(--red-line)}
+.rk-act{justify-content:flex-end;gap:4px;padding:0 10px}
+.rk-act button{width:28px;height:28px;border-radius:6px;border:1px solid var(--line-2);background:var(--surf-2);color:var(--tx-2);cursor:pointer;font-size:13px;line-height:1;display:inline-flex;align-items:center;justify-content:center}
+.rk-act button:hover{color:var(--tx);border-color:var(--line-3)}
+.rk-act button[data-a="del"]:hover{color:var(--red);border-color:var(--red-line)}
+.rk-act button:disabled{opacity:.3;cursor:default}
+.rk-foot{padding:12px;border-top:1px solid var(--line);text-align:center}
+/* ตอนแคป/บันทึกภาพ: ซ่อนแถวว่างท้ายตาราง และข้อความ "ลากนักมวยมาวาง" */
+body.capture-mode .rk-row.trail,body.bk-exporting .rk-row.trail{display:none}
+body.capture-mode .rk-empty .rk-nm,body.bk-exporting .rk-empty .rk-nm{visibility:hidden}
+
+/* capture mode แบบหน้า Tier List */
+body.capture-mode .no-capture{display:none!important}
+body.capture-mode .bk-board{border-radius:0;box-shadow:none}
+@media(max-width:640px){
+  .rk-row{grid-template-columns:var(--cols-m) 112px}
+  body.capture-mode .rk-row,body.bk-exporting .rk-row{grid-template-columns:var(--cols-m)}
+  .rk-rank{font-size:26px}.rk-ph{width:52px;height:52px}.rk-act button{width:24px;height:24px}
+}
+</style>
+</head>
+<body>
+
+<!-- UTIL BAR -->
+<div class="util-bar">
+  <a href="about.html">เกี่ยวกับเรา</a>
+  <a href="contact.html">ติดต่อเรา</a>
+  <a href="blog/">บทความ</a>
+  <a href="disclaimer.html">ข้อจำกัดความรับผิด</a>
+  <span class="util-bar-right">รวมผลมวยจากทุกรายการ · บันทึกโดยแฟนมวย</span>
+</div>
+
+<!-- NAV -->
+<nav class="nav">
+  <a class="nav-logo" href="index.html">
+    <img src="https://res.cloudinary.com/dia2yts2f/image/upload/v1779892068/ChatGPT_Image_22_%E0%B8%A1.%E0%B8%84._2569_19_38_45.png" alt="Boxfan" onerror="this.style.display='none'">
+    <div class="nav-logo-text">
+      <span class="logo-main"><span>BOX</span>FAN</span>
+      <span class="logo-sub">ผลมวยทุกสังเวียน</span>
+    </div>
+  </a>
+  <div class="nav-tabs">
+    <a class="nav-tab" href="index.html">อันดับ</a>
+    <a class="nav-tab" href="rankings.html">ตารางคะแนน</a>
+    <a class="nav-tab" href="schedule.html">โปรแกรมชก</a>
+    <a class="nav-tab" href="results.html">ผลการแข่งขัน</a>
+    <a class="nav-tab" href="compare.html">เปรียบเทียบ</a>
+    <a class="nav-tab" href="blog/">บทความ</a>
+    <a class="nav-tab" href="tierlist.html">Tier List</a>
+    <a class="nav-tab" href="bracket.html">จัดสายมวย</a>
+    <a class="nav-tab active" href="ranking.html">จัดอันดับ</a>
+  </div>
+  <div class="nav-right">
+    <div class="nav-search-btn" id="search-toggle" aria-label="ค้นหา" role="button" tabindex="0">
+      <span class="ic"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></span>
+      <div class="search-panel" id="search-panel">
+        <input type="text" id="sinput" placeholder="ค้นหานักมวย…" autocomplete="off">
+        <div class="sdrop-inner" id="sdrop"></div>
+      </div>
+    </div>
+    <a class="nav-signin" href="about.html">เกี่ยวกับ</a>
+  </div>
+</nav>
+
+<!-- CAPTURE HINT -->
+<div class="capture-hint no-capture" id="capture-hint">
+  <div class="capture-hint-title">พร้อมแคปแล้ว!</div>
+  <p>มือถือ: กดปุ่มแคปจอตามปกติ<br>PC: กด Win + Shift + S</p>
+  <button class="btn btn-ghost" type="button" id="capOff">ออกจากโหมดนี้</button>
+</div>
+
+<div class="page-w" style="padding-top:0;padding-bottom:48px">
+
+  <div class="tl-header no-capture">
+    <div>
+      <div class="tl-kicker">Boxfan · Interactive</div>
+      <h1 class="tl-h1">จัด<em>อันดับ</em></h1>
+      <p class="tl-sub">สร้างตารางจัดอันดับของคุณเอง เพิ่มแถว เพิ่มคอลัมน์ได้อิสระ ลากนักมวยใส่อันดับ แล้วบันทึกเป็นภาพแชร์ได้เลย</p>
+    </div>
+    <div class="tl-actions">
+      <button class="btn btn-ghost" type="button" id="clearBtn"><span class="ic" style="font-size:14px"><svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg></span> ล้างตาราง</button>
+      <button class="btn btn-ghost" type="button" id="pngBtn"><span class="ic" style="font-size:14px"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></span> ดาวน์โหลด PNG</button>
+      <button class="btn btn-red" type="button" id="capOn"><span class="ic" style="font-size:14px"><svg viewBox="0 0 24 24"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3z"/><circle cx="12" cy="13" r="3"/></svg></span> โหมดแคปหน้าจอ</button>
+    </div>
+  </div>
+
+  <div class="rk-tools no-capture">
+    <button class="btn btn-ghost" type="button" id="addRow"><span class="ic" style="font-size:14px"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span> เพิ่มแถว</button>
+    <select class="filter-input" id="addCol" aria-label="เพิ่มคอลัมน์">
+      <option value="">+ เพิ่มคอลัมน์...</option>
+      <option value="text">ข้อความอิสระ (พิมพ์เอง)</option>
+      <option value="division">รุ่น (จากฐานข้อมูล)</option>
+      <option value="country">สัญชาติ (จากฐานข้อมูล)</option>
+      <option value="age">อายุ (จากฐานข้อมูล)</option>
+    </select>
+    <label class="rk-check"><input type="checkbox" id="champ"> อันดับแรกเป็นแชมป์ (C)</label>
+  </div>
+
+  <!-- RANKING BOARD (ส่วนนี้คือที่ออกเป็นภาพ PNG) -->
+  <section class="bk-board" id="capture-area" aria-label="ตารางจัดอันดับ">
+    <div class="rk-top">
+      <div><h2 class="rk-title bk-edit" id="title" contenteditable="true" spellcheck="false" data-ph="พิมพ์หัวข้อตาราง"></h2></div>
+      <div><p class="rk-sub bk-edit" id="sub" contenteditable="true" spellcheck="false" data-ph="คำอธิบายสั้น ๆ (ไม่ใส่ก็ได้)"></p></div>
+    </div>
+    <div class="rk-scroll" data-hscroll><div class="rk-table" id="table"></div></div>
+    <div class="rk-foot no-capture"><button class="btn btn-ghost" type="button" id="addRow2"><span class="ic" style="font-size:14px"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span> เพิ่มแถว</button></div>
+    <div id="credit"></div>
+  </section>
+
+  <!-- POOL -->
+  <div class="no-capture">
+    <div class="sec-head"><span class="sec-head-title"><span class="sec-num">POOL</span> คลังนักมวย</span></div>
+    <p class="bk-tip">คอม: คลิกค้างแล้วลาก | มือถือ: แตะค้างครู่หนึ่งแล้วลาก | แตะรูปเฉย ๆ จะใส่อันดับว่างถัดไป | วางทับอันดับที่มีคนอยู่แล้ว คนเดิมจะเลื่อนลงไปหนึ่งอันดับ</p>
+    <div id="pool"></div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer no-capture">
+  <div class="footer-in">
+    <div class="footer-brand">BOX<span>FAN</span></div>
+    <div class="footer-tag">ผลมวยทุกสังเวียน</div>
+    <div class="footer-links">
+      <a href="about.html">เกี่ยวกับเรา</a>
+      <a href="contact.html">ติดต่อเรา</a>
+      <a href="privacy.html">นโยบายความเป็นส่วนตัว</a>
+      <a href="disclaimer.html">ข้อจำกัดความรับผิด</a>
+    </div>
+    <div class="footer-copy">© <span id="yr-ft"></span> Boxfan · รวมผลมวยจากทุกรายการ บันทึกโดยแฟนมวย</div>
+  </div>
+</footer>
+
+<script src="data/fighters_data.js"></script>
+<script src="utils.js"></script>
+<script src="board-kit.js"></script>
+
+<script>
+(function () {
+var BK = window.BoardKit, h = BK.h;
+var KEY = 'boxfan-ranking-v1';
+var $ = function (s) { return document.querySelector(s); };
+var TYPE_LABEL = { text: 'หมายเหตุ', division: 'รุ่น', country: 'สัญชาติ', age: 'อายุ' };
+
+function blankRows(n) { var a = []; for (var i = 0; i < n; i++) a.push({ key: null, cells: {} }); return a; }
+function defaults() {
+  return { title: 'Top 10 นักมวยในดวงใจ', sub: '', champ: false,
+           cols: [{ id: 'c1', label: 'รุ่น', type: 'division' }, { id: 'c2', label: 'เหตุผล', type: 'text' }],
+           rows: blankRows(10) };
+}
+var S = BK.load(KEY, null);
+if (!S || !Array.isArray(S.rows) || !Array.isArray(S.cols)) S = defaults();
+function save() { BK.save(KEY, S); }
+function uid() { return 'c' + Date.now().toString(36) + Math.random().toString(36).slice(2, 5); }
+
+/* ── ตรรกะตาราง ── */
+function indexOfKey(key) { for (var i = 0; i < S.rows.length; i++) if (S.rows[i].key === key) return i; return -1; }
+function moveRow(from, to) {
+  if (from === to) return;
+  var r = S.rows.splice(from, 1)[0]; S.rows.splice(to, 0, r);
+}
+/* ใส่นักมวยที่อันดับ i: ถ้ามีคนอยู่ คนเดิมและคนถัดไปเลื่อนลงจนถึงแถวว่างแรก */
+function insertAt(i, key) {
+  if (!S.rows[i].key) { S.rows[i].key = key; return; }
+  var e = -1;
+  for (var j = i + 1; j < S.rows.length; j++) if (!S.rows[j].key) { e = j; break; }
+  if (e !== -1) S.rows.splice(e, 1);
+  S.rows.splice(i, 0, { key: key, cells: {} });
+}
+function place(key, i) {
+  var at = indexOfKey(key);
+  if (at !== -1) moveRow(at, i); else insertAt(i, key);
+}
+function rankLabel(i) {
+  if (S.champ) return i === 0 ? 'C<small>แชมป์</small>' : String(i);
+  return String(i + 1);
+}
+
+/* ── วาดตาราง ── */
+function colTemplate(mobile) {
+  var t = mobile ? '52px minmax(190px,1.5fr)' : '76px minmax(250px,1.6fr)';
+  S.cols.forEach(function (c) { t += c.type === 'text' ? (mobile ? ' minmax(150px,1.4fr)' : ' minmax(180px,1.4fr)') : (mobile ? ' minmax(96px,.8fr)' : ' minmax(110px,.8fr)'); });
+  return t;
+}
+function autoCell(c, f) {
+  if (!f || f.custom) return '';
+  if (c.type === 'division') return h(BK.divName(f.division));
+  if (c.type === 'country') return (f.country ? BK.flagHTML(f.country) + ' ' + h(f.country) : '');
+  if (c.type === 'age') return f.age ? f.age + ' ปี' : '';
+  return '';
+}
+function render() {
+  var tb = $('#table');
+  tb.style.setProperty('--cols', colTemplate(false));
+  tb.style.setProperty('--cols-m', colTemplate(true));
+  var s = '<div class="rk-row hd"><div style="justify-content:center">อันดับ</div><div>นักมวย</div>';
+  S.cols.forEach(function (c) {
+    s += '<div><span class="rk-hl bk-edit" contenteditable="true" spellcheck="false" data-collabel="' + c.id + '" data-ph="ชื่อคอลัมน์">' + h(c.label) + '</span>' +
+         '<button class="del-col no-capture" type="button" data-delcol="' + c.id + '" aria-label="ลบคอลัมน์ ' + h(c.label) + '">×</button></div>';
+  });
+  s += '<div class="no-capture"></div></div>';
+  var last = S.rows.length - 1, lastFilled = -1;
+  S.rows.forEach(function (r, i) { if (r.key && BK.get(r.key)) lastFilled = i; });
+  S.rows.forEach(function (row, i) {
+    var f = BK.get(row.key);
+    if (row.key && !f) row.key = null;
+    var g = (S.champ ? (i === 0 ? 1 : 0) : (i < 3 ? i + 1 : 0));
+    var trail = lastFilled >= 0 && i > lastFilled && !Object.keys(row.cells).some(function (k) { return row.cells[k]; });
+    s += '<div class="rk-row' + (g ? ' g' + g : '') + (trail ? ' trail' : '') + '" data-drop="row" data-i="' + i + '">' +
+      '<div class="rk-rank">' + rankLabel(i) + '</div>';
+    if (f) {
+      s += '<div class="rk-f filled" data-key="' + h(f.key) + '" data-src="row" data-i="' + i + '" title="ลากเพื่อย้ายอันดับ">' +
+           '<div class="rk-ph">' + BK.imgTag(f, 64, f.name) + '</div>' +
+           '<div class="rk-nm"><b>' + h(f.name) + '</b>' + (f.nameEn ? '<small>' + h(f.nameEn) + '</small>' : '') + '</div></div>';
+    } else {
+      s += '<div class="rk-f rk-empty"><div class="rk-ph"></div><div class="rk-nm">ลากนักมวยมาวาง</div></div>';
+    }
+    S.cols.forEach(function (c) {
+      if (c.type === 'text') s += '<div class="rk-cell bk-edit" contenteditable="true" spellcheck="false" data-cell="' + i + '|' + c.id + '">' + h(row.cells[c.id] || '') + '</div>';
+      else s += '<div class="rk-cell">' + autoCell(c, f) + '</div>';
+    });
+    s += '<div class="rk-act no-capture">' +
+      '<button type="button" data-a="up" data-i="' + i + '" aria-label="เลื่อนขึ้น"' + (i === 0 ? ' disabled' : '') + '>▲</button>' +
+      '<button type="button" data-a="down" data-i="' + i + '" aria-label="เลื่อนลง"' + (i === last ? ' disabled' : '') + '>▼</button>' +
+      (f ? '<button type="button" data-a="clear" data-i="' + i + '" aria-label="เอานักมวยออก" title="เอานักมวยออก">×</button>' : '') +
+      '<button type="button" data-a="del" data-i="' + i + '" aria-label="ลบแถว" title="ลบแถวนี้"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4h8v2M6 6l1 14h10l1-14"/></svg></button>' +
+      '</div></div>';
+  });
+  tb.innerHTML = s;
+  if (document.activeElement !== $('#title')) $('#title').textContent = S.title;
+  if (document.activeElement !== $('#sub')) $('#sub').textContent = S.sub;
+  $('#champ').checked = !!S.champ;
+  pool && pool.render();
+}
+
+/* ── คลัง + ลากวาง ── */
+function usedMap() { var u = {}; S.rows.forEach(function (r) { if (r.key) u[r.key] = 1; }); return u; }
+var pool = null;
+pool = BK.Pool({ root: $('#pool'), used: usedMap, onChange: function () { render(); }, onRename: function (f) {
+  var el = document.querySelector('.rk-f[data-key="' + f.key + '"] .rk-nm b'); if (el) el.textContent = f.name;
+} });
+
+BK.Drag({
+  onTap: function (d) {
+    if (d.src !== 'pool') return;
+    var at = indexOfKey(d.key);
+    if (at !== -1) return BK.toast('อยู่อันดับ ' + (S.champ && at === 0 ? 'แชมป์' : (S.champ ? at : at + 1)) + ' แล้ว');
+    var i = -1;
+    for (var j = 0; j < S.rows.length; j++) if (!S.rows[j].key) { i = j; break; }
+    if (i === -1) { S.rows.push({ key: null, cells: {} }); i = S.rows.length - 1; }
+    S.rows[i].key = d.key; save(); render();
+  },
+  onDrop: function (d, t) {
+    if (t.dataset.drop === 'row') {
+      var to = +t.dataset.i;
+      if (d.src === 'row') moveRow(+d.data.i, to); else place(d.key, to);
+    } else if (t.dataset.drop === 'pool' && d.src === 'row') {
+      S.rows[+d.data.i].key = null;
+    } else return;
+    save(); render();
+  },
+  accept: function (d, t) {
+    if (t.dataset.drop === 'pool') return d.src === 'row';
+    return !(d.src === 'row' && t.dataset.i === d.data.i);
+  }
+});
+
+/* ลากไฟล์รูปจากเครื่องมาวางบนแถว */
+$('#table').addEventListener('dragover', function (e) { if (BK.hasFiles(e)) e.preventDefault(); });
+$('#table').addEventListener('drop', function (e) {
+  if (!BK.hasFiles(e)) return; e.preventDefault();
+  var t = e.target.closest('[data-drop="row"]');
+  BK.addUploads(e.dataTransfer.files).then(function (keys) {
+    if (t && keys[0]) place(keys[0], +t.dataset.i);
+    save(); render();
+  });
+});
+BK.onPaste(function () { render(); });
+
+/* ── ปุ่มต่าง ๆ ── */
+document.addEventListener('click', function (e) {
+  var b = e.target.closest('.rk-act button');
+  if (b) {
+    var i = +b.dataset.i, a = b.dataset.a;
+    if (a === 'up' && i > 0) moveRow(i, i - 1);
+    else if (a === 'down' && i < S.rows.length - 1) moveRow(i, i + 1);
+    else if (a === 'clear') S.rows[i].key = null;
+    else if (a === 'del') { if (S.rows.length <= 1) return BK.toast('ต้องมีอย่างน้อย 1 แถว'); S.rows.splice(i, 1); }
+    save(); render(); return;
+  }
+  var dc = e.target.closest('[data-delcol]');
+  if (dc) {
+    var id = dc.dataset.delcol;
+    S.cols = S.cols.filter(function (c) { return c.id !== id; });
+    S.rows.forEach(function (r) { delete r.cells[id]; });
+    save(); render();
+  }
+});
+document.addEventListener('input', function (e) {
+  var c = e.target.closest('[data-cell]');
+  if (c) { var p = c.dataset.cell.split('|'); var row = S.rows[+p[0]]; if (row) { row.cells[p[1]] = c.innerText.replace(/\n$/, ''); save(); } return; }
+  var l = e.target.closest('[data-collabel]');
+  if (l) { var col = S.cols.filter(function (x) { return x.id === l.dataset.collabel; })[0]; if (col) { col.label = l.textContent.trim(); save(); } return; }
+  if (e.target.id === 'title') { S.title = e.target.textContent; save(); }
+  if (e.target.id === 'sub') { S.sub = e.target.textContent; save(); }
+});
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape' && document.body.classList.contains('capture-mode')) return capture(false);
+  /* Enter = จบการแก้ไข (ยกเว้นช่องข้อความ ใช้ Shift+Enter ขึ้นบรรทัดใหม่) */
+  if (e.key === 'Enter' && e.target.matches && e.target.matches('.bk-edit') && !(e.shiftKey && e.target.matches('[data-cell]'))) { e.preventDefault(); e.target.blur(); }
+});
+function addRow() { S.rows.push({ key: null, cells: {} }); save(); render(); }
+$('#addRow').addEventListener('click', addRow);
+$('#addRow2').addEventListener('click', addRow);
+$('#addCol').addEventListener('change', function () {
+  var t = this.value; if (!t) return;
+  if (S.cols.length >= 6) { this.value = ''; return BK.toast('เพิ่มได้สูงสุด 6 คอลัมน์'); }
+  S.cols.push({ id: uid(), label: TYPE_LABEL[t], type: t });
+  this.value = ''; save(); render();
+  var hd = document.querySelectorAll('[data-collabel]');
+  if (hd.length) { var el = hd[hd.length - 1]; el.focus(); try { var rg = document.createRange(); rg.selectNodeContents(el); var sel = getSelection(); sel.removeAllRanges(); sel.addRange(rg); } catch (e) {} }
+});
+$('#champ').addEventListener('change', function () { S.champ = this.checked; save(); render(); });
+$('#clearBtn').addEventListener('click', function () {
+  S.rows = blankRows(Math.max(S.rows.length, 1)); save(); render(); BK.toast('ล้างตารางแล้ว คอลัมน์ยังอยู่ครบ');
+});
+function capture(on) {
+  document.body.classList.toggle('capture-mode', on);
+  $('#capture-hint').classList.toggle('show', on);
+  if (on) window.scrollTo({ top: $('#capture-area').offsetTop - 70, behavior: 'smooth' });
+}
+$('#capOn').addEventListener('click', function () { capture(true); });
+$('#capOff').addEventListener('click', function () { capture(false); });
+$('#pngBtn').addEventListener('click', function () {
+  var board = $('#capture-area'), tb = $('#table');
+  BK.exportPNG(board, {
+    filename: 'boxfan-ranking', bg: '#161c24',
+    measure: function () { return { width: Math.max(board.clientWidth, tb.scrollWidth + 2) }; },
+    prepare: function (doc, w) {
+      doc.getElementById('capture-area').style.width = w + 'px';
+      var sc = doc.querySelector('.rk-scroll'); if (sc) sc.style.overflow = 'visible';
+    }
+  });
+});
+
+$('#credit').innerHTML = BK.creditHTML();
+BK.initNav();
+render();
+})();
+</script>
+</body>
+</html>
