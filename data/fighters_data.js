@@ -1,11 +1,11 @@
 // สร้างอัตโนมัติโดย export_json.py — อย่าแก้ไขไฟล์นี้ด้วยมือ
 // ที่มา: C:\Users\Weera\Desktop\data\data
-// เวลา: 2026-09-21 13:07:12
+// เวลา: 2026-09-25 10:50:57
 
 const META     = {
-  "generated_at": "2026-09-21 13:07:12",
+  "generated_at": "2026-09-25 10:50:57",
   "fighter_count": 2208,
-  "fight_count": 7104,
+  "fight_count": 7131,
   "source_folder": "C:\\Users\\Weera\\Desktop\\data\\data"
 };
 const FIGHTERS = [
@@ -308,7 +308,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-17",
+    "last_updated": "2026-09-25",
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
@@ -316,8 +316,8 @@ const FIGHTERS = [
     "titles_history": "แชมป์โลก",
     "fight_count": 18,
     "record": {
-      "win": 10,
-      "loss": 8,
+      "win": 9,
+      "loss": 9,
       "draw": 0,
       "pending": 0,
       "total": 18
@@ -2406,18 +2406,18 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-12",
+    "last_updated": "2026-09-25",
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
     "championship_status": "แชมป์ปัจจุบัน",
     "titles_history": "แชมป์โลก",
-    "fight_count": 21,
+    "fight_count": 20,
     "record": {
       "win": 12,
       "loss": 6,
       "draw": 0,
-      "pending": 2,
+      "pending": 1,
       "total": 19
     }
   },
@@ -2460,7 +2460,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-21",
+    "last_updated": "2026-09-25",
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
@@ -4567,8 +4567,8 @@ const FIGHTERS = [
     "name_th": "คอนสแตนติน ชัคตาริน",
     "name_en": null,
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 70.1,
+    "weight_lbs": 154.6,
     "height_cm": null,
     "height_ft_in": null,
     "country": null,
@@ -4585,7 +4585,7 @@ const FIGHTERS = [
       "currency": "THB",
       "note": null
     },
-    "profile_url": null,
+    "profile_url": "https://www.onefc.com/th/athletes/konstantin-shakhtarin/",
     "thboxing_url": null,
     "image_filename": "คอนสแตนติน-ชัคตาริน",
     "strike_stats": {
@@ -4600,7 +4600,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-21",
+    "last_updated": "2026-09-25",
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": null,
@@ -7849,8 +7849,8 @@ const FIGHTERS = [
     "name_th": "คูร์เชด กาฟูรอฟ",
     "name_en": null,
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 70.1,
+    "weight_lbs": 154.6,
     "height_cm": null,
     "height_ft_in": null,
     "country": null,
@@ -7867,7 +7867,7 @@ const FIGHTERS = [
       "currency": "THB",
       "note": null
     },
-    "profile_url": null,
+    "profile_url": "https://www.onefc.com/th/athletes/khurshed-gafurov/",
     "thboxing_url": null,
     "image_filename": "คูร์เชด-กาฟูรอฟ",
     "strike_stats": {
@@ -7882,7 +7882,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-21",
+    "last_updated": "2026-09-25",
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": null,
@@ -11029,8 +11029,8 @@ const FIGHTERS = [
     "name_th": "จิน มันโดโคโระ",
     "name_en": "Jin Mandokoro",
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 56.5,
+    "weight_lbs": 124.6,
     "height_cm": 164,
     "height_ft_in": "5'5\"",
     "country": "ญี่ปุ่น",
@@ -11062,7 +11062,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-21",
+    "last_updated": "2026-09-25",
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
@@ -18066,7 +18066,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-21",
+    "last_updated": "2026-09-25",
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
@@ -19135,8 +19135,8 @@ const FIGHTERS = [
     "name_th": "ซุปเปอร์เล็ก จิตรเมืองนนท์",
     "name_en": "Supalek Jitmuangnon",
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 62.0,
+    "weight_lbs": 136.6,
     "height_cm": 175,
     "height_ft_in": "5'9\"",
     "country": "ไทย",
@@ -19168,7 +19168,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-21",
+    "last_updated": "2026-09-25",
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
@@ -19451,8 +19451,8 @@ const FIGHTERS = [
     "name_th": "ซูซานติ เอ็นดาปาตากา",
     "name_en": null,
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 57.6,
+    "weight_lbs": 127.0,
     "height_cm": null,
     "height_ft_in": null,
     "country": null,
@@ -19469,7 +19469,7 @@ const FIGHTERS = [
       "currency": "THB",
       "note": null
     },
-    "profile_url": null,
+    "profile_url": "https://www.onefc.com/th/athletes/susanti-ndapataka/",
     "thboxing_url": null,
     "image_filename": "ซูซานติ-เอ็นดาปาตากา",
     "strike_stats": {
@@ -19484,7 +19484,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-21",
+    "last_updated": "2026-09-25",
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": null,
@@ -20077,8 +20077,8 @@ const FIGHTERS = [
     "name_th": "ดวงบุปผา อ.แสนศึก",
     "name_en": null,
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 65.7,
+    "weight_lbs": 144.8,
     "height_cm": null,
     "height_ft_in": null,
     "country": null,
@@ -20095,7 +20095,7 @@ const FIGHTERS = [
       "currency": "THB",
       "note": null
     },
-    "profile_url": null,
+    "profile_url": "https://www.onefc.com/th/athletes/duangbuppha-o-sansuk/",
     "thboxing_url": null,
     "image_filename": "ดวงบุปผา-อ.แสนศึก",
     "strike_stats": {
@@ -20110,7 +20110,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-21",
+    "last_updated": "2026-09-25",
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": null,
@@ -22560,7 +22560,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-21",
+    "last_updated": "2026-09-25",
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
@@ -22822,7 +22822,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-21",
+    "last_updated": "2026-09-25",
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
@@ -29417,8 +29417,8 @@ const FIGHTERS = [
     "name_th": "บาซีร์ ซาราลิเยฟ",
     "name_en": null,
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 76.4,
+    "weight_lbs": 168.4,
     "height_cm": null,
     "height_ft_in": null,
     "country": null,
@@ -29435,7 +29435,7 @@ const FIGHTERS = [
       "currency": "THB",
       "note": null
     },
-    "profile_url": null,
+    "profile_url": "https://www.onefc.com/th/athletes/basir-saraliev/",
     "thboxing_url": null,
     "image_filename": "บาซีร์-ซาราลิเยฟ",
     "strike_stats": {
@@ -29450,7 +29450,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-21",
+    "last_updated": "2026-09-25",
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": null,
@@ -33676,7 +33676,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-21",
+    "last_updated": "2026-09-25",
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
@@ -36673,8 +36673,8 @@ const FIGHTERS = [
     "name_th": "มังกร ส.สมบัติฟาร์ม",
     "name_en": null,
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 52.9,
+    "weight_lbs": 116.6,
     "height_cm": 159,
     "height_ft_in": "5'3\"",
     "country": "ไทย",
@@ -36706,7 +36706,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-21",
+    "last_updated": "2026-09-25",
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
@@ -41309,17 +41309,17 @@ const FIGHTERS = [
   },
   {
     "id": "ยอดกตัญญู-จิตรเมืองนนท์",
-    "slug": "ยอดกตัญญู-จิตรเมืองนนท์",
+    "slug": "thiraphat-thunnam",
     "name_th": "ยอดกตัญญู จิตรเมืองนนท์",
-    "name_en": null,
+    "name_en": "Thiraphat Thunnam",
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
-    "height_cm": null,
+    "weight_kg": 59.3,
+    "weight_lbs": 130.8,
+    "height_cm": 175,
     "height_ft_in": null,
-    "country": null,
-    "age": null,
-    "team": null,
+    "country": "ไทย",
+    "age": 19,
+    "team": "จิตรเมืองนนท์",
     "level": "",
     "fight_purse": {
       "amount_thb": null,
@@ -41332,7 +41332,7 @@ const FIGHTERS = [
       "note": null
     },
     "profile_url": null,
-    "thboxing_url": null,
+    "thboxing_url": "https://www.thboxing.com/%E0%B8%95%E0%B8%B2%E0%B8%A3%E0%B8%B2%E0%B8%87%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%A1%E0%B8%A7%E0%B8%A2-15210-%E0%B9%81%E0%B8%94%E0%B8%87/",
     "image_filename": "ยอดกตัญญู-จิตรเมืองนนท์",
     "strike_stats": {
       "strikes_per_minute": {
@@ -41346,19 +41346,19 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-21",
+    "last_updated": "2026-09-25",
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": null,
     "championship_status": null,
     "titles_history": null,
-    "fight_count": 1,
+    "fight_count": 31,
     "record": {
-      "win": 0,
-      "loss": 0,
-      "draw": 0,
+      "win": 21,
+      "loss": 7,
+      "draw": 2,
       "pending": 1,
-      "total": 0
+      "total": 30
     }
   },
   {
@@ -44085,8 +44085,8 @@ const FIGHTERS = [
     "name_th": "ยูทาโร โฮริ",
     "name_en": null,
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 65.6,
+    "weight_lbs": 144.6,
     "height_cm": null,
     "height_ft_in": null,
     "country": null,
@@ -44118,7 +44118,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-21",
+    "last_updated": "2026-09-25",
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": null,
@@ -44245,8 +44245,8 @@ const FIGHTERS = [
     "name_th": "ยูยะ ชิบาตะ",
     "name_en": "Yuya Shibata",
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 69.9,
+    "weight_lbs": 154.2,
     "height_cm": 178,
     "height_ft_in": "5'10\"",
     "country": "ญี่ปุ่น",
@@ -44278,7 +44278,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-21",
+    "last_updated": "2026-09-25",
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
@@ -45376,7 +45376,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-08",
+    "last_updated": "2026-09-25",
     "division": "ฟลายเวท",
     "nickname": "The Iron Man",
     "gender": "ชาย",
@@ -50305,8 +50305,8 @@ const FIGHTERS = [
     "name_th": "ลำน้ำมูลเล็ก ทอฝันฟาร์ม",
     "name_en": "Lamnamoonlek Tded99",
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 61.1,
+    "weight_lbs": 134.8,
     "height_cm": 169,
     "height_ft_in": "5'7\"",
     "country": "ไทย",
@@ -50338,7 +50338,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-21",
+    "last_updated": "2026-09-25",
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": null,
@@ -56617,8 +56617,8 @@ const FIGHTERS = [
     "name_th": "สำราญสิงห์ ศิษย์ฉลองศักดิ์",
     "name_en": "Samransing Sitchalongsak",
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 56.7,
+    "weight_lbs": 125.0,
     "height_cm": 173,
     "height_ft_in": "5'8\"",
     "country": "ไทย",
@@ -56650,7 +56650,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-21",
+    "last_updated": "2026-09-25",
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
@@ -58807,8 +58807,8 @@ const FIGHTERS = [
     "name_th": "หม่า เจินเจา",
     "name_en": null,
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 56.6,
+    "weight_lbs": 124.8,
     "height_cm": null,
     "height_ft_in": null,
     "country": null,
@@ -58840,7 +58840,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-21",
+    "last_updated": "2026-09-25",
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": null,
@@ -59227,8 +59227,8 @@ const FIGHTERS = [
     "name_th": "หยวน เผิงเจี๋ย",
     "name_en": "Yuan Pengjie",
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 61.0,
+    "weight_lbs": 134.4,
     "height_cm": 172,
     "height_ft_in": "5'8\"",
     "country": "จีน",
@@ -59260,7 +59260,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-21",
+    "last_updated": "2026-09-25",
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
@@ -60406,7 +60406,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-21",
+    "last_updated": "2026-09-25",
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
@@ -64732,7 +64732,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-21",
+    "last_updated": "2026-09-25",
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
@@ -69025,8 +69025,8 @@ const FIGHTERS = [
     "name_th": "อาร์เซน ซอยีร์กัส",
     "name_en": null,
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 56.5,
+    "weight_lbs": 124.6,
     "height_cm": null,
     "height_ft_in": null,
     "country": null,
@@ -69058,7 +69058,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-21",
+    "last_updated": "2026-09-25",
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": null,
@@ -74278,18 +74278,18 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-12",
+    "last_updated": "2026-09-25",
     "division": "สตรอว์เวท",
     "nickname": "อเล็ก",
     "gender": "ชาย",
     "championship_status": "แชมป์ปัจจุบัน",
     "titles_history": "แชมป์โลก",
-    "fight_count": 4,
+    "fight_count": 2,
     "record": {
       "win": 2,
       "loss": 0,
       "draw": 0,
-      "pending": 2,
+      "pending": 0,
       "total": 2
     }
   },
@@ -77898,7 +77898,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-19",
+    "last_updated": "2026-09-25",
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
@@ -81779,8 +81779,8 @@ const FIGHTERS = [
     "name_th": "เชียว ที เฟือง ทุย",
     "name_en": null,
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 50.9,
+    "weight_lbs": 112.2,
     "height_cm": null,
     "height_ft_in": null,
     "country": null,
@@ -81797,7 +81797,7 @@ const FIGHTERS = [
       "currency": "THB",
       "note": null
     },
-    "profile_url": null,
+    "profile_url": "https://www.onefc.com/th/athletes/trieu-thi-phuong-thuy/",
     "thboxing_url": null,
     "image_filename": "เชียว-ที-เฟือง-ทุย",
     "strike_stats": {
@@ -81812,7 +81812,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-21",
+    "last_updated": "2026-09-25",
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": null,
@@ -86053,8 +86053,8 @@ const FIGHTERS = [
     "name_th": "เบวาน อาลี โอกุซ",
     "name_en": null,
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 69.9,
+    "weight_lbs": 154.0,
     "height_cm": null,
     "height_ft_in": null,
     "country": null,
@@ -86086,7 +86086,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-21",
+    "last_updated": "2026-09-25",
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": null,
@@ -86718,7 +86718,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-17",
+    "last_updated": "2026-09-25",
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
@@ -86726,8 +86726,8 @@ const FIGHTERS = [
     "titles_history": "แชมป์ปูนเสือ",
     "fight_count": 28,
     "record": {
-      "win": 21,
-      "loss": 7,
+      "win": 16,
+      "loss": 12,
       "draw": 0,
       "pending": 0,
       "total": 28
@@ -91942,7 +91942,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-10",
+    "last_updated": "2026-09-25",
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
@@ -91950,8 +91950,8 @@ const FIGHTERS = [
     "titles_history": null,
     "fight_count": 4,
     "record": {
-      "win": 3,
-      "loss": 0,
+      "win": 1,
+      "loss": 2,
       "draw": 1,
       "pending": 0,
       "total": 4
@@ -95621,8 +95621,8 @@ const FIGHTERS = [
     "name_th": "เลวี เฮโน",
     "name_en": null,
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 69.9,
+    "weight_lbs": 154.0,
     "height_cm": null,
     "height_ft_in": null,
     "country": null,
@@ -95654,7 +95654,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-21",
+    "last_updated": "2026-09-25",
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": null,
@@ -96563,8 +96563,8 @@ const FIGHTERS = [
     "name_th": "เสือจั่น ส.อิสระโชติ",
     "name_en": "Suajan Sor Isarachot",
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 57.6,
+    "weight_lbs": 127.0,
     "height_cm": null,
     "height_ft_in": null,
     "country": null,
@@ -96596,7 +96596,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-21",
+    "last_updated": "2026-09-25",
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
@@ -96983,8 +96983,8 @@ const FIGHTERS = [
     "name_th": "เหนือพยัคฆ์ จิตรเมืองนนท์",
     "name_en": "Nuapayak Jitmuangnon",
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 57.6,
+    "weight_lbs": 127.0,
     "height_cm": null,
     "height_ft_in": null,
     "country": null,
@@ -97016,7 +97016,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-21",
+    "last_updated": "2026-09-25",
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
@@ -100743,8 +100743,8 @@ const FIGHTERS = [
     "name_th": "เอ็นโซ คาร์ทูม",
     "name_en": "Enzo Kartoum",
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 69.9,
+    "weight_lbs": 154.2,
     "height_cm": 183,
     "height_ft_in": "6'0\"",
     "country": "ฝรั่งเศส/แอลจีเรีย",
@@ -100776,7 +100776,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-21",
+    "last_updated": "2026-09-25",
     "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
@@ -108664,7 +108664,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-21",
+    "last_updated": "2026-09-25",
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
@@ -115471,11 +115471,11 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "ฟลายเวท",
-    "weigh_in_lbs": 129.2
+    "weigh_in_lbs": 130.0
   },
   {
     "fighter_id": "กริพเพน-ราชานนท์",
-    "result": "ชนะ",
+    "result": "แพ้",
     "rules": null,
     "decision": "ตัดสินด้วยคะแนน",
     "round": null,
@@ -115523,7 +115523,7 @@ const HISTORY  = [
   },
   {
     "fighter_id": "กริพเพน-ราชานนท์",
-    "result": "ชนะ",
+    "result": "แพ้",
     "rules": null,
     "decision": "ตัดสินด้วยคะแนน",
     "round": null,
@@ -115539,7 +115539,7 @@ const HISTORY  = [
   },
   {
     "fighter_id": "กริพเพน-ราชานนท์",
-    "result": "แพ้",
+    "result": "ชนะ",
     "rules": null,
     "decision": "ตัดสินด้วยคะแนน",
     "round": null,
@@ -115555,7 +115555,7 @@ const HISTORY  = [
   },
   {
     "fighter_id": "กริพเพน-ราชานนท์",
-    "result": "แพ้",
+    "result": "ชนะ",
     "rules": null,
     "decision": "น็อกเอาต์",
     "round": 3,
@@ -115619,7 +115619,7 @@ const HISTORY  = [
   },
   {
     "fighter_id": "กริพเพน-ราชานนท์",
-    "result": "ชนะ",
+    "result": "แพ้",
     "rules": null,
     "decision": "ตัดสินด้วยคะแนน",
     "round": null,
@@ -115667,7 +115667,7 @@ const HISTORY  = [
   },
   {
     "fighter_id": "กริพเพน-ราชานนท์",
-    "result": "ชนะ",
+    "result": "แพ้",
     "rules": null,
     "decision": "ตัดสินด้วยคะแนน",
     "round": null,
@@ -115683,7 +115683,7 @@ const HISTORY  = [
   },
   {
     "fighter_id": "กริพเพน-ราชานนท์",
-    "result": "แพ้",
+    "result": "ชนะ",
     "rules": null,
     "decision": "ตัดสินด้วยคะแนน",
     "round": null,
@@ -117219,22 +117219,6 @@ const HISTORY  = [
   },
   {
     "fighter_id": "ก้องชัย-ไฉนดอนเมือง",
-    "result": "รอแข่งขัน",
-    "rules": "มวยไทย",
-    "decision": "",
-    "round": null,
-    "time": "",
-    "opponent": "อเล็ก สิงห์มาวิน",
-    "opponent_country": null,
-    "date": "2026-09-11",
-    "event": "ONE ลุมพินี 170",
-    "promotion": "ONE",
-    "fight_rating_stars": 0,
-    "division": "สตรอว์เวท",
-    "weigh_in_lbs": null
-  },
-  {
-    "fighter_id": "ก้องชัย-ไฉนดอนเมือง",
     "result": "ยกเลิกการแข่งขัน",
     "rules": "มวยไทย",
     "decision": "",
@@ -117567,7 +117551,7 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "ฟลายเวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 134.2
   },
   {
     "fighter_id": "ก้องธรณี-ส.สมหมาย",
@@ -121036,10 +121020,10 @@ const HISTORY  = [
     "opponent_country": null,
     "date": "2026-09-25",
     "event": "The Inner Circle 32",
-    "promotion": null,
+    "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "เฟเธอร์เวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 154.6
   },
   {
     "fighter_id": "คอนสแตนติน-มาราเรสกูล",
@@ -123551,7 +123535,7 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "เฟเธอร์เวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 154.6
   },
   {
     "fighter_id": "คูเซน-ซาโลมอฟ",
@@ -126783,7 +126767,7 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "สตรอว์เวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 124.6
   },
   {
     "fighter_id": "จิน-มันโดโคโระ",
@@ -133951,7 +133935,7 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "ไลท์เวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 169.2
   },
   {
     "fighter_id": "ซาร์มัด-จาฮานอารา",
@@ -135199,7 +135183,7 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "แบนตัมเวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 136.6
   },
   {
     "fighter_id": "ซุปเปอร์เล็ก-จิตรเมืองนนท์",
@@ -135628,10 +135612,10 @@ const HISTORY  = [
     "opponent_country": null,
     "date": "2026-09-25",
     "event": "The Inner Circle 32",
-    "promotion": null,
+    "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "ฟลายเวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 127.0
   },
   {
     "fighter_id": "ซูปาร์-เย-จัน",
@@ -136607,7 +136591,7 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "แบนตัมเวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 144.8
   },
   {
     "fighter_id": "ดวงสมพงษ์-จิตรเมืองนนท์",
@@ -138543,7 +138527,7 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "อะตอมเวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 116.0
   },
   {
     "fighter_id": "ตังตัง-ส.เดชะพันธ์",
@@ -138879,7 +138863,7 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "สตรอว์เวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 116.8
   },
   {
     "fighter_id": "ตี๋ใหญ่-ทอฝันฟาร์ม",
@@ -146735,7 +146719,7 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "ไลท์เวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 168.4
   },
   {
     "fighter_id": "บาทราดซ์-กาซาเอฟ",
@@ -150767,7 +150751,7 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "ฟลายเวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 136.6
   },
   {
     "fighter_id": "พันธ์พยัคฆ์-จิตรเมืองนนท์",
@@ -153759,7 +153743,7 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "สตรอว์เวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 116.6
   },
   {
     "fighter_id": "มังกร-ส.สมบัติฟาร์ม",
@@ -158079,7 +158063,487 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "ฟลายเวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 130.8
+  },
+  {
+    "fighter_id": "ยอดกตัญญู-จิตรเมืองนนท์",
+    "result": "ชนะ",
+    "rules": null,
+    "decision": "ตัดสินด้วยคะแนน",
+    "round": null,
+    "time": "",
+    "opponent": "ฉลาม พรัญชัย",
+    "opponent_country": null,
+    "date": "2026-07-25",
+    "event": "RAJADAMNERN WORLD SERIES",
+    "promotion": "RWS",
+    "fight_rating_stars": 0,
+    "division": "",
+    "weigh_in_lbs": 130.0
+  },
+  {
+    "fighter_id": "ยอดกตัญญู-จิตรเมืองนนท์",
+    "result": "ชนะ",
+    "rules": null,
+    "decision": "ตัดสินด้วยคะแนน",
+    "round": null,
+    "time": "",
+    "opponent": "ยอดธง เกียรตินาวี",
+    "opponent_country": null,
+    "date": "2026-06-01",
+    "event": "แอดสันป่าตอง ซุปเปอร์ไฟท์",
+    "promotion": null,
+    "fight_rating_stars": 0,
+    "division": "",
+    "weigh_in_lbs": 131.0
+  },
+  {
+    "fighter_id": "ยอดกตัญญู-จิตรเมืองนนท์",
+    "result": "แพ้",
+    "rules": null,
+    "decision": "ตัดสินด้วยคะแนน",
+    "round": null,
+    "time": "",
+    "opponent": "ธงน้อย ว.สังข์ประไพ",
+    "opponent_country": null,
+    "date": "2026-05-05",
+    "event": "มวยมันส์สนั่นเมือง ช่วงที่ 2",
+    "promotion": null,
+    "fight_rating_stars": 0,
+    "division": "",
+    "weigh_in_lbs": 131.0
+  },
+  {
+    "fighter_id": "ยอดกตัญญู-จิตรเมืองนนท์",
+    "result": "ชนะ",
+    "rules": null,
+    "decision": "น็อกเอาต์",
+    "round": 4,
+    "time": "",
+    "opponent": "คัมแบ็ค ที.เค.ยุทธนา",
+    "opponent_country": null,
+    "date": "2025-12-22",
+    "event": "ท๊อปแฟร์รี่ยิม",
+    "promotion": null,
+    "fight_rating_stars": 0,
+    "division": "",
+    "weigh_in_lbs": 130.0
+  },
+  {
+    "fighter_id": "ยอดกตัญญู-จิตรเมืองนนท์",
+    "result": "เสมอ",
+    "rules": null,
+    "decision": "",
+    "round": null,
+    "time": "",
+    "opponent": "คัมแบ็ค ที.เค.ยุทธนา",
+    "opponent_country": null,
+    "date": "2025-11-23",
+    "event": "ท่อน้ำไทย TKO เกียรติเพชร",
+    "promotion": "เกียรติเพชร",
+    "fight_rating_stars": 0,
+    "division": "",
+    "weigh_in_lbs": 130.0
+  },
+  {
+    "fighter_id": "ยอดกตัญญู-จิตรเมืองนนท์",
+    "result": "ชนะ",
+    "rules": null,
+    "decision": "ตัดสินด้วยคะแนน",
+    "round": null,
+    "time": "",
+    "opponent": "รณชัย ว.ยี่จีน",
+    "opponent_country": null,
+    "date": "2025-09-26",
+    "event": "ท็อปแฟรี่ยิม",
+    "promotion": null,
+    "fight_rating_stars": 0,
+    "division": "",
+    "weigh_in_lbs": 127.0
+  },
+  {
+    "fighter_id": "ยอดกตัญญู-จิตรเมืองนนท์",
+    "result": "ชนะ",
+    "rules": null,
+    "decision": "ตัดสินด้วยคะแนน",
+    "round": null,
+    "time": "",
+    "opponent": "เก้าล้าน สจ.แดนระยอง",
+    "opponent_country": null,
+    "date": "2025-08-04",
+    "event": "ดาวรุ่งเมืองปทุมธานี",
+    "promotion": null,
+    "fight_rating_stars": 0,
+    "division": "",
+    "weigh_in_lbs": 126.5
+  },
+  {
+    "fighter_id": "ยอดกตัญญู-จิตรเมืองนนท์",
+    "result": "แพ้",
+    "rules": null,
+    "decision": "ตัดสินด้วยคะแนน",
+    "round": null,
+    "time": "",
+    "opponent": "เพชรสมาน ส.สมานการ์เม้นท์",
+    "opponent_country": null,
+    "date": "2025-04-26",
+    "event": "RAJADAMNERN WORLD SERIES",
+    "promotion": "RWS",
+    "fight_rating_stars": 0,
+    "division": "",
+    "weigh_in_lbs": 122.0
+  },
+  {
+    "fighter_id": "ยอดกตัญญู-จิตรเมืองนนท์",
+    "result": "ชนะ",
+    "rules": null,
+    "decision": "ตัดสินด้วยคะแนน",
+    "round": null,
+    "time": "",
+    "opponent": "ปีใหม่ เอราวัณ",
+    "opponent_country": null,
+    "date": "2025-03-02",
+    "event": "มวยไทย 7 สี",
+    "promotion": "เกียรติเพชร",
+    "fight_rating_stars": 0,
+    "division": "",
+    "weigh_in_lbs": 124.0
+  },
+  {
+    "fighter_id": "ยอดกตัญญู-จิตรเมืองนนท์",
+    "result": "ชนะ",
+    "rules": null,
+    "decision": "ตัดสินด้วยคะแนน",
+    "round": null,
+    "time": "",
+    "opponent": "เพชรสมาน ส.สมานการ์เม้นท์",
+    "opponent_country": null,
+    "date": "2024-10-26",
+    "event": "มวยไทยวิถีถิ่นไทย",
+    "promotion": null,
+    "fight_rating_stars": 0,
+    "division": "",
+    "weigh_in_lbs": 122.0
+  },
+  {
+    "fighter_id": "ยอดกตัญญู-จิตรเมืองนนท์",
+    "result": "ชนะ",
+    "rules": null,
+    "decision": "ตัดสินด้วยคะแนน",
+    "round": null,
+    "time": "",
+    "opponent": "ฤทธิเดช เกียรติ์ทรงฤทธิ์",
+    "opponent_country": null,
+    "date": "2024-09-01",
+    "event": "มวยไทย 7 สี",
+    "promotion": "เกียรติเพชร",
+    "fight_rating_stars": 0,
+    "division": "",
+    "weigh_in_lbs": 122.0
+  },
+  {
+    "fighter_id": "ยอดกตัญญู-จิตรเมืองนนท์",
+    "result": "ชนะ",
+    "rules": null,
+    "decision": "ตัดสินด้วยคะแนน",
+    "round": null,
+    "time": "",
+    "opponent": "มหาสมุทร รองแป๊ะสำนักบก.ชลบุรี",
+    "opponent_country": null,
+    "date": "2024-06-02",
+    "event": "มวยไทย 7 สี",
+    "promotion": "เกียรติเพชร",
+    "fight_rating_stars": 0,
+    "division": "",
+    "weigh_in_lbs": 122.0
+  },
+  {
+    "fighter_id": "ยอดกตัญญู-จิตรเมืองนนท์",
+    "result": "แพ้",
+    "rules": null,
+    "decision": "น็อกเอาต์",
+    "round": 3,
+    "time": "",
+    "opponent": "มังกรเหล็ก เปิ้ลนคร",
+    "opponent_country": null,
+    "date": "2024-02-13",
+    "event": "มวยมันส์สนั่นเมือง",
+    "promotion": null,
+    "fight_rating_stars": 0,
+    "division": "",
+    "weigh_in_lbs": 122.4
+  },
+  {
+    "fighter_id": "ยอดกตัญญู-จิตรเมืองนนท์",
+    "result": "เสมอ",
+    "rules": null,
+    "decision": "",
+    "round": null,
+    "time": "",
+    "opponent": "คิวทอง ที.เค.ดี.มวยไทยยิมส์",
+    "opponent_country": null,
+    "date": "2024-01-03",
+    "event": "พันธ์ดักษ์รัตนบุรีการกุศล",
+    "promotion": null,
+    "fight_rating_stars": 0,
+    "division": "",
+    "weigh_in_lbs": 121.0
+  },
+  {
+    "fighter_id": "ยอดกตัญญู-จิตรเมืองนนท์",
+    "result": "ชนะ",
+    "rules": null,
+    "decision": "ตัดสินด้วยคะแนน",
+    "round": null,
+    "time": "",
+    "opponent": "เมธี สส.ต้อยแปดริ้ว",
+    "opponent_country": null,
+    "date": "2023-11-18",
+    "event": "๙ มวยดีวิถีไทย จิตรเมืองนนท์",
+    "promotion": "จิตรเมืองนนท์",
+    "fight_rating_stars": 0,
+    "division": "",
+    "weigh_in_lbs": 120.0
+  },
+  {
+    "fighter_id": "ยอดกตัญญู-จิตรเมืองนนท์",
+    "result": "ชนะ",
+    "rules": null,
+    "decision": "ตัดสินด้วยคะแนน",
+    "round": null,
+    "time": "",
+    "opponent": "เพชรนำโชค ป๋าโด๋อยุธยา",
+    "opponent_country": null,
+    "date": "2023-09-28",
+    "event": "วันอิทธิพลมหากุศล",
+    "promotion": null,
+    "fight_rating_stars": 0,
+    "division": "",
+    "weigh_in_lbs": 118.3
+  },
+  {
+    "fighter_id": "ยอดกตัญญู-จิตรเมืองนนท์",
+    "result": "ชนะ",
+    "rules": null,
+    "decision": "ตัดสินด้วยคะแนน",
+    "round": null,
+    "time": "",
+    "opponent": "ทูมอโร่ เกียรติทรงฤทธิ์",
+    "opponent_country": null,
+    "date": "2023-08-26",
+    "event": "จ้าวมวยไทย",
+    "promotion": "พลังใหม่",
+    "fight_rating_stars": 0,
+    "division": "",
+    "weigh_in_lbs": 118.0
+  },
+  {
+    "fighter_id": "ยอดกตัญญู-จิตรเมืองนนท์",
+    "result": "แพ้",
+    "rules": null,
+    "decision": "น็อกเอาต์",
+    "round": 3,
+    "time": "",
+    "opponent": "อนุวัฒน์ วี.เค.เขาใหญ่",
+    "opponent_country": null,
+    "date": "2023-06-11",
+    "event": "มวยดีวิถีไทย",
+    "promotion": "จิตรเมืองนนท์",
+    "fight_rating_stars": 0,
+    "division": "",
+    "weigh_in_lbs": 119.0
+  },
+  {
+    "fighter_id": "ยอดกตัญญู-จิตรเมืองนนท์",
+    "result": "ชนะ",
+    "rules": null,
+    "decision": "ตัดสินด้วยคะแนน",
+    "round": null,
+    "time": "",
+    "opponent": "เพชรส่องแสง ว.อุรชา",
+    "opponent_country": null,
+    "date": "2023-04-11",
+    "event": "มวยมันส์สนั่นเมือง ช่วงที่ 2",
+    "promotion": null,
+    "fight_rating_stars": 0,
+    "division": "",
+    "weigh_in_lbs": 114.0
+  },
+  {
+    "fighter_id": "ยอดกตัญญู-จิตรเมืองนนท์",
+    "result": "ชนะ",
+    "rules": null,
+    "decision": "ตัดสินด้วยคะแนน",
+    "round": null,
+    "time": "",
+    "opponent": "เซียงน้อยร้อยล้าน เหล่าโชคเจริญราชสีห์",
+    "opponent_country": null,
+    "date": "2023-03-11",
+    "event": "จ้าวมวยไทย",
+    "promotion": "พลังใหม่",
+    "fight_rating_stars": 0,
+    "division": "",
+    "weigh_in_lbs": 115.0
+  },
+  {
+    "fighter_id": "ยอดกตัญญู-จิตรเมืองนนท์",
+    "result": "ชนะ",
+    "rules": null,
+    "decision": "ตัดสินด้วยคะแนน",
+    "round": null,
+    "time": "",
+    "opponent": "โฟร์วิน ศิษย์เจริญทรัพย์",
+    "opponent_country": null,
+    "date": "2023-02-14",
+    "event": "มวยมันส์สนั่นเมือง",
+    "promotion": null,
+    "fight_rating_stars": 0,
+    "division": "",
+    "weigh_in_lbs": 113.0
+  },
+  {
+    "fighter_id": "ยอดกตัญญู-จิตรเมืองนนท์",
+    "result": "แพ้",
+    "rules": null,
+    "decision": "น็อกเอาต์",
+    "round": 3,
+    "time": "",
+    "opponent": "คิวทอง ที.เค.ดี.มวยไทยยิมส์",
+    "opponent_country": null,
+    "date": "2022-11-18",
+    "event": "มวยมันส์วันศุกร์ ช่วงที่ 2",
+    "promotion": null,
+    "fight_rating_stars": 0,
+    "division": "",
+    "weigh_in_lbs": 113.0
+  },
+  {
+    "fighter_id": "ยอดกตัญญู-จิตรเมืองนนท์",
+    "result": "ชนะ",
+    "rules": null,
+    "decision": "ตัดสินด้วยคะแนน",
+    "round": null,
+    "time": "",
+    "opponent": "มังกรเหล็ก เปิ้ลนคร",
+    "opponent_country": null,
+    "date": "2022-08-12",
+    "event": "มวยมันส์วันศุกร์",
+    "promotion": null,
+    "fight_rating_stars": 0,
+    "division": "",
+    "weigh_in_lbs": 106.0
+  },
+  {
+    "fighter_id": "ยอดกตัญญู-จิตรเมืองนนท์",
+    "result": "ชนะ",
+    "rules": null,
+    "decision": "ตัดสินด้วยคะแนน",
+    "round": null,
+    "time": "",
+    "opponent": "มังกรเหล็ก เปิ้ลนคร",
+    "opponent_country": null,
+    "date": "2022-07-17",
+    "event": "มวยดีวิถีไทย",
+    "promotion": "จิตรเมืองนนท์",
+    "fight_rating_stars": 0,
+    "division": "",
+    "weigh_in_lbs": 105.0
+  },
+  {
+    "fighter_id": "ยอดกตัญญู-จิตรเมืองนนท์",
+    "result": "แพ้",
+    "rules": null,
+    "decision": "ตัดสินด้วยคะแนน",
+    "round": null,
+    "time": "",
+    "opponent": "กำปั้นทอง ช.ห้าพยัคฆ์",
+    "opponent_country": null,
+    "date": "2022-05-28",
+    "event": "จ้าวมวยไทย",
+    "promotion": "พลังใหม่",
+    "fight_rating_stars": 0,
+    "division": "",
+    "weigh_in_lbs": 103.0
+  },
+  {
+    "fighter_id": "ยอดกตัญญู-จิตรเมืองนนท์",
+    "result": "ชนะ",
+    "rules": null,
+    "decision": "ตัดสินด้วยคะแนน",
+    "round": null,
+    "time": "",
+    "opponent": "กำปั้นทอง ช.ห้าพยัคฆ์",
+    "opponent_country": null,
+    "date": "2022-04-16",
+    "event": "จิตรเมืองนนท์",
+    "promotion": "จิตรเมืองนนท์",
+    "fight_rating_stars": 0,
+    "division": "",
+    "weigh_in_lbs": 103.0
+  },
+  {
+    "fighter_id": "ยอดกตัญญู-จิตรเมืองนนท์",
+    "result": "ชนะ",
+    "rules": null,
+    "decision": "ตัดสินด้วยคะแนน",
+    "round": null,
+    "time": "",
+    "opponent": "ขุนไกร ส.วังเสือ",
+    "opponent_country": null,
+    "date": "2022-03-13",
+    "event": "จิตรเมืองนนท์",
+    "promotion": "จิตรเมืองนนท์",
+    "fight_rating_stars": 0,
+    "division": "",
+    "weigh_in_lbs": 102.0
+  },
+  {
+    "fighter_id": "ยอดกตัญญู-จิตรเมืองนนท์",
+    "result": "ชนะ",
+    "rules": null,
+    "decision": "ตัดสินด้วยคะแนน",
+    "round": null,
+    "time": "",
+    "opponent": "เพชรทวีชัย ไฟต์เตอร์มวยไทย",
+    "opponent_country": null,
+    "date": "2021-12-17",
+    "event": "มวยมันส์วันศุกร์ ช่วงที่ 2",
+    "promotion": null,
+    "fight_rating_stars": 0,
+    "division": "",
+    "weigh_in_lbs": 94.0
+  },
+  {
+    "fighter_id": "ยอดกตัญญู-จิตรเมืองนนท์",
+    "result": "ชนะ",
+    "rules": null,
+    "decision": "ตัดสินด้วยคะแนน",
+    "round": null,
+    "time": "",
+    "opponent": "พญาต่อ ราชานนท์",
+    "opponent_country": null,
+    "date": "2021-11-28",
+    "event": "จิตรเมืองนนท์",
+    "promotion": "จิตรเมืองนนท์",
+    "fight_rating_stars": 0,
+    "division": "",
+    "weigh_in_lbs": 100.0
+  },
+  {
+    "fighter_id": "ยอดกตัญญู-จิตรเมืองนนท์",
+    "result": "แพ้",
+    "rules": null,
+    "decision": "ตัดสินด้วยคะแนน",
+    "round": null,
+    "time": "",
+    "opponent": "ดาวแดง เอ็นนี่มวยไทย",
+    "opponent_country": null,
+    "date": "2020-11-23",
+    "event": "พีชทีวีต้นกล้ามวยไทย",
+    "promotion": null,
+    "fight_rating_stars": 0,
+    "division": "",
+    "weigh_in_lbs": 37.0
   },
   {
     "fighter_id": "ยอดกฤษดา-ส.สมหมาย",
@@ -160895,7 +161359,7 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "แบนตัมเวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 144.6
   },
   {
     "fighter_id": "ยูน-ชาง-มิน",
@@ -161151,7 +161615,7 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "เฟเธอร์เวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 154.2
   },
   {
     "fighter_id": "ยูยะ-ชิบาตะ",
@@ -161909,7 +162373,7 @@ const HISTORY  = [
     "fighter_id": "รถถัง-จิตรเมืองนนท์",
     "result": "แพ้",
     "rules": "มวยไทย",
-    "decision": "คะแนนเอกฉันท์",
+    "decision": "ตัดสินด้วยคะแนน",
     "round": 3,
     "time": "3:00",
     "opponent": "ซุปเปอร์เล็ก ซุปเปอร์เล็กมวยไทย",
@@ -161919,7 +162383,7 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 4,
     "division": "ฟลายเวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 112.0
   },
   {
     "fighter_id": "รถถัง-จิตรเมืองนนท์",
@@ -161935,7 +162399,7 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 5,
     "division": "ฟลายเวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 135.0
   },
   {
     "fighter_id": "รถถัง-จิตรเมืองนนท์",
@@ -162021,7 +162485,7 @@ const HISTORY  = [
     "fighter_id": "รถถัง-จิตรเมืองนนท์",
     "result": "ชนะ",
     "rules": "คิกบ็อกซิง",
-    "decision": "",
+    "decision": "ตัดสินด้วยคะแนน",
     "round": 3,
     "time": "3:00",
     "opponent": "ทาเกียร์ คาลิลอฟ",
@@ -162031,7 +162495,7 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "ฟลายเวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 134.0
   },
   {
     "fighter_id": "รถถัง-จิตรเมืองนนท์",
@@ -167071,7 +167535,7 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "ฟลายเวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 134.8
   },
   {
     "fighter_id": "ลำน้ำมูลเล็ก-ทอฝันฟาร์ม",
@@ -173135,7 +173599,7 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "สตรอว์เวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 125.0
   },
   {
     "fighter_id": "สำราญสิงห์-ศิษย์ฉลองศักดิ์",
@@ -175551,7 +176015,7 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "สตรอว์เวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 124.8
   },
   {
     "fighter_id": "หม่า-เทิง",
@@ -175711,7 +176175,7 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "ฟลายเวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 134.4
   },
   {
     "fighter_id": "หยวน-เผิงเจี๋ย",
@@ -176639,7 +177103,7 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "ฟลายเวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 130.6
   },
   {
     "fighter_id": "หลิว-จุนเชา",
@@ -180207,7 +180671,7 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "แบนตัมเวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 136.8
   },
   {
     "fighter_id": "ออตมาน-รูนี",
@@ -183804,10 +184268,10 @@ const HISTORY  = [
     "opponent_country": null,
     "date": "2026-09-25",
     "event": "The Inner Circle 32",
-    "promotion": null,
+    "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "สตรอว์เวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 124.6
   },
   {
     "fighter_id": "อาร์เซนิโอ-บาลิซาแคน",
@@ -189235,22 +189699,6 @@ const HISTORY  = [
   },
   {
     "fighter_id": "อเล็ก-สิงห์มาวิน",
-    "result": "รอแข่งขัน",
-    "rules": "มวยไทย",
-    "decision": "",
-    "round": null,
-    "time": "",
-    "opponent": "ก้องชัย ไฉนดอนเมือง",
-    "opponent_country": null,
-    "date": "2026-09-11",
-    "event": "ONE ลุมพินี 170",
-    "promotion": "ONE",
-    "fight_rating_stars": 0,
-    "division": "สตรอว์เวท",
-    "weigh_in_lbs": null
-  },
-  {
-    "fighter_id": "อเล็ก-สิงห์มาวิน",
     "result": "ชนะ",
     "rules": "มวยไทย",
     "decision": "",
@@ -189280,22 +189728,6 @@ const HISTORY  = [
     "fight_rating_stars": 0,
     "division": "",
     "weigh_in_lbs": null
-  },
-  {
-    "fighter_id": "อเล็ก-สิงห์มาวิน",
-    "result": "รอแข่งขัน",
-    "rules": "มวยไทย",
-    "decision": "",
-    "round": null,
-    "time": "",
-    "opponent": "ก้องชัย ไฉนดอนเมือง",
-    "opponent_country": null,
-    "date": null,
-    "event": "The Inner Circle 30",
-    "promotion": "ONE",
-    "fight_rating_stars": 0,
-    "division": "สตรอว์เวท",
-    "weigh_in_lbs": 124.2
   },
   {
     "fighter_id": "อเล็กซานเดอร์-ข่าน",
@@ -192860,7 +193292,7 @@ const HISTORY  = [
     "opponent_country": null,
     "date": "2026-07-12",
     "event": "มวยดีวิถีไทย ช่วงที่ 2",
-    "promotion": null,
+    "promotion": "จิตรเมืองนนท์",
     "fight_rating_stars": 0,
     "division": "",
     "weigh_in_lbs": 105.0
@@ -192876,14 +193308,14 @@ const HISTORY  = [
     "opponent_country": null,
     "date": "2026-03-22",
     "event": "มวยดีวิถีไทย ช่วงที่ 2",
-    "promotion": null,
+    "promotion": "จิตรเมืองนนท์",
     "fight_rating_stars": 0,
     "division": "",
     "weigh_in_lbs": 104.0
   },
   {
     "fighter_id": "เก็บตก-สท.เชษฐ์บ้านเขว้า",
-    "result": "แพ้",
+    "result": "ชนะ",
     "rules": null,
     "decision": "น็อกเอาต์",
     "round": 2,
@@ -192892,14 +193324,14 @@ const HISTORY  = [
     "opponent_country": null,
     "date": "2026-02-20",
     "event": "จิตรเมืองนนท์ ช่วงที่ 2",
-    "promotion": null,
+    "promotion": "จิตรเมืองนนท์",
     "fight_rating_stars": 0,
     "division": "",
     "weigh_in_lbs": 103.0
   },
   {
     "fighter_id": "เก็บตก-สท.เชษฐ์บ้านเขว้า",
-    "result": "ชนะ",
+    "result": "แพ้",
     "rules": null,
     "decision": "ตัดสินด้วยคะแนน",
     "round": null,
@@ -192908,7 +193340,7 @@ const HISTORY  = [
     "opponent_country": null,
     "date": "2026-01-04",
     "event": "มวยดีวิถีไทย",
-    "promotion": null,
+    "promotion": "จิตรเมืองนนท์",
     "fight_rating_stars": 0,
     "division": "",
     "weigh_in_lbs": 103.0
@@ -192924,7 +193356,7 @@ const HISTORY  = [
     "opponent_country": null,
     "date": "2025-12-06",
     "event": "จิตรเมืองนนท์",
-    "promotion": null,
+    "promotion": "จิตรเมืองนนท์",
     "fight_rating_stars": 0,
     "division": "",
     "weigh_in_lbs": 104.0
@@ -192940,7 +193372,7 @@ const HISTORY  = [
     "opponent_country": null,
     "date": "2025-09-07",
     "event": "มวยดีวิถีไทย",
-    "promotion": null,
+    "promotion": "จิตรเมืองนนท์",
     "fight_rating_stars": 0,
     "division": "",
     "weigh_in_lbs": 101.0
@@ -192956,7 +193388,7 @@ const HISTORY  = [
     "opponent_country": null,
     "date": "2025-07-20",
     "event": "มวยดีวิถีไทย",
-    "promotion": null,
+    "promotion": "จิตรเมืองนนท์",
     "fight_rating_stars": 0,
     "division": "",
     "weigh_in_lbs": 100.0
@@ -192972,7 +193404,7 @@ const HISTORY  = [
     "opponent_country": null,
     "date": "2025-06-01",
     "event": "มวยดีวิถีไทย",
-    "promotion": null,
+    "promotion": "จิตรเมืองนนท์",
     "fight_rating_stars": 0,
     "division": "",
     "weigh_in_lbs": 101.0
@@ -192988,10 +193420,10 @@ const HISTORY  = [
     "opponent_country": null,
     "date": "2025-04-20",
     "event": "มวยดีวิถีไทย",
-    "promotion": null,
+    "promotion": "จิตรเมืองนนท์",
     "fight_rating_stars": 0,
     "division": "",
-    "weigh_in_lbs": 101.0
+    "weigh_in_lbs": 102.0
   },
   {
     "fighter_id": "เก็บตก-สท.เชษฐ์บ้านเขว้า",
@@ -193004,14 +193436,14 @@ const HISTORY  = [
     "opponent_country": null,
     "date": "2025-03-09",
     "event": "มวยดีวิถีไทย",
-    "promotion": null,
+    "promotion": "จิตรเมืองนนท์",
     "fight_rating_stars": 0,
     "division": "",
     "weigh_in_lbs": 101.0
   },
   {
     "fighter_id": "เก็บตก-สท.เชษฐ์บ้านเขว้า",
-    "result": "แพ้",
+    "result": "ชนะ",
     "rules": null,
     "decision": "น็อกเอาต์",
     "round": 3,
@@ -193020,14 +193452,14 @@ const HISTORY  = [
     "opponent_country": null,
     "date": "2025-01-12",
     "event": "มวยดีวิถีไทย",
-    "promotion": null,
+    "promotion": "จิตรเมืองนนท์",
     "fight_rating_stars": 0,
     "division": "",
     "weigh_in_lbs": 102.0
   },
   {
     "fighter_id": "เก็บตก-สท.เชษฐ์บ้านเขว้า",
-    "result": "ชนะ",
+    "result": "แพ้",
     "rules": null,
     "decision": "ตัดสินด้วยคะแนน",
     "round": null,
@@ -196799,7 +197231,7 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "อะตอมเวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 112.2
   },
   {
     "fighter_id": "เซ-รู",
@@ -200959,7 +201391,7 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "เฟเธอร์เวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 154.0
   },
   {
     "fighter_id": "เบอร์หนึ่ง-ส.สละชีพ",
@@ -201187,7 +201619,7 @@ const HISTORY  = [
   },
   {
     "fighter_id": "เป็ก-ปตท.ทองทวี",
-    "result": "แพ้",
+    "result": "ชนะ",
     "rules": null,
     "decision": "น็อกเอาต์",
     "round": 4,
@@ -201299,7 +201731,7 @@ const HISTORY  = [
   },
   {
     "fighter_id": "เป็ก-ปตท.ทองทวี",
-    "result": "ชนะ",
+    "result": "แพ้",
     "rules": null,
     "decision": "ตัดสินด้วยคะแนน",
     "round": null,
@@ -201379,7 +201811,7 @@ const HISTORY  = [
   },
   {
     "fighter_id": "เป็ก-ปตท.ทองทวี",
-    "result": "แพ้",
+    "result": "ชนะ",
     "rules": null,
     "decision": "ตัดสินด้วยคะแนน",
     "round": null,
@@ -201443,7 +201875,7 @@ const HISTORY  = [
   },
   {
     "fighter_id": "เป็ก-ปตท.ทองทวี",
-    "result": "ชนะ",
+    "result": "แพ้",
     "rules": null,
     "decision": "ตัดสินด้วยคะแนน",
     "round": null,
@@ -201523,7 +201955,7 @@ const HISTORY  = [
   },
   {
     "fighter_id": "เป็ก-ปตท.ทองทวี",
-    "result": "ชนะ",
+    "result": "แพ้",
     "rules": null,
     "decision": "ตัดสินด้วยคะแนน",
     "round": null,
@@ -201539,7 +201971,7 @@ const HISTORY  = [
   },
   {
     "fighter_id": "เป็ก-ปตท.ทองทวี",
-    "result": "ชนะ",
+    "result": "แพ้",
     "rules": null,
     "decision": "ตัดสินด้วยคะแนน",
     "round": null,
@@ -201555,7 +201987,7 @@ const HISTORY  = [
   },
   {
     "fighter_id": "เป็ก-ปตท.ทองทวี",
-    "result": "ชนะ",
+    "result": "แพ้",
     "rules": null,
     "decision": "ตัดสินด้วยคะแนน",
     "round": null,
@@ -201571,7 +202003,7 @@ const HISTORY  = [
   },
   {
     "fighter_id": "เป็ก-ปตท.ทองทวี",
-    "result": "ชนะ",
+    "result": "แพ้",
     "rules": null,
     "decision": "ตัดสินด้วยคะแนน",
     "round": null,
@@ -201587,7 +202019,7 @@ const HISTORY  = [
   },
   {
     "fighter_id": "เป็ก-ปตท.ทองทวี",
-    "result": "ชนะ",
+    "result": "แพ้",
     "rules": null,
     "decision": "ตัดสินด้วยคะแนน",
     "round": null,
@@ -205715,7 +206147,7 @@ const HISTORY  = [
   },
   {
     "fighter_id": "เพชรเมืองช้าง-ส.คำสิงห์",
-    "result": "ชนะ",
+    "result": "แพ้",
     "rules": null,
     "decision": "ตัดสินด้วยคะแนน",
     "round": null,
@@ -205724,7 +206156,7 @@ const HISTORY  = [
     "opponent_country": null,
     "date": "2026-05-13",
     "event": "มวยไทยพลังใหม่ ช่วงที่ 2",
-    "promotion": null,
+    "promotion": "พลังใหม่",
     "fight_rating_stars": 0,
     "division": "",
     "weigh_in_lbs": 131.0
@@ -205740,14 +206172,14 @@ const HISTORY  = [
     "opponent_country": null,
     "date": "2026-04-15",
     "event": "มวยไทยพลังใหม่ ช่วงที่ 2",
-    "promotion": null,
+    "promotion": "พลังใหม่",
     "fight_rating_stars": 0,
     "division": "",
     "weigh_in_lbs": 133.0
   },
   {
     "fighter_id": "เพชรเมืองช้าง-ส.คำสิงห์",
-    "result": "ชนะ",
+    "result": "แพ้",
     "rules": null,
     "decision": "ตัดสินด้วยคะแนน",
     "round": null,
@@ -209135,7 +209567,7 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "เฟเธอร์เวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 154.0
   },
   {
     "fighter_id": "เลอพงษ์-แก้วสัมฤทธิ์",
@@ -210703,7 +211135,7 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "ฟลายเวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 127.0
   },
   {
     "fighter_id": "เสือแบล็ค-ท.พราน49",
@@ -210975,7 +211407,7 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "ฟลายเวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 127.0
   },
   {
     "fighter_id": "เหิร-ลูกสวน",
@@ -214655,7 +215087,7 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "เฟเธอร์เวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 154.2
   },
   {
     "fighter_id": "เอ็นโซ-คาร์ทูม",
@@ -222463,7 +222895,7 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "ฟลายเวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 126.0
   },
   {
     "fighter_id": "โซอี-นอยชวานเดอร์",
