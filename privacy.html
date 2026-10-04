@@ -11,6 +11,7 @@
 <link rel="apple-touch-icon" href="/icons/icon-192.png">
 <title>นโยบายความเป็นส่วนตัว | Boxfan</title>
 <meta name="description" content="นโยบายความเป็นส่วนตัวของ Boxfan — ข้อมูลที่เก็บรวบรวมและสิทธิ์ของผู้ใช้">
+<meta name="twitter:image" content="https://www.boxingfandom.com/og-default.jpg">
 <meta name="keywords" content="นโยบายความเป็นส่วนตัว,Boxfan,Privacy Policy">
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
 <meta name="author" content="Boxfan">
@@ -349,7 +350,7 @@ a{color:inherit;text-decoration:none}
 </footer>
 
 <script src="data/fighters_data.js"></script>
-<script src="utils.js"></script>
+<script src="utils.js?v=2"></script>
 <script>
 document.getElementById('yr-ft').textContent='© '+new Date().getFullYear();
 function toggleSearch(){var p=document.getElementById('search-panel');p.classList.toggle('open');if(p.classList.contains('open'))setTimeout(function(){document.getElementById('sinput').focus();},50);}
@@ -360,7 +361,7 @@ document.addEventListener('DOMContentLoaded',function(){
     sinput.addEventListener('input',function(){
       var q=sinput.value.trim().toLowerCase();if(!q){sdrop.innerHTML='';return;}
       var hits=FIGHTERS.filter(function(f){return(f.name_th||'').toLowerCase().indexOf(q)!==-1||(f.name_en||'').toLowerCase().indexOf(q)!==-1;}).slice(0,7);
-      sdrop.innerHTML=hits.length?hits.map(function(f){return'<a class="si" href="profile.html?id='+f.id+'"><img src="'+cImg(f.image_filename,'sm')+'" loading="lazy" onerror="this.src=PH" alt=""><div><div class="si-nm">'+esc(f.name_th)+'</div><div class="si-mt">'+fl(f.country)+' · '+esc(ds(f.division))+'</div></div></a>';}).join(''):'<div class="s-empty">ไม่พบ "'+esc(sinput.value)+'"</div>';
+      sdrop.innerHTML=hits.length?hits.map(function(f){return'<a class="si" href="'+fighterUrl(f)+'"><img src="'+cImg(f.image_filename,'sm')+'" loading="lazy" onerror="this.src=PH" alt=""><div><div class="si-nm">'+esc(f.name_th)+'</div><div class="si-mt">'+fl(f.country)+' · '+esc(ds(f.division))+'</div></div></a>';}).join(''):'<div class="s-empty">ไม่พบ "'+esc(sinput.value)+'"</div>';
     });
   }
 });

@@ -3,10 +3,10 @@
    กลยุทธ์:
      - HTML       → network-first (ให้ user เห็นเวอร์ชันใหม่เสมอ)
      - CSS/JS/img → cache-first (เร็วสุด)
-     - fighters_data.js / fighters_index.js → stale-while-revalidate
+     - fighters_data.js / fighters_lite.js → stale-while-revalidate
                     (แสดงเวอร์ชัน cache ทันที + อัปเดตพื้นหลัง)
    ═══════════════════════════════════════════════════════════════ */
-const VERSION = 'boxfan-v1';
+const VERSION = 'boxfan-v2';   /* เปลี่ยนเลขทุกครั้งที่อยากล้างแคชของผู้ใช้ทั้งหมด */
 const STATIC_CACHE = VERSION + '-static';
 const DATA_CACHE   = VERSION + '-data';
 
@@ -56,13 +56,20 @@ self.addEventListener('fetch', function(evt) {
     }
 
     /* data files → stale-while-revalidate */
-    if (/fighters_(data|index)\.js$/.test(url.pathname)) {
+    if (/fighters_(data|index|lite)\.js$/.test(url.pathname)) {
         evt.respondWith(staleWhileRevalidate(req, DATA_CACHE));
         return;
     }
 
-    /* CSS/JS/รูป/font → cache-first */
-    if (['script','style','image','font'].indexOf(req.destination) !== -1) {
+    /* JS/CSS → stale-while-revalidate: เปิดเร็วจากแคช แล้วอัปเดตเบื้องหลัง
+       (เดิมเป็น cache-first ทำให้ผู้ใช้เก่าค้าง utils.js เวอร์ชันเดิมไปตลอด) */
+    if (req.destination === 'script' || req.destination === 'style') {
+        evt.respondWith(staleWhileRevalidate(req, STATIC_CACHE));
+        return;
+    }
+
+    /* รูป/font → cache-first */
+    if (['image','font'].indexOf(req.destination) !== -1) {
         evt.respondWith(cacheFirst(req, STATIC_CACHE));
         return;
     }

@@ -11,6 +11,7 @@
 <link rel="apple-touch-icon" href="/icons/icon-192.png">
 <title>เปรียบเทียบนักมวย — จับคู่ vs ดูสถิติเทียบกันตัวต่อตัว | Boxfan</title>
 <meta name="description" content="เปรียบเทียบนักมวยแบบเคียงข้าง ใครเก่งกว่ากัน ดูอัตราชนะ คะแนน ฟอร์มล่าสุด ส่วนสูง น้ำหนัก ประวัติการชก มวยไทย คิกบ็อกซิง MMA ONE Championship">
+<meta name="twitter:image" content="https://www.boxingfandom.com/og-default.jpg">
 <meta name="keywords" content="เปรียบเทียบนักมวย,นักมวยคนไหนเก่งกว่า,เทียบสถิตินักมวย,เปรียบมวย,vs มวยไทย,ใครเก่งกว่ากัน,เทียบฟอร์มนักมวย,ONE Championship,Fighter comparison,Boxfan">
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
 <meta name="author" content="Boxfan">
@@ -705,7 +706,7 @@ a{color:inherit;text-decoration:none}
 </div>
 <footer id="ft"></footer>
 <script src="data/fighters_data.js"></script>
-<script src="utils.js"></script>
+<script src="utils.js?v=2"></script>
 <script>
 var _a,_b,selA=null,selB=null;
 
@@ -819,7 +820,8 @@ function run(){
         titleEn:((_a.name_en||_a.name_th)+' vs '+(_b.name_en||_b.name_th)+' | Boxfan'),
         desc   :'เปรียบเทียบสถิติ '+_a.name_th+' vs '+_b.name_th+' ONE Championship | Boxfan',
         url    :SITE+'/compare.html?a='+encodeURIComponent(_a.id)+'&b='+encodeURIComponent(_b.id),
-        image  :cImg(_a.image_filename,'lg')
+        image  :cImg(_a.image_filename,'lg'),
+        force  :true
     });
 
     buildHead(_a,'ha','ra',_a.id);

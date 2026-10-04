@@ -16,6 +16,11 @@
    ═══════════════════════════════════════════════════════════════ */
 'use strict';
 
+/* ⚠ เลิกใช้แล้ว — ไฟล์นี้สร้าง sitemap ที่ชี้ profile.html?id=... (หน้า noindex)
+   ให้ใช้  python build_seo.py  แทน (sitemap ชี้หน้า fighters/<slug>.html + หน้าแยกรุ่น) */
+console.error('build.js เลิกใช้แล้ว — รัน: python build_seo.py');
+process.exit(1);
+
 const fs   = require('fs');
 const path = require('path');
 const vm   = require('vm');

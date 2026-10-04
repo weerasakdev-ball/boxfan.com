@@ -11,6 +11,7 @@
 <link rel="apple-touch-icon" href="/icons/icon-192.png">
 <title>เกี่ยวกับ Boxfan — เว็บสถิตินักมวยไทยและ ONE Championship</title>
 <meta name="description" content="Boxfan รวบรวมสถิตินักมวยไทย มวยไทย คิกบ็อกซิง และ MMA ใน ONE Championship ครบที่สุดในภาษาไทย จัดอันดับด้วยข้อมูลจริง อัปเดตทุกอีเวนต์">
+<meta name="twitter:image" content="https://www.boxingfandom.com/og-default.jpg">
 <meta name="keywords" content="เกี่ยวกับ Boxfan,เว็บสถิตินักมวย,ข้อมูลนักมวยไทย,ONE Championship,มวยไทย,Boxfan">
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
 <meta name="author" content="Boxfan">
@@ -305,15 +306,15 @@ a{color:inherit;text-decoration:none}
       </div>
       <div class="brand-stats">
         <div class="bstat">
-          <div class="bstat-num" id="ab-fighters">—</div>
+          <div class="bstat-num" id="ab-fighters">2221</div>
           <div class="bstat-lbl">นักมวยในระบบ</div>
         </div>
         <div class="bstat">
-          <div class="bstat-num" id="ab-matches">—</div>
+          <div class="bstat-num" id="ab-matches">7217</div>
           <div class="bstat-lbl">แมตช์ที่บันทึก</div>
         </div>
         <div class="bstat">
-          <div class="bstat-num" id="ab-countries">—</div>
+          <div class="bstat-num" id="ab-countries">177</div>
           <div class="bstat-lbl">สัญชาตินักมวย</div>
         </div>
       </div>
@@ -424,7 +425,7 @@ a{color:inherit;text-decoration:none}
 </div>
 
 <footer class="site-footer" id="ft">
-  <span id="yr-ft"></span> Boxfan ·
+  <span id="yr-ft">© 2026</span> Boxfan ·
   <a href="about.html">เกี่ยวกับเรา</a> ·
   <a href="contact.html">ติดต่อเรา</a> ·
   <a href="privacy.html">นโยบายความเป็นส่วนตัว</a> ·
@@ -432,7 +433,7 @@ a{color:inherit;text-decoration:none}
 </footer>
 
 <script src="data/fighters_data.js"></script>
-<script src="utils.js"></script>
+<script src="utils.js?v=2"></script>
 <script>
 document.getElementById('yr-ft').textContent = '© ' + new Date().getFullYear();
 if(typeof nav === 'function') {/* nav already rendered via utils.js */}
@@ -460,7 +461,7 @@ document.addEventListener('DOMContentLoaded',function(){
       if(!q){sdrop.innerHTML='';return;}
       var hits=FIGHTERS.filter(function(f){return(f.name_th||'').toLowerCase().indexOf(q)!==-1||(f.name_en||'').toLowerCase().indexOf(q)!==-1;}).slice(0,7);
       if(typeof cImg!=='undefined'&&typeof fl!=='undefined'&&typeof ds!=='undefined'){
-        sdrop.innerHTML=hits.length?hits.map(function(f){return'<a class="si" href="profile.html?id='+f.id+'"><img src="'+cImg(f.image_filename,'sm')+'" loading="lazy" onerror="this.src=PH" alt=""><div><div class="si-nm">'+esc(f.name_th)+'</div><div class="si-mt">'+fl(f.country)+' · '+esc(ds(f.division))+'</div></div></a>';}).join(''):'<div class="s-empty">ไม่พบ "'+esc(sinput.value)+'"</div>';
+        sdrop.innerHTML=hits.length?hits.map(function(f){return'<a class="si" href="'+fighterUrl(f)+'"><img src="'+cImg(f.image_filename,'sm')+'" loading="lazy" onerror="this.src=PH" alt=""><div><div class="si-nm">'+esc(f.name_th)+'</div><div class="si-mt">'+fl(f.country)+' · '+esc(ds(f.division))+'</div></div></a>';}).join(''):'<div class="s-empty">ไม่พบ "'+esc(sinput.value)+'"</div>';
       }
     });
   }

@@ -1,12 +1,9 @@
-/profile.html?id=1  /fighter/kongchai-chanaidonmueang/  301
-/profile.html?id=2  /fighter/superlek/  301
-/profile.html?id=3  /fighter/sunoto/  301
-/profile.html?id=4  /fighter/martin-nguyen/  301
-/profile.html?id=5  /fighter/rodtang-jitmuangnon/  301
-/profile.html?id=6  /fighter/ratchasiesan/  301
-/profile.html?id=7  /fighter/suriyanlek-por-yenying/  301
-/profile.html?id=8  /fighter/aung-la-n-sang/  301
-/profile.html?id=9  /fighter/alex-silva/  301
-/profile.html?id=10  /fighter/saemapetch/  301
-/profile.html?id=11  /fighter/stamp/  301
-/profile.html?id=12  /fighter/honorio-banario/  301
+# ════════════════════════════════════════════════════════════════
+# _redirects (Netlify / Cloudflare Pages)
+# ลบกฎเดิมออกแล้ว: เดิมพา /profile.html?id=... ไปที่ /fighter/<ชื่อ>/ ซึ่งไม่มีอยู่จริง
+# (โฟลเดอร์จริงคือ /fighters/<slug>.html) — ถ้ากฎทำงานจะกลายเป็นหน้า 404
+# ตอนนี้ profile.html ตั้ง noindex + canonical ไปหน้า fighters/<slug>.html แล้ว จึงไม่ต้อง redirect
+#
+# ตัวอย่างรูปแบบที่ถูกต้อง (ถ้าต้องการในอนาคต):
+# /old-page.html   /new-page.html   301
+# ════════════════════════════════════════════════════════════════

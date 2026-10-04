@@ -41,10 +41,23 @@ function isFinish(h) {
     return m === 'ko' || m === 'tko' || m === 'submission';
 }
 
+/* แปลงผลการชกเป็นรหัส — รองรับคำที่สะกดยาวกว่าปกติด้วย
+   เช่น "แพ้น็อก" "แพ้คะแนนไม่เอกฉันท์" = แพ้, "ยกเลิกการแข่งขัน" "ยกแลิก" = ยกเลิก (ไม่นับสถิติ) */
+function resultTypeOf(result) {
+    var r = String(result || '').trim();
+    if (RESULT_TYPE_MAP[r]) return RESULT_TYPE_MAP[r];
+    if (/^ไม่มีผล/.test(r))         return 'nc';
+    if (/^ชนะ/.test(r))             return 'win';
+    if (/^แพ้/.test(r))             return 'loss';
+    if (/^เสมอ/.test(r))            return 'draw';
+    if (/^ยก(เลิก|แลิก)/.test(r))    return 'cancelled';
+    return 'other';
+}
+
 function normalizeData() {
     if (typeof HISTORY !== 'undefined' && HISTORY && HISTORY.length) {
         HISTORY.forEach(function(h) {
-            if (!h.result_type) h.result_type = RESULT_TYPE_MAP[String(h.result || '').trim()] || 'other';
+            if (!h.result_type) h.result_type = resultTypeOf(h.result);
             if (!h.method)      h.method      = methodOf(h.decision);
         });
     }
@@ -94,7 +107,7 @@ function ensureFullData() {
 
     _fullDataPromise = new Promise(function(resolve, reject) {
         var sc = document.createElement('script');
-        sc.src = 'fighters_data.js';
+        sc.src = (window.BF_BASE || '') + 'data/fighters_data.js';
         sc.onload = function() {
             /* หลังโหลดเสร็จ FIGHTERS/HISTORY กลายเป็นข้อมูลเต็ม → normalize ใหม่ */
             normalizeData();
@@ -116,6 +129,20 @@ function fighterUrl(f, prefix) {
     var base = (prefix === undefined) ? '' : prefix;
     if (f.slug) return base + 'fighters/' + encodeURIComponent(f.slug) + '.html';
     return base + 'profile.html?id=' + encodeURIComponent(f.id);
+}
+
+/* ลิงก์ไปหน้าอันดับของรุ่นน้ำหนัก — เป็นหน้า static แยกไฟล์ต่อรุ่น (สร้างโดย build_seo.py)
+   เช่น rankings-flyweight.html แทน weight-classes.html?div=fly
+   Google เก็บได้ทีละรุ่น แต่ละรุ่นมี title/description ของตัวเอง */
+function divSlug(key) {
+    for (var i = 0; i < DIV_MAP.length; i++) {
+        if (DIV_MAP[i].key === key) return DIV_MAP[i].en.toLowerCase().replace(/\s+/g, '-');
+    }
+    return '';
+}
+function divUrl(key, prefix) {
+    var s = divSlug(key);
+    return (prefix || '') + (s ? 'rankings-' + s + '.html' : 'weight-classes.html');
 }
 
 /* alias — หลายหน้าเรียกชื่อ getFighterUrl() ห้ามลบ */
@@ -229,13 +256,14 @@ function ds(d) {
 }
 
 /* ── Score / History ─────────────────────────────────────────────────────── */
+/* สูตรคะแนนกลางของทั้งเว็บ: ชนะ +3 · เสมอ 0 · แพ้ -3 (ไม่มีโบนัส)
+   ต้องตรงกับ calcScore() ในหน้า index / rankings / weight-classes
+   และ build_score() ใน data/generate_profiles.py — แก้ที่หนึ่งต้องแก้ทุกที่ */
 function score(h) {
     var s = 0;
     (h || []).forEach(function(x) {
         if (x.result_type === 'win') {
             s += 3;
-            /* โบนัสชนะน็อก/ซับมิชชันในยกแรก (isFinish อ่านได้ทั้งไทยและอังกฤษ) */
-            if (x.round === 1 && isFinish(x)) s += 1;
         } else if (x.result_type === 'loss') {
             s -= 3;
         }
@@ -324,10 +352,21 @@ function setMeta(opts) {
     var type    = opts.type    || 'website';
     var kw      = opts.keywords || 'นักมวย,ONE Championship,Muay Thai,สถิติ,' + BRAND;
 
-    document.title = title;
+    /* ค่าเริ่มต้น: เติมเฉพาะแท็กที่หน้ายังไม่มี — meta ที่เขียนไว้ใน HTML (ซึ่งละเอียดกว่า)
+       จะไม่ถูกเขียนทับ เพราะ Google ใช้ค่าหลังรัน JS และเคยทำให้ title/description
+       ที่ดีถูกแทนด้วยข้อความสั้นกว่า
+       opts.force     = true → เขียนทับ title/description/og (หน้าที่เนื้อหาเปลี่ยนตาม URL เช่น profile, compare)
+       opts.canonical = true → เขียนทับ canonical ด้วย (ใช้เฉพาะหน้าที่ URL จริงต่างจาก canonical ในไฟล์)
+       ไม่แตะ meta robots อีกต่อไป (เดิมบังคับ index,follow ทับ noindex ของ profile.html) */
+    var force = !!opts.force;
+    if (force || !document.title) document.title = title;
 
     function setTag(sel, attr, val) {
         var el = document.querySelector(sel);
+        if (el && el.getAttribute(attr)) {
+            var isCanon = sel.indexOf('canonical') !== -1;
+            if (isCanon ? !opts.canonical : !force) return;
+        }
         if (!el) {
             el = document.createElement(sel.startsWith('link') ? 'link' : 'meta');
             var clean = sel.replace(/[\[\]]/g, '').split('=');
@@ -342,7 +381,6 @@ function setMeta(opts) {
 
     setTag('meta[name="description"]',       'content', desc);
     setTag('meta[name="keywords"]',           'content', kw);
-    setTag('meta[name="robots"]',             'content', 'index,follow');
     setTag('meta[name="author"]',             'content', BRAND);
     setTag('link[rel="canonical"]',           'href',    url);
     setTag('meta[property="og:title"]',       'content', title);
@@ -542,13 +580,13 @@ function initSearch() {
                 return '<a class="si" href="' + fighterUrl(f) + '">' +
                     '<img src="' + cImg(f.image_filename, 'sm') + '" loading="lazy" onerror="this.src=PH" alt="">' +
                     '<div>' +
-                        '<div class="si-nm">' + f.name_th + '</div>' +
-                        '<div class="si-mt">' + fl(f.country) + ' ' + ds(f.division) + ' &nbsp;·&nbsp; ' + f.total_wins + 'W ' + f.total_losses + 'L</div>' +
+                        '<div class="si-nm">' + esc(f.name_th) + '</div>' +
+                        '<div class="si-mt">' + fl(f.country) + ' ' + esc(ds(f.division)) + ' &nbsp;·&nbsp; ' + f.total_wins + 'W ' + f.total_losses + 'L</div>' +
                     '</div>' +
                     '</a>';
             }).join('');
         } else {
-            drop.innerHTML = '<div class="s-empty">ไม่พบ "' + inp.value + '"</div>';
+            drop.innerHTML = '<div class="s-empty">ไม่พบ "' + esc(inp.value) + '"</div>';
         }
         drop.classList.add('open');
     });
@@ -556,4 +594,24 @@ function initSearch() {
     document.addEventListener('click', function(e) {
         if (!e.target.closest('.nav-search-wrap')) drop.classList.remove('open');
     });
+}
+/* ── JSON-LD ItemList จากลิงก์นักมวยที่แสดงอยู่จริงบนหน้า ─────────────────
+   เขียนลง <script id="..."> เดิม (ไม่เพิ่มซ้ำทุกครั้งที่กรอง)
+   build_seo.py จะคัดลอกผลลัพธ์ไปฝังใน HTML ให้ Google อ่านได้โดยไม่ต้องรัน JS */
+function ldItemList(id, name, anchors, max) {
+    var list = [].slice.call(anchors || []).slice(0, max || 20);
+    var s = document.getElementById(id);
+    if (!list.length) { if (s) s.text = ''; return; }
+    var obj = {
+        '@context': 'https://schema.org', '@type': 'ItemList', 'name': name,
+        'itemListOrder': 'https://schema.org/ItemListOrderDescending',
+        'numberOfItems': list.length,
+        'itemListElement': list.map(function(a, i) {
+            var href = a.getAttribute('href') || '';
+            if (!/^https?:/i.test(href)) href = SITE + '/' + href.replace(/^(\.\.\/|\.\/|\/)+/, '');
+            return { '@type': 'ListItem', 'position': i + 1, 'name': (a.textContent || '').trim(), 'url': href };
+        })
+    };
+    if (!s) { s = document.createElement('script'); s.type = 'application/ld+json'; s.id = id; document.head.appendChild(s); }
+    s.text = JSON.stringify(obj);
 }

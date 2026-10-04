@@ -11,14 +11,15 @@
 <link rel="apple-touch-icon" href="/icons/icon-192.png">
 <title>ติดต่อเรา | Boxfan</title>
 <meta name="description" content="ติดต่อทีม Boxfan — แนะนำ ติชม รายงานข้อผิดพลาด หรือสอบถามข้อมูลนักมวย ONE Championship">
+<meta name="twitter:image" content="https://www.boxingfandom.com/og-default.jpg">
 <meta name="keywords" content="ติดต่อ Boxfan,Boxfan,ติดต่อเรา">
 <meta name="robots" content="index,follow">
 <meta name="author" content="Boxfan">
-<link rel="canonical" href="https://boxingfandom.com/contact.html">
+<link rel="canonical" href="https://www.boxingfandom.com/contact.html">
 <meta property="og:title" content="ติดต่อเรา | Boxfan">
 <meta property="og:description" content="ติดต่อทีม Boxfan — แนะนำ ติชม รายงานข้อผิดพลาด">
-<meta property="og:image" content="https://boxingfandom.com/og-default.jpg">
-<meta property="og:url" content="https://boxingfandom.com/contact.html">
+<meta property="og:image" content="https://www.boxingfandom.com/og-default.jpg">
+<meta property="og:url" content="https://www.boxingfandom.com/contact.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Boxfan">
 <meta property="og:locale" content="th_TH">
@@ -26,7 +27,7 @@
 <meta name="twitter:title" content="Contact Boxfan">
 <meta name="twitter:description" content="Contact the Boxfan team — feedback, bug reports, or fighter data questions">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"ContactPage","name":"ติดต่อเรา | Boxfan","description":"ติดต่อทีม Boxfan — แนะนำ ติชม รายงานข้อผิดพลาด","url":"https://boxingfandom.com/contact.html","inLanguage":["th","en"]}
+{"@context":"https://schema.org","@type":"ContactPage","name":"ติดต่อเรา | Boxfan","description":"ติดต่อทีม Boxfan — แนะนำ ติชม รายงานข้อผิดพลาด","url":"https://www.boxingfandom.com/contact.html","inLanguage":["th","en"]}
 </script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -349,7 +350,7 @@ a{color:inherit;text-decoration:none}
 </footer>
 
 <script src="data/fighters_data.js"></script>
-<script src="utils.js"></script>
+<script src="utils.js?v=2"></script>
 <script>
 document.getElementById('yr-ft').textContent='© '+new Date().getFullYear();
 function toggleSearch(){var p=document.getElementById('search-panel');p.classList.toggle('open');if(p.classList.contains('open'))setTimeout(function(){document.getElementById('sinput').focus();},50);}
@@ -361,7 +362,7 @@ document.addEventListener('DOMContentLoaded',function(){
       var q=sinput.value.trim().toLowerCase();
       if(!q){sdrop.innerHTML='';return;}
       var hits=FIGHTERS.filter(function(f){return(f.name_th||'').toLowerCase().indexOf(q)!==-1||(f.name_en||'').toLowerCase().indexOf(q)!==-1;}).slice(0,7);
-      sdrop.innerHTML=hits.length?hits.map(function(f){return'<a class="si" href="profile.html?id='+f.id+'"><img src="'+cImg(f.image_filename,'sm')+'" loading="lazy" onerror="this.src=PH" alt=""><div><div class="si-nm">'+esc(f.name_th)+'</div><div class="si-mt">'+fl(f.country)+' · '+esc(ds(f.division))+'</div></div></a>';}).join(''):'<div class="s-empty">ไม่พบ "'+esc(sinput.value)+'"</div>';
+      sdrop.innerHTML=hits.length?hits.map(function(f){return'<a class="si" href="'+fighterUrl(f)+'"><img src="'+cImg(f.image_filename,'sm')+'" loading="lazy" onerror="this.src=PH" alt=""><div><div class="si-nm">'+esc(f.name_th)+'</div><div class="si-mt">'+fl(f.country)+' · '+esc(ds(f.division))+'</div></div></a>';}).join(''):'<div class="s-empty">ไม่พบ "'+esc(sinput.value)+'"</div>';
     });
   }
 });

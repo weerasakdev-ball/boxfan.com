@@ -210,7 +210,51 @@ FINISH_RE = re.compile(r'เคโอ|ทีเคโอ|น็อก|น๊อ�
 
 
 def result_type_of(result):
-    return RESULT_TYPE_MAP.get(str(result or '').strip(), 'other')
+    """ตรงกับ resultTypeOf() ใน utils.js — รองรับคำสะกดยาว เช่น 'แพ้น็อก' 'ยกเลิกการแข่งขัน'"""
+    r = str(result or '').strip()
+    if r in RESULT_TYPE_MAP:
+        return RESULT_TYPE_MAP[r]
+    if r.startswith('ไม่มีผล'):
+        return 'nc'
+    if r.startswith('ชนะ'):
+        return 'win'
+    if r.startswith('แพ้'):
+        return 'loss'
+    if r.startswith('เสมอ'):
+        return 'draw'
+    if r.startswith('ยกเลิก') or r.startswith('ยกแลิก'):
+        return 'cancelled'
+    return 'other'
+
+
+# ═══════════════════════════════════════════════════════════
+# รุ่นน้ำหนัก → หน้าอันดับของรุ่น (rankings-<slug>.html สร้างโดย build_seo.py)
+# ตรงกับ divKey() / divUrl() ใน utils.js
+# ═══════════════════════════════════════════════════════════
+DIV_EN = {'atom': 'Atomweight', 'straw': 'Strawweight', 'fly': 'Flyweight', 'bantam': 'Bantamweight',
+          'feather': 'Featherweight', 'light': 'Lightweight', 'welter': 'Welterweight',
+          'middle': 'Middleweight', 'lightheavy': 'Light Heavyweight', 'heavy': 'Heavyweight',
+          'catch': 'Catchweight'}
+DIV_KW = [('atom', 'อะตอม'), ('straw', 'สตรอว์'), ('fly', 'ฟลาย'), ('bantam', 'แบนตัม'),
+          ('feather', 'เฟเธอร์'), ('welter', 'เวลเทอร์'), ('middle', 'มิดเดิล'), ('catch', 'แคช'),
+          ('light', 'ไล'), ('heavy', 'เฮฟวี')]
+
+
+def div_key(d):
+    s = str(d or '')
+    if not s:
+        return None
+    if 'เฮฟวี' in s and ('ไลท์เฮฟวี' in s or 'ไลต์เฮฟวี' in s):
+        return 'lightheavy'
+    for k, kw in DIV_KW:
+        if kw in s:
+            return k
+    return None
+
+
+def div_page(d):
+    k = div_key(d)
+    return ('rankings-%s.html' % DIV_EN[k].lower().replace(' ', '-')) if k else ''
 
 
 def is_finish(fight):
@@ -634,7 +678,7 @@ def build_rows(fights, fighters_map):
                       '<div><a href="%s" class="opp-name-link">%s</a>'
                       % (opp_link, opp_img, opp, NO_IMG, opp_link, opp))
         else:
-            opp_td = ('<td><div class="opp-row"><img class="opp-av no-link" src="%s" alt="" '
+            opp_td = ('<td><div class="opp-row"><img class="opp-av no-link" src="%s" alt="" loading="lazy" '
                       'onerror="this.onerror=null;this.src=\'%s\'">'
                       '<div><span class="opp-name-nolink">%s</span>' % (PH_IMG, NO_IMG, opp))
 
@@ -734,7 +778,7 @@ def generate(f, history, full_css, fighters_map):
 
     # ไฟต์ที่จะมาถึงย้ายไปแสดงเป็นการ์ดของตัวเอง (มีปุ่มเปรียบเทียบ) จึงไม่ซ้ำในตารางประวัติ
     upcoming_html = build_upcoming(f, up, fighters_map)
-    rows = build_rows(past[:10], fighters_map)
+    rows = build_rows(past, fighters_map)
 
     # JSON-LD — ใช้ข้อความดิบ (json.dumps จะ escape ให้เอง) และตัดคีย์ที่ว่างทิ้ง
     ld = {
@@ -744,21 +788,34 @@ def generate(f, history, full_css, fighters_map):
         'alternateName': f.get('name_en') or None,
         'description': ('%s นักมวย ONE Championship %s'
                         % (f.get('name_th') or '', f.get('division') or '')).strip(),
-        'image': img or None,
+        'image': og_img,
         'url': canonical,
         'nationality': f.get('country') or None,
         'sport': 'Muay Thai / Kickboxing / MMA',
         'memberOf': {'@type': 'SportsOrganization', 'name': 'ONE Championship'},
+        # ลิงก์โปรไฟล์ทางการ ช่วยให้ Google รู้ว่าเป็นคนเดียวกัน
+        'sameAs': [u for u in (f.get('profile_url'),) if u] or None,
+        'height': ({'@type': 'QuantitativeValue', 'value': f.get('height_cm'), 'unitCode': 'CMT'}
+                   if f.get('height_cm') else None),
     }
-    jsonld = json.dumps({k: v for k, v in ld.items() if v is not None}, ensure_ascii=False)
+    _dp = div_page(f.get('division'))
+    crumbs = [('หน้าแรก', SITE + '/'), ('นักมวยทั้งหมด', SITE + '/' + FIGHTERS_PAGE)]
+    if _dp:
+        crumbs.append((f.get('division'), SITE + '/' + _dp))
+    crumbs.append((f.get('name_th') or '', canonical))
+    graph = {'@context': 'https://schema.org', '@graph': [
+        {k: v for k, v in ld.items() if v is not None and k != '@context'},
+        {'@type': 'BreadcrumbList', 'itemListElement': [
+            {'@type': 'ListItem', 'position': i + 1, 'name': n, 'item': u} for i, (n, u) in enumerate(crumbs)]},
+    ]}
+    jsonld = json.dumps(graph, ensure_ascii=False).replace('</', '<\\/')
 
     form_html = (('<div class="form-label">ฟอร์มล่าสุด %d แมตช์</div><div class="fbar">%s</div>'
                   % (min(len(past), 10), form)) if form else '')
     empty_row = ('<tr><td colspan="6" style="padding:32px;text-align:center;'
                  'color:var(--tx-3)">ยังไม่มีประวัติการชก</td></tr>')
     more_html = (('<div style="margin-top:8px;font-size:12px;color:var(--tx-4);text-align:center">'
-                  'แสดง %d จาก %d แมตช์</div>'
-                  % (min(len(past), 10), len(past))) if len(past) > 10 else '')
+                  'ประวัติการชกทั้งหมด %d แมตช์</div>' % len(past)) if past else '')
     bio_html = (('<div style="margin-top:18px;padding:24px;background:var(--surf);'
                  'border:1px solid var(--line-2);border-radius:11px;box-shadow:var(--sh-2)">'
                  '<div style="font-family:var(--sans);font-size:15px;font-weight:800;color:var(--tx);'
@@ -767,7 +824,9 @@ def generate(f, history, full_css, fighters_map):
                  '<p style="line-height:1.9;color:var(--tx-2);font-size:14px;margin:0">%s</p></div>'
                  % bio) if bio else '')
     flag_html = ('<div class="hflag">%s</div>' % fl(f.get('country'))) if country else ''
-    div_html = ('<div class="hdiv">%s</div>' % division) if division else ''
+    _dp = div_page(f.get('division'))
+    div_html = (('<div class="hdiv"><a href="../%s" style="color:inherit" title="อันดับนักมวยรุ่น%s">%s</a></div>'
+                 % (_dp, division, division)) if _dp else ('<div class="hdiv">%s</div>' % division)) if division else ''
     name_en_html = ('<div class="hname-en">%s</div>' % name_en) if name_en else ''
 
     return f'''<!DOCTYPE html>
@@ -894,7 +953,7 @@ def generate(f, history, full_css, fighters_map):
       <a href="../privacy.html" style="font-size:13px;color:var(--tx-2);font-weight:500">นโยบายความเป็นส่วนตัว</a>
       <a href="../disclaimer.html" style="font-size:13px;color:var(--tx-2);font-weight:500">ข้อจำกัดความรับผิด</a>
     </div>
-    <div style="font-size:11.5px;color:var(--tx-4)">© 2025 Boxfan · รวมผลมวยจากทุกรายการ บันทึกโดยแฟนมวย</div>
+    <div style="font-size:11.5px;color:var(--tx-4)">© {date.today().year} Boxfan · รวมผลมวยจากทุกรายการ บันทึกโดยแฟนมวย</div>
   </div>
 </footer>
 

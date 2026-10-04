@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="th">
-<head><link rel="icon" type="image/png" href="images/logoboxingfandom.png">
-<link rel="apple-touch-icon" href="images/logoboxingfandom.png">
+<head><link rel="icon" type="image/png" href="../../../images/logoboxingfandom.png">
+<link rel="apple-touch-icon" href="../../../images/logoboxingfandom.png">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>[ชื่อบทความ] | Boxfan</title>
 <meta name="description" content="[คำโปรยบทความ]">
 <meta name="robots" content="index,follow">
-<link rel="canonical" href="https://boxingfandom.com/blog/articles/th/[ชื่อไฟล์].html">
+<link rel="canonical" href="https://www.boxingfandom.com/blog/articles/th/[ชื่อไฟล์].html">
 <meta property="og:title" content="[ชื่อบทความ]">
 <meta property="og:description" content="[คำโปรยบทความ]">
 <meta property="og:image" content="[URLรูปหน้าปก]">
-<meta property="og:url" content="https://boxingfandom.com/blog/articles/th/[ชื่อไฟล์].html">
+<meta property="og:url" content="https://www.boxingfandom.com/blog/articles/th/[ชื่อไฟล์].html">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Article","headline":"[ชื่อบทความ]","image":"[URLรูปหน้าปก]","datePublished":"[YYYY-MM-DD]","author":{"@type":"Organization","name":"Boxfan"}}
 </script>
@@ -245,8 +245,8 @@ a{color:inherit;text-decoration:none}
 }
 </style>
   <script defer src="https://cloud.umami.is/script.js" data-website-id="40ec0b51-4f08-45be-801d-9cf01fc79260"></script>
-    <link rel="icon" type="image/png" href="images/logoboxingfandom.png">
-    <link rel="apple-touch-icon" href="images/logoboxingfandom.png">
+    <link rel="icon" type="image/png" href="../../../images/logoboxingfandom.png">
+    <link rel="apple-touch-icon" href="../../../images/logoboxingfandom.png">
 </head>
 <body>
 
@@ -383,7 +383,7 @@ a{color:inherit;text-decoration:none}
 </footer>
 
 <script src="../../../data/fighters_data.js"></script>
-<script src="../../../utils.js"></script>
+<script src="../../../utils.js?v=2"></script>
 <script>
 function toggleSearch(){
   var p=document.getElementById('search-panel');
@@ -404,7 +404,7 @@ document.addEventListener('DOMContentLoaded',function(){
     }).slice(0,7);
     if(typeof cImg!=='undefined'&&typeof fl!=='undefined'&&typeof ds!=='undefined'){
       drop.innerHTML=hits.length?hits.map(function(f){
-        return '<a class="si" href="../../../profile.html?id='+f.id+'">'+
+        return '<a class="si" href="'+fighterUrl(f,'../../../')+'">'+
           '<img src="'+cImg(f.image_filename,'sm')+'" loading="lazy" alt="">'+
           '<div><div class="si-nm">'+f.name_th+'</div><div class="si-mt">'+fl(f.country)+' · '+ds(f.division)+'</div></div>'+
         '</a>';

@@ -85,7 +85,7 @@ function photo(f, displayPx) { return !f ? PH : (f.custom ? f.img : imgURL(f.fil
 function imgTag(f, displayPx, alt) {
   var src = photo(f, displayPx);
   var co = /^https?:/.test(src) ? ' crossorigin="anonymous"' : '';
-  return '<img src="' + h(src) + '"' + co + ' alt="' + h(alt || '') + '" draggable="false" loading="lazy" decoding="async" onerror="this.onerror=null;this.src=\'' + PH + '\'">';
+  return '<img src="' + h(src) + '"' + co + ' alt="' + h(alt || '') + '" draggable="false" loading="lazy" decoding="async" onerror="this.onerror=null;this.src=\'' + PH.replace(/'/g, '%27') + '\'">';   /* PH มี ' อยู่ข้างใน — ต้องแปลงไม่งั้น onerror เป็น JS ที่พัง */
 }
 
 /* อัปโหลดรูปเอง: ครอปจัตุรัส 600px คุณภาพสูง */

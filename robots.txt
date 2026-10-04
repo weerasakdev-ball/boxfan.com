@@ -1,4 +1,13 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://boxingfandom.com/sitemap.xml
+# เครื่องมือภายใน / ไฟล์แม่แบบ — ไม่ต้องให้ค้นหาเจอ
+Disallow: /db-extractor.html
+Disallow: /generate-sitemap.html
+Disallow: /blog/TEMPLATE.html
+Disallow: /blog/index-blog.html
+Disallow: /data/fighters.db
+Disallow: /*.py$
+Disallow: /*.bat$
+
+Sitemap: https://www.boxingfandom.com/sitemap.xml

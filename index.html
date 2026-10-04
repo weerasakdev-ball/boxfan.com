@@ -4,7 +4,7 @@
 <link rel="apple-touch-icon" href="images/logoboxingfandom.png">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://res.cloudinary.com;">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://res.cloudinary.com https://images.unsplash.com https://upload.wikimedia.org;">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="theme-color" content="#F6F5F1" id="meta-theme">
 <title>Boxfan — จัดอันดับนักมวยไทย ONE Championship</title>
@@ -22,12 +22,10 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Boxfan — จัดอันดับนักมวยไทย ที่ดีที่สุด">
 <meta name="twitter:description" content="สถิตินักมวย ข้อมูลนักมวย และจัดอันดับนักมวยไทยรวมทุกรุ่นทุกกติกา คำนวณจากสถิติจริง">
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","name":"Boxfan","alternateName":"จัดอันดับนักมวยไทย Boxfan","url":"https://www.boxingfandom.com/","inLanguage":"th","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.boxingfandom.com/fighters.html?q={search_term_string}"},"query-input":"required name=search_term_string"}}
-</script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Organization","name":"Boxfan","url":"https://www.boxingfandom.com/","description":"แพลตฟอร์มจัดอันดับนักมวยไทยและรวมสถิตินักมวยจากทุกรุ่นทุกกติกา","sameAs":["https://www.youtube.com/@Boxingfandom"]}
-</script>
+<meta property="og:image" content="https://www.boxingfandom.com/og-default.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://www.boxingfandom.com/og-default.jpg">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -418,10 +416,14 @@ footer{background:var(--footer-bg);border-top:1px solid var(--line);padding:72px
 .f-col a{display:block;color:var(--sub);font-size:14.5px;margin-bottom:13px;transition:color .2s var(--ease)}
 .f-col a:hover{color:var(--gold-text)}
 .f-news p{color:var(--sub);font-size:14px;line-height:1.6;margin-bottom:16px}
-.news-form{display:flex;gap:8px}
+.news-form{display:flex;gap:8px;flex-wrap:wrap}
 .news-form input{flex:1;min-width:0;background:var(--card);border:1px solid var(--line-strong);border-radius:999px;padding:12px 18px;color:var(--text);font-size:14px;outline:none}
 .news-form input:focus{border-color:var(--gold)}
 .news-form button{padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,var(--gold-light),var(--gold));color:#161200;font-weight:700;font-size:14px;white-space:nowrap;transition:box-shadow .2s}
+.news-cta{display:inline-flex;align-items:center;justify-content:center;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,var(--gold-light),var(--gold));color:#161200;font-weight:700;font-size:14px;white-space:nowrap;transition:box-shadow .2s}
+.news-cta:hover{box-shadow:0 6px 18px rgba(212,175,55,.4)}
+.news-cta.alt{background:transparent;border:1px solid var(--line-strong);color:var(--text)}
+.news-cta.alt:hover{border-color:var(--gold);box-shadow:none}
 .news-form button:hover{box-shadow:0 6px 18px rgba(212,175,55,.4)}
 .news-ok{color:var(--green);font-size:13.5px;font-weight:600;margin-top:12px}
 .f-disclaimer{font-size:12.5px;color:var(--mute);line-height:1.7;padding:24px 0;border-top:1px solid var(--line);max-width:1000px}
@@ -558,7 +560,7 @@ footer{background:var(--footer-bg);border-top:1px solid var(--line);padding:72px
   .dp-row{padding:9px 14px}
   .partner-name{font-size:17px}
   .news-form{flex-direction:column}
-  .news-form button{width:100%}
+  .news-form button,.news-cta{width:100%}
   .footer-bottom .fb-links{flex-wrap:wrap;gap:14px}
 }
 
@@ -601,7 +603,9 @@ footer{background:var(--footer-bg);border-top:1px solid var(--line);padding:72px
 .statbar .hstat span{font-size:10.5px;margin-top:1px}
 @media(max-width:560px){.statbar .hero-stats{grid-template-columns:repeat(2,1fr)}.statbar .hstat:nth-child(2){border-right:none}.statbar .hstat:nth-child(-n+2){border-bottom:1px solid var(--line)}}
 </style>
-<script type="application/ld+json" id="jsonld-static">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.boxingfandom.com/#org","name":"Boxfan","url":"https://www.boxingfandom.com","logo":{"@type":"ImageObject","url":"https://www.boxingfandom.com/icons/icon-192.png"},"description":"เว็บไซต์สถิติและจัดอันดับนักมวยไทย ONE Championship"},{"@type":"WebSite","@id":"https://www.boxingfandom.com/#website","url":"https://www.boxingfandom.com","name":"Boxfan","inLanguage":"th-TH","publisher":{"@id":"https://www.boxingfandom.com/#org"},"potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.boxingfandom.com/fighters.html?q={search_term_string}"},"query-input":"required name=search_term_string"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"นักมวยไทยเก่งที่สุดตอนนี้คือใคร","acceptedAnswer":{"@type":"Answer","text":"Boxfan จัดอันดับนักมวยไทยจากสถิติจริง คิดคะแนนจากผลชนะแพ้ในแต่ละไฟต์ ดูอันดับล่าสุดได้ที่หน้าจัดอันดับ ซึ่งอัปเดตหลังจบทุกอีเวนต์"}},{"@type":"Question","name":"Boxfan คำนวณอันดับนักมวยอย่างไร","acceptedAnswer":{"@type":"Answer","text":"ระบบให้คะแนนจากผลการชกจริง ชนะได้คะแนนบวก แพ้ได้คะแนนลบ แล้วนำมาจัดอันดับแยกตามรุ่นน้ำหนักและรายปี ไม่ใช้ความเห็นส่วนตัว"}},{"@type":"Question","name":"ดูโปรแกรมมวยวันนี้และผลมวยล่าสุดได้ที่ไหน","acceptedAnswer":{"@type":"Answer","text":"ดูโปรแกรมชกล่วงหน้าได้ที่หน้าโปรแกรมมวย และดูผลมวยล่าสุดทุกไฟต์แยกตามศึกได้ที่หน้าผลการแข่งขัน"}},{"@type":"Question","name":"Boxfan เป็นเว็บทางการของ ONE Championship หรือไม่","acceptedAnswer":{"@type":"Answer","text":"ไม่ใช่ Boxfan เป็นเว็บไซต์ที่รวบรวมข้อมูลโดยแฟนกีฬา ไม่มีความเกี่ยวข้องอย่างเป็นทางการกับ ONE Championship"}}]}]}</script>
+<script type="application/ld+json" id="jsonld-rank">{"@context":"https://schema.org","@type":"ItemList","name":"อันดับนักมวยไทย โดย Boxfan","itemListOrder":"https://schema.org/ItemListOrderDescending","numberOfItems":10,"itemListElement":[{"@type":"ListItem","position":1,"name":"ยอดกตัญญู จิตรเมืองนนท์","url":"https://www.boxingfandom.com/fighters/thiraphat-thunnam.html"},{"@type":"ListItem","position":2,"name":"รีเกียน เออร์เซล","url":"https://www.boxingfandom.com/fighters/regian-eersel.html"},{"@type":"ListItem","position":3,"name":"รถถัง จิตรเมืองนนท์","url":"https://www.boxingfandom.com/fighters/rodtang-jitmuangnon.html"},{"@type":"ListItem","position":4,"name":"คริสเตียน ลี","url":"https://www.boxingfandom.com/fighters/christian-lee.html"},{"@type":"ListItem","position":5,"name":"ยอดไอคิว อ.พิมลศรี","url":"https://www.boxingfandom.com/fighters/yod-iq.html"},{"@type":"ListItem","position":6,"name":"แสตมป์ แฟร์เท็กซ์","url":"https://www.boxingfandom.com/fighters/stamp.html"},{"@type":"ListItem","position":7,"name":"ไท รูโทโล","url":"https://www.boxingfandom.com/fighters/tye-ruotolo.html"},{"@type":"ListItem","position":8,"name":"ชาติพยัคฆ์ ศักดิ์สตูล","url":"https://www.boxingfandom.com/fighters/chartpayak-saksatoon.html"},{"@type":"ListItem","position":9,"name":"ซุปเปอร์เล็ก ซุปเปอร์เล็กมวยไทย","url":"https://www.boxingfandom.com/fighters/superlek.html"},{"@type":"ListItem","position":10,"name":"โจชัว พาซิโอ","url":"https://www.boxingfandom.com/fighters/joshua-pacio.html"}]}</script>
+<script type="application/ld+json" id="jsonld-faq">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"นักมวยไทยคนไหนเก่งที่สุดตอนนี้?","acceptedAnswer":{"@type":"Answer","text":"นักมวยที่มีคะแนนสะสมสูงสุดในระบบของ Boxfan ขณะนี้คือ ยอดกตัญญู จิตรเมืองนนท์ รุ่นฟลายเวท สถิติ 22 ชนะ 7 แพ้ (คำนวณจากผลการแข่งขันจริง อัปเดตหลังทุกไฟต์)"}},{"@type":"Question","name":"Boxfan จัดอันดับนักมวยอย่างไร?","acceptedAnswer":{"@type":"Answer","text":"เราให้คะแนนจากผลการแข่งขันจริง ชนะ +3 แพ้ -3 เสมอ 0 และใช้วันชกล่าสุดเป็นเกณฑ์ตัดสินเมื่อคะแนนเท่ากัน ครอบคลุมทุกรุ่นน้ำหนักและทุกรายการแข่ง"}},{"@type":"Question","name":"ดูสถิตินักมวยไทยและข้อมูลนักมวยได้ที่ไหน?","acceptedAnswer":{"@type":"Answer","text":"ดูได้ที่ Boxfan ทั้งสถิติชนะ-แพ้ สถิติชนะน็อก ชนะรวด รุ่นน้ำหนัก ค่าย และโปรแกรมไฟต์ที่กำลังจะมาถึงของนักมวยแต่ละคน"}}]}</script>
+<script type="application/ld+json" id="jsonld-static">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.boxingfandom.com/#org","name":"Boxfan","url":"https://www.boxingfandom.com","logo":{"@type":"ImageObject","url":"https://www.boxingfandom.com/icons/icon-192.png"},"description":"เว็บไซต์สถิติและจัดอันดับนักมวยไทย ONE Championship","sameAs":["https://www.youtube.com/@Boxingfandom"]},{"@type":"WebSite","@id":"https://www.boxingfandom.com/#website","url":"https://www.boxingfandom.com","name":"Boxfan","inLanguage":"th-TH","publisher":{"@id":"https://www.boxingfandom.com/#org"},"potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.boxingfandom.com/fighters.html?q={search_term_string}"},"query-input":"required name=search_term_string"}}]}</script>
     <link rel="icon" type="image/png" href="images/logoboxingfandom.png">
     <link rel="apple-touch-icon" href="images/logoboxingfandom.png">
 </head>
@@ -617,7 +621,7 @@ footer{background:var(--footer-bg);border-top:1px solid var(--line);padding:72px
       <a href="/" class="active">หน้าแรก</a>
       <div class="nav-item" id="nav-rank">
         <a href="weight-classes.html">จัดอันดับ<svg class="caret" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></a>
-        <div class="nav-menu" id="rank-menu"></div>
+        <div class="nav-menu" id="rank-menu"><a class="nm-all" href="rankings.html"><span>AllRank — ตารางคะแนนรวมทุกรุ่น</span><span class="nm-en">ALL</span></a><div class="nm-hd">เลือกรุ่นน้ำหนัก</div><div class="nm-grid"><a href="rankings-atomweight.html"><span>อะตอมเวท</span><span class="nm-en">91 คน</span></a><a href="rankings-strawweight.html"><span>สตรอว์เวท</span><span class="nm-en">191 คน</span></a><a href="rankings-flyweight.html"><span>ฟลายเวท</span><span class="nm-en">219 คน</span></a><a href="rankings-bantamweight.html"><span>แบนตัมเวท</span><span class="nm-en">136 คน</span></a><a href="rankings-featherweight.html"><span>เฟเธอร์เวท</span><span class="nm-en">144 คน</span></a><a href="rankings-lightweight.html"><span>ไลท์เวท</span><span class="nm-en">102 คน</span></a><a href="rankings-welterweight.html"><span>เวลเทอร์เวท</span><span class="nm-en">20 คน</span></a><a href="rankings-middleweight.html"><span>มิดเดิลเวท</span><span class="nm-en">12 คน</span></a><a href="rankings-light-heavyweight.html"><span>ไลท์เฮฟวีเวท</span><span class="nm-en">2 คน</span></a><a href="rankings-heavyweight.html"><span>เฮฟวีเวท</span><span class="nm-en">25 คน</span></a><a href="rankings-catchweight.html" style="border-top:1px dashed var(--line);margin-top:6px;padding-top:10px;color:var(--sub)"><span>แคชเวท <span style="font-size:10px;color:var(--mute);font-weight:500">(ไม่จัดในรุ่น)</span></span><span class="nm-en">509 คน</span></a></div><a class="nm-foot" href="weight-classes.html">ดูอันดับทุกรุ่น →</a></div>
       </div>
       <a href="fighters.html">นักมวย</a>
       <a href="schedule.html">ไฟต์</a>
@@ -663,7 +667,7 @@ footer{background:var(--footer-bg);border-top:1px solid var(--line);padding:72px
   <nav>
     <a href="/" class="active">หน้าแรก</a>
     <a href="weight-classes.html">จัดอันดับ</a>
-    <div class="nav-sub" id="drawer-rank-sub"></div>
+    <div class="nav-sub" id="drawer-rank-sub"><a href="rankings.html">AllRank — ตารางคะแนนรวม</a><a href="rankings-atomweight.html">อะตอมเวท (91)</a><a href="rankings-strawweight.html">สตรอว์เวท (191)</a><a href="rankings-flyweight.html">ฟลายเวท (219)</a><a href="rankings-bantamweight.html">แบนตัมเวท (136)</a><a href="rankings-featherweight.html">เฟเธอร์เวท (144)</a><a href="rankings-lightweight.html">ไลท์เวท (102)</a><a href="rankings-welterweight.html">เวลเทอร์เวท (20)</a><a href="rankings-middleweight.html">มิดเดิลเวท (12)</a><a href="rankings-light-heavyweight.html">ไลท์เฮฟวีเวท (2)</a><a href="rankings-heavyweight.html">เฮฟวีเวท (25)</a><a href="rankings-catchweight.html" style="opacity:.75">แคชเวท (509) <span style="font-size:10px;color:var(--mute)">— ไม่จัดในรุ่น</span></a></div>
     <a href="fighters.html">นักมวย</a>
     <a href="schedule.html">ไฟต์</a>
     <a href="compare.html">เปรียบเทียบ<span class="nav-new">วิเคราะห์</span></a>
@@ -680,12 +684,12 @@ footer{background:var(--footer-bg);border-top:1px solid var(--line);padding:72px
 <section class="hero">
   <div class="hero-in">
     <div class="hero-content">
-      <div class="hero-eyebrow"><span class="dot"></span><span class="eyebrow">มาตรฐานระดับโลก · ข้อมูลจริงจาก ONE Championship</span></div>
+      <div class="hero-eyebrow"><span class="dot"></span><span class="eyebrow">คำนวณจากผลการแข่งขันจริง · อัปเดตหลังทุกไฟต์</span></div>
       <h1 class="hero-title">จัดอันดับนักมวยไทย<br><em>ที่ดีที่สุด</em></h1>
       <p class="hero-desc">อัปเดตอันดับคะแนนล่าสุด ครบทุกรุ่น ทุกเวที คำนวณจากสถิติชนะ-แพ้จริง วิเคราะห์ด้วยข้อมูล ไม่มีอคติ</p>
       <div class="hero-actions">
         <a href="rankings.html" class="btn-gold">ดูอันดับทั้งหมด<svg class="icon" style="width:16px;height:16px;stroke:#161200" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
-        <a href="#" class="btn-ghost">วิธีการจัดอันดับ</a>
+        <a href="#how-ranking" class="btn-ghost">วิธีการจัดอันดับ</a>
       </div>
     </div>
   </div>
@@ -703,7 +707,7 @@ footer{background:var(--footer-bg);border-top:1px solid var(--line);padding:72px
           <a href="rankings.html" class="sec-link">ดูทั้งหมด <svg class="icon" style="width:14px;height:14px" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
         </div>
       </div>
-      <div class="tabs" id="dtabs"></div>
+      <div class="tabs" id="dtabs"><button class="tab active" data-k="all">ทั้งหมด</button><button class="tab" data-k="one">ONE</button><button class="tab" data-k="ch7">มวยไทย 7 สี</button><button class="tab" data-k="chang">ช้างมวยไทย</button><button class="tab" data-k="tko">ท่อน้ำไทย TKO</button><button class="tab" data-k="daedoem">มวยไทยดั้งเดิม</button><button class="tab" data-k="rws">RWS</button><button class="tab" data-k="fairtex">Fairtex<span class="soon">เร็วๆ นี้</span></button></div>
       <style>
         .gtabs{display:inline-flex;gap:4px;padding:4px;background:rgba(255,255,255,.04);
           border:1px solid var(--line);border-radius:999px;margin:12px 0 4px}
@@ -716,19 +720,19 @@ footer{background:var(--footer-bg);border-top:1px solid var(--line);padding:72px
         .gtabs button.active .cnt{opacity:.75}
       </style>
       <div class="gtabs" id="gtabs" role="tablist" aria-label="แบ่งตามเพศ">
-        <button type="button" data-g="ชาย" class="active" role="tab">ชาย <span class="cnt" id="gc-m">–</span></button>
-        <button type="button" data-g="หญิง" role="tab">หญิง <span class="cnt" id="gc-f">–</span></button>
+        <button type="button" data-g="ชาย" class="active" role="tab">ชาย <span class="cnt" id="gc-m">2143</span></button>
+        <button type="button" data-g="หญิง" role="tab">หญิง <span class="cnt" id="gc-f">51</span></button>
       </div>
       <div class="rank-note" id="rank-filters">
-        <span id="rk-scope"></span>
-        <span class="count">พบ <b id="rk-count">0</b> คน</span>
+        <span id="rk-scope">เฉพาะ<b style="color:var(--gold-text)">ชาย</b> · ผลงานรวมทั้งหมดตลอดอาชีพ (ชนะ +3 · เสมอ 0 · แพ้ -3) — เลือกศึกด้านบนเพื่อดูว่าใครแรงที่สุดในแต่ละเวที</span>
+        <span class="count">พบ <b id="rk-count">2143</b> คน</span>
       </div>
       <div class="rank-scroll">
         <table class="rank-table">
           <thead><tr>
             <th style="width:58px">อันดับ</th><th>นักมวย</th><th class="col-camp">ค่าย</th><th class="col-div">รุ่น</th><th class="center col-fights">ไฟต์</th><th class="center">สถิติ</th><th class="center col-form">เปลี่ยนแปลง</th><th class="center">คะแนน</th>
           </tr></thead>
-          <tbody id="rank-body"><tr><td colspan="8" style="padding:20px"><div class="skel" style="height:40px;margin-bottom:10px"></div><div class="skel" style="height:40px;margin-bottom:10px"></div><div class="skel" style="height:40px"></div></td></tr></tbody>
+          <tbody id="rank-body"><tr onclick="location.href='fighters/regian-eersel.html'" style="cursor:pointer"><td class="rk-cell"><span class="rk-badge g1">1</span></td><td><div class="fighter-cell"><div class="ph-avatar"><img src="https://res.cloudinary.com/dpvyl7nan/image/upload/c_fill,g_face,w_80,h_80,f_auto,q_auto/%E0%B8%A3%E0%B8%B5%E0%B9%80%E0%B8%81%E0%B8%B5%E0%B8%A2%E0%B8%99-%E0%B9%80%E0%B8%AD%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B9%80%E0%B8%8B%E0%B8%A5" loading="lazy" alt="รีเกียน เออร์เซล" onerror="this.onerror=null;this.src='images/noname1.png'"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"></path></svg></div><div><div class="fighter-name"><a href="fighters/regian-eersel.html">รีเกียน เออร์เซล</a></div><div class="fighter-sub">ศิษย์ยอดธง อัมสเตอร์ดัม</div></div></div></td><td class="col-camp"><span style="font-size:13.5px;color:var(--sub)">ศิษย์ยอดธง อัมสเตอร์ดัม</span></td><td class="col-div td-div">ไลท์เวท<span class="wt">(155–170 ป.)</span></td><td class="center col-fights" style="font-family:Inter;color:var(--sub);font-weight:600">16</td><td class="center"><span class="td-record"><b>15</b>-<i>1</i></span></td><td class="center col-form"><span class="trend up"><svg viewBox="0 0 24 24"><path d="M12 19V5"></path><path d="M5 12l7-7 7 7"></path></svg>5</span></td><td class="center td-score">42</td></tr><tr onclick="location.href='fighters/rodtang-jitmuangnon.html'" style="cursor:pointer"><td class="rk-cell"><span class="rk-badge g2">2</span></td><td><div class="fighter-cell"><div class="ph-avatar"><img src="https://res.cloudinary.com/dpvyl7nan/image/upload/c_fill,g_face,w_80,h_80,f_auto,q_auto/%E0%B8%A3%E0%B8%96%E0%B8%96%E0%B8%B1%E0%B8%87-%E0%B8%88%E0%B8%B4%E0%B8%95%E0%B8%A3%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%87%E0%B8%99%E0%B8%99%E0%B8%97%E0%B9%8C" loading="lazy" alt="รถถัง จิตรเมืองนนท์" onerror="this.onerror=null;this.src='images/noname1.png'"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"></path></svg></div><div><div class="fighter-name"><a href="fighters/rodtang-jitmuangnon.html">รถถัง จิตรเมืองนนท์</a></div><div class="fighter-sub">จิตรเมืองนนท์</div></div></div></td><td class="col-camp"><span style="font-size:13.5px;color:var(--sub)">จิตรเมืองนนท์</span></td><td class="col-div td-div">ฟลายเวท<span class="wt">(125–135 ป.)</span></td><td class="center col-fights" style="font-family:Inter;color:var(--sub);font-weight:600">20</td><td class="center"><span class="td-record"><b>17</b>-<i>3</i></span></td><td class="center col-form"><span class="trend down"><svg viewBox="0 0 24 24"><path d="M12 5v14"></path><path d="M19 12l-7 7-7-7"></path></svg>1</span></td><td class="center td-score">42</td></tr><tr onclick="location.href='fighters/christian-lee.html'" style="cursor:pointer"><td class="rk-cell"><span class="rk-badge g3">3</span></td><td><div class="fighter-cell"><div class="ph-avatar"><img src="https://res.cloudinary.com/dpvyl7nan/image/upload/c_fill,g_face,w_80,h_80,f_auto,q_auto/%E0%B8%84%E0%B8%A3%E0%B8%B4%E0%B8%AA%E0%B9%80%E0%B8%95%E0%B8%B5%E0%B8%A2%E0%B8%99-%E0%B8%A5%E0%B8%B5" loading="lazy" alt="คริสเตียน ลี" onerror="this.onerror=null;this.src='images/noname1.png'"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"></path></svg></div><div><div class="fighter-name"><a href="fighters/christian-lee.html">คริสเตียน ลี</a></div><div class="fighter-sub">Evolve MMA / United MMA</div></div></div></td><td class="col-camp"><span style="font-size:13.5px;color:var(--sub)">Evolve MMA / United MMA</span></td><td class="col-div td-div">เวลเทอร์เวท<span class="wt">(170–185 ป.)</span></td><td class="center col-fights" style="font-family:Inter;color:var(--sub);font-weight:600">23</td><td class="center"><span class="td-record"><b>18</b>-<i>4</i></span></td><td class="center col-form"><span class="trend up"><svg viewBox="0 0 24 24"><path d="M12 19V5"></path><path d="M5 12l7-7 7 7"></path></svg>1</span></td><td class="center td-score">42</td></tr><tr onclick="location.href='fighters/yod-iq.html'" style="cursor:pointer"><td class="rk-cell"><span class="rk-badge gn">4</span></td><td><div class="fighter-cell"><div class="ph-avatar"><img src="https://res.cloudinary.com/dpvyl7nan/image/upload/c_fill,g_face,w_80,h_80,f_auto,q_auto/%E0%B8%A2%E0%B8%AD%E0%B8%94%E0%B9%84%E0%B8%AD%E0%B8%84%E0%B8%B4%E0%B8%A7-%E0%B8%AD.%E0%B8%9E%E0%B8%B4%E0%B8%A1%E0%B8%A5%E0%B8%A8%E0%B8%A3%E0%B8%B5" loading="lazy" alt="ยอดไอคิว อ.พิมลศรี" onerror="this.onerror=null;this.src='images/noname1.png'"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"></path></svg></div><div><div class="fighter-name"><a href="fighters/yod-iq.html">ยอดไอคิว อ.พิมลศรี</a></div><div class="fighter-sub">พีเค.แสนชัยมวยไทยยิม</div></div></div></td><td class="col-camp"><span style="font-size:13.5px;color:var(--sub)">พีเค.แสนชัยมวยไทยยิม</span></td><td class="col-div td-div">แบนตัมเวท<span class="wt">(135–145 ป.)</span></td><td class="center col-fights" style="font-family:Inter;color:var(--sub);font-weight:600">14</td><td class="center"><span class="td-record"><b>13</b>-<i>1</i></span></td><td class="center col-form"><span class="trend up"><svg viewBox="0 0 24 24"><path d="M12 19V5"></path><path d="M5 12l7-7 7 7"></path></svg>11</span></td><td class="center td-score">36</td></tr><tr onclick="location.href='fighters/tye-ruotolo.html'" style="cursor:pointer"><td class="rk-cell"><span class="rk-badge gn">5</span></td><td><div class="fighter-cell"><div class="ph-avatar"><img src="https://res.cloudinary.com/dpvyl7nan/image/upload/c_fill,g_face,w_80,h_80,f_auto,q_auto/%E0%B9%84%E0%B8%97-%E0%B8%A3%E0%B8%B9%E0%B9%82%E0%B8%97%E0%B9%82%E0%B8%A5" loading="lazy" alt="ไท รูโทโล" onerror="this.onerror=null;this.src='images/noname1.png'"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"></path></svg></div><div><div class="fighter-name"><a href="fighters/tye-ruotolo.html">ไท รูโทโล</a></div><div class="fighter-sub">Atos</div></div></div></td><td class="col-camp"><span style="font-size:13.5px;color:var(--sub)">Atos</span></td><td class="col-div td-div">เวลเทอร์เวท<span class="wt">(170–185 ป.)</span></td><td class="center col-fights" style="font-family:Inter;color:var(--sub);font-weight:600">11</td><td class="center"><span class="td-record"><b>11</b>-<i>0</i></span></td><td class="center col-form"><span class="trend up"><svg viewBox="0 0 24 24"><path d="M12 19V5"></path><path d="M5 12l7-7 7 7"></path></svg>11</span></td><td class="center td-score">33</td></tr><tr onclick="location.href='fighters/chartpayak-saksatoon.html'" style="cursor:pointer"><td class="rk-cell"><span class="rk-badge gn">6</span></td><td><div class="fighter-cell"><div class="ph-avatar"><img src="https://res.cloudinary.com/dpvyl7nan/image/upload/c_fill,g_face,w_80,h_80,f_auto,q_auto/%E0%B8%8A%E0%B8%B2%E0%B8%95%E0%B8%B4%E0%B8%9E%E0%B8%A2%E0%B8%B1%E0%B8%84%E0%B8%86%E0%B9%8C-%E0%B8%A8%E0%B8%B1%E0%B8%81%E0%B8%94%E0%B8%B4%E0%B9%8C%E0%B8%AA%E0%B8%95%E0%B8%B9%E0%B8%A5" loading="lazy" alt="ชาติพยัคฆ์ ศักดิ์สตูล" onerror="this.onerror=null;this.src='images/noname1.png'"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"></path></svg></div><div><div class="fighter-name"><a href="fighters/chartpayak-saksatoon.html">ชาติพยัคฆ์ ศักดิ์สตูล</a></div><div class="fighter-sub">เกียรติเพชร</div></div></div></td><td class="col-camp"><span style="font-size:13.5px;color:var(--sub)">เกียรติเพชร</span></td><td class="col-div td-div">แคชเวท</td><td class="center col-fights" style="font-family:Inter;color:var(--sub);font-weight:600">14</td><td class="center"><span class="td-record"><b>12</b>-<i>2</i></span></td><td class="center col-form"><span class="trend up"><svg viewBox="0 0 24 24"><path d="M12 19V5"></path><path d="M5 12l7-7 7 7"></path></svg>4</span></td><td class="center td-score">30</td></tr><tr onclick="location.href='fighters/superlek.html'" style="cursor:pointer"><td class="rk-cell"><span class="rk-badge gn">7</span></td><td><div class="fighter-cell"><div class="ph-avatar"><img src="https://res.cloudinary.com/dpvyl7nan/image/upload/c_fill,g_face,w_80,h_80,f_auto,q_auto/%E0%B8%8B%E0%B8%B8%E0%B8%9B%E0%B9%80%E0%B8%9B%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B9%80%E0%B8%A5%E0%B9%87%E0%B8%81-%E0%B8%8B%E0%B8%B8%E0%B8%9B%E0%B9%80%E0%B8%9B%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B9%80%E0%B8%A5%E0%B9%87%E0%B8%81%E0%B8%A1%E0%B8%A7%E0%B8%A2%E0%B9%84%E0%B8%97%E0%B8%A2" loading="lazy" alt="ซุปเปอร์เล็ก ซุปเปอร์เล็กมวยไทย" onerror="this.onerror=null;this.src='images/noname1.png'"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"></path></svg></div><div><div class="fighter-name"><a href="fighters/superlek.html">ซุปเปอร์เล็ก ซุปเปอร์เล็กมวยไทย</a></div><div class="fighter-sub">ซุปเปอร์เล็กมวยไทย</div></div></div></td><td class="col-camp"><span style="font-size:13.5px;color:var(--sub)">ซุปเปอร์เล็กมวยไทย</span></td><td class="col-div td-div">แบนตัมเวท<span class="wt">(135–145 ป.)</span></td><td class="center col-fights" style="font-family:Inter;color:var(--sub);font-weight:600">20</td><td class="center"><span class="td-record"><b>15</b>-<i>5</i></span></td><td class="center col-form"><span class="trend down"><svg viewBox="0 0 24 24"><path d="M12 5v14"></path><path d="M19 12l-7 7-7-7"></path></svg>4</span></td><td class="center td-score">30</td></tr><tr onclick="location.href='fighters/joshua-pacio.html'" style="cursor:pointer"><td class="rk-cell"><span class="rk-badge gn">8</span></td><td><div class="fighter-cell"><div class="ph-avatar"><img src="https://res.cloudinary.com/dpvyl7nan/image/upload/c_fill,g_face,w_80,h_80,f_auto,q_auto/%E0%B9%82%E0%B8%88%E0%B8%8A%E0%B8%B1%E0%B8%A7-%E0%B8%9E%E0%B8%B2%E0%B8%8B%E0%B8%B4%E0%B9%82%E0%B8%AD" loading="lazy" alt="โจชัว พาซิโอ" onerror="this.onerror=null;this.src='images/noname1.png'"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"></path></svg></div><div><div class="fighter-name"><a href="fighters/joshua-pacio.html">โจชัว พาซิโอ</a></div><div class="fighter-sub">Lions Nation MMA</div></div></div></td><td class="col-camp"><span style="font-size:13.5px;color:var(--sub)">Lions Nation MMA</span></td><td class="col-div td-div">สตรอว์เวท<span class="wt">(115–125 ป.)</span></td><td class="center col-fights" style="font-family:Inter;color:var(--sub);font-weight:600">20</td><td class="center"><span class="td-record"><b>15</b>-<i>5</i></span></td><td class="center col-form"><span class="trend up"><svg viewBox="0 0 24 24"><path d="M12 19V5"></path><path d="M5 12l7-7 7 7"></path></svg>1</span></td><td class="center td-score">30</td></tr><tr onclick="location.href='fighters/kade-ruotolo.html'" style="cursor:pointer"><td class="rk-cell"><span class="rk-badge gn">9</span></td><td><div class="fighter-cell"><div class="ph-avatar"><img src="https://res.cloudinary.com/dpvyl7nan/image/upload/c_fill,g_face,w_80,h_80,f_auto,q_auto/%E0%B9%80%E0%B8%84%E0%B8%94-%E0%B8%A3%E0%B8%B9%E0%B9%82%E0%B8%97%E0%B9%82%E0%B8%A5" loading="lazy" alt="เคด รูโทโล" onerror="this.onerror=null;this.src='images/noname1.png'"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"></path></svg></div><div><div class="fighter-name"><a href="fighters/kade-ruotolo.html">เคด รูโทโล</a></div><div class="fighter-sub">Atos</div></div></div></td><td class="col-camp"><span style="font-size:13.5px;color:var(--sub)">Atos</span></td><td class="col-div td-div">ไลท์เวท<span class="wt">(155–170 ป.)</span></td><td class="center col-fights" style="font-family:Inter;color:var(--sub);font-weight:600">10</td><td class="center"><span class="td-record"><b>10</b>-<i>0</i></span></td><td class="center col-form"><span class="trend up"><svg viewBox="0 0 24 24"><path d="M12 19V5"></path><path d="M5 12l7-7 7 7"></path></svg>10</span></td><td class="center td-score">30</td></tr><tr onclick="location.href='fighters/aung-la-n-sang.html'" style="cursor:pointer"><td class="rk-cell"><span class="rk-badge gn">10</span></td><td><div class="fighter-cell"><div class="ph-avatar"><img src="https://res.cloudinary.com/dpvyl7nan/image/upload/c_fill,g_face,w_80,h_80,f_auto,q_auto/%E0%B8%AD%E0%B8%AD%E0%B8%87-%E0%B8%A5%E0%B8%B2-%E0%B9%80%E0%B8%AD%E0%B9%87%E0%B8%99-%E0%B8%8B%E0%B8%B2%E0%B8%87" loading="lazy" alt="ออง ลา เอ็น ซาง" onerror="this.onerror=null;this.src='images/noname1.png'"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"></path></svg></div><div><div class="fighter-name"><a href="fighters/aung-la-n-sang.html">ออง ลา เอ็น ซาง</a></div><div class="fighter-sub">Kill Cliff FC</div></div></div></td><td class="col-camp"><span style="font-size:13.5px;color:var(--sub)">Kill Cliff FC</span></td><td class="col-div td-div">มิดเดิลเวท<span class="wt">(185–205 ป.)</span></td><td class="center col-fights" style="font-family:Inter;color:var(--sub);font-weight:600">20</td><td class="center"><span class="td-record"><b>15</b>-<i>5</i></span></td><td class="center col-form"><span class="trend up"><svg viewBox="0 0 24 24"><path d="M12 19V5"></path><path d="M5 12l7-7 7 7"></path></svg>1</span></td><td class="center td-score">30</td></tr></tbody>
         </table>
       </div>
       <button class="show-more" id="show-more" style="display:none">แสดงเพิ่ม <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
@@ -751,26 +755,46 @@ footer{background:var(--footer-bg);border-top:1px solid var(--line);padding:72px
       <div class="sec-title" style="font-size:22px">นักสู้เด่นประจำสัปดาห์</div>
       <a href="rankings.html" class="sec-link">ดูทั้งหมด</a>
     </div>
-    <div class="featured-card" id="featured-card">
-      <div class="feat-media">
-        <div class="feat-champ-badge"><svg width="18" height="18" viewBox="0 0 24 24" fill="#F2D879"><path d="M12 2l2.9 6 6.6.6-5 4.5 1.5 6.5L12 16l-5.9 3.6L7.6 13l-5-4.5 6.6-.6z"/></svg><span>อันดับ 1 คะแนนรวม</span></div>
-        <div class="feat-rank-pill"><b class="num">#1</b><span>Rank</span></div>
-        <img id="feat-img" alt="">
-        <svg class="fallback" viewBox="0 0 200 260" fill="none"><path d="M100 20c14 0 22 12 22 25s-8 22-22 22-22-9-22-22 8-25 22-25z" stroke-width="1.2"/><path d="M60 90c8-14 24-20 40-20s32 6 40 20l14 60-20 90H66l-20-90z" stroke-width="1.2"/><path d="M60 100L20 140l14 30 34-28" stroke-width="1.2"/><path d="M140 100l40 40-14 30-34-28" stroke-width="1.2"/></svg>
-      </div>
-      <div class="feat-body">
-        <div class="feat-name" id="feat-name">–</div>
-        <div class="feat-meta" id="feat-meta"></div>
-        <div class="feat-note" id="feat-note"></div>
-        <div class="feat-stats">
-          <div class="feat-stat win"><b class="num" id="feat-w">–</b><span>ชนะ</span></div>
-          <div class="feat-stat loss"><b class="num" id="feat-l">–</b><span>แพ้</span></div>
-          <div class="feat-stat"><b class="num" id="feat-d">–</b><span>เสมอ</span></div>
-        </div>
-        <div class="feat-score-row"><span>คะแนนรวม</span><b class="num" id="feat-score">–</b></div>
-        <a href="#" id="feat-link" class="btn-feat">ดูโปรไฟล์นักมวย<svg class="icon" style="width:15px;height:15px" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
-      </div>
-      <div class="top5"><div class="top5-ttl">ท็อป 5 อันดับปัจจุบัน</div><div id="top5-list"></div></div>
+    <div class="featured-card" id="featured-card">
+
+      <div class="feat-media">
+
+        <div class="feat-champ-badge"><svg width="18" height="18" viewBox="0 0 24 24" fill="#F2D879"><path d="M12 2l2.9 6 6.6.6-5 4.5 1.5 6.5L12 16l-5.9 3.6L7.6 13l-5-4.5 6.6-.6z"></path></svg><span>มีไฟต์เร็วๆ นี้</span></div>
+
+        <div class="feat-rank-pill"><b class="num">#23</b><span>Rank</span></div>
+
+        <img id="feat-img" alt="รุสตัม ยูนูซอฟ" src="https://res.cloudinary.com/dpvyl7nan/image/upload/c_fit,w_640,h_840,f_auto,q_auto/%E0%B8%A3%E0%B8%B8%E0%B8%AA%E0%B8%95%E0%B8%B1%E0%B8%A1-%E0%B8%A2%E0%B8%B9%E0%B8%99%E0%B8%B9%E0%B8%8B%E0%B8%AD%E0%B8%9F">
+
+        <svg class="fallback" viewBox="0 0 200 260" fill="none"><path d="M100 20c14 0 22 12 22 25s-8 22-22 22-22-9-22-22 8-25 22-25z" stroke-width="1.2"></path><path d="M60 90c8-14 24-20 40-20s32 6 40 20l14 60-20 90H66l-20-90z" stroke-width="1.2"></path><path d="M60 100L20 140l14 30 34-28" stroke-width="1.2"></path><path d="M140 100l40 40-14 30-34-28" stroke-width="1.2"></path></svg>
+
+      </div>
+
+      <div class="feat-body">
+
+        <div class="feat-name" id="feat-name">รุสตัม ยูนูซอฟ</div>
+
+        <div class="feat-meta" id="feat-meta">One Chance / Tomahawk Kamilov Team<span class="dot"></span>ฟลายเวท (125–135 ป.)<span class="dot"></span>อายุ 19 ปี</div>
+
+        <div class="feat-note show" id="feat-note"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M16 2v4"></path><path d="M8 2v4"></path><path d="M3 10h18"></path></svg>ไฟต์ถัดไป: พบ <b>สุริยันต์เล็ก พ.เย็นยิ่ง</b> · 9 ต.ค. 2569 (อีก 5 วัน) · The Inner Circle 34</div>
+
+        <div class="feat-stats">
+
+          <div class="feat-stat win"><b class="num" id="feat-w">8</b><span>ชนะ</span></div>
+
+          <div class="feat-stat loss"><b class="num" id="feat-l">0</b><span>แพ้</span></div>
+
+          <div class="feat-stat"><b class="num" id="feat-d">0</b><span>เสมอ</span></div>
+
+        </div>
+
+        <div class="feat-score-row"><span>คะแนนรวม</span><b class="num" id="feat-score">24</b></div>
+
+        <a href="fighters/rustam-yunusov.html" id="feat-link" class="btn-feat">ดูโปรไฟล์นักมวย<svg class="icon" style="width:15px;height:15px" viewBox="0 0 24 24"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></a>
+
+      </div>
+
+      <div class="top5"><div class="top5-ttl">ท็อป 5 อันดับปัจจุบัน</div><div id="top5-list"><a class="top5-row" href="fighters/thiraphat-thunnam.html"><span class="top5-rk g">1</span><div class="ph-avatar"><img src="https://res.cloudinary.com/dpvyl7nan/image/upload/c_fill,g_face,w_80,h_80,f_auto,q_auto/%E0%B8%A2%E0%B8%AD%E0%B8%94%E0%B8%81%E0%B8%95%E0%B8%B1%E0%B8%8D%E0%B8%8D%E0%B8%B9-%E0%B8%88%E0%B8%B4%E0%B8%95%E0%B8%A3%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%87%E0%B8%99%E0%B8%99%E0%B8%97%E0%B9%8C" loading="lazy" alt="ยอดกตัญญู จิตรเมืองนนท์" onerror="this.onerror=null;this.src='images/noname1.png'"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"></path></svg></div><span class="top5-nm">ยอดกตัญญู จิตรเมืองนนท์</span><span class="top5-pt">45</span></a><a class="top5-row" href="fighters/regian-eersel.html"><span class="top5-rk">2</span><div class="ph-avatar"><img src="https://res.cloudinary.com/dpvyl7nan/image/upload/c_fill,g_face,w_80,h_80,f_auto,q_auto/%E0%B8%A3%E0%B8%B5%E0%B9%80%E0%B8%81%E0%B8%B5%E0%B8%A2%E0%B8%99-%E0%B9%80%E0%B8%AD%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B9%80%E0%B8%8B%E0%B8%A5" loading="lazy" alt="รีเกียน เออร์เซล" onerror="this.onerror=null;this.src='images/noname1.png'"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"></path></svg></div><span class="top5-nm">รีเกียน เออร์เซล</span><span class="top5-pt">42</span></a><a class="top5-row" href="fighters/rodtang-jitmuangnon.html"><span class="top5-rk">3</span><div class="ph-avatar"><img src="https://res.cloudinary.com/dpvyl7nan/image/upload/c_fill,g_face,w_80,h_80,f_auto,q_auto/%E0%B8%A3%E0%B8%96%E0%B8%96%E0%B8%B1%E0%B8%87-%E0%B8%88%E0%B8%B4%E0%B8%95%E0%B8%A3%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%87%E0%B8%99%E0%B8%99%E0%B8%97%E0%B9%8C" loading="lazy" alt="รถถัง จิตรเมืองนนท์" onerror="this.onerror=null;this.src='images/noname1.png'"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"></path></svg></div><span class="top5-nm">รถถัง จิตรเมืองนนท์</span><span class="top5-pt">42</span></a><a class="top5-row" href="fighters/christian-lee.html"><span class="top5-rk">4</span><div class="ph-avatar"><img src="https://res.cloudinary.com/dpvyl7nan/image/upload/c_fill,g_face,w_80,h_80,f_auto,q_auto/%E0%B8%84%E0%B8%A3%E0%B8%B4%E0%B8%AA%E0%B9%80%E0%B8%95%E0%B8%B5%E0%B8%A2%E0%B8%99-%E0%B8%A5%E0%B8%B5" loading="lazy" alt="คริสเตียน ลี" onerror="this.onerror=null;this.src='images/noname1.png'"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"></path></svg></div><span class="top5-nm">คริสเตียน ลี</span><span class="top5-pt">42</span></a><a class="top5-row" href="fighters/yod-iq.html"><span class="top5-rk">5</span><div class="ph-avatar"><img src="https://res.cloudinary.com/dpvyl7nan/image/upload/c_fill,g_face,w_80,h_80,f_auto,q_auto/%E0%B8%A2%E0%B8%AD%E0%B8%94%E0%B9%84%E0%B8%AD%E0%B8%84%E0%B8%B4%E0%B8%A7-%E0%B8%AD.%E0%B8%9E%E0%B8%B4%E0%B8%A1%E0%B8%A5%E0%B8%A8%E0%B8%A3%E0%B8%B5" loading="lazy" alt="ยอดไอคิว อ.พิมลศรี" onerror="this.onerror=null;this.src='images/noname1.png'"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"></path></svg></div><span class="top5-nm">ยอดไอคิว อ.พิมลศรี</span><span class="top5-pt">36</span></a></div></div>
+
     </div>
   </aside>
 </div>
@@ -812,9 +836,7 @@ footer{background:var(--footer-bg);border-top:1px solid var(--line);padding:72px
       <a href="compare.html" class="sec-link">เปรียบเทียบเอง <svg class="icon" style="width:14px;height:14px" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
     </div>
   </div>
-  <div id="pred-wrap">
-    <div class="skel" style="height:420px;border-radius:16px"></div>
-  </div>
+  <div id="pred-wrap"><div class="pred-card"><div class="pred-hd"><span class="l"><svg viewBox="0 0 24 24"><path d="M3 3v18h18"></path><path d="M7 15l4-6 4 3 5-8"></path></svg>STATS PREDICTION · 5 ไฟต์ล่าสุด</span><span class="r">The Inner Circle 34 · 9 ต.ค. 2569 (อีก 5 วัน)</span></div><div class="pred-body"><div class="pred-row"><div class="pred-side a"><div class="ph-avatar"><img src="https://res.cloudinary.com/dpvyl7nan/image/upload/c_fill,g_face,w_160,h_160,f_auto,q_auto/%E0%B8%81%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B8%A8%E0%B8%B6%E0%B8%81-%E0%B8%A8%E0%B8%B4%E0%B8%A9%E0%B8%A2%E0%B9%8C%E0%B8%AA%E0%B8%B2%E0%B8%A3%E0%B8%A7%E0%B8%B1%E0%B8%95%E0%B8%A3%E0%B9%80%E0%B8%AA%E0%B8%B7%E0%B8%AD" loading="lazy" alt="ก้องศึก ศิษย์สารวัตรเสือ" onerror="this.onerror=null;this.src='images/noname1.png'"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"></path></svg></div><div class="pred-nm">ก้องศึก ศิษย์สารวัตรเสือ</div><div class="pred-sub">9W-4L · ศิษย์สารวัตรเสือ</div><div class="pred-pct">95%</div><div class="pred-pct-lbl">Win Probability</div></div><div class="pred-vs">VS</div><div class="pred-side b"><div class="ph-avatar"><img src="https://res.cloudinary.com/dpvyl7nan/image/upload/c_fill,g_face,w_160,h_160,f_auto,q_auto/%E0%B8%A3%E0%B8%B8%E0%B8%AA%E0%B8%A5%E0%B8%B1%E0%B8%99-%E0%B8%95%E0%B8%B8%E0%B8%81%E0%B8%95%E0%B8%B2%E0%B8%A3%E0%B8%AD%E0%B8%9F" loading="lazy" alt="รุสลัน ตุกตารอฟ" onerror="this.onerror=null;this.src='images/noname1.png'"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"></path></svg></div><div class="pred-nm">รุสลัน ตุกตารอฟ</div><div class="pred-sub">0W-1L · Tiger Muay Thai</div><div class="pred-pct">5%</div><div class="pred-pct-lbl">Win Probability</div></div></div><div class="pred-bar"><i class="ba" style="width:95%"></i><i class="bb" style="width:5%"></i></div><div class="pred-forms"><div><div class="pred-form-lbl">ฟอร์ม 5 ไฟต์ล่าสุด · ชนะ 4</div><div><span class="pred-fb w">W</span><span class="pred-fb l">L</span><span class="pred-fb w">W</span><span class="pred-fb w">W</span><span class="pred-fb w">W</span></div></div><div><div class="pred-form-lbl">ฟอร์ม 1 ไฟต์ล่าสุด · ชนะ 0</div><div><span class="pred-fb l">L</span></div></div></div><div class="pred-meta"><svg viewBox="0 0 24 24"><path d="M12 21s7-6.7 7-12a7 7 0 1 0-14 0c0 5.3 7 12 7 12z"></path><circle cx="12" cy="9" r="2.5"></circle></svg>แบนตัมเวท<span class="dot"></span>มวยไทย</div><div class="pred-cta"><a class="pred-btn primary" href="compare.html?a=%E0%B8%81%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B8%A8%E0%B8%B6%E0%B8%81-%E0%B8%A8%E0%B8%B4%E0%B8%A9%E0%B8%A2%E0%B9%8C%E0%B8%AA%E0%B8%B2%E0%B8%A3%E0%B8%A7%E0%B8%B1%E0%B8%95%E0%B8%A3%E0%B9%80%E0%B8%AA%E0%B8%B7%E0%B8%AD&amp;b=%E0%B8%A3%E0%B8%B8%E0%B8%AA%E0%B8%A5%E0%B8%B1%E0%B8%99-%E0%B8%95%E0%B8%B8%E0%B8%81%E0%B8%95%E0%B8%B2%E0%B8%A3%E0%B8%AD%E0%B8%9F"><svg viewBox="0 0 24 24"><path d="M3 3v18h18"></path><path d="M7 15l4-6 4 3 5-8"></path></svg>ดูวิเคราะห์เต็มคู่นี้</a><a class="pred-btn" href="schedule.html?a=%E0%B8%81%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B8%A8%E0%B8%B6%E0%B8%81-%E0%B8%A8%E0%B8%B4%E0%B8%A9%E0%B8%A2%E0%B9%8C%E0%B8%AA%E0%B8%B2%E0%B8%A3%E0%B8%A7%E0%B8%B1%E0%B8%95%E0%B8%A3%E0%B9%80%E0%B8%AA%E0%B8%B7%E0%B8%AD&amp;b=%E0%B8%A3%E0%B8%B8%E0%B8%AA%E0%B8%A5%E0%B8%B1%E0%B8%99%20%E0%B8%95%E0%B8%B8%E0%B8%81%E0%B8%95%E0%B8%B2%E0%B8%A3%E0%B8%AD%E0%B8%9F&amp;d=2026-10-09"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M16 2v4"></path><path d="M8 2v4"></path><path d="M3 10h18"></path></svg>ดูโปรแกรมชกทั้งศึก</a><button class="pred-btn" id="pred-next" type="button"><svg viewBox="0 0 24 24"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg>คู่ถัดไป (1/13)</button></div><div class="pred-note">คำนวณจากอัตราชนะ 5 ไฟต์ล่าสุดของทั้งสองฝ่ายเทียบสัดส่วนกัน เป็นการประเมินจากสถิติล้วน ๆ ไม่ใช่การรับประกันผลการแข่งขัน</div></div></div></div>
 </section>
 
 <section class="section">
@@ -825,9 +847,7 @@ footer{background:var(--footer-bg);border-top:1px solid var(--line);padding:72px
       <a href="schedule.html" class="sec-link">ดูทั้งหมด <svg class="icon" style="width:14px;height:14px" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
     </div>
   </div>
-  <div class="fight-row" id="upcoming-grid">
-    <div class="skel" style="height:220px;border-radius:16px"></div><div class="skel" style="height:220px;border-radius:16px"></div><div class="skel" style="height:220px;border-radius:16px"></div><div class="skel" style="height:220px;border-radius:16px"></div>
-  </div>
+  <div class="fight-row" id="upcoming-grid"><a class="fight-card" href="schedule.html?a=%E0%B8%81%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B8%A8%E0%B8%B6%E0%B8%81-%E0%B8%A8%E0%B8%B4%E0%B8%A9%E0%B8%A2%E0%B9%8C%E0%B8%AA%E0%B8%B2%E0%B8%A3%E0%B8%A7%E0%B8%B1%E0%B8%95%E0%B8%A3%E0%B9%80%E0%B8%AA%E0%B8%B7%E0%B8%AD&amp;b=%E0%B8%A3%E0%B8%B8%E0%B8%AA%E0%B8%A5%E0%B8%B1%E0%B8%99%20%E0%B8%95%E0%B8%B8%E0%B8%81%E0%B8%95%E0%B8%B2%E0%B8%A3%E0%B8%AD%E0%B8%9F&amp;d=2026-10-09"><div class="fc-top"><span class="fc-date num">9 ต.ค. 2569 · อีก 5 วัน</span><span class="fc-event">The Inner Circle 34</span></div><div class="fc-versus"><div class="fc-fighter"><div class="ph-avatar"><img src="https://res.cloudinary.com/dpvyl7nan/image/upload/c_fill,g_face,w_160,h_160,f_auto,q_auto/%E0%B8%81%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B8%A8%E0%B8%B6%E0%B8%81-%E0%B8%A8%E0%B8%B4%E0%B8%A9%E0%B8%A2%E0%B9%8C%E0%B8%AA%E0%B8%B2%E0%B8%A3%E0%B8%A7%E0%B8%B1%E0%B8%95%E0%B8%A3%E0%B9%80%E0%B8%AA%E0%B8%B7%E0%B8%AD" loading="lazy" alt="ก้องศึก ศิษย์สารวัตรเสือ" onerror="this.onerror=null;this.src='images/noname1.png'"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"></path></svg></div><div class="fc-fighter-name">ก้องศึก ศิษย์สารวัตรเสือ</div></div><span class="fc-vs">VS</span><div class="fc-fighter"><div class="ph-avatar"><img src="https://res.cloudinary.com/dpvyl7nan/image/upload/c_fill,g_face,w_160,h_160,f_auto,q_auto/%E0%B8%A3%E0%B8%B8%E0%B8%AA%E0%B8%A5%E0%B8%B1%E0%B8%99-%E0%B8%95%E0%B8%B8%E0%B8%81%E0%B8%95%E0%B8%B2%E0%B8%A3%E0%B8%AD%E0%B8%9F" loading="lazy" alt="รุสลัน ตุกตารอฟ" onerror="this.onerror=null;this.src='images/noname1.png'"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"></path></svg></div><div class="fc-fighter-name">รุสลัน ตุกตารอฟ</div></div></div><div class="fc-bottom"><div class="fc-tags"><svg viewBox="0 0 24 24"><path d="M12 21s7-6.7 7-12a7 7 0 1 0-14 0c0 5.3 7 12 7 12z"></path><circle cx="12" cy="9" r="2.5"></circle></svg>แบนตัมเวท</div><span class="fc-btn">ดูโปรแกรม &amp; วิเคราะห์</span></div></a><a class="fight-card" href="schedule.html?a=%E0%B8%82%E0%B8%B8%E0%B8%99%E0%B9%80%E0%B8%94%E0%B8%8A-%E0%B8%9E%E0%B8%B5%E0%B9%80%E0%B8%84.%E0%B9%81%E0%B8%AA%E0%B8%99%E0%B8%8A%E0%B8%B1%E0%B8%A2&amp;b=%E0%B8%AD%E0%B8%B1%E0%B8%A5%E0%B9%82%E0%B8%94%20%E0%B8%84%E0%B8%A3%E0%B8%B9%E0%B8%8B&amp;d=2026-10-09"><div class="fc-top"><span class="fc-date num">9 ต.ค. 2569 · อีก 5 วัน</span><span class="fc-event">ONE ลุมพินี 174</span></div><div class="fc-versus"><div class="fc-fighter"><div class="ph-avatar"><img src="https://res.cloudinary.com/dpvyl7nan/image/upload/c_fill,g_face,w_160,h_160,f_auto,q_auto/%E0%B8%82%E0%B8%B8%E0%B8%99%E0%B9%80%E0%B8%94%E0%B8%8A-%E0%B8%9E%E0%B8%B5%E0%B9%80%E0%B8%84.%E0%B9%81%E0%B8%AA%E0%B8%99%E0%B8%8A%E0%B8%B1%E0%B8%A2" loading="lazy" alt="ขุนเดช พีเค.แสนชัย" onerror="this.onerror=null;this.src='images/noname1.png'"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"></path></svg></div><div class="fc-fighter-name">ขุนเดช พีเค.แสนชัย</div></div><span class="fc-vs">VS</span><div class="fc-fighter"><div class="ph-avatar"><img src="https://res.cloudinary.com/dpvyl7nan/image/upload/c_fill,g_face,w_160,h_160,f_auto,q_auto/%E0%B8%AD%E0%B8%B1%E0%B8%A5%E0%B9%82%E0%B8%94-%E0%B8%84%E0%B8%A3%E0%B8%B9%E0%B8%8B" loading="lazy" alt="อัลโด ครูซ" onerror="this.onerror=null;this.src='images/noname1.png'"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"></path></svg></div><div class="fc-fighter-name">อัลโด ครูซ</div></div></div><div class="fc-bottom"><div class="fc-tags"><svg viewBox="0 0 24 24"><path d="M12 21s7-6.7 7-12a7 7 0 1 0-14 0c0 5.3 7 12 7 12z"></path><circle cx="12" cy="9" r="2.5"></circle></svg>ฟลายเวท</div><span class="fc-btn">ดูโปรแกรม &amp; วิเคราะห์</span></div></a><a class="fight-card" href="schedule.html?a=%E0%B8%8A%E0%B8%9A%E0%B8%B2%E0%B9%81%E0%B8%81%E0%B9%89%E0%B8%A7-%E0%B8%AA.%E0%B9%81%E0%B8%81%E0%B9%88%E0%B8%99%E0%B8%88%E0%B8%B1%E0%B8%99%E0%B8%97%E0%B8%A3%E0%B9%8C%E0%B8%8A%E0%B8%B1%E0%B8%A2&amp;b=%E0%B8%A2%E0%B8%B2%E0%B8%99%E0%B8%B2%20%E0%B8%A2%E0%B8%B4%E0%B8%9B&amp;d=2026-10-09"><div class="fc-top"><span class="fc-date num">9 ต.ค. 2569 · อีก 5 วัน</span><span class="fc-event">ONE ลุมพินี 174</span></div><div class="fc-versus"><div class="fc-fighter"><div class="ph-avatar"><img src="https://res.cloudinary.com/dpvyl7nan/image/upload/c_fill,g_face,w_160,h_160,f_auto,q_auto/%E0%B8%8A%E0%B8%9A%E0%B8%B2%E0%B9%81%E0%B8%81%E0%B9%89%E0%B8%A7-%E0%B8%AA.%E0%B9%81%E0%B8%81%E0%B9%88%E0%B8%99%E0%B8%88%E0%B8%B1%E0%B8%99%E0%B8%97%E0%B8%A3%E0%B9%8C%E0%B8%8A%E0%B8%B1%E0%B8%A2" loading="lazy" alt="ชบาแก้ว ส.แก่นจันทร์ชัย" onerror="this.onerror=null;this.src='images/noname1.png'"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"></path></svg></div><div class="fc-fighter-name">ชบาแก้ว ส.แก่นจันทร์ชัย</div></div><span class="fc-vs">VS</span><div class="fc-fighter"><div class="ph-avatar"><img src="https://res.cloudinary.com/dpvyl7nan/image/upload/c_fill,g_face,w_160,h_160,f_auto,q_auto/%E0%B8%A2%E0%B8%B2%E0%B8%99%E0%B8%B2-%E0%B8%A2%E0%B8%B4%E0%B8%9B" loading="lazy" alt="ยานา ยิป" onerror="this.onerror=null;this.src='images/noname1.png'"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"></path></svg></div><div class="fc-fighter-name">ยานา ยิป</div></div></div><div class="fc-bottom"><div class="fc-tags"><svg viewBox="0 0 24 24"><path d="M12 21s7-6.7 7-12a7 7 0 1 0-14 0c0 5.3 7 12 7 12z"></path><circle cx="12" cy="9" r="2.5"></circle></svg>อะตอมเวท</div><span class="fc-btn">ดูโปรแกรม &amp; วิเคราะห์</span></div></a><a class="fight-card" href="schedule.html?a=%E0%B8%94%E0%B8%B5%E0%B9%81%E0%B8%A1%E0%B9%87%E0%B8%81%E0%B8%8B%E0%B9%8C-%E0%B8%84%E0%B8%A3%E0%B8%B9%E0%B8%95%E0%B8%B4%E0%B9%8A%E0%B8%81%E0%B9%80%E0%B8%AD%E0%B9%87%E0%B8%A1%E0%B9%80%E0%B8%AD%E0%B8%AA%E0%B8%AA%E0%B8%9B%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%95%E0%B9%84%E0%B8%97%E0%B8%A2%E0%B9%81%E0%B8%A5%E0%B8%99%E0%B8%94%E0%B9%8C&amp;b=%E0%B9%80%E0%B8%9E%E0%B8%8A%E0%B8%A3%E0%B8%A1%E0%B8%93%E0%B8%B5%20%E0%B8%9E%E0%B8%B5%E0%B9%80%E0%B8%84.%E0%B9%80%E0%B8%AA%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B9%81%E0%B8%A1%E0%B9%87%E0%B8%81%20%E0%B9%80%E0%B8%AD%E0%B9%87%E0%B8%A1%E0%B8%9E%E0%B8%B5.%E0%B9%80%E0%B8%8B%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%A7%E0%B8%B4%E0%B8%AA&amp;d=2026-10-09"><div class="fc-top"><span class="fc-date num">9 ต.ค. 2569 · อีก 5 วัน</span><span class="fc-event">ONE ลุมพินี 174</span></div><div class="fc-versus"><div class="fc-fighter"><div class="ph-avatar"><img src="images/noname1.png" loading="lazy" alt="ดีแม็กซ์ ครูติ๊กเอ็มเอสสปอร์ตไทยแลนด์" onerror="this.onerror=null;this.src='images/noname1.png'"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"></path></svg></div><div class="fc-fighter-name">ดีแม็กซ์ ครูติ๊กเอ็มเอสสปอร์ตไทยแลนด์</div></div><span class="fc-vs">VS</span><div class="fc-fighter"><div class="ph-avatar"><img src="images/noname1.png" loading="lazy" alt="เพชรมณี พีเค.เสี่ยแม็ก เอ็มพี.เซอร์วิส" onerror="this.onerror=null;this.src='images/noname1.png'"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"></path></svg></div><div class="fc-fighter-name">เพชรมณี พีเค.เสี่ยแม็ก เอ็มพี.เซอร์วิส</div></div></div><div class="fc-bottom"><div class="fc-tags"><svg viewBox="0 0 24 24"><path d="M12 21s7-6.7 7-12a7 7 0 1 0-14 0c0 5.3 7 12 7 12z"></path><circle cx="12" cy="9" r="2.5"></circle></svg>ฟลายเวท</div><span class="fc-btn">ดูโปรแกรม &amp; วิเคราะห์</span></div></a><a class="fight-card" href="schedule.html?a=%E0%B8%99%E0%B8%B2%E0%B9%82%E0%B8%AD%E0%B8%81%E0%B8%B4-%E0%B9%82%E0%B8%A1%E0%B8%A3%E0%B8%B4%E0%B8%95%E0%B8%B0&amp;b=%E0%B9%82%E0%B8%AD%E0%B8%A1%E0%B8%B2%E0%B8%A3%E0%B9%8C%20%E0%B9%80%E0%B8%AD%E0%B8%A5%20%E0%B9%82%E0%B8%A1%E0%B8%A3%E0%B8%B2%E0%B9%80%E0%B8%9A%E0%B9%87%E0%B8%95&amp;d=2026-10-09"><div class="fc-top"><span class="fc-date num">9 ต.ค. 2569 · อีก 5 วัน</span><span class="fc-event">ONE ลุมพินี 174</span></div><div class="fc-versus"><div class="fc-fighter"><div class="ph-avatar"><img src="images/noname1.png" loading="lazy" alt="นาโอกิ โมริตะ" onerror="this.onerror=null;this.src='images/noname1.png'"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"></path></svg></div><div class="fc-fighter-name">นาโอกิ โมริตะ</div></div><span class="fc-vs">VS</span><div class="fc-fighter"><div class="ph-avatar"><img src="images/noname1.png" loading="lazy" alt="โอมาร์ เอล โมราเบ็ต" onerror="this.onerror=null;this.src='images/noname1.png'"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"></path></svg></div><div class="fc-fighter-name">โอมาร์ เอล โมราเบ็ต</div></div></div><div class="fc-bottom"><div class="fc-tags"><svg viewBox="0 0 24 24"><path d="M12 21s7-6.7 7-12a7 7 0 1 0-14 0c0 5.3 7 12 7 12z"></path><circle cx="12" cy="9" r="2.5"></circle></svg>เฟเธอร์เวท</div><span class="fc-btn">ดูโปรแกรม &amp; วิเคราะห์</span></div></a><a class="fight-card" href="schedule.html?a=%E0%B8%9A%E0%B8%B1%E0%B8%95%E0%B8%AD%E0%B8%B4%E0%B8%A3%E0%B8%B5%E0%B8%95%E0%B8%B8%E0%B8%A2-%E0%B8%81%E0%B8%B1%E0%B8%99%E0%B8%9A%E0%B8%B2%E0%B8%97%E0%B8%B2%E0%B8%A3%E0%B9%8C&amp;b=%E0%B8%9F%E0%B8%B5%E0%B9%80%E0%B8%A5%E0%B9%82%E0%B8%A1%E0%B8%99%20%E0%B8%9A%E0%B8%B4%E0%B8%97%E0%B8%A3%E0%B8%B8%E0%B8%AA%20%E0%B9%80%E0%B8%88%E0%B8%9A&amp;d=2026-10-09"><div class="fc-top"><span class="fc-date num">9 ต.ค. 2569 · อีก 5 วัน</span><span class="fc-event">ONE ลุมพินี 174</span></div><div class="fc-versus"><div class="fc-fighter"><div class="ph-avatar"><img src="images/noname1.png" loading="lazy" alt="บัตอิรีตุย กันบาทาร์" onerror="this.onerror=null;this.src='images/noname1.png'"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"></path></svg></div><div class="fc-fighter-name">บัตอิรีตุย กันบาทาร์</div></div><span class="fc-vs">VS</span><div class="fc-fighter"><div class="ph-avatar"><img src="images/noname1.png" loading="lazy" alt="ฟีเลโมน บิทรุส เจบ" onerror="this.onerror=null;this.src='images/noname1.png'"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"></path></svg></div><div class="fc-fighter-name">ฟีเลโมน บิทรุส เจบ</div></div></div><div class="fc-bottom"><div class="fc-tags"><svg viewBox="0 0 24 24"><path d="M12 21s7-6.7 7-12a7 7 0 1 0-14 0c0 5.3 7 12 7 12z"></path><circle cx="12" cy="9" r="2.5"></circle></svg>เฟเธอร์เวท</div><span class="fc-btn">ดูโปรแกรม &amp; วิเคราะห์</span></div></a><a class="fight-card" href="schedule.html?a=%E0%B8%A1%E0%B8%87%E0%B8%84%E0%B8%A5%E0%B9%80%E0%B8%94%E0%B8%8A%E0%B9%80%E0%B8%A5%E0%B9%87%E0%B8%81-%E0%B8%9E.%E0%B8%9E%E0%B8%B4%E0%B8%A1%E0%B8%9E%E0%B9%8C%E0%B8%AD%E0%B8%A3&amp;b=%E0%B9%80%E0%B8%94%E0%B9%87%E0%B8%94%E0%B8%94%E0%B8%A7%E0%B8%87%E0%B9%80%E0%B8%A5%E0%B9%87%E0%B8%81%20%E0%B8%97%E0%B8%AD%E0%B8%9D%E0%B8%B1%E0%B8%99%E0%B8%9F%E0%B8%B2%E0%B8%A3%E0%B9%8C%E0%B8%A1&amp;d=2026-10-09"><div class="fc-top"><span class="fc-date num">9 ต.ค. 2569 · อีก 5 วัน</span><span class="fc-event">ONE ลุมพินี 174</span></div><div class="fc-versus"><div class="fc-fighter"><div class="ph-avatar"><img src="https://res.cloudinary.com/dpvyl7nan/image/upload/c_fill,g_face,w_160,h_160,f_auto,q_auto/%E0%B8%A1%E0%B8%87%E0%B8%84%E0%B8%A5%E0%B9%80%E0%B8%94%E0%B8%8A%E0%B9%80%E0%B8%A5%E0%B9%87%E0%B8%81-%E0%B8%9E.%E0%B8%9E%E0%B8%B4%E0%B8%A1%E0%B8%9E%E0%B9%8C%E0%B8%AD%E0%B8%A3" loading="lazy" alt="มงคลเดชเล็ก พ.พิมพ์อร" onerror="this.onerror=null;this.src='images/noname1.png'"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"></path></svg></div><div class="fc-fighter-name">มงคลเดชเล็ก พ.พิมพ์อร</div></div><span class="fc-vs">VS</span><div class="fc-fighter"><div class="ph-avatar"><img src="https://res.cloudinary.com/dpvyl7nan/image/upload/c_fill,g_face,w_160,h_160,f_auto,q_auto/%E0%B9%80%E0%B8%94%E0%B9%87%E0%B8%94%E0%B8%94%E0%B8%A7%E0%B8%87%E0%B9%80%E0%B8%A5%E0%B9%87%E0%B8%81-%E0%B8%97%E0%B8%AD%E0%B8%9D%E0%B8%B1%E0%B8%99%E0%B8%9F%E0%B8%B2%E0%B8%A3%E0%B9%8C%E0%B8%A1" loading="lazy" alt="เด็ดดวงเล็ก ทอฝันฟาร์ม" onerror="this.onerror=null;this.src='images/noname1.png'"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"></path></svg></div><div class="fc-fighter-name">เด็ดดวงเล็ก ทอฝันฟาร์ม</div></div></div><div class="fc-bottom"><div class="fc-tags"><svg viewBox="0 0 24 24"><path d="M12 21s7-6.7 7-12a7 7 0 1 0-14 0c0 5.3 7 12 7 12z"></path><circle cx="12" cy="9" r="2.5"></circle></svg>แบนตัมเวท</div><span class="fc-btn">ดูโปรแกรม &amp; วิเคราะห์</span></div></a><a class="fight-card" href="schedule.html?a=%E0%B8%A2%E0%B8%AD%E0%B8%94%E0%B9%80%E0%B8%97%E0%B8%A7%E0%B8%B4%E0%B8%99%E0%B8%97%E0%B8%A3%E0%B9%8C-%E0%B8%A1.%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%A0%E0%B8%B1%E0%B8%8F%E0%B8%AB%E0%B8%A1%E0%B8%B9%E0%B9%88%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%88%E0%B8%AD%E0%B8%A1%E0%B8%9A%E0%B8%B6%E0%B8%87&amp;b=%E0%B8%AD%E0%B8%B2%E0%B8%A3%E0%B9%8C%E0%B8%A1%E0%B8%B2%E0%B8%99%20%E0%B9%82%E0%B8%A1%E0%B8%A3%E0%B8%B2%E0%B8%94%E0%B8%B5&amp;d=2026-10-09"><div class="fc-top"><span class="fc-date num">9 ต.ค. 2569 · อีก 5 วัน</span><span class="fc-event">The Inner Circle 34</span></div><div class="fc-versus"><div class="fc-fighter"><div class="ph-avatar"><img src="images/noname1.png" loading="lazy" alt="ยอดเทวินทร์ ม.ราชภัฏหมู่บ้านจอมบึง" onerror="this.onerror=null;this.src='images/noname1.png'"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"></path></svg></div><div class="fc-fighter-name">ยอดเทวินทร์ ม.ราชภัฏหมู่บ้านจอมบึง</div></div><span class="fc-vs">VS</span><div class="fc-fighter"><div class="ph-avatar"><img src="https://res.cloudinary.com/dpvyl7nan/image/upload/c_fill,g_face,w_160,h_160,f_auto,q_auto/%E0%B8%AD%E0%B8%B2%E0%B8%A3%E0%B9%8C%E0%B8%A1%E0%B8%B2%E0%B8%99-%E0%B9%82%E0%B8%A1%E0%B8%A3%E0%B8%B2%E0%B8%94%E0%B8%B5" loading="lazy" alt="อาร์มาน โมราดี" onerror="this.onerror=null;this.src='images/noname1.png'"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"></path></svg></div><div class="fc-fighter-name">อาร์มาน โมราดี</div></div></div><div class="fc-bottom"><div class="fc-tags"><svg viewBox="0 0 24 24"><path d="M12 21s7-6.7 7-12a7 7 0 1 0-14 0c0 5.3 7 12 7 12z"></path><circle cx="12" cy="9" r="2.5"></circle></svg>เฟเธอร์เวท</div><span class="fc-btn">ดูโปรแกรม &amp; วิเคราะห์</span></div></a></div>
 </section>
 
 <section class="section alt">
@@ -836,7 +856,7 @@ footer{background:var(--footer-bg);border-top:1px solid var(--line);padding:72px
       <div><div class="sec-title">ข่าวสารล่าสุด</div><div class="sec-sub">ความเคลื่อนไหวและบทวิเคราะห์วงการมวยไทย</div></div>
       <a href="blog/" class="sec-link">ดูทั้งหมด <svg class="icon" style="width:14px;height:14px" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
     </div>
-    <div class="news-grid" id="news-grid"></div>
+    <div class="news-grid" id="news-grid"><a class="news-card" href="blog/articles/th/ufc-fighters-history-2026.html"><div class="news-img"><img src="https://images.unsplash.com/photo-1680022546558-550eaf22351e?w=800&amp;fit=crop" loading="lazy" alt="" onerror="this.style.display='none'"><span class="news-tag">วิเคราะห์แทคติก</span><svg viewBox="0 0 200 200" fill="none"><path d="M20 160 L60 100 L100 130 L140 60 L180 100" stroke="rgba(212,175,55,.4)" stroke-width="2"></path></svg></div><div class="news-body"><div class="news-date">16 ก.ค. 2569</div><div class="news-title">ประวัตินักมวย UFC: จากยุคไร้กฎ ถึงแชมป์ 2026 ที่ AI จัดอันดับ</div></div></a><a class="news-card" href="blog/articles/th/one-championship-history.html"><div class="news-img"><img src="https://images.unsplash.com/photo-1680022702604-292f21514497?w=800&amp;fit=crop" loading="lazy" alt="" onerror="this.style.display='none'"><span class="news-tag">วิเคราะห์แทคติก</span><svg viewBox="0 0 200 200" fill="none"><path d="M20 160 L60 100 L100 130 L140 60 L180 100" stroke="rgba(212,175,55,.4)" stroke-width="2"></path></svg></div><div class="news-body"><div class="news-date">16 ก.ค. 2569</div><div class="news-title">ONE Championship: จากสตาร์ทอัปสิงคโปร์ สู่อาณาจักรกีฬาต่อสู้ 1.35 พันล้านดอลลาร์</div></div></a><a class="news-card" href="blog/articles/th/top-20-richest-fighters-asia-europe-2026.html"><div class="news-img"><img src="https://images.unsplash.com/photo-1552072092-7f9b8d63efcb?w=800&amp;fit=crop" loading="lazy" alt="" onerror="this.style.display='none'"><span class="news-tag">วิเคราะห์แทคติก</span><svg viewBox="0 0 200 200" fill="none"><path d="M20 160 L60 100 L100 130 L140 60 L180 100" stroke="rgba(212,175,55,.4)" stroke-width="2"></path></svg></div><div class="news-body"><div class="news-date">16 ก.ค. 2569</div><div class="news-title">20 อันดับนักกีฬาต่อสู้รายได้สูงสุดจากเอเชียและยุโรป 2026: ใครรวยที่สุด?</div></div></a><a class="news-card" href="blog/articles/th/mma-advanced-techniques.html"><div class="news-img"><img src="https://res.cloudinary.com/dia2yts2f/image/upload/v1779866148/ChatGPT_Image_27_%E0%B8%9E.%E0%B8%84._2569_14_14_58.png" loading="lazy" alt="" onerror="this.style.display='none'"><span class="news-tag">วิเคราะห์แทคติก</span><svg viewBox="0 0 200 200" fill="none"><path d="M20 160 L60 100 L100 130 L140 60 L180 100" stroke="rgba(212,175,55,.4)" stroke-width="2"></path></svg></div><div class="news-body"><div class="news-date">27 พ.ค. 2569</div><div class="news-title">เทคนิค MMA ขั้นสูง: วิเคราะห์ฟิสิกส์และชีวกลศาสตร์ระดับโลก</div></div></a></div>
   </div>
 </section>
 
@@ -856,25 +876,24 @@ footer{background:var(--footer-bg);border-top:1px solid var(--line);padding:72px
     <h2>จัดอันดับนักมวยไทย รวมสถิติและข้อมูลนักมวยทุกรุ่นทุกกติกา</h2>
     <p>Boxfan คือเว็บไซต์<strong>จัดอันดับนักมวยไทย</strong>ที่รวบรวม<strong>สถิตินักมวย</strong>และ<strong>ข้อมูลนักมวย</strong>จากการแข่งขันจริง ครอบคลุมทุกรุ่นน้ำหนักและทุกกติกา ตั้งแต่มวยไทย คิกบ็อกซิง ไปจนถึง ONE Championship เราตอบคำถามยอดฮิตของแฟนมวยว่า “<strong>นักมวยคนไหนเก่งที่สุด</strong>” ด้วยระบบคะแนนที่โปร่งใส คำนวณจากผลชนะ-แพ้จริงในสังเวียน ไม่ใช้ความรู้สึกหรืออคติ</p>
     <p>ระบบจัดอันดับให้คะแนนชนะ +3 แพ้ -3 และเสมอ 0 เมื่อคะแนนเท่ากันจะจัดให้นักมวยที่มีวันชกล่าสุดกว่าอยู่อันดับสูงกว่า เพื่อสะท้อนฟอร์มปัจจุบัน ผู้ชมสามารถกรองดูอันดับเฉพาะรายการแข่งที่สนใจได้ ว่าใครทำคะแนนสูงสุดในศึกนั้น พร้อมดูสถิติชนะน็อก สถิติชนะรวด และไฟต์เรตติ้งของแต่ละคน</p>
-    <div class="faq">
+    <div class="faq" id="faq">
       <h3>นักมวยไทยคนไหนเก่งที่สุดตอนนี้?</h3>
-      <p id="seo-answer-top">อันดับสูงสุดปัจจุบันคำนวณจากคะแนนสะสมของแต่ละนักมวย สามารถดูอันดับล่าสุดได้จากตารางคะแนนด้านบนของหน้านี้</p>
-      <h3>Boxfan จัดอันดับนักมวยอย่างไร?</h3>
+      <p id="seo-answer-top">นักมวยที่มีคะแนนสะสมสูงสุดในระบบของ Boxfan ขณะนี้คือ ยอดกตัญญู จิตรเมืองนนท์ รุ่นฟลายเวท สถิติ 22 ชนะ 7 แพ้ (คำนวณจากผลการแข่งขันจริง อัปเดตหลังทุกไฟต์)</p>
+      <h3 id="how-ranking">Boxfan จัดอันดับนักมวยอย่างไร?</h3>
       <p>เราให้คะแนนจากผลการแข่งขันจริง ชนะ +3 แพ้ -3 เสมอ 0 และใช้วันชกล่าสุดเป็นเกณฑ์ตัดสินเมื่อคะแนนเท่ากัน ครอบคลุมทุกรุ่นน้ำหนักและทุกรายการแข่ง</p>
       <h3>ดูสถิตินักมวยไทยและข้อมูลนักมวยได้ที่ไหน?</h3>
       <p>ดูได้ที่ Boxfan ทั้งสถิติชนะ-แพ้ สถิติชนะน็อก ชนะรวด รุ่นน้ำหนัก ค่าย และโปรแกรมไฟต์ที่กำลังจะมาถึงของนักมวยแต่ละคน</p>
     </div>
-    <p class="sr-only">คำค้นที่เกี่ยวข้อง: จัดอันดับนักมวยไทย อันดับนักมวย สถิตินักมวย ข้อมูลนักมวย นักมวยคนไหนเก่งสุด นักมวยไทยเก่งที่สุด อันดับมวยไทยทุกรุ่น รวมทุกกติกา สถิติมวยไทย ONE Championship อันดับล่าสุด</p>
   </div>
 </section>
 
 <section class="statbar-sec">
   <div class="hero-stats-wrap statbar">
     <div class="hero-stats">
-      <div class="hstat"><div class="hstat-ic"><svg viewBox="0 0 24 24"><path d="M5 16l-2-9 6 4 3-7 3 7 6-4-2 9z"/><path d="M5 20h14"/></svg></div><div><b class="num" id="stat-fighters">–</b><span>นักมวยทั้งหมด</span></div></div>
-      <div class="hstat"><div class="hstat-ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><path d="M9 14l-2 7 5-3 5 3-2-7"/></svg></div><div><b class="num" id="stat-divisions">–</b><span>รุ่นน้ำหนัก</span></div></div>
-      <div class="hstat"><div class="hstat-ic"><svg viewBox="0 0 24 24"><path d="M18 4l3 3-8 8H6v-7l8-8 3 3z"/><path d="M2 21h20"/></svg></div><div><b class="num" id="stat-fights">–</b><span>ไฟต์ทั้งหมด</span></div></div>
-      <div class="hstat"><div class="hstat-ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><div><b class="num" id="stat-updated" style="font-size:18px">–</b><span>อัปเดตล่าสุด</span></div></div>
+      <div class="hstat"><div class="hstat-ic"><svg viewBox="0 0 24 24"><path d="M5 16l-2-9 6 4 3-7 3 7 6-4-2 9z"/><path d="M5 20h14"/></svg></div><div><b class="num" id="stat-fighters">2,221 คน</b><span>นักมวยทั้งหมด</span></div></div>
+      <div class="hstat"><div class="hstat-ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><path d="M9 14l-2 7 5-3 5 3-2-7"/></svg></div><div><b class="num" id="stat-divisions">11 รุ่น</b><span>รุ่นน้ำหนัก</span></div></div>
+      <div class="hstat"><div class="hstat-ic"><svg viewBox="0 0 24 24"><path d="M18 4l3 3-8 8H6v-7l8-8 3 3z"/><path d="M2 21h20"/></svg></div><div><b class="num" id="stat-fights">7,250</b><span>ไฟต์ทั้งหมด</span></div></div>
+      <div class="hstat"><div class="hstat-ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><div><b class="num" id="stat-updated" style="font-size:18px">4 ต.ค. 2569</b><span>อัปเดตล่าสุด</span></div></div>
     </div>
   </div>
 </section>
@@ -889,42 +908,34 @@ footer{background:var(--footer-bg);border-top:1px solid var(--line);padding:72px
         </a>
         <p class="f-desc">แพลตฟอร์มจัดอันดับนักมวยไทย ONE Championship คำนวณจากสถิติจริง เพื่อแฟนมวยที่ต้องการความแม่นยำ</p>
         <div class="f-social">
-          <a href="#" aria-label="Facebook"><svg class="icon" style="width:16px;height:16px" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
-          <a href="#" aria-label="YouTube"><svg class="icon" style="width:16px;height:16px" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9l5 3-5 3z"/></svg></a>
-          <a href="#" aria-label="Instagram"><svg class="icon" style="width:16px;height:16px" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
-          <a href="#" aria-label="TikTok"><svg class="icon" style="width:16px;height:16px" viewBox="0 0 24 24"><path d="M15 3v10.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M15 6.5a4.5 4.5 0 0 0 4.5 4.5"/></svg></a>
-          <a href="#" aria-label="X"><svg class="icon" style="width:15px;height:15px" viewBox="0 0 24 24"><path d="M4 4l16 16"/><path d="M20 4L4 20"/></svg></a>
+          <a href="https://www.youtube.com/@Boxingfandom" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg class="icon" style="width:16px;height:16px" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9l5 3-5 3z"/></svg></a>
         </div>
       </div>
       <div class="f-col">
         <div class="f-col-ttl">เกี่ยวกับเรา</div>
-        <a href="about.html">เกี่ยวกับเรา</a><a href="contact.html">ติดต่อเรา</a><a href="#">ร่วมงานกับเรา</a>
+        <a href="about.html">เกี่ยวกับเรา</a><a href="contact.html">ติดต่อเรา</a><a href="blog/">บทความ</a>
       </div>
       <div class="f-col">
         <div class="f-col-ttl">ช่วยเหลือ</div>
-        <a href="#">คำถามที่พบบ่อย</a><a href="#">เงื่อนไขการใช้งาน</a><a href="privacy.html">นโยบายความเป็นส่วนตัว</a>
+        <a href="#faq">คำถามที่พบบ่อย</a><a href="disclaimer.html">ข้อจำกัดความรับผิด</a><a href="privacy.html">นโยบายความเป็นส่วนตัว</a>
       </div>
       <div class="f-news">
-        <div class="f-col-ttl">รับข่าวสารและอัปเดตล่าสุด</div>
-        <p>สมัครรับอันดับใหม่และผลไฟต์เด่นส่งตรงถึงอีเมลคุณ</p>
-        <form class="news-form" id="news-form" novalidate>
-          <input type="email" id="news-email" placeholder="อีเมลของคุณ" aria-label="อีเมล">
-          <button type="submit">สมัครรับ</button>
-        </form>
-        <div class="news-ok" id="news-ok" style="display:none">ขอบคุณ! คุณสมัครรับข่าวเรียบร้อยแล้ว</div>
+        <div class="f-col-ttl">ติดตามอัปเดตล่าสุด</div>
+        <p>อันดับใหม่ ผลไฟต์เด่น และคลิปวิเคราะห์หลังทุกอีเวนต์ ติดตามได้ทางช่อง YouTube ของเรา</p>
+        <div class="news-form"><a class="news-cta" href="https://www.youtube.com/@Boxingfandom" target="_blank" rel="noopener noreferrer">ติดตามทาง YouTube</a><a class="news-cta alt" href="blog/">อ่านบทความล่าสุด</a></div>
       </div>
     </div>
     <div class="f-disclaimer">ข้อมูลสถิติ ผลการแข่งขัน และรูปภาพนักมวยรวบรวมมาเพื่อจุดประสงค์ในการรายงานผลกีฬาโดยแฟนกีฬา Boxfan ไม่ใช่เว็บไซต์ทางการของ ONE Championship และไม่มีความเกี่ยวข้องกับองค์กรดังกล่าว</div>
     <div class="footer-bottom">
-      <p>© <span id="f-year"></span> Boxfan. สงวนลิขสิทธิ์ทุกประการ</p>
-      <div class="fb-links"><a href="privacy.html">Privacy</a><a href="#">Terms</a><a href="contact.html">Contact</a></div>
+      <p>© <span id="f-year">2569</span> Boxfan. สงวนลิขสิทธิ์ทุกประการ</p>
+      <div class="fb-links"><a href="privacy.html">Privacy</a><a href="disclaimer.html">Disclaimer</a><a href="contact.html">Contact</a></div>
     </div>
   </div>
 </footer>
 
 <script src="blog/articles.js"></script>
 <script src="data/fighters_data.js"></script>
-<script src="utils.js"></script>
+<script src="utils.js?v=2"></script>
 <script>
 (function(){
   'use strict';
@@ -956,7 +967,7 @@ footer{background:var(--footer-bg);border-top:1px solid var(--line);padding:72px
   })();
 
   (function(){
-    var form=document.getElementById('news-form');
+    var form=document.getElementById('news-form'); if(!form||form.tagName!=='FORM') return;
     form.addEventListener('submit',function(e){
       e.preventDefault();
       var val=document.getElementById('news-email').value.trim();
@@ -966,7 +977,7 @@ footer{background:var(--footer-bg);border-top:1px solid var(--line);padding:72px
   })();
 
   if(typeof FIGHTERS==='undefined'||typeof HISTORY==='undefined'){
-    document.getElementById('rank-body').innerHTML='<tr><td colspan="7" style="padding:40px;text-align:center;color:var(--sub)">ไม่พบข้อมูล — ตรวจสอบว่าไฟล์ <code>data/fighters_data.js</code> และ <code>utils.js</code> โหลดถูกต้อง</td></tr>';
+    document.getElementById('rank-body').innerHTML='<tr><td colspan="8" style="padding:40px;text-align:center;color:var(--sub)">ไม่พบข้อมูล — ตรวจสอบว่าไฟล์ <code>data/fighters_data.js</code> และ <code>utils.js</code> โหลดถูกต้อง</td></tr>';
     return;
   }
 
@@ -1098,7 +1109,7 @@ footer{background:var(--footer-bg);border-top:1px solid var(--line);padding:72px
   var NOIMG='images/noname1.png';
   function imgSrc(f,size){ return (f&&f.image_filename)?cImg(f.image_filename,size||'sm'):NOIMG; }
   function avatar(f,size){
-    return '<div class="ph-avatar"><img src="'+imgSrc(f,size)+'" loading="lazy" alt="" '+
+    return '<div class="ph-avatar"><img src="'+imgSrc(f,size)+'" loading="lazy" alt="'+esc(f?f.name_th:'')+'" '+
       'onerror="this.onerror=null;this.src=\''+NOIMG+'\'">'+PERSON+'</div>';
   }
 
@@ -1165,10 +1176,10 @@ footer{background:var(--footer-bg);border-top:1px solid var(--line);padding:72px
     /* เมนู "เลือกรุ่นน้ำหนัก" — ไม่รวมแคชเวท (มีลิงก์แยกที่ด้านล่าง) */
     var STANDARD_DIVS = REAL_DIVS.filter(function(d){ return d.key !== 'catch'; });
     var items=STANDARD_DIVS.map(function(d){
-      return '<a href="weight-classes.html?div='+d.key+'"><span>'+d.label+'</span><span class="nm-en">'+(counts[d.key]||0)+' คน</span></a>';
+      return '<a href="'+divUrl(d.key)+'"><span>'+d.label+'</span><span class="nm-en">'+(counts[d.key]||0)+' คน</span></a>';
     }).join('');
     var catchLink = counts['catch']
-      ? '<a href="weight-classes.html?div=catch" style="border-top:1px dashed var(--line);margin-top:6px;padding-top:10px;color:var(--sub)"><span>แคชเวท <span style="font-size:10px;color:var(--mute);font-weight:500">(ไม่จัดในรุ่น)</span></span><span class="nm-en">'+counts['catch']+' คน</span></a>'
+      ? '<a href="'+divUrl('catch')+'" style="border-top:1px dashed var(--line);margin-top:6px;padding-top:10px;color:var(--sub)"><span>แคชเวท <span style="font-size:10px;color:var(--mute);font-weight:500">(ไม่จัดในรุ่น)</span></span><span class="nm-en">'+counts['catch']+' คน</span></a>'
       : '';
 
     var menu=document.getElementById('rank-menu');
@@ -1195,10 +1206,10 @@ footer{background:var(--footer-bg);border-top:1px solid var(--line);padding:72px
     var sub=document.getElementById('drawer-rank-sub');
     if(sub){
       var drawerCatch = counts['catch']
-        ? '<a href="weight-classes.html?div=catch" style="opacity:.75">แคชเวท ('+counts['catch']+') <span style="font-size:10px;color:var(--mute)">— ไม่จัดในรุ่น</span></a>'
+        ? '<a href="'+divUrl('catch')+'" style="opacity:.75">แคชเวท ('+counts['catch']+') <span style="font-size:10px;color:var(--mute)">— ไม่จัดในรุ่น</span></a>'
         : '';
       sub.innerHTML='<a href="rankings.html">AllRank — ตารางคะแนนรวม</a>'+
-        STANDARD_DIVS.map(function(d){return '<a href="weight-classes.html?div='+d.key+'">'+d.label+' ('+(counts[d.key]||0)+')</a>';}).join('')+
+        STANDARD_DIVS.map(function(d){return '<a href="'+divUrl(d.key)+'">'+d.label+' ('+(counts[d.key]||0)+')</a>';}).join('')+
         drawerCatch;
     }
   }
@@ -1253,7 +1264,7 @@ footer{background:var(--footer-bg);border-top:1px solid var(--line);padding:72px
       var range=wtRange(f.division);
       return '<tr onclick="location.href=\''+fighterUrl(f)+'\'" style="cursor:pointer">'+
         '<td class="rk-cell"><span class="rk-badge '+badge+'">'+rank+'</span></td>'+
-        '<td><div class="fighter-cell">'+avatar(f)+'<div><div class="fighter-name">'+esc(f.name_th)+'</div><div class="fighter-sub">'+esc(f.team||'')+'</div></div></div></td>'+
+        '<td><div class="fighter-cell">'+avatar(f)+'<div><div class="fighter-name"><a href="'+fighterUrl(f)+'">'+esc(f.name_th)+'</a></div><div class="fighter-sub">'+esc(f.team||'')+'</div></div></div></td>'+
         '<td class="col-camp"><span style="font-size:13.5px;color:var(--sub)">'+esc(f.team||'—')+'</span></td>'+
         '<td class="col-div td-div">'+esc(f.division||'—')+(range?'<span class="wt">('+range+')</span>':'')+'</td>'+
         '<td class="center col-fights" style="font-family:Inter;color:var(--sub);font-weight:600">'+r.n+'</td>'+
@@ -1374,7 +1385,7 @@ footer{background:var(--footer-bg);border-top:1px solid var(--line);padding:72px
     document.getElementById('feat-score').textContent=c._score.toLocaleString('en-US');
     document.getElementById('feat-link').href=fighterUrl(c);
     document.getElementById('top5-list').innerHTML=ranked.slice(0,5).map(function(f,i){
-      return '<div class="top5-row" onclick="location.href=\''+fighterUrl(f)+'\'"><span class="top5-rk'+(i===0?' g':'')+'">'+(i+1)+'</span>'+avatar(f)+'<span class="top5-nm">'+esc(f.name_th)+'</span><span class="top5-pt">'+f._score+'</span></div>';
+      return '<a class="top5-row" href="'+fighterUrl(f)+'"><span class="top5-rk'+(i===0?' g':'')+'">'+(i+1)+'</span>'+avatar(f)+'<span class="top5-nm">'+esc(f.name_th)+'</span><span class="top5-pt">'+f._score+'</span></a>';
     }).join('');
   }
 
@@ -1596,13 +1607,15 @@ footer{background:var(--footer-bg);border-top:1px solid var(--line);padding:72px
     var itemList={"@context":"https://schema.org","@type":"ItemList","name":"อันดับนักมวยไทย โดย Boxfan","itemListOrder":"https://schema.org/ItemListOrderDescending","numberOfItems":top.length,
       "itemListElement":top.map(function(f,i){ return {"@type":"ListItem","position":i+1,"name":f.name_th,"url":abs(f)}; })};
     var t1=top[0];
-    var faq={"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-      {"@type":"Question","name":"นักมวยไทยคนไหนเก่งที่สุดตอนนี้?","acceptedAnswer":{"@type":"Answer","text":(t1?("จากการจัดอันดับของ Boxfan นักมวยที่มีคะแนนสะสมสูงสุดคือ "+t1.name_th+" ("+ (t1.total_wins||0)+" ชนะ "+(t1.total_losses||0)+" แพ้) คำนวณจากผลการแข่งขันจริง"):"ดูอันดับล่าสุดได้จากตารางคะแนนบนหน้าเว็บ Boxfan")}},
-      {"@type":"Question","name":"Boxfan จัดอันดับนักมวยอย่างไร?","acceptedAnswer":{"@type":"Answer","text":"ให้คะแนนจากผลจริง ชนะ +3 แพ้ -3 เสมอ 0 และใช้วันชกล่าสุดตัดสินเมื่อคะแนนเท่ากัน ครอบคลุมทุกรุ่นทุกกติกา"}},
-      {"@type":"Question","name":"ดูสถิตินักมวยไทยได้ที่ไหน?","acceptedAnswer":{"@type":"Answer","text":"ดูสถิตินักมวยและข้อมูลนักมวยทั้งชนะ-แพ้ ชนะน็อก ชนะรวด รุ่นน้ำหนัก และค่าย ได้ที่ Boxfan"}}
-    ]};
-    [itemList,faq].forEach(function(obj){ var s=document.createElement('script'); s.type='application/ld+json'; s.text=JSON.stringify(obj); document.head.appendChild(s); });
-    if(t1){ var el=document.getElementById('seo-answer-top'); if(el) el.textContent='นักมวยที่มีคะแนนสะสมสูงสุดในระบบของ Boxfan ขณะนี้คือ '+t1.name_th+' รุ่น'+(t1.division||'')+' สถิติ '+(t1.total_wins||0)+' ชนะ '+(t1.total_losses||0)+' แพ้ (คำนวณจากผลการแข่งขันจริง อัปเดตหลังทุกไฟต์)'; }
+    var ansTop=t1?('นักมวยที่มีคะแนนสะสมสูงสุดในระบบของ Boxfan ขณะนี้คือ '+t1.name_th+(t1.division?' รุ่น'+t1.division:'')+' สถิติ '+(t1.total_wins||0)+' ชนะ '+(t1.total_losses||0)+' แพ้ (คำนวณจากผลการแข่งขันจริง อัปเดตหลังทุกไฟต์)'):'';
+    var el=document.getElementById('seo-answer-top'); if(el&&ansTop) el.textContent=ansTop;
+    /* FAQ อ่านจากคำถาม-คำตอบที่แสดงบนหน้าจริง (Google กำหนดให้ตรงกัน) */
+    var qa=[]; var faqBox=document.getElementById('faq');
+    if(faqBox){ faqBox.querySelectorAll('h3').forEach(function(h){ var p=h.nextElementSibling; if(p&&p.tagName==='P') qa.push({"@type":"Question","name":h.textContent.trim(),"acceptedAnswer":{"@type":"Answer","text":p.textContent.trim()}}); }); }
+    var faq={"@context":"https://schema.org","@type":"FAQPage","mainEntity":qa};
+    function putLd(id,obj){ var s=document.getElementById(id); if(!s){ s=document.createElement('script'); s.type='application/ld+json'; s.id=id; document.head.appendChild(s); } s.text=JSON.stringify(obj); }
+    putLd('jsonld-rank',itemList);
+    if(qa.length) putLd('jsonld-faq',faq);
   }
 
   /* ── แผงอันดับแยกรายรุ่น (โชว 5, กดขยายถึง 15, ลิงก์หน้าเต็ม)
@@ -1635,25 +1648,25 @@ footer{background:var(--footer-bg);border-top:1px solid var(--line);padding:72px
       var range=(DIV_RANGE[d.key]||'');
       var rowsHtml=list.slice(0,15).map(function(r,i){
         var f=r.f, rk=i+1;
-        return '<div class="dp-row'+(i>=5?' extra':'')+'" onclick="location.href=\''+fighterUrl(f)+'\'">'+
+        return '<a class="dp-row'+(i>=5?' extra':'')+'" href="'+fighterUrl(f)+'">'+
           '<span class="dp-rk'+(rk<=3?' g':'')+'">'+rk+'</span>'+
           avatar(f)+
           '<div class="dp-nm"><div class="n">'+esc(f.name_th)+'</div><div class="t">'+fl(f.country)+' '+esc(f.team||'')+'</div></div>'+
           '<span class="dp-rec"><b>'+r.w+'</b>-<i>'+r.l+'</i></span>'+
           '<span class="dp-pts">'+r.score+'</span>'+
-        '</div>';
+        '</a>';
       }).join('');
       var hasExtra=list.length>5;
       var moreBtn=hasExtra?'<button class="dp-more" data-more>ดูเพิ่ม (ถึง 15) ▾</button>':'';
       var body=list.length?rowsHtml:'<div class="dp-empty">ยังไม่มีนักมวย'+g+'ในรุ่นนี้</div>';
       return '<div class="div-panel">'+
-        '<a class="div-phd" href="weight-classes.html?div='+d.key+'" style="color:inherit">'+
+        '<a class="div-phd" href="'+divUrl(d.key)+'" style="color:inherit">'+
           '<div><div class="th">'+d.label+' <span style="font-size:11px;font-weight:600;color:var(--gold-text);letter-spacing:.02em">· '+g+'</span></div><div class="en">'+d.en+'</div>'+(range?'<div class="rng">'+range+'</div>':'')+'</div>'+
           '<span class="div-cnt">'+list.length+' คน</span>'+
         '</a>'+
         body+
         '<div class="dp-actions">'+moreBtn+
-          '<a class="dp-full" href="weight-classes.html?div='+d.key+'">ดูอันดับเต็ม<svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>'+
+          '<a class="dp-full" href="'+divUrl(d.key)+'">ดูอันดับเต็ม<svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>'+
         '</div>'+
       '</div>';
     }).join('');
@@ -1674,7 +1687,7 @@ footer{background:var(--footer-bg);border-top:1px solid var(--line);padding:72px
           '<b style="color:var(--text)">แคชเวท</b> — น้ำหนักเฉพาะกิจ ไม่จัดในรุ่นน้ำหนักด้านบน '+
           '<span style="color:var(--mute)">(นักมวย '+g+' '+catchCnt+' คน · ยังคงนับในคะแนนรวมทั้งหมด)</span>'+
         '</div>'+
-        '<a href="weight-classes.html?div=catch" style="font-size:13px;font-weight:700;color:var(--gold-text);white-space:nowrap">'+
+        '<a href="'+divUrl('catch')+'" style="font-size:13px;font-weight:700;color:var(--gold-text);white-space:nowrap">'+
           'ดูอันดับแคชเวท →'+
         '</a>';
     } else {

@@ -8,6 +8,13 @@
 <meta property="og:title" content="สถิตินักมวยไทย ONE — จัดอันดับ ชนะ KO อัตราชนะ สูง-ต่ำ อายุ 2569 | Boxfan">
 <meta name="keywords" content="สถิตินักมวย,สถิติมวยไทย,สถิตินักมวยไทย,อัตราชนะนักมวย,นักมวย KO เยอะสุด,นักมวยชนะรวด,สถิติ ONE Championship,ข้อมูลนักมวย,นักมวยไทยเก่งที่สุด,Muay Thai stats,Boxfan">
 <meta name="description" content="ศูนย์สถิตินักมวยไทยและ ONE Championship จัดอันดับได้ทุกสถิติ ชนะ แพ้ KO TKO ซับมิชชัน อัตราชนะ ชนะรวด ส่วนสูง อายุ พร้อมภาพนักมวย อัปเดตทุกไฟต์">
+<meta property="og:url" content="https://www.boxingfandom.com/stats.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Boxfan">
+<meta property="og:locale" content="th_TH">
+<meta property="og:image" content="https://www.boxingfandom.com/og-default.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.boxingfandom.com/og-default.jpg">
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
 <link rel="canonical" href="https://www.boxingfandom.com/stats.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1217,7 +1224,7 @@ body.lbx-clean .lbx-exit{display:inline-flex}
 </div></footer>
 
 <script src="data/fighters_data.js"></script>
-<script src="utils.js"></script>
+<script src="utils.js?v=2"></script>
 <script>
 /* ═══════════════════════════════════════════════════════════════
    BOXFAN STATS HUB v2
@@ -1358,7 +1365,7 @@ function computeStats(f, opts){
   o._lastDate=lastD; o._firstDate=firstD;
   o._rating = stars.length ? Math.round(stars.reduce(function(s,x){return s+x;},0)/stars.length*10)/10 : null;
   o._avgRound = rounds.length ? Math.round(rounds.reduce(function(s,x){return s+x;},0)/rounds.length*10)/10 : null;
-  o._s = w*3 - l*3 + r1;             /* ชนะ +3 · แพ้ -3 · โบนัสจบยกแรก +1 */
+  o._s = w*3 - l*3;                  /* สูตรกลางของเว็บ: ชนะ +3 · เสมอ 0 · แพ้ -3 (ไม่มีโบนัส) */
   o._divKey = (typeof divKey!=='undefined') ? divKey(f.division) : null;
   o._form = win.slice(-5);           /* 5 ไฟต์ล่าสุด เรียงเก่า→ใหม่ */
   o._mv = _money(f.market_value);

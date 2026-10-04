@@ -147,6 +147,8 @@ function bfFooter(extraText, basePath){
         '<a href="'+base+'fighters.html">นักมวย</a>' +
         '<a href="'+base+'schedule.html">โปรแกรมชก</a>' +
         '<a href="'+base+'weight-classes.html">รุ่นน้ำหนัก</a>' +
+        '<a href="'+base+'results.html">ผลมวยล่าสุด</a>' +
+        '<a href="'+base+'compare.html">เปรียบเทียบนักมวย</a>' +
       '</div>' +
       '<div class="foot-col"><h4>เกี่ยวกับ</h4>' +
         '<a href="'+base+'about.html">เกี่ยวกับเรา</a>' +
@@ -167,13 +169,16 @@ function bfFooter(extraText, basePath){
 function bfMount(activeTab, opts){
   opts = opts || {};
   var base = opts.basePath || '';
+  /* ถ้า build_seo.py เขียนเมนู/ท้ายเว็บลง HTML ไว้แล้ว (อยู่ระหว่าง <!--PR:chrome--> … <!--/PR:chrome-->)
+     จะไม่มี #bf-chrome / #bf-foot ให้แทนที่ → ใช้ของที่อยู่ในหน้าเลย
+     ถ้ายังไม่ได้ build จะสร้างด้วย JS แบบเดิม โดยครอบด้วยคอมเมนต์ PR เพื่อให้ build ดึงไปใช้ได้ */
   var slot = document.getElementById('bf-chrome');
   if(slot){
-    slot.outerHTML = bfUtil(base) + bfHeader(base) + nav(activeTab, base);
+    slot.outerHTML = '<!--PR:chrome-->' + bfUtil(base) + bfHeader(base) + nav(activeTab, base) + '<!--/PR:chrome-->';
   }
   var footSlot = document.getElementById('bf-foot');
   if(footSlot){
-    footSlot.outerHTML = bfFooter(opts.footerExtra||'', base);
+    footSlot.outerHTML = '<!--PR:foot-->' + bfFooter(opts.footerExtra||'', base) + '<!--/PR:foot-->';
   }
   // set today date
   var td = document.getElementById('bf-today');
@@ -217,9 +222,9 @@ function bfFxCell(f, opts){
   var meta = opts.meta;
   if(meta === undefined) meta = '<span class="fx-flag">'+fl(f.country)+'</span> '+esc(f.division||'—');
   return '<div class="fx">' +
-    '<div class="fx-img"><img src="'+cImg(f.image_filename,'sm')+'" loading="lazy" onerror="this.onerror=null;this.src=PH" alt=""></div>' +
+    '<div class="fx-img"><img src="'+cImg(f.image_filename,'sm')+'" loading="lazy" onerror="this.onerror=null;this.src=PH" alt="'+esc(f.name_th)+'"></div>' +
     '<div class="fx-info">' +
-      '<div class="fx-name">'+esc(f.name_th)+(badge?' '+badge:'')+'</div>' +
+      '<div class="fx-name">'+(opts.href?'<a href="'+opts.href+'">'+esc(f.name_th)+'</a>':esc(f.name_th))+(badge?' '+badge:'')+'</div>' +
       (meta?'<div class="fx-meta">'+meta+'</div>':'') +
     '</div>' +
   '</div>';
