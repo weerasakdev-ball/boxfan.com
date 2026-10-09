@@ -1,0 +1,30 @@
+# ════════════════════════════════════════════════════════════════
+# .vercelignore — ไฟล์ที่ "ไม่ขึ้นเว็บ" (Vercel ไม่ deploy / คนเปิดดูไม่ได้)
+# ไฟล์เหล่านี้ยังอยู่ในเครื่องและใน GitHub ตามปกติ (เป็น backup)
+# รูปแบบเหมือน .gitignore
+# ════════════════════════════════════════════════════════════════
+
+# สคริปต์ทำงานภายใน
+*.py
+*.bat
+__pycache__
+build.js
+generate.js
+package-lock.json
+
+# เอกสาร / โน้ต
+*.md
+project-structure.txt
+Robots*TXT
+
+# เครื่องมือภายใน / แม่แบบ
+db-extractor.html
+generate-sitemap.html
+blog/TEMPLATE.html
+blog/index-blog.html
+
+# ไฟล์ตั้งค่าของโฮสต์อื่น (Vercel ไม่ใช้) / ไฟล์ข้อมูลที่ไม่ได้ใช้แล้ว
+_redirects
+data/fighters_lite.js
+data/*.db
+*.bak
