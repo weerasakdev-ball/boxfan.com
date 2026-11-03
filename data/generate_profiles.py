@@ -704,6 +704,73 @@ def build_rows(fights, fighters_map):
     return rows
 
 
+TH_MONTHS = ['ม.ค.', 'ก.พ.', 'มี.ค.', 'เม.ย.', 'พ.ค.', 'มิ.ย.', 'ก.ค.', 'ส.ค.', 'ก.ย.', 'ต.ค.', 'พ.ย.', 'ธ.ค.']
+
+
+def th_date(d):
+    """'2026-09-11' -> '11 ก.ย. 2569' (ถ้าอ่านไม่ได้คืนค่าเดิม)"""
+    try:
+        dt = datetime.strptime(str(d or '')[:10], '%Y-%m-%d')
+        return '%d %s %d' % (dt.day, TH_MONTHS[dt.month - 1], dt.year + 543)
+    except ValueError:
+        return str(d or '')
+
+
+def seo_title_desc(f, past, up):
+    """ชื่อหน้า (title) + คำอธิบาย (description) ที่ Google แสดงในผลค้นหา
+    ใส่สถิติจริง ไฟต์ล่าสุด และไฟต์ถัดไป เพื่อให้คนเห็นว่าหน้านี้มีข้อมูลที่ค้นหา"""
+    th = (f.get('name_th') or f.get('name_en') or '').strip()
+    en = (f.get('name_en') or '').strip()
+    name = '%s (%s)' % (th, en) if en and en.lower() != th.lower() else th
+    w = f.get('total_wins', 0) or 0
+    l = f.get('total_losses', 0) or 0
+    d = f.get('total_draws', 0) or 0
+    rec = '%d-%d' % (w, l) + ('-%d' % d if d else '')
+
+    if past:
+        title = '%s สถิติ %s ประวัติการชกล่าสุด | Boxfan' % (name, rec)
+    elif up:
+        title = '%s ไฟต์ถัดไป วิเคราะห์ก่อนชก | Boxfan' % name
+    else:
+        title = '%s ประวัตินักมวย | Boxfan' % name
+
+    if not past and not up:
+        return title, ('ข้อมูลนักมวย %s' % th + (' รุ่น%s' % f['division'] if f.get('division') else '')
+                       + ' — ยังไม่มีประวัติการชกในระบบ ดูนักมวยคนอื่นและอันดับล่าสุดที่ Boxfan')
+
+    parts = []
+    head = 'สถิติ %s' % th
+    if f.get('division'):
+        head += ' รุ่น%s' % f['division']
+    if past:
+        wr = float(f.get('win_rate') or 0)
+        head += ': ชนะ %d แพ้ %d' % (w, l) + (' เสมอ %d' % d if d else '') + ' (ชนะ %.0f%%)' % wr
+    parts.append(head)
+    if past:
+        h = past[0]
+        word = {'win': 'ชนะ', 'loss': 'แพ้', 'draw': 'เสมอ'}.get(h.get('result_type'), 'พบ')
+        s = 'ไฟต์ล่าสุด%s %s' % (word, h.get('opponent') or '')
+        if h.get('result_type') in ('win', 'loss') and is_finish(h):
+            s += ' แบบน็อก'
+        ev = str(h.get('event') or '').strip()
+        if ev:
+            s += (' ' + ev) if ev.startswith('ศึก') else (' ศึก ' + ev)
+        if h.get('date'):
+            s += ' (%s)' % th_date(h['date'])
+        parts.append(s.strip())
+    if up:
+        h = up[0]
+        s = 'ไฟต์ถัดไปพบ %s' % (h.get('opponent') or '')
+        if h.get('date'):
+            s += ' %s' % th_date(h['date'])
+        parts.append(s.strip())
+    parts.append('ดูประวัติการชกครบทุกไฟต์ ฟอร์ม และคะแนน')
+    desc = ' · '.join(parts)
+    if len(desc) > 300:
+        desc = desc[:297].rstrip() + '…'
+    return title, desc
+
+
 def generate(f, history, full_css, fighters_map):
     name_th = esc(f.get('name_th'))
     name_en = esc(f.get('name_en'))
@@ -725,15 +792,16 @@ def generate(f, history, full_css, fighters_map):
     fid = quote(str(f.get('id') or ''), safe='')     # id เป็นข้อความไทย ต้อง encode ก่อนใส่ URL
     s = quote(page_name(f), safe='')                 # ชื่อไฟล์สำหรับ canonical URL
 
-    title = (f'{name_th} ({name_en}) สถิตินักมวย | Boxfan' if name_en
-             else f'{name_th} สถิตินักมวย | Boxfan')
-    desc = f'{name_th} นักมวย ONE Championship {division} สถิติ {wins}W {losses}L อัตราชนะ {wr:.0f}% | Boxfan'
     canonical = f'{SITE}/fighters/{s}.html'
 
     past = [h for h in history if h.get('result_type') != 'upcoming']
     past.sort(key=lambda x: x.get('date') or '', reverse=True)
     up = [h for h in history if h.get('result_type') == 'upcoming']
     up.sort(key=lambda x: x.get('date') or '')       # ไฟต์ที่จะถึง เรียงใกล้ -> ไกล
+
+    # ชื่อหน้า + คำอธิบายในผลค้นหา Google — สร้างจากข้อมูลจริงของแต่ละคน (ให้น่าคลิก)
+    title, desc = seo_title_desc(f, past, up)
+    title, desc = esc(title), esc(desc)
 
     sc = build_score(past)
 
