@@ -1,7 +1,7 @@
 # BOXFAN — โน้ตการทำงาน (สำหรับ AI และคนที่มาทำต่อ)
 
 > ไฟล์นี้ไม่ขึ้นเว็บ (อยู่ใน .vercelignore) — อ่านก่อนแก้อะไรในโปรเจกต์ทุกครั้ง
-> อัปเดตล่าสุด: 4 ต.ค. 2569
+> อัปเดตล่าสุด: 3 พ.ย. 2569
 
 ---
 
@@ -10,7 +10,10 @@
 1. **ห้ามตัด ย่อ ลบ หรือแก้ข้อมูลนักมวยเด็ดขาด** — `data/fighters_data.js` เป็นของเจ้าของเว็บ
    ห้ามสร้างไฟล์ข้อมูลฉบับย่อ/ตัดช่อง (เคยทำ `fighters_lite.js` แล้วเจ้าของไม่อนุญาต — ยกเลิกแล้ว)
    ถ้าจะทำอะไรที่เกี่ยวกับข้อมูล **ต้องถามก่อนทุกครั้ง**
-2. เจ้าของแก้ข้อมูลเองที่ไฟล์ data (ไฟล์มาจาก `export_json.py` ที่อยู่นอกโฟลเดอร์นี้ — `C:\Users\Weera\Desktop\data\data`)
+   ข้อยกเว้นที่เจ้าของอนุญาตแล้ว (3 พ.ย. 2569): `data/fighters_index.js` = สารบัญที่ `build_index.py`
+   สร้างจากไฟล์เต็มอัตโนมัติ (ไฟล์เต็มไม่ถูกแตะ) — ดูหัวข้อ "สารบัญนักมวย" ด้านล่าง
+2. เจ้าของแก้ข้อมูลเองด้วยโปรแกรม **Boxfan Studio** (`D:\โปรแกรมจัดการข้อมูลv1`, เปิดด้วย run_studio.bat)
+   ข้อมูลดิบ = ไฟล์ JSON นักมวยละไฟล์ที่ `D:\data\data` → หน้า "ส่งออกข้อมูล" (export_json.py) เขียน `data/fighters_data.js`
 3. หน้าตาเว็บต้องเหมือนเดิม — งาน SEO/แก้บั๊ก ห้ามเปลี่ยนดีไซน์โดยไม่ได้ขอ
 4. คุยกับเจ้าของเป็นภาษาไทย สั้น ง่าย ไม่ใช้ศัพท์เทคนิค
 
@@ -22,8 +25,9 @@
 export_json.py (นอกโฟลเดอร์)  →  data/fighters_data.js   (FIGHTERS / HISTORY / META)
                                         │
           generate_profiles.bat  ───────┤
-            [1] data/generate_profiles.py → fighters/<slug>.html  (หน้านักมวย static 2,000+ หน้า)
-            [2] build_seo.py              → ฝังเนื้อหาที่ JS สร้างลงไฟล์ .html (prerender)
+            [1] build_index.py            → data/fighters_index.js (สารบัญ ให้หน้าเบาโหลดแทนไฟล์เต็ม)
+            [2] data/generate_profiles.py → fighters/<slug>.html  (หน้านักมวย static 21,000+ หน้า)
+            [3] build_seo.py              → ฝังเนื้อหาที่ JS สร้างลงไฟล์ .html (prerender)
                                             + rankings-<รุ่น>.html 11 หน้า + sitemap.xml + robots.txt
                                         │
           VS Code → commit → push GitHub (weerasakdev-ball/boxfan.com)  →  Vercel deploy อัตโนมัติ
@@ -39,6 +43,20 @@ export_json.py (นอกโฟลเดอร์)  →  data/fighters_data.js  
 (ไม่ต้องส่ง sitemap ใน Search Console ซ้ำ ส่งครั้งเดียวพอ)
 
 ---
+
+## สารบัญนักมวย (data/fighters_index.js)
+
+- ไฟล์เต็ม ~36 MB มือถืออ่านช้า → `build_index.py` สร้างสารบัญ ~9 MB ทุกครั้งที่รัน .bat
+  - ตัดเฉพาะช่องใน `DROP` (thboxing_url, strike_stats, fight_purse, market_value, biography ฯลฯ)
+  - ไม่เขียนค่า null และ slug/image_filename ที่เท่ากับ id → โค้ดท้ายไฟล์เติมกลับตอนโหลด
+  - ใช้ชื่อตัวแปรเดิม `FIGHTERS / HISTORY / META` → โค้ดหน้าเว็บไม่ต้องแก้
+  - ตรวจซ้ำทุกแถวเทียบกับไฟล์เต็มก่อนเขียน ไม่ตรง = หยุด (ไฟล์เดิมไม่ถูกแก้)
+- **หน้าที่โหลดสารบัญ:** index, fighters, rankings, weight-classes (+rankings-*), results, schedule,
+  tierlist, bracket, ranking, my-ranking, about, contact, privacy, disclaimer
+- **หน้าที่ยังโหลดไฟล์เต็ม:** stats, compare, profile, RankingMuay (ใช้ strike_stats / ค่าตัว / ฯลฯ)
+- หน้าเบาจะใช้ช่องที่อยู่ใน DROP → เอาออกจาก DROP หรือให้หน้านั้นโหลด fighters_data.js
+- ห้ามโหลดสองไฟล์ในหน้าเดียว (ทั้งคู่ประกาศ `const FIGHTERS` → error)
+- คู่มือสำหรับเจ้าของ: `คู่มืออัปเดตข้อมูล.md`
 
 ## build_seo.py ทำอะไร
 
@@ -99,6 +117,8 @@ export_json.py (นอกโฟลเดอร์)  →  data/fighters_data.js  
 ## เรื่องค้าง / ไอเดียต่อไป
 
 - ข้อมูลซ้ำ 13 คู่ (เจ้าของแก้เองที่ data) — ดู duplicate_fighters.csv ที่ส่งให้
-- ทุกหน้าโหลด fighters_data.js (~6.8 MB) — ถ้าจะทำให้เบาลง **ต้องถามเจ้าของก่อน** (ห้ามตัดข้อมูล)
+- หน้าเบาโหลดสารบัญแล้ว (3 พ.ย. 2569) — ยังเบาลงได้อีก เช่น แยก HISTORY / โหลดเฉพาะส่วน (ถามเจ้าของก่อน)
+- นักมวย 19,416 จาก 21,639 คนยังไม่มีประวัติการชก (ไม่มีตั้งแต่ไฟล์ดิบ) → หน้าโปรไฟล์บาง เสี่ยงต่อการขอ AdSense
+- ยังไม่ได้ติดตั้ง AdSense (ไม่มี ads.txt, CSP ของ index.html ยังบล็อกสคริปต์ภายนอก, หน้าแรกไม่มี Umami)
 - redirect URL เก่าของนักมวยที่เปลี่ยน slug (เช่น พันพะกาฬ-ศ.ศศิวัฒน์ → arthorn-nontakod) ต้องทำใน vercel.json
 - GitHub repo ยังเป็น public — แนะนำให้เปลี่ยนเป็น private (Vercel ยัง deploy ได้)

@@ -338,9 +338,9 @@ def make_division_pages(fighters):
         doc = doc.replace('"@type":"CollectionPage","name":"รุ่นน้ำหนัก ONE มวยไทย","url":"%s/weight-classes.html"' % SITE,
                           '"@type":"CollectionPage","name":"อันดับนักมวย%s","url":"%s"' % (th, url), 1)
         # บอก JS ของหน้าว่าเป็นรุ่นไหน (แทน ?div=)
-        mk = re.search(r'<script src="data/fighters_(?:data|lite)\.js"></script>', doc)
+        mk = re.search(r'<script src="data/fighters_(?:data|index|lite)\.js"></script>', doc)
         if not mk:
-            sys.exit('✗ weight-classes.html ไม่มี <script src="data/fighters_data.js"> — สร้างหน้าแยกรุ่นไม่ได้')
+            sys.exit('✗ weight-classes.html ไม่มี <script src="data/fighters_index.js"> — สร้างหน้าแยกรุ่นไม่ได้')
         doc = doc[:mk.start()] + '<script>window.BF_DIV=%s;</script>\n' % json.dumps(key) + doc[mk.start():]
         out = ROOT / fn
         old_crlf = read(out)[1] if out.exists() else crlf
