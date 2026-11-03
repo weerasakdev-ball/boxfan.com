@@ -384,8 +384,18 @@ function heroImg(filename){
 
 function resolveFighter(){
     var q=new URLSearchParams(location.search);
-    var raw=(q.get('id')||q.get('slug')||q.get('f')||'').trim();
-    if(!raw) return null;
+    /* ลิงก์เก่าแบบ ?id=1016&name=samransing-sitchalongsak — id ตัวเลขเก่าไม่มีแล้ว ลองชื่อด้วย */
+    var keys=['id','slug','f','name'];
+    for(var k=0;k<keys.length;k++){
+        var v=(q.get(keys[k])||'').trim();
+        if(!v) continue;
+        var hit=resolveOne(v);
+        if(hit) return hit;
+    }
+    return null;
+}
+
+function resolveOne(raw){
     var dec=raw; try{dec=decodeURIComponent(raw);}catch(e){}
     var lower=dec.toLowerCase();
     var norm=function(v){return String(v==null?'':v).trim().toLowerCase();};

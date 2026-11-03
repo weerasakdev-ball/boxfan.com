@@ -141,5 +141,11 @@ export_json.py (นอกโฟลเดอร์)  →  data/fighters_data.js  
   `generate_profiles.py` ใส่ `noindex,follow` ให้หน้าที่ไม่มีไฟต์เลย (ชกแล้ว/รอชก) และไม่มี biography
   และ `build_seo.py` ตัดหน้า noindex ออกจาก sitemap (อ่านจาก meta robots ในไฟล์) — เติมข้อมูลแล้วกลับมาเอง
 - ยังไม่ได้ติดตั้ง AdSense (ไม่มี ads.txt, CSP ของ index.html ยังบล็อกสคริปต์ภายนอก, หน้าแรกไม่มี Umami)
-- redirect URL เก่าของนักมวยที่เปลี่ยน slug (เช่น พันพะกาฬ-ศ.ศศิวัฒน์ → arthorn-nontakod) ต้องทำใน vercel.json
+- **URL เก่า → หน้าใหม่ (ทำแล้ว 3 พ.ย. 2569):**
+  - `vercel.json` redirects: `weight-classes.html?div=<key>` → `rankings-<รุ่น>.html` (11 รุ่น),
+    `profile.html?…&name=<slug>` → `fighters/<slug>.html`
+  - `generate_profiles.py write_alias_pages()` สร้างหน้าส่งต่อ `fighters/<id เดิม>.html` (meta refresh + canonical)
+    ให้นักมวยทุกคนที่ id ≠ slug (เช่น พันพะกาฬ-ศ.ศศิวัฒน์ → arthorn-nontakod) + ชื่อไฟล์เก่าใน `OLD_PAGES`
+    ทุกสัปดาห์อัตโนมัติ / ไม่ทับหน้าจริง (เช็กตัวพิมพ์เล็ก-ใหญ่) / ไม่อยู่ใน sitemap
+  - `profile.html` หาได้จาก `?id= / ?slug= / ?f= / ?name=` แล้วส่งไปหน้า static
 - GitHub repo ยังเป็น public — แนะนำให้เปลี่ยนเป็น private (Vercel ยัง deploy ได้)

@@ -704,6 +704,61 @@ def build_rows(fights, fighters_map):
     return rows
 
 
+# URL เก่าที่ไม่ใช่ id ปัจจุบัน (ชื่อไฟล์เดิมเคยมีชื่อเล่น/อักขระพิเศษ) → id นักมวยปัจจุบัน
+OLD_PAGES = {
+    '“Little-Piranha”-ยูยะ-วากามัตสึ': 'ยูยะ-วากามัตสึ',
+    '“Star-Of-The-SHIBUYA”-ฮิวมะ-ฮิตาชิ': 'ฮิวมะ-ฮิตาชิ',
+    '“The-Blitz”-ยูกิ-ทานากะ': 'ยูกิ-ทานากะ',
+    '“White-Lion”-วิลลี-ฟาน-รอยเอน': 'วิลลี-ฟาน-รอยเอน',
+    'แดนสยาม-วีระ​ศักดิ์​เล็ก': 'แดนสยาม-วีระศักดิ์เล็ก',
+}
+BAD_FILENAME = re.compile(r'[<>:"/\\|?*\x00-\x1f]')
+
+
+def alias_html(f, page):
+    href = quote(page, safe='') + '.html'
+    name = esc(f.get('name_th') or f.get('name_en') or page)
+    return ('<!DOCTYPE html>\n<html lang="th"><head><meta charset="UTF-8">'
+            '<title>%s | Boxfan</title>'
+            '<link rel="canonical" href="%s/fighters/%s">'
+            '<meta http-equiv="refresh" content="0;url=%s">'
+            '<script>location.replace(%s+location.hash)</script>'
+            '</head><body><a href="%s">ไปหน้า %s</a></body></html>\n'
+            % (name, SITE, href, href, json.dumps(href), href, name))
+
+
+def write_alias_pages(fighters, written):
+    """สร้างหน้าเล็กๆ ที่ส่งต่อจาก URL เก่า (ชื่อไฟล์ = id เดิม) ไปหน้านักมวยปัจจุบัน
+    เพิ่มชื่อไฟล์ลง written เพื่อไม่ให้ขั้นเก็บกวาดลบทิ้ง — ไม่ทับหน้าจริงเด็ดขาด"""
+    real = set(n for n, _ in written)
+    real_ci = set(n.lower() for n in real)          # Windows ไม่แยกตัวพิมพ์เล็ก/ใหญ่
+    by_id = {f.get('id'): f for f in fighters}
+    targets = {}
+    for f in fighters:
+        if f.get('id') and f['id'] != f['_page']:
+            targets[f['id']] = f
+    for old, fid in OLD_PAGES.items():
+        if fid in by_id:
+            targets[old] = by_id[fid]
+    n = 0
+    for old, f in targets.items():
+        fname = old + '.html'
+        if fname.lower() in real_ci or BAD_FILENAME.search(old):
+            continue
+        data = alias_html(f, f['_page']).encode('utf-8')
+        path = os.path.join(OUT, fname)
+        try:
+            same = os.path.exists(path) and open(path, 'rb').read() == data
+        except OSError:
+            same = False
+        if not same:
+            build_chrome.write_file(path, data)
+        written.append((fname, '↪ ' + (f.get('name_th') or f.get('id'))))
+        real_ci.add(fname.lower())
+        n += 1
+    return n
+
+
 TH_MONTHS = ['ม.ค.', 'ก.พ.', 'มี.ค.', 'เม.ย.', 'พ.ค.', 'มิ.ย.', 'ก.ค.', 'ส.ค.', 'ก.ย.', 'ต.ค.', 'พ.ย.', 'ธ.ค.']
 
 
@@ -1107,6 +1162,12 @@ def main():
         print('❌  เจนไม่สำเร็จ %d คน:' % len(failed))
         for who, err in failed[:10]:
             print('       %s — %s' % (who, err))
+
+    # ── ขั้นที่ 2.5: หน้าส่งต่อจาก URL เก่า → หน้าปัจจุบัน ──
+    # (เดิมหน้านักมวยตั้งชื่อไฟล์ตาม id ภาษาไทย ต่อมาเปลี่ยนเป็น slug — Google ยังเก็บ URL เก่าไว้)
+    n_alias = write_alias_pages(fighters, written) if not failed else 0
+    if n_alias:
+        print('↪️   หน้าส่งต่อจากลิงก์เก่า %d หน้า (ไปหน้านักมวยปัจจุบัน)' % n_alias)
 
     # ── ขั้นที่ 3: เจนครบแล้วค่อยเก็บกวาดหน้าที่ตกค้าง ──
     # (ถ้าลบก่อนแล้วสคริปต์พังกลางทาง หน้าเก่าจะหายเกลี้ยงโฟลเดอร์)

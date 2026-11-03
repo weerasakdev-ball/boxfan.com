@@ -1,12 +1,170 @@
 {
+  "redirects": [
+    {
+      "source": "/weight-classes.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "div",
+          "value": "atom"
+        }
+      ],
+      "destination": "/rankings-atomweight.html",
+      "permanent": true
+    },
+    {
+      "source": "/weight-classes.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "div",
+          "value": "straw"
+        }
+      ],
+      "destination": "/rankings-strawweight.html",
+      "permanent": true
+    },
+    {
+      "source": "/weight-classes.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "div",
+          "value": "fly"
+        }
+      ],
+      "destination": "/rankings-flyweight.html",
+      "permanent": true
+    },
+    {
+      "source": "/weight-classes.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "div",
+          "value": "bantam"
+        }
+      ],
+      "destination": "/rankings-bantamweight.html",
+      "permanent": true
+    },
+    {
+      "source": "/weight-classes.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "div",
+          "value": "feather"
+        }
+      ],
+      "destination": "/rankings-featherweight.html",
+      "permanent": true
+    },
+    {
+      "source": "/weight-classes.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "div",
+          "value": "light"
+        }
+      ],
+      "destination": "/rankings-lightweight.html",
+      "permanent": true
+    },
+    {
+      "source": "/weight-classes.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "div",
+          "value": "welter"
+        }
+      ],
+      "destination": "/rankings-welterweight.html",
+      "permanent": true
+    },
+    {
+      "source": "/weight-classes.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "div",
+          "value": "middle"
+        }
+      ],
+      "destination": "/rankings-middleweight.html",
+      "permanent": true
+    },
+    {
+      "source": "/weight-classes.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "div",
+          "value": "lightheavy"
+        }
+      ],
+      "destination": "/rankings-light-heavyweight.html",
+      "permanent": true
+    },
+    {
+      "source": "/weight-classes.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "div",
+          "value": "heavy"
+        }
+      ],
+      "destination": "/rankings-heavyweight.html",
+      "permanent": true
+    },
+    {
+      "source": "/weight-classes.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "div",
+          "value": "catch"
+        }
+      ],
+      "destination": "/rankings-catchweight.html",
+      "permanent": true
+    },
+    {
+      "source": "/profile.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "name",
+          "value": "(?<slug>[A-Za-z0-9][A-Za-z0-9-]*)"
+        }
+      ],
+      "destination": "/fighters/:slug.html",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
-        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=(), payment=(), usb=()" }
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
+        }
       ]
     }
   ]
