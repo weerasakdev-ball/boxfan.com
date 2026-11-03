@@ -731,6 +731,11 @@ def generate(f, history, full_css, fighters_map):
 
     sc = build_score(past)
 
+    # หน้าที่ยังไม่มีเนื้อหา (ไม่มีไฟต์เลย ทั้งที่ชกแล้วและที่รอชก + ไม่มีประวัติ) → ไม่ให้ Google เก็บ
+    # หน้ายังเปิดดูได้ปกติ — พอเจ้าของเติมไฟต์/ประวัติ รอบหน้าจะกลับเป็น index เอง
+    # build_seo.py อ่านค่านี้เพื่อตัดหน้าออกจาก sitemap ด้วย
+    robots = 'index,follow' if (history or (f.get('biography') or '').strip()) else 'noindex,follow'
+
     # จำนวนวันนับจากไฟต์ล่าสุด
     days_rest = ''
     if past:
@@ -837,7 +842,7 @@ def generate(f, history, full_css, fighters_map):
 <title>{title}</title>
 <meta name="description" content="{desc}">
 <meta name="keywords" content="{name_th},{name_en},ONE Championship,{division},มวยไทย,Boxfan">
-<meta name="robots" content="index,follow">
+<meta name="robots" content="{robots}">
 <link rel="canonical" href="{canonical}">
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{desc}">
@@ -1070,6 +1075,8 @@ def main():
 
     print()
     print('✅  สร้าง %d หน้านักมวย (%d ไฟต์) → %s' % (len(written), total_fights, OUT))
+    n_hidden = sum(1 for f in fighters if not hmap.get(f.get('id')) and not (f.get('biography') or '').strip())
+    print('🙈  ยังไม่มีไฟต์/ประวัติ %d หน้า → ซ่อนจาก Google ไว้ก่อน (เติมข้อมูลแล้วจะกลับมาเอง)' % n_hidden)
 
     if failed:
         print('❌  เจนไม่สำเร็จ %d คน:' % len(failed))

@@ -38,6 +38,7 @@ import shutil
 import subprocess
 import sys
 import tempfile
+import time
 from concurrent.futures import ThreadPoolExecutor
 from datetime import date
 from pathlib import Path
@@ -284,7 +285,16 @@ def read(p):
 def write(p, text, crlf):
     if crlf:
         text = text.replace('\n', '\r\n')
-    p.write_bytes(text.encode('utf-8'))
+    data = text.encode('utf-8')
+    # Windows บางครั้งล็อกไฟล์ชั่วคราว (โปรแกรมสแกนไวรัส/ตัวค้นหาไฟล์) → รอแล้วลองใหม่
+    for attempt in range(10):
+        try:
+            p.write_bytes(data)
+            return
+        except OSError:
+            if attempt == 9:
+                raise
+            time.sleep(1)
 
 
 # ═══════════════════════════════════════════════════════════════════
@@ -361,6 +371,9 @@ def prerender(browser, rel, spec):
     dom = dump_dom(browser, path)
     if '</html>' not in dom or len(dom) < 1000:
         return rel, None, ['เบราว์เซอร์ไม่ส่งผลลัพธ์กลับมา']
+    # เบราว์เซอร์ส่ง \r ติดมาในช่องว่าง → ถ้าคัดลอกกลับตรง ๆ ไฟล์จะมีบรรทัดว่างเพิ่มเท่าตัวทุกรอบ
+    # จึงแปลงเป็น \n และยุบบรรทัดว่างที่ติดกันเหลือบรรทัดเดียว (ช่องว่างระหว่างแท็ก ไม่มีผลกับหน้าตา)
+    dom = dom.replace('\r\n', '\n').replace('\r', '\n')
     warn, filled = [], 0
 
     for name in spec.get('marks', []):
@@ -368,7 +381,7 @@ def prerender(browser, rel, spec):
         if not got:
             warn.append('ไม่พบช่วง PR:%s ในหน้าที่รันแล้ว' % name)
             continue
-        content = dom[got[0]:got[1]]
+        content = re.sub(r'\n(?:[ \t]*\n)+', '\n', dom[got[0]:got[1]])
         mine = mark_span(src, name)
         if mine:
             src = src[:mine[0]] + content + src[mine[1]:]
@@ -406,6 +419,7 @@ def prerender(browser, rel, spec):
                     continue
         elif not content.strip():
             warn.append('#%s ว่างเปล่า' % elid)
+        content = re.sub(r'\n(?:[ \t]*\n)+', '\n', content)
         src = src[:mine[0]] + content + src[mine[1]:]
         filled += 1
 
@@ -425,7 +439,8 @@ MAIN_PAGES = ['', 'rankings.html', 'weight-classes.html', 'fighters.html', 'sche
 
 def is_noindex(p):
     try:
-        head = p.read_text(encoding='utf-8-sig', errors='replace')[:20000]
+        with open(p, 'rb') as fh:      # อ่านแค่ส่วนหัว (หน้านักมวยมี 2 หมื่นไฟล์ อ่านทั้งไฟล์จะช้า)
+            head = fh.read(20000).decode('utf-8', errors='replace')
     except OSError:
         return True
     return bool(re.search(r'<meta name="robots" content="[^"]*noindex', head))
@@ -476,7 +491,9 @@ def build_sitemap(fighters, history, meta, div_pages):
     from urllib.parse import quote
     for f in sorted(fighters, key=lambda x: x.get('slug') or ''):
         slug = f.get('slug')
-        if not slug or not (fdir / (slug + '.html')).exists():
+        page = fdir / (slug + '.html')
+        # หน้าที่ generate_profiles.py ตั้ง noindex (ยังไม่มีไฟต์/ประวัติ) ไม่ใส่ใน sitemap
+        if not slug or not page.exists() or is_noindex(page):
             continue
         lm = min(last.get(f.get('id'), gen) or gen, gen)
         add('%s/fighters/%s.html' % (SITE, quote(slug, safe='-._~')), lm)
