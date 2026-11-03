@@ -17,6 +17,14 @@
         new MutationObserver(forceLight).observe(root, { attributes: true, attributeFilter: ['data-theme'] });
     } catch (e) {}
 
+    /* ลิงก์หน้าศึก — ต้องตรงกับ event_slug() ใน data/generate_profiles.py (build_events.py สร้างหน้า) */
+    window.bfEventHref = function (name, date) {
+        var s = String(name || '').trim().replace(/[<>:"\/\\|?*#%&\x00-\x1f]/g, '');
+        s = s.replace(/\s+/g, '-').replace(/^[-.]+|[-.]+$/g, '') || 'event';
+        /* Array.from นับอีโมจิเป็น 1 ตัวเหมือน Python (s[:80]) */
+        return '/events/' + encodeURIComponent(Array.from(s).slice(0, 80).join('') + '-' + String(date || '').slice(0, 10)) + '.html';
+    };
+
     function ready(fn) {
         if (document.readyState !== 'loading') fn();
         else document.addEventListener('DOMContentLoaded', fn);

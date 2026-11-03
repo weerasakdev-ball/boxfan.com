@@ -22,7 +22,7 @@ except Exception:
     pass
 
 ROOT = Path(__file__).resolve().parent
-VER = '1'   # เปลี่ยนเลขเมื่อแก้ site.css / site.js (ให้ผู้ใช้เก่าโหลดไฟล์ใหม่)
+VER = '3'   # เปลี่ยนเลขเมื่อแก้ site.css / site.js (ให้ผู้ใช้เก่าโหลดไฟล์ใหม่)
 
 # รุ่นน้ำหนัก — ต้องตรงกับ DIV_MAP ใน build_seo.py / utils.js
 DIVS = [
@@ -47,6 +47,7 @@ MENU = [
     ('ไฟต์', 'fights', [
         ('/schedule.html', 'วิเคราะห์มวยวันนี้', 'โปรแกรมชกและวิเคราะห์คู่มวย'),
         ('/results.html', 'ผลมวยล่าสุด', 'ผลการแข่งขันทุกไฟต์'),
+        ('/events/', 'รวมศึกทั้งหมด', 'ผลมวยและคู่ชกครบทุกศึก'),
     ]),
     ('เล่นสนุก', 'play', [
         ('/tierlist.html', 'Tier List นักมวย', 'จัดระดับนักมวยในดวงใจ แชร์ได้'),
@@ -61,7 +62,7 @@ FOOT_COLS = [
                 ('/RankingMuay.html', 'อันดับแบบกำหนดเอง'), ('/tierlist.html', 'Tier List')]),
     ('นักมวยและไฟต์', [('/fighters.html', 'รายชื่อนักมวย'), ('/stats.html', 'สถิตินักมวย'),
                       ('/compare.html', 'เปรียบเทียบนักมวย'), ('/schedule.html', 'วิเคราะห์มวยวันนี้'),
-                      ('/results.html', 'ผลมวยล่าสุด')]),
+                      ('/results.html', 'ผลมวยล่าสุด'), ('/events/', 'รวมศึกทั้งหมด')]),
     ('อ่านเพิ่ม', [('/blog/', 'บทความ'), ('/bracket.html', 'จัดสายมวย'), ('/my-ranking.html', 'อันดับของฉัน')]),
     ('เกี่ยวกับ', [('/about.html', 'เกี่ยวกับเรา'), ('/contact.html', 'ติดต่อเรา'),
                    ('/privacy.html', 'นโยบายความเป็นส่วนตัว'), ('/disclaimer.html', 'ข้อจำกัดความรับผิด')]),
@@ -70,7 +71,7 @@ FOOT_COLS = [
 # ลิงก์คำค้นยอดนิยม (ช่วย SEO ภายในเว็บ)
 FOOT_TAGS = [
     ('/schedule.html', 'วิเคราะห์มวยวันนี้'), ('/schedule.html', 'โปรแกรมมวยวันนี้'),
-    ('/results.html', 'ผลมวยล่าสุด'), ('/results.html', 'ผลมวย ONE ลุมพินี'),
+    ('/results.html', 'ผลมวยล่าสุด'), ('/events/', 'ผลมวย ONE ลุมพินี'),
     ('/rankings.html', 'อันดับนักมวย ONE'), ('/rankings.html', 'pound for pound มวยไทย'),
     ('/weight-classes.html', 'แชมป์โลก ONE มวยไทย'), ('/fighters.html', 'ประวัตินักมวย'),
     ('/stats.html', 'สถิตินักมวยไทย'), ('/compare.html', 'เปรียบเทียบนักมวย'),

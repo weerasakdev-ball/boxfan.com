@@ -662,7 +662,10 @@ def build_rows(fights, fighters_map):
         opp_name = h.get('opponent') or ''
         opp = esc(opp_name) or '—'
         fight_date = esc(h.get('date')) or '—'
-        event = esc(h.get('event')) or '—'
+        ev_raw = str(h.get('event') or '').strip()
+        # ชื่อศึก → ลิงก์ไปหน้ารวมศึก (build_events.py สร้าง events/<ชื่อ>-<วันที่>.html)
+        event = (('<a href="%s" style="color:inherit">%s</a>' % (event_href(ev_raw, h.get('date'), '../events/'), esc(ev_raw)))
+                 if ev_raw and h.get('date') else (esc(ev_raw) or '—'))
         decision = esc(h.get('decision'))
         rules = esc(h.get('rules'))
         rnd = h.get('round') or ''
@@ -759,6 +762,20 @@ def write_alias_pages(fighters, written):
     return n
 
 
+EVENT_BAD = re.compile(r'[<>:"/\\|?*#%&\x00-\x1f]')
+
+
+def event_slug(name, d):
+    """ชื่อไฟล์หน้าศึก — ใช้ร่วมกับ build_events.py (ชื่อศึก + วันที่ ไม่ซ้ำกันแน่นอน)"""
+    s = EVENT_BAD.sub('', str(name or '').strip())
+    s = re.sub(r'\s+', '-', s).strip('-.') or 'event'
+    return '%s-%s' % (s[:80], str(d or '')[:10])
+
+
+def event_href(name, d, prefix='/events/'):
+    return prefix + quote(event_slug(name, d), safe='') + '.html'
+
+
 TH_MONTHS = ['ม.ค.', 'ก.พ.', 'มี.ค.', 'เม.ย.', 'พ.ค.', 'มิ.ย.', 'ก.ค.', 'ส.ค.', 'ก.ย.', 'ต.ค.', 'พ.ย.', 'ธ.ค.']
 
 
@@ -769,6 +786,60 @@ def th_date(d):
         return '%d %s %d' % (dt.day, TH_MONTHS[dt.month - 1], dt.year + 543)
     except ValueError:
         return str(d or '')
+
+
+def body_facts(f):
+    """ส่วนสูง / น้ำหนัก / อายุ ที่มีจริง เช่น ['ส่วนสูง 183 ซม.', 'น้ำหนัก 70 กก.', 'อายุ 24 ปี']"""
+    out = []
+    if f.get('height_cm'):
+        out.append('ส่วนสูง %s ซม.' % f['height_cm'])
+    if f.get('weight_kg'):
+        out.append('น้ำหนัก %s กก.' % f['weight_kg'])
+    if f.get('age'):
+        out.append('อายุ %s ปี' % f['age'])
+    return out
+
+
+INFO_KEYS = ('team', 'country', 'division', 'nickname', 'height_cm', 'weight_kg', 'age')
+
+
+def has_content(f, history):
+    """หน้านี้มีข้อมูลพอให้ Google เก็บไหม (เจ้าของกำหนด 3 พ.ย. 2569):
+    มีไฟต์ (รวมนัดที่รอชก) / มีประวัติ / หรือมีข้อมูลอะไรก็ได้นอกจากชื่อ (ค่าย ประเทศ รุ่น ส่วนสูง น้ำหนัก อายุ)
+    มีแค่ชื่ออย่างเดียว = ยังไม่ส่ง Google (เติมข้อมูลเมื่อไรก็ขึ้นเอง)"""
+    if history or (f.get('biography') or '').strip():
+        return True
+    return any(f.get(k) not in (None, '', 0) for k in INFO_KEYS)
+
+
+# ค่าย -> นักมวยในค่าย (main() เติมให้) ใช้ทำส่วน "เพื่อนร่วมค่าย"
+TEAM_MAP = {}
+
+
+def teammates_html(f):
+    team = (f.get('team') or '').strip()
+    mates = [m for m in TEAM_MAP.get(team, []) if m is not f]
+    if not team or not mates:
+        return ''
+    mates = sorted(mates, key=lambda m: (-(m.get('total_fights') or 0), m.get('name_th') or ''))
+    shown = mates[:12]
+    items = []
+    for m in shown:
+        rec = ('%d-%d' % (m.get('total_wins') or 0, m.get('total_losses') or 0)) if m.get('total_fights') else ''
+        sub = ' · '.join(x for x in (rec, m.get('division') or '') if x)
+        items.append('<a href="%s" style="display:flex;align-items:center;gap:10px;padding:9px 10px;border:1px solid var(--line-2);'
+                     'border-radius:10px;background:var(--surf);text-decoration:none;color:var(--tx)">'
+                     '<img src="%s" alt="" loading="lazy" style="width:34px;height:34px;border-radius:50%%;object-fit:cover;'
+                     'background:var(--surf-2)" onerror="this.onerror=null;this.src=\'../images/noname1.png\'">'
+                     '<span style="min-width:0"><span style="display:block;font-size:13.5px;font-weight:700;line-height:1.35">%s</span>'
+                     '<span style="display:block;font-size:11.5px;color:var(--tx-3)">%s</span></span></a>'
+                     % (page_href(m), cimg(m.get('image_filename'), 'sm'), esc(m.get('name_th') or m.get('name_en')), esc(sub)))
+    more = (' และอีก %d คน' % (len(mates) - len(shown))) if len(mates) > len(shown) else ''
+    return ('<section style="margin-top:18px;padding:20px;background:var(--surf);border:1px solid var(--line-2);border-radius:11px">'
+            '<h2 style="margin:0 0 4px;font-size:16px;font-weight:800;color:var(--tx)">เพื่อนร่วมค่าย %s</h2>'
+            '<p style="margin:0 0 12px;font-size:13px;color:var(--tx-3)">นักมวยสังกัด %s ในฐานข้อมูล %d คน%s</p>'
+            '<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:8px">%s</div></section>'
+            % (esc(team), esc(team), len(mates) + 1, more, ''.join(items)))
 
 
 def seo_title_desc(f, past, up):
@@ -782,14 +853,27 @@ def seo_title_desc(f, past, up):
     d = f.get('total_draws', 0) or 0
     rec = '%d-%d' % (w, l) + ('-%d' % d if d else '')
 
+    body = body_facts(f)
     if past:
         title = '%s สถิติ %s ประวัติการชกล่าสุด | Boxfan' % (name, rec)
     elif up:
         title = '%s ไฟต์ถัดไป วิเคราะห์ก่อนชก | Boxfan' % name
+    elif body:
+        # ยังไม่มีไฟต์ แต่มีส่วนสูง/น้ำหนัก/อายุ — คนค้น "<ชื่อ> สูงเท่าไหร่" จะเจอ
+        title = '%s ส่วนสูง น้ำหนัก อายุ ประวัตินักมวย | Boxfan' % name
+    elif f.get('team'):
+        title = '%s ค่าย %s ประวัตินักมวย | Boxfan' % (name, str(f['team']).strip())
     else:
         title = '%s ประวัตินักมวย | Boxfan' % name
 
     if not past and not up:
+        extra = [str(x).strip() for x in (f.get('team') and 'ค่าย ' + str(f['team']).strip(),
+                                          f.get('country'), f.get('division') and 'รุ่น' + str(f['division'])) if x]
+        if body or extra:
+            n_mates = len(TEAM_MAP.get((f.get('team') or '').strip(), [])) - 1
+            tail = (' พร้อมเพื่อนร่วมค่าย %d คน' % n_mates) if n_mates > 0 else ''
+            return title, ('ข้อมูลนักมวย %s: %s — ดูประวัตินักมวย%s และอันดับล่าสุดที่ Boxfan'
+                           % (th, ' · '.join(body + extra), tail))
         return title, ('ข้อมูลนักมวย %s' % th + (' รุ่น%s' % f['division'] if f.get('division') else '')
                        + ' — ยังไม่มีประวัติการชกในระบบ ดูนักมวยคนอื่นและอันดับล่าสุดที่ Boxfan')
 
@@ -863,7 +947,7 @@ def generate(f, history, full_css, fighters_map):
     # หน้าที่ยังไม่มีเนื้อหา (ไม่มีไฟต์เลย ทั้งที่ชกแล้วและที่รอชก + ไม่มีประวัติ) → ไม่ให้ Google เก็บ
     # หน้ายังเปิดดูได้ปกติ — พอเจ้าของเติมไฟต์/ประวัติ รอบหน้าจะกลับเป็น index เอง
     # build_seo.py อ่านค่านี้เพื่อตัดหน้าออกจาก sitemap ด้วย
-    robots = 'index,follow' if (history or (f.get('biography') or '').strip()) else 'noindex,follow'
+    robots = 'index,follow' if has_content(f, history) else 'noindex,follow'
 
     # จำนวนวันนับจากไฟต์ล่าสุด
     days_rest = ''
@@ -1042,6 +1126,8 @@ def generate(f, history, full_css, fighters_map):
   <a class="back" href="../profile.html?id={fid}" style="margin-top:18px;background:var(--red);color:#fff;border-color:var(--red)">ดูข้อมูลเต็ม + เปรียบเทียบสถิติ →</a>
 
   {bio_html}
+
+  {teammates_html(f)}
 </div>
 
 {CHROME['footer']}
@@ -1131,6 +1217,13 @@ def main():
     check_uppercase(fighters)
 
     # แผนที่ ชื่อ -> นักมวย สำหรับหารูปและลิงก์ของคู่ต่อสู้
+    # ค่าย -> นักมวยในค่าย สำหรับส่วน "เพื่อนร่วมค่าย"
+    TEAM_MAP.clear()
+    for ff in fighters:
+        tm = (ff.get('team') or '').strip()
+        if tm:
+            TEAM_MAP.setdefault(tm, []).append(ff)
+
     fighters_map = {}
     for ff in fighters:
         for key in ('name_th', 'name_en'):
@@ -1143,20 +1236,32 @@ def main():
     # ── ขั้นที่ 2: เจนทุกหน้า (ยังไม่ลบอะไรทั้งนั้น) ──
     print('🏷️   โหมดตั้งชื่อไฟล์: %s' % FILENAME_MODE)
     written, failed = [], []
+    n_changed = 0
     for f in fighters:
         fname = '%s.html' % f['_page']
         try:
             content = generate(f, hmap.get(f.get('id'), []), full_css, fighters_map)
+            # เขียนเฉพาะหน้าที่เนื้อหาเปลี่ยน (ส่วนใหญ่เหมือนเดิม → เร็วขึ้นมาก และ Windows ล็อกไฟล์น้อยลง)
             # Windows ล็อกไฟล์ชั่วคราวได้ (สแกนไวรัส/ค้นหาไฟล์) → build_chrome.write_file รอแล้วลองใหม่
-            build_chrome.write_file(os.path.join(OUT, fname), content.encode('utf-8'))
+            data = content.encode('utf-8')
+            path = os.path.join(OUT, fname)
+            try:
+                with open(path, 'rb') as fh:
+                    same = fh.read() == data
+            except OSError:
+                same = False
+            if not same:
+                build_chrome.write_file(path, data)
+                n_changed += 1
             written.append((fname, f.get('name_th') or f.get('id')))
         except Exception as err:                       # noqa: BLE001 — คนเดียวพังไม่ควรล้มทั้งชุด
             failed.append((f.get('name_th') or f.get('id'), err))
 
     print()
-    print('✅  สร้าง %d หน้านักมวย (%d ไฟต์) → %s' % (len(written), total_fights, OUT))
-    n_hidden = sum(1 for f in fighters if not hmap.get(f.get('id')) and not (f.get('biography') or '').strip())
-    print('🙈  ยังไม่มีไฟต์/ประวัติ %d หน้า → ซ่อนจาก Google ไว้ก่อน (เติมข้อมูลแล้วจะกลับมาเอง)' % n_hidden)
+    print('✅  สร้าง %d หน้านักมวย (%d ไฟต์) → %s — เปลี่ยนจริง %d หน้า'
+          % (len(written), total_fights, OUT, n_changed))
+    n_hidden = sum(1 for f in fighters if not has_content(f, hmap.get(f.get('id'), [])))
+    print('🙈  มีแค่ชื่อ (ยังไม่มีไฟต์/ค่าย/ประเทศ/ส่วนสูง ฯลฯ) %d หน้า → ซ่อนจาก Google ไว้ก่อน (เติมข้อมูลแล้วจะกลับมาเอง)' % n_hidden)
 
     if failed:
         print('❌  เจนไม่สำเร็จ %d คน:' % len(failed))

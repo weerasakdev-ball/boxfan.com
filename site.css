@@ -216,7 +216,7 @@ html.bf-lock, html.bf-lock body{overflow:hidden}
 }
 
 /* ═══════════ ท้ายเว็บ ═══════════ */
-.bf-foot{background:#fff;border-top:1px solid var(--bf-line);margin-top:48px;color:var(--bf-text-2)}
+.bf-foot{background:#fff;border-top:1px solid var(--bf-line);margin-top:48px;color:var(--bf-text-2);text-align:left}
 .bf-foot-in{max-width:var(--bf-maxw);margin:0 auto;padding:40px 20px 28px}
 .bf-foot-grid{display:grid;grid-template-columns:1.4fr repeat(4,1fr);gap:28px}
 .bf-foot .bf-logo{color:var(--bf-ink)}
@@ -237,8 +237,15 @@ html.bf a{-webkit-tap-highlight-color:transparent}
 html.bf .card-hd, html.bf .tbl-hd{border-radius:var(--bf-r) var(--bf-r) 0 0}
 /* หน้าแรก: คอลัมน์ไม่ยืดตามแถบปุ่มศึกที่เลื่อนข้างได้ (เดิมทำให้มือถือกว้างเกินจอ) */
 html.bf .main-grid > *{min-width:0}
+/* หน้าแรก: ตารางคะแนนย้ายลงมาอยู่ใต้ "วิเคราะห์คู่เด่น" → ไม่ต้องเว้นที่ด้านบนเผื่อหัวเว็บแล้ว */
+html.bf #ranking.main-grid{padding-top:12px}
+html.bf #prediction.section{padding-top:36px}
+/* มือถือ: ไฟต์ที่กำลังจะมาถึงแสดง 3 คู่แรก (ที่เหลือกด "ดูทั้งหมด") ไม่ให้ดันตารางคะแนนลงไปไกล */
+@media (max-width:700px){html.bf #upcoming-grid > :nth-child(n+4){display:none}}
 /* แถบตัวกรอง/ปุ่ม: ขึ้นบรรทัดใหม่แทนการล้นจอบนมือถือ */
 html.bf .filter-bar, html.bf .tl-actions{flex-wrap:wrap}
 html.bf .filter-bar > *, html.bf .tl-actions > *{min-width:0;max-width:100%}
+/* ช่องพิมพ์ค้นหาในแถบตัวกรอง: ขยายเต็มที่ว่าง ไม่หดจนพิมพ์ไม่ได้ */
+html.bf .filter-bar > input, html.bf .filter-bar > .grow{flex:1 1 180px;min-width:140px}
 /* หน้า 404 */
 html.bf .err{color:var(--bf-accent)}

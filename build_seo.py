@@ -84,6 +84,7 @@ PAGES = {
         head=['jsonld-schedule'], marks=['chrome', 'foot']),
     'blog/index.html': dict(ids=['count-bar', 'article-grid', 'yr-ft']),
     'about.html': dict(ids=['ab-fighters', 'ab-matches', 'ab-countries', 'yr-ft']),
+    'compare.html': dict(ids=['cmp-pop']),   # คู่มวยน่าจับตา (ลิงก์เทียบสถิติคู่ที่กำลังจะชก)
 }
 DIV_PAGE_SPEC = dict(ids=['crumb', 'wc-title', 'wc-sub', 'wc-content', 'f-year'], head=['jsonld-div'])
 
@@ -498,6 +499,17 @@ def build_sitemap(fighters, history, meta, div_pages):
         lm = min(last.get(f.get('id'), gen) or gen, gen)
         add('%s/fighters/%s.html' % (SITE, quote(slug, safe='-._~')), lm)
         n_f += 1
+
+    # หน้าศึก (build_events.py) — เฉพาะศึกที่ไม่ได้ตั้ง noindex / lastmod = วันที่ของศึก (ไม่เกินวันอัปเดตข้อมูล)
+    edir = ROOT / 'events'
+    if edir.exists():
+        add('%s/events/' % SITE, gen)
+        for p in sorted(edir.glob('*.html')):
+            if p.name == 'index.html' or is_noindex(p):
+                continue
+            m = re.search(r'(\d{4}-\d{2}-\d{2})\.html$', p.name)
+            lm = min(m.group(1), gen) if m else gen
+            add('%s/events/%s' % (SITE, quote(p.name, safe='-._~')), lm)
 
     xml = ('<?xml version="1.0" encoding="UTF-8"?>\n'
            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n%s\n</urlset>\n' % '\n'.join(urls))
