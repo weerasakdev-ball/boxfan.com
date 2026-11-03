@@ -5,15 +5,19 @@ echo ═════════════════════════
 echo   BOXFAN — อัปเดตเว็บหลังแก้ข้อมูล
 echo ════════════════════════════════════════
 echo.
-echo [1/3] สร้างสารบัญนักมวย (data\fighters_index.js) ให้หน้าเว็บโหลดเร็ว
+echo [1/4] สร้างสารบัญนักมวย (data\fighters_index.js) ให้หน้าเว็บโหลดเร็ว
 python build_index.py
 if errorlevel 1 goto fail
 echo.
-echo [2/3] สร้างหน้าโปรไฟล์นักมวย (fighters\*.html)
+echo [2/4] ใส่เมนู/ท้ายเว็บ/ธีมแบบเดียวกันทุกหน้า
+python build_chrome.py
+if errorlevel 1 goto fail
+echo.
+echo [3/4] สร้างหน้าโปรไฟล์นักมวย (fighters\*.html)
 python data\generate_profiles.py
 if errorlevel 1 goto fail
 echo.
-echo [3/3] ฝังตารางอันดับ/ผลมวย/โปรแกรมชกลง HTML + หน้าแยกรุ่น + sitemap
+echo [4/4] ฝังตารางอันดับ/ผลมวย/โปรแกรมชกลง HTML + หน้าแยกรุ่น + sitemap
 python build_seo.py
 if errorlevel 1 goto fail
 echo.

@@ -33,6 +33,12 @@ import sys
 from datetime import date, datetime
 from urllib.parse import quote
 
+# เมนูบน/ท้ายเว็บ/ธีม — ใช้ชุดเดียวกับทุกหน้า (แก้ที่ build_chrome.py)
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+import build_chrome  # noqa: E402
+CHROME = {'head': build_chrome.head_html(), 'header': build_chrome.header_html(),
+          'footer': build_chrome.footer_html()}
+
 # ═══════════════════════════════════════════════════════════
 # ค่าตั้งต้น
 # ═══════════════════════════════════════════════════════════
@@ -835,7 +841,7 @@ def generate(f, history, full_css, fighters_map):
     name_en_html = ('<div class="hname-en">%s</div>' % name_en) if name_en else ''
 
     return f'''<!DOCTYPE html>
-<html lang="th" data-theme="light">
+<html lang="th" data-theme="light" class="bf">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -854,46 +860,14 @@ def generate(f, history, full_css, fighters_map):
 <meta name="twitter:card" content="summary_large_image">
 <script defer src="https://cloud.umami.is/script.js" data-website-id="40ec0b51-4f08-45be-801d-9cf01fc79260"></script>
 <script type="application/ld+json">{jsonld}</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+Thai:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 {full_css}
 {UPCOMING_CSS}
 </style>
+{CHROME['head']}
 </head>
 <body>
-
-<!-- UTIL BAR -->
-<div class="util-bar">
-  <a href="../about.html">เกี่ยวกับเรา</a>
-  <a href="../contact.html">ติดต่อเรา</a>
-  <a href="../blog/">บทความ</a>
-  <a href="../disclaimer.html">ข้อจำกัดความรับผิด</a>
-  <span class="util-bar-right">ข้อมูลโดยแฟนกีฬา · ไม่ใช่เว็บทางการ ONE Championship</span>
-</div>
-
-<!-- NAV -->
-<nav class="nav">
-  <a class="nav-logo" href="../index.html">
-    <img src="https://res.cloudinary.com/dia2yts2f/image/upload/v1779892068/ChatGPT_Image_22_%E0%B8%A1.%E0%B8%84._2569_19_38_45.png" alt="Boxfan" onerror="this.style.display='none'">
-    <div class="nav-logo-text">
-      <span class="logo-main"><span>BOX</span>FAN</span>
-      <span class="logo-sub">ผลมวยทุกสังเวียน</span>
-    </div>
-  </a>
-  <div class="nav-tabs">
-    <a class="nav-tab" href="../index.html">อันดับ</a>
-    <a class="nav-tab" href="../rankings.html">ตารางคะแนน</a>
-    <a class="nav-tab" href="../weight-classes.html">แยกตามรุ่น</a>
-    <a class="nav-tab" href="../{FIGHTERS_PAGE}">นักมวยทั้งหมด</a>
-    <a class="nav-tab" href="../schedule.html">โปรแกรมชก</a>
-    <a class="nav-tab" href="../results.html">ผลการแข่งขัน</a>
-    <a class="nav-tab" href="../compare.html">เปรียบเทียบ</a>
-    <a class="nav-tab" href="../blog/">บทความ</a>
-    <a class="nav-tab" href="../tierlist.html">Tier List</a>
-  </div>
-</nav>
+{CHROME['header']}
 
 <div class="page">
   <a class="back" href="../{FIGHTERS_PAGE}">← นักมวยทั้งหมด</a>
@@ -947,24 +921,7 @@ def generate(f, history, full_css, fighters_map):
   {bio_html}
 </div>
 
-<!-- FOOTER -->
-<footer style="border-top:1px solid var(--line);background:var(--footer-bg);margin-top:30px">
-  <div style="max-width:1100px;margin:0 auto;padding:30px 26px;text-align:center">
-    <div style="font-family:var(--sans);font-weight:800;font-size:24px;color:var(--tx);text-transform:uppercase">BOX<span style="color:var(--red)">FAN</span></div>
-    <div style="font-size:10px;color:var(--tx-4);font-weight:700;letter-spacing:.26em;text-transform:uppercase;margin-top:2px">ผลมวยทุกสังเวียน</div>
-    <div style="margin:16px 0 10px;display:flex;flex-wrap:wrap;justify-content:center;gap:8px 18px">
-      <a href="../about.html" style="font-size:13px;color:var(--tx-2);font-weight:500">เกี่ยวกับเรา</a>
-      <a href="../contact.html" style="font-size:13px;color:var(--tx-2);font-weight:500">ติดต่อเรา</a>
-      <a href="../privacy.html" style="font-size:13px;color:var(--tx-2);font-weight:500">นโยบายความเป็นส่วนตัว</a>
-      <a href="../disclaimer.html" style="font-size:13px;color:var(--tx-2);font-weight:500">ข้อจำกัดความรับผิด</a>
-    </div>
-    <div style="font-size:11.5px;color:var(--tx-4)">© {date.today().year} Boxfan · รวมผลมวยจากทุกรายการ บันทึกโดยแฟนมวย</div>
-  </div>
-</footer>
-
-<script>
-(function(){{try{{var s=localStorage.getItem('boxfan-theme');if(s==='dark')document.documentElement.setAttribute('data-theme','dark');}}catch(e){{}}}})();
-</script>
+{CHROME['footer']}
 </body>
 </html>'''
 
@@ -1067,8 +1024,8 @@ def main():
         fname = '%s.html' % f['_page']
         try:
             content = generate(f, hmap.get(f.get('id'), []), full_css, fighters_map)
-            with open(os.path.join(OUT, fname), 'w', encoding='utf-8', newline='\n') as fh:
-                fh.write(content)
+            # Windows ล็อกไฟล์ชั่วคราวได้ (สแกนไวรัส/ค้นหาไฟล์) → build_chrome.write_file รอแล้วลองใหม่
+            build_chrome.write_file(os.path.join(OUT, fname), content.encode('utf-8'))
             written.append((fname, f.get('name_th') or f.get('id')))
         except Exception as err:                       # noqa: BLE001 — คนเดียวพังไม่ควรล้มทั้งชุด
             failed.append((f.get('name_th') or f.get('id'), err))

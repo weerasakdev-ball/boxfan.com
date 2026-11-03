@@ -6,7 +6,7 @@
      - fighters_data.js / fighters_lite.js → stale-while-revalidate
                     (แสดงเวอร์ชัน cache ทันที + อัปเดตพื้นหลัง)
    ═══════════════════════════════════════════════════════════════ */
-const VERSION = 'boxfan-v2';   /* เปลี่ยนเลขทุกครั้งที่อยากล้างแคชของผู้ใช้ทั้งหมด */
+const VERSION = 'boxfan-v3';   /* เปลี่ยนเลขทุกครั้งที่อยากล้างแคชของผู้ใช้ทั้งหมด */
 const STATIC_CACHE = VERSION + '-static';
 const DATA_CACHE   = VERSION + '-data';
 

@@ -15,6 +15,7 @@
 2. เจ้าของแก้ข้อมูลเองด้วยโปรแกรม **Boxfan Studio** (`D:\โปรแกรมจัดการข้อมูลv1`, เปิดด้วย run_studio.bat)
    ข้อมูลดิบ = ไฟล์ JSON นักมวยละไฟล์ที่ `D:\data\data` → หน้า "ส่งออกข้อมูล" (export_json.py) เขียน `data/fighters_data.js`
 3. หน้าตาเว็บต้องเหมือนเดิม — งาน SEO/แก้บั๊ก ห้ามเปลี่ยนดีไซน์โดยไม่ได้ขอ
+   (3 พ.ย. 2569 เจ้าของขอธีมใหม่ "สะอาด อ่านง่าย ทันสมัย" ทั้งเว็บ + โลโก้เวทีมวย — ดูหัวข้อ "ธีมกลาง")
 4. คุยกับเจ้าของเป็นภาษาไทย สั้น ง่าย ไม่ใช้ศัพท์เทคนิค
 
 ---
@@ -26,8 +27,9 @@ export_json.py (นอกโฟลเดอร์)  →  data/fighters_data.js  
                                         │
           generate_profiles.bat  ───────┤
             [1] build_index.py            → data/fighters_index.js (สารบัญ ให้หน้าเบาโหลดแทนไฟล์เต็ม)
-            [2] data/generate_profiles.py → fighters/<slug>.html  (หน้านักมวย static 21,000+ หน้า)
-            [3] build_seo.py              → ฝังเนื้อหาที่ JS สร้างลงไฟล์ .html (prerender)
+            [2] build_chrome.py           → เมนูบน/ท้ายเว็บ/ธีม แบบเดียวกันใส่ทุกหน้า
+            [3] data/generate_profiles.py → fighters/<slug>.html  (หน้านักมวย static 21,000+ หน้า)
+            [4] build_seo.py              → ฝังเนื้อหาที่ JS สร้างลงไฟล์ .html (prerender)
                                             + rankings-<รุ่น>.html 11 หน้า + sitemap.xml + robots.txt
                                         │
           VS Code → commit → push GitHub (weerasakdev-ball/boxfan.com)  →  Vercel deploy อัตโนมัติ
@@ -43,6 +45,21 @@ export_json.py (นอกโฟลเดอร์)  →  data/fighters_data.js  
 (ไม่ต้องส่ง sitemap ใน Search Console ซ้ำ ส่งครั้งเดียวพอ)
 
 ---
+
+## ธีมกลาง (site.css / site.js / build_chrome.py)
+
+- **แก้เมนูบน / เมนูมือถือ / ท้ายเว็บ → แก้ `build_chrome.py` ที่เดียว** (MENU, FOOT_COLS, FOOT_TAGS)
+  แล้วรัน .bat — สคริปต์ใส่ HTML ระหว่าง `<!--BF:head|header|footer-->…<!--/BF:…-->` ทุกหน้า
+  (หน้านักมวยใช้ฟังก์ชันเดียวกันผ่าน `generate_profiles.py`) ลิงก์ขึ้นต้นด้วย `/` ทั้งหมด
+- **สี/ฟอนต์ → แก้ `:root` ใน `site.css`** (สีหลัก `--bf-accent` แดง, พื้น `--bf-bg`, ฟอนต์ Inter + Noto Sans Thai)
+  หน้าเก่ามีตัวแปรสีคนละชุด (index/boxfan-theme/boxfan-tokens/board-kit/style.css) → บล็อก `html.bf{…}`
+  ชี้ทุกชื่อเก่ามาที่สีใหม่ / หน้าที่มี `--gold-light` (แบบหน้าแรก) ได้ `data-skin="a"` = ทองกลายเป็นสีหลัก
+- เมนู/ท้ายเว็บเก่าของแต่ละหน้า **ยังอยู่ในไฟล์แต่ถูกซ่อนด้วย CSS** (JS เดิมอ้างถึงอยู่ ลบแล้วจะพัง)
+- **ธีมสว่างอย่างเดียว** — site.js บังคับ `data-theme="light"` (โหมดมืดของหน้าเก่าคนละแบบ ปิดไว้ก่อน)
+- แก้ site.css / site.js → เพิ่ม `VER` ใน build_chrome.py + เปลี่ยน `VERSION` ใน service-worker.js
+- build_chrome.py แก้ CSP ให้ Umami ส่งข้อมูลได้ (เดิมบล็อก gateway.umami.is → นับคนเข้าไม่ได้) และเติม Umami ให้หน้าที่ไม่มี
+- โลโก้ = `images/logo-96.png` / `logo-192.png` (ย่อจาก `logoboxingfandom.png` ของเจ้าของ)
+- หน้าใหม่: เพิ่มชื่อไฟล์ใน `pages()` ของ build_chrome.py (บทความใน blog/articles/ ได้เองอัตโนมัติ)
 
 ## สารบัญนักมวย (data/fighters_index.js)
 

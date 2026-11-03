@@ -1,0 +1,244 @@
+/* ═══════════════════════════════════════════════════════════════
+   BOXFAN — site.css  (ธีมกลางของทุกหน้า)
+   ─ สี/ฟอนต์/เมนูบน/ท้ายเว็บ อยู่ที่ไฟล์นี้ไฟล์เดียว
+   ─ เมนูบน + ท้ายเว็บ (HTML) ใส่ให้ทุกหน้าโดย build_chrome.py
+   ─ หน้าเก่ามีตัวแปรสีคนละชุด → ส่วน "แปลงสีเก่า" ด้านล่างชี้ทุกชื่อมาที่สีชุดเดียวกัน
+   แก้สีทั้งเว็บ: เปลี่ยนค่าใน :root ด้านล่างแค่ที่เดียว
+   ═══════════════════════════════════════════════════════════════ */
+
+:root{
+  --bf-font:'Inter','Noto Sans Thai',system-ui,-apple-system,'Segoe UI',sans-serif;
+
+  --bf-bg:#F5F6F8;        /* พื้นหลังหน้า */
+  --bf-surface:#FFFFFF;   /* การ์ด/กล่อง */
+  --bf-surface-2:#F0F2F5; /* กล่องรอง / แถวสลับ */
+  --bf-hover:#EEF1F5;
+  --bf-line:#E3E6EB;      /* เส้นขอบ */
+  --bf-line-2:#D0D5DD;
+
+  --bf-ink:#0F172A;       /* ตัวหนังสือหลัก / พื้นเข้ม */
+  --bf-text:#101828;
+  --bf-text-2:#475467;
+  --bf-text-3:#667085;
+  --bf-text-4:#98A2B3;
+
+  --bf-accent:#E31B23;    /* สีหลักของแบรนด์ (แดงมวยไทย) */
+  --bf-accent-600:#C2121A;
+  --bf-accent-soft:#FDECEC;
+
+  --bf-win:#079455;  --bf-win-soft:#E7F6EE;
+  --bf-loss:#D92D20; --bf-loss-soft:#FDECEA;
+  --bf-draw:#B54708; --bf-draw-soft:#FEF3E2;
+  --bf-blue:#1570EF; --bf-blue-soft:#EAF2FE;
+  --bf-gold:#C38B0A; --bf-gold-soft:#FDF4DC;
+
+  --bf-r:12px; --bf-r-sm:8px; --bf-r-lg:16px;
+  --bf-sh-1:0 1px 2px rgba(16,24,40,.05);
+  --bf-sh-2:0 1px 3px rgba(16,24,40,.08),0 1px 2px rgba(16,24,40,.04);
+  --bf-sh-3:0 8px 24px -6px rgba(16,24,40,.12);
+  --bf-maxw:1200px;
+  --bf-hdr-h:60px;
+}
+
+/* ═══════════ แปลงสีเก่า → สีชุดใหม่ (ทุกหน้า) ═══════════
+   html.bf มีน้ำหนักมากกว่า :root / [data-theme] ของไฟล์เก่า จึงชนะเสมอ */
+html.bf, html.bf[data-theme]{
+  color-scheme:light;
+  /* ใช้ร่วมหลายแบบ */
+  --bg:var(--bf-bg); --bg-2:var(--bf-surface-2);
+  --line:var(--bf-line); --line-2:var(--bf-line); --line-3:var(--bf-line-2); --line-strong:var(--bf-line-2);
+  --red:var(--bf-accent); --red-2:var(--bf-accent-600); --red-600:var(--bf-accent-600);
+  --red-soft:var(--bf-accent-soft); --red-line:rgba(227,27,35,.35);
+  --green:var(--bf-win); --green-soft:var(--bf-win-soft);
+  --blue:var(--bf-blue); --blue-soft:var(--bf-blue-soft); --blue-line:rgba(21,112,239,.35);
+  --gold:var(--bf-gold); --gold-soft:var(--bf-gold-soft); --gold-line:rgba(195,139,10,.4);
+  --win:var(--bf-win); --loss:var(--bf-loss); --draw:var(--bf-draw);
+  --sans:var(--bf-font); --display:var(--bf-font); --serif:var(--bf-font);
+
+  /* แบบ index / weight-classes */
+  --gold-light:#F5D27A; --gold-text:var(--bf-gold); --gold-dim:var(--bf-gold-soft);
+  --card:var(--bf-surface); --card-2:var(--bf-surface-2);
+  --text:var(--bf-text); --sub:var(--bf-text-2); --mute:var(--bf-text-3);
+  --shadow-card:var(--bf-sh-2); --shadow-lift:var(--bf-sh-3);
+  --hero-grad:linear-gradient(180deg,#FFFFFF 0%,var(--bf-bg) 100%);
+  --hero-title-grad:linear-gradient(180deg,var(--bf-ink),var(--bf-ink));
+  --hero-title-em:linear-gradient(90deg,var(--bf-accent),var(--bf-accent));
+  --hero-fighter:linear-gradient(200deg,#EEF1F5 0%,#DDE2E9 75%);
+  --glass-bg:rgba(255,255,255,.9);
+  --feat-grad:var(--bf-surface); --feat-fade:var(--bf-surface);
+  --media-grad:linear-gradient(200deg,#334155 0%,#0F172A 80%);
+  --btn-solid-bg:var(--bf-ink); --btn-solid-text:#fff;
+  --ghost-num:rgba(16,24,40,.05); --row-hover:var(--bf-hover); --badge-bg:rgba(15,23,42,.7);
+  --r-lg:var(--bf-r-lg); --r-md:var(--bf-r); --r-sm:var(--bf-r-sm);
+
+  /* แบบ boxfan-theme.css (rankings / fighters / results / schedule) */
+  --navy:var(--bf-ink); --navy-2:#020617; --navy-3:#1E293B;
+  --paper:var(--bf-surface); --surf:var(--bf-surface); --surf-2:var(--bf-surface-2); --surf-3:#E7EAEE;
+  --tx:var(--bf-text); --tx-2:var(--bf-text-2); --tx-3:var(--bf-text-3); --tx-4:var(--bf-text-4); --tx-inv:#fff;
+  --row-alt:#FAFBFC; --hover:var(--bf-hover);
+  --sh-1:var(--bf-sh-1); --sh-2:var(--bf-sh-2); --sh-3:var(--bf-sh-3); --sh-4:var(--bf-sh-3);
+  --skel-a:#E9ECF0; --skel-b:#F4F5F7;
+
+  /* แบบ boxfan-tokens.css / board-kit.css (มืดเป็นค่าเริ่ม) */
+  --glow-red:0 0 0 1px var(--red-line),0 6px 20px -8px rgba(227,27,35,.35);
+  --edge:none; --body-bg-a:transparent; --body-bg-b:transparent;
+  --theme-toggle-bg:var(--bf-surface-2); --theme-toggle-border:var(--bf-line); --theme-icon-color:var(--bf-text-2);
+
+  /* แบบ style.css (about / stats / blog / หน้านักมวย ฯลฯ) */
+  --dark:var(--bf-ink); --dark2:#1E293B;
+  --border:var(--bf-line); --border2:var(--bf-line-2);
+  --muted:var(--bf-text-3); --muted2:var(--bf-text-4);
+  --win-bg:var(--bf-win-soft); --loss-bg:var(--bf-loss-soft);
+  --upcoming:var(--bf-blue); --upcoming-bg:var(--bf-blue-soft);
+  --nc:var(--bf-draw); --nc-bg:var(--bf-draw-soft);
+}
+
+/* หน้าแบบหน้าแรก: สีทองเดิมคือสีหลัก → ใช้สีหลักใหม่แทน */
+html.bf[data-skin="a"]{
+  --gold:var(--bf-accent); --gold-light:#FF5A5F; --gold-text:var(--bf-accent); --gold-dim:var(--bf-accent-soft);
+}
+
+/* ═══════════ พื้นฐาน ═══════════ */
+html.bf body{
+  background:var(--bf-bg) !important;
+  color:var(--bf-text);
+  font-family:var(--bf-font) !important;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+/* ฟอนต์เดียวทั้งเว็บ (หน้าเก่ากำหนดฟอนต์ไว้หลายแบบ) */
+html.bf body :where(*:not(svg):not(svg *):not(code):not(pre):not(kbd)){font-family:var(--bf-font) !important}
+html.bf body{font-feature-settings:'tnum' 0}
+/* หัวข้อ: หน้าเก่าตั้งระยะบรรทัดไว้แคบสำหรับฟอนต์ตัวผอม → ภาษาไทยชนกัน */
+html.bf :is(h1,h2,.page-title,.tl-title,.blog-header-title,.art-title,.page-hero-title){line-height:1.25 !important}
+html.bf ::selection{background:rgba(227,27,35,.16)}
+html.bf :focus-visible{outline:2px solid var(--bf-accent);outline-offset:2px}
+
+/* ซ่อนเมนู/ท้ายเว็บแบบเก่าของทุกหน้า (เนื้อหาเดิมยังอยู่ครบ ใช้เมนูใหม่แทน) */
+html.bf body > header:not(.bf-hdr),
+html.bf .drawer-overlay, html.bf aside.drawer,
+html.bf .util, html.bf header.hdr, html.bf #bf-chrome nav.nav, html.bf nav.nav:not(.bf-nav),
+html.bf .util-bar, html.bf .search-panel,
+html.bf body > footer:not(.bf-foot), html.bf footer.foot, html.bf footer.site-footer, html.bf footer#ft,
+html.bf #nw{display:none !important}
+
+/* ═══════════ เมนูบน ═══════════ */
+.bf-skip{position:absolute;left:-999px;top:8px;z-index:1000;background:var(--bf-ink);color:#fff;padding:8px 14px;border-radius:8px}
+.bf-skip:focus{left:8px}
+.bf-hdr{position:sticky;top:0;z-index:900;background:rgba(255,255,255,.92);
+  -webkit-backdrop-filter:saturate(180%) blur(12px);backdrop-filter:saturate(180%) blur(12px);
+  border-bottom:1px solid var(--bf-line)}
+.bf-hdr-in{max-width:var(--bf-maxw);margin:0 auto;height:var(--bf-hdr-h);padding:0 20px;display:flex;align-items:center;gap:18px}
+.bf-logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--bf-ink);flex-shrink:0}
+.bf-logo-mark{width:36px;height:36px;border-radius:9px;display:block;background:#000;flex-shrink:0}
+.bf-logo-txt{display:flex;flex-direction:column;line-height:1}
+.bf-logo-txt b{font-weight:800;font-size:18px;letter-spacing:.2px}
+.bf-logo-txt b i{font-style:normal;color:var(--bf-accent)}
+.bf-logo-txt small{font-size:10.5px;color:var(--bf-text-3);font-weight:500;margin-top:3px;letter-spacing:.2px}
+
+.bf-nav{display:flex;align-items:center;gap:2px;flex:1;min-width:0}
+.bf-nav > a, .bf-dd-btn{display:flex;align-items:center;gap:4px;height:38px;padding:0 12px;border-radius:8px;
+  font-size:14.5px;font-weight:600;color:var(--bf-text-2);text-decoration:none;background:none;border:0;cursor:pointer;white-space:nowrap}
+.bf-nav > a:hover, .bf-dd-btn:hover, .bf-dd.open .bf-dd-btn{background:var(--bf-surface-2);color:var(--bf-ink)}
+.bf-nav [aria-current="page"], .bf-dd.cur .bf-dd-btn{color:var(--bf-accent)}
+.bf-dd{position:relative}
+.bf-dd-btn svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:2.2;transition:transform .15s}
+.bf-dd.open .bf-dd-btn svg{transform:rotate(180deg)}
+.bf-dd-menu{position:absolute;top:calc(100% + 6px);left:0;min-width:260px;background:#fff;border:1px solid var(--bf-line);
+  border-radius:var(--bf-r);box-shadow:var(--bf-sh-3);padding:6px;display:none}
+.bf-dd.open .bf-dd-menu{display:block}
+@media (hover:hover) and (min-width:961px){.bf-dd:hover .bf-dd-menu{display:block}}
+.bf-dd-menu a{display:block;padding:9px 12px;border-radius:8px;text-decoration:none;color:var(--bf-text)}
+.bf-dd-menu a:hover{background:var(--bf-surface-2)}
+.bf-dd-menu a b{display:block;font-size:14px;font-weight:600}
+.bf-dd-menu a span{display:block;font-size:12px;color:var(--bf-text-3);margin-top:1px}
+.bf-dd-menu a[aria-current="page"] b{color:var(--bf-accent)}
+.bf-dd-sep{height:1px;background:var(--bf-line);margin:6px 4px}
+.bf-dd-hd{font-size:11px;font-weight:700;color:var(--bf-text-4);text-transform:uppercase;letter-spacing:.6px;padding:6px 12px 2px}
+.bf-dd-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 2px}
+.bf-dd-grid a{padding:7px 12px;font-size:13.5px;font-weight:500}
+.bf-dd-menu.wide{min-width:340px}
+
+.bf-search{position:relative;margin-left:auto;flex:0 1 260px}
+.bf-search input{width:100%;height:38px;border:1px solid var(--bf-line);background:var(--bf-surface-2);border-radius:999px;
+  padding:0 14px 0 36px;font-size:14px;color:var(--bf-text);outline:none;transition:border-color .15s,background .15s}
+.bf-search input:focus{background:#fff;border-color:var(--bf-text-4)}
+.bf-search > svg{position:absolute;left:12px;top:50%;transform:translateY(-50%);width:16px;height:16px;fill:none;stroke:var(--bf-text-3);stroke-width:2.2;pointer-events:none}
+.bf-sdrop{position:absolute;top:calc(100% + 6px);left:0;right:0;background:#fff;border:1px solid var(--bf-line);border-radius:var(--bf-r);
+  box-shadow:var(--bf-sh-3);padding:6px;display:none;max-height:70vh;overflow:auto;min-width:280px}
+.bf-sdrop.show{display:block}
+.bf-sdrop a{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:8px;text-decoration:none;color:var(--bf-text)}
+.bf-sdrop a:hover, .bf-sdrop a.sel{background:var(--bf-surface-2)}
+.bf-sdrop img{width:34px;height:34px;border-radius:50%;object-fit:cover;background:var(--bf-surface-2);flex-shrink:0}
+.bf-sdrop .n{font-size:14px;font-weight:600;line-height:1.3}
+.bf-sdrop .m{font-size:12px;color:var(--bf-text-3)}
+.bf-sdrop .all{justify-content:center;font-size:13px;font-weight:600;color:var(--bf-accent)}
+
+.bf-icon-btn{display:none;width:40px;height:40px;border-radius:10px;border:0;background:none;color:var(--bf-ink);cursor:pointer;align-items:center;justify-content:center}
+.bf-icon-btn:hover{background:var(--bf-surface-2)}
+.bf-icon-btn svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2}
+.bf-hdr .bf-search .bf-search-open{display:none}
+
+/* เมนูมือถือ */
+.bf-drawer{position:fixed;inset:0;z-index:950;display:none}
+.bf-drawer.open{display:block}
+.bf-drawer-bg{position:absolute;inset:0;background:rgba(15,23,42,.45)}
+.bf-drawer-panel{position:absolute;top:0;right:0;bottom:0;width:min(340px,88vw);background:#fff;overflow-y:auto;
+  box-shadow:-8px 0 30px rgba(15,23,42,.18);display:flex;flex-direction:column}
+.bf-drawer-hd{display:flex;align-items:center;justify-content:space-between;padding:12px 12px 12px 20px;border-bottom:1px solid var(--bf-line)}
+.bf-drawer-hd b{font-size:16px}
+.bf-drawer-sec{padding:12px 12px 4px}
+.bf-drawer-sec h4{margin:0 0 4px;padding:0 8px;font-size:12px;font-weight:700;color:var(--bf-text-4);letter-spacing:.5px}
+.bf-drawer-sec a{display:flex;align-items:center;justify-content:space-between;padding:11px 8px;border-radius:8px;text-decoration:none;
+  color:var(--bf-text);font-size:15px;font-weight:500}
+.bf-drawer-sec a:hover{background:var(--bf-surface-2)}
+.bf-drawer-sec a[aria-current="page"]{color:var(--bf-accent);font-weight:700}
+.bf-drawer-sec a small{font-size:12px;color:var(--bf-text-4);font-weight:400}
+.bf-drawer-divs{display:grid;grid-template-columns:1fr 1fr;gap:2px}
+.bf-drawer-divs a{font-size:14px;padding:9px 8px}
+html.bf-lock, html.bf-lock body{overflow:hidden}
+
+@media (max-width:960px){
+  .bf-nav{display:none}
+  .bf-icon-btn{display:flex}
+  .bf-search{flex:1 1 auto;max-width:none}
+  .bf-hdr-in{gap:8px;padding:0 12px 0 16px}
+}
+@media (max-width:520px){
+  .bf-logo-txt small{display:none}
+  .bf-search:not(.open){flex:0 0 auto}
+  .bf-search:not(.open) input{display:none}
+  .bf-search:not(.open) > svg{display:none}
+  .bf-hdr .bf-search:not(.open) .bf-search-open{display:flex}
+  .bf-search.open{position:absolute;left:8px;right:8px;top:10px;z-index:5}
+  .bf-search.open .bf-search-open{display:none}
+  .bf-search.open input{height:40px;background:#fff;border-color:var(--bf-line-2);box-shadow:var(--bf-sh-3)}
+}
+
+/* ═══════════ ท้ายเว็บ ═══════════ */
+.bf-foot{background:#fff;border-top:1px solid var(--bf-line);margin-top:48px;color:var(--bf-text-2)}
+.bf-foot-in{max-width:var(--bf-maxw);margin:0 auto;padding:40px 20px 28px}
+.bf-foot-grid{display:grid;grid-template-columns:1.4fr repeat(4,1fr);gap:28px}
+.bf-foot .bf-logo{color:var(--bf-ink)}
+.bf-foot p{font-size:13.5px;line-height:1.7;margin:12px 0 0;max-width:340px}
+.bf-foot h5{margin:0 0 10px;font-size:13px;font-weight:700;color:var(--bf-ink)}
+.bf-foot ul{list-style:none;margin:0;padding:0}
+.bf-foot li{margin:0 0 7px}
+.bf-foot a{color:var(--bf-text-2);text-decoration:none;font-size:13.5px}
+.bf-foot a:hover{color:var(--bf-accent)}
+.bf-foot-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:28px;padding-top:20px;border-top:1px solid var(--bf-line)}
+.bf-foot-tags a{font-size:12px;color:var(--bf-text-3);background:var(--bf-surface-2);padding:4px 10px;border-radius:999px}
+.bf-foot-bot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;margin-top:20px;font-size:12.5px;color:var(--bf-text-4)}
+@media (max-width:860px){.bf-foot-grid{grid-template-columns:1fr 1fr}.bf-foot-brand{grid-column:1/-1}}
+
+/* ═══════════ เก็บงานหน้าเก่าให้เข้ากับธีม ═══════════ */
+html.bf a{-webkit-tap-highlight-color:transparent}
+/* หน้าแบบ boxfan-theme: ตัดแถบหัวตารางสีกรมท่าให้ดูสะอาดขึ้น */
+html.bf .card-hd, html.bf .tbl-hd{border-radius:var(--bf-r) var(--bf-r) 0 0}
+/* หน้าแรก: คอลัมน์ไม่ยืดตามแถบปุ่มศึกที่เลื่อนข้างได้ (เดิมทำให้มือถือกว้างเกินจอ) */
+html.bf .main-grid > *{min-width:0}
+/* แถบตัวกรอง/ปุ่ม: ขึ้นบรรทัดใหม่แทนการล้นจอบนมือถือ */
+html.bf .filter-bar, html.bf .tl-actions{flex-wrap:wrap}
+html.bf .filter-bar > *, html.bf .tl-actions > *{min-width:0;max-width:100%}
+/* หน้า 404 */
+html.bf .err{color:var(--bf-accent)}
