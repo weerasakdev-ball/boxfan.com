@@ -57,6 +57,18 @@
 .ev-idx b{display:block;font-size:14px;line-height:1.35}
 .ev-idx small{font-size:12px;color:var(--bf-text-3)}
 .ev-idx .up{color:var(--bf-accent);font-weight:700}
+.ev-vids{margin-top:16px;background:#fff;border:1px solid var(--bf-line);border-radius:var(--bf-r-lg);padding:16px}
+.ev-vids h2{margin:0 0 12px;font-size:17px;color:var(--bf-ink)}
+.ev-vid{margin:0 0 14px}
+.ev-vid:last-child{margin-bottom:0}
+.ev-yt,.ev-ifr{position:relative;display:block;width:100%;aspect-ratio:16/9;border:0;border-radius:10px;overflow:hidden;background:#000}
+.ev-yt img{width:100%;height:100%;object-fit:cover;display:block;opacity:.92}
+.ev-play{position:absolute;left:50%;top:50%;width:68px;height:48px;margin:-24px 0 0 -34px;border-radius:12px;background:var(--bf-accent);box-shadow:0 6px 20px rgba(0,0,0,.35)}
+.ev-play::after{content:"";position:absolute;left:28px;top:14px;border-style:solid;border-width:10px 0 10px 16px;border-color:transparent transparent transparent #fff}
+.ev-yt:hover .ev-play{transform:scale(1.06)}
+.ev-vid figcaption{font-size:12px;color:var(--bf-text-3);margin-top:6px}
+.ev-vid figcaption a{color:var(--bf-accent);font-weight:600}
+.ev-bvid{grid-column:1/-1;max-width:420px;margin:4px auto 0;width:100%}
 .ev-filter{width:100%;height:42px;border:1px solid var(--bf-line);border-radius:999px;padding:0 16px;font-size:14px;margin-top:14px;background:#fff}
 @media(max-width:560px){
   .ev-row{grid-template-columns:1fr;gap:8px}

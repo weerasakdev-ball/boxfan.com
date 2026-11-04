@@ -80,6 +80,19 @@ export_json.py (นอกโฟลเดอร์)  →  data/fighters_data.js  
 - ข้อมูลบางศึกชื่อไม่ตรงกัน (เช่น "ONE ลุมพินี 176" กับ "… & The Inner Circle 36" วันเดียวกัน) → ได้ 2 หน้า
   แจ้งเจ้าของแก้ชื่อใน Boxfan Studio (ห้ามแก้ข้อมูลเอง)
 
+## บทความ (build_articles.py ← blog/source/*.md)
+
+- เจ้าของวาง .md ใน blog/source → หน้า blog/articles/th/<slug>.html ธีมใหม่ + สารบัญ + JSON-LD Article
+  + ภาพปกอัตโนมัติ images/blog/<slug>.jpg (Pillow, ฟอนต์ Leelawadee) + ใส่ articles.js ระหว่าง AUTO-ARTICLES
+- หัวไฟล์ --- title/excerpt/cat/author/date/slug/image --- / เลขอ้างอิงท้ายประโยค → sup ลิงก์ #ref-N
+  (ข้ามทศนิยม) / ต้องมี pip install markdown
+- บทความเก่า 12 เรื่องยังเป็น HTML แบบเดิม (ไม่ได้มาจาก blog/source)
+- **เครื่องมือเขียนบทความ:** `เขียนบทความ.bat` → `article_editor.py` (เซิร์ฟเวอร์ 127.0.0.1:8800 เท่านั้น, เสิร์ฟทั้งเว็บให้ดูตัวอย่าง)
+  + หน้า `editor/index.html` (ไม่ขึ้นเว็บ — อยู่ใน .vercelignore) — API: list/load/preview/save/delete
+  save = เขียน blog/source/<slug>.md (มี `editor: 1` → Enter ครั้งเดียว = ย่อหน้า) → build_articles.main() + build_seo.sitemap_only()
+  delete = ย้าย .md ไป blog/source/_ลบแล้ว → build_articles ลบหน้าที่มี meta generator boxfan-build-articles + ภาพปก
+  รูปในบทความใช้ลิงก์ (เจ้าของขอ ไม่อัปโหลด) / คลิป = ลิงก์ YouTube บรรทัดเดียว หรือ [youtube: ลิงก์]
+
 ## สารบัญนักมวย (data/fighters_index.js)
 
 - ไฟล์เต็ม ~36 MB มือถืออ่านช้า → `build_index.py` สร้างสารบัญ ~9 MB ทุกครั้งที่รัน .bat
@@ -109,6 +122,8 @@ export_json.py (นอกโฟลเดอร์)  →  data/fighters_data.js  
 - หาเบราว์เซอร์ไม่เจอ → ตั้งตัวแปร `BOXFAN_BROWSER` ให้ชี้ chrome.exe / msedge.exe
 - แปลง `\r` จาก DOM เป็น `\n` + ยุบบรรทัดว่างก่อนคัดลอก (เดิมทำให้ index.html มีบรรทัดว่างเพิ่มเท่าตัวทุกรอบ — แก้แล้ว 3 พ.ย. 2569)
 - `write()` ลองเขียนซ้ำสูงสุด 10 ครั้ง — Windows ล็อกไฟล์ชั่วคราวได้ (Errno 22)
+- `dump_dom()` ให้ Chrome เขียนผลลงไฟล์ชั่วคราว (ไม่ใช้ท่อ) + หมดเวลา 150 วิ/หน้า → ข้ามหน้านั้น
+  (4 พ.ย. 2569 เคยค้าง ~30 นาทีเพราะ Chrome ตัวลูกถือท่อไว้)
 - **ไม่ prerender `stats.html`** — ตัวเลขเป็นแอนิเมชันนับขึ้น ถ้าจับ DOM จะได้ค่าค้างครึ่งทาง
 
 ## เพิ่มหน้าใหม่ให้ Google เห็นเนื้อหา
@@ -161,7 +176,11 @@ export_json.py (นอกโฟลเดอร์)  →  data/fighters_data.js  
   และไม่มีข้อมูลอื่นเลย (INFO_KEYS: ค่าย ประเทศ รุ่น ชื่อเล่น ส่วนสูง น้ำหนัก อายุ) — เจ้าของสั่ง: มีแค่ชื่อ = ไม่ส่ง,
   มีข้อมูลอะไรก็ได้ = ส่ง (~7,500 หน้า) + ส่วน "เพื่อนร่วมค่าย" (TEAM_MAP) ให้หน้ามีเนื้อหา
   และ `build_seo.py` ตัดหน้า noindex ออกจาก sitemap (อ่านจาก meta robots ในไฟล์) — เติมข้อมูลแล้วกลับมาเอง
-- ยังไม่ได้ติดตั้ง AdSense (ไม่มี ads.txt, CSP ของ index.html ยังบล็อกสคริปต์ภายนอก, หน้าแรกไม่มี Umami)
+- **AdSense (เตรียมแล้ว 4 พ.ย. 2569):** เจ้าของวางรหัส ca-pub ใน `adsense.txt` → build_chrome ใส่สคริปต์ Auto ads
+  ใน BF:head ทุกหน้า (หน้านักมวย/หน้าศึกได้ผ่าน head_html) + เพิ่มโดเมนโฆษณาใน CSP (`AD_HOSTS`) + เขียน `ads.txt`
+  ไม่มีรหัส = ไม่ใส่อะไร / `utils.js adSlot()` (ช่องโฆษณาแบบกำหนดเองเดิม) ยังปิดอยู่ — ใช้ Auto ads แทน
+- **ไฮไลท์:** `highlights.txt` (ชื่อศึก | ลิงก์ YouTube | ชื่อนักมวย) → build_events ฝังคลิป (ภาพปก + กดแล้วโหลด
+  youtube-nocookie) + VideoObject JSON-LD / เฉพาะคลิปทางการ (ฝัง ไม่อัปโหลดเอง)
 - **URL เก่า → หน้าใหม่ (ทำแล้ว 3 พ.ย. 2569):**
   - `vercel.json` redirects: `weight-classes.html?div=<key>` → `rankings-<รุ่น>.html` (11 รุ่น),
     `profile.html?…&name=<slug>` → `fighters/<slug>.html`

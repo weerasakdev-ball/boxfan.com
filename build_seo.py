@@ -267,9 +267,17 @@ def dump_dom(browser, page_path):
            '--virtual-time-budget=%d' % WAIT_MS, '--dump-dom', url]
     if os.name != 'nt' and hasattr(os, 'geteuid') and os.geteuid() == 0:
         cmd.insert(1, '--no-sandbox')
+    # เขียนผลลงไฟล์ชั่วคราวแทนการต่อท่อ: ถ้า Chrome ค้าง ตัวลูกของมันจะถือท่อไว้จนสคริปต์รอไม่จบ
+    # (เคยค้างเกือบ 30 นาที) — แบบนี้หมดเวลาแล้วข้ามหน้านั้นไปได้เลย
+    out_path = os.path.join(prof, 'dom.html')
     try:
-        r = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, timeout=180)
-        return r.stdout.decode('utf-8', errors='replace')
+        with open(out_path, 'wb') as fh:
+            try:
+                subprocess.run(cmd, stdout=fh, stderr=subprocess.DEVNULL, timeout=150)
+            except subprocess.TimeoutExpired:
+                return ''              # หน้านี้ข้ามไปก่อน (เนื้อหาเดิมในไฟล์ยังอยู่) — รอบหน้าจะลองใหม่
+        with open(out_path, 'rb') as fh:
+            return fh.read().decode('utf-8', errors='replace')
     finally:
         shutil.rmtree(prof, ignore_errors=True)
 
@@ -584,6 +592,14 @@ def main():
     if not ok:
         sys.exit('\n✗ มีบางหน้าทำไม่สำเร็จ — ดูข้อความด้านบน')
     print('\nเสร็จแล้ว ✓  ตรวจหน้าเว็บในเครื่องแล้ว push ขึ้นเว็บได้เลย')
+
+
+def sitemap_only():
+    """อัปเดตเฉพาะ sitemap.xml (เร็ว ไม่ต้องเปิดเบราว์เซอร์) — เครื่องมือเขียนบทความเรียกหลังกดอัปบทความ"""
+    os.chdir(ROOT)
+    fighters, history, meta = load_data()
+    divs = [(div_file(en), key, th, en) for key, th, en, _ in DIV_MAP if (ROOT / div_file(en)).exists()]
+    return build_sitemap(fighters, history, meta, divs)
 
 
 if __name__ == '__main__':

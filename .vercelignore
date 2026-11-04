@@ -16,6 +16,9 @@ package-lock.json
 *.md
 project-structure.txt
 Robots*TXT
+# ไฟล์ตั้งค่าของเจ้าของ (build ใช้ ไม่ต้องขึ้นเว็บ) — ads.txt ที่สร้างจากนี้ยังขึ้นเว็บตามปกติ
+highlights.txt
+adsense.txt
 
 # เครื่องมือภายใน / แม่แบบ
 db-extractor.html
@@ -28,3 +31,6 @@ _redirects
 data/fighters_lite.js
 data/*.db
 *.bak
+# เครื่องมือเขียนบทความ (ใช้ในเครื่องเท่านั้น)
+editor/
+blog/source/

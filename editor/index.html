@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="th" class="bf" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>เขียนบทความ — Boxfan</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" type="image/png" href="/images/logo-192.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Thai:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/site.css">
+<link rel="stylesheet" href="/api/article-css">
+<style>
+  body{margin:0}
+  .ed-top{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--bf-line)}
+  .ed-top-in{max-width:1400px;margin:0 auto;padding:10px 18px;display:flex;align-items:center;gap:12px}
+  .ed-top img{width:34px;height:34px;border-radius:8px}
+  .ed-top-in{flex-wrap:wrap}
+  .ed-top b{font-size:16px;white-space:nowrap}
+  #pick{max-width:260px}
+  @media(max-width:1100px){.ed-top small{display:none}}
+  .ed-top small{color:var(--bf-text-3);font-size:12px;display:block}
+  .ed-sp{flex:1}
+  .btn{height:38px;padding:0 14px;border-radius:9px;border:1px solid var(--bf-line-2);background:#fff;font:600 14px var(--bf-font);color:var(--bf-text);cursor:pointer;display:inline-flex;align-items:center;gap:6px;text-decoration:none}
+  .btn:hover{border-color:var(--bf-text-4)}
+  .btn.primary{background:var(--bf-accent);border-color:var(--bf-accent);color:#fff}
+  .btn.primary:hover{background:var(--bf-accent-600)}
+  .btn.danger{color:var(--bf-loss)}
+  .btn:disabled{opacity:.55;cursor:default}
+  select.btn{padding-right:28px}
+  .ed-wrap{max-width:1400px;margin:0 auto;padding:16px 18px 60px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px;align-items:start}
+  .card{background:#fff;border:1px solid var(--bf-line);border-radius:14px;padding:16px}
+  .fld{margin-bottom:12px}
+  .fld label{display:block;font-size:13px;font-weight:700;color:var(--bf-text-2);margin-bottom:5px}
+  .fld label span{font-weight:400;color:var(--bf-text-4)}
+  .inp,.ta{width:100%;box-sizing:border-box;border:1px solid var(--bf-line-2);border-radius:9px;padding:9px 12px;font:15px/1.6 var(--bf-font);color:var(--bf-text);background:#fff;outline:none}
+  .inp:focus,.ta:focus{border-color:var(--bf-accent)}
+  .inp.title{font-size:20px;font-weight:700}
+  .row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
+  .cnt{font-size:11.5px;color:var(--bf-text-4);text-align:right;margin-top:2px}
+  .tools{display:flex;flex-wrap:wrap;gap:6px;padding:8px;border:1px solid var(--bf-line-2);border-bottom:0;border-radius:9px 9px 0 0;background:var(--bf-surface-2)}
+  .tools button{height:32px;padding:0 10px;border-radius:7px;border:1px solid var(--bf-line-2);background:#fff;font:600 13px var(--bf-font);cursor:pointer;color:var(--bf-text)}
+  .tools button:hover{border-color:var(--bf-accent);color:var(--bf-accent)}
+  .body{min-height:520px;border-radius:0 0 9px 9px;resize:vertical;font-size:16px;line-height:1.8}
+  .help{font-size:12.5px;color:var(--bf-text-3);line-height:1.7;margin-top:8px}
+  .help code{background:var(--bf-surface-2);padding:1px 6px;border-radius:5px}
+  .pv-hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+  .pv-hd b{font-size:14px}
+  .pv-hd small{color:var(--bf-text-3)}
+  .preview{position:sticky;top:70px;max-height:calc(100vh - 90px);overflow:auto}
+  .pv-cover{width:100%;aspect-ratio:1200/630;object-fit:cover;border-radius:12px;background:var(--bf-ink);display:block;margin:10px 0 14px}
+  .pv-cover.auto{display:flex;align-items:center;justify-content:center;color:#fff;font-size:13px}
+  .pv h1{font-size:28px;line-height:1.3;margin:6px 0}
+  .pv .ar-cat{margin-top:4px}
+  .msg{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--bf-ink);color:#fff;padding:12px 18px;border-radius:12px;font-size:14px;box-shadow:var(--bf-sh-3);display:none;z-index:50;max-width:90vw}
+  .msg.show{display:block}
+  .msg.err{background:var(--bf-loss)}
+  .msg a{color:#fff;font-weight:700}
+  .status{font-size:12.5px;color:var(--bf-text-3)}
+  @media(max-width:1000px){.ed-wrap{grid-template-columns:1fr}.preview{position:static;max-height:none}.row{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="ed-top"><div class="ed-top-in">
+  <img src="/images/logo-96.png" alt="">
+  <div><b>เขียนบทความ Boxfan</b><small>เขียนเสร็จกด "อัปบทความ" → ตรวจในเว็บ → Commit + Push</small></div>
+  <div class="ed-sp"></div>
+  <span class="status" id="status"></span>
+  <select class="btn" id="pick" title="แก้บทความเดิม"><option value="">แก้บทความเดิม…</option></select>
+  <button class="btn" id="btn-new">+ บทความใหม่</button>
+  <a class="btn" href="/blog/" target="_blank">ดูหน้ารวมบทความ</a>
+</div></div>
+
+<main class="ed-wrap">
+  <section>
+    <div class="card">
+      <div class="fld"><label>ชื่อบทความ <span>(คำที่คนจะค้นใน Google)</span></label>
+        <input class="inp title" id="f-title" placeholder="เช่น ผลมวย ONE ลุมพินี 177 สรุปครบทุกคู่"></div>
+      <div class="fld"><label>คำโปรย <span>(1–2 บรรทัด ขึ้นในผลค้นหาและการ์ดบทความ)</span></label>
+        <textarea class="ta" id="f-excerpt" rows="2" maxlength="300"></textarea><div class="cnt" id="c-excerpt"></div></div>
+      <div class="row">
+        <div class="fld"><label>หมวด</label>
+          <select class="inp" id="f-cat"><option value="news">ข่าวสาร / วิเคราะห์</option><option value="technique">วิเคราะห์แทคติก</option><option value="gear">รีวิวอุปกรณ์</option></select></div>
+        <div class="fld"><label>ผู้เขียน</label><input class="inp" id="f-author" placeholder="Boxfan Editorial"></div>
+        <div class="fld"><label>วันที่</label><input class="inp" id="f-date" type="date"></div>
+      </div>
+      <div class="fld"><label>ลิงก์รูปปก <span>(ไม่ใส่ = ทำภาพปก Boxfan ให้เอง)</span></label>
+        <input class="inp" id="f-image" placeholder="https://..."></div>
+      <div class="fld"><label>ชื่อลิงก์ภาษาอังกฤษ <span>(ไม่ใส่ก็ได้ เช่น one-lumpinee-177-results)</span></label>
+        <input class="inp" id="f-slug" placeholder="one-lumpinee-177-results"></div>
+    </div>
+
+    <div class="card" style="margin-top:14px">
+      <div class="tools" id="tools">
+        <button data-a="h2" title="หัวข้อใหญ่ (ขึ้นในสารบัญ)">หัวข้อใหญ่</button>
+        <button data-a="h3">หัวข้อย่อย</button>
+        <button data-a="b"><b>ตัวหนา</b></button>
+        <button data-a="i"><i>ตัวเอียง</i></button>
+        <button data-a="ul">• รายการ</button>
+        <button data-a="ol">1. รายการ</button>
+        <button data-a="quote">❝ คำพูด</button>
+        <button data-a="link">🔗 ลิงก์</button>
+        <button data-a="img">🖼 รูป (ลิงก์)</button>
+        <button data-a="yt">▶ คลิป YouTube</button>
+        <button data-a="table">ตาราง</button>
+        <button data-a="hr">เส้นคั่น</button>
+      </div>
+      <textarea class="ta body" id="f-body" placeholder="พิมพ์เนื้อหาตรงนี้ได้เลย กด Enter = ขึ้นย่อหน้าใหม่&#10;&#10;ใช้ปุ่มด้านบนเพื่อทำหัวข้อ ตัวหนา ใส่รูป หรือใส่คลิป"></textarea>
+      <div class="help">
+        กด <b>Enter</b> = ขึ้นย่อหน้าใหม่ · หัวข้อใหญ่ใส่ <code>## </code> หน้าบรรทัด · ตัวหนา <code>**ข้อความ**</code> ·
+        รูป <code>![คำบรรยาย](ลิงก์รูป)</code> · คลิป วางลิงก์ YouTube ไว้บรรทัดเดียว ·
+        ระบบบันทึกร่างไว้ในเครื่องให้อัตโนมัติ (ปิดหน้าไปไม่หาย)
+      </div>
+    </div>
+
+    <div style="display:flex;gap:10px;margin-top:14px;flex-wrap:wrap">
+      <button class="btn primary" id="btn-save" style="height:46px;padding:0 22px;font-size:16px">⬆ อัปบทความ</button>
+      <a class="btn" id="btn-view" target="_blank" style="display:none;height:46px">เปิดดูบทความในเว็บ</a>
+      <span class="ed-sp"></span>
+      <button class="btn danger" id="btn-del" style="display:none;height:46px">ลบบทความนี้</button>
+    </div>
+  </section>
+
+  <aside class="card preview">
+    <div class="pv-hd"><b>ตัวอย่างหน้าตาจริง</b><small id="pv-meta"></small></div>
+    <div class="ar-wrap pv" style="padding:0;max-width:none">
+      <span class="ar-cat" id="pv-cat"></span>
+      <h1 id="pv-title">ชื่อบทความ</h1>
+      <div class="ar-meta" id="pv-by"></div>
+      <img class="pv-cover" id="pv-cover" alt="" style="display:none">
+      <div class="pv-cover auto" id="pv-auto">ภาพปก Boxfan (สร้างให้อัตโนมัติ)</div>
+      <div class="ar-body" id="pv-body"></div>
+    </div>
+  </aside>
+</main>
+
+<div class="msg" id="msg"></div>
+
+<script>
+(function(){
+  var $ = function(id){ return document.getElementById(id); };
+  var F = ['title','excerpt','cat','author','date','image','slug'];
+  var CATS = {news:'ข่าวสาร / วิเคราะห์', technique:'วิเคราะห์แทคติก', gear:'รีวิวอุปกรณ์'};
+  var current = '';          // slug ของบทความที่กำลังแก้ ('' = บทความใหม่)
+  var DRAFT = 'boxfan-editor-draft';
+
+  function today(){ var d=new Date(); return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0'); }
+  function toast(html, err, ms){
+    var m=$('msg'); m.innerHTML=html; m.className='msg show'+(err?' err':'');
+    clearTimeout(toast.t); toast.t=setTimeout(function(){ m.className='msg'; }, ms||4000);
+  }
+  function getMeta(){ var m={}; F.forEach(function(k){ m[k]=$('f-'+k).value; }); return m; }
+  function setForm(meta, body){
+    F.forEach(function(k){ $('f-'+k).value = meta[k] || ''; });
+    if(!$('f-date').value) $('f-date').value = today();
+    if(!$('f-cat').value) $('f-cat').value = 'news';
+    if(!$('f-author').value){ try{ $('f-author').value = localStorage.getItem('boxfan-editor-author')||''; }catch(e){} }
+    $('f-body').value = body || '';
+    $('btn-del').style.display = current ? '' : 'none';
+    $('btn-view').style.display = 'none';
+    $('f-slug').readOnly = false;
+    update();
+  }
+  function saveDraft(){
+    try{ localStorage.setItem(DRAFT, JSON.stringify({slug:current, meta:getMeta(), body:$('f-body').value})); }catch(e){}
+  }
+
+  /* ── ปุ่มเครื่องมือ ── */
+  function wrapSel(before, after, placeholder){
+    var ta=$('f-body'), s=ta.selectionStart, e=ta.selectionEnd, v=ta.value;
+    var sel=v.slice(s,e) || placeholder || '';
+    ta.value=v.slice(0,s)+before+sel+after+v.slice(e);
+    ta.focus(); ta.selectionStart=s+before.length; ta.selectionEnd=s+before.length+sel.length; update();
+  }
+  function lineStart(prefix){
+    var ta=$('f-body'), s=ta.selectionStart, e=ta.selectionEnd, v=ta.value;
+    var a=v.lastIndexOf('\n', s-1)+1, b=v.indexOf('\n', e); if(b<0) b=v.length;
+    var lines=v.slice(a,b).split('\n').map(function(l,i){ return (typeof prefix==='function'?prefix(i):prefix)+l.replace(/^(#{1,6}\s|[-*]\s|\d+\.\s|>\s)/,''); });
+    ta.value=v.slice(0,a)+lines.join('\n')+v.slice(b); ta.focus(); update();
+  }
+  function insertBlock(text){
+    var ta=$('f-body'), s=ta.selectionStart, v=ta.value;
+    var pre=(s>0 && v[s-1]!=='\n')?'\n':''; var post=(v[s]&&v[s]!=='\n')?'\n':'';
+    ta.value=v.slice(0,s)+pre+text+'\n'+post+v.slice(s); ta.focus(); ta.selectionStart=ta.selectionEnd=s+pre.length+text.length+1; update();
+  }
+  $('tools').addEventListener('click', function(ev){
+    var b=ev.target.closest('button'); if(!b) return;
+    var a=b.getAttribute('data-a');
+    if(a==='h2') lineStart('## ');
+    else if(a==='h3') lineStart('### ');
+    else if(a==='b') wrapSel('**','**','ตัวหนา');
+    else if(a==='i') wrapSel('*','*','ตัวเอียง');
+    else if(a==='ul') lineStart('- ');
+    else if(a==='ol') lineStart(function(i){ return (i+1)+'. '; });
+    else if(a==='quote') lineStart('> ');
+    else if(a==='link'){ var u=prompt('วางลิงก์ (https://...)'); if(u) wrapSel('[',']('+u.trim()+')','ข้อความลิงก์'); }
+    else if(a==='img'){
+      var src=prompt('วางลิงก์รูป (https://... ลงท้าย .jpg .png .webp)'); if(!src) return;
+      var cap=prompt('คำบรรยายใต้รูป (ไม่ใส่ก็ได้)')||''; insertBlock('!['+cap.trim()+']('+src.trim()+')');
+    }
+    else if(a==='yt'){ var y=prompt('วางลิงก์ YouTube'); if(y) insertBlock(y.trim()); }
+    else if(a==='table') insertBlock('| หัวข้อ 1 | หัวข้อ 2 | หัวข้อ 3 |\n| --- | --- | --- |\n| ข้อมูล | ข้อมูล | ข้อมูล |\n| ข้อมูล | ข้อมูล | ข้อมูล |');
+    else if(a==='hr') insertBlock('---');
+  });
+
+  /* ── ตัวอย่างหน้าตาจริง (ใช้ตัวแปลงเดียวกับตอนสร้างหน้าเว็บ) ── */
+  var pvTimer;
+  function update(){
+    saveDraft();
+    var m=getMeta();
+    $('pv-title').textContent = m.title || 'ชื่อบทความ';
+    $('pv-cat').textContent = CATS[m.cat] || 'บทความ';
+    $('pv-by').innerHTML = 'โดย <b></b> · <span></span>';
+    $('pv-by').querySelector('b').textContent = m.author || 'Boxfan Editorial';
+    $('pv-by').querySelector('span').textContent = m.date || '';
+    $('c-excerpt').textContent = (m.excerpt||'').length + '/300';
+    if(m.image){ $('pv-cover').src=m.image; $('pv-cover').style.display='block'; $('pv-auto').style.display='none'; }
+    else { $('pv-cover').style.display='none'; $('pv-auto').style.display='flex'; }
+    clearTimeout(pvTimer);
+    pvTimer=setTimeout(function(){
+      fetch('/api/preview',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({meta:m, body:$('f-body').value})})
+        .then(function(r){ return r.json(); })
+        .then(function(d){ if(d.html!==undefined){ $('pv-body').innerHTML=d.html; $('pv-meta').textContent='อ่านประมาณ '+d.minutes+' นาที · หัวข้อใหญ่ '+(d.toc||[]).length+' หัวข้อ'; } })
+        .catch(function(){ $('pv-meta').textContent='ต่อเครื่องมือไม่ได้ — เปิด เขียนบทความ.bat ใหม่'; });
+    }, 350);
+  }
+  ['f-title','f-excerpt','f-cat','f-author','f-date','f-image','f-slug','f-body'].forEach(function(id){ $(id).addEventListener('input', update); });
+  $('f-author').addEventListener('change', function(){ try{ localStorage.setItem('boxfan-editor-author', $('f-author').value); }catch(e){} });
+
+  /* ── รายการบทความเดิม ── */
+  function loadList(sel){
+    fetch('/api/list').then(function(r){ return r.json(); }).then(function(list){
+      var p=$('pick'); p.innerHTML='<option value="">แก้บทความเดิม…</option>';
+      list.forEach(function(a){ var o=document.createElement('option'); o.value=a.slug; o.textContent=a.date+' · '+a.title; p.appendChild(o); });
+      p.value = sel || '';
+    });
+  }
+  $('pick').addEventListener('change', function(){
+    var s=this.value; if(!s) return;
+    if($('f-body').value.trim() && !confirm('เปิดบทความนี้แทนที่สิ่งที่กำลังเขียน?')){ this.value=current; return; }
+    fetch('/api/load?slug='+encodeURIComponent(s)).then(function(r){ return r.json(); }).then(function(a){
+      if(a.error){ toast(a.error,true); return; }
+      current=s; setForm(a.meta, a.body); $('f-slug').value = a.meta.slug || s;
+      $('btn-view').href='/blog/articles/th/'+encodeURIComponent(a.meta.slug||s)+'.html'; $('btn-view').style.display='';
+      $('status').textContent='กำลังแก้: '+(a.meta.title||s);
+    });
+  });
+  $('btn-new').addEventListener('click', function(){
+    if($('f-body').value.trim() && !confirm('เริ่มบทความใหม่? (สิ่งที่เขียนอยู่จะหายถ้ายังไม่ได้อัป)')) return;
+    current=''; $('pick').value=''; $('status').textContent=''; setForm({date:today(), cat:'news'}, '');
+  });
+
+  /* ── อัปบทความ ── */
+  $('btn-save').addEventListener('click', function(){
+    var b=this, m=getMeta();
+    if(!m.title.trim()){ toast('ใส่ชื่อบทความก่อนครับ', true); $('f-title').focus(); return; }
+    if(!$('f-body').value.trim()){ toast('ยังไม่มีเนื้อหาครับ', true); $('f-body').focus(); return; }
+    b.disabled=true; b.textContent='กำลังอัป…';
+    fetch('/api/save',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({meta:m, body:$('f-body').value, old_slug:current})})
+      .then(function(r){ return r.json(); })
+      .then(function(d){
+        b.disabled=false; b.textContent='⬆ อัปบทความ';
+        if(d.error){ toast(d.error, true, 6000); return; }
+        current=d.slug; $('f-slug').value=d.slug; loadList(d.slug);
+        $('btn-view').href=d.url; $('btn-view').style.display=''; $('btn-del').style.display='';
+        $('status').textContent='อัปแล้ว: '+m.title;
+        toast('✓ อัปบทความแล้ว — <a href="'+d.url+'" target="_blank">เปิดดู</a> · ตรวจแล้ว Commit + Push ขึ้นเว็บ', false, 9000);
+      })
+      .catch(function(){ b.disabled=false; b.textContent='⬆ อัปบทความ'; toast('ต่อเครื่องมือไม่ได้ — เปิด เขียนบทความ.bat ใหม่', true); });
+  });
+  $('btn-del').addEventListener('click', function(){
+    if(!current || !confirm('ลบบทความนี้ออกจากเว็บ? (ไฟล์ย้ายไปเก็บใน blog/source/_ลบแล้ว กู้คืนได้)')) return;
+    fetch('/api/delete',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({slug:current})})
+      .then(function(r){ return r.json(); }).then(function(d){
+        if(d.error){ toast(d.error,true); return; }
+        toast('ลบแล้ว — Commit + Push เพื่อเอาออกจากเว็บจริง'); current=''; loadList(); setForm({date:today(), cat:'news'}, '');
+      });
+  });
+
+  /* ── เริ่มต้น: กู้ร่างที่ค้างไว้ ── */
+  var draft=null; try{ draft=JSON.parse(localStorage.getItem(DRAFT)||'null'); }catch(e){}
+  if(draft && (draft.body||'').trim()){ current=draft.slug||''; setForm(draft.meta||{}, draft.body); $('status').textContent='กู้ร่างที่เขียนค้างไว้'; }
+  else setForm({date:today(), cat:'news'}, '');
+  loadList(current);
+  window.addEventListener('beforeunload', saveDraft);
+})();
+</script>
+</body>
+</html>

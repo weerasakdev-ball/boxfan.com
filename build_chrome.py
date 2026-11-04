@@ -24,6 +24,33 @@ except Exception:
 ROOT = Path(__file__).resolve().parent
 VER = '3'   # เปลี่ยนเลขเมื่อแก้ site.css / site.js (ให้ผู้ใช้เก่าโหลดไฟล์ใหม่)
 
+
+# ═══ โฆษณา Google AdSense ═══
+# เจ้าของวางรหัส (ca-pub-ตัวเลข 16 หลัก) ในไฟล์ adsense.txt แล้วกด generate_profiles.bat
+#  → ใส่โค้ดโฆษณาอัตโนมัติ (Auto ads) ทุกหน้า + สร้าง ads.txt + เปิด CSP ให้โฆษณาแสดงได้
+#  ไม่มีรหัส/ไฟล์ว่าง = ไม่ใส่โฆษณา (เว็บทำงานปกติ)
+def read_adsense():
+    try:
+        txt = (ROOT / 'adsense.txt').read_text(encoding='utf-8-sig')
+    except OSError:
+        return ''
+    txt = '\n'.join(l for l in txt.splitlines() if not l.strip().startswith('#'))   # ข้ามหมายเหตุ
+    m = re.search(r'ca-pub-(\d{16})', txt) or re.search(r'pub-(\d{16})', txt)
+    return ('ca-pub-' + m.group(1)) if m else ''
+
+
+ADSENSE = read_adsense()
+AD_HOSTS = {
+    'script-src': ['https://pagead2.googlesyndication.com', 'https://*.googlesyndication.com', 'https://*.google.com',
+                   'https://*.googleadservices.com', 'https://*.doubleclick.net', 'https://*.gstatic.com',
+                   'https://fundingchoicesmessages.google.com'],
+    'connect-src': ['https://*.googlesyndication.com', 'https://*.google.com', 'https://*.doubleclick.net',
+                    'https://*.googleadservices.com', 'https://fundingchoicesmessages.google.com'],
+    'frame-src': ['https://*.googlesyndication.com', 'https://*.doubleclick.net', 'https://*.google.com',
+                  'https://www.youtube-nocookie.com'],
+    'img-src': ['https:'],
+}
+
 # รุ่นน้ำหนัก — ต้องตรงกับ DIV_MAP ใน build_seo.py / utils.js
 DIVS = [
     ('อะตอมเวท', 'atomweight'), ('สตรอว์เวท', 'strawweight'), ('ฟลายเวท', 'flyweight'),
@@ -94,7 +121,9 @@ def head_html():
             '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800'
             '&family=Noto+Sans+Thai:wght@400;500;600;700;800&display=swap">'
             '<link rel="stylesheet" href="/site.css?v=%s">'
-            '<script src="/site.js?v=%s"></script>' % (VER, VER))
+            '<script src="/site.js?v=%s"></script>' % (VER, VER)
+            + (('<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=%s" '
+                'crossorigin="anonymous"></script>' % ADSENSE) if ADSENSE else ''))
 
 
 def header_html():
@@ -175,9 +204,15 @@ def fix_csp(text):
                 for h in need:
                     if h not in d.split():
                         d += ' ' + h
+            if ADSENSE and name in AD_HOSTS:
+                for h in AD_HOSTS[name]:
+                    if h not in d.split():
+                        d += ' ' + h
             out.append(d)
         if 'connect-src' not in seen:
-            out.append("connect-src 'self' " + ' '.join(UMAMI_HOSTS))
+            out.append("connect-src 'self' " + ' '.join(UMAMI_HOSTS + (AD_HOSTS['connect-src'] if ADSENSE else [])))
+        if ADSENSE and 'frame-src' not in seen:
+            out.append("frame-src 'self' " + ' '.join(AD_HOSTS['frame-src']))
         return m.group(1) + '; '.join(out) + ';' + m.group(3)
     return re.sub(r'(<meta http-equiv="Content-Security-Policy" content=")([^"]*)(")', fix, text, count=1)
 
@@ -258,6 +293,13 @@ def main():
             write_file(p, new.encode('utf-8'))
         n += 1
     print('  ✓ ใส่เมนู/ท้ายเว็บ/ธีมแบบเดียวกันให้ %d หน้า' % n)
+    if ADSENSE:
+        # ads.txt — Google ใช้ยืนยันว่าเว็บนี้อนุญาตให้บัญชีนี้ขายโฆษณา
+        line = 'google.com, %s, DIRECT, f08c47fec0942fa0' % ADSENSE.replace('ca-', '') + chr(10)
+        write_file(ROOT / 'ads.txt', line.encode('utf-8'))
+        print('  ✓ โฆษณา AdSense เปิดแล้ว (%s) + ads.txt' % ADSENSE)
+    else:
+        print('  · ยังไม่ใส่โฆษณา (ยังไม่มีรหัสใน adsense.txt)')
 
 
 if __name__ == '__main__':

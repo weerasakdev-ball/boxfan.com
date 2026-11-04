@@ -48,6 +48,80 @@ def series_of(name):
 RES_TH = {'win': 'ชนะ', 'loss': 'แพ้', 'draw': 'เสมอ', 'nc': 'ไม่มีผล', 'cancelled': 'ยกเลิก', 'upcoming': 'รอชก'}
 
 
+# ═══════════════ ไฮไลท์ (highlights.txt) ═══════════════
+YT_ID = re.compile(r'(?:youtu\.be/|youtube\.com/(?:watch\?(?:.*&)?v=|shorts/|embed/|live/))([A-Za-z0-9_-]{11})')
+
+
+def read_highlights():
+    """อ่าน highlights.txt → [(บรรทัดที่, ชื่อศึก, วันที่หรือ None, video id, ชื่อนักมวยหรือ '')]"""
+    p = ROOT / 'highlights.txt'
+    out, bad = [], []
+    if not p.exists():
+        return out, bad
+    for n, line in enumerate(p.read_text(encoding='utf-8-sig').splitlines(), 1):
+        line = line.strip()
+        if not line or line.startswith('#'):
+            continue
+        parts = [x.strip() for x in line.split('|')]
+        if len(parts) < 2:
+            bad.append((n, 'ต้องมี | คั่นระหว่างชื่อศึกกับลิงก์'))
+            continue
+        m = YT_ID.search(parts[1])
+        if not m:
+            bad.append((n, 'ไม่ใช่ลิงก์ YouTube'))
+            continue
+        ev, d = parts[0], None
+        md = re.search(r'\s(\d{4}-\d{2}-\d{2})$', ev)
+        if md:
+            ev, d = ev[:md.start()].strip(), md.group(1)
+        out.append((n, ev, d, m.group(1), parts[2] if len(parts) > 2 else ''))
+    return out, bad
+
+
+def attach_highlights(events):
+    """ผูกคลิปเข้ากับศึก (และคู่ถ้าใส่ชื่อนักมวย) — คืนรายการบรรทัดที่หาศึก/คู่ไม่เจอ"""
+    rows, bad = read_highlights()
+    by_name = {}
+    for e in events.values():
+        by_name.setdefault(e['name'].strip().lower(), []).append(e)
+    for n, ev, d, vid, who in rows:
+        cands = by_name.get(ev.lower(), [])
+        if d:
+            cands = [e for e in cands if e['date'] == d]
+        if not cands:
+            bad.append((n, 'ไม่พบศึก "%s"%s' % (ev, (' วันที่ ' + d) if d else '')))
+            continue
+        e = max(cands, key=lambda x: x['date'])      # ชื่อซ้ำหลายวัน → ใช้ครั้งล่าสุด
+        if who:
+            w = who.lower()
+            hit = next((x for x in e['fights'] if w in (x['a'] or '').lower() or w in (x['b'] or '').lower()), None)
+            if not hit:
+                bad.append((n, 'ไม่พบนักมวย "%s" ในศึก %s' % (who, e['name'])))
+                continue
+            hit.setdefault('videos', []).append(vid)
+        else:
+            e.setdefault('videos', []).append(vid)
+    return bad
+
+
+def video_html(vid, label, small=False):
+    """ภาพปก + ปุ่มเล่น (กดแล้วค่อยโหลดคลิป — หน้าเว็บไม่ช้า) / ไม่มี JS = ลิงก์ไป YouTube"""
+    return ('<figure class="ev-vid%s"><a class="ev-yt" href="https://www.youtube.com/watch?v=%s" data-yt="%s" '
+            'target="_blank" rel="noopener" aria-label="เล่นวิดีโอ %s">'
+            '<img src="https://i.ytimg.com/vi/%s/hqdefault.jpg" alt="%s" loading="lazy" width="480" height="360">'
+            '<span class="ev-play" aria-hidden="true"></span></a>'
+            '<figcaption>%s · วิดีโอจาก YouTube · ลิขสิทธิ์เป็นของเจ้าของคลิป · '
+            '<a href="https://www.youtube.com/watch?v=%s" target="_blank" rel="noopener">ดูบน YouTube</a></figcaption></figure>'
+            % (' sm' if small else '', vid, vid, G.esc(label), vid, G.esc(label), G.esc(label), vid))
+
+
+VIDEO_JS = ('<script>document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest(".ev-yt");'
+            'if(!a)return;e.preventDefault();var f=document.createElement("iframe");'
+            'f.src="https://www.youtube-nocookie.com/embed/"+a.getAttribute("data-yt")+"?autoplay=1&rel=0";'
+            'f.title=a.getAttribute("aria-label")||"YouTube";f.allow="autoplay; encrypted-media; picture-in-picture; fullscreen";'
+            'f.allowFullscreen=true;f.className="ev-ifr";a.replaceWith(f);});</script>')
+
+
 def collect():
     path = str(ROOT / 'data' / 'fighters_data.js')
     if not os.path.exists(path):
@@ -145,11 +219,13 @@ def fight_row(x, upcoming):
         '<div class="ev-side%s">%s<div><div class="ev-nm">%s</div></div></div>'
         '<div class="ev-mid">%s</div>'
         '<div class="ev-side r">%s<div><div class="ev-nm">%s</div></div></div>'
-        '<div class="ev-meta">%s%s%s</div>'
+        '<div class="ev-meta">%s%s%s</div>%s'
         '</div>'
         % (win_cls, avatar(x['a_f']), fighter_link(x['a'], x['a_f']), mid,
            avatar(x['b_f']), fighter_link(x['b'], x['b_f']),
-           G.esc(' · '.join(m for m in meta if m)), (' · ' + how) if how else '', cta)
+           G.esc(' · '.join(m for m in meta if m)), (' · ' + how) if how else '', cta,
+           ''.join('<div class="ev-bvid">%s</div>' % video_html(v, 'ไฮไลท์ %s vs %s' % (x['a'], x['b']), True)
+                   for v in x.get('videos', [])))
     )
 
 
@@ -194,6 +270,18 @@ CSS = '''
 .ev-idx b{display:block;font-size:14px;line-height:1.35}
 .ev-idx small{font-size:12px;color:var(--bf-text-3)}
 .ev-idx .up{color:var(--bf-accent);font-weight:700}
+.ev-vids{margin-top:16px;background:#fff;border:1px solid var(--bf-line);border-radius:var(--bf-r-lg);padding:16px}
+.ev-vids h2{margin:0 0 12px;font-size:17px;color:var(--bf-ink)}
+.ev-vid{margin:0 0 14px}
+.ev-vid:last-child{margin-bottom:0}
+.ev-yt,.ev-ifr{position:relative;display:block;width:100%;aspect-ratio:16/9;border:0;border-radius:10px;overflow:hidden;background:#000}
+.ev-yt img{width:100%;height:100%;object-fit:cover;display:block;opacity:.92}
+.ev-play{position:absolute;left:50%;top:50%;width:68px;height:48px;margin:-24px 0 0 -34px;border-radius:12px;background:var(--bf-accent);box-shadow:0 6px 20px rgba(0,0,0,.35)}
+.ev-play::after{content:"";position:absolute;left:28px;top:14px;border-style:solid;border-width:10px 0 10px 16px;border-color:transparent transparent transparent #fff}
+.ev-yt:hover .ev-play{transform:scale(1.06)}
+.ev-vid figcaption{font-size:12px;color:var(--bf-text-3);margin-top:6px}
+.ev-vid figcaption a{color:var(--bf-accent);font-weight:600}
+.ev-bvid{grid-column:1/-1;max-width:420px;margin:4px auto 0;width:100%}
 .ev-filter{width:100%;height:42px;border:1px solid var(--bf-line);border-radius:999px;padding:0 16px;font-size:14px;margin-top:14px;background:#fff}
 @media(max-width:560px){
   .ev-row{grid-template-columns:1fr;gap:8px}
@@ -272,12 +360,17 @@ def event_page(e, prev_e, next_e):
         '<div class="ev-crumb"><a href="/">หน้าแรก</a> › <a href="/events/">รวมศึกทั้งหมด</a> › %s</div>'
         '<section class="ev-hd"><div class="ev-kick">%s</div><h1>%s</h1><p>%s</p>'
         '<div class="ev-chips">%s</div></section>'
-        '<section class="ev-list" aria-label="รายการคู่ชก">%s</section>%s'
+        '%s<section class="ev-list" aria-label="รายการคู่ชก">%s</section>%s'
         '<p class="ev-more">ดูศึกอื่น ๆ ได้ที่ <a href="/events/">รวมศึกทั้งหมด</a> · '
         '<a href="/schedule.html">วิเคราะห์มวยวันนี้</a> · <a href="/results.html">ผลมวยล่าสุด</a></p>'
         % (name, kick, h1, lead, ''.join('<span class="ev-chip">%s</span>' % c for c in chips),
+           ('<section class="ev-vids" aria-label="ไฮไลท์"><h2>ไฮไลท์ %s</h2>%s</section>'
+            % (name, ''.join(video_html(v, 'ไฮไลท์ ' + e['name']) for v in e.get('videos', []))))
+           if e.get('videos') else '',
            ''.join(fight_row(x, up) for x in e['fights']), nav)
     )
+    if e.get('videos') or any(x.get('videos') for x in e['fights']):
+        body += VIDEO_JS
     competitors = []
     for x in e['fights']:
         for nm, f in ((x['a'], x['a_f']), (x['b'], x['b_f'])):
@@ -297,6 +390,14 @@ def event_page(e, prev_e, next_e):
             {'@type': 'ListItem', 'position': 2, 'name': 'รวมศึกทั้งหมด', 'item': SITE + '/events/'},
             {'@type': 'ListItem', 'position': 3, 'name': e['name'], 'item': url}]},
     ]}
+    vids = [(v, 'ไฮไลท์ ' + e['name']) for v in e.get('videos', [])]
+    vids += [(v, 'ไฮไลท์ %s vs %s — %s' % (x['a'], x['b'], e['name'])) for x in e['fights'] for v in x.get('videos', [])]
+    for v, label in vids:
+        ld['@graph'].append({'@type': 'VideoObject', 'name': label,
+                             'description': '%s วันที่ %s (วิดีโอจาก YouTube)' % (label, th_d),
+                             'thumbnailUrl': 'https://i.ytimg.com/vi/%s/hqdefault.jpg' % v,
+                             'uploadDate': e['date'], 'embedUrl': 'https://www.youtube.com/embed/' + v,
+                             'contentUrl': 'https://www.youtube.com/watch?v=' + v})
     robots = 'index,follow' if e['n'] >= MIN_FIGHTS else 'noindex,follow'
     return page(title, desc, url, robots, body, ld)
 
@@ -308,9 +409,11 @@ def index_page(events):
     past = [e for e in show if e['date'] < today]
 
     def card(e):
-        return ('<a href="%s" data-q="%s"><b>%s</b><small>%s · %d คู่%s</small></a>'
+        hl = e.get('videos') or any(x.get('videos') for x in e['fights'])
+        return ('<a href="%s" data-q="%s"><b>%s</b><small>%s · %d คู่%s%s</small></a>'
                 % (event_href(e['name'], e['date']), G.esc(e['name'].lower()), G.esc(e['name']),
-                   G.th_date(e['date']), e['n'], ' · <span class="up">กำลังจะมาถึง</span>' if e['date'] >= today else ''))
+                   G.th_date(e['date']), e['n'], ' · <span class="up">กำลังจะมาถึง</span>' if e['date'] >= today else '',
+                   ' · <span class="up">▶ มีไฮไลท์</span>' if hl else ''))
 
     body = ['<div class="ev-crumb"><a href="/">หน้าแรก</a> › รวมศึกทั้งหมด</div>',
             '<section class="ev-hd"><div class="ev-kick">ผลมวย · โปรแกรมมวย · ทุกรายการ</div>'
@@ -351,6 +454,8 @@ def index_page(events):
 
 def main():
     events, meta = collect()
+    bad = attach_highlights(events)
+    n_vid = sum(len(e.get('videos', [])) + sum(len(x.get('videos', [])) for x in e['fights']) for e in events.values())
     evs = list(events.values())
     # ครั้งก่อน/ถัดไปของรายการเดียวกัน (series)
     by_series = {}
@@ -389,6 +494,10 @@ def main():
         except OSError as err:
             print('  ⚠ ลบ events/%s ไม่ได้: %s' % (n, err))
     n_index = sum(1 for e in evs if e['n'] >= MIN_FIGHTS)
+    if n_vid or bad:
+        print('  ▶ ไฮไลท์ %d คลิป จาก highlights.txt' % n_vid)
+    for n, why in bad:
+        print('  ⚠ highlights.txt บรรทัด %d: %s (ข้ามบรรทัดนี้)' % (n, why))
     print('  ✓ หน้าศึก %d ศึก (ส่งให้ Google %d ศึกที่มีตั้งแต่ %d คู่) — เปลี่ยนจริง %d ไฟล์%s'
           % (len(evs), n_index, MIN_FIGHTS, changed, (' · ลบศึกที่ไม่มีแล้ว %d' % len(stale)) if stale else ''))
 
