@@ -259,14 +259,20 @@ def apply(text):
 def write_file(p, data):
     """เขียนไฟล์ — Windows บางครั้งล็อกไฟล์ชั่วคราว (สแกนไวรัส/เปิดดูอยู่) → รอแล้วลองใหม่"""
     import time
-    for attempt in range(10):
+    # รอสั้น ๆ ก่อน (ส่วนใหญ่ล็อกแค่เสี้ยววินาที) แล้วค่อยรอนานขึ้น — รวมรอได้สูงสุด ~10 วินาที
+    waits = [0.05, 0.1, 0.2, 0.3, 0.5, 0.8, 1, 1.5, 2, 3]
+    for attempt in range(len(waits) + 1):
         try:
             Path(p).write_bytes(data)
+            WRITE_STATS['retries'] += attempt
             return
         except OSError:
-            if attempt == 9:
+            if attempt == len(waits):
                 raise
-            time.sleep(1)
+            time.sleep(waits[attempt])
+
+
+WRITE_STATS = {'retries': 0}     # นับว่าโดน Windows ล็อกไฟล์กี่ครั้ง (ไว้รายงาน)
 
 
 def pages():

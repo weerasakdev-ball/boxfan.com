@@ -1,11 +1,11 @@
 // สร้างอัตโนมัติโดย export_json.py — อย่าแก้ไขไฟล์นี้ด้วยมือ
 // ที่มา: D:\data\data
-// เวลา: 2026-11-03 13:41:35
+// เวลา: 2026-11-05 22:52:53
 
 const META     = {
-  "generated_at": "2026-11-03 13:41:35",
-  "fighter_count": 21639,
-  "fight_count": 8075,
+  "generated_at": "2026-11-05 22:52:53",
+  "fighter_count": 21640,
+  "fight_count": 8079,
   "source_folder": "D:\\data\\data"
 };
 const FIGHTERS = [
@@ -8888,7 +8888,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-11-03",
+    "last_updated": "2026-11-05",
     "division": "แคชเวท",
     "nickname": null,
     "gender": "หญิง",
@@ -29786,7 +29786,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-11-03",
+    "last_updated": "2026-11-05",
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
@@ -37504,7 +37504,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-10-13",
+    "last_updated": "2026-11-05",
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
@@ -45052,10 +45052,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-11-05",
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 8,
     "record": {
       "win": 3,
@@ -70990,7 +70992,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-11-03",
+    "last_updated": "2026-11-05",
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
@@ -74818,7 +74820,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-11-03",
+    "last_updated": "2026-11-05",
     "division": "เวลเทอร์เวท",
     "nickname": "THE WARRIOR",
     "gender": "ชาย",
@@ -79356,7 +79358,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-11-03",
+    "last_updated": "2026-11-05",
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
@@ -81284,7 +81286,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-11-03",
+    "last_updated": "2026-11-05",
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": null,
@@ -90859,8 +90861,8 @@ const FIGHTERS = [
     "name_th": "จรวดศึก สจ.วิชิตแปดริ้ว",
     "name_en": "Jaruadsuk Sor Jor Wichitpadriew",
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 63.4,
+    "weight_lbs": 139.8,
     "height_cm": 175,
     "height_ft_in": "5'9\"",
     "country": "ไทย",
@@ -90892,10 +90894,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
-    "division": null,
+    "last_updated": "2026-11-05",
+    "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 2,
@@ -99845,8 +99849,8 @@ const FIGHTERS = [
     "name_th": "จอร์แดน ก็อดเฟรดเซน",
     "name_en": "Jordan Godtfredsen",
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 65.0,
+    "weight_lbs": 143.2,
     "height_cm": 181,
     "height_ft_in": "5'11\"",
     "country": "ออสเตรเลีย",
@@ -99878,10 +99882,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
-    "division": null,
+    "last_updated": "2026-11-05",
+    "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -109100,10 +109106,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
-    "division": null,
+    "last_updated": "2026-11-05",
+    "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -118963,8 +118971,8 @@ const FIGHTERS = [
     "name_th": "จ้าวอินทรีย์ พีเค.แสนชัย",
     "name_en": "Jaoinsee Pk Saenchai",
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 53.3,
+    "weight_lbs": 117.6,
     "height_cm": 164,
     "height_ft_in": "5'5\"",
     "country": "ไทย",
@@ -118996,10 +119004,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
-    "division": null,
+    "last_updated": "2026-11-05",
+    "division": "แคตช์เวต",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 1,
@@ -119586,7 +119596,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-08",
+    "last_updated": "2026-11-05",
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
@@ -130260,7 +130270,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-11-03",
+    "last_updated": "2026-11-05",
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
@@ -131351,8 +131361,8 @@ const FIGHTERS = [
     "name_th": "ชนะจน พีเค.แสนชัย",
     "name_en": "Chanajon Pk Saenchai",
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 76.7,
+    "weight_lbs": 169.0,
     "height_cm": 180,
     "height_ft_in": "5'11\"",
     "country": "ไทย",
@@ -131384,10 +131394,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
-    "division": null,
+    "last_updated": "2026-11-05",
+    "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 3,
@@ -143728,7 +143740,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-29",
+    "last_updated": "2026-11-05",
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
@@ -148307,8 +148319,8 @@ const FIGHTERS = [
     "name_th": "ชาลี สิงห์มาวิน",
     "name_en": null,
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 57.1,
+    "weight_lbs": 125.8,
     "height_cm": null,
     "height_ft_in": null,
     "country": null,
@@ -148340,19 +148352,19 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": null,
-    "division": null,
+    "last_updated": "2026-11-05",
+    "division": "แคตช์เวต",
     "nickname": null,
     "gender": null,
     "championship_status": null,
     "titles_history": null,
-    "fight_count": 0,
+    "fight_count": 1,
     "record": {
-      "win": 0,
+      "win": 1,
       "loss": 0,
       "draw": 0,
       "pending": 0,
-      "total": 0
+      "total": 1
     }
   },
   {
@@ -153058,10 +153070,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-11-05",
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -161359,8 +161373,8 @@ const FIGHTERS = [
     "name_th": "ซานซาร์ ซาคิรอฟ",
     "name_en": "Sanzhar Zakirov",
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 56.6,
+    "weight_lbs": 124.8,
     "height_cm": 170,
     "height_ft_in": "5'7\"",
     "country": "อุซเบกิสถาน",
@@ -161392,10 +161406,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-11-05",
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 8,
     "record": {
       "win": 7,
@@ -166096,7 +166112,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-11-03",
+    "last_updated": "2026-11-05",
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
@@ -166366,10 +166382,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-11-05",
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -172475,8 +172493,8 @@ const FIGHTERS = [
     "name_th": "ซุปเปอร์บอล ศิษย์ ช.",
     "name_en": null,
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 61.1,
+    "weight_lbs": 134.6,
     "height_cm": null,
     "height_ft_in": null,
     "country": null,
@@ -172508,7 +172526,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-11-03",
+    "last_updated": "2026-11-05",
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
@@ -183527,8 +183545,8 @@ const FIGHTERS = [
     "name_th": "ซูเลย์มาน ซูเลย์มานอฟ",
     "name_en": "Suleyman Suleymanov",
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 70.1,
+    "weight_lbs": 154.6,
     "height_cm": 177,
     "height_ft_in": "5'10\"",
     "country": "อาเซอร์ไบจาน",
@@ -183560,10 +183578,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
-    "division": null,
+    "last_updated": "2026-11-05",
+    "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -183934,10 +183954,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-11-05",
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 17,
     "record": {
       "win": 9,
@@ -189484,10 +189506,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
-    "division": null,
+    "last_updated": "2026-11-05",
+    "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -192330,7 +192354,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-11-03",
+    "last_updated": "2026-11-05",
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
@@ -205506,10 +205530,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-11-05",
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -217154,10 +217180,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-11-05",
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 1,
@@ -220066,10 +220094,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-11-05",
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 9,
     "record": {
       "win": 6,
@@ -235688,7 +235718,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-11-03",
+    "last_updated": "2026-11-05",
     "division": "ฟลายเวท",
     "nickname": "Elgalad",
     "gender": "ชาย",
@@ -245522,10 +245552,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
-    "division": null,
+    "last_updated": "2026-11-05",
+    "division": "แคตช์เวต",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -246222,10 +246254,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-11-05",
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -258412,10 +258446,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-11-05",
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -267882,10 +267918,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-11-05",
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -280241,8 +280279,8 @@ const FIGHTERS = [
     "name_th": "นูร์สุลตาน ท็อกโทรอฟ",
     "name_en": "Nursultan Toktorov",
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 69.9,
+    "weight_lbs": 154.0,
     "height_cm": 172,
     "height_ft_in": "5'8\"",
     "country": "คีร์กีซสถาน",
@@ -280274,10 +280312,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
-    "division": null,
+    "last_updated": "2026-11-05",
+    "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -283367,8 +283407,8 @@ const FIGHTERS = [
     "name_th": "น้องฟ้าใส ท็อป พีเค.แสนชัย",
     "name_en": "Nongfahsai Top Pk Saenchai",
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 50.6,
+    "weight_lbs": 111.6,
     "height_cm": 156,
     "height_ft_in": "5'1\"",
     "country": "ไทย",
@@ -283400,10 +283440,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
-    "division": null,
+    "last_updated": "2026-11-05",
+    "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "หญิง",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 3,
@@ -291547,8 +291589,8 @@ const FIGHTERS = [
     "name_th": "บรูโน เอซีสวีโด",
     "name_en": "Bruno Azevedo",
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 63.0,
+    "weight_lbs": 139.0,
     "height_cm": 166,
     "height_ft_in": "5'5\"",
     "country": "บราซิล",
@@ -291580,10 +291622,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
-    "division": null,
+    "last_updated": "2026-11-05",
+    "division": "แคตช์เวต",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -292679,8 +292723,8 @@ const FIGHTERS = [
     "name_th": "บอส ชยุตม์",
     "name_en": null,
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 65.5,
+    "weight_lbs": 144.4,
     "height_cm": null,
     "height_ft_in": null,
     "country": "ไทย",
@@ -292712,7 +292756,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-11-03",
+    "last_updated": "2026-11-05",
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
@@ -322336,10 +322380,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
-    "division": null,
+    "last_updated": "2026-11-05",
+    "division": "แคตช์เวต",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 2,
@@ -333544,10 +333590,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-11-05",
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -362023,8 +362071,8 @@ const FIGHTERS = [
     "name_th": "พัน เสื้อม่วง",
     "name_en": null,
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 61.2,
+    "weight_lbs": 135.0,
     "height_cm": null,
     "height_ft_in": null,
     "country": null,
@@ -362056,7 +362104,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-11-03",
+    "last_updated": "2026-11-05",
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": null,
@@ -367392,10 +367440,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-11-05",
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 8,
     "record": {
       "win": 7,
@@ -377838,10 +377888,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-11-05",
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -398486,10 +398538,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-11-05",
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 2,
@@ -404805,6 +404859,60 @@ const FIGHTERS = [
       "draw": 0,
       "pending": 0,
       "total": 0
+    }
+  },
+  {
+    "id": "มหาหิน-นักบินอะไหล่ยนต์",
+    "slug": "มหาหิน-นักบินอะไหล่ยนต์",
+    "name_th": "มหาหิน นักบินอะไหล่ยนต์",
+    "name_en": null,
+    "biography": "",
+    "weight_kg": 53.3,
+    "weight_lbs": 117.4,
+    "height_cm": null,
+    "height_ft_in": null,
+    "country": null,
+    "age": null,
+    "team": null,
+    "level": "",
+    "fight_purse": {
+      "amount_thb": null,
+      "currency": "THB",
+      "note": null
+    },
+    "market_value": {
+      "amount_thb": null,
+      "currency": "THB",
+      "note": null
+    },
+    "profile_url": null,
+    "thboxing_url": null,
+    "image_filename": "มหาหิน-นักบินอะไหล่ยนต์",
+    "strike_stats": {
+      "strikes_per_minute": {
+        "head": 0,
+        "body": 0,
+        "leg": 0
+      },
+      "overall_strikes": {
+        "head": 0,
+        "body": 0,
+        "leg": 0
+      }
+    },
+    "last_updated": "2026-11-05",
+    "division": "แคตช์เวต",
+    "nickname": null,
+    "gender": null,
+    "championship_status": null,
+    "titles_history": null,
+    "fight_count": 1,
+    "record": {
+      "win": 1,
+      "loss": 0,
+      "draw": 0,
+      "pending": 0,
+      "total": 1
     }
   },
   {
@@ -418531,8 +418639,8 @@ const FIGHTERS = [
     "name_th": "มารัตส์ ยันคอฟสกิส",
     "name_en": null,
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 61.0,
+    "weight_lbs": 134.4,
     "height_cm": null,
     "height_ft_in": null,
     "country": null,
@@ -418564,7 +418672,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-11-03",
+    "last_updated": "2026-11-05",
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": null,
@@ -424207,8 +424315,8 @@ const FIGHTERS = [
     "name_th": "มาเชจ์ คาร์ปินสกี",
     "name_en": "Maciej Karpinski",
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 76.9,
+    "weight_lbs": 169.6,
     "height_cm": 187,
     "height_ft_in": "6'2\"",
     "country": "โปแลนด์",
@@ -424240,7 +424348,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-11-03",
+    "last_updated": "2026-11-05",
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
@@ -425530,7 +425638,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-11-03",
+    "last_updated": "2026-11-05",
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
@@ -435572,10 +435680,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
-    "division": null,
+    "last_updated": "2026-11-05",
+    "division": "แคตช์เวต",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -437834,10 +437944,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
-    "division": null,
+    "last_updated": "2026-11-05",
+    "division": "แคตช์เวต",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -445245,8 +445357,8 @@ const FIGHTERS = [
     "name_th": "ยอดดอย แก้วสัมฤทธิ์",
     "name_en": "Yoddoi Kaewsamrit",
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 53.9,
+    "weight_lbs": 118.8,
     "height_cm": 160,
     "height_ft_in": "5'3\"",
     "country": "ไทย",
@@ -445278,10 +445390,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
-    "division": null,
+    "last_updated": "2026-11-05",
+    "division": "แคตช์เวต",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 7,
     "record": {
       "win": 2,
@@ -446248,10 +446362,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-11-05",
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 3,
@@ -454282,7 +454398,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-11-03",
+    "last_updated": "2026-11-05",
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
@@ -460187,8 +460303,8 @@ const FIGHTERS = [
     "name_th": "ยอดศิลป รถสวยจ่าเจต",
     "name_en": "Yodsinlapa Rodsuayjajed",
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 52.7,
+    "weight_lbs": 116.2,
     "height_cm": 164,
     "height_ft_in": "5'5\"",
     "country": "ไทย",
@@ -460220,10 +460336,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
-    "division": null,
+    "last_updated": "2026-11-05",
+    "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -485520,7 +485638,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-10-04",
+    "last_updated": "2026-11-05",
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
@@ -485595,8 +485713,8 @@ const FIGHTERS = [
     "name_th": "ยูโตะ",
     "name_en": null,
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 51.5,
+    "weight_lbs": 113.6,
     "height_cm": null,
     "height_ft_in": null,
     "country": null,
@@ -485628,7 +485746,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-11-03",
+    "last_updated": "2026-11-05",
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": null,
@@ -496192,10 +496310,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-11-05",
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -498255,8 +498375,8 @@ const FIGHTERS = [
     "name_th": "ราน หลงชู",
     "name_en": "Ran Longshu",
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 47.2,
+    "weight_lbs": 104.0,
     "height_cm": 157,
     "height_ft_in": "5'2\"",
     "country": "จีน",
@@ -498288,7 +498408,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-11-03",
+    "last_updated": "2026-11-05",
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "หญิง",
@@ -498361,8 +498481,8 @@ const FIGHTERS = [
     "name_th": "ราบินดรา ธานท์",
     "name_en": "Rabindra Dhant",
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 61.1,
+    "weight_lbs": 134.8,
     "height_cm": 176,
     "height_ft_in": "5'9\"",
     "country": "เนปาล",
@@ -498394,10 +498514,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
-    "division": null,
+    "last_updated": "2026-11-05",
+    "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -511588,10 +511710,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
-    "division": null,
+    "last_updated": "2026-11-05",
+    "division": "แคตช์เวต",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -522213,8 +522337,8 @@ const FIGHTERS = [
     "name_th": "ลอเรนโซ ดิ วารา",
     "name_en": "Lorenzo Di Vara",
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 69.8,
+    "weight_lbs": 153.8,
     "height_cm": 178,
     "height_ft_in": "5'10\"",
     "country": "อิตาลี",
@@ -522246,10 +522370,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
-    "division": null,
+    "last_updated": "2026-11-05",
+    "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -527959,8 +528085,8 @@ const FIGHTERS = [
     "name_th": "ลี ซัง ชัล",
     "name_en": null,
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 55.8,
+    "weight_lbs": 123.0,
     "height_cm": null,
     "height_ft_in": null,
     "country": null,
@@ -527992,18 +528118,18 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-11-03",
+    "last_updated": "2026-11-05",
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": null,
     "championship_status": null,
     "titles_history": null,
-    "fight_count": 1,
+    "fight_count": 2,
     "record": {
       "win": 0,
       "loss": 0,
       "draw": 0,
-      "pending": 1,
+      "pending": 2,
       "total": 0
     }
   },
@@ -529810,10 +529936,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
-    "division": null,
+    "last_updated": "2026-11-05",
+    "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 0,
@@ -573296,7 +573424,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-11-03",
+    "last_updated": "2026-11-05",
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
@@ -577795,8 +577923,8 @@ const FIGHTERS = [
     "name_th": "ศิริโชค ส.สมหมาย",
     "name_en": "Sirichok Sor Sommai",
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 58.5,
+    "weight_lbs": 129.0,
     "height_cm": 168,
     "height_ft_in": "5'6\"",
     "country": "ไทย",
@@ -577828,10 +577956,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
-    "division": null,
+    "last_updated": "2026-11-05",
+    "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 3,
@@ -580435,8 +580565,8 @@ const FIGHTERS = [
     "name_th": "ศิลาเพชร ป.เพชรไข่แก้ว",
     "name_en": "Silapet Por Petkaikaew",
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 57.2,
+    "weight_lbs": 126.0,
     "height_cm": 169,
     "height_ft_in": "5'7\"",
     "country": "ไทย",
@@ -580468,10 +580598,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
-    "division": null,
+    "last_updated": "2026-11-05",
+    "division": "แคตช์เวต",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -597608,10 +597740,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-11-05",
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 2,
@@ -610295,8 +610429,8 @@ const FIGHTERS = [
     "name_th": "สายเพชรเล็ก รองสมัคร อบจ.อุดรธานี",
     "name_en": null,
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 51.8,
+    "weight_lbs": 114.2,
     "height_cm": null,
     "height_ft_in": null,
     "country": null,
@@ -610328,7 +610462,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-11-03",
+    "last_updated": "2026-11-05",
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": null,
@@ -621407,8 +621541,8 @@ const FIGHTERS = [
     "name_th": "สิงห์มณี สุรศักดิ์มนตรี",
     "name_en": "Singmanee Surasakmontri",
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 54.1,
+    "weight_lbs": 119.2,
     "height_cm": 168,
     "height_ft_in": "5'6\"",
     "country": "ไทย",
@@ -621440,10 +621574,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
-    "division": null,
+    "last_updated": "2026-11-05",
+    "division": "แคตช์เวต",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -638092,7 +638228,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-10-13",
+    "last_updated": "2026-11-05",
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
@@ -659009,8 +659145,8 @@ const FIGHTERS = [
     "name_th": "หยู เกา",
     "name_en": "Yu Gao",
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 56.6,
+    "weight_lbs": 124.8,
     "height_cm": 164,
     "height_ft_in": "5'5\"",
     "country": "จีน",
@@ -659042,10 +659178,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
-    "division": null,
+    "last_updated": "2026-11-05",
+    "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -677333,8 +677471,8 @@ const FIGHTERS = [
     "name_th": "อภิสิทธิ์ แฟร์เท็กซ์",
     "name_en": "Apisit Fairtex",
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 63.1,
+    "weight_lbs": 139.2,
     "height_cm": 172,
     "height_ft_in": "5'8\"",
     "country": "ไทย",
@@ -677366,10 +677504,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
-    "division": null,
+    "last_updated": "2026-11-05",
+    "division": "แคตช์เวต",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -684670,10 +684810,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-11-05",
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -695108,10 +695250,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
-    "division": null,
+    "last_updated": "2026-11-05",
+    "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -707127,8 +707271,8 @@ const FIGHTERS = [
     "name_th": "อาเมียร์ เอล ดักคัก",
     "name_en": "Amir El Dakkak",
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 63.5,
+    "weight_lbs": 140.0,
     "height_cm": 178,
     "height_ft_in": "5'10\"",
     "country": "สวีเดน",
@@ -707160,10 +707304,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
-    "division": null,
+    "last_updated": "2026-11-05",
+    "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -716833,8 +716979,8 @@ const FIGHTERS = [
     "name_th": "อิสฟาก เซยิด",
     "name_en": "Isfak Seyid",
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 65.5,
+    "weight_lbs": 144.4,
     "height_cm": 170,
     "height_ft_in": "5'7\"",
     "country": "ตุรกี",
@@ -716866,10 +717012,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
-    "division": null,
+    "last_updated": "2026-11-05",
+    "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 2,
@@ -717575,8 +717723,8 @@ const FIGHTERS = [
     "name_th": "อิสเมล ข่าน",
     "name_en": "Ismail Khan",
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 61.1,
+    "weight_lbs": 134.8,
     "height_cm": 170,
     "height_ft_in": "5'7\"",
     "country": "ปากีสถาน",
@@ -717608,10 +717756,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
-    "division": null,
+    "last_updated": "2026-11-05",
+    "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 2,
@@ -720452,7 +720602,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-11-03",
+    "last_updated": "2026-11-05",
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
@@ -720990,10 +721140,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
-    "division": null,
+    "last_updated": "2026-11-05",
+    "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 2,
@@ -726628,7 +726780,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-19",
+    "last_updated": "2026-11-05",
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
@@ -735146,7 +735298,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-10-04",
+    "last_updated": "2026-11-05",
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
@@ -739465,8 +739617,8 @@ const FIGHTERS = [
     "name_th": "เกาะเต่า เพชรสมนึก",
     "name_en": "Kohtao Petsomnuk",
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 53.0,
+    "weight_lbs": 116.8,
     "height_cm": 156,
     "height_ft_in": "5'1\"",
     "country": "ไทย",
@@ -739498,10 +739650,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-11-05",
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 2,
@@ -751279,8 +751433,8 @@ const FIGHTERS = [
     "name_th": "เคนทาโร โอกุมุระ",
     "name_en": null,
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 65.5,
+    "weight_lbs": 144.4,
     "height_cm": null,
     "height_ft_in": null,
     "country": null,
@@ -751312,7 +751466,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-11-03",
+    "last_updated": "2026-11-05",
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": null,
@@ -753695,8 +753849,8 @@ const FIGHTERS = [
     "name_th": "เคอ จิงจุน",
     "name_en": "Ke Jingjun",
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 56.3,
+    "weight_lbs": 124.2,
     "height_cm": 173,
     "height_ft_in": "5'8\"",
     "country": "จีน",
@@ -753728,10 +753882,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
-    "division": null,
+    "last_updated": "2026-11-05",
+    "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -765066,10 +765222,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-11-05",
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -775765,8 +775923,8 @@ const FIGHTERS = [
     "name_th": "เซมฟิรา อาลิเอวา",
     "name_en": "Zemfira Alieva",
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 56.5,
+    "weight_lbs": 124.6,
     "height_cm": 159,
     "height_ft_in": "5'3\"",
     "country": "อาเซอร์ไบจาน",
@@ -775798,10 +775956,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
-    "division": null,
+    "last_updated": "2026-11-05",
+    "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -788980,10 +789140,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-11-05",
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 3,
@@ -800913,8 +801075,8 @@ const FIGHTERS = [
     "name_th": "เด่นภูไท ซุปเปอร์เล็ก มวยไทย",
     "name_en": "Denphuthai Mc Superlek",
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 60.9,
+    "weight_lbs": 134.2,
     "height_cm": 169,
     "height_ft_in": "5'7\"",
     "country": "ไทย",
@@ -800946,10 +801108,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
-    "division": null,
+    "last_updated": "2026-11-05",
+    "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -815951,8 +816115,8 @@ const FIGHTERS = [
     "name_th": "เทียนงาม นักบินอะไหล่ยนต์",
     "name_en": "Tienngam Nakbinalaiyon",
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 52.9,
+    "weight_lbs": 116.6,
     "height_cm": 167,
     "height_ft_in": "5'6\"",
     "country": "ไทย",
@@ -815984,10 +816148,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
-    "division": null,
+    "last_updated": "2026-11-05",
+    "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -823783,8 +823949,8 @@ const FIGHTERS = [
     "name_th": "เป็นต่อ เอสพี.กันสาดแป๊ะมีนบุรี",
     "name_en": "Pentor Sp Kansart Paeminburi",
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 63.2,
+    "weight_lbs": 139.4,
     "height_cm": 175,
     "height_ft_in": "5'9\"",
     "country": "ไทย",
@@ -823816,10 +823982,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
-    "division": null,
+    "last_updated": "2026-11-05",
+    "division": "แคตช์เวต",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 3,
@@ -826726,10 +826894,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-11-05",
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 3,
@@ -846795,8 +846965,8 @@ const FIGHTERS = [
     "name_th": "เพชรดำ บีเอส.มวยไทย",
     "name_en": null,
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 50.7,
+    "weight_lbs": 111.8,
     "height_cm": null,
     "height_ft_in": null,
     "country": null,
@@ -846828,7 +846998,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-11-03",
+    "last_updated": "2026-11-05",
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": null,
@@ -852328,10 +852498,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-11-05",
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 2,
@@ -855292,10 +855464,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
-    "division": null,
+    "last_updated": "2026-11-05",
+    "division": "แคตช์เวต",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 3,
@@ -868180,10 +868354,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-11-05",
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 7,
     "record": {
       "win": 7,
@@ -902752,10 +902928,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-11-05",
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 1,
@@ -916691,8 +916869,8 @@ const FIGHTERS = [
     "name_th": "เพชรวิชิต สิงห์มาวิน",
     "name_en": null,
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 62.8,
+    "weight_lbs": 138.4,
     "height_cm": null,
     "height_ft_in": null,
     "country": null,
@@ -916724,18 +916902,18 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": null,
+    "last_updated": "2026-11-05",
     "division": null,
     "nickname": null,
     "gender": null,
     "championship_status": null,
     "titles_history": null,
-    "fight_count": 0,
+    "fight_count": 1,
     "record": {
       "win": 0,
       "loss": 0,
       "draw": 0,
-      "pending": 0,
+      "pending": 1,
       "total": 0
     }
   },
@@ -928164,7 +928342,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-12",
+    "last_updated": "2026-11-05",
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
@@ -941594,10 +941772,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-11-05",
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 1,
@@ -957136,7 +957316,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-07",
+    "last_updated": "2026-11-05",
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
@@ -968425,8 +968605,8 @@ const FIGHTERS = [
     "name_th": "เพชรแสนสุข โชติบางแสน",
     "name_en": "Petsansuk Chotbangsaen",
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 53.4,
+    "weight_lbs": 117.8,
     "height_cm": 168,
     "height_ft_in": "5'6\"",
     "country": "ไทย",
@@ -968458,10 +968638,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
-    "division": null,
+    "last_updated": "2026-11-05",
+    "division": "แคตช์เวต",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -979354,7 +979536,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-12",
+    "last_updated": "2026-11-05",
     "division": "สตรอว์เวท",
     "nickname": null,
     "gender": "ชาย",
@@ -980293,8 +980475,8 @@ const FIGHTERS = [
     "name_th": "เฟอร์กัน คาราแบ็ก",
     "name_en": "Furkan Karabag",
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 69.8,
+    "weight_lbs": 153.8,
     "height_cm": 180,
     "height_ft_in": "5'11\"",
     "country": "ตุรกี",
@@ -980326,10 +980508,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
-    "division": null,
+    "last_updated": "2026-11-05",
+    "division": "เฟเธอร์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 3,
@@ -989784,10 +989968,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
-    "division": null,
+    "last_updated": "2026-11-05",
+    "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 2,
@@ -991178,7 +991364,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-11-03",
+    "last_updated": "2026-11-05",
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
@@ -996004,7 +996190,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-29",
+    "last_updated": "2026-11-05",
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
@@ -1001384,10 +1001570,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-11-05",
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 8,
     "record": {
       "win": 4,
@@ -1013092,7 +1013280,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-09-17",
+    "last_updated": "2026-11-05",
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
@@ -1047189,8 +1047377,8 @@ const FIGHTERS = [
     "name_th": "แจ๊ค เสี่ยตาลยกครก พีเค.",
     "name_en": null,
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 61.9,
+    "weight_lbs": 136.4,
     "height_cm": null,
     "height_ft_in": null,
     "country": null,
@@ -1047222,7 +1047410,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-11-03",
+    "last_updated": "2026-11-05",
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": null,
@@ -1047243,8 +1047431,8 @@ const FIGHTERS = [
     "name_th": "แจ๊ค แจ๊คมวยไทย",
     "name_en": "Jack Jackmuaythai Gym",
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 63.5,
+    "weight_lbs": 140.0,
     "height_cm": 170,
     "height_ft_in": "5'7\"",
     "country": "ไทย",
@@ -1047276,10 +1047464,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
-    "division": null,
+    "last_updated": "2026-11-05",
+    "division": "แคตช์เวต",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 2,
@@ -1049000,10 +1049190,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-11-05",
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 1,
@@ -1059559,8 +1059751,8 @@ const FIGHTERS = [
     "name_th": "แพทริก ซานา",
     "name_en": "Patrik Szana",
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 63.0,
+    "weight_lbs": 138.8,
     "height_cm": 174,
     "height_ft_in": "5'9\"",
     "country": "ฮังการี",
@@ -1059592,10 +1059784,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
-    "division": null,
+    "last_updated": "2026-11-05",
+    "division": "แคตช์เวต",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -1087146,7 +1087340,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-10-17",
+    "last_updated": "2026-11-05",
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
@@ -1089350,10 +1089544,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-11-05",
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 11,
     "record": {
       "win": 7,
@@ -1096320,10 +1096516,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-11-05",
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -1101674,10 +1101872,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-11-05",
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 3,
     "record": {
       "win": 0,
@@ -1107247,8 +1107447,8 @@ const FIGHTERS = [
     "name_th": "โชยะ อิชิกุโร",
     "name_en": "Shoya Ishiguro",
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 62.6,
+    "weight_lbs": 138.0,
     "height_cm": 167,
     "height_ft_in": "5'6\"",
     "country": "ญี่ปุ่น",
@@ -1107280,10 +1107480,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
-    "division": null,
+    "last_updated": "2026-11-05",
+    "division": "แคตช์เวต",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 4,
@@ -1107916,10 +1108118,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-11-05",
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 4,
@@ -1109601,8 +1109805,8 @@ const FIGHTERS = [
     "name_th": "โซเนอร์ เซน",
     "name_en": "Soner Sen",
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 65.6,
+    "weight_lbs": 144.6,
     "height_cm": 178,
     "height_ft_in": "5'10\"",
     "country": "ตุรกี",
@@ -1109634,10 +1109838,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-11-05",
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 12,
     "record": {
       "win": 6,
@@ -1116726,10 +1116932,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-11-05",
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 2,
@@ -1121406,10 +1121614,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-11-05",
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 5,
     "record": {
       "win": 2,
@@ -1124911,8 +1125121,8 @@ const FIGHTERS = [
     "name_th": "โมฮาเหม็ด ฮานูน",
     "name_en": "Mohamed Hanoun",
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 76.6,
+    "weight_lbs": 168.8,
     "height_cm": 183,
     "height_ft_in": "6'0\"",
     "country": "โมร็อกโก",
@@ -1124944,10 +1125154,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
-    "division": null,
+    "last_updated": "2026-11-05",
+    "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 1,
     "record": {
       "win": 0,
@@ -1126768,10 +1126980,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-11-05",
     "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 8,
     "record": {
       "win": 6,
@@ -1130607,8 +1130821,8 @@ const FIGHTERS = [
     "name_th": "โรโบค็อป แรดโกลด์ยิม",
     "name_en": "Robocop Radgoldgym",
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 53.9,
+    "weight_lbs": 118.8,
     "height_cm": 165,
     "height_ft_in": "5'5\"",
     "country": "ไทย",
@@ -1130640,10 +1130854,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
-    "division": null,
+    "last_updated": "2026-11-05",
+    "division": "แคตช์เวต",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 2,
     "record": {
       "win": 1,
@@ -1132913,8 +1133129,8 @@ const FIGHTERS = [
     "name_th": "โอกาซากิ ซิลค์มวยไทย",
     "name_en": null,
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 51.6,
+    "weight_lbs": 113.8,
     "height_cm": null,
     "height_ft_in": null,
     "country": null,
@@ -1132946,7 +1133162,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-11-03",
+    "last_updated": "2026-11-05",
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": null,
@@ -1133503,8 +1133719,8 @@ const FIGHTERS = [
     "name_th": "โอท็อป อ.ขวัญเมือง",
     "name_en": "Otop Or Kwanmuang",
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 65.5,
+    "weight_lbs": 144.4,
     "height_cm": 175,
     "height_ft_in": "5'9\"",
     "country": "ไทย",
@@ -1133536,10 +1133752,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
-    "division": null,
+    "last_updated": "2026-11-05",
+    "division": "แบนตัมเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 1,
@@ -1134554,10 +1134772,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
+    "last_updated": "2026-11-05",
     "division": "แคชเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 6,
     "record": {
       "win": 2,
@@ -1148209,8 +1148429,8 @@ const FIGHTERS = [
     "name_th": "ไชยสงคราม ลูกสวน",
     "name_en": null,
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 50.8,
+    "weight_lbs": 112.0,
     "height_cm": null,
     "height_ft_in": null,
     "country": null,
@@ -1148242,7 +1148462,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-11-03",
+    "last_updated": "2026-11-05",
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": null,
@@ -1150712,7 +1150932,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-11-03",
+    "last_updated": "2026-11-05",
     "division": "เวลเทอร์เวท",
     "nickname": null,
     "gender": "ชาย",
@@ -1151001,8 +1151221,8 @@ const FIGHTERS = [
     "name_th": "ไททัส พร็อกเตอร์",
     "name_en": "Titus Proctor",
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 76.8,
+    "weight_lbs": 169.4,
     "height_cm": null,
     "height_ft_in": null,
     "country": "นิวซีแลนด์",
@@ -1151034,7 +1151254,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-11-03",
+    "last_updated": "2026-11-05",
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": "ชาย",
@@ -1155836,10 +1156056,12 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-08-22",
-    "division": null,
+    "last_updated": "2026-11-05",
+    "division": "ฟลายเวท",
     "nickname": null,
     "gender": "ชาย",
+    "championship_status": null,
+    "titles_history": null,
     "fight_count": 4,
     "record": {
       "win": 1,
@@ -1165443,7 +1165665,7 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "อะตอมเวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 104.8
   },
   {
     "fighter_id": "กลิ่นผกา-ป.ไทยสงค์",
@@ -1167011,7 +1167233,7 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "ฟลายเวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 126.0
   },
   {
     "fighter_id": "ก้องชัย-ไฉนดอนเมือง",
@@ -1168146,8 +1168368,8 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 28",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "ฟลายเวท",
+    "weigh_in_lbs": 134.2
   },
   {
     "fighter_id": "ก้องศึก-ศิษย์สารวัตรเสือ",
@@ -1168162,7 +1168384,7 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 21",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
+    "division": "ฟลายเวท",
     "weigh_in_lbs": null
   },
   {
@@ -1168623,11 +1168845,11 @@ const HISTORY  = [
     "opponent": "เฟรดดี แฮ็กเกอร์ตี",
     "opponent_country": null,
     "date": "2024-12-13",
-    "event": "ONE ลุมพินี 91",
+    "event": "ONE ลุมพินี 91 “คมอาวุธ vs อเล็กเซย์”",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "สตรอว์เวท",
+    "weigh_in_lbs": 123.0
   },
   {
     "fighter_id": "ก้าวไกล-ช.ห้าพยัคฆ์",
@@ -1169987,7 +1170209,7 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "แบนตัมเวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 138.0
   },
   {
     "fighter_id": "คมอาวุธ-เอฟเอ.กรุ๊ป",
@@ -1170111,11 +1170333,11 @@ const HISTORY  = [
     "opponent": "อเล็กเซย์ บาลีโก",
     "opponent_country": null,
     "date": "2024-12-13",
-    "event": "ONE ลุมพินี 91",
+    "event": "ONE ลุมพินี 91 “คมอาวุธ vs อเล็กเซย์”",
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 139.6
   },
   {
     "fighter_id": "คมอาวุธ-เอฟเอ.กรุ๊ป",
@@ -1170515,7 +1170737,7 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "ไลท์เวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 169.6
   },
   {
     "fighter_id": "คริสเตียน-ลี",
@@ -1172083,7 +1172305,7 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "ฟลายเวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 135.0
   },
   {
     "fighter_id": "คาซูเทรุ-ยามาซากิ",
@@ -1172771,7 +1172993,7 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "สตรอว์เวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 125.0
   },
   {
     "fighter_id": "คาล-คุก",
@@ -1174623,11 +1174845,11 @@ const HISTORY  = [
     "opponent": "อาเมียร์ เอล ดักคัก",
     "opponent_country": null,
     "date": "2024-12-13",
-    "event": "ONE ลุมพินี 91",
+    "event": "ONE ลุมพินี 91 “คมอาวุธ vs อเล็กเซย์”",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "สตรอว์เวท",
+    "weigh_in_lbs": 139.8
   },
   {
     "fighter_id": "จรวดศึก-สจ.วิชิตแปดริ้ว",
@@ -1174642,8 +1174864,8 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 45",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "ฟลายเวท",
+    "weigh_in_lbs": 134.8
   },
   {
     "fighter_id": "จรัสชัย-แม็กจันดี",
@@ -1175746,8 +1175968,8 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 64",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "แบนตัมเวท",
+    "weigh_in_lbs": 143.2
   },
   {
     "fighter_id": "จอร์แดน-ก็อดเฟรดเซน",
@@ -1178002,7 +1178224,7 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 21",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
+    "division": "ฟลายเวท",
     "weigh_in_lbs": null
   },
   {
@@ -1179554,8 +1179776,8 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 45",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "แคตช์เวต",
+    "weigh_in_lbs": 117.6
   },
   {
     "fighter_id": "จ้าวเงาะ-จิตรเมืองนนท์",
@@ -1179810,8 +1180032,8 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 28",
     "promotion": "ONE",
     "fight_rating_stars": 2,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "ฟลายเวท",
+    "weigh_in_lbs": 134.6
   },
   {
     "fighter_id": "จ้าวเสือใหญ่-ม.กรุงเทพธนบุรี",
@@ -1180083,7 +1180305,7 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "อะตอมเวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 113.4
   },
   {
     "fighter_id": "ฉัตรเพชร-เสือแบล็คมวยไทย",
@@ -1180546,8 +1180768,8 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 28",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "ไลท์เวท",
+    "weigh_in_lbs": 169.0
   },
   {
     "fighter_id": "ชนะจน-พีเค.แสนชัย",
@@ -1181234,8 +1181456,8 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 45",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "แคตช์เวต",
+    "weigh_in_lbs": 125.6
   },
   {
     "fighter_id": "ชาติพิชิต-สส.ต้อยแปดริ้ว",
@@ -1182132,6 +1182354,22 @@ const HISTORY  = [
     "fight_rating_stars": 0,
     "division": "",
     "weigh_in_lbs": null
+  },
+  {
+    "fighter_id": "ชาลี-สิงห์มาวิน",
+    "result": "ชนะ",
+    "rules": "มวยไทย",
+    "decision": "",
+    "round": 2,
+    "time": "2:28",
+    "opponent": "ศิลาเพชร ป.เพชรไข่แก้ว",
+    "opponent_country": null,
+    "date": "2023-12-15",
+    "event": "ONE ลุมพินี 45",
+    "promotion": "ONE",
+    "fight_rating_stars": 0,
+    "division": "แคตช์เวต",
+    "weigh_in_lbs": 125.8
   },
   {
     "fighter_id": "ชาห์เซบ-รินห์",
@@ -1183714,8 +1183952,8 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 64",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "แคตช์เวต",
+    "weigh_in_lbs": 120.0
   },
   {
     "fighter_id": "ชูโต-ซาโตะ",
@@ -1185026,8 +1185264,8 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 28",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "สตรอว์เวท",
+    "weigh_in_lbs": 124.8
   },
   {
     "fighter_id": "ซานหลาง-เกอซี",
@@ -1185810,8 +1186048,8 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 28",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "แคตช์เวต",
+    "weigh_in_lbs": 125.4
   },
   {
     "fighter_id": "ซาเวียร์-กอนซาเลส",
@@ -1185826,7 +1186064,7 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 21",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
+    "division": "แคตช์เวต",
     "weigh_in_lbs": null
   },
   {
@@ -1185858,8 +1186096,8 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 64",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "แคตช์เวต",
+    "weigh_in_lbs": 125.2
   },
   {
     "fighter_id": "ซาโตชิ-คาตาชิมะ",
@@ -1186595,7 +1186833,7 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "ฟลายเวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 134.6
   },
   {
     "fighter_id": "ซุปเปอร์เกิร์ล",
@@ -1187522,8 +1187760,8 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 45",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "เฟเธอร์เวท",
+    "weigh_in_lbs": 154.6
   },
   {
     "fighter_id": "ซูโนโตะ",
@@ -1187955,7 +1188193,7 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 138.6
   },
   {
     "fighter_id": "ซ่อนรัก-แฟร์เท็กซ์",
@@ -1188034,7 +1188272,7 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 21",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
+    "division": "ฟลายเวท",
     "weigh_in_lbs": null
   },
   {
@@ -1188562,7 +1188800,7 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 21",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
+    "division": "ฟลายเวท",
     "weigh_in_lbs": null
   },
   {
@@ -1188899,7 +1189137,7 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "สตรอว์เวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 124.8
   },
   {
     "fighter_id": "ดาบดำ-ปตท.ทองทวี",
@@ -1188941,13 +1189179,13 @@ const HISTORY  = [
     "round": 3,
     "time": "3:00",
     "opponent": "เพชรอภิชาติ อภิชาติมวยไทย",
-    "opponent_country": null,
+    "opponent_country": "ไทย",
     "date": "2024-12-13",
     "event": "ONE ลุมพินี 91",
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 124.6
   },
   {
     "fighter_id": "ดาบดำ-ปตท.ทองทวี",
@@ -1188962,8 +1189200,8 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 64",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "แคตช์เวต",
+    "weigh_in_lbs": 125.6
   },
   {
     "fighter_id": "ดาบดำ-ปตท.ทองทวี",
@@ -1188978,8 +1189216,8 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 45",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "แคตช์เวต",
+    "weigh_in_lbs": 126.0
   },
   {
     "fighter_id": "ดาบดำ-ปตท.ทองทวี",
@@ -1188994,8 +1189232,8 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 28",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "แคตช์เวต",
+    "weigh_in_lbs": 125.6
   },
   {
     "fighter_id": "ดาบดำ-ปตท.ทองทวี",
@@ -1189010,7 +1189248,7 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 21",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
+    "division": "แคตช์เวต",
     "weigh_in_lbs": null
   },
   {
@@ -1190210,8 +1190448,8 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 64",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "แคตช์เวต",
+    "weigh_in_lbs": 126.2
   },
   {
     "fighter_id": "ดีแม็กซ์-ครูติ๊กเอ็มเอสสปอร์ตไทยแลนด์",
@@ -1191154,8 +1191392,8 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 64",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "แคตช์เวต",
+    "weigh_in_lbs": 119.8
   },
   {
     "fighter_id": "ตำนานไทย-พีเค.เล็กเฟิสทร์เฮ้า",
@@ -1191394,8 +1191632,8 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 64",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "แคตช์เวต",
+    "weigh_in_lbs": 119.2
   },
   {
     "fighter_id": "ตี๋ใหญ่-พีเค.แสนชัย",
@@ -1193667,7 +1193905,7 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "ฟลายเวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 125.8
   },
   {
     "fighter_id": "ทันทาวี-อาเหม็ด",
@@ -1195202,7 +1195440,7 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 21",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
+    "division": "แคตช์เวต",
     "weigh_in_lbs": null
   },
   {
@@ -1195215,11 +1195453,11 @@ const HISTORY  = [
     "opponent": "ศิริโชค ส.สมหมาย",
     "opponent_country": null,
     "date": "2024-12-13",
-    "event": "ONE ลุมพินี 91",
+    "event": "ONE ลุมพินี 91 “คมอาวุธ vs อเล็กเซย์”",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "สตรอว์เวท",
+    "weigh_in_lbs": 129.2
   },
   {
     "fighter_id": "ธนชาติ-พ.พัชรวาท",
@@ -1195826,8 +1196064,8 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 64",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "แคตช์เวต",
+    "weigh_in_lbs": 133.4
   },
   {
     "fighter_id": "นักรบ-แฟร์เท็กซ์",
@@ -1197074,8 +1197312,8 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 64",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "แคตช์เวต",
+    "weigh_in_lbs": 133.6
   },
   {
     "fighter_id": "นาวิด-อุลเลาะห์-ซาดี",
@@ -1197810,8 +1198048,8 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 45",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "เฟเธอร์เวท",
+    "weigh_in_lbs": 154.0
   },
   {
     "fighter_id": "น็อก-ฟู-เหงียน",
@@ -1197967,11 +1198205,11 @@ const HISTORY  = [
     "opponent": "โมอา คาร์ลสัน",
     "opponent_country": null,
     "date": "2024-12-13",
-    "event": "ONE ลุมพินี 91",
+    "event": "ONE ลุมพินี 91 “คมอาวุธ vs อเล็กเซย์”",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "สตรอว์เวท",
+    "weigh_in_lbs": 111.6
   },
   {
     "fighter_id": "น้องฟ้าใส-ท็อป-พีเค.แสนชัย",
@@ -1199154,8 +1199392,8 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 64",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "แคตช์เวต",
+    "weigh_in_lbs": 139.0
   },
   {
     "fighter_id": "บรูโน-เอซีสวีโด",
@@ -1199187,7 +1199425,7 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "แบนตัมเวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 144.4
   },
   {
     "fighter_id": "บอส-ชยุตม์",
@@ -1201458,7 +1201696,7 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 21",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
+    "division": "แคตช์เวต",
     "weigh_in_lbs": null
   },
   {
@@ -1202431,11 +1202669,11 @@ const HISTORY  = [
     "opponent": "ลี ซัง ชอล",
     "opponent_country": null,
     "date": "2024-12-13",
-    "event": "ONE ลุมพินี 91",
+    "event": "ONE ลุมพินี 91 “คมอาวุธ vs อเล็กเซย์”",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "สตรอว์เวท",
+    "weigh_in_lbs": 124.0
   },
   {
     "fighter_id": "ฝาม-วัน-นาม",
@@ -1204051,7 +1204289,7 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "ฟลายเวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 135.0
   },
   {
     "fighter_id": "พันธ์พยัคฆ์-จิตรเมืองนนท์",
@@ -1205394,8 +1205632,8 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 64",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "แบนตัมเวท",
+    "weigh_in_lbs": 144.6
   },
   {
     "fighter_id": "พาร์แฮม-กีราติ",
@@ -1207074,8 +1207312,8 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 64",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "แบนตัมเวท",
+    "weigh_in_lbs": 143.4
   },
   {
     "fighter_id": "ฟิลิปเป-โลโบ",
@@ -1208258,7 +1208496,7 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 21",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
+    "division": "ฟลายเวท",
     "weigh_in_lbs": null
   },
   {
@@ -1208372,6 +1208610,22 @@ const HISTORY  = [
     "fight_rating_stars": 0,
     "division": "",
     "weigh_in_lbs": null
+  },
+  {
+    "fighter_id": "มหาหิน-นักบินอะไหล่ยนต์",
+    "result": "ชนะ",
+    "rules": "มวยไทย",
+    "decision": "",
+    "round": 3,
+    "time": "3:00",
+    "opponent": "เพชรสังวาลย์ ส.สมานการ์เม้นท์",
+    "opponent_country": null,
+    "date": "2023-08-11",
+    "event": "ONE ลุมพินี 28",
+    "promotion": "ONE",
+    "fight_rating_stars": 0,
+    "division": "แคตช์เวต",
+    "weigh_in_lbs": 117.4
   },
   {
     "fighter_id": "มอนยิต-เยน",
@@ -1210547,7 +1210801,7 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "ฟลายเวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 134.4
   },
   {
     "fighter_id": "มารี-แมคมานามอน",
@@ -1212099,7 +1212353,7 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "ไลท์เวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 169.6
   },
   {
     "fighter_id": "มาเชจ์-คาร์ปินสกี",
@@ -1212258,7 +1212512,7 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 21",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
+    "division": "ฟลายเวท",
     "weigh_in_lbs": null
   },
   {
@@ -1213314,7 +1213568,7 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 21",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
+    "division": "แคตช์เวต",
     "weigh_in_lbs": null
   },
   {
@@ -1213970,7 +1214224,7 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 21",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
+    "division": "แคตช์เวต",
     "weigh_in_lbs": null
   },
   {
@@ -1214114,8 +1214368,8 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 28",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "แคตช์เวต",
+    "weigh_in_lbs": 118.8
   },
   {
     "fighter_id": "ยอดดอย-แก้วสัมฤทธิ์",
@@ -1214242,8 +1214496,8 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 45",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "แคตช์เวต",
+    "weigh_in_lbs": 129.6
   },
   {
     "fighter_id": "ยอดนที-ผดุงชัยมวยไทย",
@@ -1214579,7 +1214833,7 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "แบนตัมเวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 137.6
   },
   {
     "fighter_id": "ยอดภูผา-เพชรเกียรติเพชร",
@@ -1214706,8 +1214960,8 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 28",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "แบนตัมเวท",
+    "weigh_in_lbs": 144.8
   },
   {
     "fighter_id": "ยอดภูผา-เพชรเกียรติเพชร",
@@ -1214722,7 +1214976,7 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 21",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
+    "division": "แบนตัมเวท",
     "weigh_in_lbs": null
   },
   {
@@ -1214959,11 +1215213,11 @@ const HISTORY  = [
     "opponent": "เทียนงาม นักบินอะไหล่ยนต์",
     "opponent_country": null,
     "date": "2024-12-13",
-    "event": "ONE ลุมพินี 91",
+    "event": "ONE ลุมพินี 91 “คมอาวุธ vs อเล็กเซย์”",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "สตรอว์เวท",
+    "weigh_in_lbs": 116.2
   },
   {
     "fighter_id": "ยอดศิลา-ช.ห้าพยัคฆ์",
@@ -1217999,11 +1218253,11 @@ const HISTORY  = [
     "opponent": "เคอ จิงจุน",
     "opponent_country": null,
     "date": "2024-12-13",
-    "event": "ONE ลุมพินี 91",
+    "event": "ONE ลุมพินี 91 “คมอาวุธ vs อเล็กเซย์”",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "สตรอว์เวท",
+    "weigh_in_lbs": 124.4
   },
   {
     "fighter_id": "ยูโตะ-ชิโอยะ",
@@ -1218067,7 +1218321,7 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "อะตอมเวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 113.6
   },
   {
     "fighter_id": "รณชัย-ต.รามอินทรา",
@@ -1218898,8 +1219152,8 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 45",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "แคตช์เวต",
+    "weigh_in_lbs": 118.0
   },
   {
     "fighter_id": "ราชมงคล-แม่ทองใบรีไซเคิล",
@@ -1219907,7 +1220161,7 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "อะตอมเวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 104.0
   },
   {
     "fighter_id": "ราน-หลงชู",
@@ -1219970,8 +1220224,8 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 45",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "ฟลายเวท",
+    "weigh_in_lbs": 134.8
   },
   {
     "fighter_id": "ราบินดรา-ธานท์",
@@ -1223298,7 +1223552,7 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 21",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
+    "division": "แคตช์เวต",
     "weigh_in_lbs": null
   },
   {
@@ -1223922,8 +1224176,8 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 45",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "เฟเธอร์เวท",
+    "weigh_in_lbs": 153.8
   },
   {
     "fighter_id": "ลามิน-อัล-ซูอายาห์",
@@ -1224982,6 +1225236,22 @@ const HISTORY  = [
     "weigh_in_lbs": null
   },
   {
+    "fighter_id": "ลี-ซัง-ชัล",
+    "result": "รอแข่งขัน",
+    "rules": "MMA",
+    "decision": "",
+    "round": null,
+    "time": "",
+    "opponent": "ฝาม วัน นาม",
+    "opponent_country": null,
+    "date": "2024-12-13",
+    "event": "ONE ลุมพินี 91 “คมอาวุธ vs อเล็กเซย์”",
+    "promotion": "ONE",
+    "fight_rating_stars": 0,
+    "division": "สตรอว์เวท",
+    "weigh_in_lbs": 123.0
+  },
+  {
     "fighter_id": "ลี-มิน-ฮยอก",
     "result": "แพ้",
     "rules": "MMA",
@@ -1225522,7 +1225792,7 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 21",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
+    "division": "เฟเธอร์เวท",
     "weigh_in_lbs": null
   },
   {
@@ -1228291,7 +1228561,7 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "ฟลายเวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 134.4
   },
   {
     "fighter_id": "ศักดิ์ศรี-ซุปเปอร์เล็กมวยไทย",
@@ -1228415,11 +1228685,11 @@ const HISTORY  = [
     "opponent": "ธนชาติ พ.พัชรวาท",
     "opponent_country": null,
     "date": "2024-12-13",
-    "event": "ONE ลุมพินี 91",
+    "event": "ONE ลุมพินี 91 “คมอาวุธ vs อเล็กเซย์”",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "สตรอว์เวท",
+    "weigh_in_lbs": 129.0
   },
   {
     "fighter_id": "ศิลาชัย-สจ.แดนระยอง",
@@ -1228466,8 +1228736,8 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 45",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "แคตช์เวต",
+    "weigh_in_lbs": 126.0
   },
   {
     "fighter_id": "ศิวกร-พีเค.แสนชัย",
@@ -1229634,8 +1229904,8 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 28",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "แคตช์เวต",
+    "weigh_in_lbs": 133.6
   },
   {
     "fighter_id": "สองฝั่งโขง-เอฟเอ.กรุ๊ป",
@@ -1230531,7 +1230801,7 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "อะตอมเวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 114.2
   },
   {
     "fighter_id": "สายเพชรเล็ก-โค้ชณัฐสมาทมวยไทย",
@@ -1231442,8 +1231712,8 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 45",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "แคตช์เวต",
+    "weigh_in_lbs": 119.2
   },
   {
     "fighter_id": "สิงห์ศึก-ศักดิ์อนุพงศ์",
@@ -1232834,8 +1233104,8 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 28",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "แคตช์เวต",
+    "weigh_in_lbs": 132.6
   },
   {
     "fighter_id": "สุริยันต์เล็ก-พ.เย็นยิ่ง",
@@ -1234367,11 +1234637,11 @@ const HISTORY  = [
     "opponent": "เซมฟิรา อาลิเอวา",
     "opponent_country": null,
     "date": "2024-12-13",
-    "event": "ONE ลุมพินี 91",
+    "event": "ONE ลุมพินี 91 “คมอาวุธ vs อเล็กเซย์”",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "สตรอว์เวท",
+    "weigh_in_lbs": 124.8
   },
   {
     "fighter_id": "หยู-เหยา-ปุย",
@@ -1237314,8 +1237584,8 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 45",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "แคตช์เวต",
+    "weigh_in_lbs": 139.2
   },
   {
     "fighter_id": "อภิเดช-น้ำดื่มหมี77",
@@ -1238818,8 +1239088,8 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 64",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "อะตอมเวท",
+    "weigh_in_lbs": 114.2
   },
   {
     "fighter_id": "อังเคล-บาวซา",
@@ -1241186,7 +1241456,7 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 21",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
+    "division": "เฟเธอร์เวท",
     "weigh_in_lbs": null
   },
   {
@@ -1244655,11 +1244925,11 @@ const HISTORY  = [
     "opponent": "จรวดศึก สจ.วิชิตแปดริ้ว",
     "opponent_country": null,
     "date": "2024-12-13",
-    "event": "ONE ลุมพินี 91",
+    "event": "ONE ลุมพินี 91 “คมอาวุธ vs อเล็กเซย์”",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "สตรอว์เวท",
+    "weigh_in_lbs": 140.0
   },
   {
     "fighter_id": "อาเรียน-ซาดิโควิจ",
@@ -1246274,8 +1246544,8 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 64",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "แบนตัมเวท",
+    "weigh_in_lbs": 144.4
   },
   {
     "fighter_id": "อิสฟาก-เซยิด",
@@ -1246482,8 +1246752,8 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 45",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "ฟลายเวท",
+    "weigh_in_lbs": 134.8
   },
   {
     "fighter_id": "อิสเมล-ข่าน",
@@ -1246947,7 +1247217,7 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "แบนตัมเวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 136.8
   },
   {
     "fighter_id": "อีสานเหนือ-ศ.ศศิวัฒน์",
@@ -1247202,7 +1247472,7 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 21",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
+    "division": "ฟลายเวท",
     "weigh_in_lbs": null
   },
   {
@@ -1248495,11 +1248765,11 @@ const HISTORY  = [
     "opponent": "คมอาวุธ เอฟเอ.กรุ๊ป",
     "opponent_country": null,
     "date": "2024-12-13",
-    "event": "ONE ลุมพินี 91",
+    "event": "ONE ลุมพินี 91 “คมอาวุธ vs อเล็กเซย์”",
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 139.4
   },
   {
     "fighter_id": "อเล็กเซย์-บาลีโก",
@@ -1250767,11 +1251037,11 @@ const HISTORY  = [
     "opponent": "เผด็จศึก เอ็นเอฟ.ลูกสวน",
     "opponent_country": null,
     "date": "2024-12-13",
-    "event": "ONE ลุมพินี 91",
+    "event": "ONE ลุมพินี 91 “คมอาวุธ vs อเล็กเซย์”",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "สตรอว์เวท",
+    "weigh_in_lbs": 121.4
   },
   {
     "fighter_id": "ฮิโรยูกิ",
@@ -1251586,8 +1251856,8 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 28",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "แคตช์เวต",
+    "weigh_in_lbs": 116.8
   },
   {
     "fighter_id": "เกาะเต่า-เพชรสมนึก",
@@ -1252275,7 +1252545,7 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "แบนตัมเวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 144.4
   },
   {
     "fighter_id": "เคนยะ-ยามาดะ",
@@ -1252863,11 +1253133,11 @@ const HISTORY  = [
     "opponent": "ยูโก คาโตะ",
     "opponent_country": null,
     "date": "2024-12-13",
-    "event": "ONE ลุมพินี 91",
+    "event": "ONE ลุมพินี 91 “คมอาวุธ vs อเล็กเซย์”",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "สตรอว์เวท",
+    "weigh_in_lbs": 124.2
   },
   {
     "fighter_id": "เคอิ-มาเอะโซโนะ",
@@ -1253938,8 +1254208,8 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 64",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "แคตช์เวต",
+    "weigh_in_lbs": 124.4
   },
   {
     "fighter_id": "เจียน-คาร์ลอส-เปเรรา",
@@ -1256095,11 +1256365,11 @@ const HISTORY  = [
     "opponent": "หยู เกา",
     "opponent_country": null,
     "date": "2024-12-13",
-    "event": "ONE ลุมพินี 91",
+    "event": "ONE ลุมพินี 91 “คมอาวุธ vs อเล็กเซย์”",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "สตรอว์เวท",
+    "weigh_in_lbs": 124.6
   },
   {
     "fighter_id": "เซมิห์-ชาห์-จินดีร์",
@@ -1257538,8 +1257808,8 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 28",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "สตรอว์เวท",
+    "weigh_in_lbs": 124.8
   },
   {
     "fighter_id": "เดฟ-บางกุยกุย",
@@ -1258370,8 +1258640,8 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 64",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "ฟลายเวท",
+    "weigh_in_lbs": 134.2
   },
   {
     "fighter_id": "เด่นภูไท-ซุปเปอร์เล็ก-มวยไทย",
@@ -1259247,11 +1259517,11 @@ const HISTORY  = [
     "opponent": "ยอดศิลป รถสวยจ่าเจต",
     "opponent_country": null,
     "date": "2024-12-13",
-    "event": "ONE ลุมพินี 91",
+    "event": "ONE ลุมพินี 91 “คมอาวุธ vs อเล็กเซย์”",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "สตรอว์เวท",
+    "weigh_in_lbs": 116.6
   },
   {
     "fighter_id": "เทียล-ธัง",
@@ -1260882,8 +1261152,8 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 28",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "แคตช์เวต",
+    "weigh_in_lbs": 139.4
   },
   {
     "fighter_id": "เป๊ปซี่-ส.จารุวรรณ",
@@ -1260959,11 +1261229,11 @@ const HISTORY  = [
     "opponent": "ฮิโรยูกิ",
     "opponent_country": null,
     "date": "2024-12-13",
-    "event": "ONE ลุมพินี 91",
+    "event": "ONE ลุมพินี 91 “คมอาวุธ vs อเล็กเซย์”",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "สตรอว์เวท",
+    "weigh_in_lbs": 121.6
   },
   {
     "fighter_id": "เผด็จศึก-เอ็นเอฟ.ลูกสวน",
@@ -1262259,7 +1262529,7 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "อะตอมเวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 111.8
   },
   {
     "fighter_id": "เพชรดำ-ศิษย์เอราวัณ",
@@ -1262546,8 +1262816,8 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 45",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "แคตช์เวต",
+    "weigh_in_lbs": 119.4
   },
   {
     "fighter_id": "เพชรทนง-เพชรเฟอร์กัส",
@@ -1262866,7 +1263136,7 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 21",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
+    "division": "แคตช์เวต",
     "weigh_in_lbs": null
   },
   {
@@ -1263410,8 +1263680,8 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 64",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "อะตอมเวท",
+    "weigh_in_lbs": 114.8
   },
   {
     "fighter_id": "เพชรน้องเนย-นกเขากม.11",
@@ -1265698,8 +1265968,8 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 64",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "แคตช์เวต",
+    "weigh_in_lbs": 126.6
   },
   {
     "fighter_id": "เพชรมรกต-เพชรยินดีอะคาเดมี",
@@ -1266326,6 +1266596,22 @@ const HISTORY  = [
     "weigh_in_lbs": null
   },
   {
+    "fighter_id": "เพชรวิชิต-สิงห์มาวิน",
+    "result": "รอแข่งขัน",
+    "rules": "มวยไทย",
+    "decision": "",
+    "round": null,
+    "time": "",
+    "opponent": "ซ่อนรัก แฟร์เท็กซ์",
+    "opponent_country": null,
+    "date": "2024-12-13",
+    "event": "ONE ลุมพินี 91 “คมอาวุธ vs อเล็กเซย์”",
+    "promotion": "ONE",
+    "fight_rating_stars": 0,
+    "division": "",
+    "weigh_in_lbs": 138.4
+  },
+  {
     "fighter_id": "เพชรวิเศษ-เพชรเกียรติเพชร",
     "result": "แพ้",
     "rules": "มวยไทย",
@@ -1266546,8 +1266832,8 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 28",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "แคตช์เวต",
+    "weigh_in_lbs": 117.8
   },
   {
     "fighter_id": "เพชรสามารถ-เมืองผาภูมิ",
@@ -1267071,11 +1267357,11 @@ const HISTORY  = [
     "opponent": "ดาบดำ ปตท.ทองทวี",
     "opponent_country": null,
     "date": "2024-12-13",
-    "event": "ONE ลุมพินี 91",
+    "event": "ONE ลุมพินี 91 “คมอาวุธ vs อเล็กเซย์”",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "สตรอว์เวท",
+    "weigh_in_lbs": 124.8
   },
   {
     "fighter_id": "เพชรอภิชาติ-อภิชาติมวยไทย",
@@ -1268274,8 +1268560,8 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 64",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "ฟลายเวท",
+    "weigh_in_lbs": 132.8
   },
   {
     "fighter_id": "เพชรเมืองศรี-ทอฝันฟาร์ม",
@@ -1268594,8 +1268880,8 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 28",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "แคตช์เวต",
+    "weigh_in_lbs": 117.8
   },
   {
     "fighter_id": "เพชรใหม่-เอ็มซี-ซุปเปอร์เล็ก",
@@ -1268943,11 +1269229,11 @@ const HISTORY  = [
     "opponent": "ก้าวไกล ช.ห้าพยัคฆ์",
     "opponent_country": null,
     "date": "2024-12-13",
-    "event": "ONE ลุมพินี 91",
+    "event": "ONE ลุมพินี 91 “คมอาวุธ vs อเล็กเซย์”",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "สตรอว์เวท",
+    "weigh_in_lbs": 124.6
   },
   {
     "fighter_id": "เฟรดดี-แฮ็กเกอร์ตี",
@@ -1269010,8 +1269296,8 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 45",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "เฟเธอร์เวท",
+    "weigh_in_lbs": 153.8
   },
   {
     "fighter_id": "เฟอร์กัน-คาราแบ็ก",
@@ -1270818,7 +1271104,7 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 21",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
+    "division": "ฟลายเวท",
     "weigh_in_lbs": null
   },
   {
@@ -1270883,7 +1271169,7 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "ฟลายเวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 133.8
   },
   {
     "fighter_id": "เรตสึ-ซาชิดะ",
@@ -1271570,8 +1271856,8 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 28",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "แบนตัมเวท",
+    "weigh_in_lbs": 142.6
   },
   {
     "fighter_id": "เลวี-เฮโน",
@@ -1272658,7 +1272944,7 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 21",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
+    "division": "ฟลายเวท",
     "weigh_in_lbs": null
   },
   {
@@ -1273426,8 +1273712,8 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 28",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "แบนตัมเวท",
+    "weigh_in_lbs": 143.2
   },
   {
     "fighter_id": "เสือแบล็ค-ท.พราน49",
@@ -1279283,7 +1279569,7 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "แบนตัมเวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 136.4
   },
   {
     "fighter_id": "แจ๊ค-แจ๊คมวยไทย",
@@ -1279314,8 +1279600,8 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 28",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "แคตช์เวต",
+    "weigh_in_lbs": 140.0
   },
   {
     "fighter_id": "แจ๊ค-แจ๊คมวยไทย",
@@ -1279330,7 +1279616,7 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 21",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
+    "division": "แคตช์เวต",
     "weigh_in_lbs": null
   },
   {
@@ -1279378,8 +1279664,8 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 45",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "ฟลายเวท",
+    "weigh_in_lbs": 135.0
   },
   {
     "fighter_id": "แชร์ซอด-คาบูทอฟ",
@@ -1281090,8 +1281376,8 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 45",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "แคตช์เวต",
+    "weigh_in_lbs": 138.8
   },
   {
     "fighter_id": "แพทริก-ซานา",
@@ -1282898,8 +1283184,8 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 64",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "แคตช์เวต",
+    "weigh_in_lbs": 125.8
   },
   {
     "fighter_id": "แหลมสิงห์-ทีวันไฟต์อะคาเดมี",
@@ -1283522,8 +1283808,8 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 28",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "แบนตัมเวท",
+    "weigh_in_lbs": 145.0
   },
   {
     "fighter_id": "แอนตาร์-คาเซม",
@@ -1283538,7 +1283824,7 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 21",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
+    "division": "แบนตัมเวท",
     "weigh_in_lbs": null
   },
   {
@@ -1284194,8 +1284480,8 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 64",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "แคตช์เวต",
+    "weigh_in_lbs": 140.4
   },
   {
     "fighter_id": "โคเชน-อากานอฟ",
@@ -1286194,7 +1286480,7 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 21",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
+    "division": "แคตช์เวต",
     "weigh_in_lbs": null
   },
   {
@@ -1286786,8 +1287072,8 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 64",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "แคตช์เวต",
+    "weigh_in_lbs": 138.0
   },
   {
     "fighter_id": "โชยะ-อิชิกุโร",
@@ -1287074,8 +1287360,8 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 28",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "อะตอมเวท",
+    "weigh_in_lbs": 114.2
   },
   {
     "fighter_id": "โซ-ยูล-คิม",
@@ -1287426,8 +1287712,8 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 45",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "แบนตัมเวท",
+    "weigh_in_lbs": 144.6
   },
   {
     "fighter_id": "โซเนอร์-เซน",
@@ -1288210,8 +1288496,8 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 28",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "อะตอมเวท",
+    "weigh_in_lbs": 115.0
   },
   {
     "fighter_id": "โนแอล-กรองด์ชอง",
@@ -1288655,11 +1288941,11 @@ const HISTORY  = [
     "opponent": "น้องฟ้าใส ท็อป พีเค.แสนชัย",
     "opponent_country": null,
     "date": "2024-12-13",
-    "event": "ONE ลุมพินี 91",
+    "event": "ONE ลุมพินี 91 “คมอาวุธ vs อเล็กเซย์”",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "สตรอว์เวท",
+    "weigh_in_lbs": 111.0
   },
   {
     "fighter_id": "โมอา-คาร์ลสัน",
@@ -1289554,8 +1289840,8 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 28",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "ไลท์เวท",
+    "weigh_in_lbs": 168.8
   },
   {
     "fighter_id": "โมฮาเหม็ด-เฟซาน",
@@ -1290114,8 +1290400,8 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 64",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "แคตช์เวต",
+    "weigh_in_lbs": 139.6
   },
   {
     "fighter_id": "โยฮันนา-แพร์ชอน",
@@ -1290626,8 +1290912,8 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 64",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "แคตช์เวต",
+    "weigh_in_lbs": 120.0
   },
   {
     "fighter_id": "โรโบค็อป-แรดโกลด์ยิม",
@@ -1290642,8 +1290928,8 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 28",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "แคตช์เวต",
+    "weigh_in_lbs": 118.8
   },
   {
     "fighter_id": "โลเวน-ไทนาเนส",
@@ -1291187,7 +1291473,7 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "อะตอมเวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 113.8
   },
   {
     "fighter_id": "โอซามาห์-อัลมาร์ไว",
@@ -1291346,8 +1291632,8 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 45",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "แบนตัมเวท",
+    "weigh_in_lbs": 144.4
   },
   {
     "fighter_id": "โอท็อป-อ.ขวัญเมือง",
@@ -1291538,8 +1291824,8 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 45",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
-    "weigh_in_lbs": null
+    "division": "แคตช์เวต",
+    "weigh_in_lbs": 129.4
   },
   {
     "fighter_id": "โอมาร์-เอล-ฮาลาบี",
@@ -1292499,7 +1292785,7 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "อะตอมเวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 112.0
   },
   {
     "fighter_id": "ไซ-นยาน-ลิน",
@@ -1292707,7 +1292993,7 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "ไลท์เวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 169.8
   },
   {
     "fighter_id": "ไท-รูโทโล",
@@ -1292947,7 +1293233,7 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "ไลท์เวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 169.4
   },
   {
     "fighter_id": "ไททัส-พร็อกเตอร์",
@@ -1293218,7 +1293504,7 @@ const HISTORY  = [
     "event": "ONE ลุมพินี 21",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "",
+    "division": "ฟลายเวท",
     "weigh_in_lbs": null
   },
   {

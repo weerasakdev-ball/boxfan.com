@@ -1237,7 +1237,16 @@ def main():
     print('🏷️   โหมดตั้งชื่อไฟล์: %s' % FILENAME_MODE)
     written, failed = [], []
     n_changed = 0
-    for f in fighters:
+    import time as _time
+    t_start = _time.time()
+    total = len(fighters)
+    for i, f in enumerate(fighters, 1):
+        # บอกความคืบหน้าทุก 2,000 หน้า (เดิมเงียบจนดูเหมือนค้าง)
+        if i % 2000 == 0 or i == total:
+            el = _time.time() - t_start
+            left = el / i * (total - i)
+            print('   … %d/%d หน้า (%d%%) · เปลี่ยน %d · ผ่านไป %d วินาที · เหลือประมาณ %d วินาที'
+                  % (i, total, i * 100 // total, n_changed, el, left), flush=True)
         fname = '%s.html' % f['_page']
         try:
             content = generate(f, hmap.get(f.get('id'), []), full_css, fighters_map)
@@ -1258,8 +1267,10 @@ def main():
             failed.append((f.get('name_th') or f.get('id'), err))
 
     print()
-    print('✅  สร้าง %d หน้านักมวย (%d ไฟต์) → %s — เปลี่ยนจริง %d หน้า'
-          % (len(written), total_fights, OUT, n_changed))
+    print('✅  สร้าง %d หน้านักมวย (%d ไฟต์) → %s — เปลี่ยนจริง %d หน้า · ใช้เวลา %d วินาที'
+          % (len(written), total_fights, OUT, n_changed, _time.time() - t_start))
+    if build_chrome.WRITE_STATS['retries']:
+        print('   (Windows ล็อกไฟล์ระหว่างเขียน %d ครั้ง — รอแล้วเขียนสำเร็จ)' % build_chrome.WRITE_STATS['retries'])
     n_hidden = sum(1 for f in fighters if not has_content(f, hmap.get(f.get('id'), [])))
     print('🙈  มีแค่ชื่อ (ยังไม่มีไฟต์/ค่าย/ประเทศ/ส่วนสูง ฯลฯ) %d หน้า → ซ่อนจาก Google ไว้ก่อน (เติมข้อมูลแล้วจะกลับมาเอง)' % n_hidden)
 
