@@ -620,7 +620,8 @@ def build_upcoming(f, up, fighters_map):
                   '<a class="upbtn" href="%s">%sโปรแกรมชก</a>'
                   '</span></div></div>'
                   % (esc(date_raw) or 'รอประกาศวัน',
-                     ('<span class="upcard-cd">%s</span>' % cd) if cd else '',
+                     ('<span class="upcard-cd" data-until="%s">%s</span>' % (esc(date_raw), th_date(date_raw)))
+                     if cd else '',
                      esc(h.get('event') or 'รอประกาศชื่อรายการ'),
                      side_a, side_b, meta or '—',
                      cmp_url, ICON_CHART_SVG, cmp_lbl,
@@ -705,6 +706,15 @@ def build_rows(fights, fighters_map):
 <td style="color:var(--tx-3);font-size:12px;white-space:nowrap">{fight_date}</td>
 </tr>'''
     return rows
+
+
+# คำนวณ "พัก N วัน" / "อีก N วัน" ตอนเปิดหน้า (ไฟล์ HTML จึงไม่เปลี่ยนทุกวัน → เขียนใหม่เฉพาะหน้าที่ข้อมูลเปลี่ยน)
+DATE_JS = ('<script>(function(){var t=new Date();t.setHours(0,0,0,0);'
+           'function d(s){var p=String(s).split("-");return new Date(+p[0],p[1]-1,+p[2]);}'
+           'document.querySelectorAll("[data-since]").forEach(function(e){var n=Math.round((t-d(e.dataset.since))/864e5);'
+           'if(n>=0)e.textContent="พัก "+n+" วัน";});'
+           'document.querySelectorAll("[data-until]").forEach(function(e){var n=Math.round((d(e.dataset.until)-t)/864e5);'
+           'e.textContent=n===0?"วันนี้":n===1?"พรุ่งนี้":n>1?"อีก "+n+" วัน":"รอผล";});})();</script>')
 
 
 # URL เก่าที่ไม่ใช่ id ปัจจุบัน (ชื่อไฟล์เดิมเคยมีชื่อเล่น/อักขระพิเศษ) → id นักมวยปัจจุบัน
@@ -954,7 +964,10 @@ def generate(f, history, full_css, fighters_map):
     if past:
         try:
             last_date = datetime.strptime(str(past[0].get('date') or ''), '%Y-%m-%d').date()
-            days_rest = '<span class="htag">พัก %d วัน</span>' % (date.today() - last_date).days
+            # ไม่ใส่ "พัก N วัน" ตายตัว (ตัวเลขเปลี่ยนทุกวัน → ทุกหน้าต้องเขียนใหม่ทุกครั้งที่รัน)
+            # ใส่วันที่ชกล่าสุดไว้ แล้วให้หน้าเว็บคำนวณจำนวนวันเองตอนเปิด (สคริปต์ DATE_JS ท้ายหน้า)
+            days_rest = ('<span class="htag" data-since="%s">ชกล่าสุด %s</span>'
+                         % (last_date.isoformat(), th_date(last_date.isoformat())))
         except (ValueError, TypeError):
             pass
 
@@ -1131,6 +1144,7 @@ def generate(f, history, full_css, fighters_map):
 </div>
 
 {CHROME['footer']}
+{DATE_JS}
 </body>
 </html>'''
 
@@ -1238,33 +1252,70 @@ def main():
     written, failed = [], []
     n_changed = 0
     import time as _time
+    from concurrent.futures import ThreadPoolExecutor
+
+    def save_page(path, data):
+        """เทียบกับไฟล์เดิม เขียนเฉพาะเมื่อเนื้อหาเปลี่ยน — คืน True ถ้าเขียน"""
+        try:
+            with open(path, 'rb') as fh:
+                if fh.read() == data:
+                    return False
+        except OSError:
+            pass
+        build_chrome.write_file(path, data)
+        return True
+
+    import threading as _th
+    slots = _th.BoundedSemaphore(64)      # รอเขียนพร้อมกันไม่เกิน 64 หน้า (ไม่ให้กินหน่วยความจำ)
+
+    def save_limited(path, data):
+        try:
+            return save_page(path, data)
+        finally:
+            slots.release()
+
     t_start = _time.time()
     total = len(fighters)
-    for i, f in enumerate(fighters, 1):
-        # บอกความคืบหน้าทุก 2,000 หน้า (เดิมเงียบจนดูเหมือนค้าง)
-        if i % 2000 == 0 or i == total:
-            el = _time.time() - t_start
-            left = el / i * (total - i)
-            print('   … %d/%d หน้า (%d%%) · เปลี่ยน %d · ผ่านไป %d วินาที · เหลือประมาณ %d วินาที'
-                  % (i, total, i * 100 // total, n_changed, el, left), flush=True)
-        fname = '%s.html' % f['_page']
+    jobs = []
+    # อ่าน/เขียนไฟล์พร้อมกันหลายไฟล์ — Windows ตรวจไฟล์ (สแกนไวรัส) ทีละไฟล์ช้า แต่ทำคู่ขนานได้
+    with ThreadPoolExecutor(max_workers=8) as pool:
+        for i, f in enumerate(fighters, 1):
+            fname = '%s.html' % f['_page']
+            try:
+                content = generate(f, hmap.get(f.get('id'), []), full_css, fighters_map)
+                slots.acquire()
+                jobs.append((fname, f, pool.submit(save_limited, os.path.join(OUT, fname), content.encode('utf-8'))))
+            except Exception as err:                   # noqa: BLE001 — คนเดียวพังไม่ควรล้มทั้งชุด
+                failed.append((f.get('name_th') or f.get('id'), err))
+            # บอกความคืบหน้าทุก 2,000 หน้า (คิวเขียนจำกัดไว้ จึงเดินตามความเร็วการเขียนจริง)
+            if i % 2000 == 0 or i == total:
+                el = _time.time() - t_start
+                print('   … %d/%d หน้า (%d%%) · ผ่านไป %d วินาที · เหลือประมาณ %d วินาที'
+                      % (i, total, i * 100 // total, el, el / i * (total - i)), flush=True)
+        # รอให้เขียนครบ แล้วนับผล — หน้าที่ Windows ล็อกนานเกิน เก็บไว้เขียนซ้ำรอบหลัง
+        retry = []
+        for fname, f, fut in jobs:
+            try:
+                if fut.result():
+                    n_changed += 1
+                written.append((fname, f.get('name_th') or f.get('id')))
+            except OSError:
+                retry.append((fname, f))
+            except Exception as err:                   # noqa: BLE001
+                failed.append((f.get('name_th') or f.get('id'), err))
+    # รอบเก็บตก: ทีละหน้า หลังเขียนหน้าอื่นเสร็จแล้ว (ส่วนใหญ่ไฟล์ปลดล็อกแล้ว)
+    if retry:
+        _time.sleep(2)
+    for fname, f in retry:
         try:
             content = generate(f, hmap.get(f.get('id'), []), full_css, fighters_map)
-            # เขียนเฉพาะหน้าที่เนื้อหาเปลี่ยน (ส่วนใหญ่เหมือนเดิม → เร็วขึ้นมาก และ Windows ล็อกไฟล์น้อยลง)
-            # Windows ล็อกไฟล์ชั่วคราวได้ (สแกนไวรัส/ค้นหาไฟล์) → build_chrome.write_file รอแล้วลองใหม่
-            data = content.encode('utf-8')
-            path = os.path.join(OUT, fname)
-            try:
-                with open(path, 'rb') as fh:
-                    same = fh.read() == data
-            except OSError:
-                same = False
-            if not same:
-                build_chrome.write_file(path, data)
+            if save_page(os.path.join(OUT, fname), content.encode('utf-8')):
                 n_changed += 1
             written.append((fname, f.get('name_th') or f.get('id')))
-        except Exception as err:                       # noqa: BLE001 — คนเดียวพังไม่ควรล้มทั้งชุด
+        except Exception as err:                       # noqa: BLE001
             failed.append((f.get('name_th') or f.get('id'), err))
+    if retry:
+        print('   (เขียนซ้ำหน้าที่ Windows ล็อกไว้นาน %d หน้า)' % len(retry))
 
     print()
     print('✅  สร้าง %d หน้านักมวย (%d ไฟต์) → %s — เปลี่ยนจริง %d หน้า · ใช้เวลา %d วินาที'
