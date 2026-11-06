@@ -1,9 +1,9 @@
 // สร้างอัตโนมัติโดย export_json.py — อย่าแก้ไขไฟล์นี้ด้วยมือ
 // ที่มา: D:\data\data
-// เวลา: 2026-11-06 10:50:41
+// เวลา: 2026-11-06 14:22:12
 
 const META     = {
-  "generated_at": "2026-11-06 10:50:41",
+  "generated_at": "2026-11-06 14:22:12",
   "fighter_count": 21640,
   "fight_count": 8361,
   "source_folder": "D:\\data\\data"
@@ -17013,8 +17013,8 @@ const FIGHTERS = [
     "name_th": "กาชาม มัมมาดอฟ",
     "name_en": null,
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 78.5,
+    "weight_lbs": 173.0,
     "height_cm": null,
     "height_ft_in": null,
     "country": null,
@@ -17046,7 +17046,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-11-03",
+    "last_updated": "2026-11-06",
     "division": "ไลท์เวท",
     "nickname": null,
     "gender": null,
@@ -81729,8 +81729,8 @@ const FIGHTERS = [
     "name_th": "คาลานดาร์ ทาบารอฟ",
     "name_en": null,
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 65.3,
+    "weight_lbs": 144.0,
     "height_cm": null,
     "height_ft_in": null,
     "country": null,
@@ -81762,7 +81762,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-11-03",
+    "last_updated": "2026-11-06",
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": null,
@@ -408998,7 +408998,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-11-03",
+    "last_updated": "2026-11-06",
     "division": "อะตอมเวท",
     "nickname": null,
     "gender": "ชาย",
@@ -717777,8 +717777,8 @@ const FIGHTERS = [
     "name_th": "อิลมาดี อิสราอิลอฟ",
     "name_en": null,
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 65.7,
+    "weight_lbs": 144.8,
     "height_cm": null,
     "height_ft_in": null,
     "country": null,
@@ -717810,7 +717810,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-11-03",
+    "last_updated": "2026-11-06",
     "division": "แบนตัมเวท",
     "nickname": null,
     "gender": null,
@@ -791337,8 +791337,8 @@ const FIGHTERS = [
     "name_th": "เดวอนเต จอห์นสัน",
     "name_en": null,
     "biography": "",
-    "weight_kg": null,
-    "weight_lbs": null,
+    "weight_kg": 115.3,
+    "weight_lbs": 254.2,
     "height_cm": null,
     "height_ft_in": null,
     "country": null,
@@ -791370,7 +791370,7 @@ const FIGHTERS = [
         "leg": 0
       }
     },
-    "last_updated": "2026-11-03",
+    "last_updated": "2026-11-06",
     "division": "ไม่จำกัดน้ำหนัก",
     "nickname": null,
     "gender": null,
@@ -1168995,7 +1168995,7 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "ไลท์เวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 173.0
   },
   {
     "fighter_id": "กานต์ชัย-จิตรเมืองนนท์",
@@ -1170291,7 +1170291,7 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "ฟลายเวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 134.4
   },
   {
     "fighter_id": "ก้องธรณี-ส.สมหมาย",
@@ -1175896,7 +1175896,7 @@ const HISTORY  = [
   {
     "fighter_id": "คาลานดาร์-ทาบารอฟ",
     "result": "รอแข่งขัน",
-    "rules": "MMA",
+    "rules": "มวยไทย",
     "decision": "",
     "round": null,
     "time": "",
@@ -1175907,7 +1175907,7 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "แบนตัมเวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 144.0
   },
   {
     "fighter_id": "คาลิม-นาซรูโลเอฟ",
@@ -1198211,7 +1198211,7 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "ฟลายเวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 134.6
   },
   {
     "fighter_id": "ทาอิกิ-นาอิโตะ",
@@ -1199795,7 +1199795,7 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "แบนตัมเวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 144.6
   },
   {
     "fighter_id": "นนทชัย-จิตรเมืองนนท์",
@@ -1200488,7 +1200488,7 @@ const HISTORY  = [
   {
     "fighter_id": "นาซาเรธ-ลัลทาซูอาลา",
     "result": "รอแข่งขัน",
-    "rules": "MMA",
+    "rules": "มวยไทย",
     "decision": "",
     "round": null,
     "time": "",
@@ -1200499,7 +1200499,7 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "สตรอว์เวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 124.4
   },
   {
     "fighter_id": "นาซาเรธ-ลัลทาซูอาลา",
@@ -1205059,7 +1205059,7 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "ไลท์เวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 168.4
   },
   {
     "fighter_id": "บ็อกดัน-ชูมารอฟ",
@@ -1211411,7 +1211411,7 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "แบนตัมเวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 144.4
   },
   {
     "fighter_id": "ฟิลิปเป-โลโบ",
@@ -1212904,7 +1212904,7 @@ const HISTORY  = [
   {
     "fighter_id": "มักดาเลนา-ชาบัน",
     "result": "รอแข่งขัน",
-    "rules": "MMA",
+    "rules": "มวยไทย",
     "decision": "",
     "round": null,
     "time": "",
@@ -1212915,7 +1212915,7 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "อะตอมเวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 113.8
   },
   {
     "fighter_id": "มักดาเลนา-ชาบัน",
@@ -1214451,7 +1214451,7 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "เฟเธอร์เวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 154.2
   },
   {
     "fighter_id": "มามูกา-อูซูบิยัน",
@@ -1216776,7 +1216776,7 @@ const HISTORY  = [
   {
     "fighter_id": "มาโกเมด-มาโกเมดอฟ",
     "result": "รอแข่งขัน",
-    "rules": "MMA",
+    "rules": "มวยไทย",
     "decision": "",
     "round": null,
     "time": "",
@@ -1216787,7 +1216787,7 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "ไลท์เวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 175.4
   },
   {
     "fighter_id": "มาโกเมด-มาโกเมดอฟ",
@@ -1229848,7 +1229848,7 @@ const HISTORY  = [
   {
     "fighter_id": "ลี-ซัง-ชัล",
     "result": "รอแข่งขัน",
-    "rules": "MMA",
+    "rules": "มวยไทย",
     "decision": "",
     "round": null,
     "time": "",
@@ -1229859,7 +1229859,7 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "สตรอว์เวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 123.6
   },
   {
     "fighter_id": "ลี-ซัง-ชัล",
@@ -1230760,7 +1230760,7 @@ const HISTORY  = [
   {
     "fighter_id": "ลูคัส-กาเบรียล",
     "result": "รอแข่งขัน",
-    "rules": "MMA",
+    "rules": "มวยไทย",
     "decision": "",
     "round": null,
     "time": "",
@@ -1230771,7 +1230771,7 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "ไลท์เวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 167.8
   },
   {
     "fighter_id": "ลูคัส-กาเบรียล",
@@ -1232392,7 +1232392,7 @@ const HISTORY  = [
   {
     "fighter_id": "วิกตอเรีย-ซูซา",
     "result": "รอแข่งขัน",
-    "rules": "MMA",
+    "rules": "มวยไทย",
     "decision": "",
     "round": null,
     "time": "",
@@ -1232403,7 +1232403,7 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "อะตอมเวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 113.2
   },
   {
     "fighter_id": "วิกตอเรีย-ซูซา",
@@ -1232616,7 +1232616,7 @@ const HISTORY  = [
   {
     "fighter_id": "วิคเตอร์-ฮิวโก",
     "result": "รอแข่งขัน",
-    "rules": "ปล้ำจับล็อก",
+    "rules": "คิกบ็อกซิง",
     "decision": "",
     "round": null,
     "time": "",
@@ -1232626,8 +1232626,8 @@ const HISTORY  = [
     "event": "ONE Fight Night 49: ลูคัส vs มาโกเมด",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "ไม่จำกัดน้ำหนัก",
-    "weigh_in_lbs": null
+    "division": "ไลท์เวท",
+    "weigh_in_lbs": 257.2
   },
   {
     "fighter_id": "วิคเตอร์-ฮิวโก",
@@ -1251256,7 +1251256,7 @@ const HISTORY  = [
   {
     "fighter_id": "อิลมาดี-อิสราอิลอฟ",
     "result": "รอแข่งขัน",
-    "rules": "MMA",
+    "rules": "มวยไทย",
     "decision": "",
     "round": null,
     "time": "",
@@ -1251267,7 +1251267,7 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "แบนตัมเวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 144.8
   },
   {
     "fighter_id": "อิลยา-สโตยานอฟ",
@@ -1263672,7 +1263672,7 @@ const HISTORY  = [
   {
     "fighter_id": "เดวอนเต-จอห์นสัน",
     "result": "รอแข่งขัน",
-    "rules": "ปล้ำจับล็อก",
+    "rules": "คิกบ็อกซิง",
     "decision": "",
     "round": null,
     "time": "",
@@ -1263682,8 +1263682,8 @@ const HISTORY  = [
     "event": "ONE Fight Night 49: ลูคัส vs มาโกเมด",
     "promotion": "ONE",
     "fight_rating_stars": 0,
-    "division": "ไม่จำกัดน้ำหนัก",
-    "weigh_in_lbs": null
+    "division": "ไลท์เวท",
+    "weigh_in_lbs": 254.2
   },
   {
     "fighter_id": "เดวีนา-มาร์ติน",
@@ -1292659,7 +1292659,7 @@ const HISTORY  = [
     "promotion": "ONE",
     "fight_rating_stars": 0,
     "division": "เฟเธอร์เวท",
-    "weigh_in_lbs": null
+    "weigh_in_lbs": 153.8
   },
   {
     "fighter_id": "โจว-เจียเฉียง",

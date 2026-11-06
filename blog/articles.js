@@ -7,7 +7,7 @@ var ARTICLES = [
     // AUTO-ARTICLES:start — สร้างโดย build_articles.py จาก blog/source/*.md (อย่าแก้ตรงนี้)
     {
         cat     : 'news',
-        image   : '/images/blog/muay-thai-fighter-pay-research.jpg',
+        image   : '/og-default.jpg',
         title   : 'ค่าตัวนักมวยไทยได้เท่าไหร่? งานวิจัยค่าตอบแทนจากเวทีมวยดั้งเดิมสู่ ONE Championship',
         excerpt : 'งานวิจัยเศรษฐศาสตร์ค่าตอบแทนนักมวยไทย: เพดาน "มวยเงินแสน" ในกติกา 5 ยก ค่าตัวนักมวยรากหญ้าเทียบค่าแรงขั้นต่ำ การพนันกับเวทีมวย และค่าตัวระดับ ONE Championship กับ RWS',
         file    : 'articles/th/muay-thai-fighter-pay-research.html',
@@ -15,7 +15,7 @@ var ARTICLES = [
     },
     {
         cat     : 'news',
-        image   : '/images/blog/top-100-highest-paid-fighters.jpg',
+        image   : '/og-default.jpg',
         title   : '100 อันดับนักสู้รายได้สูงสุดในโลก: มวยสากล UFC และ ONE ใครรวยที่สุด',
         excerpt : 'เจาะโครงสร้างรายได้นักกีฬาต่อสู้ระดับโลก ตั้งแต่เงินซาอุฯ ใน Riyadh Season ทำเนียบนักมวยสากลที่ได้ค่าตัวสูงสุด นักสู้ UFC ที่รวยที่สุดตลอดกาล ไปจนถึงค่าตัวนักมวยไทยใน ONE Championship',
         file    : 'articles/th/top-100-highest-paid-fighters.html',
@@ -23,7 +23,7 @@ var ARTICLES = [
     },
     {
         cat     : 'news',
-        image   : '/images/blog/ufc-history-and-finances.jpg',
+        image   : '/og-default.jpg',
         title   : 'ประวัติ UFC และเส้นทางการเงิน: จาก UFC 1 สู่ TKO และดีล Paramount 7.7 พันล้านดอลลาร์',
         excerpt : 'ย้อนประวัติ UFC ตั้งแต่ยุคไร้กติกา ยุค Zuffa ถึง TKO Group พร้อมโครงสร้างค่าตัวนักสู้ โบนัส คดีผูกขาด 375 ล้านดอลลาร์ และการเลิกระบบ Pay-Per-View',
         file    : 'articles/th/ufc-history-and-finances.html',
