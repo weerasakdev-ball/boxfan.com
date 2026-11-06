@@ -34,3 +34,9 @@ data/*.db
 # เครื่องมือเขียนบทความ (ใช้ในเครื่องเท่านั้น)
 editor/
 blog/source/
+# ลายนิ้วมือหน้านักมวย (generate_profiles ใช้เทียบว่าหน้าไหนเปลี่ยน)
+data/page_hashes.json
+data/event_hashes.json
+data/alias_hashes.json
+data/indexable_fighters.json
+data/indexable_events.json

@@ -498,11 +498,25 @@ def build_sitemap(fighters, history, meta, div_pages):
     fdir = ROOT / 'fighters'
     n_f = 0
     from urllib.parse import quote
+    # รายชื่อหน้าที่ส่ง Google (generate_profiles / build_events จดไว้) — ไม่ต้องเปิดไฟล์ 2 หมื่นไฟล์
+    # (Windows ตรวจไฟล์ทุกครั้งที่เปิด ไฟล์เพิ่งเขียนใหม่ = ไฟล์ละ ~0.07 วิ → เคยค้างนานกว่า 20 นาที)
+    def load_list(name):
+        try:
+            return set(json.loads((ROOT / 'data' / name).read_text(encoding='utf-8')))
+        except (OSError, ValueError):
+            return None
+    idx_f = load_list('indexable_fighters.json')
+    idx_e = load_list('indexable_events.json')
+    on_disk = set(os.listdir(fdir)) if fdir.exists() else set()
     for f in sorted(fighters, key=lambda x: x.get('slug') or ''):
         slug = f.get('slug')
-        page = fdir / (slug + '.html')
-        # หน้าที่ generate_profiles.py ตั้ง noindex (ยังไม่มีไฟต์/ประวัติ) ไม่ใส่ใน sitemap
-        if not slug or not page.exists() or is_noindex(page):
+        if not slug:
+            continue
+        fname = slug + '.html'
+        # หน้าที่ generate_profiles.py ตั้ง noindex (มีแค่ชื่อ) ไม่ใส่ใน sitemap
+        if fname not in on_disk:
+            continue
+        if (fname not in idx_f) if idx_f is not None else is_noindex(fdir / fname):
             continue
         lm = min(last.get(f.get('id'), gen) or gen, gen)
         add('%s/fighters/%s.html' % (SITE, quote(slug, safe='-._~')), lm)
@@ -513,7 +527,9 @@ def build_sitemap(fighters, history, meta, div_pages):
     if edir.exists():
         add('%s/events/' % SITE, gen)
         for p in sorted(edir.glob('*.html')):
-            if p.name == 'index.html' or is_noindex(p):
+            if p.name == 'index.html':
+                continue
+            if (p.name not in idx_e) if idx_e is not None else is_noindex(p):
                 continue
             m = re.search(r'(\d{4}-\d{2}-\d{2})\.html$', p.name)
             lm = min(m.group(1), gen) if m else gen

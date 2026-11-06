@@ -28,7 +28,19 @@ try:
 except Exception:
     pass
 
-import markdown  # pip install markdown
+try:
+    import markdown  # pip install markdown
+except ImportError:
+    # เครื่องนี้ยังไม่มีตัวอ่าน Markdown → ติดตั้งให้เอง (ครั้งเดียว)
+    import subprocess
+    print('  · กำลังติดตั้งส่วนเสริมสำหรับบทความ (markdown) ครั้งแรก…')
+    subprocess.run([sys.executable, '-m', 'pip', 'install', '-q', 'markdown'], check=False)
+    try:
+        import markdown
+    except ImportError:
+        print('  ⚠ ติดตั้ง markdown ไม่สำเร็จ — ข้ามขั้นบทความไปก่อน (บทความเดิมบนเว็บยังอยู่ครบ)')
+        print('    แก้: เปิด Command Prompt แล้วพิมพ์  pip install markdown pillow')
+        sys.exit(0)
 
 ROOT = Path(__file__).resolve().parent
 sys.path.insert(0, str(ROOT))

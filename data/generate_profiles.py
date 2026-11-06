@@ -753,22 +753,40 @@ def write_alias_pages(fighters, written):
     for old, fid in OLD_PAGES.items():
         if fid in by_id:
             targets[old] = by_id[fid]
+    # ลายนิ้วมือรอบก่อน — ไม่ต้องเปิดอ่านไฟล์ทีละไฟล์ (Windows ตรวจไฟล์ทุกครั้งที่เปิด = ช้า)
+    import hashlib
+    hash_path = os.path.join(BASE, 'alias_hashes.json')
+    try:
+        with open(hash_path, encoding='utf-8') as fh:
+            old_h = json.load(fh)
+    except (OSError, ValueError):
+        old_h = {}
+    on_disk = set(os.listdir(OUT))
+    new_h = {}
     n = 0
     for old, f in targets.items():
         fname = old + '.html'
         if fname.lower() in real_ci or BAD_FILENAME.search(old):
             continue
         data = alias_html(f, f['_page']).encode('utf-8')
+        h = hashlib.sha1(data).hexdigest()
         path = os.path.join(OUT, fname)
-        try:
-            same = os.path.exists(path) and open(path, 'rb').read() == data
-        except OSError:
-            same = False
+        same = fname in on_disk and old_h.get(fname) == h
+        if not same and fname in on_disk and fname not in old_h:
+            try:                                       # รอบแรกที่ยังไม่มีลายนิ้วมือ → เทียบไฟล์จริงครั้งเดียว
+                same = open(path, 'rb').read() == data
+            except OSError:
+                same = False
         if not same:
             build_chrome.write_file(path, data)
+        new_h[fname] = h
         written.append((fname, '↪ ' + (f.get('name_th') or f.get('id'))))
         real_ci.add(fname.lower())
         n += 1
+    try:
+        build_chrome.write_file(hash_path, json.dumps(new_h, ensure_ascii=False).encode('utf-8'))
+    except OSError:
+        pass
     return n
 
 
@@ -1254,15 +1272,36 @@ def main():
     import time as _time
     from concurrent.futures import ThreadPoolExecutor
 
+    # ลายนิ้วมือของแต่ละหน้า (จากรอบก่อน) — เทียบจากตรงนี้แทนการเปิดอ่านไฟล์ทีละไฟล์
+    # (Windows ตรวจไฟล์ทุกครั้งที่เปิดอ่าน ทำให้รอบเดียวกินเวลาหลายนาที)
+    import hashlib
+    import json as _json
+    hash_path = os.path.join(BASE, 'page_hashes.json')
+    try:
+        with open(hash_path, encoding='utf-8') as fh:
+            old_hashes = _json.load(fh)
+    except (OSError, ValueError):
+        old_hashes = {}
+    new_hashes = {}
+    on_disk = set(before)
+
     def save_page(path, data):
-        """เทียบกับไฟล์เดิม เขียนเฉพาะเมื่อเนื้อหาเปลี่ยน — คืน True ถ้าเขียน"""
-        try:
-            with open(path, 'rb') as fh:
-                if fh.read() == data:
-                    return False
-        except OSError:
-            pass
+        """เขียนเฉพาะเมื่อเนื้อหาเปลี่ยน — คืน True ถ้าเขียน"""
+        name = os.path.basename(path)
+        h = hashlib.sha1(data).hexdigest()
+        if old_hashes.get(name) == h and name in on_disk:
+            new_hashes[name] = h
+            return False
+        if name not in old_hashes and name in on_disk:
+            try:                                       # ยังไม่มีลายนิ้วมือ (รอบแรก) → เทียบกับไฟล์จริงครั้งเดียว
+                with open(path, 'rb') as fh:
+                    if fh.read() == data:
+                        new_hashes[name] = h
+                        return False
+            except OSError:
+                pass
         build_chrome.write_file(path, data)
+        new_hashes[name] = h                           # จดเฉพาะเมื่อเขียนสำเร็จ (เขียนพลาด = รอบหน้าเขียนใหม่)
         return True
 
     import threading as _th
@@ -1316,6 +1355,16 @@ def main():
             failed.append((f.get('name_th') or f.get('id'), err))
     if retry:
         print('   (เขียนซ้ำหน้าที่ Windows ล็อกไว้นาน %d หน้า)' % len(retry))
+    try:                                               # รายชื่อหน้าที่ส่งให้ Google — build_seo ใช้ทำ sitemap โดยไม่ต้องเปิดไฟล์ทีละไฟล์
+        idx = sorted('%s.html' % f['_page'] for f in fighters if has_content(f, hmap.get(f.get('id'), [])))
+        build_chrome.write_file(os.path.join(BASE, 'indexable_fighters.json'),
+                                _json.dumps(idx, ensure_ascii=False).encode('utf-8'))
+    except OSError:
+        pass
+    try:                                               # จดลายนิ้วมือไว้ใช้รอบหน้า
+        build_chrome.write_file(hash_path, _json.dumps(new_hashes, ensure_ascii=False).encode('utf-8'))
+    except OSError:
+        pass
 
     print()
     print('✅  สร้าง %d หน้านักมวย (%d ไฟต์) → %s — เปลี่ยนจริง %d หน้า · ใช้เวลา %d วินาที'

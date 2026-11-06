@@ -466,19 +466,34 @@ def main():
     OUT.mkdir(exist_ok=True)
     before = set(p.name for p in OUT.glob('*.html'))
     wanted, changed = set(), 0
+    # ลายนิ้วมือของแต่ละหน้า (รอบก่อน) — เทียบจากตรงนี้แทนการเปิดอ่านไฟล์ (Windows ตรวจไฟล์ทุกครั้งที่เปิด = ช้า)
+    import hashlib
+    hash_path = ROOT / 'data' / 'event_hashes.json'
+    try:
+        old_hashes = json.loads(hash_path.read_text(encoding='utf-8'))
+    except (OSError, ValueError):
+        old_hashes = {}
+    new_hashes = {}
 
     def put(fname, html):
         nonlocal changed
         path = OUT / fname
         data = html.encode('utf-8')
-        try:
-            same = path.read_bytes() == data
-        except OSError:
-            same = False
-        if not same:
-            build_chrome.write_file(path, data)
-            changed += 1
+        h = hashlib.sha1(data).hexdigest()
         wanted.add(fname)
+        if fname in before and old_hashes.get(fname) == h:
+            new_hashes[fname] = h
+            return
+        if fname in before and fname not in old_hashes:
+            try:                                       # ยังไม่มีลายนิ้วมือ (รอบแรก) → เทียบกับไฟล์จริงครั้งเดียว
+                if path.read_bytes() == data:
+                    new_hashes[fname] = h
+                    return
+            except OSError:
+                pass
+        build_chrome.write_file(path, data)
+        new_hashes[fname] = h
+        changed += 1
 
     for lst in by_series.values():
         for i, e in enumerate(lst):
@@ -487,6 +502,13 @@ def main():
             put(e['slug'] + '.html', event_page(e, prev_e, next_e))
     put('index.html', index_page(evs))
 
+    try:
+        build_chrome.write_file(hash_path, json.dumps(new_hashes, ensure_ascii=False).encode('utf-8'))
+        # รายชื่อหน้าศึกที่ส่งให้ Google — build_seo ใช้ทำ sitemap โดยไม่ต้องเปิดไฟล์ทีละไฟล์
+        build_chrome.write_file(ROOT / 'data' / 'indexable_events.json', json.dumps(
+            sorted(e['slug'] + '.html' for e in evs if e['n'] >= MIN_FIGHTS), ensure_ascii=False).encode('utf-8'))
+    except OSError:
+        pass
     stale = sorted(before - wanted)
     for n in stale:
         try:

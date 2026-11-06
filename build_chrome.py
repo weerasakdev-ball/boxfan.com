@@ -282,7 +282,14 @@ def pages():
              '404.html', 'blog/index.html', 'blog/TEMPLATE.html']
     out = [ROOT / n for n in names]
     out += sorted(ROOT.glob('rankings-*.html'))
-    out += sorted((ROOT / 'blog' / 'articles').rglob('*.html'))
+    # บทความที่ build_articles.py สร้าง ใส่เมนูเองอยู่แล้ว — ข้าม (ไม่งั้นสองสคริปต์เขียนทับกันไปมาทุกรอบ)
+    for p in sorted((ROOT / 'blog' / 'articles').rglob('*.html')):
+        try:
+            if b'boxfan-build-articles' in p.read_bytes()[:3000]:
+                continue
+        except OSError:
+            pass
+        out.append(p)
     return [p for p in out if p.exists()]
 
 
