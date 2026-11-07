@@ -8,6 +8,14 @@ var ARTICLES = [
     {
         cat     : 'news',
         image   : '/og-default.jpg',
+        title   : 'เปิดคะแนนทุกยก ดีไหมนะตอนนี้',
+        excerpt : 'มวยไทย กำลังดีขึ้น แต่แย่ลง',
+        file    : 'articles/th/article-20261107-1310.html',
+        date    : '2026-11-07'
+    },
+    {
+        cat     : 'news',
+        image   : '/og-default.jpg',
         title   : 'ค่าตัวนักมวยไทยได้เท่าไหร่? งานวิจัยค่าตอบแทนจากเวทีมวยดั้งเดิมสู่ ONE Championship',
         excerpt : 'งานวิจัยเศรษฐศาสตร์ค่าตอบแทนนักมวยไทย: เพดาน "มวยเงินแสน" ในกติกา 5 ยก ค่าตัวนักมวยรากหญ้าเทียบค่าแรงขั้นต่ำ การพนันกับเวทีมวย และค่าตัวระดับ ONE Championship กับ RWS',
         file    : 'articles/th/muay-thai-fighter-pay-research.html',
